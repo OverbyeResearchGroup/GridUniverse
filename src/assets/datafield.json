@@ -1,0 +1,250 @@
+{
+	"Area": [
+		{
+			"text": "GenMW",
+			"value": "GenMW"
+		},
+		{
+			"text": "GenMvar",
+			"value": "GenMvar"
+		},
+		{
+			"text": "LoadMW",
+			"value": "LoadMW"
+		},
+		{
+			"text": "LoadMvar",
+			"value": "LoadMvar"
+		},
+		{
+			"text": "ShuntMvar",
+			"value": "ShuntMvar"
+		},
+		{
+			"text": "ExportMW",
+			"value": "ExportMW"
+		},
+		{
+			"text": "FrequencyAve",
+			"value": "FrequencyAve"
+		},
+		{
+			"text": "ACE",
+			"value": "ACE"
+		},
+		{
+			"text": "LossMW",
+			"value": "LossMW"
+		},
+		{
+			"text": "AGCStatus",
+			"value": "AGCStatus"
+		}
+	],
+	"Substation": [
+		{
+			"text": "GenMW",
+			"value": "GenMW"
+		},
+		{
+			"text": "GenMvar",
+			"value": "GenMvar"
+		},
+		{
+			"text": "LoadMW",
+			"value": "LoadMW"
+		},
+		{
+			"text": "LoadMvar",
+			"value": "LoadMvar"
+		},
+		{
+			"text": "ShuntMvar",
+			"value": "ShuntMvar"
+		},
+		{
+			"text": "FrequencyAve",
+			"value": "FrequencyAve"
+		}
+	],
+	"Bus": [
+		{
+			"text": "Vpu",
+			"value": "Vpu"
+		},
+		{
+			"text": "Vangle",
+			"value": "Vangle"
+		},
+		{
+			"text": "FreqHz",
+			"value": "FreqHz"
+		},
+		{
+			"text": "Status",
+			"value": "Status"
+		},
+		{
+			"text": "GenMW",
+			"value": "GenMW"
+		},
+		{
+			"text": "GenMvar",
+			"value": "GenMvar"
+		},
+		{
+			"text": "LoadMW",
+			"value": "LoadMW"
+		},
+		{
+			"text": "LoadMvar",
+			"value": "LoadMvar"
+		},
+		{
+			"text": "ShuntMvar",
+			"value": "ShuntMvar"
+		}
+	],
+	"Gen": [
+		{
+			"text": "Vpu",
+			"value": "Vpu"
+		},
+		{
+			"text": "Vangle",
+			"value": "Vangle"
+		},
+		{
+			"text": "KV",
+			"value": "KV"
+		},
+		{
+			"text": "FreqHz",
+			"value": "FreqHz"
+		},
+		{
+			"text": "BusStatus",
+			"value": "BusStatus"
+		},
+		{
+			"text": "Status",
+			"value": "Status"
+		},
+		{
+			"text": "MW",
+			"value": "MW"
+		},
+		{
+			"text": "Mvar",
+			"value": "Mvar"
+		},
+		{
+			"text": "VpuSetpoint",
+			"value": "VpuSetpoint"
+		},
+		{
+			"text": "MWSetpoint",
+			"value": "MWSetpoint"
+		},
+		{
+			"text": "AGCStatus",
+			"value": "AGCStatus"
+		}
+	],
+	"Load": [
+		{
+			"text": "Vpu",
+			"value": "Vpu"
+		},
+		{
+			"text": "Vangle",
+			"value": "Vangle"
+		},
+		{
+			"text": "KV",
+			"value": "KV"
+		},
+		{
+			"text": "FreqHz",
+			"value": "FreqHz"
+		},
+		{
+			"text": "BusStatus",
+			"value": "BusStatus"
+		},
+		{
+			"text": "Status",
+			"value": "Status"
+		},
+		{
+			"text": "MW",
+			"value": "MW"
+		},
+		{
+			"text": "Mvar",
+			"value": "Mvar"
+		}
+	],
+	"Shunt": [
+		{
+			"text": "Vpu",
+			"value": "Vpu"
+		},
+		{
+			"text": "Vangle",
+			"value": "Vangle"
+		},
+		{
+			"text": "KV",
+			"value": "KV"
+		},
+		{
+			"text": "FreqHz",
+			"value": "FreqHz"
+		},
+		{
+			"text": "BusStatus",
+			"value": "BusStatus"
+		},
+		{
+			"text": "Status",
+			"value": "Status"
+		},
+		{
+			"text": "Mvar",
+			"value": "Mvar"
+		}
+	],
+	"Branch": [
+		{
+			"text": "Status",
+			"value": "Status"
+		},
+		{
+			"text": "MWFrom",
+			"value": "MWFrom"
+		},
+		{
+			"text": "MvarFrom",
+			"value": "MvarFrom"
+		},
+		{
+			"text": "MVAFrom",
+			"value": "MVAFrom"
+		},
+		{
+			"text": "AmpsFrom",
+			"value": "AmpsFrom"
+		}
+	],
+	"Transformer": [
+		{
+			"text": "Phase",
+			"value": "Degree"
+		},
+		{
+			"text": "Tap",
+			"value": "Ratio"
+		}
+	]
+}

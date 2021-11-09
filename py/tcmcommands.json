@@ -1,0 +1,58 @@
+{	"Case": [
+	"DSEVENT(xxx)",
+	"TSRFILE FLUSH"
+],
+	"Area": [
+		"OPEN",
+		"CLOSE xxx DEG",
+		"AGC DISABLE",
+		"AGC ENABLE",
+		"SET SCHEDMW xxx",
+		"CHANGE SCHEDMW xxx yyy"
+	],
+
+	"Gen": [
+		"OPEN",
+		"CLOSE",
+		"CLOSE xxx DEG",
+		"SET Exciter_Setpoint xxx pu",
+		"Set Power xxx MW",
+		"AGC DISABLE",
+		"AGC Enable",
+		"Set Part_Factor xxx"
+	],
+	"Load": [
+		"OPEN",
+		"CLOSE",
+		"Set MW xxx",
+		"Set Mvar xxx",
+		"AutoScale"
+	],
+	"Shunt": [
+		"OPEN",
+		"CLOSE"
+	],
+	"Branch": [
+		"OPEN BOTH",
+		"OPEN NEAR",
+		"OPEN FAR",
+		"CLOSE BOTH",
+		"CLOSE NEAR",
+		"CLOSE FAR",
+		"BYPASS",
+		"NOTBYPASS",
+		"SET GMDDCVOLT xxx"
+	],
+	"LineShunt": [
+		"OPEN",
+		"CLOSE"
+	],
+	"Transformer": [
+		"DISABLE Automatic Control",
+		"ENABLE Automatic Control",
+		"SET xxx TAP RATIO",
+		"SET xxx PHASE ANGLE",
+		"CHANGEBY xxx TAP RATIO",
+		"CHANGEBY xxx PHASE ANGLE "
+	]
+}

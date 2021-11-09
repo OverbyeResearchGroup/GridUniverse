@@ -1,0 +1,31 @@
+{
+	"Gen": [
+		"OPEN",
+		"CLOSE",
+		"CLOSE xxx DEG",
+		"SET Exciter_Setpoint xxx pu",
+		"Set Power xxx MW"
+	],
+	"Load": [
+		"OPEN",
+		"CLOSE"
+	],
+	"Shunt": [
+		"OPEN",
+		"CLOSE"
+	],
+	"Branch": [
+		"OPEN BOTH",
+		"OPEN NEAR",
+		"OPEN FAR",
+		"CLOSE BOTH",
+		"CLOSE NEAR",
+		"CLOSE FAR",
+		"BYPASS",
+		"NOTBYPASS"
+	],
+	"LineShunt": [
+		"OPEN",
+		"CLOSE"
+	]
+}
