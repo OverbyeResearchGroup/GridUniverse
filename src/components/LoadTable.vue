@@ -116,7 +116,7 @@ export default {
       var keyarr;
 
       for (let ele in this.fieldstore) {
-        arrlength = this.fieldstore[ele].length;
+        arrlength = this.fieldstore[ele]['Field'].length;
         keyarr = Object.keys(this.areadetail.content[ele]);
         if (ele != "Load") {
           anchor += arrlength * keyarr.length;

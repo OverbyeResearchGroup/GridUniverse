@@ -940,7 +940,7 @@ export default {
 			var keyarr;
 
 			for (let ele in this.$store.state.fieldstore) {
-				this.arrlength = this.$store.state.fieldstore[ele].length;
+				this.arrlength = this.$store.state.fieldstore[ele]['Field'].length;
 				keyarr = Object.keys(this.$store.state.casedetail.content[ele]);
 
 				if (ele != 'Branch') {

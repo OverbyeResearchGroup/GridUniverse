@@ -105,7 +105,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         if (ele != "Bus") {
           anchor += arrlength * keyarr.length;

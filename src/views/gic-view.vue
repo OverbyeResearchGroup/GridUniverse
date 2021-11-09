@@ -164,7 +164,7 @@ export default {
       substationFieldIndex: {
         GICElectricFieldVKM: this.$store.state.fieldstore[
           "Substation"
-        ].findIndex((x) => x.text === "GICElectricFieldVKM"),
+        ]['Field'].findIndex((x) => x === "GICElectricFieldVKM"),
       },
       contoursLayer: {},
       interval: {},
@@ -377,7 +377,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         console.log(ele);
         if (ele != "Substation") {

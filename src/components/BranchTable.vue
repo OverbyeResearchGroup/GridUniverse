@@ -141,7 +141,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Fields'].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         if (ele != "Branch") {
           anchor += arrlength * keyarr.length;

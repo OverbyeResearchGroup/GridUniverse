@@ -114,7 +114,7 @@ export default {
 			var valueFieldArr;
 
 			for (let ele in this.$store.state.fieldstore) {
-				arrlength = this.$store.state.fieldstore[ele].length;
+				arrlength = this.$store.state.fieldstore[ele]['Field'].length;
 				keyCaseArr = Object.keys(this.$store.state.casedetail.content[ele]);
 				valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
 				if (ele != 'Bus') {

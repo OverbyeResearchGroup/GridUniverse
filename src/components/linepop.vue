@@ -99,7 +99,7 @@ export default {
 	methods: {
 		init() {
 			for (let ele in this.$store.state.fieldstore) {
-				this.arrlength = this.$store.state.fieldstore[ele].length;
+				this.arrlength = this.$store.state.fieldstore[ele]['Field'].length;
 				this.keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
 				if (ele != this.type) {
 					this.anchor += this.arrlength * this.keyarr.length;
@@ -118,7 +118,7 @@ export default {
 			// const spdata = this.$store.state.branchData;
 			let container = {};
 			for (let e in spdata) {
-				container[this.$store.state.fieldstore[this.type][e]['value']] =
+				container[this.$store.state.fieldstore[this.type]['Field'][e]] =
 					spdata[e];
 			}
 			this.display = [container];

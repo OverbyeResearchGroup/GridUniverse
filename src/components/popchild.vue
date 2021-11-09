@@ -188,7 +188,7 @@ export default {
 			// console.log([this.type, this.id])
 
 			for (let ele in this.$store.state.fieldstore) {
-				arrlength = this.$store.state.fieldstore[ele].length;
+				arrlength = this.$store.state.fieldstore[ele]['Field'].length;
 				keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
 				if (ele != this.type) {
 					anchor += arrlength * keyarr.length;
@@ -205,7 +205,7 @@ export default {
 			for (let e in spdata) {
 				// console.log(this.$store.state.fieldstore[this.type][e]['value'])
 				container[
-					this.$store.state.fieldstore[this.type][e]['value']
+					this.$store.state.fieldstore[this.type]['Field'][e]
 				] = +spdata[e];
 			}
 			this.display = [container];

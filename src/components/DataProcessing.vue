@@ -18,7 +18,7 @@ export default {
       marginalcost: [],
       gens: null,
       areaData: [],
-      areaDataLength: this.$store.state.fieldstore["Area"].length,
+      areaDataLength: this.$store.state.fieldstore["Area"]['Field'].length,
       busAnchor: 0,
       busDataLength: 0,
       busArrLength: 0,
@@ -267,7 +267,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Bus") {
@@ -323,7 +323,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Branch") {
@@ -341,7 +341,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Transformer") {
@@ -463,7 +463,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele].length;
+        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         if (ele != "Gen") {
           anchor += arrlength * keyarr.length;
