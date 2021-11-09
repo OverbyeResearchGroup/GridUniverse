@@ -14,7 +14,7 @@
 						<v-card-title class='headline'>
 							Data
 						</v-card-title>
-						<v-data-table :headers=$store.state.fieldstore.Substation :items="display" disable-initial-sort hide-actions class="elevation-1" lazy>
+						<v-data-table :headers="$store.state.fieldstore.Substation['Field']" :items="display" disable-initial-sort hide-actions class="elevation-1" lazy>
 							<template slot="items" slot-scope="props">
 								<td class="text-xs-right" v-for="item in props.item" :key=item.text>{{ item }}</td>
 								<!-- <td class="text-xs-right">{{ props.item.GenMvar }}</td>
