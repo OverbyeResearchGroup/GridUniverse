@@ -764,21 +764,21 @@ export default {
     // // this.onDrawLines();
     // this.updateLines();
     this.updateLinesCycle();
-    if (this.$store.state.showTour) {
-      var intro = introJs();
-      intro.setOptions({
-        showStepNumbers: false,
-        // overlayOpacity: 0.1,
-        steps: [
-          {
-            intro:
-              "Welcome to the final lab! For better performance, please use Chrome or Firefox."
-          }
-        ]
-      });
-      this.$store.commit("disableTour");
-      intro.start();
-    }
+    // if (this.$store.state.showTour) {
+    //   var intro = introJs();
+    //   intro.setOptions({
+    //     showStepNumbers: false,
+    //     // overlayOpacity: 0.1,
+    //     steps: [
+    //       {
+    //         intro:
+    //           "Welcome to the final lab! For better performance, please use Chrome or Firefox."
+    //       }
+    //     ]
+    //   });
+    //   this.$store.commit("disableTour");
+    //   intro.start();
+    // }
   },
   beforeDestroy() {
     clearInterval(this.Interval);

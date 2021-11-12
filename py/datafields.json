@@ -86,7 +86,10 @@
     "Transformer": {
         "Field": [
             "Phase",
-            "Tap"
+            "Tap",
+			"GICNeutralCurrent",
+			"GICMvarLosses",
+			"GICIEff"
         ]
     }
 }

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import datafield from "./assets/datafield.json";
+import datafield from "./assets/datafields.json";
 import tcmcommands from "./assets/tcmcommands.json";
 // import casedetail from './assets/150G.json';
 import casedetail from "./assets/2019GA.json";

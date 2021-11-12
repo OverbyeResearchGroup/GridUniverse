@@ -1,6 +1,7 @@
 import time
 import json
 import sys
+import os
 import threading
 from queue import Queue
 from random import randrange
@@ -114,14 +115,14 @@ def setup_dictionary_data(ds, data_package_id):
     # Receive the case dictionary
     ds.msgtypes[14]()
     dsdictionary = ds.receive(14)
-    print(dsdictionary['Gen'].keys())
+    # print(dsdictionary['Gen'].keys())
 
     # Send the tcmGetData request
     # this datafields.json is used by both python and js
     # so that the backend and the web frontend shared the
     # same data structure. This is like a simple encode/decode
     # mechanism to keep the data structure consistent in both sides.
-    config = json.loads(open('datafields.json').read())
+    config = json.loads(open(resource_path("datafields.json")).read())
     for ele in config.keys():
         config[ele]['Object'] = []
     
@@ -177,8 +178,7 @@ def setup_dictionary_data(ds, data_package_id):
 class SimulationInstance:
 
     def __init__(self, id, ip, port, client, queue):
-        print("Simulation ID " + str(
-            id) + " initialized to use local DS Port " + str(port))
+        print(f"Simulation ID {id} initialized to connect {ip} {port}")
         sys.stdout.flush()
         self.id = id
         self.ip = ip
@@ -298,12 +298,14 @@ class SimulationInstance:
     def regular_update(self):
         self.ds.msgtypes[12](data_package_id)
         data = self.get_data()
+        # print("update new data")
         if data is None:
             return
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
         self.client.send_multipart(
             [msgpack.dumps(topic), msgpack.dumps(data)])
+        # print("data send")
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -397,16 +399,27 @@ def background_work():
             sim.update()
 
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 def main():
     global queue
     args = sys.argv
     if len(args) <= 2:
-        ip = "localhost"
+        ip = "192.168.1.221"
         port = "5557"
     else:
         ip = args[1]
         port = args[2]
-    print("Connecting to {}:{}".format(ip, port))
+    print(f"Connecting to {ip}:{port}")
     clientname = 'electron' + '{:03}'.format(randrange(1, 10**3))
 
     # Set up the zmq publishers
@@ -420,7 +433,7 @@ def main():
     queue = Queue()
 
     # Set up Simulation Instances and connect to DS Clients
-    sim = SimulationInstance(0, 'localhost', 5557, zmq_publisher, queue)
+    sim = SimulationInstance(0, ip, int(port), zmq_publisher, queue)
     simulation_instances[id] = sim
 
     publisher_thread = threading.Thread(target=background_work)
@@ -442,4 +455,7 @@ def main():
 
 
 if __name__ == "__main__":
+    print(sys.executable)
+    print(os.getcwd())
+    print(sys.path)
     main()

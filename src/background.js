@@ -50,10 +50,10 @@ let pyProc = null
 let pyPort = null
 
 const createPyProc = (ip, port) => {
-  // let script = path.join(__dirname, '../py', 'ds_client.py')
-  let script = path.join(__dirname, '../pydist', 'ds_client', 'ds_client')
+  // let script = path.join(__dirname, '../py', 'ds_client.py')  // for development only
+  let script = path.join(__dirname, '../pydist', 'ds_client')
   util.log(script);
-  // pyProc = require('child_process').spawn('python', [script, ip, port])
+  // pyProc = require('child_process').spawn("C:/Users/test/anaconda3/python.exe", [script, ip, port]) // for development
   pyProc = require('child_process').execFile(script, [ip, port])
   pyProc.stdout.on('data', function (chunk) {
     var textChunk = chunk.toString('utf8');// buffer to string
@@ -91,7 +91,7 @@ async function zmq_run(ip, pub_port, sub_port) {
   util.log(`Pusher connected to port ${sub_port}`)
 
   for await (const [topic, msg] of sub) {
-    // util.log("received a message related to:", decode(topic), "containing message:", decode(msg))
+    // util.log("received a message related to:", decode(topic))
     win.webContents.send(decode(topic), decode(msg))
   }
 }
@@ -147,8 +147,11 @@ ipcMain.once('connect', (event, config) => {
   const config_object = decode(config);
   if (config_object.direct == true) {
     createPyProc(config_object.ip, config_object.port);
+    zmq_run("localhost", config_object.pub_port, config_object.sub_port);
+  } else {
+    zmq_run(config_object.ip, config_object.pub_port, config_object.sub_port);
   }
-  zmq_run(config_object.ip, config_object.pub_port, config_object.sub_port)
+
 })
 
 ipcMain.on('S000/user/system', async (event, msg) => {
