@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build --open",
-    "python:build": "pyinstaller ./py/ds_client.py --clean --distpath ./pydist",
+    "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
     "electron:build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
