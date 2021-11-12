@@ -7,7 +7,7 @@
         <pieDistribute :areatotal="areaData[0]"></pieDistribute>
       </v-flex>
       <v-flex lg6 sm12 xs12>
-        <v-chart :options="genPie" :theme="theme" autoresize />
+        <v-chart :option="genPie" :theme="theme" autoresize />
       </v-flex>
     </v-layout>
   </v-container>

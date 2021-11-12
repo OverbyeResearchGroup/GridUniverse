@@ -10,7 +10,7 @@
 </style>
 
 <script>
-import echarts from 'echarts/lib/echarts'
+import * as echarts from "echarts";
 import debounce from 'lodash/debounce'
 import { addListener, removeListener } from 'resize-detector'
 // enumerating ECharts events for now

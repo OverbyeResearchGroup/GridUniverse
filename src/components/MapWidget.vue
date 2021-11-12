@@ -48,7 +48,7 @@
 
 
 <script>
-// import echarts from 'echarts';
+// import * as echarts from "echarts";
 // import 'echarts-leaflet';
 import { mapGetters, mapState } from "vuex";
 import Math from "mathjs";

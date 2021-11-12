@@ -14,7 +14,7 @@
 </style>
 
 <script>
-import echarts from 'echarts';
+import * as echarts from "echarts";
 import Material from 'vuetify/es5/util/colors';
 
 export default {

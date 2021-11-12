@@ -93,7 +93,7 @@ table.v-table thead th:not(:first-child) {
 </style>
 
 <script>
-import echarts from "echarts";
+import * as echarts from "echarts";
 import "echarts-leaflet";
 import { mapGetters } from "vuex";
 import Math from "mathjs";

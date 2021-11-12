@@ -4,7 +4,7 @@
     <!-- Creating the generation bar chart. -->
     <v-layout row wrap>
       <v-flex lg12 sm12 xs12>
-        <v-chart :options="genBar" :theme="theme" autoresize />
+        <v-chart :option="genBar" :theme="theme" autoresize />
       </v-flex>
     </v-layout>
   </v-container>
