@@ -40,7 +40,7 @@ export default {
   methods: {
     initGenPlot() {
       // Initiailizing all the data in the plot.
-      console.log(this.$store.state.genData);
+      // console.log(this.$store.state.genData);
       for (let i in this.$store.state.genData) {
         this.genXaxis.push(this.$store.state.genData[i]["name"]);
         this.genYaxis.push(this.$store.state.genData[i]["MW"]);
