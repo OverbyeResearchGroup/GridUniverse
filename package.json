@@ -1,6 +1,6 @@
 {
   "name": "powerweb-electron",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Zeyu Mao",
   "description": "The desktop application version of PowerWeb",
   "private": true,
@@ -8,7 +8,6 @@
     "serve": "vue-cli-service serve",
     "build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build --open",
     "python:build": "pyinstaller ./py/ds_client.py --clean --distpath ./pydist",
-    "pack:build": "./node_modules/.bin/electron-packager . --overwrite --ignore=py$",
     "electron:build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
