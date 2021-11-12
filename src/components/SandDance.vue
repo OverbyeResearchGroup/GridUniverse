@@ -18,8 +18,15 @@
 </template>
 
 <script>
-import * as SandDance from "@msrvida/sanddance";
-SandDance.use(window.vega, window.deck, window.deck, window.luma);
+// import * as SandDance from "@msrvida/sanddance";
+// SandDance.use(window.vega, window.deck, window.deck, window.luma);
+import * as deck from "@deck.gl/core";
+import * as layers from "@deck.gl/layers";
+import * as luma from "@luma.gl/core";
+import * as vega from "vega";
+import SandDanceVue, { SandDance } from "@msrvida/sanddance-vue";
+
+SandDance.use(vega, deck, layers, luma);
 
 var scatterplotTest = {};
 var data, insight;
