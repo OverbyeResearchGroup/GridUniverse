@@ -159,7 +159,7 @@ table.v-table thead th:not(:first-child) {
 import * as echarts from "echarts";
 import "echarts-leaflet";
 import { mapGetters } from "vuex";
-import Math from "mathjs";
+import { abs } from 'mathjs';
 
 export default {
   // props: {
@@ -307,7 +307,7 @@ export default {
             symbol: "circle",
             symbolSize: (value, params) => {
               if (params.data.attribute.GICNeutralCurrent) {
-                const current = Math.abs(
+                const current = abs(
                   params.data.attribute.GICNeutralCurrent
                 );
                 if (current < 1) {

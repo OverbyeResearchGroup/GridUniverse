@@ -18,7 +18,7 @@ def recv_loop():
     global queue
     context = zmq.Context()
     zmq_puller = context.socket(zmq.SUB)
-    zmq_puller.bind("tcp://127.0.0.1:5555")
+    zmq_puller.bind("tcp://0.0.0.0:5555")
     zmq_puller.subscribe("S000/user/cmd")
     zmq_puller.subscribe("S000/user/system")
     print("ZMQ puller is ready ...", flush=True)
@@ -426,7 +426,7 @@ def main():
     context = zmq.Context()
     zmq_publisher = context.socket(zmq.PUB)
     # zmq_publisher.setsockopt(zmq.LINGER, 100)
-    zmq_publisher.bind("tcp://127.0.0.1:5556")
+    zmq_publisher.bind("tcp://0.0.0.0:5556")
     print("ZMQ publisher is ready ...", flush=True)
 
     # Set up a thread-safe queue

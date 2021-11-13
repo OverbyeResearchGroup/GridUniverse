@@ -18,6 +18,7 @@ export default {
       date0: [],
       date1: [],
       Interval: null,
+      actualLoad: [],
     };
   },
   computed: {
@@ -105,7 +106,7 @@ export default {
             symbol: "none",
             showSymbol: false,
             smooth: false,
-            zlevel: 0,
+            z: 2,
             // sampling: "average",
             animation: false,
             itemStyle: {
@@ -132,7 +133,7 @@ export default {
             symbol: "none",
             showSymbol: false,
             smooth: false,
-            zlevel: 1,
+            z: 3,
             // sampling: "average",
             animation: false,
             itemStyle: {
@@ -156,25 +157,27 @@ export default {
       });
     },
     updateChart() {
-      chart.appendData({
-        seriesIndex: "1",
-        data: this.areaLoad.slice(-1),
-      });
-      //   chart.setOption(
-      //     {
-      //       series: [
-      //         {
-      //           id: "real",
-      //           data: this.areaLoad
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       notMerge: false,
-      //       lazyUpdate: true,
-      //       silent: true
-      //     }
-      //   );
+      // console.log("actual load updated")
+
+      // chart.appendData({
+      //   seriesIndex: "1",
+      //   data: this.areaLoad.slice(-1),
+      // });
+      chart.setOption(
+        {
+          series: [
+            {
+              id: "real",
+              data: this.areaLoad,
+            },
+          ],
+        },
+        {
+          notMerge: false,
+          lazyUpdate: true,
+          silent: true,
+        }
+      );
     },
     resizeChart() {
       window.addEventListener("resize", () => {
