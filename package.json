@@ -1,8 +1,8 @@
 {
-  "name": "powerweb-electron",
+  "name": "gridverse",
   "version": "1.1.0",
   "author": "Zeyu Mao",
-  "description": "The desktop application version of PowerWeb",
+  "description": "The desktop application version of Gridverse",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

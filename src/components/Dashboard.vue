@@ -237,7 +237,7 @@
     <v-toolbar color="blue darken-3" v-if="showToolbar" dark app clipped-left fixed>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title class="white--text">
-        <button v-on:click="$store.commit('setpage','Home')">PowerWeb Cloud</button>
+        <button v-on:click="$store.commit('setpage','Home')">Gridverse</button>
         <div class="subheading">Powered by PowerWorld Dynamics Studio and EMQ</div>
       </v-toolbar-title>
       <!-- <v-toolbar-items>
