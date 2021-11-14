@@ -13,14 +13,14 @@
           <v-textarea
             name="input-7-1"
             v-model="comment"
-            box
+            filled
             label="Comment (optional)"
             auto-grow
           ></v-textarea>
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" flat @click.native="activate"
+          <v-btn color="blue darken-1" text @click.native="activate"
             >Download</v-btn
           >
         </v-card-actions>

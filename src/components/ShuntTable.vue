@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-toolbar card dense color="transparent">
+    <v-app-bar flat dense color="transparent">
       <v-toolbar-title>
         <h4>{{title}}</h4>
       </v-toolbar-title>
@@ -8,17 +8,16 @@
       <v-btn icon>
         <v-icon>more_vert</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-app-bar>
     <v-divider></v-divider>
     <v-card-text class="pa-0">
       <template>
         <v-data-table
-          :headers="headers"
-          :items="shunts"
-          :rows-per-page-items="defaultRowItems"
+          :header="headers"
+          :item="shunts"
+          :items-per-page-options="defaultRowItems"
           v-model="selected"
-          select-all
-          disable-initial-sort
+          show-select
           item-key="name"
         >
           <template slot="headerCell" slot-scope="props">

@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
   <div>
-    <v-layout row class="align-center layout px-4 pt-4 app--page-header">
+    <v-layout row class="align-center layout px-4 pt-4 app--page-header mb-2">
       <div class="page-header-left">
         <h3 class="pr-3">Overview</h3>
       </div>

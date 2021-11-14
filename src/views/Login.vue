@@ -1,18 +1,23 @@
 <template>
   <div>
-    <v-app dark v-if="showDash" class="app">
+    <v-app dark v-if="showDash">
       <dashboard v-if="showDash"></dashboard>
     </v-app>
     <!-- <v-app class="app"></v-app> -->
     <v-app dark v-else id="login" class="primary">
-      <v-content>
+      <v-main>
         <v-container fluid fill-height>
           <v-layout align-center justify-center>
-            <v-flex xs12 sm8 md4 lg4>
-              <v-card class="elevation-1 pa-3">
+            <v-flex xs12 sm8 md6 lg6>
+              <v-card class="mx-auto" max-width="600">
                 <v-card-text>
                   <div class="layout column align-center">
-                    <img src="../assets/logo.png" alt="Vue Material Admin" width="120" height="120" />
+                    <img
+                      src="../assets/logo.png"
+                      alt="Vue Material Admin"
+                      width="120"
+                      height="120"
+                    />
                     <h1 class="flex my-4 primary--text">PowerWeb</h1>
                   </div>
 
@@ -34,44 +39,64 @@
                     ></v-text-field>
                     <v-layout>
                       <v-flex grow>
-                        <v-text-field name="ip" label="IP Address" v-model="ip"></v-text-field>
+                        <v-text-field
+                          name="ip"
+                          label="IP Address"
+                          v-model="ip"
+                        ></v-text-field>
                       </v-flex>
                       <v-flex xs4 v-if="ds_direct">
-                        <v-text-field name="port" label="Port" v-model="port"></v-text-field>
+                        <v-text-field
+                          name="port"
+                          label="Port"
+                          v-model="port"
+                        ></v-text-field>
                       </v-flex>
                     </v-layout>
                     <v-layout v-if="!ds_direct">
                       <v-flex xs6>
-                        <v-text-field name="pub_port" label="Pub Port" v-model="pub_port"></v-text-field>
+                        <v-text-field
+                          name="pub_port"
+                          label="Pub Port"
+                          v-model="pub_port"
+                        ></v-text-field>
                       </v-flex>
                       <v-flex xs6>
-                        <v-text-field name="sub_port" label="Sub Port" v-model="sub_port"></v-text-field>
+                        <v-text-field
+                          name="sub_port"
+                          label="Sub Port"
+                          v-model="sub_port"
+                        ></v-text-field>
                       </v-flex>
                     </v-layout>
-                    <v-select disabled :items="items" label="Area" v-model="area" menu-props="auto"></v-select>
+                    <v-select
+                      disabled
+                      :items="items"
+                      label="Area"
+                      v-model="area"
+                      menu-props="auto"
+                    ></v-select>
                   </v-form>
                 </v-card-text>
-                <v-card-actions id="step2">
+                <v-card-actions id="step2" class="pa-5">
                   <!-- <v-checkbox label="Administrator" v-model="checkbox"></v-checkbox> -->
-                  <v-checkbox label="DS Direct" v-model="ds_direct"></v-checkbox>
+                  <v-checkbox
+                    label="Connect to DS"
+                    v-model="ds_direct"
+                  ></v-checkbox>
                   <v-spacer></v-spacer>
-                  <v-btn block color="primary" @click="login" :loading="loading">Login</v-btn>
+                  <v-btn text color="primary" @click="login" :loading="loading"
+                    >Login</v-btn
+                  >
                 </v-card-actions>
               </v-card>
             </v-flex>
           </v-layout>
         </v-container>
-      </v-content>
+      </v-main>
     </v-app>
   </div>
 </template>
-
-<style>
-styleDash {
-  position: "absolute";
-  width: "100%";
-}
-</style>
 
 <style scoped lang="css">
 /* #login {
@@ -94,7 +119,7 @@ const dashboard = import("../components/Dashboard");
 const loadingComponent = {
   render(h) {
     return <Spinner name="pacman" color="#2243a5" class="loading" />;
-  }
+  },
 };
 
 export default {
@@ -103,11 +128,11 @@ export default {
       loading: false,
       model: {
         username: "Admin",
-        password: "password"
+        password: "password",
       },
       showDash: false,
       items: Object.keys(this.$store.state.casedetail.content.Area).concat([
-        "Not specified"
+        "Not specified",
       ]),
       checkbox: false,
       area: 2, //null
@@ -119,7 +144,7 @@ export default {
       sub_port: "5555",
       ds_direct: true,
       rules: {
-        id: value => {
+        id: (value) => {
           const pattern = /[0-9]/g;
           if (value) {
             if (value.length == 3 && value.match(pattern).length == 3) {
@@ -130,8 +155,8 @@ export default {
           } else {
             return false;
           }
-        }
-      }
+        },
+      },
     };
   },
   methods: {
@@ -149,7 +174,7 @@ export default {
           ip: this.ip,
           port: this.port,
           pub_port: this.pub_port,
-          sub_port: this.sub_port
+          sub_port: this.sub_port,
         };
         ipcRenderer.send("connect", encode(config));
         this.$store.commit("setArea", this.area);
@@ -161,7 +186,7 @@ export default {
           // this.$router.push('/dashboard');
         }, 1000);
       }
-    }
+    },
   },
   mounted() {},
   components: {
@@ -174,9 +199,9 @@ export default {
       // 	}, 3000);
       // }),
       loading: loadingComponent,
-      delay: 0
-    })
-  }
+      delay: 0,
+    }),
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="v-widget">
     <v-card>
-      <v-toolbar color="transparent" flat dense card v-if="enableHeader">
+      <v-app-bar color="transparent" flat dense v-if="enableHeader">
         <v-toolbar-title>
           <h4>{{ title }}</h4>
         </v-toolbar-title>
@@ -10,7 +10,7 @@
         <v-btn icon @click="restore">
           <v-icon>restore</v-icon>
         </v-btn>
-      </v-toolbar>
+      </v-app-bar>
       <v-divider v-if="enableHeader"></v-divider>
       <slot name="widget-content"></slot>
       <div id="container">

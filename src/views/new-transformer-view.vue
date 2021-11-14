@@ -23,7 +23,7 @@
           <!-- <v-widget title="Realtime Data" content-bg="white">
           <div slot="widget-content">-->
           <v-card>
-            <v-toolbar card dense color="transparent">
+            <v-app-bar flat dense color="transparent">
               <v-toolbar-title>
                 <h4>{{ title }}</h4>
               </v-toolbar-title>
@@ -31,16 +31,15 @@
               <v-btn icon>
                 <v-icon>more_vert</v-icon>
               </v-btn>
-            </v-toolbar>
+            </v-app-bar>
             <v-divider></v-divider>
             <v-card-text class="pa-0">
               <template>
                 <v-data-table
                   class="fixed-header"
-                  :headers="headers"
-                  :items="Transformers"
-                  :rows-per-page-items="defaultRowItems"
-                  disable-initial-sort
+                  :header="headers"
+                  :item="Transformers"
+                  :items-per-page-options="defaultRowItems"
                   item-key="name"
                 >
                   <template v-slot:items="props">
@@ -70,11 +69,10 @@
             <v-flex lg12 sm12 xs12>
               <div id="v-widget">
                 <v-card>
-                  <v-toolbar
+                  <v-app-bar
                     color="transparent"
                     flat
                     dense
-                    card
                     v-if="enableHeader"
                   >
                     <v-toolbar-title>
@@ -82,7 +80,7 @@
                     </v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-btn
-                      outline
+                      outlined
                       small
                       :disabled="gicEnabled"
                       color="primary"
@@ -90,14 +88,14 @@
                       >GICNeutralCurrent</v-btn
                     >
                     <v-btn
-                      outline
+                      outlined
                       small
                       :disabled="tempEnabled"
                       color="primary"
                       @click="enableTemp"
                       >Temperature</v-btn
                     >
-                  </v-toolbar>
+                  </v-app-bar>
                   <v-divider v-if="enableHeader"></v-divider>
                   <slot name="widget-content"></slot>
                   <div id="transMap" class="transformerChart"></div>

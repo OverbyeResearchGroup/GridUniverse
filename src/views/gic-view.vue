@@ -24,18 +24,17 @@
             <v-flex lg12 sm12 xs12>
               <div id="v-widget">
                 <v-card>
-                  <v-toolbar
+                  <v-app-bar
                     color="transparent"
                     flat
                     dense
-                    card
                     v-if="enableHeader"
                   >
                     <v-toolbar-title>
                       <h4>{{ chartTitle }}</h4>
                     </v-toolbar-title>
                     <v-spacer></v-spacer>
-                  </v-toolbar>
+                  </v-app-bar>
                   <v-divider v-if="enableHeader"></v-divider>
                   <slot name="widget-content"></slot>
                   <div id="map" class="gicChart"></div>

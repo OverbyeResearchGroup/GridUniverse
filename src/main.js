@@ -14,7 +14,6 @@ import ElementUI from 'element-ui';
 import 'element-theme-dark';
 // import 'element-ui/lib/theme-chalk/index.css';
 import 'izitoast/dist/css/iziToast.css';
-import './assets/default.styl';
 // import 'vue-status-indicator/styles.css'
 import StatusIndicator from 'vue-status-indicator'
 import VueIntro from 'vue-introjs';
@@ -27,15 +26,8 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import '@supermap/iclient-leaflet'
 
-Vue.use(L)
-Vue.component('v-chart', ECharts)
-Vue.use(ElementUI);
-Vue.use(Vuetify, {
-	// theme: {
-	//   primary: colors.indigo.base, // #E53935
-	//   secondary: colors.indigo.lighten4, // #FFCDD2
-	//   accent: colors.indigo.base // #3F51B5
-	// },
+const opts = {
+	theme: {dark: true},
 	options: {
 		themeVariations: ['primary', 'secondary', 'accent'],
 		extra: {
@@ -48,7 +40,12 @@ Vue.use(Vuetify, {
 			bodyBg: ''
 		}
 	}
-});
+}
+
+Vue.use(L)
+Vue.component('v-chart', ECharts)
+Vue.use(ElementUI);
+Vue.use(Vuetify);
 Vue.use(StatusIndicator);
 Vue.use(VueIntro);
 
@@ -59,6 +56,7 @@ Vue.config.productionTip = false;
 new Vue({
 	router,
 	store,
+	vuetify: new Vuetify(opts),
 	render: h => h(App),
 	components: { App },
 	template: '<App/>'

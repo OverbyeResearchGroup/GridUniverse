@@ -29,14 +29,13 @@
         </v-tabs>
       </v-toolbar>
       <v-tabs-items v-model="currentItem">
-        <v-tab-item :value="'tab-General'" :key="'General'" lazy>
+        <v-tab-item :value="'tab-General'" :key="'General'">
           <v-card>
             <v-card-title class="headline"> Data </v-card-title>
             <v-data-table
-              :headers="headers"
-              :items="display"
-              disable-initial-sort
-              hide-actions
+              :header="headers"
+              :item="display"
+              hide-default-footer
               class="elevation-1"
               lazy
             >
@@ -68,7 +67,6 @@
           v-for="(item, index) in tabs"
           :value="'tab-' + item"
           :key="item"
-          lazy
         >
           <popchild
             v-if="show"
@@ -157,7 +155,7 @@ export default {
       let anchor = 0;
       var arrlength;
       var keyarr;
-	  const temp = message.Data;
+      const temp = message.Data;
       for (let ele in this.$store.state.fieldstore) {
         arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);

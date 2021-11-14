@@ -5,10 +5,9 @@
         <v-card>
           <v-card-title class="headline"> Data </v-card-title>
           <v-data-table
-            :headers="headers"
-            :items="display"
-            disable-initial-sort
-            hide-actions
+            :header="headers"
+            :item="display"
+            hide-default-footer
             class="elevation-1"
           >
             <template slot="items" slot-scope="props">

@@ -19,7 +19,7 @@
 				</v-card-text>
 				<v-card-actions>
 					<v-spacer></v-spacer>
-					<v-btn color="blue darken-1" flat @click.native="activate">Activate</v-btn>
+					<v-btn color="blue darken-1" text @click.native="activate">Activate</v-btn>
 				</v-card-actions>
 			</v-card>
 		</v-dialog>

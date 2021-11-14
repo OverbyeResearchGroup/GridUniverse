@@ -9,10 +9,9 @@
     <v-card>
       <v-card-title class="headline"> Data </v-card-title>
       <v-data-table
-        :headers="$store.state.fieldstore.Branch['Field']"
-        :items="display"
-        disable-initial-sort
-        hide-actions
+        :header="$store.state.fieldstore.Branch['Field']"
+        :item="display"
+        hide-default-footer
         class="elevation-1"
       >
         <template slot="items" slot-scope="props">
@@ -30,7 +29,7 @@
         target="#dropdown-example"
       ></v-overflow-btn>
       <v-card-actions>
-        <v-btn color="primary" flat @click.stop="show = false">Close</v-btn>
+        <v-btn color="primary" text @click.stop="show = false">Close</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
