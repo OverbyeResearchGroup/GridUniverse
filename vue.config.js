@@ -14,9 +14,14 @@ module.exports = {
   },
   pluginOptions: {
     electronBuilder: {
+      chainWebpackRendererProcess(config) {
+        config.plugins.delete('workbox')
+        config.plugins.delete('pwa')
+      },
       builderOptions: {
         win: {
           'signAndEditExecutable': false,
+          "icon": "src/assets/grid.ico",
           target: [
             'portable'
           ]

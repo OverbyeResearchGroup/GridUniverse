@@ -9,7 +9,7 @@
     <v-card>
       <v-card-title class="headline"> Data </v-card-title>
       <v-data-table
-        :headers="$store.state.fieldstore.Branch['Field']"
+        :headers="headers"
         :items="display"
         hide-default-footer
         class="elevation-1"
@@ -57,6 +57,11 @@ export default {
         },
       });
     }
+    let myList = this.$store.state.fieldstore.Branch["Field"].map(function (
+      key
+    ) {
+      return { text: key, value: key };
+    });
     return {
       dropdown: temp,
       display: [],
@@ -64,6 +69,7 @@ export default {
       arrlength: null,
       keyarr: null,
       Interval: null,
+      headers: myList
     };
   },
   props: {
