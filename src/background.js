@@ -16,6 +16,11 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
+// Change the default app name
+if (process.platform === 'win32') {
+  app.setAppUserModelId("Gridverse");
+}
+
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
 

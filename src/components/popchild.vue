@@ -5,8 +5,8 @@
         <v-card>
           <v-card-title class="headline"> Data </v-card-title>
           <v-data-table
-            :header="headers"
-            :item="display"
+            :headers="headers"
+            :items="display"
             hide-default-footer
             class="elevation-1"
           >

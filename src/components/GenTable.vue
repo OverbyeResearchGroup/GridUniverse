@@ -25,13 +25,49 @@
       <template>
         <v-data-table
           class="fixed-header"
-          :header="headers"
-          :item="genData"
+          :headers="headers"
+          :items="genData"
           :items-per-page-options="defaultRowItems"
           v-model="selected"
           show-select
           item-key="name"
         >
+          <template v-slot:item.MWSetpoint="{ item }">
+            <v-edit-dialog
+              :return-value.sync="item.MWSetpoint"
+              large
+              persistent
+              @save="savemws(item)"
+              @open="openmws(item)"
+              @cancel="cancel"
+            >
+              <div>{{ item.MWSetpoint }}</div>
+              <template v-slot:input>
+                <div class="mt-3 title">Update MW Setpoint</div>
+                <v-text-field
+                  v-model="mws"
+                  label="Edit"
+                  single-line
+                  autofocus
+                ></v-text-field>
+              </template>
+            </v-edit-dialog>
+          </template>
+          <template v-slot:item.Actions="{ item }">
+            <v-switch
+              class="mt-3"
+              v-model="item.vStatus"
+              @click.native="toggle(item)"
+              :disabled="disable"
+            ></v-switch>
+          </template>
+          <template v-slot:item.AGC="{ item }">
+            <v-switch
+              class="mt-3"
+              v-model="item.AGC"
+              :disabled="!item.Status"
+            ></v-switch>
+          </template>
           <template slot="headerCell" slot-scope="props">
             <v-tooltip bottom>
               <span slot="activator">
@@ -69,25 +105,7 @@
               <!-- <td class="text-xs-right">{{ props.item.Mvar }}</td> -->
               <td class="text-xs-center">{{ props.item.MarginalCost }}</td>
               <td class="text-xs-center">{{ props.item.OperationCost }}</td>
-              <td class="text-xs-center">
-                <v-edit-dialog
-                  :return-value.sync="props.item.MWSetpoint"
-                  large
-                  lazy
-                  @save="savemws(props.item)"
-                  @open="openmws(props.item)"
-                >
-                  {{ props.item.MWSetpoint }}
-                  <div slot="input" class="mt-3 title">Update MW Setpoint</div>
-                  <v-text-field
-                    slot="input"
-                    v-model="mws"
-                    label="Edit"
-                    single-line
-                    autofocus
-                  ></v-text-field>
-                </v-edit-dialog>
-              </td>
+
               <!-- <td class="text-xs-right">
 								<v-edit-dialog :return-value.sync="props.item.VpuSetpoint" large lazy @save="savevps(props.item)" @open="openvps(props.item)">
 									<div>{{ props.item.VpuSetpoint }}</div>
@@ -97,25 +115,14 @@
 							</td> -->
               <td class="text-xs-center">{{ props.item.MWMax }}</td>
               <!-- <td class="text-xs-right">{{ props.item.MWMin }}</td> -->
-              <td class="text-xs-center">
-                <!-- <div class="mt-3 pa-0"> -->
+              <!-- <td class="text-xs-center">
                 <v-switch
                   class="mt-3"
                   v-model="props.item.vStatus"
                   @click.native="toggle(props.item)"
                   :disabled="disable"
                 ></v-switch>
-                <!-- </div> -->
-              </td>
-              <td class="text-xs-center">
-                <!-- <div class="mt-3 pa-0"> -->
-                <v-switch
-                  class="mt-3"
-                  v-model="props.item.AGC"
-                  :disabled="!props.item.Status"
-                ></v-switch>
-                <!-- </div> -->
-              </td>
+              </td> -->
             </tr>
           </template>
           <!-- <template slot="expand" slot-scope="props">
@@ -124,6 +131,13 @@
 				</v-card>
 			</template> -->
         </v-data-table>
+        <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
+          {{ snackText }}
+
+          <template v-slot:action="{ attrs }">
+            <v-btn v-bind="attrs" text @click="snack = false"> Close </v-btn>
+          </template>
+        </v-snackbar>
       </template>
       <v-divider></v-divider>
     </v-card-text>
@@ -209,6 +223,9 @@ export default {
       mws: 0,
       vps: 1,
       switch: false,
+      snack: false,
+      snackColor: "",
+      snackText: "",
     };
   },
   methods: {
@@ -297,6 +314,9 @@ export default {
       // }, 500);
     },
     savemws(item) {
+      this.snack = true;
+      this.snackColor = "success";
+      this.snackText = "New Setpoint Saved";
       this.mws = Math.min(Math.max(this.mws, 0), item.MWMax);
       const command = "Set Power " + this.mws + " MW";
       this.$store.commit("setMessage", [
@@ -309,6 +329,11 @@ export default {
     },
     openmws(item) {
       this.mws = item.MWSetpoint;
+    },
+    cancel() {
+      this.snack = true;
+      this.snackColor = "error";
+      this.snackText = "Canceled";
     },
     savevps(item) {
       const command = "Set Exciter_Setpoint " + this.vps + " pu";

@@ -13,12 +13,12 @@
                 <v-card-text>
                   <div class="layout column align-center">
                     <img
-                      src="../assets/logo.png"
+                      src="../assets/grid.svg"
                       alt="Vue Material Admin"
                       width="120"
                       height="120"
                     />
-                    <h1 class="flex my-4 primary--text">PowerWeb</h1>
+                    <h1 class="flex my-4 primary--text">Gridverse</h1>
                   </div>
 
                   <v-form id="step1">

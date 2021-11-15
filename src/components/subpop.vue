@@ -1,40 +1,37 @@
 <template>
   <div>
     <v-dialog v-model="show" :key="id" max-width="1000px">
-      <v-toolbar color="cyan" dark tabs>
+      <v-toolbar dark flat>
         <v-toolbar-title>{{ name }} {{ volt }} {{ type }}</v-toolbar-title>
-        <v-tabs
-          slot="extension"
-          v-model="currentItem"
-          centered
-          color="cyan"
-          slider-color="yellow"
-        >
-          <v-tab
-            :key="'General'"
-            :href="'#tab-General'"
-            @click="
-              childshow = false;
-              atDefault = true;
-            "
-            >General</v-tab
-          >
-          <v-tab
-            v-for="item in tabs"
-            :key="item"
-            :href="'#tab-' + item"
-            @click="atDefault = false"
-            >{{ item }}</v-tab
-          >
-        </v-tabs>
+        <template v-slot:extension>
+          <v-tabs centered v-model="currentItem">
+            <v-tabs-slider color="brown"></v-tabs-slider>
+            <v-tab
+              :key="'General'"
+              :href="'#tab-General'"
+              @click="
+                childshow = false;
+                atDefault = true;
+              "
+              >General</v-tab
+            >
+            <v-tab
+              v-for="item in tabs"
+              :key="item"
+              :href="'#tab-' + item"
+              @click="atDefault = false"
+              >{{ item }}</v-tab
+            >
+          </v-tabs>
+        </template>
       </v-toolbar>
       <v-tabs-items v-model="currentItem">
         <v-tab-item :value="'tab-General'" :key="'General'">
           <v-card>
             <v-card-title class="headline"> Data </v-card-title>
             <v-data-table
-              :header="headers"
-              :item="display"
+              :headers="headers"
+              :items="display"
               hide-default-footer
               class="elevation-1"
               lazy

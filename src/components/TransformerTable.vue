@@ -14,8 +14,8 @@
       <template>
         <v-data-table
           class="fixed-header"
-          :header="headers"
-          :item="Transformers"
+          :headers="headers"
+          :items="Transformers"
           :items-per-page-options="defaultRowItems"
           v-model="selected"
           show-select

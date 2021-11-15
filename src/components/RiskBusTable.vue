@@ -12,7 +12,7 @@
 		<v-divider></v-divider>
 		<v-card-text class="pa-0">
 			<template>
-				<v-data-table :header="headers" :item="riskBuses" :items-per-page-options="defaultRowItems" v-model="selected" show-select item-key="name">
+				<v-data-table :headers="headers" :items="riskBuses" :items-per-page-options="defaultRowItems" v-model="selected" show-select item-key="name">
 				<!-- <v-data-table :headers="headers" :items="formatRiskBuses" v-model="selected" hide-default-footer select-all item-key="name"> -->
 					<template slot="headerCell" slot-scope="props">
 						<v-tooltip bottom>

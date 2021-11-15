@@ -9,8 +9,8 @@
     <v-card>
       <v-card-title class="headline"> Data </v-card-title>
       <v-data-table
-        :header="$store.state.fieldstore.Branch['Field']"
-        :item="display"
+        :headers="$store.state.fieldstore.Branch['Field']"
+        :items="display"
         hide-default-footer
         class="elevation-1"
       >

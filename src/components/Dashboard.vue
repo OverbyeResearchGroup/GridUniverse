@@ -6,8 +6,10 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="white--text">
         <button v-on:click="$store.commit('setpage', 'Home')">Gridverse</button>
-        <div class="subheading">
-          Powered by PowerWorld Dynamics Studio and EMQ
+        <div>
+          <p class="font-weight-thin text-subtitle-2">
+            Powered by PowerWorld Dynamics Studio and EMQ
+          </p>
         </div>
       </v-toolbar-title>
       <!-- <v-toolbar-items>
@@ -17,12 +19,8 @@
         <v-icon>fullscreen</v-icon>
       </v-btn>
       <v-menu
-        offset-y
-        origin="center center"
-        class="elelvation-1"
-        :nudge-bottom="14"
-        transition="scale-transition"
-        v-model="show"
+        left
+        bottom
       >
         <template v-slot:activator="{ on }">
           <v-btn icon text v-on="on" @click="$store.commit('resetbadge')">
@@ -31,8 +29,8 @@
               <v-icon medium>notifications</v-icon>
             </v-badge>
           </v-btn>
-          <NotificationList v-on:changeHeight="changeHeight"></NotificationList>
         </template>
+        <NotificationList v-on:changeHeight="changeHeight"></NotificationList>
       </v-menu>
     </v-app-bar>
 

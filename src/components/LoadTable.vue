@@ -13,13 +13,21 @@
     <v-card-text class="pa-0">
       <template>
         <v-data-table
-          :header="headers"
-          :item="loads"
+          :headers="headers"
+          :items="loads"
           :items-per-page-options="defaultRowItems"
           v-model="selected"
           show-select
           item-key="name"
         >
+        <template v-slot:item.Actions="{ item }">
+            <v-switch
+              class="mt-3"
+              v-model="item.vStatus"
+              @click.native="toggle(item)"
+              :disabled="disable"
+            ></v-switch>
+          </template>
           <template v-slot:items="props">
             <tr :active="props.selected" @click="props.selected = !props.selected">
               <td>
@@ -31,15 +39,6 @@
               <td class="text-xs-center">{{ props.item.Mvar }}</td>
               <td class="text-xs-center">{{ props.item.Vpu }}</td>
               <td class="text-xs-center">{{ props.item.FreqHz }}</td>
-              <td class="justify-center layout px-0">
-                <div class="my-2">
-                  <v-switch
-                    v-model="props.item.vStatus"
-                    @click.native="toggle(props.item)"
-                    :disabled="disable"
-                  ></v-switch>
-                </div>
-              </td>
             </tr>
           </template>
           <!-- <template slot="expand" slot-scope="props">

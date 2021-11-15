@@ -305,7 +305,7 @@ export default {
           });
           Push.create("System", {
             body: this.usermessage,
-            icon: require("../assets/logo.png"),
+            icon: require("../assets/grid.png"),
             timeout: 6000,
             onClick: function() {
               window.focus();
