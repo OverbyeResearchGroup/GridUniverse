@@ -14,6 +14,8 @@ module.exports = {
   },
   pluginOptions: {
     electronBuilder: {
+      nodeIntegration: true,
+      contextIsolation: false,
       chainWebpackRendererProcess(config) {
         config.plugins.delete('workbox')
         config.plugins.delete('pwa')

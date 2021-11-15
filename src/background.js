@@ -28,8 +28,10 @@ function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800, height: 600, icon: path.join(__static, 'grid.ico'),
+    autoHideMenuBar: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
   })
 
@@ -113,7 +115,9 @@ app.on('window-all-closed', () => {
   // On macOS it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
-    exitPyProc()
+    if (pyProc != null) {
+      exitPyProc()
+    }
     app.quit()
   }
 })

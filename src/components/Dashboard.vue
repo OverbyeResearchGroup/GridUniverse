@@ -4,7 +4,7 @@
   <div>
     <v-app-bar clipped-left app v-if="showToolbar">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="white--text">
+      <v-toolbar-title class="white--text pt-3">
         <button v-on:click="$store.commit('setpage', 'Home')">Gridverse</button>
         <div>
           <p class="font-weight-thin text-subtitle-2">
