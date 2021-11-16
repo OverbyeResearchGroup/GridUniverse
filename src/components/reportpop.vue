@@ -2,7 +2,7 @@
   <v-layout row justify-center>
     <v-dialog v-model="show" width="600">
       <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
+        <v-card-title class="text-h5 lighten-2">
           Report
         </v-card-title>
         <!-- <v-card-media>

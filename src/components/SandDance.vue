@@ -8,7 +8,7 @@
       wrap
     >
       <v-flex xs12>
-        <div id="vis"></div>
+        <div id="sanddance"></div>
       </v-flex>
       <!-- <v-flex lg2 xs12>
         <v-btn @click="change">test</v-btn>
@@ -54,7 +54,7 @@ export default {
   methods: {
     init() {
       scatterplotTest.viewer = new SandDance.Viewer(
-        document.getElementById("vis"),
+        document.getElementById("sanddance"),
         {
           hideSidebarControls: true
         }
@@ -104,7 +104,7 @@ export default {
       }
       scatterplotTest.viewer.render(insight, buses);
       //   scatterplotTest.viewer.colorContexts[0].legend.rows['6'].label = "≥ 1.05";
-      console.log(scatterplotTest.viewer);
+      // console.log(scatterplotTest.viewer);
     },
     preProcess() {
       let anchor = 0;
