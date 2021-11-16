@@ -7,7 +7,7 @@ from queue import Queue
 from random import randrange
 import msgpack
 
-import zmq
+import socketio
 
 from powerworldDS import PowerWorldDS
 
@@ -58,21 +58,6 @@ def on_message(topic, payload):
             if dtype == 'Branch':
                 temp = rawid.split(',')
                 deviceid = [int(temp[0]), int(temp[1]), temp[2]]
-                action = postload['action']
-                otype = postload['type']
-                if action in commands[otype] or action.split(" ")[0] in [
-                    "CLOSE", "SET",
-                    "Set"]:  # second validation for poor Internet related issues
-                    json_data = {
-                        dtype: {
-                            'ID': deviceid,
-                            'Action': action
-                            # 'Action': action
-                        }
-                    }
-                    queue.put(([userid, soc, fsec, json_data],
-                               user, dtype, name, action,
-                               rawid))
             elif dtype in ['Gen', 'Load', 'Shunt']:
                 temp = rawid.split(',')
                 try:
