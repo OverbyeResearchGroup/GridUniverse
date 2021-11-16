@@ -46,7 +46,6 @@ export default {
       temp.push({
         text: this.$store.state.tcmcommands.Branch[j],
         callback: () => {
-          console.log(this.type, this.id, this.name);
           this.$store.commit("setMessage", [
             this.type,
             this.id,

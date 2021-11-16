@@ -8,7 +8,7 @@
         <!-- <v-card-media>
 					<div id='chart' class="chart"></div>
 				</v-card-media> -->
-        <div id="chart" class="chart"></div>
+        <div id="reportchart" class="chart"></div>
         <v-card-text>
           <v-textarea
             name="input-7-1"
@@ -128,7 +128,7 @@ export default {
             },
           });
         }
-        var chart = echarts.init(document.getElementById("chart"), "dark");
+        var chart = echarts.init(document.getElementById("reportchart"), "dark");
         chart.setOption({
           title: {
             text: "Average RIndex: " + mean(RIndexArray).toFixed(0).toString(),

@@ -130,7 +130,6 @@ export default {
         action: this.$store.state.message[3]
       };
       ipcRenderer.send(this.simID + "/user/cmd", JSON.stringify(temp));
-      console.log(JSON.stringify(temp))
       this.$store.commit("addReportUser", {
         time: this.$store.state.currentTime,
         event: [temp.type, temp.id, temp.action]
