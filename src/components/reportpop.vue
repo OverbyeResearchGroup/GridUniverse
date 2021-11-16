@@ -1,14 +1,14 @@
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="show" max-width="500px">
+    <v-dialog v-model="show" width="600">
       <v-card>
-        <v-card-title>
-          <span class="title">Report</span>
+        <v-card-title class="text-h5 grey lighten-2">
+          Report
         </v-card-title>
         <!-- <v-card-media>
 					<div id='chart' class="chart"></div>
 				</v-card-media> -->
-        <div id="reportchart" class="chart"></div>
+        <div id="reportchart" class="reportchart"></div>
         <v-card-text>
           <v-textarea
             name="input-7-1"
@@ -30,7 +30,7 @@
 </template>
 
 <style scoped>
-.chart {
+.reportchart {
   height: 300px;
   width: 100%;
 }
@@ -87,7 +87,7 @@ export default {
       const RIndexArray = this.$store.state.report.score.map(function (item) {
         return item["RIndex"];
       });
-      console.log(RIndexArray);
+      // console.log(RIndexArray);
       if (RIndexArray.length) {
         const userTimeArray = this.$store.state.report.user.map(function (
           item
@@ -203,7 +203,7 @@ export default {
                 symbol: "triangle",
                 symbolSize: 8,
                 itemStyle: {
-                  color: "blue",
+                  color: "yellow",
                 },
                 data: markPointData,
               },
