@@ -1,5 +1,5 @@
 <template>
-	<v-card class="elevation-0">
+	<v-card class="elevation-0" width="350">
 		<v-app-bar flat dense color="transparent">
 			<v-toolbar-title>
 				<h4>Notification</h4>
@@ -7,7 +7,7 @@
 		</v-app-bar>
 		<v-divider></v-divider>
 		<v-card-text class="pa-0">
-			<v-list three-line dense class="pa-0">
+			<v-list three-line dense class="overflow-y-auto pa-0" max-height="600">
 				<template v-for="(item, index) in $store.state.badgelist">
 					<v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader>
 					<v-list-item v-else :key="item.time" @click="handleClick">

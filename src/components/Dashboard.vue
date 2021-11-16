@@ -106,7 +106,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item :key="'gic'" @click="$store.commit('setpage', 'gic')">
+        <!-- <v-list-item :key="'gic'" @click="$store.commit('setpage', 'gic')">
           <v-list-item-avatar>
             <v-icon>linear_scale</v-icon>
           </v-list-item-avatar>
@@ -114,7 +114,7 @@
           <v-list-item-content>
             <v-list-item-title>GIC</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
 
         <v-list-item
           :key="'sanddance'"
@@ -195,7 +195,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item
+        <!-- <v-list-item
           :key="'transformer'"
           @click="$store.commit('setpage', 'transformer')"
         >
@@ -206,7 +206,7 @@
           <v-list-item-content>
             <v-list-item-title>Transformer</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
 
         <v-list-item :key="'chat'" @click="dialog = true">
           <v-list-item-avatar>
@@ -319,9 +319,9 @@ import load from "../views/load-view";
 import shunt from "../views/shunt-view";
 import admin from "../views/admin-view";
 import branch from "../views/branch-view";
-import transformer from "../views/new-transformer-view";
+// import transformer from "../views/new-transformer-view";
 // import areastrip from './AreaStrip'
-import gic from "../views/gic-view.vue";
+// import gic from "../views/gic-view.vue";
 import areastrip from "./AreaStrip2";
 import hourlystrip from "./HourlyStrip";
 import busstrip from "./BusStrip";
@@ -376,8 +376,8 @@ export default {
     // CostBot,
     AGCBot,
     branch,
-    gic,
-    transformer,
+    // gic,
+    // transformer,
     areastrip,
     hourlystrip,
     busstrip,

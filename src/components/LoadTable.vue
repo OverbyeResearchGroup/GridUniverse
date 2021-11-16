@@ -2,7 +2,7 @@
   <v-card>
     <v-app-bar flat dense color="transparent">
       <v-toolbar-title>
-        <h4>{{title}}</h4>
+        <h4>{{ title }}</h4>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
@@ -20,7 +20,7 @@
           show-select
           item-key="name"
         >
-        <template v-slot:item.Actions="{ item }">
+          <template v-slot:item.Actions="{ item }">
             <v-switch
               class="mt-3"
               v-model="item.vStatus"
@@ -29,9 +29,16 @@
             ></v-switch>
           </template>
           <template v-slot:items="props">
-            <tr :active="props.selected" @click="props.selected = !props.selected">
+            <tr
+              :active="props.selected"
+              @click="props.selected = !props.selected"
+            >
               <td>
-                <v-checkbox :input-value="props.selected" primary hide-details></v-checkbox>
+                <v-checkbox
+                  :input-value="props.selected"
+                  primary
+                  hide-details
+                ></v-checkbox>
               </td>
               <td class="text-xs-left">{{ props.item.name }}</td>
               <td class="text-xs-left">{{ props.item.Status }}</td>
@@ -73,7 +80,7 @@ import { mapState } from "vuex";
 
 export default {
   props: {
-    title: String
+    title: String,
   },
   data() {
     return {
@@ -82,7 +89,7 @@ export default {
           text: "Load",
           align: "left",
           // sortable: false,
-          value: "name"
+          value: "name",
         },
         { text: "Status", value: "Status" },
         { text: "MW", value: "MW" },
@@ -92,7 +99,7 @@ export default {
         // { text: 'MVA', value: 'MVA' },
         // { text: 'MW setpoint', value: 'MWSet', sortable: false },
         // { text: 'Vpu setpoint', value: 'VpuSet', sortable: false },
-        { text: "Actions", value: "Actions", sortable: false }
+        { text: "Actions", value: "Actions", sortable: false },
       ]),
       selected: [],
       anchor: 0,
@@ -100,11 +107,11 @@ export default {
       defaultRowItems: [
         15,
         30,
-        { text: "$vuetify.dataIterator.rowsPerPageAll", value: -1 }
+        { text: "$vuetify.dataIterator.rowsPerPageAll", value: -1 },
       ],
       loadArray: [],
       loads: [],
-      Interval: null
+      Interval: null,
     };
   },
   methods: {
@@ -114,7 +121,7 @@ export default {
       var keyarr;
 
       for (let ele in this.fieldstore) {
-        arrlength = this.fieldstore[ele]['Field'].length;
+        arrlength = this.fieldstore[ele]["Field"].length;
         keyarr = Object.keys(this.areadetail.content[ele]);
         if (ele != "Load") {
           anchor += arrlength * keyarr.length;
@@ -132,9 +139,8 @@ export default {
       for (let i in this.areadetail.content.Load) {
         if (this.areadetail.content.Load[i]["Int.Area Number"] == +this.area) {
           this.loadArray.push(count);
-          subID = this.areadetail.content.Bus[i.split(",")[0]][
-            "Int.Sub Number"
-          ];
+          subID =
+            this.areadetail.content.Bus[i.split(",")[0]]["Int.Sub Number"];
           temp.push({
             value: [
               this.areadetail.content.Substation[subID.toString()][
@@ -142,7 +148,7 @@ export default {
               ],
               this.areadetail.content.Substation[subID.toString()][
                 "Double.Latitude"
-              ]
+              ],
             ],
             key_cmd: i,
             name: Object.freeze(
@@ -156,7 +162,7 @@ export default {
             Mvar: 0,
             Vpu: 1,
             FreqHz: 60,
-            id_cmd: Object.freeze(this.areadetail.content.Load[i]["String.ID"])
+            id_cmd: Object.freeze(this.areadetail.content.Load[i]["String.ID"]),
           });
         }
         count++;
@@ -211,11 +217,11 @@ export default {
         "Load",
         item.key_cmd + "," + item.id_cmd,
         item.key_cmd + "#" + item.id_cmd,
-        command
+        command,
       ]);
       this.$store.commit("recordAction", ["Load", item.key_cmd]);
       this.$store.commit("setPublish");
-    }
+    },
   },
   created() {
     this.loads = [];
@@ -233,7 +239,7 @@ export default {
       "parsedData",
       "genAction",
       "currentTime",
-      "status"
+      "status",
     ]),
     disable() {
       if (this.status == "running") {
@@ -241,15 +247,15 @@ export default {
       } else {
         return true;
       }
-    }
+    },
   },
   watch: {
-    selected: function(newval, oldval) {
+    selected: function (newval, oldval) {
       this.$store.commit("updateSelectedLoads", newval);
-    }
+    },
   },
   beforeDestroy() {
     clearInterval(this.Interval);
-  }
+  },
 };
 </script>
