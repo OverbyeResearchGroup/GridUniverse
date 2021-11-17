@@ -1,36 +1,162 @@
-import time
-import json
+from time import ctime, sleep
+from json import load, loads
 import sys
-import os
-import threading
+from sys import argv, stdout
+from os import path, environ
+from threading import Thread
 from queue import Queue
 from random import randrange
-import msgpack
+from msgpack import dumps
 
+from aiohttp import web
 import socketio
 
 from powerworldDS import PowerWorldDS
 
 print("DS Client is loading ...", flush=True)
 
+try:
+    if environ['ENV'] == 'DEV':
+        with open('datafields.json', 'r') as f:
+            temp = load(f)
 
-def recv_loop():
-    global queue
-    context = zmq.Context()
-    zmq_puller = context.socket(zmq.SUB)
-    zmq_puller.bind("tcp://0.0.0.0:5555")
-    zmq_puller.subscribe("S000/user/cmd")
-    zmq_puller.subscribe("S000/user/system")
-    print("ZMQ puller is ready ...", flush=True)
-    while True:
-        [topic, msg] = zmq_puller.recv_multipart()
-        on_message(topic.decode(), msg.decode())
+        with open('config.py', 'w') as f:
+            f.write(f"config = {temp}")
+except KeyError:
+    pass
+
+from config import config
+
+# Set up DS clients first
+ds = None
+
+# create a Socket.IO server
+sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
+
+app = web.Application()
+sio.attach(app)
+
+topic_prefix = "S000"
+
+
+@sio.event
+async def connect(sid, environ, auth):
+    print('connect ', sid)
+
+
+@sio.event
+async def disconnect(sid):
+    print('disconnect ', sid)
+
+
+@sio.on(f"{topic_prefix}/user/cmd")
+async def on_cmd(sid, data):
+    postload = loads(data)
+    dtype = postload['type']
+    soc = 0  # For execute immediately
+    fsec = 0  # For execute immediately
+    if dtype in ['Branch', 'Gen', 'Load', 'Shunt', 'LineShunt']:
+        # print(postload)
+        user = postload['user']
+        if user not in userlist:
+            userlist.append(user)
+        userid = userlist.index(user)
+        rawid = postload['id']
+        name = postload['name']
+        if dtype == 'Branch':
+            temp = rawid.split(',')
+            deviceid = [int(temp[0]), int(temp[1]), temp[2]]
+            action = postload['action']
+            otype = postload['type']
+            if action in commands[otype] or action.split(" ")[0] in [
+                "CLOSE", "SET",
+                "Set"]:  # second validation for poor Internet related issues
+                json_data = {
+                    dtype: {
+                        'ID': deviceid,
+                        'Action': action
+                        # 'Action': action
+                    }
+                }
+                queue.put(([userid, soc, fsec, json_data],
+                           user, dtype, name, action,
+                           rawid))
+        elif dtype in ['Gen', 'Load', 'Shunt']:
+            temp = rawid.split(',')
+            try:
+                deviceid = [int(temp[0]), temp[1]]
+                action = postload['action']
+                otype = postload['type']
+                if action in commands[otype] or action.split(" ")[0] in [
+                    "CLOSE", "SET",
+                    "Set"]:  # second validation for poor Internet related issues
+                    json_data = {
+                        dtype: {
+                            'ID': deviceid,
+                            'Action': action
+                            # 'Action': action
+                        }
+                    }
+                    queue.put(([userid, soc, fsec, json_data],
+                               user, dtype, name, action,
+                               rawid))
+            except ValueError:
+                print(ValueError)
+    elif dtype == 'Import':
+        user = postload['user']
+        schedule = postload['schedule']
+        queue.put(("notification", "ds/note", "#" + user + " "
+                                                           "changed the schedule to " + schedule))
+
+
+@sio.on(f"{topic_prefix}/user/system")
+async def on_system(sid, payload):
+    if 'Start' in str(payload):
+        queue.put(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
+            0] + " start the simulation"))
+        ds.msgtypes[18]()
+    elif 'seconds' in str(payload):
+        queue.put(("notification", topic_prefix + "/ds/note",
+                   "#" + str(payload).split(':')[
+                       0] + " start the simulation"))
+        ds.msgtypes[23](int(str(payload).split('seconds ')[1][:-1]))
+    elif 'Pause' in str(payload):
+        queue.put(("notification", topic_prefix + "/ds/note",
+                   "#" + str(payload).split(':')[
+                       0] + " pause the simulation"))
+        ds.msgtypes[19]()
+    elif 'Continue' in str(payload):
+        queue.put(("notification", topic_prefix + "/ds/note",
+                   "#" + str(payload).split(':')[
+                       0] + " continue the simulation"))
+        ds.msgtypes[20]()
+    elif 'Abort' in str(payload):
+        queue.put(("notification", topic_prefix + "/ds/note",
+                   "#" + str(payload).split(':')[
+                       0] + " abort the simulation"))
+        ds.msgtypes[21]()
+
+
+# web.run_app(app, port=9999)
+
+
+# def recv_loop():
+#     global queue
+#     context = Context()
+#     zmq_puller = context.socket(SUB)
+#     zmq_puller.bind("tcp://0.0.0.0:5555")
+#     zmq_puller.subscribe("S000/user/cmd")
+#     zmq_puller.subscribe("S000/user/system")
+#     print("ZMQ puller is ready ...", flush=True)
+#     while True:
+#         [topic, msg] = zmq_puller.recv_multipart()
+#         on_message(topic.decode(), msg.decode())
 
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(topic, payload):
     global queue
-    print(time.ctime(), "MQTT Receive: " + topic + " " + payload)
+    print(ctime(), "MQTT Receive: " + topic + " " + payload)
     topic_prefix = topic.split('/')[0]
     sim = None
     for tsim in simulation_instances.values():
@@ -43,7 +169,7 @@ def on_message(topic, payload):
         # msg.payload should be a json string
         # do a preliminary validation
         # get second validation from DS direct
-        postload = json.loads(payload)
+        postload = loads(payload)
         dtype = postload['type']
         soc = 0  # For execute immediately
         fsec = 0  # For execute immediately
@@ -58,6 +184,21 @@ def on_message(topic, payload):
             if dtype == 'Branch':
                 temp = rawid.split(',')
                 deviceid = [int(temp[0]), int(temp[1]), temp[2]]
+                action = postload['action']
+                otype = postload['type']
+                if action in commands[otype] or action.split(" ")[0] in [
+                    "CLOSE", "SET",
+                    "Set"]:  # second validation for poor Internet related issues
+                    json_data = {
+                        dtype: {
+                            'ID': deviceid,
+                            'Action': action
+                            # 'Action': action
+                        }
+                    }
+                    queue.put(([userid, soc, fsec, json_data],
+                               user, dtype, name, action,
+                               rawid))
             elif dtype in ['Gen', 'Load', 'Shunt']:
                 temp = rawid.split(',')
                 try:
@@ -66,7 +207,7 @@ def on_message(topic, payload):
                     otype = postload['type']
                     if action in commands[otype] or action.split(" ")[0] in [
                         "CLOSE", "SET",
-                            "Set"]:  # second validation for poor Internet related issues
+                        "Set"]:  # second validation for poor Internet related issues
                         json_data = {
                             dtype: {
                                 'ID': deviceid,
@@ -83,7 +224,7 @@ def on_message(topic, payload):
             user = postload['user']
             schedule = postload['schedule']
             queue.put(("notification", "ds/note", "#" + user + " "
-                       "changed the schedule to " + schedule))
+                                                               "changed the schedule to " + schedule))
     elif topic == topic_prefix + '/user/system':
         if 'Start' in str(payload):
             queue.put(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
@@ -122,10 +263,10 @@ def setup_dictionary_data(ds, data_package_id):
     # so that the backend and the web frontend shared the
     # same data structure. This is like a simple encode/decode
     # mechanism to keep the data structure consistent in both sides.
-    config = json.loads(open(resource_path("datafields.json")).read())
+    # config = json.loads(open(resource_path("datafields.json")).read())
     for ele in config.keys():
         config[ele]['Object'] = []
-    
+
     for ele in dsdictionary["Area"]:
         config["Area"]["Object"].append(
             [dsdictionary["Area"][ele]["Int.Number"]])
@@ -155,9 +296,9 @@ def setup_dictionary_data(ds, data_package_id):
                 [dsdictionary["Bus"][str(ele[0])]["Int.Sub Number"]])
     for ele in dsdictionary["Branch"]:
         if [dsdictionary["Branch"][ele]["Int.From Bus Number"]] in \
-            config["Bus"]["Object"] or [
-                dsdictionary["Branch"][ele]["Int.To Bus Number"]] in config["Bus"][
-                "Object"]:
+                config["Bus"]["Object"] or [
+            dsdictionary["Branch"][ele]["Int.To Bus Number"]] in config["Bus"][
+            "Object"]:
             config["Branch"]["Object"].append(
                 [dsdictionary["Branch"][ele]["Int.From Bus Number"],
                  dsdictionary["Branch"][ele]["Int.To Bus Number"],
@@ -179,7 +320,7 @@ class SimulationInstance:
 
     def __init__(self, id, ip, port, client, queue):
         print(f"Simulation ID {id} initialized to connect {ip} {port}")
-        sys.stdout.flush()
+        stdout.flush()
         self.id = id
         self.ip = ip
         self.port = port
@@ -216,37 +357,26 @@ class SimulationInstance:
         if temp['type'] == 'dsmSimulationData':
             self.last_known_state = self.string_time(temp['SOC'],
                                                      temp['FRACSEC']) + "  " + \
-                temp['Status']
+                                    temp['Status']
         if temp['type'] != 'dsmSimulationData':
             print("DS Message from ID " + str(self.id) + " " + temp['type'])
         if temp['type'] in ['dsmContinueSimulation', 'dsmPauseSimulation',
                             'dsmAbortSimulation', 'dsmStartSimulation',
                             'dsmFinishSimulation']:
             if temp['type'] == 'dsmContinueSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is continuing")])
+                self.client.emit([dumps("/ds/system"), dumps("The simulation is continuing")])
             elif temp['type'] == 'dsmPauseSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is paused")])
+                self.client.emit([dumps("/ds/system"), dumps("The simulation is paused")])
             elif temp['type'] == 'dsmAbortSimulation':
                 if temp['abort-fsec'] == 0:
-                    self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                                msgpack.dumps("The system goes blackout")])
+                    self.client.emit([dumps("/ds/system"), dumps("The system goes blackout")])
                 else:
-                    self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                                msgpack.dumps("The simulation has been aborted")])
+                    self.client.emit([dumps("/ds/system"), dumps("The simulation has been aborted")])
             elif temp['type'] == 'dsmStartSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is started @" + str(
+                self.client.emit([dumps("/ds/system"), dumps("The simulation is started @" + str(
                                                 temp['start-soc']))])
             elif temp['type'] == 'dsmFinishSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation has finished")])
-                # target = {
-                #     'Case': sdfgas
-                # }
-                # opt = [0, temp['SOC'], temp['FRACSEC'], ]
-                # self.ds.msgtypes[13](opt)
+                self.client.emit([dumps("/ds/system"), dumps("The simulation has finished")])
             return self.get_data()
         return temp
 
@@ -258,7 +388,7 @@ class SimulationInstance:
             action = self.action_queue.get(timeout=1)
             if action[0] == "notification":
                 self.client.send_multipart(
-                    [msgpack.dumps(action[1]), msgpack.dumps(action[2])])
+                    [dumps(action[1]), dumps(action[2])])
             elif action[0] == "update":
                 self.regular_update()
             else:
@@ -274,12 +404,12 @@ class SimulationInstance:
                         # print(self.topic_prefix)
                         # print(action)
                         self.client.send_multipart([
-                            msgpack.dumps("/ds/note"),
-                            msgpack.dumps("#" + action[
+                            dumps("/ds/note"),
+                            dumps("#" + action[
                                 1] + " just issued a command at " +
-                                action[2] + " " + action[3] + ': ' +
-                                action[4] + '@' + action[5] + '@' +
-                                action[3])])
+                                  action[2] + " " + action[3] + ': ' +
+                                  action[4] + '@' + action[5] + '@' +
+                                  action[3])])
                 except TypeError as e:
                     print('TypeError ' + str(e))
 
@@ -298,14 +428,11 @@ class SimulationInstance:
     def regular_update(self):
         self.ds.msgtypes[12](data_package_id)
         data = self.get_data()
-        # print("update new data")
         if data is None:
             return
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
-        self.client.send_multipart(
-            [msgpack.dumps(topic), msgpack.dumps(data)])
-        # print("data send")
+        self.client.emit([dumps(topic), dumps(data)])
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -380,7 +507,7 @@ commands = {
 }
 # f.close()
 print("List of tcmcommand is loaded")
-sys.stdout.flush()
+stdout.flush()
 data_package_id = 9999
 command = ""
 
@@ -388,7 +515,7 @@ command = ""
 def regular_publisher():
     global queue
     while True:
-        time.sleep(1)
+        sleep(1)
         queue.put(("update",))
 
 
@@ -405,14 +532,14 @@ def resource_path(relative_path):
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        base_path = path.abspath(".")
 
-    return os.path.join(base_path, relative_path)
+    return path.join(base_path, relative_path)
 
 
 def main():
-    global queue
-    args = sys.argv
+    global queue, ds
+    args = argv
     if len(args) <= 2:
         ip = "192.168.1.221"
         port = "5557"
@@ -420,42 +547,36 @@ def main():
         ip = args[1]
         port = args[2]
     print(f"Connecting to {ip}:{port}")
-    clientname = 'electron' + '{:03}'.format(randrange(1, 10**3))
+    clientname = 'electron' + '{:03}'.format(randrange(1, 10 ** 3))
 
     # Set up the zmq publishers
-    context = zmq.Context()
-    zmq_publisher = context.socket(zmq.PUB)
-    # zmq_publisher.setsockopt(zmq.LINGER, 100)
-    zmq_publisher.bind("tcp://0.0.0.0:5556")
-    print("ZMQ publisher is ready ...", flush=True)
 
+    # context = Context()
+    # zmq_publisher = context.socket(PUB)
+    # # zmq_publisher.setsockopt(zmq.LINGER, 100)
+    # zmq_publisher.bind("tcp://0.0.0.0:5556")
+    # print("ZMQ publisher is ready ...", flush=True)
+    #
     # Set up a thread-safe queue
     queue = Queue()
 
     # Set up Simulation Instances and connect to DS Clients
-    sim = SimulationInstance(0, ip, int(port), zmq_publisher, queue)
-    simulation_instances[id] = sim
-
-    publisher_thread = threading.Thread(target=background_work)
+    sim = SimulationInstance(0, ip, int(port), sio, queue)
+    simulation_instances[0] = sim
+    ds = sim.ds
+    #
+    publisher_thread = Thread(target=background_work)
     publisher_thread.daemon = True
     publisher_thread.start()
-    puller_thread = threading.Thread(target=recv_loop)
-    puller_thread.daemon = True
-    puller_thread.start()
-    routine_thread = threading.Thread(target=regular_publisher)
+    routine_thread = Thread(target=regular_publisher)
     routine_thread.daemon = True
     routine_thread.start()
 
-    global command
-    command_raw = ""
-    while command_raw != "q":
-        command_raw = input()
-        command = command_raw
-    print("Main thread quitting")
+    web.run_app(app, port=9999)
 
 
 if __name__ == "__main__":
-    print(sys.executable)
-    print(os.getcwd())
-    print(sys.path)
+    # print(sys.executable)
+    # print(getcwd())
+    # print(sys.path)
     main()

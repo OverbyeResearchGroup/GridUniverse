@@ -1,13 +1,18 @@
 <template>
   <div>
-    <chatpop v-if="chatShow" :visible="chatShow" :topic="chatTopic" @close="chatShow=false"></chatpop>
+    <chatpop
+      v-if="chatShow"
+      :visible="chatShow"
+      :topic="chatTopic"
+      @close="chatShow = false"
+    ></chatpop>
     <linepop
       v-if="lineshowDialog"
       :visible="lineshowDialog"
       :type="type"
       :id="id"
       :name="name"
-      @close="lineshowDialog=false"
+      @close="lineshowDialog = false"
     />
     <subpop
       v-if="subshowDialog"
@@ -16,7 +21,7 @@
       :type="type"
       :id="id"
       :name="name"
-      @close="subshowDialog=false"
+      @close="subshowDialog = false"
     />
   </div>
 </template>
@@ -29,6 +34,7 @@ import iziToast from "izitoast";
 import Push from "push.js";
 import { encode, decode } from "@msgpack/msgpack";
 import { ipcRenderer } from "electron";
+import io from "socket.io-client";
 
 var client = {};
 
@@ -49,7 +55,8 @@ export default {
       subshowDialog: false,
       children: {},
       name: "",
-      simID: this.$store.state.simID
+      simID: this.$store.state.simID,
+      socket: io("ws://localhost:9999"),
     };
   },
   props: {
@@ -60,34 +67,34 @@ export default {
         "ds/note",
         "ds/system",
         "user/schedule",
-        "user/share"
-      ]
+        "user/share",
+      ],
     },
     pubtopic: {
       type: String || Array || Object,
-      default: "/user/cmd"
+      default: "/user/cmd",
     },
     address: {
       type: String,
-      default: "localhost:8083/mqtt"
+      default: "localhost:8083/mqtt",
       //default: '104.254.244.143:8083/mqtt'
     },
     qos: {
       type: Number,
-      default: 0
+      default: 0,
     },
     protocol: {
       type: String,
-      default: "ws"
+      default: "ws",
     },
     username: {
       type: String,
-      default: ""
+      default: "",
     },
     password: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   created() {
     // this.onInitClient();
@@ -99,13 +106,20 @@ export default {
       "/ds/note",
       "/ds/system",
       "/ds/schedule",
-      "/ds/share"
+      "/ds/share",
     ];
-    topics.forEach(topic => {
-      ipcRenderer.on(topic, (event, msg) => {
-        this.onMessage(topic, msg);
-      });
+    this.socket.on("connect", () => {
+      console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
     });
+
+    this.socket.on("disconnect", () => {
+      console.log(this.socket.id); // undefined
+    });
+    // topics.forEach(topic => {
+    //   ipcRenderer.on(topic, (event, msg) => {
+    //     this.onMessage(topic, msg);
+    //   });
+    // });
   },
   computed: {
     ...mapGetters([
@@ -117,22 +131,22 @@ export default {
       "continuesimtrigger",
       "abortsimtrigger",
       "getSchedule",
-      "ViolatedBuses"
-    ])
+      "ViolatedBuses",
+    ]),
   },
   watch: {
-    getPubStatus: function(newVal, oldVal) {
+    getPubStatus: function (newVal, oldVal) {
       const temp = {
         user: this.$store.state.username, //this.clientid,
         type: this.$store.state.message[0],
         id: this.$store.state.message[1],
         name: this.$store.state.message[2],
-        action: this.$store.state.message[3]
+        action: this.$store.state.message[3],
       };
       ipcRenderer.send(this.simID + "/user/cmd", JSON.stringify(temp));
       this.$store.commit("addReportUser", {
         time: this.$store.state.currentTime,
-        event: [temp.type, temp.id, temp.action]
+        event: [temp.type, temp.id, temp.action],
       });
       if (temp.type == "Gen" && ["OPEN", "CLOSE"].includes(temp.action)) {
         // console.log(temp)
@@ -143,23 +157,23 @@ export default {
         );
       }
     },
-    getNewSubscribe: function(newVal, oldVal) {
+    getNewSubscribe: function (newVal, oldVal) {
       ipcRenderer.send("subscribe", newVal);
       iziToast.success({
         title: "System",
         message: "Successfully subscribed to a new topic #" + newVal,
         // color: 'yellow',
-        position: "topRight"
+        position: "topRight",
       });
     },
-    getNewPublish: function(newVal, oldVal) {
+    getNewPublish: function (newVal, oldVal) {
       ipcRenderer.send(
         newVal[0],
         "User #" + this.$store.state.username + ": " + newVal[1]
         // 'User #' + this.clientid + ': ' + newVal[1]
       );
     },
-    startsimtrigger: function() {
+    startsimtrigger: function () {
       if (!this.$store.state.simtime) {
         ipcRenderer.send(
           this.simID + "/user/system",
@@ -176,42 +190,42 @@ export default {
         this.$store.commit("clearsimtime");
       }
     },
-    continuesimtrigger: function() {
+    continuesimtrigger: function () {
       ipcRenderer.send(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Continue"
       );
     },
-    pausesimtrigger: function() {
+    pausesimtrigger: function () {
       ipcRenderer.send(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Pause"
       );
     },
-    abortsimtrigger: function() {
+    abortsimtrigger: function () {
       ipcRenderer.send(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Abort"
       );
     },
-    backend_online: function() {
+    backend_online: function () {
       iziToast.success({
         title: "System",
         message: "DS backend is connected",
         // color: 'yellow',
-        position: "topRight"
+        position: "topRight",
       });
     },
-    getSchedule: function(newVal, oldVal) {
+    getSchedule: function (newVal, oldVal) {
       ipcRenderer.send(
         this.simID + "/user/schedule",
         JSON.stringify({
           user: this.$store.state.username,
           type: "Import",
-          schedule: newVal
+          schedule: newVal,
         })
       );
-    }
+    },
   },
   methods: {
     onInitClient() {
@@ -219,7 +233,7 @@ export default {
       client = mqtt.connect(this.protocol + "://" + this.address, {
         clientId: this.clientid,
         username: this.username,
-        password: this.password
+        password: this.password,
       });
       console.log(this.protocol + "://" + this.address);
       client.on("connect", this.onConnect);
@@ -239,14 +253,14 @@ export default {
     onConnect(connack) {
       console.log("MQTT broker is connected");
       var topic = this.subtopic;
-      topic = topic.map(i => this.simID + "/" + i);
+      topic = topic.map((i) => this.simID + "/" + i);
       client.subscribe(topic);
       console.log(topic);
       iziToast.success({
         title: "System",
         message: "MQTT broker is connected",
         // color: 'yellow',
-        position: "topRight"
+        position: "topRight",
       });
     },
     onMessage(topic, message) {
@@ -266,7 +280,7 @@ export default {
             buttons: [
               [
                 "<button>What?!</button>",
-                function() {
+                function () {
                   if (self.usermessage.includes("Branch")) {
                     self.id = temp[1];
                     self.name = temp[2];
@@ -284,7 +298,7 @@ export default {
                     // Base on the bus id, find the substation
                     for (let subidx in self.$store.state.subDetail) {
                       found = self.$store.state.subDetail[subidx].Bus.find(
-                        function(ele) {
+                        function (ele) {
                           if (ele["Int.Bus Number"] == busid) {
                             self.id = subidx;
                             self.children =
@@ -299,15 +313,15 @@ export default {
                       }
                     }
                   }
-                }
-              ]
-            ]
+                },
+              ],
+            ],
           });
           Push.create("System", {
             body: this.usermessage,
             icon: require("../assets/grid.png"),
             timeout: 6000,
-            onClick: function() {
+            onClick: function () {
               window.focus();
               this.close();
               if (self.usermessage.includes("Branch")) {
@@ -326,22 +340,22 @@ export default {
                 var found;
                 // Base on the bus id, find the substation
                 for (let subidx in self.$store.state.subDetail) {
-                  found = self.$store.state.subDetail[subidx].Bus.find(function(
-                    ele
-                  ) {
-                    if (ele["Int.Bus Number"] == busid) {
-                      self.id = subidx;
-                      self.children = self.$store.state.subDetail[subidx].Bus;
-                      return true;
+                  found = self.$store.state.subDetail[subidx].Bus.find(
+                    function (ele) {
+                      if (ele["Int.Bus Number"] == busid) {
+                        self.id = subidx;
+                        self.children = self.$store.state.subDetail[subidx].Bus;
+                        return true;
+                      }
                     }
-                  });
+                  );
                   if (found) {
                     self.subshowDialog = true;
                     break;
                   }
                 }
               }
-            }
+            },
           });
         }
 
@@ -350,7 +364,7 @@ export default {
           title: this.usermessage,
           source: "System",
           color: "yellow",
-          time: Date.now()
+          time: Date.now(),
         });
       } else if (topic.includes("ds/system")) {
         iziToast.warning({
@@ -358,12 +372,12 @@ export default {
           message: message.toString(),
           // color: 'yellow',
           position: "topCenter",
-          timeout: 6500
+          timeout: 6500,
         });
         if (
           [
             "The simulation has been aborted",
-            "The system goes blackout"
+            "The system goes blackout",
           ].includes(message.toString())
         ) {
           this.$store.commit("setstartready");
@@ -388,7 +402,7 @@ export default {
           title: message.toString(),
           source: "System",
           color: "red",
-          time: Date.now()
+          time: Date.now(),
         });
       } else if (topic.includes("user/schedule")) {
         const temp = message.toString();
@@ -403,7 +417,7 @@ export default {
             JSON.parse(temp)["schedule"].split("@")[1] +
             "/MW",
           color: "yellow",
-          position: "topCenter"
+          position: "topCenter",
         });
       } else {
         iziToast.show({
@@ -414,19 +428,19 @@ export default {
           buttons: [
             [
               "<button>Chat</button>",
-              function() {
+              function () {
                 self.chatTopic = topic;
                 self.chatShow = true;
-              }
-            ]
-          ]
+              },
+            ],
+          ],
         });
         this.$store.commit("updatebadge");
         this.$store.commit("updatebadgelist", {
           title: message.toString(),
           source: "user",
           color: "light-blue",
-          time: Date.now()
+          time: Date.now(),
         });
       }
     },
@@ -439,7 +453,7 @@ export default {
         title: "System",
         message: "MQTT broker is being reconnected",
         // color: 'yellow',
-        position: "topRight"
+        position: "topRight",
       });
     },
     onOffline() {
@@ -448,7 +462,7 @@ export default {
         title: "System",
         message: "MQTT broker is disconnected",
         // color: 'yellow',
-        position: "topRight"
+        position: "topRight",
       });
     },
     onError(error) {
@@ -456,13 +470,13 @@ export default {
     },
     onEnd() {
       console.log("onEnd");
-    }
+    },
   },
   components: {
     chatpop: () => import("./chatpop"),
     linepop: () => import("./linepop"),
-    subpop: () => import("./subpop")
-  }
+    subpop: () => import("./subpop"),
+  },
 };
 </script>
 
