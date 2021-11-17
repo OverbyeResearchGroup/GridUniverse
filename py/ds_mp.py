@@ -14,15 +14,12 @@ from powerworldDS import PowerWorldDS
 
 print("DS Client is loading ...", flush=True)
 
-try:
-    if environ['ENV'] == 'DEV':
-        with open('datafields.json', 'r') as f:
-            temp = load(f)
+if environ.get('ENV', None) == 'DEV':
+    with open('datafields.json', 'r') as f:
+        temp = load(f)
 
-        with open('config.py', 'w') as f:
-            f.write(f"config = {temp}")
-except KeyError:
-    pass
+    with open('config.py', 'w') as f:
+        f.write(f"config = {temp}")
 
 from config import config
 
