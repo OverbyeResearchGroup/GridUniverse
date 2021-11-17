@@ -1,8 +1,7 @@
 from time import ctime, sleep
 from json import load, loads
-import sys
 from sys import argv, stdout
-from os import path, environ
+from os import environ
 from threading import Thread
 from queue import Queue
 from random import randrange
@@ -524,17 +523,6 @@ def background_work():
         # update all simulations
         for sim in simulation_instances.values():
             sim.update()
-
-
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = path.abspath(".")
-
-    return path.join(base_path, relative_path)
 
 
 def main():
