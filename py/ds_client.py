@@ -1,23 +1,35 @@
-import time
-import json
+from time import ctime, sleep
+from json import load, loads
 import sys
-import os
-import threading
+from sys import argv, stdout
+from os import path, environ
+from threading import Thread
 from queue import Queue
 from random import randrange
-import msgpack
+from msgpack import dumps
 
-import zmq
+from zmq import PUB, SUB, Context
 
 from powerworldDS import PowerWorldDS
 
 print("DS Client is loading ...", flush=True)
 
+try:
+    if environ['ENV'] == 'DEV':
+        with open('datafields.json', 'r') as f:
+            temp = load(f)
+
+        with open('config.py', 'w') as f:
+            f.write(f"config = {temp}")
+except KeyError:
+    pass
+
+from config import config
 
 def recv_loop():
     global queue
-    context = zmq.Context()
-    zmq_puller = context.socket(zmq.SUB)
+    context = Context()
+    zmq_puller = context.socket(SUB)
     zmq_puller.bind("tcp://0.0.0.0:5555")
     zmq_puller.subscribe("S000/user/cmd")
     zmq_puller.subscribe("S000/user/system")
@@ -30,7 +42,7 @@ def recv_loop():
 # The callback for when a PUBLISH message is received from the server.
 def on_message(topic, payload):
     global queue
-    print(time.ctime(), "MQTT Receive: " + topic + " " + payload)
+    print(ctime(), "MQTT Receive: " + topic + " " + payload)
     topic_prefix = topic.split('/')[0]
     sim = None
     for tsim in simulation_instances.values():
@@ -43,7 +55,7 @@ def on_message(topic, payload):
         # msg.payload should be a json string
         # do a preliminary validation
         # get second validation from DS direct
-        postload = json.loads(payload)
+        postload = loads(payload)
         dtype = postload['type']
         soc = 0  # For execute immediately
         fsec = 0  # For execute immediately
@@ -137,7 +149,7 @@ def setup_dictionary_data(ds, data_package_id):
     # so that the backend and the web frontend shared the
     # same data structure. This is like a simple encode/decode
     # mechanism to keep the data structure consistent in both sides.
-    config = json.loads(open(resource_path("datafields.json")).read())
+    # config = json.loads(open(resource_path("datafields.json")).read())
     for ele in config.keys():
         config[ele]['Object'] = []
     
@@ -194,7 +206,7 @@ class SimulationInstance:
 
     def __init__(self, id, ip, port, client, queue):
         print(f"Simulation ID {id} initialized to connect {ip} {port}")
-        sys.stdout.flush()
+        stdout.flush()
         self.id = id
         self.ip = ip
         self.port = port
@@ -238,25 +250,25 @@ class SimulationInstance:
                             'dsmAbortSimulation', 'dsmStartSimulation',
                             'dsmFinishSimulation']:
             if temp['type'] == 'dsmContinueSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is continuing")])
+                self.client.send_multipart([dumps("/ds/system"),
+                                            dumps("The simulation is continuing")])
             elif temp['type'] == 'dsmPauseSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is paused")])
+                self.client.send_multipart([dumps("/ds/system"),
+                                            dumps("The simulation is paused")])
             elif temp['type'] == 'dsmAbortSimulation':
                 if temp['abort-fsec'] == 0:
-                    self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                                msgpack.dumps("The system goes blackout")])
+                    self.client.send_multipart([dumps("/ds/system"),
+                                                dumps("The system goes blackout")])
                 else:
-                    self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                                msgpack.dumps("The simulation has been aborted")])
+                    self.client.send_multipart([dumps("/ds/system"),
+                                                dumps("The simulation has been aborted")])
             elif temp['type'] == 'dsmStartSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation is started @" + str(
-                                                temp['start-soc']))])
+                self.client.send_multipart([dumps("/ds/system"),
+                                            dumps("The simulation is started @" + str(
+                                            temp['start-soc']))])
             elif temp['type'] == 'dsmFinishSimulation':
-                self.client.send_multipart([msgpack.dumps("/ds/system"),
-                                            msgpack.dumps("The simulation has finished")])
+                self.client.send_multipart([dumps("/ds/system"),
+                                            dumps("The simulation has finished")])
                 # target = {
                 #     'Case': sdfgas
                 # }
@@ -273,7 +285,7 @@ class SimulationInstance:
             action = self.action_queue.get(timeout=1)
             if action[0] == "notification":
                 self.client.send_multipart(
-                    [msgpack.dumps(action[1]), msgpack.dumps(action[2])])
+                    [dumps(action[1]), dumps(action[2])])
             elif action[0] == "update":
                 self.regular_update()
             else:
@@ -289,8 +301,8 @@ class SimulationInstance:
                         # print(self.topic_prefix)
                         # print(action)
                         self.client.send_multipart([
-                            msgpack.dumps("/ds/note"),
-                            msgpack.dumps("#" + action[
+                            dumps("/ds/note"),
+                            dumps("#" + action[
                                 1] + " just issued a command at " +
                                 action[2] + " " + action[3] + ': ' +
                                 action[4] + '@' + action[5] + '@' +
@@ -319,7 +331,7 @@ class SimulationInstance:
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
         self.client.send_multipart(
-            [msgpack.dumps(topic), msgpack.dumps(data)])
+            [dumps(topic), dumps(data)])
         # print("data send")
 
     def write_status(self):
@@ -395,7 +407,7 @@ commands = {
 }
 # f.close()
 print("List of tcmcommand is loaded")
-sys.stdout.flush()
+stdout.flush()
 data_package_id = 9999
 command = ""
 
@@ -403,7 +415,7 @@ command = ""
 def regular_publisher():
     global queue
     while True:
-        time.sleep(1)
+        sleep(1)
         queue.put(("update",))
 
 
@@ -420,14 +432,14 @@ def resource_path(relative_path):
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        base_path = path.abspath(".")
 
-    return os.path.join(base_path, relative_path)
+    return path.join(base_path, relative_path)
 
 
 def main():
     global queue
-    args = sys.argv
+    args = argv
     if len(args) <= 2:
         ip = "192.168.1.221"
         port = "5557"
@@ -438,8 +450,8 @@ def main():
     clientname = 'electron' + '{:03}'.format(randrange(1, 10**3))
 
     # Set up the zmq publishers
-    context = zmq.Context()
-    zmq_publisher = context.socket(zmq.PUB)
+    context = Context()
+    zmq_publisher = context.socket(PUB)
     # zmq_publisher.setsockopt(zmq.LINGER, 100)
     zmq_publisher.bind("tcp://0.0.0.0:5556")
     print("ZMQ publisher is ready ...", flush=True)
@@ -451,13 +463,13 @@ def main():
     sim = SimulationInstance(0, ip, int(port), zmq_publisher, queue)
     simulation_instances[id] = sim
 
-    publisher_thread = threading.Thread(target=background_work)
+    publisher_thread = Thread(target=background_work)
     publisher_thread.daemon = True
     publisher_thread.start()
-    puller_thread = threading.Thread(target=recv_loop)
+    puller_thread = Thread(target=recv_loop)
     puller_thread.daemon = True
     puller_thread.start()
-    routine_thread = threading.Thread(target=regular_publisher)
+    routine_thread = Thread(target=regular_publisher)
     routine_thread.daemon = True
     routine_thread.start()
 
@@ -470,7 +482,7 @@ def main():
 
 
 if __name__ == "__main__":
-    print(sys.executable)
-    print(os.getcwd())
-    print(sys.path)
+    # print(sys.executable)
+    # print(getcwd())
+    # print(sys.path)
     main()
