@@ -100,7 +100,8 @@ export default new Vuex.Store({
         genAction: { Gen: {}, Load: {}, Shunt: {}, Branch: {} },
         clockTime: null,
         updateToggler: false,
-        startToggler: false
+        startToggler: false,
+        loginInfo: {}
     },
     getters: {
         rawData(state){
@@ -372,6 +373,9 @@ export default new Vuex.Store({
         },
         setArea(state, payload) {
             state.area = payload;
+        },
+        setLoginInfo(state, payload){
+            state.loginInfo = payload;
         },
         setSubData(state, payload) {
             state.subData = payload;

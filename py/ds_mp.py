@@ -5,7 +5,7 @@ from time import ctime, sleep
 from json import load, loads
 from sys import argv, stdout
 from os import environ
-from threading import Thread
+
 from queue import Queue
 from random import randrange
 from msgpack import dumps
@@ -25,13 +25,23 @@ if environ.get('ENV', None) == 'DEV':
 from config import config
 
 # Set up DS clients first
-ds = None
+args = argv
+if len(args) <= 3:
+    ip = "192.168.1.221"
+    port = "5557"
+    server_port = "9999"
+else:
+    ip = args[1]
+    port = args[2]
+    server_port = args[3]
+print(f"Connecting to {ip}:{port}")
+ds = PowerWorldDS(ip, int(port))
 
 # create a Socket.IO server
 # sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
 # app = web.Application()
 # sio.attach(app)
-sio = socketio.Server(async_mode='eventlet', logger=True, engineio_logger=True, cors_allowed_origins='*')
+sio = socketio.Server(async_mode='eventlet', cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
 
 topic_prefix = "S000"
@@ -53,8 +63,8 @@ async def catch_all(event, sid, data):
 
 
 @sio.on(f"{topic_prefix}/user/cmd")
-async def on_cmd(sid, data):
-    postload = loads(data)
+def handle_user_cmd(sid, data):
+    postload = data  #loads(data)
     dtype = postload['type']
     soc = 0  # For execute immediately
     fsec = 0  # For execute immediately
@@ -113,7 +123,7 @@ async def on_cmd(sid, data):
 
 
 @sio.on(f"{topic_prefix}/user/system")
-async def on_system(sid, payload):
+def handle_system_message(sid, payload):
     if 'Start' in str(payload):
         queue.put(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
             0] + " start the simulation"))
@@ -327,7 +337,7 @@ class SimulationInstance:
         self.id = id
         self.ip = ip
         self.port = port
-        self.ds = None
+        self.ds = ds
         self.client = client
         self.last_known_state = "Initialized"
         self.topic_prefix = "S" + str(self.id).zfill(3)
@@ -337,7 +347,6 @@ class SimulationInstance:
 
     def setup(self):
         try:
-            self.ds = PowerWorldDS(self.ip, self.port)
             setup_dictionary_data(self.ds, data_package_id)
         except IOError as e:
             self.ds = None
@@ -436,6 +445,7 @@ class SimulationInstance:
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
         self.client.emit(topic, dumps(data))
+        print("new data update")
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -531,15 +541,7 @@ def background_work():
 
 
 def main():
-    global queue, ds
-    args = argv
-    if len(args) <= 2:
-        ip = "192.168.1.221"
-        port = "5557"
-    else:
-        ip = args[1]
-        port = args[2]
-    print(f"Connecting to {ip}:{port}")
+    global queue
     clientname = 'electron' + '{:03}'.format(randrange(1, 10 ** 3))
 
     # Set up the zmq publishers
@@ -556,7 +558,6 @@ def main():
     # Set up Simulation Instances and connect to DS Clients
     sim = SimulationInstance(0, ip, int(port), sio, queue)
     simulation_instances[0] = sim
-    ds = sim.ds
     #
     # publisher_thread = Thread(target=background_work)
     # publisher_thread.daemon = True
@@ -569,7 +570,7 @@ def main():
     # sio.start_background_task(target=periodic_job)
 
     # app.run(port=9999, debug=True)
-    eventlet.wsgi.server(eventlet.listen(('', 9999)), app)
+    eventlet.wsgi.server(eventlet.listen(('', int(server_port))), app)
 
 
 if __name__ == "__main__":

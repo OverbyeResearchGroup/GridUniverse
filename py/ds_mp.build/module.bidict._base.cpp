@@ -160,13 +160,13 @@ NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversio
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14__unpack_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__15__unpack_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_bidict$_base$$$function__10___setstate__(PyObject *annotations);
@@ -616,7 +616,7 @@ static PyObject *impl_bidict$_base$$$function__1___init_subclass__(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_dict_name_1 = impl___main__$$$function__14__unpack_dict(dir_call_args);
+            tmp_dict_name_1 = impl___main__$$$function__15__unpack_dict(dir_call_args);
         }
         if (tmp_dict_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1007,7 +1007,7 @@ static PyObject *impl_bidict$_base$$$function__5___init__(struct Nuitka_Function
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_call_result_2 = impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8754,7 +8754,7 @@ static PyObject *impl_bidict$_base$$$function__19__update(struct Nuitka_Function
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_call_result_2 = impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8804,7 +8804,7 @@ static PyObject *impl_bidict$_base$$$function__19__update(struct Nuitka_Function
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2, tmp_dircall_arg4_2};
-            tmp_call_result_3 = impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_call_result_3 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9660,7 +9660,7 @@ static PyObject *impl_bidict$_base$$$function__21__update_no_rollback(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_iter_arg_1 = impl___main__$$$function__12_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_iter_arg_1 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10349,7 +10349,7 @@ static PyObject *impl_bidict$_base$$$function__22__update_with_rollback(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_iter_arg_1 = impl___main__$$$function__12_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_iter_arg_1 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());

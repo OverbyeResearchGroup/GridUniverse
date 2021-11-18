@@ -254,13 +254,13 @@ static PyObject *MAKE_GENERATOR_aiohttp$helpers$$$function__53___contains__$$$ge
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_keywords_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14_complex_call_helper_keywords_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$helpers$$$function__10_current_task(PyObject *defaults, PyObject *annotations);
@@ -20245,7 +20245,7 @@ static PyObject *impl_aiohttp$helpers$$$function__33___call__(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__12_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25284,7 +25284,7 @@ static PyObject *impl_aiohttp$helpers$$$function__51___len__(struct Nuitka_Funct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_len_arg_1 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_len_arg_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_len_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27400,7 +27400,7 @@ static PyObject *impl_aiohttp$helpers$$$function__57_parse_http_date(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__5_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__14_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

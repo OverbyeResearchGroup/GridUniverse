@@ -100,7 +100,7 @@ static PyObject *MAKE_COROUTINE_aiosignal$$$function__3_send$$$coroutine__1_send
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiosignal$$$function__1___init__(struct Nuitka_CellObject **closure);
@@ -843,7 +843,7 @@ static PyObject *aiosignal$$$function__3_send$$$coroutine__1_send_context(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_3 = impl___main__$$$function__12_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_expression_name_3 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());

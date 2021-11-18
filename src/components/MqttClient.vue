@@ -56,7 +56,7 @@ export default {
       children: {},
       name: "",
       simID: this.$store.state.simID,
-      socket: io("ws://localhost:9999"),
+      socket: null,
     };
   },
   props: {
@@ -107,8 +107,16 @@ export default {
       "/ds/system",
       "/ds/schedule",
       "/ds/share",
-      "test"
+      "test",
     ];
+    const info = this.$store.state.loginInfo;
+    
+    if (info.direct) {
+      this.socket = io(`ws://localhost:${info.server_port}`);
+    } else {
+      this.socket = io(`ws://${info.ip}:${info.server_port}`);
+    }
+
     this.socket.on("connect", () => {
       console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
     });
@@ -116,7 +124,6 @@ export default {
     this.socket.on("disconnect", () => {
       console.log(this.socket.id); // undefined
     });
-
 
     topics.forEach((topic) => {
       this.socket.on(topic, (data) => {
@@ -147,7 +154,8 @@ export default {
         name: this.$store.state.message[2],
         action: this.$store.state.message[3],
       };
-      ipcRenderer.send(this.simID + "/user/cmd", JSON.stringify(temp));
+      // ipcRenderer.send(this.simID + "/user/cmd", JSON.stringify(temp));
+      this.socket.emit(this.simID + "/user/cmd", temp);
       this.$store.commit("addReportUser", {
         time: this.$store.state.currentTime,
         event: [temp.type, temp.id, temp.action],
@@ -162,7 +170,11 @@ export default {
       }
     },
     getNewSubscribe: function (newVal, oldVal) {
-      ipcRenderer.send("subscribe", newVal);
+      // ipcRenderer.send("subscribe", newVal);
+      this.socket.on(newVal, (data) => {
+        // console.log(newVal, data);
+        this.onMessage(newVal, decode(data));
+      });
       iziToast.success({
         title: "System",
         message: "Successfully subscribed to a new topic #" + newVal,
@@ -171,20 +183,35 @@ export default {
       });
     },
     getNewPublish: function (newVal, oldVal) {
-      ipcRenderer.send(
+      // ipcRenderer.send(
+      //   newVal[0],
+      //   "User #" + this.$store.state.username + ": " + newVal[1]
+      //   // 'User #' + this.clientid + ': ' + newVal[1]
+      // );
+      this.socket.emit(
         newVal[0],
         "User #" + this.$store.state.username + ": " + newVal[1]
-        // 'User #' + this.clientid + ': ' + newVal[1]
       );
     },
     startsimtrigger: function () {
       if (!this.$store.state.simtime) {
-        ipcRenderer.send(
+        // ipcRenderer.send(
+        //   this.simID + "/user/system",
+        //   this.$store.state.username + ":" + "Start"
+        // );
+        this.socket.emit(
           this.simID + "/user/system",
           this.$store.state.username + ":" + "Start"
         );
       } else {
-        ipcRenderer.send(
+        // ipcRenderer.send(
+        //   this.simID + "/user/system",
+        //   this.$store.state.username +
+        //     ":" +
+        //     "run till seconds " +
+        //     this.$store.state.simtime
+        // );
+        this.socket.emit(
           this.simID + "/user/system",
           this.$store.state.username +
             ":" +
@@ -195,19 +222,31 @@ export default {
       }
     },
     continuesimtrigger: function () {
-      ipcRenderer.send(
+      // ipcRenderer.send(
+      //   this.simID + "/user/system",
+      //   this.$store.state.username + ":" + "Continue"
+      // );
+      this.socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Continue"
       );
     },
     pausesimtrigger: function () {
-      ipcRenderer.send(
+      // ipcRenderer.send(
+      //   this.simID + "/user/system",
+      //   this.$store.state.username + ":" + "Pause"
+      // );
+      this.socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Pause"
       );
     },
     abortsimtrigger: function () {
-      ipcRenderer.send(
+      // ipcRenderer.send(
+      //   this.simID + "/user/system",
+      //   this.$store.state.username + ":" + "Abort"
+      // );
+      this.socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Abort"
       );
@@ -221,7 +260,15 @@ export default {
       });
     },
     getSchedule: function (newVal, oldVal) {
-      ipcRenderer.send(
+      // ipcRenderer.send(
+      //   this.simID + "/user/schedule",
+      //   JSON.stringify({
+      //     user: this.$store.state.username,
+      //     type: "Import",
+      //     schedule: newVal,
+      //   })
+      // );
+      this.socket.emit(
         this.simID + "/user/schedule",
         JSON.stringify({
           user: this.$store.state.username,

@@ -136,7 +136,7 @@ static PyObject *MAKE_GENERATOR_zope$interface$exceptions$$$function__15__str_de
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_zope$interface$exceptions$$$function__10_mess();
@@ -3059,7 +3059,7 @@ static PyObject *impl_zope$interface$exceptions$$$function__11___implementation_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

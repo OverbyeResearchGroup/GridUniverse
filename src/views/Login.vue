@@ -54,18 +54,11 @@
                       </v-flex>
                     </v-layout>
                     <v-layout v-if="!ds_direct">
-                      <v-flex xs6>
+                      <v-flex xs12>
                         <v-text-field
-                          name="pub_port"
-                          label="Pub Port"
-                          v-model="pub_port"
-                        ></v-text-field>
-                      </v-flex>
-                      <v-flex xs6>
-                        <v-text-field
-                          name="sub_port"
-                          label="Sub Port"
-                          v-model="sub_port"
+                          name="server_port"
+                          label="Server Port"
+                          v-model="server_port"
                         ></v-text-field>
                       </v-flex>
                     </v-layout>
@@ -140,8 +133,7 @@ export default {
       accessCode: null,
       ip: "localhost",
       port: "5557",
-      pub_port: "5556",
-      sub_port: "5555",
+      server_port: "9999",
       ds_direct: true,
       rules: {
         id: (value) => {
@@ -173,10 +165,12 @@ export default {
           direct: this.ds_direct,
           ip: this.ip,
           port: this.port,
-          pub_port: this.pub_port,
-          sub_port: this.sub_port,
+          server_port: this.server_port,
         };
-        ipcRenderer.send("connect", encode(config));
+        if (this.ds_direct) {
+          ipcRenderer.send("connect", encode(config));
+        }
+        this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);
         this.$store.commit("setSimID", "S" + this.simID);
         this.$store.commit("setUsername", this.model.username);

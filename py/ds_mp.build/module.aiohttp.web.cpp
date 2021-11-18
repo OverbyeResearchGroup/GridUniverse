@@ -102,7 +102,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$web$$$function__1__run_app$$$coroutine__
 static PyObject *MAKE_GENERATOR_aiohttp$web$$$function__1__run_app$$$coroutine__1__run_app$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_keywords_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__14_complex_call_helper_keywords_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$web$$$function__1__run_app(PyObject *kw_defaults, PyObject *annotations);
@@ -4075,7 +4075,7 @@ static PyObject *impl_aiohttp$web$$$function__2__cancel_tasks(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_args_element_name_1 = impl___main__$$$function__5_complex_call_helper_keywords_star_list(dir_call_args);
+            tmp_args_element_name_1 = impl___main__$$$function__14_complex_call_helper_keywords_star_list(dir_call_args);
         }
         if (tmp_args_element_name_1 == NULL) {
             assert(ERROR_OCCURRED());

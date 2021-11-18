@@ -122,7 +122,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$resolver$$$function__7_close$$$coroutine
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13_complex_call_helper_keywords_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12_complex_call_helper_keywords_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$resolver$$$function__1___init__(PyObject *defaults, PyObject *annotations);
@@ -2838,7 +2838,7 @@ static PyObject *impl_aiohttp$resolver$$$function__4___init__(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_assattr_value_2 = impl___main__$$$function__13_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
+            tmp_assattr_value_2 = impl___main__$$$function__12_complex_call_helper_keywords_star_list_star_dict(dir_call_args);
         }
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());

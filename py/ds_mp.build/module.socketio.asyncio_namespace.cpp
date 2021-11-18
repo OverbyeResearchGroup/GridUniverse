@@ -164,7 +164,7 @@ static PyObject *MAKE_COROUTINE_socketio$asyncio_namespace$$$function__16_discon
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$asyncio_namespace$$$function__10_disconnect(PyObject *defaults);
@@ -555,7 +555,7 @@ static PyObject *socketio$asyncio_namespace$$$function__2_trigger_event$$$corout
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_name_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_3 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -767,7 +767,7 @@ static PyObject *socketio$asyncio_namespace$$$function__2_trigger_event$$$corout
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_5 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_5 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4761,7 +4761,7 @@ static PyObject *socketio$asyncio_namespace$$$function__12_trigger_event$$$corou
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_name_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_3 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4973,7 +4973,7 @@ static PyObject *socketio$asyncio_namespace$$$function__12_trigger_event$$$corou
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_5 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_5 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());

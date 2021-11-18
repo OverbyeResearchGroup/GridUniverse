@@ -160,13 +160,13 @@ NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversio
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$client$$$function__10_send(PyObject *defaults);
@@ -4222,7 +4222,7 @@ static PyObject *impl_socketio$client$$$function__5_event$$$function__1_set_hand
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_called_name_1 = impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_called_name_1 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9446,7 +9446,7 @@ static PyObject *impl_socketio$client$$$function__15_start_background_task(struc
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__6_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -11970,7 +11970,7 @@ static PyObject *impl_socketio$client$$$function__22__handle_event(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_2 = impl___main__$$$function__7_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12782,7 +12782,7 @@ static PyObject *impl_socketio$client$$$function__23__handle_ack(struct Nuitka_F
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_3 = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_3 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13207,7 +13207,7 @@ static PyObject *impl_socketio$client$$$function__24__handle_error(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_2 = impl___main__$$$function__7_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13716,7 +13716,7 @@ static PyObject *impl_socketio$client$$$function__25__trigger_event(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -13893,7 +13893,7 @@ static PyObject *impl_socketio$client$$$function__25__trigger_event(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -14009,7 +14009,7 @@ static PyObject *impl_socketio$client$$$function__25__trigger_event(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3, tmp_dircall_arg3_2};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

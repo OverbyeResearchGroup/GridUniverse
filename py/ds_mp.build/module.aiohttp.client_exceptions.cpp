@@ -155,7 +155,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11__unpack_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10__unpack_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$client_exceptions$$$function__10_ssl(PyObject *annotations);
@@ -22371,7 +22371,7 @@ PyObject *modulecode_aiohttp$client_exceptions(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_19};
-            tmp_tuple_arg_1 = impl___main__$$$function__11__unpack_list(dir_call_args);
+            tmp_tuple_arg_1 = impl___main__$$$function__10__unpack_list(dir_call_args);
         }
         if (tmp_tuple_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23001,7 +23001,7 @@ PyObject *modulecode_aiohttp$client_exceptions(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_21};
-            tmp_tuple_arg_2 = impl___main__$$$function__11__unpack_list(dir_call_args);
+            tmp_tuple_arg_2 = impl___main__$$$function__10__unpack_list(dir_call_args);
         }
         if (tmp_tuple_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
