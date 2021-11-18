@@ -2,7 +2,7 @@ CC=<clcache>
 CCCOM=${TEMPFILE("$CC $_MSVC_OUTPUT_FLAG /c $CHANGED_SOURCES $CFLAGS $CCFLAGS $_CCCOMCOM","$CCCOMSTR")}
 CFILESUFFIX=.c
 CLCACHE_DIR=C:\Users\test\AppData\Local\Nuitka\Nuitka\Cache\clcache
-CLCACHE_STATS=C:\Users\test\NodeProjects\PowerWeb-RS-electron\py\ds_mp.build\clcache-stats.2696.txt
+CLCACHE_STATS=C:\Users\test\NodeProjects\PowerWeb-RS-electron\py\ds_mp.build\clcache-stats.5700.txt
 CPPDEFINES=['_NUITKA_STANDALONE', '_NUITKA_ONEFILE', '_NUITKA_ONEFILE_TEMP', '__NUITKA_NO_ASSERT__', '_NUITKA_CONSTANTS_FROM_RESOURCE', '_NUITKA_FROZEN=166', '_NUITKA_EXE']
 CPPDEFPREFIX=/D
 CPPDEFSUFFIX=

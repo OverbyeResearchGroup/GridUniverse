@@ -107,6 +107,7 @@ export default {
       "/ds/system",
       "/ds/schedule",
       "/ds/share",
+      "test"
     ];
     this.socket.on("connect", () => {
       console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
@@ -115,11 +116,14 @@ export default {
     this.socket.on("disconnect", () => {
       console.log(this.socket.id); // undefined
     });
-    // topics.forEach(topic => {
-    //   ipcRenderer.on(topic, (event, msg) => {
-    //     this.onMessage(topic, msg);
-    //   });
-    // });
+
+
+    topics.forEach((topic) => {
+      this.socket.on(topic, (data) => {
+        // console.log(topic, data);
+        this.onMessage(topic, decode(data));
+      });
+    });
   },
   computed: {
     ...mapGetters([

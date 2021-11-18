@@ -20,14 +20,12 @@ def disconnect():
 def message(data):
     print('I received a message!')
 
-@sio.on('my message')
+@sio.on('/ds/data')
 def on_message(data):
-    print('I received a message!')
+    print(data)
 
-@sio.on('*')
-def catch_all(event, sid, data):
-    print(event, sid, data)
+
 
 sio.connect('http://localhost:9999')
 
-sio.emit('S000/user/cmd', json.dumps({'type': 'bar'}))
+# sio.emit('S000/user/cmd', json.dumps({'type': 'bar'}))

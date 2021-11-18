@@ -5,7 +5,7 @@ import {
   createProtocol,
   /* installVueDevtools */
 } from 'vue-cli-plugin-electron-builder/lib'
-const zmq = require("zeromq")
+// const zmq = require("zeromq")
 import { encode, decode } from "@msgpack/msgpack"
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
@@ -75,33 +75,33 @@ const createPyProc = (ip, port) => {
   }
 }
 
-// Set the pusher and subscriber as global so that the ipcMain can call it from elsewhere
-const push = new zmq.Publisher
-const sub = new zmq.Subscriber
+// // Set the pusher and subscriber as global so that the ipcMain can call it from elsewhere
+// const push = new zmq.Publisher
+// const sub = new zmq.Subscriber
 
 // Implement the async sleep function
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
-async function zmq_run(ip, pub_port, sub_port) {
-  sub.connect(`tcp://${ip}:${pub_port}`)
-  sub.subscribe(encode("/ds/data"))
-  sub.subscribe(encode("/ds/note"))
-  sub.subscribe(encode("/ds/system"))
-  sub.subscribe(encode("/ds/schedule"))
-  sub.subscribe(encode("/ds/share"))
-  util.log(`Subscriber connected to port ${pub_port}`)
+// async function zmq_run(ip, pub_port, sub_port) {
+//   sub.connect(`tcp://${ip}:${pub_port}`)
+//   sub.subscribe(encode("/ds/data"))
+//   sub.subscribe(encode("/ds/note"))
+//   sub.subscribe(encode("/ds/system"))
+//   sub.subscribe(encode("/ds/schedule"))
+//   sub.subscribe(encode("/ds/share"))
+//   util.log(`Subscriber connected to port ${pub_port}`)
 
-  await sleep(1000)
-  push.connect(`tcp://${ip}:${sub_port}`)
-  util.log(`Pusher connected to port ${sub_port}`)
+//   await sleep(1000)
+//   push.connect(`tcp://${ip}:${sub_port}`)
+//   util.log(`Pusher connected to port ${sub_port}`)
 
-  for await (const [topic, msg] of sub) {
-    // util.log("received a message related to:", decode(topic))
-    win.webContents.send(decode(topic), decode(msg))
-  }
-}
+//   for await (const [topic, msg] of sub) {
+//     // util.log("received a message related to:", decode(topic))
+//     win.webContents.send(decode(topic), decode(msg))
+//   }
+// }
 
 const exitPyProc = () => {
   pyProc.kill()
@@ -151,32 +151,32 @@ app.on('ready', async () => {
   createWindow()
 })
 
-// Register the channel that the IPCMain will be listening
-ipcMain.once('connect', (event, config) => {
-  const config_object = decode(config);
-  if (config_object.direct == true) {
-    createPyProc(config_object.ip, config_object.port);
-    zmq_run("localhost", config_object.pub_port, config_object.sub_port);
-  } else {
-    zmq_run(config_object.ip, config_object.pub_port, config_object.sub_port);
-  }
+// // Register the channel that the IPCMain will be listening
+// ipcMain.once('connect', (event, config) => {
+//   const config_object = decode(config);
+//   if (config_object.direct == true) {
+//     createPyProc(config_object.ip, config_object.port);
+//     zmq_run("localhost", config_object.pub_port, config_object.sub_port);
+//   } else {
+//     zmq_run(config_object.ip, config_object.pub_port, config_object.sub_port);
+//   }
 
-})
+// })
 
-ipcMain.on('S000/user/system', async (event, msg) => {
-  util.log(msg);
-  await push.send(['S000/user/system', msg]);
-})
+// ipcMain.on('S000/user/system', async (event, msg) => {
+//   util.log(msg);
+//   await push.send(['S000/user/system', msg]);
+// })
 
-ipcMain.on('S000/user/cmd', async (event, msg) => {
-  util.log(msg);
-  await push.send(['S000/user/cmd', msg]);
-})
+// ipcMain.on('S000/user/cmd', async (event, msg) => {
+//   util.log(msg);
+//   await push.send(['S000/user/cmd', msg]);
+// })
 
-ipcMain.on('subscribe', (event, msg) => {
-  util.log(msg);
-  sub.subscribe(msg);
-})
+// ipcMain.on('subscribe', (event, msg) => {
+//   util.log(msg);
+//   sub.subscribe(msg);
+// })
 
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {

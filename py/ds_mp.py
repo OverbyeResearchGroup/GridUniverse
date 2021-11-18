@@ -1,3 +1,6 @@
+import eventlet
+# eventlet.monkey_patch()
+
 from time import ctime, sleep
 from json import load, loads
 from sys import argv, stdout
@@ -7,9 +10,7 @@ from queue import Queue
 from random import randrange
 from msgpack import dumps
 
-from aiohttp import web
 import socketio
-
 from powerworldDS import PowerWorldDS
 
 print("DS Client is loading ...", flush=True)
@@ -27,10 +28,11 @@ from config import config
 ds = None
 
 # create a Socket.IO server
-sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
-
-app = web.Application()
-sio.attach(app)
+# sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
+# app = web.Application()
+# sio.attach(app)
+sio = socketio.Server(async_mode='eventlet', logger=True, engineio_logger=True, cors_allowed_origins='*')
+app = socketio.WSGIApp(sio)
 
 topic_prefix = "S000"
 
@@ -43,6 +45,11 @@ async def connect(sid, environ, auth):
 @sio.event
 async def disconnect(sid):
     print('disconnect ', sid)
+
+
+@sio.on('*')
+async def catch_all(event, sid, data):
+    print(event, sid, data)
 
 
 @sio.on(f"{topic_prefix}/user/cmd")
@@ -360,19 +367,19 @@ class SimulationInstance:
                             'dsmAbortSimulation', 'dsmStartSimulation',
                             'dsmFinishSimulation']:
             if temp['type'] == 'dsmContinueSimulation':
-                self.client.emit([dumps("/ds/system"), dumps("The simulation is continuing")])
+                self.client.emit("/ds/system", dumps("The simulation is continuing"))
             elif temp['type'] == 'dsmPauseSimulation':
-                self.client.emit([dumps("/ds/system"), dumps("The simulation is paused")])
+                self.client.emit("/ds/system", dumps("The simulation is paused"))
             elif temp['type'] == 'dsmAbortSimulation':
                 if temp['abort-fsec'] == 0:
-                    self.client.emit([dumps("/ds/system"), dumps("The system goes blackout")])
+                    self.client.emit("/ds/system", dumps("The system goes blackout"))
                 else:
-                    self.client.emit([dumps("/ds/system"), dumps("The simulation has been aborted")])
+                    self.client.emit("/ds/system", dumps("The simulation has been aborted"))
             elif temp['type'] == 'dsmStartSimulation':
-                self.client.emit([dumps("/ds/system"), dumps("The simulation is started @" + str(
-                                                temp['start-soc']))])
+                self.client.emit("/ds/system", dumps("The simulation is started @" + str(
+                                                temp['start-soc'])))
             elif temp['type'] == 'dsmFinishSimulation':
-                self.client.emit([dumps("/ds/system"), dumps("The simulation has finished")])
+                self.client.emit("/ds/system", dumps("The simulation has finished"))
             return self.get_data()
         return temp
 
@@ -383,8 +390,8 @@ class SimulationInstance:
             # print(count, self.action_queue.qsize())
             action = self.action_queue.get(timeout=1)
             if action[0] == "notification":
-                self.client.send_multipart(
-                    [dumps(action[1]), dumps(action[2])])
+                self.client.emit(
+                    action[1], dumps(action[2]))
             elif action[0] == "update":
                 self.regular_update()
             else:
@@ -399,13 +406,13 @@ class SimulationInstance:
                     if message['type'] == 'dsmOK':
                         # print(self.topic_prefix)
                         # print(action)
-                        self.client.send_multipart([
-                            dumps("/ds/note"),
+                        self.client.emit(
+                            "/ds/note",
                             dumps("#" + action[
                                 1] + " just issued a command at " +
                                   action[2] + " " + action[3] + ': ' +
                                   action[4] + '@' + action[5] + '@' +
-                                  action[3])])
+                                  action[3]))
                 except TypeError as e:
                     print('TypeError ' + str(e))
 
@@ -428,7 +435,7 @@ class SimulationInstance:
             return
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
-        self.client.emit([dumps(topic), dumps(data)])
+        self.client.emit(topic, dumps(data))
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -511,7 +518,7 @@ command = ""
 def regular_publisher():
     global queue
     while True:
-        sleep(1)
+        sio.sleep(1)  #sleep(1)
         queue.put(("update",))
 
 
@@ -520,6 +527,7 @@ def background_work():
         # update all simulations
         for sim in simulation_instances.values():
             sim.update()
+        sio.sleep(0.001)
 
 
 def main():
@@ -550,14 +558,18 @@ def main():
     simulation_instances[0] = sim
     ds = sim.ds
     #
-    publisher_thread = Thread(target=background_work)
-    publisher_thread.daemon = True
-    publisher_thread.start()
-    routine_thread = Thread(target=regular_publisher)
-    routine_thread.daemon = True
-    routine_thread.start()
+    # publisher_thread = Thread(target=background_work)
+    # publisher_thread.daemon = True
+    # publisher_thread.start()
+    # routine_thread = Thread(target=regular_publisher)
+    # routine_thread.daemon = True
+    # routine_thread.start()
+    sio.start_background_task(target=background_work)
+    sio.start_background_task(target=regular_publisher)
+    # sio.start_background_task(target=periodic_job)
 
-    web.run_app(app, port=9999)
+    # app.run(port=9999, debug=True)
+    eventlet.wsgi.server(eventlet.listen(('', 9999)), app)
 
 
 if __name__ == "__main__":
