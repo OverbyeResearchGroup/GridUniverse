@@ -104,7 +104,6 @@
 </style>
 
 <script>
-import { ipcRenderer } from "electron";
 import Spinner from "vue-spinkit";
 import { encode, decode } from "@msgpack/msgpack";
 
@@ -168,7 +167,8 @@ export default {
           server_port: this.server_port,
         };
         if (this.ds_direct) {
-          ipcRenderer.send("connect", encode(config));
+          // ipcRenderer.send("connect", encode(config));
+          console.log("replace by other equivalent packages");
         }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);

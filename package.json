@@ -5,17 +5,12 @@
   "description": "The desktop application version of Gridverse",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build --open",
     "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
-    "electron:build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
-    "preinstall": "npx npm-force-resolutions",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "dev:neu": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build && neu run",
+    "build:neu": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build && neu build --release"
   },
-  "main": "background.js",
   "dependencies": {
     "@deck.gl/core": "^8.3.7",
     "@deck.gl/layers": "^8.3.7",
@@ -71,6 +66,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^2.8.94",
+    "@neutrinojs/vue": "^9.5.0",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-vuex": "^4.5.15",
@@ -78,14 +74,11 @@
     "@vue/composition-api": "^1.4.0-beta.0",
     "cross-env": "^6.0.3",
     "echarts": "^5.2.2",
-    "electron": "^15.3.1",
-    "electron-icon-builder": "^2.0.1",
-    "electron-packager": "^15.4.0",
     "element-theme-dark": "^1.0.3",
     "material-design-icons-iconfont": "^6.1.1",
+    "neutrino": "^9.5.0",
     "stylus": "^0.55.0",
     "stylus-loader": "^3.0.2",
-    "vue-cli-plugin-electron-builder": "^2.1.1",
     "vue-template-compiler": "^2.6.14"
   },
   "postcss": {

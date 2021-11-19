@@ -1,0 +1,47 @@
+{
+  "applicationId": "com.zeyumao.gridverse",
+  "port": 0,
+  "defaultMode": "window",
+  "enableHTTPServer": false,
+  "enableNativeAPI": true,
+  "url": "/",
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeBlockList": [],
+  "globalVariables": {
+    "TEST": "Test Value"
+  },
+  "modes": {
+    "window": {
+      "title": "GridVerse by Zeyu Mao",
+      "width": 800,
+      "height": 500,
+      "minWidth": 400,
+      "minHeight": 250,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/dist/grid.ico",
+      "enableInspector": true,
+      "borderless": false,
+      "maximize": false
+    },
+    "browser": {
+      "globalVariables": {
+        "TEST": "Test value browser"
+      },
+      "nativeBlockList": [
+        "filesystem.*"
+      ]
+    },
+    "cloud": {}
+  },
+  "cli": {
+    "binaryName": "gridverse-minimal",
+    "resourcesPath": "/dist/",
+    "clientLibrary": "/dist/neutralino.js",
+    "binaryVersion": "3.0.0",
+    "clientVersion": "2.0.0"
+  }
+}
