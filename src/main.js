@@ -54,8 +54,8 @@ Vue.use(StatusIndicator);
 // Vue.use(VueIntro);
 
 Vue.component('v-chart', ECharts);
-Vue.config.performance = true;
-Vue.config.productionTip = true;
+Vue.config.performance = false;
+Vue.config.productionTip = false;
 //require('echarts/extension/bmap/bmap');
 
 new Vue({

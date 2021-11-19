@@ -55,7 +55,11 @@
           ></mini-statistic>
         </v-flex>
         <v-flex lg8 sm8 xs12>
-          <m-widget title="Interactive Site Map" content-bg="white" @clicked="restore">
+          <m-widget
+            title="Interactive Site Map"
+            content-bg="white"
+            @clicked="restore"
+          >
             <!-- <v-flex d-flex xs8 style="height: auto;"> -->
             <div slot="widget-content" id="main" class="chart">
               <!-- <div class="legend">
@@ -85,7 +89,10 @@
               </m-widget>
             </v-flex>
             <v-flex lg12 sm12 xs12>
-              <branchTable title="High-load Branches" :tabledata="riskBranches"></branchTable>
+              <branchTable
+                title="High-load Branches"
+                :tabledata="riskBranches"
+              ></branchTable>
             </v-flex>
             <!-- <v-flex xs12>
 							<m-widget title="Substation OneLine Diagram" content-bg="white">
@@ -105,7 +112,7 @@
       :id="id"
       :name="name"
       :volt="volt"
-      @close="lineshowDialog=false"
+      @close="lineshowDialog = false"
     />
     <subpop
       v-if="subshowDialog"
@@ -115,7 +122,7 @@
       :id="id"
       :name="name"
       :volt="volt"
-      @close="subshowDialog=false"
+      @close="subshowDialog = false"
     />
   </div>
 </template>
@@ -203,7 +210,7 @@ export default {
       highRiskLines: {},
       formatRiskLines: [],
       mapCenter: [27.4241, -98.4936],
-      Interval: null
+      Interval: null,
     };
   },
   methods: {
@@ -214,22 +221,22 @@ export default {
         // crs: L.CRS.EPSG4326,
         center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
         maxZoom: 18,
-        zoom: 8
+        zoom: 8,
       });
       L.tileLayer(url, options).addTo(map);
       var legend = L.control({ position: "topright" });
-      legend.onAdd = function(map) {
+      legend.onAdd = function (map) {
         var div = L.DomUtil.create("div", "legend legend-background");
         let labels = ["<strong>Categories</strong>"];
         const categories = [
           "Substation",
           "Substation w/ generator",
-          "Substation w/ shunt"
+          "Substation w/ shunt",
         ];
         const color = [
           "rgb(34, 47, 151)",
           "rgb(197, 62, 21)",
-          "rgb(119, 93, 86)"
+          "rgb(119, 93, 86)",
         ];
         for (var i = 0; i < categories.length; i++) {
           div.innerHTML +=
@@ -250,9 +257,10 @@ export default {
         // 	formatter: 'Substation',
         // 	data: []
         // },
+        animation: false,
         tooltip: {
           show: true,
-          trigger: "item"
+          trigger: "item",
         },
         series: [
           {
@@ -262,7 +270,7 @@ export default {
             coordinateSystem: "leaflet",
             // coordinateSystem: 'bmap',
             symbol: "circle",
-            symbolSize: function(value, params) {
+            symbolSize: function (value, params) {
               if (params.data.attributes.Gen) {
                 return 12;
               } else if (params.data.attributes.Shunt) {
@@ -272,19 +280,19 @@ export default {
               }
             },
             showEffectOn: "emphasis",
-            zlevel: 5,
+            zlelve:2,
             // progressive: 40,
             // progressiveThreshold: 200,
             // zindex: 2,
             data: [],
             tooltip: {
               confine: true,
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Substation: " + params.name;
-              }
+              },
             },
             itemStyle: {
-              color: function(params) {
+              color: function (params) {
                 if (
                   params.data.attributes.Gen &&
                   params.data.attributes.Shunt
@@ -298,14 +306,14 @@ export default {
                     colorStops: [
                       {
                         offset: 0,
-                        color: "#ff5722"
+                        color: "#ff5722",
                       },
                       {
                         offset: 1,
-                        color: "#8d6e63"
-                      }
+                        color: "#8d6e63",
+                      },
                     ],
-                    globalCoord: false
+                    globalCoord: false,
                   };
                 } else if (params.data.attributes.Gen) {
                   return "#ff5722";
@@ -314,8 +322,8 @@ export default {
                 } else {
                   return "#283593";
                 }
-              }
-            }
+              },
+            },
           },
           {
             id: "lines",
@@ -345,7 +353,7 @@ export default {
                 show: true,
                 position: "middle",
                 // formatter: 'YES',
-                formatter: params => {
+                formatter: (params) => {
                   const limit = params.data.attributes.MVALimit;
                   const value = params.data.attributes.MVA;
                   const percentage = ((value * 100) / limit).toFixed(0);
@@ -371,33 +379,33 @@ export default {
                 rich: {
                   overload: {
                     fontSize: 18,
-                    color: "#ba000d"
+                    color: "#ba000d",
                   },
                   indanger: {
                     fontSize: 15,
-                    color: "#ffd600"
+                    color: "#ffd600",
                   },
                   safe: {
                     fontSize: 8,
-                    color: "#1b5e20"
+                    color: "#1b5e20",
                   },
                   zoomInSafe: {
                     fontSize: 16,
-                    color: "#1b5e20"
+                    color: "#1b5e20",
                   },
                   zoomInDanger: {
                     fontSize: 16,
-                    color: "#ffd600"
-                  }
-                }
-              }
+                    color: "#ffd600",
+                  },
+                },
+              },
             },
             // blendMode: 'lighter',
             // polyline: true,
             lineStyle: {
               width: 1,
               // color: 'rgb(200, 40, 0)',
-              color: function(params) {
+              color: function (params) {
                 let temp;
                 // console.log(params.data.attributes.volt)
                 switch (params.data.attributes.volt) {
@@ -417,23 +425,23 @@ export default {
                 // console.log(params.data.attributes.volt);
                 return temp;
               },
-              opacity: 1
+              opacity: 1,
             },
             tooltip: {
               // position: [10, 10],
               confine: true,
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Branch: " + params.name;
-              }
+              },
             },
             emphasis: {
               lineStyle: {
                 width: 2,
                 shadowColor: "rgba(144, 144, 255, 0.5)",
-                shadowBlur: 10
-              }
+                shadowBlur: 10,
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "openLines",
@@ -449,21 +457,21 @@ export default {
               width: 1,
               color: "rgb(200, 40, 0)",
               type: "dashed",
-              opacity: 1
+              opacity: 1,
             },
             tooltip: {
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Branch: " + params.name;
-              }
+              },
             },
             emphasis: {
               lineStyle: {
                 width: 2,
                 shadowColor: "rgba(144, 144, 255, 0.5)",
-                shadowBlur: 10
-              }
+                shadowBlur: 10,
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "violatedLines",
@@ -472,7 +480,6 @@ export default {
             coordinateSystem: "leaflet",
             silent: true,
             zlevel: 2,
-            z: 2,
             // symbol: 'pin',
             // symbolSize: 30,
             lineStyle: {
@@ -481,18 +488,18 @@ export default {
               // type: 'dotted',
               shadowColor: "#ffcdd2",
               shadowBlur: 20,
-              opacity: 0.5
+              opacity: 0.5,
             },
             label: {
               show: false,
               position: "middle",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Branch#" + params.name;
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "otherSub",
@@ -505,10 +512,11 @@ export default {
             // progressive: 100,
             // progressiveThreshold: 500,
             symbolSize: 5,
+            zlelve:2,
             itemStyle: {
-              color: "#616161"
+              color: "#616161",
             },
-            data: this.$store.state.otherArea.Substation
+            data: this.$store.state.otherArea.Substation,
           },
           {
             id: "otherBranch",
@@ -517,20 +525,21 @@ export default {
             silent: true,
             large: true,
             largeThreshold: 1,
+            zlelve:2,
             blendMode: "lighter",
             // progressive: 100,
             // progressiveThreshold: 500,
             // zindex: 5,
             lineStyle: {
-              color: "#757575"
+              color: "#757575",
             },
-            data: this.$store.state.otherArea.Branch
-          }
-        ]
+            data: this.$store.state.otherArea.Branch,
+          },
+        ],
       };
       var layerOptions = {
         loadWhileAnimating: false,
-        attribution: ""
+        attribution: "",
       };
       chart = L.supermap.echartsLayer(echartsOptions, layerOptions); // _ec is the echartsInstance
       console.log(chart);
@@ -553,7 +562,7 @@ export default {
       // 		console.log(params);
       // 	}
       // })
-      chart._ec.on("click", function(params) {
+      chart._ec.on("click", function (params) {
         // console.log(params);
         if (params.seriesName == "sub") {
           self.type = "Substation";
@@ -582,9 +591,9 @@ export default {
         series: [
           {
             id: "lines",
-            data: linedata
-          }
-        ]
+            data: linedata,
+          },
+        ],
       });
     },
     initUpdateLines() {
@@ -597,7 +606,7 @@ export default {
         this.$store.state.areaHelper.Branch.list.length
       ).fill(1);
     },
-    updateLinesCycle: function() {
+    updateLinesCycle: function () {
       this.Interval = setInterval(() => {
         // this.updateLines();
         if (this.$store.state.status === "running") {
@@ -639,7 +648,7 @@ export default {
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"]
+              ]["Double.Latitude"],
             ],
             [
               this.$store.state.casedetail.content.Substation[
@@ -651,8 +660,8 @@ export default {
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"]
-            ]
+              ]["Double.Latitude"],
+            ],
           ];
         } else if (linedata[index].attributes.MVFrom < 0) {
           // console.log('NO')
@@ -667,7 +676,7 @@ export default {
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"]
+              ]["Double.Latitude"],
             ],
             [
               this.$store.state.casedetail.content.Substation[
@@ -679,8 +688,8 @@ export default {
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"]
-            ]
+              ]["Double.Latitude"],
+            ],
           ];
         }
         // if ([0, 2, 3].includes(branchData[index * branchArrLength]))
@@ -726,11 +735,20 @@ export default {
         i += this.branchArrLength;
       }
       this.formatRiskLines = Object.values(this.highRiskLines);
-      let tempOption = chart._echartsOptions;
-      tempOption.series[1].data = linedata;
-      tempOption.series[2].data = this.openLineData;
+      // let tempOption = chart._echartsOptions;
+      // tempOption.series[1].data = linedata;
+      // tempOption.series[2].data = this.openLineData;
+      let tempOption = {
+        series: [
+          { id: "lines", data: linedata },
+          { id: "openLines", data: this.openLineData },
+        ],
+      };
       // console.log(tempOption)
-      chart.setOption(tempOption);
+      chart.setOption(tempOption, {
+        silent: true,
+        lazyUpdate: true
+      });
       this.statusArray = statusTemp;
       // }
     },
@@ -751,9 +769,9 @@ export default {
     restore() {
       map.flyTo(this.mapCenter, 8, {
         animate: true,
-        duration: 1.5
+        duration: 1.5,
       });
-    }
+    },
   },
   created() {},
   mounted() {
@@ -797,8 +815,8 @@ export default {
   computed: {
     ...mapState(["areaData", "riskBranches"]),
     ...mapGetters({
-      ViolatedLines: "getViolatedLines"
-    })
+      ViolatedLines: "getViolatedLines",
+    }),
   },
   watch: {
     // ViolatedLines: function() {
@@ -818,8 +836,8 @@ export default {
     branchTable,
     chartStatistic,
     loadForecast,
-    userInfo
-  }
+    userInfo,
+  },
 };
 </script>
 
