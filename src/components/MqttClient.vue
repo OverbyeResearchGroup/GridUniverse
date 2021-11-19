@@ -33,7 +33,7 @@ import fingerprint from "fingerprintjs2";
 import iziToast from "izitoast";
 import Push from "push.js";
 import { encode, decode } from "@msgpack/msgpack";
-import { ipcRenderer } from "electron";
+// import { ipcRenderer } from "electron";
 import io from "socket.io-client";
 
 var client = {};
