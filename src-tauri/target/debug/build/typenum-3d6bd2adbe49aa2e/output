@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\build\typenum-3d6bd2adbe49aa2e\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\build\typenum-3d6bd2adbe49aa2e\out\op.rs

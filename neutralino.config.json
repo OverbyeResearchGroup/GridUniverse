@@ -2,9 +2,9 @@
   "applicationId": "com.zeyumao.gridverse",
   "port": 0,
   "defaultMode": "window",
-  "enableHTTPServer": false,
+  "enableServer": true,
   "enableNativeAPI": true,
-  "url": "/",
+  "url": "/resources/",
   "logging": {
     "enabled": true,
     "writeToLogFile": true
@@ -22,7 +22,7 @@
       "minHeight": 250,
       "fullScreen": false,
       "alwaysOnTop": false,
-      "icon": "/dist/grid.ico",
+      "icon": "/resources/grid.ico",
       "enableInspector": true,
       "borderless": false,
       "maximize": false
@@ -38,9 +38,9 @@
     "cloud": {}
   },
   "cli": {
-    "binaryName": "gridverse-minimal",
-    "resourcesPath": "/dist/",
-    "clientLibrary": "/dist/neutralino.js",
+    "binaryName": "gridverse-neutralinojs",
+    "resourcesPath": "/resources/",
+    "clientLibrary": "/resources/neutralino.js",
     "binaryVersion": "3.0.0",
     "clientVersion": "2.0.0"
   }

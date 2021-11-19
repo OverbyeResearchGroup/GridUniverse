@@ -1,0 +1,11 @@
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\tauri_utils-41c262fc1f6c2ea9.rmeta: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\assets.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\config.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\html.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\platform.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\libtauri_utils-41c262fc1f6c2ea9.rlib: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\assets.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\config.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\html.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\platform.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\tauri_utils-41c262fc1f6c2ea9.d: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\assets.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\config.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\html.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\platform.rs
+
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\lib.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\assets.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\config.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\html.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-utils-1.0.0-beta.3\src\platform.rs:

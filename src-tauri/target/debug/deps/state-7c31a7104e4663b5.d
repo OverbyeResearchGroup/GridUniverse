@@ -1,0 +1,12 @@
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\deps\state-7c31a7104e4663b5.rmeta: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\ident_hash.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\storage.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\init.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\shim.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\container.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\deps\libstate-7c31a7104e4663b5.rlib: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\ident_hash.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\storage.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\init.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\shim.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\container.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\deps\state-7c31a7104e4663b5.d: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\ident_hash.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\storage.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\init.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\shim.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\container.rs
+
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\lib.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\ident_hash.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\storage.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\init.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\shim.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\state-0.5.2\src\container.rs:

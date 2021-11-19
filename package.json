@@ -8,8 +8,8 @@
     "serve": "vue-cli-service serve --open",
     "build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build --open",
     "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
-    "dev:neu": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build && neu run",
-    "build:neu": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build && neu build --release"
+    "neu:serve": "vue-cli-service build && neu run",
+    "neu:build": "vue-cli-service build && neu build --release"
   },
   "dependencies": {
     "@deck.gl/core": "^8.3.7",

@@ -3,6 +3,8 @@ let whiteListedModules = ["@supermap/iclient-leaflet"]
 
 module.exports = {
   // publicPath: '/~zeyumao2/',
+  publicPath: './',
+  outputDir: 'resources',
   transpileDependencies: [
     'vue-echarts',
     'resize-detector'

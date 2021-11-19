@@ -1,0 +1,1 @@
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\app.exe: C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\icons\icon.ico C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\src\build.rs C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\src\main.rs

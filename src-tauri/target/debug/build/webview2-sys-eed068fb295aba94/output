@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build.rs
+cargo:rustc-link-lib=WebView2LoaderStatic
+cargo:rustc-link-search=C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\webview2-sys-0.1.1\Microsoft.Web.WebView2.1.0.961.33\build\native\x64

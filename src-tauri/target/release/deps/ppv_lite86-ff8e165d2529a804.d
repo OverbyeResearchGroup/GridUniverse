@@ -1,0 +1,11 @@
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\ppv_lite86-ff8e165d2529a804.rmeta: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\soft.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\types.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\mod.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\sse2.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\libppv_lite86-ff8e165d2529a804.rlib: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\soft.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\types.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\mod.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\sse2.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\release\deps\ppv_lite86-ff8e165d2529a804.d: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\soft.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\types.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\mod.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\sse2.rs
+
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\lib.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\soft.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\types.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\mod.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\ppv-lite86-0.2.15\src\x86_64\sse2.rs:

@@ -1,0 +1,10 @@
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\deps\tauri_macros-c563e29a6b441a0d.dll: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\mod.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\handler.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\wrapper.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\runtime.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\context.rs
+
+C:\Users\test\NodeProjects\PowerWeb-RS-electron\src-tauri\target\debug\deps\tauri_macros-c563e29a6b441a0d.d: C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\lib.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\mod.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\handler.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\wrapper.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\runtime.rs C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\context.rs
+
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\lib.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\mod.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\handler.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\command\wrapper.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\runtime.rs:
+C:\Users\test\.cargo\registry\src\github.com-1ecc6299db9ec823\tauri-macros-1.0.0-beta.5\src\context.rs:
