@@ -6,8 +6,8 @@
   "enableNativeAPI": true,
   "url": "/resources/",
   "logging": {
-    "enabled": true,
-    "writeToLogFile": true
+    "enabled": false,
+    "writeToLogFile": false
   },
   "nativeBlockList": [],
   "globalVariables": {
@@ -23,7 +23,7 @@
       "fullScreen": false,
       "alwaysOnTop": false,
       "icon": "/resources/grid.ico",
-      "enableInspector": true,
+      "enableInspector": false,
       "borderless": false,
       "maximize": false
     },
