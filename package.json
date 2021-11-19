@@ -1,13 +1,15 @@
 {
   "name": "gridverse",
   "version": "2.0.0",
-  "author": "Zeyu Mao",
-  "description": "The desktop application version of Gridverse",
   "private": true,
+  "description": "The desktop application version of Gridverse",
+  "author": "Zeyu Mao",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "node --max_old_space_size=4096 node_modules/@vue/cli-service/bin/vue-cli-service.js build --open",
-    "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py"
+    "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
+    "tauri:build": "vue-cli-service tauri:build",
+    "tauri:serve": "vue-cli-service tauri:serve"
   },
   "dependencies": {
     "@deck.gl/core": "^8.3.7",
@@ -75,6 +77,7 @@
     "material-design-icons-iconfont": "^6.1.1",
     "stylus": "^0.55.0",
     "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-tauri": "~1.0.0-beta.6",
     "vue-template-compiler": "^2.6.14"
   },
   "postcss": {

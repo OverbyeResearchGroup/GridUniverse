@@ -31,7 +31,7 @@ import mqtt from "mqtt/dist/mqtt.js";
 import { mapGetters } from "vuex";
 import fingerprint from "fingerprintjs2";
 import iziToast from "izitoast";
-import Push from "push.js";
+// import Push from "push.js";
 import { encode, decode } from "@msgpack/msgpack";
 // import { ipcRenderer } from "electron";
 import io from "socket.io-client";
@@ -110,7 +110,7 @@ export default {
       "test",
     ];
     const info = this.$store.state.loginInfo;
-    
+
     if (info.direct) {
       this.socket = io(`ws://localhost:${info.server_port}`);
     } else {
@@ -368,46 +368,46 @@ export default {
               ],
             ],
           });
-          Push.create("System", {
-            body: this.usermessage,
-            icon: require("../assets/grid.png"),
-            timeout: 6000,
-            onClick: function () {
-              window.focus();
-              this.close();
-              if (self.usermessage.includes("Branch")) {
-                self.id = temp[1];
-                self.name = temp[2];
-                self.type = "Branch";
-                self.lineshowDialog = true;
-              } else if (
-                self.usermessage.includes("Load") ||
-                self.usermessage.includes("Gen") ||
-                self.usermessage.includes("Shunt")
-              ) {
-                const busid = temp[1].split(",")[0];
-                self.name = temp[2].split("Bus")[0];
-                self.type = "Substation";
-                var found;
-                // Base on the bus id, find the substation
-                for (let subidx in self.$store.state.subDetail) {
-                  found = self.$store.state.subDetail[subidx].Bus.find(
-                    function (ele) {
-                      if (ele["Int.Bus Number"] == busid) {
-                        self.id = subidx;
-                        self.children = self.$store.state.subDetail[subidx].Bus;
-                        return true;
-                      }
-                    }
-                  );
-                  if (found) {
-                    self.subshowDialog = true;
-                    break;
-                  }
-                }
-              }
-            },
-          });
+          // Push.create("System", {
+          //   body: this.usermessage,
+          //   icon: require("../assets/grid.png"),
+          //   timeout: 6000,
+          //   onClick: function () {
+          //     window.focus();
+          //     this.close();
+          //     if (self.usermessage.includes("Branch")) {
+          //       self.id = temp[1];
+          //       self.name = temp[2];
+          //       self.type = "Branch";
+          //       self.lineshowDialog = true;
+          //     } else if (
+          //       self.usermessage.includes("Load") ||
+          //       self.usermessage.includes("Gen") ||
+          //       self.usermessage.includes("Shunt")
+          //     ) {
+          //       const busid = temp[1].split(",")[0];
+          //       self.name = temp[2].split("Bus")[0];
+          //       self.type = "Substation";
+          //       var found;
+          //       // Base on the bus id, find the substation
+          //       for (let subidx in self.$store.state.subDetail) {
+          //         found = self.$store.state.subDetail[subidx].Bus.find(
+          //           function (ele) {
+          //             if (ele["Int.Bus Number"] == busid) {
+          //               self.id = subidx;
+          //               self.children = self.$store.state.subDetail[subidx].Bus;
+          //               return true;
+          //             }
+          //           }
+          //         );
+          //         if (found) {
+          //           self.subshowDialog = true;
+          //           break;
+          //         }
+          //       }
+          //     }
+          //   },
+          // });
         }
 
         this.$store.commit("updatebadge");
