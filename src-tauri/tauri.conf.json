@@ -21,8 +21,8 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "resources": [],
-      "externalBin": ["../pydist/ds_client"],
+      "resources": ["../pydist/ds_client.exe"],
+      "externalBin": [],
       "copyright": "",
       "category": "DeveloperTool",
       "shortDescription": "",

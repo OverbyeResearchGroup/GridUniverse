@@ -105,6 +105,7 @@
 
 <script>
 import { Command } from "@tauri-apps/api/shell";
+import { resourceDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
 import { encode, decode } from "@msgpack/msgpack";
 
@@ -164,12 +165,24 @@ export default {
           server_port: this.server_port,
         };
         if (this.ds_direct) {
-          const command = Command.sidecar("ds_client", [
-            this.ip,
-            this.port,
-            this.server_port,
-          ]);
-          const output = command.execute();
+          let resource_dir;
+          resourceDir().then((data) => {
+            console.log(data);
+            resource_dir = data;
+            const client_path = resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
+            const command = new Command(client_path, [
+              this.ip,
+              this.port,
+              this.server_port,
+            ]).spawn();
+          });
+
+          // const command = Command.sidecar("ds_client", [
+          //   this.ip,
+          //   this.port,
+          //   this.server_port,
+          // ]);
+          // const output = command.execute();
         }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);
