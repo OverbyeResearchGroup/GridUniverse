@@ -131,7 +131,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$http_writer$$$function__10_drain$$$corou
 static PyObject *MAKE_GENERATOR_aiohttp$http_writer$$$function__12__py_serialize_headers$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$http_writer$$$function__10_drain(PyObject *annotations);
@@ -8136,7 +8136,7 @@ PyObject *modulecode_aiohttp$http_writer(PyObject *module, struct Nuitka_MetaPat
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_19 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_19 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9210,7 +9210,7 @@ PyObject *modulecode_aiohttp$http_writer(PyObject *module, struct Nuitka_MetaPat
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_31 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_31 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());

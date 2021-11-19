@@ -107,7 +107,7 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_COROUTINE_aiohttp$base_protocol$$$function__8__drain_helper$$$coroutine__1__drain_helper(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$base_protocol$$$function__1___init__(PyObject *annotations);
@@ -3832,7 +3832,7 @@ PyObject *modulecode_aiohttp$base_protocol(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_10 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());

@@ -147,7 +147,7 @@ static PyObject *MAKE_COROUTINE_socketio$asyncio_pubsub_manager$$$function__12__
 static PyObject *MAKE_COROUTINE_socketio$asyncio_pubsub_manager$$$function__13__thread$$$coroutine__1__thread(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
@@ -8997,7 +8997,7 @@ PyObject *modulecode_socketio$asyncio_pubsub_manager(PyObject *module, struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_11 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());

@@ -236,7 +236,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$tracing$$$function__36_send_dns_cache_mi
 static PyObject *MAKE_COROUTINE_aiohttp$tracing$$$function__37_send_request_headers$$$coroutine__1_send_request_headers(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$tracing$$$function__10_on_request_redirect(PyObject *annotations);
@@ -14657,7 +14657,7 @@ PyObject *modulecode_aiohttp$tracing(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_20 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_20 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());

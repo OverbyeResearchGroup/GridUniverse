@@ -52,9 +52,8 @@ export default {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: rgb(9, 129, 156);
+    color: rgb(201, 239, 248);
     font-size: 20px;
-    font-family: Orbitron;
     /* letter-spacing: 7px; */
 }
 </style>

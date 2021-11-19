@@ -157,22 +157,22 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_GENERATOR_eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj__1__original_ssl_context(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__13_complex_call_helper_pos_keywords_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__9_complex_call_helper_pos_keywords_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__10_send(PyObject *defaults);
@@ -2967,7 +2967,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_call_result_1 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4456,7 +4456,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -4523,7 +4523,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_return_value = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -5567,7 +5567,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -8844,7 +8844,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -14943,7 +14943,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__24_wrap_socket(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -15400,7 +15400,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__26_wrap_socket(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1, tmp_dircall_arg5_1};
-            tmp_return_value = impl___main__$$$function__13_complex_call_helper_pos_keywords_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -16697,7 +16697,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__32_green_create_default_con
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_1 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19191,7 +19191,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_33 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_33 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20563,7 +20563,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_45 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_45 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_45 == NULL) {
             assert(ERROR_OCCURRED());

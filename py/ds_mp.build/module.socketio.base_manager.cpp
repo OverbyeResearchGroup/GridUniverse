@@ -131,10 +131,10 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_GENERATOR_socketio$base_manager$$$function__5_get_participants$$$genobj__1_get_participants(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$base_manager$$$function__10_can_disconnect();
@@ -9292,7 +9292,7 @@ static PyObject *impl_socketio$base_manager$$$function__18_trigger_callback(stru
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_2 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11283,7 +11283,7 @@ PyObject *modulecode_socketio$base_manager(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_10 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());

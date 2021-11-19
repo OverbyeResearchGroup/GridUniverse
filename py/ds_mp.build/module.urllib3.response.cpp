@@ -207,10 +207,10 @@ static PyObject *MAKE_GENERATOR_urllib3$response$$$function__41_read_chunked$$$g
 static PyObject *MAKE_GENERATOR_urllib3$response$$$function__43___iter__$$$genobj__1___iter__(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_keywords_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10_complex_call_helper_keywords_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$response$$$function__10_flush();
@@ -15583,7 +15583,7 @@ static PyObject *impl_urllib3$response$$$function__28_from_httplib(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_5 = impl___main__$$$function__8_complex_call_helper_keywords_star_dict(dir_call_args);
+            tmp_assign_source_5 = impl___main__$$$function__10_complex_call_helper_keywords_star_dict(dir_call_args);
         }
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25072,7 +25072,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_33 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_33 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25759,7 +25759,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_40 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_40 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_40 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26434,7 +26434,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_47 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_47 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27158,7 +27158,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_55 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_55 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_55 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27838,7 +27838,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_62 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_62 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_62 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28582,7 +28582,7 @@ PyObject *modulecode_urllib3$response(PyObject *module, struct Nuitka_MetaPathBa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_71 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_71 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_71 == NULL) {
             assert(ERROR_OCCURRED());

@@ -104,7 +104,15 @@ const sleep = (milliseconds) => {
 // }
 
 const exitPyProc = () => {
-  pyProc.kill()
+  const { exec } = require('child_process');
+  exec('taskkill /f /t /im ds_client.exe', (err, stdout, stderr) => {
+    if (err) {
+      console.log(err)
+      return;
+    }
+    console.log(`stdout: ${stdout}`);
+    console.log(`stderr: ${stderr}`);
+  });
   pyProc = null
   pyPort = null
 }

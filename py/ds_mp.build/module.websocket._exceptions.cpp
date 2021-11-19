@@ -90,7 +90,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_websocket$_exceptions$$$function__1___init__(PyObject *defaults);
@@ -1013,7 +1013,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_4 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1607,7 +1607,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_12 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_12 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2208,7 +2208,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_20 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_20 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2809,7 +2809,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_28 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_28 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_28 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3410,7 +3410,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_36 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_36 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4011,7 +4011,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_44 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_44 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4612,7 +4612,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_7};
-            tmp_assign_source_52 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_52 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_52 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5316,7 +5316,7 @@ PyObject *modulecode_websocket$_exceptions(PyObject *module, struct Nuitka_MetaP
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_8};
-            tmp_assign_source_60 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_60 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_60 == NULL) {
             assert(ERROR_OCCURRED());

@@ -434,13 +434,13 @@ static PyObject *MAKE_GENERATOR_attr$_make$$$function__77___getstate__$$$genexpr
 static PyObject *MAKE_GENERATOR_attr$_make$$$function__79_make_class$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_keywords_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10_complex_call_helper_keywords_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_attr$_make$$$function__10__make_attr_tuple_class();
@@ -1833,7 +1833,7 @@ static PyObject *impl_attr$_make$$$function__7_attrib(struct Nuitka_FunctionObje
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_12 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_12 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1946,7 +1946,7 @@ static PyObject *impl_attr$_make$$$function__7_attrib(struct Nuitka_FunctionObje
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_assign_source_13 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_13 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2059,7 +2059,7 @@ static PyObject *impl_attr$_make$$$function__7_attrib(struct Nuitka_FunctionObje
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3};
-            tmp_assign_source_14 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_14 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34056,7 +34056,7 @@ static PyObject *impl_attr$_make$$$function__40_attrs(struct Nuitka_FunctionObje
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_7 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_7 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -52779,7 +52779,7 @@ static PyObject *attr$_make$$$function__63__unpack_kw_only_lines_py2$$$genexpr__
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_right_name_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_right_name_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_right_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -62224,7 +62224,7 @@ static PyObject *impl_attr$_make$$$function__67_from_counting_attr(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__10_complex_call_helper_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -68355,7 +68355,7 @@ static PyObject *impl_attr$_make$$$function__79_make_class(struct Nuitka_Functio
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_called_name_3 = impl___main__$$$function__8_complex_call_helper_keywords_star_dict(dir_call_args);
+            tmp_called_name_3 = impl___main__$$$function__10_complex_call_helper_keywords_star_dict(dir_call_args);
         }
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -75735,7 +75735,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_43 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_43 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_43 == NULL) {
             assert(ERROR_OCCURRED());
@@ -76495,7 +76495,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_51 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_51 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_51 == NULL) {
             assert(ERROR_OCCURRED());
@@ -77561,7 +77561,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_73 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_73 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_73 == NULL) {
             assert(ERROR_OCCURRED());
@@ -78850,7 +78850,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_111 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_111 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_111 == NULL) {
             assert(ERROR_OCCURRED());
@@ -81056,7 +81056,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_132 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_132 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_132 == NULL) {
             assert(ERROR_OCCURRED());
@@ -82075,7 +82075,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_142 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_142 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_142 == NULL) {
             assert(ERROR_OCCURRED());
@@ -83338,7 +83338,7 @@ PyObject *modulecode_attr$_make(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_7};
-            tmp_assign_source_156 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_156 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_156 == NULL) {
             assert(ERROR_OCCURRED());

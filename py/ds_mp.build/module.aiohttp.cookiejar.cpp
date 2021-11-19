@@ -151,7 +151,7 @@ static PyObject *MAKE_GENERATOR_aiohttp$cookiejar$$$function__7___len__$$$genexp
 static PyObject *MAKE_GENERATOR_aiohttp$cookiejar$$$function__14__parse_date$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$cookiejar$$$function__10_update_cookies(PyObject *defaults, PyObject *annotations);
@@ -18080,7 +18080,7 @@ PyObject *modulecode_aiohttp$cookiejar(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_42 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_42 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_42 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21114,7 +21114,7 @@ PyObject *modulecode_aiohttp$cookiejar(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_50 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_50 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_50 == NULL) {
             assert(ERROR_OCCURRED());

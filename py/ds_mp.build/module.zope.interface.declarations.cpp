@@ -257,10 +257,10 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_GENERATOR_zope$interface$declarations$$$function__9___add__$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
@@ -2584,7 +2584,7 @@ static PyObject *impl_zope$interface$declarations$$$function__8___sub__(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -3227,7 +3227,7 @@ static PyObject *impl_zope$interface$declarations$$$function__9___add__(struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -6253,7 +6253,7 @@ static PyObject *impl_zope$interface$declarations$$$function__24_named(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9318,7 +9318,7 @@ static PyObject *impl_zope$interface$declarations$$$function__30_implementedBy(s
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -18109,7 +18109,7 @@ static PyObject *impl_zope$interface$declarations$$$function__47_Provides(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_2 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28318,7 +28318,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_24 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_24 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29014,7 +29014,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_32 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_32 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30016,7 +30016,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_40 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_40 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_40 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31336,7 +31336,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_49 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_49 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32264,7 +32264,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_64 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_64 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_64 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32959,7 +32959,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_71 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_71 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_71 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33691,7 +33691,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_7};
-            tmp_assign_source_82 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_82 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_82 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34570,7 +34570,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_8};
-            tmp_assign_source_96 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_96 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_96 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35324,7 +35324,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_9};
-            tmp_assign_source_104 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_104 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_104 == NULL) {
             assert(ERROR_OCCURRED());
@@ -36119,7 +36119,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_10};
-            tmp_assign_source_114 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_114 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_114 == NULL) {
             assert(ERROR_OCCURRED());
@@ -36896,7 +36896,7 @@ PyObject *modulecode_zope$interface$declarations(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_11};
-            tmp_assign_source_125 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_125 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_125 == NULL) {
             assert(ERROR_OCCURRED());

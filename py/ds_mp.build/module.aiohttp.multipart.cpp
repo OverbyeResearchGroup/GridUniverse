@@ -324,13 +324,13 @@ static PyObject *MAKE_COROUTINE_aiohttp$multipart$$$function__63_write_eof$$$cor
 static PyObject *MAKE_COROUTINE_aiohttp$multipart$$$function__64_write$$$coroutine__1_write(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$multipart$$$function__10___aiter__(PyObject *annotations);
@@ -21287,7 +21287,7 @@ static PyObject *impl_aiohttp$multipart$$$function__29___init__(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_call_result_1 = impl___main__$$$function__5_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21504,7 +21504,7 @@ static PyObject *impl_aiohttp$multipart$$$function__29___init__(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_call_result_2 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -43324,7 +43324,7 @@ PyObject *modulecode_aiohttp$multipart(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_60 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_60 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_60 == NULL) {
             assert(ERROR_OCCURRED());
@@ -43913,7 +43913,7 @@ PyObject *modulecode_aiohttp$multipart(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_68 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_68 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_68 == NULL) {
             assert(ERROR_OCCURRED());
@@ -47731,7 +47731,7 @@ PyObject *modulecode_aiohttp$multipart(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_90 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_90 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_90 == NULL) {
             assert(ERROR_OCCURRED());
@@ -50479,7 +50479,7 @@ PyObject *modulecode_aiohttp$multipart(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_105 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_105 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_105 == NULL) {
             assert(ERROR_OCCURRED());

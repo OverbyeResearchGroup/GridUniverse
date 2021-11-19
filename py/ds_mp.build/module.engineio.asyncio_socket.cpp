@@ -152,7 +152,7 @@ static PyObject *MAKE_COROUTINE_engineio$asyncio_socket$$$function__10__websocke
 static PyObject *MAKE_COROUTINE_engineio$asyncio_socket$$$function__10__websocket_handler$$$coroutine__1__websocket_handler$$$function__2_writer$$$coroutine__1_writer(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_engineio$asyncio_socket$$$function__10__websocket_handler();
@@ -14615,7 +14615,7 @@ PyObject *modulecode_engineio$asyncio_socket(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_12 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_12 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());

@@ -249,7 +249,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$web_response$$$function__55__start$$$cor
 static PyObject *MAKE_COROUTINE_aiohttp$web_response$$$function__57__do_start_compression$$$coroutine__1__do_start_compression(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$web_response$$$function__10_force_close(PyObject *annotations);
@@ -32732,7 +32732,7 @@ PyObject *modulecode_aiohttp$web_response(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_59 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_59 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_59 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33463,7 +33463,7 @@ PyObject *modulecode_aiohttp$web_response(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_67 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_67 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_67 == NULL) {
             assert(ERROR_OCCURRED());
@@ -39941,7 +39941,7 @@ PyObject *modulecode_aiohttp$web_response(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_75 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_75 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_75 == NULL) {
             assert(ERROR_OCCURRED());

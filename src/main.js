@@ -5,7 +5,8 @@ import store from './store';
 import Vuetify from 'vuetify';
 import './registerServiceWorker';
 import 'vuetify/dist/vuetify.min.css';
-// import '@mdi/font/css/materialdesignicons.css';
+import '@mdi/font/css/materialdesignicons.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import ECharts from 'vue-echarts';
 import 'echarts/lib/chart/line'
 import 'echarts/lib/chart/bar'
@@ -16,7 +17,7 @@ import 'element-theme-dark';
 import 'izitoast/dist/css/iziToast.css';
 // import 'vue-status-indicator/styles.css'
 import StatusIndicator from 'vue-status-indicator'
-import VueIntro from 'vue-introjs';
+// import VueIntro from 'vue-introjs';
 
 // import ECharts modules manually to reduce bundle size
 import 'echarts/lib/chart/bar'
@@ -27,6 +28,9 @@ import 'leaflet/dist/leaflet.css'
 import '@supermap/iclient-leaflet'
 
 const opts = {
+	icons: {
+		iconfont: 'mdi'
+	},
 	theme: {dark: true},
 	options: {
 		themeVariations: ['primary', 'secondary', 'accent'],
@@ -47,10 +51,11 @@ Vue.component('v-chart', ECharts)
 Vue.use(ElementUI);
 Vue.use(Vuetify);
 Vue.use(StatusIndicator);
-Vue.use(VueIntro);
+// Vue.use(VueIntro);
 
 Vue.component('v-chart', ECharts);
-Vue.config.productionTip = false;
+Vue.config.performance = true;
+Vue.config.productionTip = true;
 //require('echarts/extension/bmap/bmap');
 
 new Vue({

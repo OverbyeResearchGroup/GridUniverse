@@ -150,7 +150,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_geventwebsocket$websocket$$$function__10_path();
@@ -16263,7 +16263,7 @@ PyObject *modulecode_geventwebsocket$websocket(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_17 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_17 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17848,7 +17848,7 @@ PyObject *modulecode_geventwebsocket$websocket(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_24 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_24 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18527,7 +18527,7 @@ PyObject *modulecode_geventwebsocket$websocket(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_31 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_31 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());

@@ -142,16 +142,16 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_keywords_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10_complex_call_helper_keywords_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$connectionpool$$$function__10__validate_conn();
@@ -2566,7 +2566,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__7__new_conn(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_3 = impl___main__$$$function__8_complex_call_helper_keywords_star_dict(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__10_complex_call_helper_keywords_star_dict(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5554,7 +5554,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__14__make_request(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_4 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_4 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5603,7 +5603,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__14__make_request(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_call_result_5 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_5 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10977,7 +10977,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__18_urlopen(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_assign_source_20 = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_assign_source_20 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12722,7 +12722,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__18_urlopen(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2, tmp_dircall_arg4_2};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -13561,7 +13561,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__18_urlopen(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3, tmp_dircall_arg3_3, tmp_dircall_arg4_3};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -14401,7 +14401,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__18_urlopen(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4, tmp_dircall_arg2_4, tmp_dircall_arg3_4, tmp_dircall_arg4_4};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -14820,7 +14820,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__19___init__(struct Nuit
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16645,7 +16645,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__22__new_conn(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_7 = impl___main__$$$function__8_complex_call_helper_keywords_star_dict(dir_call_args);
+            tmp_assign_source_7 = impl___main__$$$function__10_complex_call_helper_keywords_star_dict(dir_call_args);
         }
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17778,7 +17778,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__24_connection_from_url(
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -17835,7 +17835,7 @@ static PyObject *impl_urllib3$connectionpool$$$function__24_connection_from_url(
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2, tmp_dircall_arg4_2};
-            tmp_return_value = impl___main__$$$function__9_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -21375,7 +21375,7 @@ PyObject *modulecode_urllib3$connectionpool(PyObject *module, struct Nuitka_Meta
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_57 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_57 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_57 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22299,7 +22299,7 @@ PyObject *modulecode_urllib3$connectionpool(PyObject *module, struct Nuitka_Meta
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_66 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_66 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_66 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23446,7 +23446,7 @@ PyObject *modulecode_urllib3$connectionpool(PyObject *module, struct Nuitka_Meta
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_74 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_74 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_74 == NULL) {
             assert(ERROR_OCCURRED());

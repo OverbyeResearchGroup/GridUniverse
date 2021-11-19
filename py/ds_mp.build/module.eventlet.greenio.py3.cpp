@@ -126,10 +126,10 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_eventlet$greenio$py3$$$function__10_isatty();
@@ -2838,7 +2838,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__7_read(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3542,7 +3542,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__8_readall(struct Nuitka_F
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4296,7 +4296,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__10_isatty(struct Nuitka_F
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5526,7 +5526,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__13_write(struct Nuitka_Fu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6670,7 +6670,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__15_truncate(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7136,7 +7136,7 @@ static PyObject *impl_eventlet$greenio$py3$$$function__16_seek(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_raise_type_1 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_raise_type_1 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9771,7 +9771,7 @@ PyObject *modulecode_eventlet$greenio$py3(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_31 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_31 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());

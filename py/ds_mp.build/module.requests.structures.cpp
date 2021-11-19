@@ -128,10 +128,10 @@ static PyObject *MAKE_GENERATOR_requests$structures$$$function__5___iter__$$$gen
 static PyObject *MAKE_GENERATOR_requests$structures$$$function__7_lower_items$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_requests$structures$$$function__10___repr__();
@@ -335,7 +335,7 @@ static PyObject *impl_requests$structures$$$function__1___init__(struct Nuitka_F
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5103,7 +5103,7 @@ PyObject *modulecode_requests$structures(PyObject *module, struct Nuitka_MetaPat
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_9 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_9 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5926,7 +5926,7 @@ PyObject *modulecode_requests$structures(PyObject *module, struct Nuitka_MetaPat
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_16 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_16 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());

@@ -138,7 +138,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$util$ssltransport$$$function__10_send(PyObject *defaults);
@@ -7626,7 +7626,7 @@ static PyObject *impl_urllib3$util$ssltransport$$$function__25__ssl_io_loop(stru
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_4 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());

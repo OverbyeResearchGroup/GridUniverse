@@ -269,7 +269,7 @@
         </v-list-item>
         <v-spacer></v-spacer>
         <v-list-item :key="'index'">
-          <div class="clock pt-5">RIndex: {{ rIndex }}</div>
+          <div class="pl-3 pt-5">RIndex: {{ rIndex }}</div>
         </v-list-item>
         <!-- <v-list-item :key="'IkMap'" @click="$store.commit('setpage', 'IkView')">
 						<v-list-item-avatar>

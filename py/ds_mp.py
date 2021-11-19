@@ -1,17 +1,17 @@
 import eventlet
+from eventlet.queue import Queue
 # eventlet.monkey_patch()
 
-from time import ctime, sleep
 from json import load, loads
 from sys import argv, stdout
 from os import environ
 
-from queue import Queue
+# from queue import Queue
 from random import randrange
 from msgpack import dumps
 
-import socketio
-from powerworldDS import PowerWorldDS
+from socketio import Server, WSGIApp
+from powerworldDS_eventlet import PowerWorldDS
 
 print("DS Client is loading ...", flush=True)
 
@@ -24,7 +24,6 @@ if environ.get('ENV', None) == 'DEV':
 
 from config import config
 
-# Set up DS clients first
 args = argv
 if len(args) <= 3:
     ip = "192.168.1.221"
@@ -35,30 +34,31 @@ else:
     port = args[2]
     server_port = args[3]
 print(f"Connecting to {ip}:{port}")
-ds = PowerWorldDS(ip, int(port))
 
 # create a Socket.IO server
 # sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
 # app = web.Application()
 # sio.attach(app)
-sio = socketio.Server(async_mode='eventlet', cors_allowed_origins='*')
-app = socketio.WSGIApp(sio)
+sio = Server(async_mode='eventlet', cors_allowed_origins='*')
+app = WSGIApp(sio)
+
+queue = Queue(100)
 
 topic_prefix = "S000"
 
 
 @sio.event
-async def connect(sid, environ, auth):
+def connect(sid, environ, auth):
     print('connect ', sid)
 
 
 @sio.event
-async def disconnect(sid):
+def disconnect(sid):
     print('disconnect ', sid)
 
 
 @sio.on('*')
-async def catch_all(event, sid, data):
+def catch_all(event, sid, data):
     print(event, sid, data)
 
 
@@ -91,9 +91,9 @@ def handle_user_cmd(sid, data):
                         # 'Action': action
                     }
                 }
-                queue.put(([userid, soc, fsec, json_data],
-                           user, dtype, name, action,
-                           rawid))
+                queue.put_nowait(([userid, soc, fsec, json_data],
+                                  user, dtype, name, action,
+                                  rawid))
         elif dtype in ['Gen', 'Load', 'Shunt']:
             temp = rawid.split(',')
             try:
@@ -110,159 +110,49 @@ def handle_user_cmd(sid, data):
                             # 'Action': action
                         }
                     }
-                    queue.put(([userid, soc, fsec, json_data],
-                               user, dtype, name, action,
-                               rawid))
+                    queue.put_nowait(([userid, soc, fsec, json_data],
+                                      user, dtype, name, action,
+                                      rawid))
             except ValueError:
                 print(ValueError)
     elif dtype == 'Import':
         user = postload['user']
         schedule = postload['schedule']
-        queue.put(("notification", "ds/note", "#" + user + " "
-                                                           "changed the schedule to " + schedule))
+        queue.put_nowait(("notification", "ds/note", "#" + user + " "
+                                                                  "changed the schedule to " + schedule))
 
 
 @sio.on(f"{topic_prefix}/user/system")
 def handle_system_message(sid, payload):
     if 'Start' in str(payload):
-        queue.put(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
+        queue.put_nowait(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
             0] + " start the simulation"))
-        ds.msgtypes[18]()
+        # ds.msgtypes[18]()
+        queue.put_nowait(("msgtype1", 18, ))
     elif 'seconds' in str(payload):
-        queue.put(("notification", topic_prefix + "/ds/note",
-                   "#" + str(payload).split(':')[
-                       0] + " start the simulation"))
-        ds.msgtypes[23](int(str(payload).split('seconds ')[1][:-1]))
+        queue.put_nowait(("notification", topic_prefix + "/ds/note",
+                          "#" + str(payload).split(':')[
+                              0] + " start the simulation"))
+        # ds.msgtypes[23](int(str(payload).split('seconds ')[1][:-1]))
+        queue.put_nowait(("msgtype2", 23, int(str(payload).split('seconds ')[1][:-1])))
     elif 'Pause' in str(payload):
-        queue.put(("notification", topic_prefix + "/ds/note",
-                   "#" + str(payload).split(':')[
-                       0] + " pause the simulation"))
-        ds.msgtypes[19]()
+        queue.put_nowait(("notification", topic_prefix + "/ds/note",
+                          "#" + str(payload).split(':')[
+                              0] + " pause the simulation"))
+        # ds.msgtypes[19]()
+        queue.put_nowait(("msgtype1", 19, ))
     elif 'Continue' in str(payload):
-        queue.put(("notification", topic_prefix + "/ds/note",
-                   "#" + str(payload).split(':')[
-                       0] + " continue the simulation"))
-        ds.msgtypes[20]()
+        queue.put_nowait(("notification", topic_prefix + "/ds/note",
+                          "#" + str(payload).split(':')[
+                              0] + " continue the simulation"))
+        # ds.msgtypes[20]()
+        queue.put_nowait(("msgtype1", 20, ))
     elif 'Abort' in str(payload):
-        queue.put(("notification", topic_prefix + "/ds/note",
-                   "#" + str(payload).split(':')[
-                       0] + " abort the simulation"))
-        ds.msgtypes[21]()
-
-
-# web.run_app(app, port=9999)
-
-
-# def recv_loop():
-#     global queue
-#     context = Context()
-#     zmq_puller = context.socket(SUB)
-#     zmq_puller.bind("tcp://0.0.0.0:5555")
-#     zmq_puller.subscribe("S000/user/cmd")
-#     zmq_puller.subscribe("S000/user/system")
-#     print("ZMQ puller is ready ...", flush=True)
-#     while True:
-#         [topic, msg] = zmq_puller.recv_multipart()
-#         on_message(topic.decode(), msg.decode())
-
-
-# The callback for when a PUBLISH message is received from the server.
-def on_message(topic, payload):
-    global queue
-    print(ctime(), "MQTT Receive: " + topic + " " + payload)
-    topic_prefix = topic.split('/')[0]
-    sim = None
-    for tsim in simulation_instances.values():
-        if tsim.topic_prefix == topic_prefix:
-            sim = tsim
-    if sim is None:
-        return
-    ds = sim.ds
-    if topic == topic_prefix + '/user/cmd':
-        # msg.payload should be a json string
-        # do a preliminary validation
-        # get second validation from DS direct
-        postload = loads(payload)
-        dtype = postload['type']
-        soc = 0  # For execute immediately
-        fsec = 0  # For execute immediately
-        if dtype in ['Branch', 'Gen', 'Load', 'Shunt', 'LineShunt']:
-            # print(postload)
-            user = postload['user']
-            if user not in userlist:
-                userlist.append(user)
-            userid = userlist.index(user)
-            rawid = postload['id']
-            name = postload['name']
-            if dtype == 'Branch':
-                temp = rawid.split(',')
-                deviceid = [int(temp[0]), int(temp[1]), temp[2]]
-                action = postload['action']
-                otype = postload['type']
-                if action in commands[otype] or action.split(" ")[0] in [
-                    "CLOSE", "SET",
-                    "Set"]:  # second validation for poor Internet related issues
-                    json_data = {
-                        dtype: {
-                            'ID': deviceid,
-                            'Action': action
-                            # 'Action': action
-                        }
-                    }
-                    queue.put(([userid, soc, fsec, json_data],
-                               user, dtype, name, action,
-                               rawid))
-            elif dtype in ['Gen', 'Load', 'Shunt']:
-                temp = rawid.split(',')
-                try:
-                    deviceid = [int(temp[0]), temp[1]]
-                    action = postload['action']
-                    otype = postload['type']
-                    if action in commands[otype] or action.split(" ")[0] in [
-                        "CLOSE", "SET",
-                        "Set"]:  # second validation for poor Internet related issues
-                        json_data = {
-                            dtype: {
-                                'ID': deviceid,
-                                'Action': action
-                                # 'Action': action
-                            }
-                        }
-                        queue.put(([userid, soc, fsec, json_data],
-                                   user, dtype, name, action,
-                                   rawid))
-                except ValueError:
-                    print(ValueError)
-        elif dtype == 'Import':
-            user = postload['user']
-            schedule = postload['schedule']
-            queue.put(("notification", "ds/note", "#" + user + " "
-                                                               "changed the schedule to " + schedule))
-    elif topic == topic_prefix + '/user/system':
-        if 'Start' in str(payload):
-            queue.put(("notification", topic_prefix + "/ds/note", "#" + str(payload).split(':')[
-                0] + " start the simulation"))
-            ds.msgtypes[18]()
-        elif 'seconds' in str(payload):
-            queue.put(("notification", topic_prefix + "/ds/note",
-                       "#" + str(payload).split(':')[
-                           0] + " start the simulation"))
-            ds.msgtypes[23](int(str(payload).split('seconds ')[1][:-1]))
-        elif 'Pause' in str(payload):
-            queue.put(("notification", topic_prefix + "/ds/note",
-                       "#" + str(payload).split(':')[
-                           0] + " pause the simulation"))
-            ds.msgtypes[19]()
-        elif 'Continue' in str(payload):
-            queue.put(("notification", topic_prefix + "/ds/note",
-                       "#" + str(payload).split(':')[
-                           0] + " continue the simulation"))
-            ds.msgtypes[20]()
-        elif 'Abort' in str(payload):
-            queue.put(("notification", topic_prefix + "/ds/note",
-                       "#" + str(payload).split(':')[
-                           0] + " abort the simulation"))
-            ds.msgtypes[21]()
+        queue.put_nowait(("notification", topic_prefix + "/ds/note",
+                          "#" + str(payload).split(':')[
+                              0] + " abort the simulation"))
+        # ds.msgtypes[21]()
+        queue.put_nowait(("msgtype1", 21, ))
 
 
 def setup_dictionary_data(ds, data_package_id):
@@ -331,7 +221,7 @@ def setup_dictionary_data(ds, data_package_id):
 
 class SimulationInstance:
 
-    def __init__(self, id, ip, port, client, queue):
+    def __init__(self, id, ip, port, client, ds, queue):
         print(f"Simulation ID {id} initialized to connect {ip} {port}")
         stdout.flush()
         self.id = id
@@ -344,10 +234,11 @@ class SimulationInstance:
         # client.subscribe(self.topic_prefix + "/user/cmd")
         # client.subscribe(self.topic_prefix + "/user/system")
         self.action_queue = queue
+        self.data_package_id: int = 1000
 
     def setup(self):
         try:
-            setup_dictionary_data(self.ds, data_package_id)
+            setup_dictionary_data(self.ds, self.data_package_id)
         except IOError as e:
             self.ds = None
             self.last_known_state = " Not able to connect to the DS"
@@ -397,12 +288,16 @@ class SimulationInstance:
         while not self.action_queue.empty():
             count += 1
             # print(count, self.action_queue.qsize())
-            action = self.action_queue.get(timeout=1)
+            action = self.action_queue.get_nowait()
             if action[0] == "notification":
                 self.client.emit(
                     action[1], dumps(action[2]))
             elif action[0] == "update":
                 self.regular_update()
+            elif action[0] == "msgtype1":
+                self.ds.msgtypes[action[1]]()
+            elif action[0] == "msgtype2":
+                self.ds.msgtypes[action[1]](action[2])
             else:
                 self.ds.msgtypes[13](action[0])
                 # time.sleep(0.2)
@@ -413,8 +308,6 @@ class SimulationInstance:
                     return
                 try:
                     if message['type'] == 'dsmOK':
-                        # print(self.topic_prefix)
-                        # print(action)
                         self.client.emit(
                             "/ds/note",
                             dumps("#" + action[
@@ -426,26 +319,22 @@ class SimulationInstance:
                     print('TypeError ' + str(e))
 
     def update(self):
-        if self.ds is None:
-            self.setup()
-        else:
-            try:
-                self.handle_action_queue()
-            except KeyError as e:
-                return
-            except IOError as e:
-                self.ds = None
-                self.last_known_state = " Not able to connect to the DS"
+        try:
+            self.handle_action_queue()
+        except KeyError as e:
+            return
+        except IOError as e:
+            self.ds = None
+            self.last_known_state = " Not able to connect to the DS"
 
     def regular_update(self):
-        self.ds.msgtypes[12](data_package_id)
+        self.ds.msgtypes[12](self.data_package_id)
         data = self.get_data()
         if data is None:
             return
         data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
         topic = "/ds/data"
         self.client.emit(topic, dumps(data))
-        print("new data update")
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -525,23 +414,22 @@ data_package_id = 9999
 command = ""
 
 
-def regular_publisher():
-    global queue
+def regular_publisher(queue):
     while True:
         sio.sleep(1)  #sleep(1)
-        queue.put(("update",))
+        queue.put_nowait(("update",))
 
 
-def background_work():
+def background_work(ip, port, sio, queue):
+    ds = PowerWorldDS(ip, int(port))
+    sim = SimulationInstance(0, ip, int(port), sio, ds, queue)
+    sim.setup()
     while True:
-        # update all simulations
-        for sim in simulation_instances.values():
-            sim.update()
+        sim.update()
         sio.sleep(0.001)
 
 
 def main():
-    global queue
     clientname = 'electron' + '{:03}'.format(randrange(1, 10 ** 3))
 
     # Set up the zmq publishers
@@ -553,20 +441,11 @@ def main():
     # print("ZMQ publisher is ready ...", flush=True)
     #
     # Set up a thread-safe queue
-    queue = Queue()
+    # queue = Queue()
 
-    # Set up Simulation Instances and connect to DS Clients
-    sim = SimulationInstance(0, ip, int(port), sio, queue)
-    simulation_instances[0] = sim
-    #
-    # publisher_thread = Thread(target=background_work)
-    # publisher_thread.daemon = True
-    # publisher_thread.start()
-    # routine_thread = Thread(target=regular_publisher)
-    # routine_thread.daemon = True
-    # routine_thread.start()
-    sio.start_background_task(target=background_work)
-    sio.start_background_task(target=regular_publisher)
+    sio.start_background_task(target=lambda: regular_publisher(queue))
+    sio.start_background_task(target=lambda: background_work(ip, port, sio, queue))
+
     # sio.start_background_task(target=periodic_job)
 
     # app.run(port=9999, debug=True)

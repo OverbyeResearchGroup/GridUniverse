@@ -94,7 +94,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$packages$ssl_match_hostname$_implementation$$$function__1__dnsname_match(PyObject *defaults);
@@ -4920,7 +4920,7 @@ PyObject *modulecode_urllib3$packages$ssl_match_hostname$_implementation(PyObjec
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_9 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_9 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());

@@ -107,7 +107,7 @@ static PyObject *MAKE_GENERATOR_urllib3$filepost$$$function__3_iter_fields$$$gen
 static PyObject *MAKE_GENERATOR_urllib3$filepost$$$function__3_iter_fields$$$genexpr__2_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$filepost$$$function__1_choose_boundary();
@@ -884,7 +884,7 @@ static PyObject *urllib3$filepost$$$function__2_iter_field_objects$$$genobj__1_i
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_name_3 = impl___main__$$$function__7_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_3 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());

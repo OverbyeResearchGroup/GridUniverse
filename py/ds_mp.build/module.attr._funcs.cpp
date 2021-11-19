@@ -121,7 +121,7 @@ static PyObject *MAKE_GENERATOR_attr$_funcs$$$function__2__asdict_anything$$$gen
 static PyObject *MAKE_GENERATOR_attr$_funcs$$$function__3_astuple$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_attr$_funcs$$$function__1_asdict(PyObject *defaults);
@@ -8701,7 +8701,7 @@ static PyObject *impl_attr$_funcs$$$function__6_evolve(struct Nuitka_FunctionObj
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__2_complex_call_helper_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

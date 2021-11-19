@@ -158,6 +158,7 @@ import * as echarts from "echarts";
 import "echarts-leaflet";
 import { mapGetters } from "vuex";
 import { abs } from 'mathjs';
+import * as turf from '@turf/turf'
 
 export default {
   // props: {

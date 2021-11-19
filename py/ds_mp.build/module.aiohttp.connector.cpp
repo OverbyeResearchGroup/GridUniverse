@@ -278,13 +278,13 @@ static PyObject *MAKE_COROUTINE_aiohttp$connector$$$function__65__create_connect
 static PyObject *MAKE_COROUTINE_aiohttp$connector$$$function__68__create_connection$$$coroutine__1__create_connection(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$connector$$$function__10_add_callback(PyObject *annotations);
@@ -1881,7 +1881,7 @@ static PyObject *impl_aiohttp$connector$$$function__6___del__(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6450,7 +6450,7 @@ static PyObject *impl_aiohttp$connector$$$function__17___del__(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_2 = impl___main__$$$function__4_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31822,7 +31822,7 @@ static PyObject *aiohttp$connector$$$function__55__wrap_create_connection$$$coro
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_7 = impl___main__$$$function__11_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_expression_name_7 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_expression_name_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -59522,7 +59522,7 @@ PyObject *modulecode_aiohttp$connector(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_105 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_105 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_105 == NULL) {
             assert(ERROR_OCCURRED());
@@ -63778,7 +63778,7 @@ PyObject *modulecode_aiohttp$connector(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_113 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_113 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_113 == NULL) {
             assert(ERROR_OCCURRED());
@@ -65023,7 +65023,7 @@ PyObject *modulecode_aiohttp$connector(PyObject *module, struct Nuitka_MetaPathB
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_121 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_121 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_121 == NULL) {
             assert(ERROR_OCCURRED());
