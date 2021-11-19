@@ -19,6 +19,7 @@
     "@msgpack/msgpack": "^2.7.1",
     "@msrvida/sanddance-vue": "^3",
     "@supermap/iclient-leaflet": "^10.2.0",
+    "@tauri-apps/api": "^1.0.0-beta.8",
     "@turf/turf": "^6.5.0",
     "axios": "^0.24.0",
     "babel-loader": "^8.2.3",

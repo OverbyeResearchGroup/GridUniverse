@@ -1,7 +1,7 @@
 {
   "package": {
     "productName": "gridverse",
-    "version": "0.1.0"
+    "version": "2.1.0"
   },
   "build": {
     "distDir": "Set automatically by Vue CLI plugin",
@@ -22,7 +22,7 @@
         "icons/icon.ico"
       ],
       "resources": [],
-      "externalBin": [],
+      "externalBin": ["../pydist/ds_client"],
       "copyright": "",
       "category": "DeveloperTool",
       "shortDescription": "",

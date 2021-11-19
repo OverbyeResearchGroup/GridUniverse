@@ -104,7 +104,7 @@
 </style>
 
 <script>
-// import { ipcRenderer } from "electron";
+import { Command } from "@tauri-apps/api/shell";
 import Spinner from "vue-spinkit";
 import { encode, decode } from "@msgpack/msgpack";
 
@@ -157,10 +157,6 @@ export default {
         this.$store.commit("onAdmin");
       }
       if (true) {
-        // if (this.ds_direct) {
-        //   console.log(this.ip, this.port);
-        //   ipcRenderer.send("connect", this.ip, this.port);
-        // }
         const config = {
           direct: this.ds_direct,
           ip: this.ip,
@@ -168,7 +164,12 @@ export default {
           server_port: this.server_port,
         };
         if (this.ds_direct) {
-          // ipcRenderer.send("connect", encode(config));
+          const command = Command.sidecar("ds_client", [
+            this.ip,
+            this.port,
+            this.server_port,
+          ]);
+          const output = command.execute();
         }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);
