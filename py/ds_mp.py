@@ -42,24 +42,61 @@ print(f"Connecting to {ip}:{port}")
 sio = Server(async_mode='eventlet', cors_allowed_origins='*')
 app = WSGIApp(sio)
 
-queue = Queue(100)
+queue = Queue(1000)
 
 topic_prefix = "S000"
 
+clients = {}
+room = "webrtc"
+
 
 @sio.event
-def connect(sid, environ, auth):
+def connect(sid, environ):
     print('connect ', sid)
+    clients[sid] = {}
+    clients[sid]["status"] = "Connected"
 
 
 @sio.event
 def disconnect(sid):
     print('disconnect ', sid)
+    clients[sid]["status"] = "Disconnected"
 
 
 @sio.on('*')
 def catch_all(event, sid, data):
     print(event, sid, data)
+
+
+@sio.on('query')
+def handle_query(sid):
+    print("receive query request from", sid)
+    sio.emit('reply', dumps(clients), room=sid)
+
+
+@sio.on('register')
+def handle_register(sid, data):
+    print("receive registration")
+    clients[sid]["name"] = data
+
+
+@sio.on('rtc_connect')
+def handle_rtc_connect(sid):
+    print("rtc connect", sid)
+    sio.emit('ready', room=room, skip_sid=sid)
+    sio.enter_room(sid, room)
+
+
+@sio.on('rtc_disconnect')
+def handle_rtc_disconnect(sid):
+    print("rtc disconnect", sid)
+    sio.leave_room(sid, room)
+
+
+@sio.on('data')
+def data(sid, data):
+    print('Message from {}: {}'.format(sid, data))
+    sio.emit('data', data, room=room, skip_sid=sid)
 
 
 @sio.on(f"{topic_prefix}/user/cmd")

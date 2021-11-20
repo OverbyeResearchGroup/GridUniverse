@@ -101,12 +101,17 @@ export default new Vuex.Store({
         clockTime: null,
         updateToggler: false,
         startToggler: false,
-        loginInfo: {}
+        loginInfo: {},
+        query: 0,
+        socket: null
     },
     getters: {
         rawData(state){
             state.updateToggler;
             return rawData;
+        },
+        getQuery(state){
+            return state.query;
         },
         getPubStatus(state) {
             return state.toPublish;
@@ -176,6 +181,9 @@ export default new Vuex.Store({
         }
     },
     mutations: {
+        setSocket(state, socket) {
+            state.socket = socket;
+        },
         flipStartToggler(state){
             state.startToggler = !state.startToggler;
         },
@@ -194,6 +202,9 @@ export default new Vuex.Store({
         },
         setMessage(state, payload) {
             state.message = payload;
+        },
+        query(state){
+            state.query++;
         },
         setUUID(state, payload) {
             state.UUID = payload;

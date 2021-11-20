@@ -217,6 +217,16 @@
             <v-list-item-title>Chat</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item :key="'contact'" @click="$store.commit('setpage', 'contact')">
+          <v-list-item-avatar>
+            <v-icon>chat</v-icon>
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>Contact</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <!-- <v-list-item :key="'start'" v-if="ready4start" @click="$store.commit('trigstartsim')"> -->
         <v-list-item :key="'start'" @click="startDialog = true">
           <v-list-item-avatar>
@@ -339,6 +349,7 @@ import AGCBot from "./AGCBot";
 import marquee from "./marquee";
 import Clock from "./Clock";
 import { mapGetters, mapState } from "vuex";
+import contact from "../views/contact.vue";
 // import NotificationList from './components/NotificationList';
 
 export default {
@@ -389,6 +400,7 @@ export default {
     generationPie,
     sysInfo,
     DataProcessing,
+    contact
   },
   methods: {
     handleFullScreen() {

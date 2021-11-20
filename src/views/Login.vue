@@ -106,6 +106,10 @@
 <script>
 import { Command } from "@tauri-apps/api/shell";
 import { resourceDir } from "@tauri-apps/api/path";
+// import {
+//   sendNotification,
+//   requestPermission,
+// } from "@tauri-apps/api/notification";
 import Spinner from "vue-spinkit";
 import { encode, decode } from "@msgpack/msgpack";
 
@@ -169,7 +173,8 @@ export default {
           resourceDir().then((data) => {
             console.log(data);
             resource_dir = data;
-            const client_path = resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
+            const client_path =
+              resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
             const command = new Command(client_path, [
               this.ip,
               this.port,
@@ -193,6 +198,9 @@ export default {
           this.showDash = true;
           // this.$router.push('/dashboard');
         }, 1000);
+        setTimeout(() => {
+          this.$store.state.socket.emit("register", this.model.username);
+        }, 2000);
       }
     },
   },

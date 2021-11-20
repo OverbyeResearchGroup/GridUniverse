@@ -107,7 +107,7 @@ export default {
       "/ds/system",
       "/ds/schedule",
       "/ds/share",
-      "test",
+      "reply",
     ];
     const info = this.$store.state.loginInfo;
 
@@ -131,6 +131,8 @@ export default {
         this.onMessage(topic, decode(data));
       });
     });
+
+    this.$store.commit("setSocket", this.socket);
   },
   computed: {
     ...mapGetters([
@@ -143,6 +145,7 @@ export default {
       "abortsimtrigger",
       "getSchedule",
       "ViolatedBuses",
+      "getQuery",
     ]),
   },
   watch: {
@@ -168,6 +171,9 @@ export default {
           this.$store.state.areadetail.content.Gen[id]["OperationCost"]
         );
       }
+    },
+    getQuery: function (newVal, oldVal) {
+      this.socket.emit("query");
     },
     getNewSubscribe: function (newVal, oldVal) {
       // ipcRenderer.send("subscribe", newVal);
@@ -470,6 +476,8 @@ export default {
           color: "yellow",
           position: "topCenter",
         });
+      } else if (topic.includes("reply")) {
+        console.log(topic, message);
       } else {
         iziToast.show({
           title: message.toString().split(":")[0],

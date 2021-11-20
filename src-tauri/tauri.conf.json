@@ -21,7 +21,9 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "resources": ["../pydist/ds_client.exe"],
+      "resources": [
+        "../pydist/ds_client.exe"
+      ],
       "externalBin": [],
       "copyright": "",
       "category": "DeveloperTool",
@@ -49,7 +51,10 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "all": true,
+      "notification": {
+        "all": true
+      }
     },
     "windows": [
       {
