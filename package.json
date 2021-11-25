@@ -6,7 +6,7 @@
   "author": "Zeyu Mao",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --modern --open --mode production --profile --json > stats.json",
+    "build": "vue-cli-service build --modern --open --mode production",
     "build-report": "vue-cli-service build --modern --mode production --report",
     "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
     "tauri:build": "vue-cli-service tauri:build",
@@ -66,6 +66,8 @@
     "zeromq": "^6.0.0-beta.6"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "~4.0.3",
     "@mdi/font": "^2.8.94",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",

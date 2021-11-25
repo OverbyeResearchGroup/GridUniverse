@@ -5,7 +5,7 @@
         <v-toolbar-title>{{ name }} {{ volt }} {{ type }}</v-toolbar-title>
         <template v-slot:extension>
           <v-tabs centered v-model="currentItem">
-            <v-tabs-slider color="brown"></v-tabs-slider>
+            <!-- <v-tabs-slider color="brown"></v-tabs-slider> -->
             <v-tab
               :key="'General'"
               :href="'#tab-General'"
