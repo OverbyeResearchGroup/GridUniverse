@@ -144,10 +144,10 @@ export default {
           temp.push({
             value: [
               this.$store.state.areadetail.content.Substation[subID.toString()][
-                "Double.Longitude"
+                "Double.Latitude"
               ],
               this.$store.state.areadetail.content.Substation[subID.toString()][
-                "Double.Latitude"
+                "Double.Longitude"
               ]
             ],
             // key: i,

@@ -76,8 +76,8 @@ export default {
               id: ele,
               name: temp.content.Substation[ele]["String.Name"],
               value: [
-                temp.content.Substation[ele]["Double.Longitude"],
-                temp.content.Substation[ele]["Double.Latitude"]
+                temp.content.Substation[ele]["Double.Latitude"],
+                temp.content.Substation[ele]["Double.Longitude"]
               ],
               attributes: { Gen: false, Shunt: false },
               bus: []
@@ -86,8 +86,8 @@ export default {
             otherSub.push({
               name: temp.content.Substation[ele]["String.Name"],
               value: [
-                temp.content.Substation[ele]["Double.Longitude"],
-                temp.content.Substation[ele]["Double.Latitude"]
+                temp.content.Substation[ele]["Double.Latitude"],
+                temp.content.Substation[ele]["Double.Longitude"]
               ]
             });
           }
@@ -103,18 +103,18 @@ export default {
             [
               temp.content.Substation[
                 temp.content.Bus[fromid]["Int.Sub Number"].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               temp.content.Substation[
                 temp.content.Bus[fromid]["Int.Sub Number"].toString()
-              ]["Double.Latitude"]
+              ]["Double.Longitude"]
             ],
             [
               temp.content.Substation[
                 temp.content.Bus[toid]["Int.Sub Number"].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               temp.content.Substation[
                 temp.content.Bus[toid]["Int.Sub Number"].toString()
-              ]["Double.Latitude"]
+              ]["Double.Longitude"]
             ]
           ];
           if (
@@ -413,10 +413,10 @@ export default {
           temp.push({
             value: [
               this.$store.state.areadetail.content.Substation[subID.toString()][
-                "Double.Longitude"
+                "Double.Latitude"
               ],
               this.$store.state.areadetail.content.Substation[subID.toString()][
-                "Double.Latitude"
+                "Double.Longitude"
               ]
             ],
             key: i,

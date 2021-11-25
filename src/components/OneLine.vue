@@ -3,64 +3,45 @@
 </template>
 
 <script>
-// import L from "leaflet";
-// import "@supermap/iclient-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import * as echarts from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { LinesChart, EffectScatterChart, ScatterChart } from "echarts/charts";
+import { TooltipComponent } from "echarts/components";
+import "../assets/echarts-extension-leaflet.esm.js";
+
+echarts.use([
+  CanvasRenderer,
+  LinesChart,
+  EffectScatterChart,
+  ScatterChart,
+  TooltipComponent,
+]);
 
 var chart = "";
-var map = "";
 var linedata = "";
 
 export default {
   mounted() {
-    const url =
-      "https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}";
-    const options = {
-      accessToken:
-        "pk.eyJ1IjoibXp5MjI0MCIsImEiOiJjamttc3VsODYyZmI4M2ttbGxmbzFudGM2In0.0dy22s32n9eth_63nlX1UA"
-    };
-    map = L.map("chart", {
-      // crs: L.CRS.EPSG4326,
-      center: [32, -99.4936], //this.$store.state.center, //this.mapCenter,
-      maxZoom: 18,
-      zoom: 7
-    });
-    L.tileLayer(url, options).addTo(map);
-    var legend = L.control({ position: "topright" });
-    legend.onAdd = function(map) {
-      var div = L.DomUtil.create("div", "legend legend-background");
-      let labels = ["<strong>Categories</strong>"];
-      const categories = [
-        "Substation",
-        "Substation w/ generator",
-        "Substation w/ shunt"
-      ];
-      const color = [
-        "rgb(34, 47, 151)",
-        "rgb(197, 62, 21)",
-        "rgb(119, 93, 86)"
-      ];
-      for (var i = 0; i < categories.length; i++) {
-        div.innerHTML +=
-          '<span class="circle" style="background:' +
-          color[i] +
-          '"></span>' +
-          categories[i] +
-          "<br>";
-      }
-      // div.innerHTML = labels.join('<br>');
-      // console.log(div)
-      return div;
-    };
-    legend.addTo(map);
-    // L.supermap.tiledMapLayer(url, option).addTo(map);
     var echartsOptions = {
-      // legend: {
-      // 	formatter: 'Substation',
-      // 	data: []
-      // },
+      leaflet: {
+        // leaflet options (only primitive options, crs/layers/renderer/maxBounds are not allowed here)
+        center: [32, -99.4936], //this.$store.state.center, //this.mapCenter,
+        maxZoom: 18,
+        zoom: 7,
+        // maxBoundsViscosity: 1.0,
+        // zoomAnimation: false,
+
+        // the following options are from this plugin
+        // whether the chart should always re-render when moving/zooming the map
+        renderOnMoving: true,
+        // whether to enable large mode (it's better to enable when data is large)
+        largeMode: false,
+      },
       tooltip: {
         show: true,
-        trigger: "item"
+        trigger: "item",
       },
       series: [
         {
@@ -74,15 +55,15 @@ export default {
           blendMode: "lighter",
           symbolSize: 5,
           itemStyle: {
-            color: "#616161"
+            color: "#616161",
           },
           data: this.$store.state.subData,
           tooltip: {
             confine: true,
-            formatter: function(params) {
+            formatter: function (params) {
               return "Substation: " + params.name;
-            }
-          }
+            },
+          },
         },
         {
           id: "lines",
@@ -98,7 +79,7 @@ export default {
           blendMode: "lighter",
           lineStyle: {
             width: 2,
-            color: "rgb(200, 35, 45)"
+            color: "rgb(200, 35, 45)",
           },
           // effect: {
           // 	show: true,
@@ -115,18 +96,18 @@ export default {
           tooltip: {
             // position: [10, 10],
             confine: true,
-            formatter: function(params) {
+            formatter: function (params) {
               return "Branch: " + params.name;
-            }
+            },
           },
           emphasis: {
             lineStyle: {
               width: 2,
               shadowColor: "rgba(144, 144, 255, 0.5)",
-              shadowBlur: 10
-            }
+              shadowBlur: 10,
+            },
           },
-          data: this.$store.state.lineData
+          data: this.$store.state.lineData,
         },
         {
           id: "otherSub",
@@ -136,9 +117,9 @@ export default {
           blendMode: "lighter",
           symbolSize: 5,
           itemStyle: {
-            color: "#616161"
+            color: "#616161",
           },
-          data: this.$store.state.otherArea.Substation
+          data: this.$store.state.otherArea.Substation,
         },
         {
           id: "otherBranch",
@@ -153,26 +134,59 @@ export default {
           zlevel: 1,
           lineStyle: {
             width: 2,
-            color: "rgb(200, 35, 45)"
+            color: "rgb(200, 35, 45)",
           },
           effect: {
             // constantSpeed: 20,
             show: true,
             trailLength: 0.1,
-            symbolSize: 1
+            symbolSize: 1,
           },
-          data: this.$store.state.otherArea.Branch
-        }
-      ]
+          data: this.$store.state.otherArea.Branch,
+        },
+      ],
     };
-    var layerOptions = {
-      loadWhileAnimating: false,
-      attribution: ""
+    // initialize echarts
+    chart = echarts.init(document.getElementById("chart"));
+    chart.setOption(echartsOptions);
+    var map = chart.getModel().getComponent("leaflet").getMap();
+    const url =
+      "https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}";
+    const options = {
+      accessToken:
+        "pk.eyJ1IjoibXp5MjI0MCIsImEiOiJjamttc3VsODYyZmI4M2ttbGxmbzFudGM2In0.0dy22s32n9eth_63nlX1UA",
     };
-    chart = L.supermap.echartsLayer(echartsOptions, layerOptions); // _ec is the echartsInstance
-    var EL = chart.addTo(map);
+    L.tileLayer(url, options).addTo(map);
+    var legend = L.control({ position: "topright" });
+    legend.onAdd = function (map) {
+      var div = L.DomUtil.create("div", "legend legend-background");
+      let labels = ["<strong>Categories</strong>"];
+      const categories = [
+        "Substation",
+        "Substation w/ generator",
+        "Substation w/ shunt",
+      ];
+      const color = [
+        "rgb(34, 47, 151)",
+        "rgb(197, 62, 21)",
+        "rgb(119, 93, 86)",
+      ];
+      for (var i = 0; i < categories.length; i++) {
+        div.innerHTML +=
+          '<span class="circle" style="background:' +
+          color[i] +
+          '"></span>' +
+          categories[i] +
+          "<br>";
+      }
+      // div.innerHTML = labels.join('<br>');
+      // console.log(div)
+      return div;
+    };
+    legend.addTo(map);
+    // L.supermap.tiledMapLayer(url, option).addTo(map);
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

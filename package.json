@@ -36,6 +36,7 @@
     "izitoast": "^1.4.0",
     "javascript-time-ago": "^2.3.10",
     "ky": "^0.28.7",
+    "leaflet": "^1.7.1",
     "leaflet.sync": "^0.2.4",
     "lodash": "^4.17.21",
     "mapbox-gl": "^0.47.0",

@@ -15,7 +15,7 @@
       <slot name="widget-content"></slot>
       <div id="container">
         <div id="lower_map"></div>
-        <div id="upper_map"></div>
+        <!-- <div id="upper_map"></div> -->
       </div>
     </v-card>
   </div>
@@ -41,7 +41,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color:rgba(255,0,0,0.0);
+  background-color: rgba(255, 0, 0, 0);
   pointer-events: none;
 }
 </style>
@@ -51,30 +51,42 @@
 // import * as echarts from "echarts";
 // import 'echarts-leaflet';
 import { mapGetters, mapState } from "vuex";
-import Math from "mathjs";
-require('leaflet.sync');
+require("leaflet.sync");
+import "leaflet/dist/leaflet.css";
+import * as echarts from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { LinesChart, ScatterChart, HeatmapChart } from "echarts/charts";
+import { TooltipComponent, VisualMapComponent } from "echarts/components";
+import "../assets/echarts-extension-leaflet.esm.js";
+
+echarts.use([
+  CanvasRenderer,
+  LinesChart,
+  ScatterChart,
+  HeatmapChart,
+  TooltipComponent,
+  VisualMapComponent,
+]);
 
 let map = "";
-let top_map = "";
 let chart = "";
-let top_chart = "";
 
 export default {
   props: {
     title: {
-      type: String
+      type: String,
     },
     enableHeader: {
       type: Boolean,
-      default: true
+      default: true,
     },
     contentBg: {
       type: String,
-      default: "white"
+      default: "white",
     },
     focus: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
@@ -84,7 +96,7 @@ export default {
       subdetail: [],
       busdetail: [],
       mapCenter: [27.4241, -98.4936],
-      map: null
+      map: null,
     };
   },
   methods: {
@@ -94,36 +106,22 @@ export default {
         heatmapData.push([
           this.transformerDict[ele].coords[0][0],
           this.transformerDict[ele].coords[0][1],
-          100
+          100,
         ]);
       }
       // console.log(this.$store.state.transformerDict)
-      const url = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
-      const options = {};
-      map = L.map("lower_map", {
-        // crs: L.CRS.EPSG4326,
-        center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
-        maxZoom: 18,
-        zoom: 7,
-        attributionControl: false,
-        zoomControl: false
-      });
-      top_map = L.map("upper_map", {
-        // crs: L.CRS.EPSG4326,
-        center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
-        maxZoom: 18,
-        zoom: 7,
-        attributionControl: false,
-        zoomControl: false
-	  });
-	  map.sync(top_map);
-      L.tileLayer(url, options).addTo(map);
-      // this.chart = echarts.init(document.getElementById('map'));
       let echartsOptions = {
+        leaflet: {
+          center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
+          maxZoom: 18,
+          zoom: 7,
+          attributionControl: false,
+          zoomControl: false,
+        },
         animation: false,
         tooltip: {
           show: true,
-          trigger: "item"
+          trigger: "item",
         },
         visualMap: {
           show: false,
@@ -133,8 +131,8 @@ export default {
           seriesIndex: 7,
           calculable: true,
           inRange: {
-            color: ["#000080", "blue", "green", "yellow", "red"]
-          }
+            color: ["#000080", "blue", "green", "yellow", "red"],
+          },
         },
         series: [
           {
@@ -158,19 +156,19 @@ export default {
               }
             },
             // showEffectOn: 'emphasis',
-            z:5,
+            z: 5,
             // progressive: 100,
             // progressiveThreshold: 200,
             data: this.$store.state.subData,
             tooltip: {
               confine: true,
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Substation: " + params.name;
-              }
+              },
             },
             itemStyle: {
-              color: "rgb(200, 40, 0)"
-            }
+              color: "rgb(200, 40, 0)",
+            },
           },
           {
             id: "lines",
@@ -185,7 +183,7 @@ export default {
             lineStyle: {
               width: 1,
               // color: 'rgb(200, 40, 0)',
-              color: function(params) {
+              color: function (params) {
                 let temp;
                 // console.log(params.data.attributes.volt)
                 switch (params.data.attributes.volt) {
@@ -199,24 +197,24 @@ export default {
                 // console.log(params.data.attributes.volt);
                 return temp;
               },
-              opacity: 1
+              opacity: 1,
             },
             tooltip: {
               // position: [10, 10],
               confine: true,
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Branch: " + params.name;
-              }
+              },
             },
             emphasis: {
               lineStyle: {
                 width: 2,
                 shadowColor: "rgba(144, 144, 255, 0.5)",
-                shadowBlur: 10
-              }
+                shadowBlur: 10,
+              },
             },
             // zlevel: 3,
-            data: this.$store.state.lineData
+            data: this.$store.state.lineData,
           },
           {
             id: "vbus",
@@ -227,22 +225,22 @@ export default {
             symbol: "pin",
             symbolSize: 50,
             itemStyle: {
-              color: "#ff6d00"
+              color: "#ff6d00",
             },
             label: {
               show: true,
               position: "top",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 if (params.user != undefined) {
                   return params.user + ": Bus#" + params.name;
                 } else {
                   return "Bus#" + params.name;
                 }
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "shunt",
@@ -254,18 +252,18 @@ export default {
             symbolSize: 50,
             // zlevel: 2,
             itemStyle: {
-              color: "#4caf50"
+              color: "#4caf50",
             },
             label: {
               show: true,
               position: "top",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Shunt#" + params.name;
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "violatedLines",
@@ -281,18 +279,18 @@ export default {
               // type: 'dotted',
               shadowColor: "#ccff90",
               shadowBlur: 20,
-              opacity: 0.5
+              opacity: 0.5,
             },
             label: {
               show: true,
               position: "middle",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Branch#" + params.name;
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "gen",
@@ -304,18 +302,18 @@ export default {
             symbolSize: 50,
             // zlevel: 2,
             itemStyle: {
-              color: "#1565c0"
+              color: "#1565c0",
             },
             label: {
               show: true,
               position: "top",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Gen#" + params.name;
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "load",
@@ -327,18 +325,18 @@ export default {
             symbolSize: 50,
             // zlevel: 2,
             itemStyle: {
-              color: "#303f9f"
+              color: "#303f9f",
             },
             label: {
               show: true,
               position: "top",
               color: "black",
               // fontWeight: 'bold',
-              formatter: function(params) {
+              formatter: function (params) {
                 return "Load#" + params.name;
-              }
+              },
             },
-            data: []
+            data: [],
           },
           {
             id: "heatmap",
@@ -346,65 +344,25 @@ export default {
             coordinateSystem: "leaflet",
             data: [], //heatmapData, //[[-98.4, 27.6, 5]],
             pointSize: 10,
-            blurSize: 20
-          }
-        ]
+            blurSize: 20,
+          },
+        ],
       };
-      let top_echartsOptions = {
-        animation: false,
-        tooltip: {
-          show: true,
-          trigger: "item"
-        },
-        visualMap: {
-          show: false,
-          top: "top",
-          min: 50,
-          max: 300,
-          seriesIndex: 7,
-          calculable: true,
-          inRange: {
-            color: ["#000080", "blue", "green", "yellow", "red"]
-          }
-        },
-        series: [
-          {
-            id: "violatedLines",
-            name: "violatedLines",
-            type: "lines",
-            coordinateSystem: "leaflet",
-            silent: true,
-            // symbol: 'pin',
-            // symbolSize: 30,
-            lineStyle: {
-              width: 10,
-              color: "#f44336",
-              // type: 'dotted',
-              shadowColor: "#ccff90",
-              shadowBlur: 20,
-              opacity: 0.5
-            },
-            label: {
-              show: true,
-              position: "middle",
-              color: "black",
-              // fontWeight: 'bold',
-              formatter: function(params) {
-                return "Branch#" + params.name;
-              }
-            },
-            data: []
-          }
-        ]
-      };
-      const layerOptions = {
-        loadWhileAnimating: false,
-        attribution: ""
-      };
-      chart = L.supermap.echartsLayer(echartsOptions, layerOptions); // _ec is the echartsInstance
-      top_chart = L.supermap.echartsLayer(top_echartsOptions, layerOptions);
-      var EL = chart.addTo(map);
-      var top_EL = top_chart.addTo(top_map);
+
+      // initialize echarts
+      chart = echarts.init(document.getElementById("lower_map"));
+      chart.setOption(echartsOptions);
+      // top_chart = echarts.init(document.getElementById("upper_map"));
+      // top_chart.setOption(top_echartsOptions);
+      var map = chart.getModel().getComponent("leaflet").getMap();
+      // var top_map = top_chart.getModel().getComponent("leaflet").getMap();
+
+      const url = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
+      const options = {};
+      // map.sync(top_map);
+      L.tileLayer(url, options).addTo(map);
+      // L.tileLayer(url, options).addTo(top_map);
+      // this.chart = echarts.init(document.getElementById('map'));
 
       // var ramdompts_ipl = turf.randomPoint(25, {
       // 	bbox: [-98, 28.0, -94, 31.0]
@@ -487,9 +445,9 @@ export default {
         series: [
           {
             id: "sub",
-            data: this.subData
-          }
-        ]
+            data: this.subData,
+          },
+        ],
       });
     },
     onDrawLines() {
@@ -497,9 +455,9 @@ export default {
         series: [
           {
             id: "lines",
-            data: this.lineData
-          }
-        ]
+            data: this.lineData,
+          },
+        ],
       });
     },
     onDrawTransformers() {
@@ -508,17 +466,17 @@ export default {
         series: [
           {
             id: "heatmap",
-            data: []
-          }
-        ]
+            data: [],
+          },
+        ],
       });
     },
     restore() {
       map.flyTo(this.mapCenter, 6, {
         animate: true,
-        duration: 1.5
+        duration: 1.5,
       });
-    }
+    },
   },
   mounted() {
     this.initdraw();
@@ -541,50 +499,65 @@ export default {
       "subData",
       "lineData",
       "areaDetail",
-      "transformerDict"
+      "transformerDict",
     ]),
     ...mapGetters({
       ViolatedBuses: "getViolatedBuses",
       SelectedShunts: "getSelectedShunts",
       ViolatedLines: "getViolatedLines",
       SelectedGens: "getSelectedGens",
-      SelectedLoads: "getSelectedLoads"
-    })
+      SelectedLoads: "getSelectedLoads",
+    }),
   },
   watch: {
-    ViolatedBuses: function() {
+    ViolatedBuses: function () {
       let temp = chart._echartsOptions;
       temp.series[2].data = this.violatedBuses;
       chart.setOption(temp);
     },
-    SelectedShunts: function() {
-      let temp = chart._echartsOptions;
-      temp.series[3].data = this.selectedShunts;
-      chart.setOption(temp);
+    SelectedShunts: function () {
+      chart.setOption({
+        series: [
+          {
+            id: "shunt",
+            data: this.selectedShunts,
+          },
+        ],
+      });
     },
-    ViolatedLines: function() {
+    ViolatedLines: function () {
       //   let temp = chart._echartsOptions;
       //   temp.series[4].data = this.violatedLines;
       //   chart.setOption(temp);
-      top_chart.setOption({
+      chart.setOption({
         series: [
           {
             id: "violatedLines",
-            data: this.violatedLines
-          }
-        ]
+            data: this.violatedLines,
+          },
+        ],
       });
     },
-    SelectedGens: function() {
-      let temp = chart._echartsOptions;
-      temp.series[5].data = this.selectedGens;
-      chart.setOption(temp);
+    SelectedGens: function () {
+      chart.setOption({
+        series: [
+          {
+            id: "gen",
+            data: this.selectedGens,
+          },
+        ],
+      });
     },
-    SelectedLoads: function() {
-      let temp = chart._echartsOptions;
-      temp.series[6].data = this.selectedLoads;
-      chart.setOption(temp);
-    }
-  }
+    SelectedLoads: function () {
+      chart.setOption({
+        series: [
+          {
+            id: "load",
+            data: this.selectedLoads,
+          },
+        ],
+      });
+    },
+  },
 };
 </script>

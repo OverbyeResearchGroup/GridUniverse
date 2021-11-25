@@ -160,10 +160,26 @@ import chartStatistic from "@/components/chartStatistic";
 import Material from "vuetify/es5/util/colors";
 import loadForecast from "@/components/loadForecast";
 import userInfo from "@/components/userInfo";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import * as echarts from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { LinesChart, EffectScatterChart, ScatterChart } from "echarts/charts";
+import { TooltipComponent } from "echarts/components";
+import "../assets/echarts-extension-leaflet.esm.js";
+
+echarts.use([
+  CanvasRenderer,
+  LinesChart,
+  EffectScatterChart,
+  ScatterChart,
+  TooltipComponent,
+]);
 
 var chart = "";
 var map = "";
 var linedata = "";
+var echartsOptions = {};
 
 export default {
   name: "TEST",
@@ -200,48 +216,27 @@ export default {
   },
   methods: {
     initdraw(id) {
-      const url = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
-      const options = {};
-      map = L.map("main", {
-        // crs: L.CRS.EPSG4326,
-        center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
-        maxZoom: 18,
-        zoom: 8,
-      });
-      L.tileLayer(url, options).addTo(map);
-      var legend = L.control({ position: "topright" });
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend legend-background");
-        let labels = ["<strong>Categories</strong>"];
-        const categories = [
-          "Substation",
-          "Substation w/ generator",
-          "Substation w/ shunt",
-        ];
-        const color = [
-          "rgb(34, 47, 151)",
-          "rgb(197, 62, 21)",
-          "rgb(119, 93, 86)",
-        ];
-        for (var i = 0; i < categories.length; i++) {
-          div.innerHTML +=
-            '<span class="circle" style="background:' +
-            color[i] +
-            '"></span>' +
-            categories[i] +
-            "<br>";
-        }
-        // div.innerHTML = labels.join('<br>');
-        // console.log(div)
-        return div;
-      };
-      legend.addTo(map);
-      // L.supermap.tiledMapLayer(url, option).addTo(map);
-      var echartsOptions = {
-        // legend: {
-        // 	formatter: 'Substation',
-        // 	data: []
-        // },
+      // map = L.map("main", {
+      //   // crs: L.CRS.EPSG4326,
+      //   center: this.mapCenter, //this.$store.state.center, //this.mapCenter,
+      //   maxZoom: 18,
+      //   zoom: 8,
+      // });
+      echartsOptions = {
+        leaflet: {
+          // leaflet options (only primitive options, crs/layers/renderer/maxBounds are not allowed here)
+          center: this.mapCenter,
+          zoom: 8,
+          maxZoom: 18,
+          // maxBoundsViscosity: 1.0,
+          // zoomAnimation: false,
+
+          // the following options are from this plugin
+          // whether the chart should always re-render when moving/zooming the map
+          renderOnMoving: true,
+          // whether to enable large mode (it's better to enable when data is large)
+          largeMode: false,
+        },
         animation: false,
         tooltip: {
           show: true,
@@ -265,7 +260,7 @@ export default {
               }
             },
             showEffectOn: "emphasis",
-            zlelve:2,
+            zlelve: 2,
             // progressive: 40,
             // progressiveThreshold: 200,
             // zindex: 2,
@@ -497,7 +492,7 @@ export default {
             // progressive: 100,
             // progressiveThreshold: 500,
             symbolSize: 5,
-            zlelve:2,
+            zlelve: 2,
             itemStyle: {
               color: "#616161",
             },
@@ -510,7 +505,7 @@ export default {
             silent: true,
             large: true,
             largeThreshold: 1,
-            zlelve:2,
+            zlelve: 2,
             blendMode: "lighter",
             // progressive: 100,
             // progressiveThreshold: 500,
@@ -522,14 +517,51 @@ export default {
           },
         ],
       };
-      var layerOptions = {
-        loadWhileAnimating: false,
-        attribution: "",
+      // initialize echarts
+      chart = echarts.init(document.getElementById("main"));
+      chart.setOption(echartsOptions);
+      // get leaflet instance
+      var map = chart.getModel().getComponent("leaflet").getMap();
+      const url = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
+      const options = {};
+      L.tileLayer(url, options).addTo(map);
+      var legend = L.control({ position: "topright" });
+      legend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "legend legend-background");
+        let labels = ["<strong>Categories</strong>"];
+        const categories = [
+          "Substation",
+          "Substation w/ generator",
+          "Substation w/ shunt",
+        ];
+        const color = [
+          "rgb(34, 47, 151)",
+          "rgb(197, 62, 21)",
+          "rgb(119, 93, 86)",
+        ];
+        for (var i = 0; i < categories.length; i++) {
+          div.innerHTML +=
+            '<span class="circle" style="background:' +
+            color[i] +
+            '"></span>' +
+            categories[i] +
+            "<br>";
+        }
+        // div.innerHTML = labels.join('<br>');
+        // console.log(div)
+        return div;
       };
-      chart = L.supermap.echartsLayer(echartsOptions, layerOptions); // _ec is the echartsInstance
-      console.log(chart);
-      console.log(map);
-      var EL = chart.addTo(map);
+      legend.addTo(map);
+      // L.supermap.tiledMapLayer(url, option).addTo(map);
+
+      // var layerOptions = {
+      //   loadWhileAnimating: false,
+      //   attribution: "",
+      // };
+      // chart = L.supermap.echartsLayer(echartsOptions, layerOptions); // _ec is the echartsInstance
+      // console.log(chart);
+      // console.log(map);
+      // var EL = chart.addTo(map);
     },
     getData() {
       this.subdata = this.$store.state.subData;
@@ -537,17 +569,31 @@ export default {
       this.subdetail = this.$store.state.subDetail;
     },
     onDrawSub() {
-      let temp = chart._echartsOptions;
-      temp.series[0].data = this.subdata;
-      temp.series[1].data = linedata;
-      chart.setOption(temp);
+      // let temp = echartsOptions;
+      // temp.series[0].data = this.subdata;
+      // temp.series[1].data = linedata;
+      // chart.setOption(temp);
+      // console.log(chart)
+      // console.log(this.subdata)
+      chart.setOption({
+        series: [
+          {
+            id: "sub",
+            data: this.subdata,
+          },
+          {
+            id: "lines",
+            data: linedata,
+          },
+        ],
+      });
       var self = this;
       // this.map.events.on({
       // 	"click": function(params) {
       // 		console.log(params);
       // 	}
       // })
-      chart._ec.on("click", function (params) {
+      chart.on("click", function (params) {
         // console.log(params);
         if (params.seriesName == "sub") {
           self.type = "Substation";
@@ -628,24 +674,24 @@ export default {
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"],
+              ]["Double.Longitude"],
             ],
             [
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"],
+              ]["Double.Longitude"],
             ],
           ];
         } else if (linedata[index].attributes.MVFrom < 0) {
@@ -656,24 +702,24 @@ export default {
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[toID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"],
+              ]["Double.Longitude"],
             ],
             [
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Longitude"],
+              ]["Double.Latitude"],
               this.$store.state.casedetail.content.Substation[
                 this.$store.state.casedetail.content.Bus[fromID][
                   "Int.Sub Number"
                 ].toString()
-              ]["Double.Latitude"],
+              ]["Double.Longitude"],
             ],
           ];
         }
@@ -732,7 +778,7 @@ export default {
       // console.log(tempOption)
       chart.setOption(tempOption, {
         silent: true,
-        lazyUpdate: true
+        lazyUpdate: true,
       });
       this.statusArray = statusTemp;
       // }
