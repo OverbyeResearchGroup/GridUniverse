@@ -1,12 +1,6 @@
 <template>
-  <v-container
-    grid-list-md
-    text-xs-center
-  >
-    <v-layout
-      row
-      wrap
-    >
+  <v-container grid-list-md text-xs-center>
+    <v-layout row wrap>
       <v-flex xs12>
         <div id="sanddance"></div>
       </v-flex>
@@ -24,7 +18,7 @@ import * as deck from "@deck.gl/core";
 import * as layers from "@deck.gl/layers";
 import * as luma from "@luma.gl/core";
 import * as vega from "vega";
-import SandDanceVue, { SandDance } from "@msrvida/sanddance-vue";
+import { SandDance } from "@msrvida/sanddance-vue";
 
 SandDance.use(vega, deck, layers, luma);
 
@@ -38,7 +32,7 @@ export default {
       Interval: "",
       anchor: 0,
       loadDataLength: 0,
-      loadArray: []
+      loadArray: [],
     };
   },
   created() {
@@ -56,7 +50,7 @@ export default {
       scatterplotTest.viewer = new SandDance.Viewer(
         document.getElementById("sanddance"),
         {
-          hideSidebarControls: true
+          hideSidebarControls: true,
         }
       );
       scatterplotTest.viewer.options.colors.axisLine = [255, 255, 255, 255];
@@ -77,7 +71,7 @@ export default {
           y: "Latitude",
           z: "LoadMW",
           size: "LoadMW",
-          group: "GenMW"
+          group: "GenMW",
         },
         facets: null, //null,
         hideLegend: false,
@@ -86,9 +80,9 @@ export default {
         scheme: "redblue", //redblue
         size: {
           height: glDiv.offsetHeight,
-          width: glDiv.offsetWidth
+          width: glDiv.offsetWidth,
         },
-        chart: "scatterplot"
+        chart: "scatterplot",
       };
 
       scatterplotTest.viewer.render(insight, buses);
@@ -112,7 +106,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         if (ele != "Bus") {
           anchor += arrlength * keyarr.length;
@@ -137,12 +131,14 @@ export default {
           temp.push({
             Id: i,
             "Symbol(vega_id)": i,
-            Latitude: this.$store.state.areadetail.content.Substation[
-              subID.toString()
-            ]["Double.Latitude"],
-            Longitude: this.$store.state.areadetail.content.Substation[
-              subID.toString()
-            ]["Double.Longitude"],
+            Latitude:
+              this.$store.state.areadetail.content.Substation[subID.toString()][
+                "Double.Latitude"
+              ],
+            Longitude:
+              this.$store.state.areadetail.content.Substation[subID.toString()][
+                "Double.Longitude"
+              ],
             name:
               this.$store.state.areadetail.content.Bus[i.split(",")[0]][
                 "String.Name"
@@ -154,7 +150,7 @@ export default {
             FreqHz: 60,
             GenMW: 0,
             GenMvar: 0,
-            LoadMW: 0
+            LoadMW: 0,
           });
         }
         count++;
@@ -188,11 +184,11 @@ export default {
       } catch (e) {
         console.log("The raw data are not ready");
       }
-    }
+    },
   },
   beforeDestroy() {
     clearInterval(this.Interval);
-  }
+  },
 };
 </script>
 

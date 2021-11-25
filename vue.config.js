@@ -1,5 +1,6 @@
 // const { dependencies } = require('package.json')
 // let whiteListedModules = ["@supermap/iclient-leaflet"]
+const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 module.exports = {
   // publicPath: '/~zeyumao2/',
@@ -8,12 +9,17 @@ module.exports = {
     'resize-detector',
     'vuetify'
   ],
+  chainWebpack: (config) => {
+    config.plugin("loadshReplace").use(new LodashModuleReplacementPlugin());
+  },
   configureWebpack: {
     // Configuration applied to all builds
     optimization: {
       splitChunks: {
         chunks: 'all'
-      }
+      },
+      nodeEnv: 'production',
+      minimize: true
     },
     externals: [
       ...Object.keys({}).filter(d => !whiteListedModules.includes(d))]

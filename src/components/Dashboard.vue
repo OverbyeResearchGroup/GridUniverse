@@ -322,24 +322,19 @@
 </template>
 
 <script>
-// import Home from './views/Home';
-
-import generator from "../views/generator-view";
-import load from "../views/load-view";
-import shunt from "../views/shunt-view";
+// import generator from "../views/generator-view";
+// import load from "../views/load-view";
+// import shunt from "../views/shunt-view";
 import admin from "../views/admin-view";
-import branch from "../views/branch-view";
-// import transformer from "../views/new-transformer-view";
-// import areastrip from './AreaStrip'
-// import gic from "../views/gic-view.vue";
-import areastrip from "./AreaStrip2";
-import hourlystrip from "./HourlyStrip";
+// import branch from "../views/branch-view";
+// import areastrip from "./AreaStrip2";
+// import hourlystrip from "./HourlyStrip";
 import busstrip from "./BusStrip";
-import oneline from "./OneLine";
-import sanddance from "./SandDance";
-import generationVis from "../views/generation-bar-view";
-import generationPie from "../views/generation-pie-view";
-import sysInfo from "../views/system-info-view";
+// import oneline from "./OneLine";
+// import sanddance from "./SandDance";
+// import generationVis from "../views/generation-bar-view";
+// import generationPie from "../views/generation-pie-view";
+// import sysInfo from "../views/system-info-view";
 // import chatpop from './components/chatpop';
 import MqttClient from "./MqttClient";
 import Util from "../util";
@@ -379,26 +374,26 @@ export default {
     MqttClient,
     Home: () => import("../views/Home"),
     IkView: () => import("../views/Ik-view"),
-    generator: generator,
-    load: load,
-    shunt: shunt,
+    generator: () => import("../views/generator-view.vue"),
+    load: () => import("../views/load-view.vue"),
+    shunt: () => import("../views/shunt-view.vue"),
     admin,
     NotificationList: () => import("./NotificationList"),
     // CostBot,
     AGCBot,
-    branch,
+    branch: () => import("../views/branch-view.vue"),
     // gic,
     // transformer,
-    areastrip,
-    hourlystrip,
+    areastrip: () => import("./AreaStrip2.vue"),
+    hourlystrip: () => import("./HourlyStrip.vue"),
     busstrip,
-    oneline,
-    sanddance,
+    oneline: () => import("./OneLine.vue"),
+    sanddance: () => import("./SandDance.vue"),
     marquee,
     Clock,
-    generationVis,
-    generationPie,
-    sysInfo,
+    generationVis: () => import("../views/generation-bar-view.vue"),
+    generationPie: () => import("../views/generation-pie-view.vue"),
+    sysInfo: () => import("../views/system-info-view.vue"),
     DataProcessing,
     contact
   },
