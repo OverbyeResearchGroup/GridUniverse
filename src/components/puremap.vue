@@ -149,7 +149,7 @@
 </style>
 
 <script>
-import _ from "lodash";
+import { cloneDeep } from "lodash";
 import { mapGetters, mapState } from "vuex";
 import MWidget from "@/components/MWidget";
 import VWidget from "@/components/VWidget";
@@ -565,7 +565,7 @@ export default {
     },
     getData() {
       this.subdata = this.$store.state.subData;
-      linedata = _.cloneDeep(this.$store.state.lineData);
+      linedata = cloneDeep(this.$store.state.lineData);
       this.subdetail = this.$store.state.subDetail;
     },
     onDrawSub() {
@@ -784,7 +784,7 @@ export default {
       // }
     },
     updateLineOpen(branchIndex) {
-      const temp = _.cloneDeep(linedata[branchIndex]);
+      const temp = cloneDeep(linedata[branchIndex]);
       this.openLineData.push(temp);
       linedata[branchIndex]["coords"] = [temp.coords[0], temp.coords[0]];
     },
