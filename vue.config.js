@@ -1,11 +1,12 @@
 // const { dependencies } = require('package.json')
-let whiteListedModules = ["@supermap/iclient-leaflet"]
+// let whiteListedModules = ["@supermap/iclient-leaflet"]
 
 module.exports = {
   // publicPath: '/~zeyumao2/',
   transpileDependencies: [
     'vue-echarts',
-    'resize-detector'
+    'resize-detector',
+    'vuetify'
   ],
   configureWebpack: {
     // Configuration applied to all builds

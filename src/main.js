@@ -7,12 +7,17 @@ import './registerServiceWorker';
 import 'vuetify/dist/vuetify.min.css';
 import '@mdi/font/css/materialdesignicons.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import ElementUI from 'element-ui';
-import 'element-theme-dark';
-// import 'element-ui/lib/theme-chalk/index.css';
+import { Tabs, TabPane } from "element-ui";
+// import ElementUI from 'element-ui';
+// import 'element-theme-dark';
+import 'element-ui/lib/theme-chalk/index.css';
 import 'izitoast/dist/css/iziToast.css';
+
 // import 'vue-status-indicator/styles.css'
 import StatusIndicator from 'vue-status-indicator'
+
+// import vuetify from './plugins/vuetify'
+// import 'roboto-fontface/css/roboto/roboto-fontface.css'
 // import VueIntro from 'vue-introjs';
 
 // import L from 'leaflet'
@@ -40,17 +45,20 @@ const opts = {
 
 // Vue.use(L)
 // Vue.component('v-chart', ECharts)
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
 Vue.use(Vuetify);
 Vue.use(StatusIndicator);
+Vue.use(Tabs);
+Vue.use(TabPane);
 // Vue.use(VueIntro);
 
 
 new Vue({
-	router,
-	store,
-	vuetify: new Vuetify(opts),
-	render: h => h(App),
-	components: { App },
-	template: '<App/>'
+    router,
+    store,
+    vuetify: new Vuetify(opts),
+    render: h => h(App),
+    components: { App },
+    Vuetify,
+    template: '<App/>'
 }).$mount('#app');

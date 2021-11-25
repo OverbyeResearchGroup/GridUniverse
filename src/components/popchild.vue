@@ -136,9 +136,9 @@ export default {
       return temp;
     },
     headers: function () {
-      return this.$store.state.fieldstore[this.tabs[this.activeTab].split(" ")[0]][
-        "Field"
-      ].map(function (key) {
+      return this.$store.state.fieldstore[
+        this.tabs[this.activeTab].split(" ")[0]
+      ]["Field"].map(function (key) {
         return { text: key, value: key };
       });
     },
