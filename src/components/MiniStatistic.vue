@@ -8,8 +8,8 @@
       <v-container class="pa-0 ma-0">
         <v-layout row wrap>
           <v-flex :class=containerStyle>
-            <graph v-if="showGraph" :visible="showGraph" :id="name" :data="subTitle"></graph>
-            <div v-else class="layout column ma-0 justify-center align-center">
+            <!-- <graph v-if="showGraph" :visible="showGraph" :id="name" :data="subTitle"></graph> -->
+            <div v-if="!showGraph" class="layout column ma-0 justify-center align-center">
               <!-- <v-icon size="24px" :color="color">{{icon}}</v-icon> -->
 			        <img :src="img" />
             </div>
@@ -55,7 +55,7 @@
 </style>
 
 <script>
-import graph from './graph';
+// import graph from './graph';
 
 export default {
 	props: {
@@ -86,7 +86,7 @@ export default {
 		}
 	},
 	components: {
-		graph
+		// graph
 	}
 };
 </script>

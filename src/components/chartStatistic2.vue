@@ -15,9 +15,29 @@
 </template>
 
 <script>
-import * as echarts from "echarts";
 import numeral from 'numeral';
-// var numeral = require('numeral');
+import * as echarts from 'echarts/core';
+import { LineChart } from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  LegendComponent,
+  SingleAxisComponent
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  DatasetComponent,
+  SingleAxisComponent,
+  LineChart,
+  CanvasRenderer
+]);
 
 export default {
 	props: {

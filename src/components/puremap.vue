@@ -149,11 +149,6 @@
 </style>
 
 <script>
-// import echarts from 'echarts';
-// import 'echarts-gl/dist/echarts-gl';
-// import 'echarts-leaflet';
-// import linepop from './linepop';
-// import subpop from './subpop';
 import _ from "lodash";
 import { mapGetters, mapState } from "vuex";
 import MWidget from "@/components/MWidget";
@@ -165,16 +160,6 @@ import chartStatistic from "@/components/chartStatistic";
 import Material from "vuetify/es5/util/colors";
 import loadForecast from "@/components/loadForecast";
 import userInfo from "@/components/userInfo";
-// import highTopo from '@/components/highTopo';
-// import L from 'leaflet';
-// import '@supermap/iclient-leaflet';
-// import {tiledMapLayer} from '@supermap/iclient-leaflet';
-// import _ from 'lodash';
-// mapboxgl.accessToken =
-// 	'pk.eyJ1IjoibXp5MjI0MCIsImEiOiJjamttc3VsODYyZmI4M2ttbGxmbzFudGM2In0.0dy22s32n9eth_63nlX1UA';
-
-// var L = require('leaflet');
-// require('@supermap/iclient-leaflet');
 
 var chart = "";
 var map = "";

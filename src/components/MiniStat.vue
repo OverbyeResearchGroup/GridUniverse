@@ -7,9 +7,9 @@
     <v-card-text class="pa-0 ma-0">
       <v-container class="pa-0 ma-0">
         <v-layout row wrap>
-            <v-flex v-if="showGraph" sm12 xs12>
+            <!-- <v-flex v-if="showGraph" sm12 xs12>
                 <graph :visible="showGraph" :id="name" :data="subTitle"></graph>
-            </v-flex>
+            </v-flex> -->
             <v-flex class="sm6 xs6">
           <!-- <v-flex :class=containerStyle> -->
 
@@ -59,7 +59,7 @@
 </style>
 
 <script>
-import graph from './graph';
+// import graph from './graph';
 
 export default {
 	props: {
@@ -90,7 +90,7 @@ export default {
 		}
 	},
 	components: {
-		graph
+		// graph
 	}
 };
 </script>

@@ -9,6 +9,11 @@ module.exports = {
   ],
   configureWebpack: {
     // Configuration applied to all builds
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     externals: [
       ...Object.keys({}).filter(d => !whiteListedModules.includes(d))]
   },

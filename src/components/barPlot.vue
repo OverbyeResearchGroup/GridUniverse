@@ -19,13 +19,33 @@
 </style>
 
 <script>
-// Need to use the ECharts component.
-import ECharts from "vue-echarts";
+import { use } from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { BarChart } from "echarts/charts";
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  SingleAxisComponent,
+} from "echarts/components";
+import VChart, { THEME_KEY } from "vue-echarts";
+
+use([
+  CanvasRenderer,
+  BarChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  SingleAxisComponent,
+]);
 
 export default {
-  // This labels the v-chart component to allow you to use it in the template environment.
+  name: "barplot",
   components: {
-    "v-chart": ECharts
+    VChart,
+  },
+  provide: {
+    [THEME_KEY]: "dark",
   },
   data() {
     return {
@@ -34,7 +54,7 @@ export default {
       // These are the options for the Generation Bar Graph
       genXaxis: [],
       genYaxis: [],
-      maxGen: []
+      maxGen: [],
     };
   },
   methods: {
@@ -62,7 +82,7 @@ export default {
       // This is the same thing as initializing the plot. I think ideally, we set this so that it
       // only changes the values for the generators that have been changed, but this should be okay
       // for now.
-    }
+    },
   },
   mounted() {
     // For every initialization method, you have to call it through mounted.
@@ -81,13 +101,13 @@ export default {
           text: "Current Generation",
           left: "center",
           textStyle: {
-            fontSize: 48
-          }
+            fontSize: 48,
+          },
         },
         grid: {
           right: "3%",
           left: "3%",
-          bottom: 100
+          bottom: 100,
         },
         xAxis: {
           type: "category",
@@ -96,43 +116,41 @@ export default {
             rotate: 90,
             inside: true,
             fontWeight: "bold",
-            fontSize: 16
+            fontSize: 16,
           },
-          z: 3
+          z: 3,
         },
         yAxis: {
           type: "value",
           axisLine: {
-            show: false
-          }
+            show: false,
+          },
         },
         tooltip: {
-          trigger: "axis"
+          trigger: "axis",
         },
         series: [
           {
             name: "Current Generation",
             data: this.genYaxis,
-            type: "bar"
+            type: "bar",
           },
           {
             name: "Maximum Generation",
             data: this.maxGen,
             type: "bar",
             itemStyle: {
-              normal: {
-                color: "none",
-                borderColor: "#ddd",
-                borderWidth: 3,
-                barBorderRadius: 0
-              }
+              color: "none",
+              borderColor: "#ddd",
+              borderWidth: 3,
+              borderRadius: 0,
             },
             barGap: "-100%",
-            barCategoryGap: "40%"
-          }
-        ]
+            barCategoryGap: "40%",
+          },
+        ],
       };
-    }
-  }
+    },
+  },
 };
 </script>

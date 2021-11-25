@@ -5,7 +5,38 @@
 </template>
 
 <script>
+import { use } from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { LineChart } from "echarts/charts";
+import {
+  TitleComponent,
+  TooltipComponent,
+  LegendComponent,
+  GridComponent, 
+  SingleAxisComponent,
+  DatasetComponent
+} from "echarts/components";
+import VChart, { THEME_KEY } from "vue-echarts";
+
+use([
+  CanvasRenderer,
+  LineChart,
+  TitleComponent,
+  TooltipComponent,
+  LegendComponent,
+  GridComponent, 
+  SingleAxisComponent,
+  DatasetComponent
+]);
+
 export default {
+  name: "areastrip2",
+  components: {
+    VChart
+  },
+  provide: {
+    [THEME_KEY]: "dark"
+  },
   data() {
     return {
       option: {

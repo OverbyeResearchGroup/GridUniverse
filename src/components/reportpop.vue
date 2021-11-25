@@ -37,8 +37,29 @@
 </style>
 
 <script>
-import * as echarts from "echarts";
 import { mean } from "mathjs";
+import * as echarts from 'echarts/core';
+import { LineChart } from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  SingleAxisComponent,
+  ToolboxComponent,
+  DataZoomComponent,
+  VisualMapComponent
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TitleComponent,
+  TooltipComponent,
+  SingleAxisComponent,
+  LineChart,
+  ToolboxComponent,
+  DataZoomComponent,
+  VisualMapComponent,
+  CanvasRenderer
+]);
 
 export default {
   props: {

@@ -24,12 +24,7 @@
             <v-flex lg12 sm12 xs12>
               <div id="v-widget">
                 <v-card>
-                  <v-app-bar
-                    color="transparent"
-                    flat
-                    dense
-                    v-if="enableHeader"
-                  >
+                  <v-app-bar color="transparent" flat dense v-if="enableHeader">
                     <v-toolbar-title>
                       <h4>{{ chartTitle }}</h4>
                     </v-toolbar-title>
@@ -92,12 +87,8 @@ table.v-table thead th:not(:first-child) {
 </style>
 
 <script>
-import * as echarts from "echarts";
 import "echarts-leaflet";
-import { mapGetters } from "vuex";
-import Math from "mathjs";
 import GeoJSON from "geojson";
-import * as turf from '@turf/turf';
 
 export default {
   // props: {
@@ -162,9 +153,9 @@ export default {
       transData: [],
       substationArray: [],
       substationFieldIndex: {
-        GICElectricFieldVKM: this.$store.state.fieldstore[
-          "Substation"
-        ]['Field'].findIndex((x) => x === "GICElectricFieldVKM"),
+        GICElectricFieldVKM: this.$store.state.fieldstore["Substation"][
+          "Field"
+        ].findIndex((x) => x === "GICElectricFieldVKM"),
       },
       contoursLayer: {},
       interval: {},
@@ -309,14 +300,14 @@ export default {
       console.log("JSON TO GEOJSON: " + (t1 - t0));
       console.log(ramdompts_ipl);
       // var tin = turf.tin(ramdompts_ipl, 'obs');
-      var contours_pts = turf.interpolate(ramdompts_ipl, 4, {
+      var contours_pts = window.turf.interpolate(ramdompts_ipl, 4, {
         gridType: "points",
         property: "GICElectricFieldVKM",
         units: "miles",
       });
       t1 = performance.now();
       console.log("JSON TO INTERPOLATION: " + (t1 - t0));
-      var contours = turf.isobands(
+      var contours = window.turf.isobands(
         contours_pts,
         [0, 0.1, 0.5, 1, 2, 3, 4, 5],
         {
@@ -377,7 +368,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         console.log(ele);
         if (ele != "Substation") {
@@ -456,14 +447,14 @@ export default {
             // console.log('JSON TO GEOJSON: ' + (t1 - t0));
             // console.log(ramdompts_ipl);
             // var contours_pts = turf.tin(ramdompts_ipl, 'GICElectricFieldVKM');
-            var contours_pts = turf.interpolate(ramdompts_ipl, 4, {
+            var contours_pts = window.turf.interpolate(ramdompts_ipl, 4, {
               gridType: "points",
               property: "GICElectricFieldVKM",
               units: "miles",
             });
             // t1 = performance.now();
             // console.log('JSON TO INTERPOLATION: ' + (t1 - t0));
-            var contours = turf.isobands(
+            var contours = window.turf.isobands(
               contours_pts,
               [0, 0.1, 0.5, 1, 2, 3, 4, 5, 6],
               {

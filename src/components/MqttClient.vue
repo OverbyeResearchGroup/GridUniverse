@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import mqtt from "mqtt/dist/mqtt.js";
 import { mapGetters } from "vuex";
 import fingerprint from "fingerprintjs2";
 import iziToast from "izitoast";
@@ -308,14 +307,14 @@ export default {
       });
     },
     onConnect(connack) {
-      console.log("MQTT broker is connected");
+      console.log("Server is connected");
       var topic = this.subtopic;
       topic = topic.map((i) => this.simID + "/" + i);
       client.subscribe(topic);
       console.log(topic);
       iziToast.success({
         title: "System",
-        message: "MQTT broker is connected",
+        message: "Server is connected",
         // color: 'yellow',
         position: "topRight",
       });
@@ -510,7 +509,7 @@ export default {
       console.log("onReconnect");
       iziToast.success({
         title: "System",
-        message: "MQTT broker is being reconnected",
+        message: "Server is being reconnected",
         // color: 'yellow',
         position: "topRight",
       });
@@ -519,7 +518,7 @@ export default {
       console.log("onOffline");
       iziToast.error({
         title: "System",
-        message: "MQTT broker is disconnected",
+        message: "Server is disconnected",
         // color: 'yellow',
         position: "topRight",
       });

@@ -3,7 +3,28 @@
 </template>
 
 <script>
-import * as echarts from "echarts";
+import * as echarts from 'echarts/core';
+import { LineChart } from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  LegendComponent,
+  SingleAxisComponent
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  DatasetComponent,
+  SingleAxisComponent,
+  LineChart,
+  CanvasRenderer
+]);
 
 var chart = "";
 var option = {

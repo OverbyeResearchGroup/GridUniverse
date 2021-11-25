@@ -23,15 +23,36 @@
 
 <script>
 // Need to use the ECharts component.
-import ECharts from "vue-echarts";
 import pieDistribute from "@/components/pieDistribute";
 import { mapState } from "vuex";
+import { use } from "echarts/core";
+import { CanvasRenderer } from "echarts/renderers";
+import { BarChart } from "echarts/charts";
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+} from "echarts/components";
+import VChart, { THEME_KEY } from "vue-echarts";
+
+use([
+  CanvasRenderer,
+  BarChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+]);
 
 export default {
-  // This labels the v-chart component to allow you to use it in the template environment.
+  name: "genpie",
   components: {
-    "v-chart": ECharts,
-    pieDistribute
+    VChart,
+    pieDistribute,
+  },
+  provide: {
+    [THEME_KEY]: "dark",
   },
   data() {
     return {
@@ -39,7 +60,7 @@ export default {
       theme: "dark",
       // These are the options for the Generation Pie Graph
       genName: [],
-      genVal: []
+      genVal: [],
     };
   },
   methods: {
@@ -50,7 +71,7 @@ export default {
         this.genName.push(this.$store.state.genData[i]["name"]);
         this.genVal.push({
           name: this.$store.state.genData[i]["name"],
-          value: this.$store.state.genData[i]["MW"]
+          value: this.$store.state.genData[i]["MW"],
         });
       }
       // These are the options for the generation bar chart.
@@ -63,7 +84,7 @@ export default {
           this.genName.push(this.$store.state.genData[i]["name"]);
           temp.push({
             name: this.$store.state.genData[i]["name"],
-            value: this.$store.state.genData[i]["MW"]
+            value: this.$store.state.genData[i]["MW"],
           });
           this.genVal = temp;
         }
@@ -73,7 +94,7 @@ export default {
       // This is the same thing as initializing the plot. I think ideally, we set this so that it
       // only changes the values for the generators that have been changed, but this should be okay
       // for now.
-    }
+    },
   },
   mounted() {
     // For every initialization method, you have to call it through mounted.
@@ -89,37 +110,37 @@ export default {
         title: {
           text: "Current Generation Distribution (By Generator)",
           textStyle: {
-            fontSize: 24
+            fontSize: 24,
           },
-          x: "center"
+          x: "center",
         },
         grid: {
           right: "3%",
           left: "3%",
-          bottom: 100
+          bottom: 100,
         },
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
+          formatter: "{a} <br/>{b} : {c} ({d}%)",
         },
         legend: {
           type: "scroll",
           orient: "horizontal",
           bottom: 20,
-          data: this.genName
+          data: this.genName,
         },
         series: [
           {
             name: "Current Generation",
             data: this.genVal,
-            type: "pie"
-          }
-        ]
+            type: "pie",
+          },
+        ],
       };
-    }
+    },
   },
   beforeDestroy() {
     clearInterval(this.Process);
-  }
+  },
 };
 </script>

@@ -3,8 +3,25 @@
 </template>
 
 <script>
-import * as echarts from "echarts";
 import { mapState, mapGetters } from "vuex";
+import * as echarts from 'echarts/core';
+import { LineChart } from 'echarts/charts';
+import {
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  SingleAxisComponent
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  SingleAxisComponent,
+  LineChart,
+  CanvasRenderer
+]);
 
 let chart = {};
 let formatData = [];

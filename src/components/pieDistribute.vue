@@ -14,8 +14,23 @@
 </style>
 
 <script>
-import * as echarts from "echarts";
 import Material from 'vuetify/es5/util/colors';
+import * as echarts from 'echarts/core';
+import { PieChart } from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  LegendComponent,
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([
+  TitleComponent,
+  TooltipComponent,
+  LegendComponent,
+  PieChart,
+  CanvasRenderer
+]);
 
 export default {
 	props: {
@@ -121,8 +136,8 @@ export default {
 							show: true
 						},
 						data: [], //[],
-						itemStyle: {
-							emphasis: {
+						emphasis: {
+							itemStyle: {
 								shadowBlur: 10,
 								shadowOffsetX: 0,
 								shadowColor: 'rgba(0, 0, 0, 0.5)'
