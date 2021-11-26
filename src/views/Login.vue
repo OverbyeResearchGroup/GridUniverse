@@ -104,10 +104,11 @@
 </style>
 
 <script>
-import { Command } from "@tauri-apps/api/shell";
-import { resourceDir, currentDir } from "@tauri-apps/api/path";
+// import { Command } from "@tauri-apps/api/shell";
+// import { resourceDir, currentDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
-import { encode, decode } from "@msgpack/msgpack";
+import { encode } from "@msgpack/msgpack";
+import { ipcRenderer } from "electron";
 
 const dashboard = import("../components/Dashboard");
 const loadingComponent = {
@@ -177,13 +178,14 @@ export default {
           //     this.server_port,
           //   ]).spawn();
           // });
-
-          const command = Command.sidecar("ds_client", [
-            this.ip,
-            this.port,
-            this.server_port,
-          ]);
-          const output = command.execute();
+      
+          ipcRenderer.send("connect", encode(config));
+          // const command = Command.sidecar("ds_client", [
+          //   this.ip,
+          //   this.port,
+          //   this.server_port,
+          // ]);
+          // const output = command.execute();
         }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);

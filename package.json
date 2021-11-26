@@ -10,8 +10,11 @@
     "build-report": "vue-cli-service build --modern --report",
     "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
     "tauri:build": "node move-binary.js && vue-cli-service tauri:build --debug",
-    "tauri:serve": "node move-binary.js && vue-cli-service tauri:serve"
+    "tauri:serve": "node move-binary.js && vue-cli-service tauri:serve",
+    "electron:serve": "vue-cli-service electron:serve",
+    "electron:build": "vue-cli-service electron:build"
   },
+  "main": "background.js",
   "dependencies": {
     "@deck.gl/core": "^8.3.7",
     "@deck.gl/layers": "^8.3.7",
@@ -30,6 +33,9 @@
     "echarts-gl": "^2.0.8",
     "echarts-leaflet": "^1.1.0",
     "echartslayer": "^0.1.6",
+    "electron": "^16.0.2",
+    "electron-icon-builder": "^2.0.1",
+    "electron-packager": "^15.4.0",
     "element-ui": "^2.15.6",
     "euclidean-distance": "^1.0.0",
     "fingerprintjs2": "^2.1.4",
@@ -52,6 +58,7 @@
     "vega": "^5.17.0",
     "vue": "^2.6.14",
     "vue-charts": "^0.2.1",
+    "vue-cli-plugin-electron-builder": "^2.1.1",
     "vue-drag-zone": "^2.0.0-rc1",
     "vue-echarts": "^6.0.0",
     "vue-grid-layout": "^2.3.12",

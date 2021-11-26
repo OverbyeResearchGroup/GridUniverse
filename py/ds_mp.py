@@ -1,4 +1,4 @@
-from eventlet import wsgi, listen, wrap_ssl
+from eventlet import wsgi, listen
 from eventlet.queue import Queue
 
 from json import load
@@ -481,12 +481,12 @@ def main():
     # sio.start_background_task(target=periodic_job)
 
     # app.run(port=9999, debug=True)
-    # wsgi.server(listen(('', int(server_port))), app)
-    wsgi.server(wrap_ssl(listen(('', int(server_port))),
-                         certfile='80053852_tauri.cert',
-                         keyfile='80053852_tauri.key',
-                         server_side=True),
-                app)
+    wsgi.server(listen(('', int(server_port))), app)
+    # wsgi.server(wrap_ssl(listen(('', int(server_port))),
+    #                      certfile='80053852_tauri.cert',
+    #                      keyfile='80053852_tauri.key',
+    #                      server_side=True),
+    #             app)
 
 
 if __name__ == "__main__":

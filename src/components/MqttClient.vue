@@ -118,18 +118,13 @@ export default {
     console.log(window.location.href);
 
     if (info.direct) {
-      this.socket = io(`https://localhost:${info.server_port}`);
+      this.socket = io(`http://localhost:${info.server_port}`);
     } else {
-      this.socket = io(`https://${info.ip}:${info.server_port}`);
+      this.socket = io(`http://${info.ip}:${info.server_port}`);
     }
 
     this.socket.io.on("error", (error) => {
       console.log(error);
-      // iziToast.error({
-      //   title: "System",
-      //   message: error,
-      //   position: "topRight",
-      // });
     });
 
     this.socket.on("connect", () => {

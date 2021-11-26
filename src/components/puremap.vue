@@ -330,54 +330,51 @@ export default {
             // 	spotIntensity: 10
             // },
             label: {
-              normal: {
-                show: true,
-                position: "middle",
-                // formatter: 'YES',
-                formatter: (params) => {
-                  const limit = params.data.attributes.MVALimit;
-                  const value = params.data.attributes.MVA;
-                  const percentage = ((value * 100) / limit).toFixed(0);
-                  var richText;
-                  if (percentage >= 100) {
-                    richText = "{overload|" + percentage.toString() + "%}";
-                  } else if (percentage >= 90) {
-                    if (map.getZoom() >= 10) {
-                      richText =
-                        "{zoomInDanger|" + percentage.toString() + "%}";
-                    } else {
-                      richText = "{indanger|" + percentage.toString() + "%}";
-                    }
+              show: true,
+              position: "middle",
+              // formatter: 'YES',
+              formatter: (params) => {
+                const limit = params.data.attributes.MVALimit;
+                const value = params.data.attributes.MVA;
+                const percentage = ((value * 100) / limit).toFixed(0);
+                var richText;
+                if (percentage >= 100) {
+                  richText = "{overload|" + percentage.toString() + "%}";
+                } else if (percentage >= 90) {
+                  if (map.getZoom() >= 10) {
+                    richText = "{zoomInDanger|" + percentage.toString() + "%}";
                   } else {
-                    if (map.getZoom() >= 10) {
-                      richText = "{zoomInSafe|" + percentage.toString() + "%}";
-                    } else {
-                      richText = "{safe|" + percentage.toString() + "%}";
-                    }
+                    richText = "{indanger|" + percentage.toString() + "%}";
                   }
-                  return richText;
+                } else {
+                  if (map.getZoom() >= 10) {
+                    richText = "{zoomInSafe|" + percentage.toString() + "%}";
+                  } else {
+                    richText = "{safe|" + percentage.toString() + "%}";
+                  }
+                }
+                return richText;
+              },
+              rich: {
+                overload: {
+                  fontSize: 18,
+                  color: "#ba000d",
                 },
-                rich: {
-                  overload: {
-                    fontSize: 18,
-                    color: "#ba000d",
-                  },
-                  indanger: {
-                    fontSize: 15,
-                    color: "#ffd600",
-                  },
-                  safe: {
-                    fontSize: 8,
-                    color: "#1b5e20",
-                  },
-                  zoomInSafe: {
-                    fontSize: 16,
-                    color: "#1b5e20",
-                  },
-                  zoomInDanger: {
-                    fontSize: 16,
-                    color: "#ffd600",
-                  },
+                indanger: {
+                  fontSize: 15,
+                  color: "#ffd600",
+                },
+                safe: {
+                  fontSize: 8,
+                  color: "#1b5e20",
+                },
+                zoomInSafe: {
+                  fontSize: 16,
+                  color: "#1b5e20",
+                },
+                zoomInDanger: {
+                  fontSize: 16,
+                  color: "#ffd600",
                 },
               },
             },
