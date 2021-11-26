@@ -1,5 +1,6 @@
 // const { dependencies } = require('package.json')
 // let whiteListedModules = ["@supermap/iclient-leaflet"]
+// const zlib = require('zlib');
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 module.exports = {

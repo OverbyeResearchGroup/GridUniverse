@@ -51,20 +51,20 @@ function createWindow() {
 }
 
 // Prepare the Python process that will be running with the Node
-var util = require("util");
-util.log('Self-check: Logging is working properly');
+// var util = require("util");
+// util.log('Self-check: Logging is working properly');
 let pyProc = null
 let pyPort = null
 
 const createPyProc = (ip, port, server_port) => {
   // let script = path.join(__dirname, '../py', 'ds_client.py')  // for development only
   let script = path.join(__dirname, '../pydist', 'ds_client')
-  util.log(script);
+  // util.log(script);
   // pyProc = require('child_process').spawn("C:/Users/test/anaconda3/python.exe", [script, ip, port]) // for development
   pyProc = require('child_process').execFile(script, [ip, port, server_port])
   pyProc.stdout.on('data', function (chunk) {
     var textChunk = chunk.toString('utf8');// buffer to string
-    util.log(textChunk);
+    // util.log(textChunk);
   });
 
   pyProc.stderr.on('data', function (data) {
