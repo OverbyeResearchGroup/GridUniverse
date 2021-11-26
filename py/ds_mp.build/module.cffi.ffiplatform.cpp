@@ -105,7 +105,7 @@ static void createModuleCodeObjects(void) {
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__10_complex_call_helper_keywords_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_cffi$ffiplatform$$$function__1_get_extension(PyObject *defaults);
@@ -4318,7 +4318,7 @@ static PyObject *impl_cffi$ffiplatform$$$function__5_maybe_relative_path(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_return_value = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());

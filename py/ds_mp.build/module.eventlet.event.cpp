@@ -118,10 +118,10 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_eventlet$event$$$function__10_poll_result(PyObject *defaults);
@@ -2549,7 +2549,7 @@ static PyObject *impl_eventlet$event$$$function__11_wait(struct Nuitka_FunctionO
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_5 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_5 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3512,7 +3512,7 @@ static PyObject *impl_eventlet$event$$$function__13__do_send(struct Nuitka_Funct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_call_result_2 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_2 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5297,7 +5297,7 @@ PyObject *modulecode_eventlet$event(PyObject *module, struct Nuitka_MetaPathBase
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_15 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_15 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());

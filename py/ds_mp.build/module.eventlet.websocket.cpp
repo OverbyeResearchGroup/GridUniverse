@@ -199,13 +199,13 @@ static PyObject *MAKE_GENERATOR_eventlet$websocket$$$function__29__apply_mask$$$
 static PyObject *MAKE_GENERATOR_eventlet$websocket$$$function__31__iter_frames$$$genobj__1__iter_frames(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_eventlet$websocket$$$function__10__extract_number();
@@ -28246,7 +28246,7 @@ static PyObject *impl_eventlet$websocket$$$function__33__pack_message(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_27 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_assign_source_27 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29271,7 +29271,7 @@ static PyObject *impl_eventlet$websocket$$$function__36_send(struct Nuitka_Funct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_1 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__7_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33885,7 +33885,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_37 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_37 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_37 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34545,7 +34545,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_44 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_44 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35450,7 +35450,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_51 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_51 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_51 == NULL) {
             assert(ERROR_OCCURRED());
@@ -36223,7 +36223,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_58 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_58 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_58 == NULL) {
             assert(ERROR_OCCURRED());
@@ -36780,7 +36780,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_65 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_65 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_65 == NULL) {
             assert(ERROR_OCCURRED());
@@ -37435,7 +37435,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_72 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_72 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_72 == NULL) {
             assert(ERROR_OCCURRED());
@@ -38017,7 +38017,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_7};
-            tmp_assign_source_80 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_80 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_80 == NULL) {
             assert(ERROR_OCCURRED());
@@ -38506,7 +38506,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
             {
                 PyObject *dir_call_args[] = {tmp_dircall_arg1_8};
-                tmp_assign_source_87 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+                tmp_assign_source_87 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
             }
             if (tmp_assign_source_87 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -39281,7 +39281,7 @@ PyObject *modulecode_eventlet$websocket(PyObject *module, struct Nuitka_MetaPath
 
             {
                 PyObject *dir_call_args[] = {tmp_dircall_arg1_9};
-                tmp_assign_source_94 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+                tmp_assign_source_94 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
             }
             if (tmp_assign_source_94 == NULL) {
                 assert(ERROR_OCCURRED());

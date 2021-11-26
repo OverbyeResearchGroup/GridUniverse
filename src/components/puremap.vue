@@ -252,15 +252,16 @@ export default {
             symbol: "circle",
             symbolSize: function (value, params) {
               if (params.data.attributes.Gen) {
-                return 12;
+                return 14;
               } else if (params.data.attributes.Shunt) {
-                return 10;
+                return 12;
               } else {
-                return 8;
+                return 10;
               }
             },
             showEffectOn: "emphasis",
-            zlelve: 2,
+            zlelve: 5,
+            z: 5,
             // progressive: 40,
             // progressiveThreshold: 200,
             // zindex: 2,

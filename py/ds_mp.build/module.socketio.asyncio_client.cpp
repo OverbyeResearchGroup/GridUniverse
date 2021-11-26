@@ -191,16 +191,16 @@ static PyObject *MAKE_COROUTINE_socketio$asyncio_client$$$function__20__handle_e
 static PyObject *MAKE_COROUTINE_socketio$asyncio_client$$$function__21__handle_eio_disconnect$$$coroutine__1__handle_eio_disconnect(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__12__unpack_list(PyObject **python_pars);
@@ -6904,7 +6904,7 @@ static PyObject *impl_socketio$asyncio_client$$$function__8_start_background_tas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__4_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -10302,7 +10302,7 @@ static PyObject *socketio$asyncio_client$$$function__14__handle_event$$$coroutin
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_5 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_expression_name_5 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11499,7 +11499,7 @@ static PyObject *socketio$asyncio_client$$$function__15__handle_ack$$$coroutine_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_name_9 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_9 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11582,7 +11582,7 @@ static PyObject *socketio$asyncio_client$$$function__15__handle_ack$$$coroutine_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_call_result_4 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_call_result_4 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12173,7 +12173,7 @@ static PyObject *socketio$asyncio_client$$$function__16__handle_error$$$coroutin
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_4 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_expression_name_4 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13440,7 +13440,7 @@ static PyObject *socketio$asyncio_client$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_1};
-            tmp_expression_name_15 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_15 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_15 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13663,7 +13663,7 @@ static PyObject *socketio$asyncio_client$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_2};
-            tmp_assign_source_7 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_7 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13865,7 +13865,7 @@ static PyObject *socketio$asyncio_client$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4, tmp_dircall_arg2_3, tmp_dircall_arg3_1};
-            tmp_expression_name_19 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_expression_name_19 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_expression_name_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21492,7 +21492,7 @@ PyObject *modulecode_socketio$asyncio_client(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_13 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_13 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());

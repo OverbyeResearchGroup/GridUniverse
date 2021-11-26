@@ -26,6 +26,6 @@ def on_message(data):
 
 
 
-sio.connect('http://localhost:9999')
+sio.connect('wss://localhost:9990')
 
 # sio.emit('S000/user/cmd', json.dumps({'type': 'bar'}))

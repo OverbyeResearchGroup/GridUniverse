@@ -155,7 +155,7 @@ static PyObject *MAKE_COROUTINE_engineio$async_drivers$asgi$$$function__11_send$
 static PyObject *MAKE_COROUTINE_engineio$async_drivers$asgi$$$function__12_wait$$$coroutine__1_wait(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_engineio$async_drivers$asgi$$$function__10_close();
@@ -5531,7 +5531,7 @@ static PyObject *engineio$async_drivers$asgi$$$function__6_translate_request$$$c
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_1 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13979,7 +13979,7 @@ PyObject *modulecode_engineio$async_drivers$asgi(PyObject *module, struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_16 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_16 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());

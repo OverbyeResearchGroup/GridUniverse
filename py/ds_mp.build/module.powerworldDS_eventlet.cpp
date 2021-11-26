@@ -33,9 +33,9 @@ PyObject *module_powerworldDS_eventlet;
 PyDictObject *moduledict_powerworldDS_eventlet;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[376];
+static PyObject *mod_consts[378];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[376];
+static Py_hash_t mod_consts_hash[378];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,7 +50,7 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 376; i++) {
+        for(int i = 0; i < 378; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
@@ -70,7 +70,7 @@ void checkModuleConstants_powerworldDS_eventlet(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 376; i++) {
+    for(int i = 0; i < 378; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -122,56 +122,56 @@ static PyCodeObject *codeobj_adc3fbe08f93a46b0154a2f2a1c05991;
 static PyCodeObject *codeobj_cc5ba1f7d6157043808aee624b23bfcf;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[339]); CHECK_OBJECT(module_filename_obj);
-    codeobj_00cdb1c892b559195c96f6564c7902ad = MAKE_CODEOBJECT(module_filename_obj, 408, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[340], mod_consts[341], NULL, 1, 0, 0);
-    codeobj_b337fdb5a7c28d05c547cf7e7e8268eb = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[4], mod_consts[342], mod_consts[343], 1, 0, 0);
-    codeobj_c92e8be8c5ed38d3b9de6a94eccaab3e = MAKE_CODEOBJECT(module_filename_obj, 407, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[344], mod_consts[345], NULL, 1, 0, 0);
-    codeobj_273bb6631da3bfbfa8a11850278e901a = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[344], mod_consts[346], NULL, 1, 0, 0);
-    codeobj_e7ac78da55f8ebd94c258a7679d8648d = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[347], NULL, NULL, 0, 0, 0);
-    codeobj_42f984e06fe63d929f54ce381e847422 = MAKE_CODEOBJECT(module_filename_obj, 74, CO_NOFREE, mod_consts[291], mod_consts[348], NULL, 0, 0, 0);
-    codeobj_48d4db227342f3f7025bd3184a52cf5d = MAKE_CODEOBJECT(module_filename_obj, 78, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[300], mod_consts[349], NULL, 3, 0, 0);
-    codeobj_394fa8a4aab3416a785808386d4f0c04 = MAKE_CODEOBJECT(module_filename_obj, 152, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[305], mod_consts[350], NULL, 2, 0, 0);
-    codeobj_6cdd465b1fb3a4782a1149ce76e8dd14 = MAKE_CODEOBJECT(module_filename_obj, 741, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[81], mod_consts[351], NULL, 2, 0, 0);
-    codeobj_b23d81068002d2e8cd6e332909f8fd82 = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[164], mod_consts[352], NULL, 4, 0, 0);
-    codeobj_50d83e29c42eead1bdaff32295b25b40 = MAKE_CODEOBJECT(module_filename_obj, 251, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[36], mod_consts[353], NULL, 2, 0, 0);
-    codeobj_ccffd713bfcb3c91be440ed0bc9a67f0 = MAKE_CODEOBJECT(module_filename_obj, 158, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[22], mod_consts[354], NULL, 2, 0, 0);
-    codeobj_86a8065d469be653249a94e7f5246bcb = MAKE_CODEOBJECT(module_filename_obj, 233, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[32], mod_consts[353], NULL, 2, 0, 0);
-    codeobj_8899b2ab64956ff84163cc1fb914b308 = MAKE_CODEOBJECT(module_filename_obj, 268, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[52], mod_consts[355], NULL, 2, 0, 0);
-    codeobj_5d37a608bbafb0c0131247fc163d9061 = MAKE_CODEOBJECT(module_filename_obj, 179, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[24], mod_consts[356], NULL, 2, 0, 0);
-    codeobj_6b1ffeb33b6715911c9c9c0323ceadf2 = MAKE_CODEOBJECT(module_filename_obj, 441, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[56], mod_consts[357], NULL, 2, 0, 0);
-    codeobj_77b8dedb290932e824036995e16e3aef = MAKE_CODEOBJECT(module_filename_obj, 453, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[358], NULL, 1, 0, 0);
-    codeobj_4cc26a6e13d46b068e95142ba89540b8 = MAKE_CODEOBJECT(module_filename_obj, 242, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[34], mod_consts[353], NULL, 2, 0, 0);
-    codeobj_69862306cdb4e5511307845945d057f4 = MAKE_CODEOBJECT(module_filename_obj, 260, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[38], mod_consts[359], NULL, 2, 0, 0);
-    codeobj_f79d5c9636b1846ba36ec3a87bf43c5d = MAKE_CODEOBJECT(module_filename_obj, 432, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[360], NULL, 2, 0, 0);
-    codeobj_51f5e8ddc52117e9a3cedd85542c8b12 = MAKE_CODEOBJECT(module_filename_obj, 224, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[353], NULL, 2, 0, 0);
-    codeobj_18af9b723e9d64a02bd57d19003f9a23 = MAKE_CODEOBJECT(module_filename_obj, 184, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[26], mod_consts[361], NULL, 2, 0, 0);
-    codeobj_d0098c5b37e9a31c62e54090019c424c = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[28], mod_consts[362], NULL, 2, 0, 0);
-    codeobj_552558de76491a485d6fa828e658729e = MAKE_CODEOBJECT(module_filename_obj, 264, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[40], mod_consts[359], NULL, 2, 0, 0);
-    codeobj_d19fc578b42ba81aea842a037cb17c02 = MAKE_CODEOBJECT(module_filename_obj, 65, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[14], mod_consts[363], NULL, 2, 0, 0);
-    codeobj_8965143bcc7269830ef1c571f346b83e = MAKE_CODEOBJECT(module_filename_obj, 50, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[286], mod_consts[364], NULL, 2, 0, 0);
-    codeobj_b94c2132a48f11cec8189baa9f03be13 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[287], mod_consts[365], NULL, 1, 0, 0);
-    codeobj_f994a000cb7ab1cb85aee16275662166 = MAKE_CODEOBJECT(module_filename_obj, 135, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[366], NULL, 2, 0, 0);
-    codeobj_79524e885f5a67d01a8685a8ead964a9 = MAKE_CODEOBJECT(module_filename_obj, 560, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[48], mod_consts[367], NULL, 2, 0, 0);
-    codeobj_d3eab24daf2eeb087b2699d1efb654d1 = MAKE_CODEOBJECT(module_filename_obj, 456, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[50], mod_consts[368], NULL, 2, 0, 0);
-    codeobj_002a2bbc36b97e2a247ec6f064893ff5 = MAKE_CODEOBJECT(module_filename_obj, 477, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[44], mod_consts[369], NULL, 2, 0, 0);
-    codeobj_476eedb6fa72e5fa6331f2efe0c0cdbd = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[370], NULL, 2, 0, 0);
-    codeobj_332ae05733d40451ef6aa73962e9dee6 = MAKE_CODEOBJECT(module_filename_obj, 738, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[358], NULL, 1, 0, 0);
-    codeobj_c3d642784c960fd3db1e835f2b8ac424 = MAKE_CODEOBJECT(module_filename_obj, 607, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[371], NULL, 2, 0, 0);
-    codeobj_e026f1f0520a94d742bafec8b46b820e = MAKE_CODEOBJECT(module_filename_obj, 680, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[64], mod_consts[372], NULL, 1, 0, 0);
-    codeobj_dd43dad8104932508686d4a2c4f04687 = MAKE_CODEOBJECT(module_filename_obj, 662, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[62], mod_consts[372], NULL, 1, 0, 0);
-    codeobj_8b41d8af58b6e1e821412083d825796f = MAKE_CODEOBJECT(module_filename_obj, 698, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[66], mod_consts[373], NULL, 2, 0, 0);
-    codeobj_073fc1668bedf6fa78bb671b6f4f8c24 = MAKE_CODEOBJECT(module_filename_obj, 643, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[60], mod_consts[372], NULL, 1, 0, 0);
-    codeobj_df94fadbbbb8e1f56da515757b0f8a1b = MAKE_CODEOBJECT(module_filename_obj, 718, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[373], NULL, 2, 0, 0);
-    codeobj_8ff0daf0b1081a60439fb1ea83492653 = MAKE_CODEOBJECT(module_filename_obj, 625, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[58], mod_consts[372], NULL, 1, 0, 0);
-    codeobj_adc3fbe08f93a46b0154a2f2a1c05991 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[161], mod_consts[374], NULL, 3, 0, 0);
-    codeobj_cc5ba1f7d6157043808aee624b23bfcf = MAKE_CODEOBJECT(module_filename_obj, 46, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[243], mod_consts[375], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[341]); CHECK_OBJECT(module_filename_obj);
+    codeobj_00cdb1c892b559195c96f6564c7902ad = MAKE_CODEOBJECT(module_filename_obj, 408, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[342], mod_consts[343], NULL, 1, 0, 0);
+    codeobj_b337fdb5a7c28d05c547cf7e7e8268eb = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[3], mod_consts[344], mod_consts[345], 1, 0, 0);
+    codeobj_c92e8be8c5ed38d3b9de6a94eccaab3e = MAKE_CODEOBJECT(module_filename_obj, 407, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[346], mod_consts[347], NULL, 1, 0, 0);
+    codeobj_273bb6631da3bfbfa8a11850278e901a = MAKE_CODEOBJECT(module_filename_obj, 51, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[346], mod_consts[348], NULL, 1, 0, 0);
+    codeobj_e7ac78da55f8ebd94c258a7679d8648d = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[349], NULL, NULL, 0, 0, 0);
+    codeobj_42f984e06fe63d929f54ce381e847422 = MAKE_CODEOBJECT(module_filename_obj, 74, CO_NOFREE, mod_consts[293], mod_consts[350], NULL, 0, 0, 0);
+    codeobj_48d4db227342f3f7025bd3184a52cf5d = MAKE_CODEOBJECT(module_filename_obj, 78, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[302], mod_consts[351], NULL, 3, 0, 0);
+    codeobj_394fa8a4aab3416a785808386d4f0c04 = MAKE_CODEOBJECT(module_filename_obj, 152, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[307], mod_consts[352], NULL, 2, 0, 0);
+    codeobj_6cdd465b1fb3a4782a1149ce76e8dd14 = MAKE_CODEOBJECT(module_filename_obj, 741, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[353], NULL, 2, 0, 0);
+    codeobj_b23d81068002d2e8cd6e332909f8fd82 = MAKE_CODEOBJECT(module_filename_obj, 326, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[162], mod_consts[354], NULL, 4, 0, 0);
+    codeobj_50d83e29c42eead1bdaff32295b25b40 = MAKE_CODEOBJECT(module_filename_obj, 251, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[35], mod_consts[355], NULL, 2, 0, 0);
+    codeobj_ccffd713bfcb3c91be440ed0bc9a67f0 = MAKE_CODEOBJECT(module_filename_obj, 158, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[21], mod_consts[356], NULL, 2, 0, 0);
+    codeobj_86a8065d469be653249a94e7f5246bcb = MAKE_CODEOBJECT(module_filename_obj, 233, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[31], mod_consts[355], NULL, 2, 0, 0);
+    codeobj_8899b2ab64956ff84163cc1fb914b308 = MAKE_CODEOBJECT(module_filename_obj, 268, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[51], mod_consts[357], NULL, 2, 0, 0);
+    codeobj_5d37a608bbafb0c0131247fc163d9061 = MAKE_CODEOBJECT(module_filename_obj, 179, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[23], mod_consts[358], NULL, 2, 0, 0);
+    codeobj_6b1ffeb33b6715911c9c9c0323ceadf2 = MAKE_CODEOBJECT(module_filename_obj, 441, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[55], mod_consts[359], NULL, 2, 0, 0);
+    codeobj_77b8dedb290932e824036995e16e3aef = MAKE_CODEOBJECT(module_filename_obj, 453, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[71], mod_consts[360], NULL, 1, 0, 0);
+    codeobj_4cc26a6e13d46b068e95142ba89540b8 = MAKE_CODEOBJECT(module_filename_obj, 242, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[33], mod_consts[355], NULL, 2, 0, 0);
+    codeobj_69862306cdb4e5511307845945d057f4 = MAKE_CODEOBJECT(module_filename_obj, 260, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[37], mod_consts[361], NULL, 2, 0, 0);
+    codeobj_f79d5c9636b1846ba36ec3a87bf43c5d = MAKE_CODEOBJECT(module_filename_obj, 432, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[53], mod_consts[362], NULL, 2, 0, 0);
+    codeobj_51f5e8ddc52117e9a3cedd85542c8b12 = MAKE_CODEOBJECT(module_filename_obj, 224, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[355], NULL, 2, 0, 0);
+    codeobj_18af9b723e9d64a02bd57d19003f9a23 = MAKE_CODEOBJECT(module_filename_obj, 184, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[25], mod_consts[363], NULL, 2, 0, 0);
+    codeobj_d0098c5b37e9a31c62e54090019c424c = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[27], mod_consts[364], NULL, 2, 0, 0);
+    codeobj_552558de76491a485d6fa828e658729e = MAKE_CODEOBJECT(module_filename_obj, 264, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[39], mod_consts[361], NULL, 2, 0, 0);
+    codeobj_d19fc578b42ba81aea842a037cb17c02 = MAKE_CODEOBJECT(module_filename_obj, 65, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], mod_consts[365], NULL, 2, 0, 0);
+    codeobj_8965143bcc7269830ef1c571f346b83e = MAKE_CODEOBJECT(module_filename_obj, 50, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[288], mod_consts[366], NULL, 2, 0, 0);
+    codeobj_b94c2132a48f11cec8189baa9f03be13 = MAKE_CODEOBJECT(module_filename_obj, 54, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[289], mod_consts[367], NULL, 1, 0, 0);
+    codeobj_f994a000cb7ab1cb85aee16275662166 = MAKE_CODEOBJECT(module_filename_obj, 135, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[75], mod_consts[368], NULL, 2, 0, 0);
+    codeobj_79524e885f5a67d01a8685a8ead964a9 = MAKE_CODEOBJECT(module_filename_obj, 560, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[369], NULL, 2, 0, 0);
+    codeobj_d3eab24daf2eeb087b2699d1efb654d1 = MAKE_CODEOBJECT(module_filename_obj, 456, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[49], mod_consts[370], NULL, 2, 0, 0);
+    codeobj_002a2bbc36b97e2a247ec6f064893ff5 = MAKE_CODEOBJECT(module_filename_obj, 477, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[43], mod_consts[371], NULL, 2, 0, 0);
+    codeobj_476eedb6fa72e5fa6331f2efe0c0cdbd = MAKE_CODEOBJECT(module_filename_obj, 539, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[45], mod_consts[372], NULL, 2, 0, 0);
+    codeobj_332ae05733d40451ef6aa73962e9dee6 = MAKE_CODEOBJECT(module_filename_obj, 738, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[69], mod_consts[360], NULL, 1, 0, 0);
+    codeobj_c3d642784c960fd3db1e835f2b8ac424 = MAKE_CODEOBJECT(module_filename_obj, 607, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[41], mod_consts[373], NULL, 2, 0, 0);
+    codeobj_e026f1f0520a94d742bafec8b46b820e = MAKE_CODEOBJECT(module_filename_obj, 680, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[63], mod_consts[374], NULL, 1, 0, 0);
+    codeobj_dd43dad8104932508686d4a2c4f04687 = MAKE_CODEOBJECT(module_filename_obj, 662, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[374], NULL, 1, 0, 0);
+    codeobj_8b41d8af58b6e1e821412083d825796f = MAKE_CODEOBJECT(module_filename_obj, 698, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[375], NULL, 2, 0, 0);
+    codeobj_073fc1668bedf6fa78bb671b6f4f8c24 = MAKE_CODEOBJECT(module_filename_obj, 643, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[59], mod_consts[374], NULL, 1, 0, 0);
+    codeobj_df94fadbbbb8e1f56da515757b0f8a1b = MAKE_CODEOBJECT(module_filename_obj, 718, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[375], NULL, 2, 0, 0);
+    codeobj_8ff0daf0b1081a60439fb1ea83492653 = MAKE_CODEOBJECT(module_filename_obj, 625, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[374], NULL, 1, 0, 0);
+    codeobj_adc3fbe08f93a46b0154a2f2a1c05991 = MAKE_CODEOBJECT(module_filename_obj, 122, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[159], mod_consts[376], NULL, 3, 0, 0);
+    codeobj_cc5ba1f7d6157043808aee624b23bfcf = MAKE_CODEOBJECT(module_filename_obj, 46, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[241], mod_consts[377], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
 static PyObject *MAKE_GENERATOR_powerworldDS_eventlet$$$function__4_find$$$genobj__1_find(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__10_dsmdisconnect();
@@ -518,17 +518,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__2_isplit(struct Nuitka_F
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
         struct Nuitka_CellObject *tmp_closure_1[1];
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -549,11 +549,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__2_isplit(struct Nuitka_F
         frame_8965143bcc7269830ef1c571f346b83e->m_frame.f_lineno = 51;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_iter_arg_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_1,
-                mod_consts[3],
-                call_args
-            );
+            tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
         Py_DECREF(tmp_args_element_name_2);
@@ -752,7 +748,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__2_isplit(struct Nuitka_F
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[6];
+            exception_value = mod_consts[5];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -1203,7 +1199,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__2_isplit$$$function__1_l
         tmp_compexpr_left_1 = par_x;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[7]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[6]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1473,7 +1469,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__3_list2list(struct Nuitk
         PyObject *tmp_args_element_name_3;
         if (var_str_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1487,7 +1483,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__3_list2list(struct Nuitk
         CHECK_OBJECT(var_l);
         tmp_args_element_name_3 = var_l;
         frame_b94c2132a48f11cec8189baa9f03be13->m_frame.f_lineno = 61;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[9], tmp_args_element_name_3);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[8], tmp_args_element_name_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1545,7 +1541,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__3_list2list(struct Nuitk
     tmp_for_loop_1__for_iterator = NULL;
     if (var_str_list == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -1836,7 +1832,7 @@ static PyObject *powerworldDS_eventlet$$$function__4_find$$$genobj__1_find_conte
         PyObject *tmp_len_arg_1;
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[12]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[11]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -1933,7 +1929,7 @@ static PyObject *powerworldDS_eventlet$$$function__4_find$$$genobj__1_find_conte
         PyObject *tmp_subscript_name_1;
         if (Nuitka_Cell_GET(generator->m_closure[0]) == NULL) {
 
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[12]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[11]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -1959,7 +1955,7 @@ static PyObject *powerworldDS_eventlet$$$function__4_find$$$genobj__1_find_conte
         }
         if (Nuitka_Cell_GET(generator->m_closure[1]) == NULL) {
             Py_DECREF(tmp_compexpr_left_1);
-            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_CLOSURE_ERROR(&generator_heap->exception_type, &generator_heap->exception_value, mod_consts[12]);
             generator_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
             CHAIN_EXCEPTION(generator_heap->exception_value);
@@ -2154,7 +2150,7 @@ static PyObject *MAKE_GENERATOR_powerworldDS_eventlet$$$function__4_find$$$genob
     return Nuitka_Generator_New(
         powerworldDS_eventlet$$$function__4_find$$$genobj__1_find_context,
         module_powerworldDS_eventlet,
-        mod_consts[14],
+        mod_consts[13],
 #if PYTHON_VERSION >= 0x350
         NULL,
 #endif
@@ -2231,10 +2227,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_expression_name_3;
         PyObject *tmp_assattr_target_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[15]);
+        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[14]);
 
         if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
         if (tmp_expression_name_1 == NULL) {
@@ -2247,7 +2243,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[15]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[14]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2258,10 +2254,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[15]);
+        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[14]);
 
         if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
         if (tmp_expression_name_2 == NULL) {
@@ -2274,7 +2270,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[16]);
+        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[15]);
         if (tmp_args_element_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2285,10 +2281,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[15]);
+        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[14]);
 
         if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
+            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
         if (tmp_expression_name_3 == NULL) {
@@ -2302,7 +2298,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[17]);
+        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[16]);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2335,7 +2331,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[15], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[14], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2356,7 +2352,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         PyObject *tmp_tuple_element_1;
         CHECK_OBJECT(par_self);
         tmp_expression_name_4 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[15]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[14]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2375,7 +2371,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         tmp_tuple_element_1 = par_port;
         PyTuple_SET_ITEM0(tmp_args_element_name_3, 1, tmp_tuple_element_1);
         frame_48d4db227342f3f7025bd3184a52cf5d->m_frame.f_lineno = 82;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[18], tmp_args_element_name_3);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[17], tmp_args_element_name_3);
         Py_DECREF(tmp_called_instance_1);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_call_result_1 == NULL) {
@@ -2396,7 +2392,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_5 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[14]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2410,8 +2406,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         frame_48d4db227342f3f7025bd3184a52cf5d->m_frame.f_lineno = 83;
         tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_2,
-            mod_consts[19],
-            PyTuple_GET_ITEM(mod_consts[20], 0)
+            mod_consts[18],
+            PyTuple_GET_ITEM(mod_consts[19], 0)
         );
 
         Py_DECREF(tmp_called_instance_2);
@@ -2433,10 +2429,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         PyObject *tmp_dict_value_1;
         PyObject *tmp_expression_name_6;
         PyObject *tmp_assattr_target_2;
-        tmp_dict_key_1 = mod_consts[21];
+        tmp_dict_key_1 = mod_consts[20];
         CHECK_OBJECT(par_self);
         tmp_expression_name_6 = par_self;
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[22]);
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[21]);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2477,10 +2473,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[23];
+            tmp_dict_key_1 = mod_consts[22];
             CHECK_OBJECT(par_self);
             tmp_expression_name_7 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[24]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[23]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2494,10 +2490,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[25];
+            tmp_dict_key_1 = mod_consts[24];
             CHECK_OBJECT(par_self);
             tmp_expression_name_8 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[26]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[25]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2511,10 +2507,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[27];
+            tmp_dict_key_1 = mod_consts[26];
             CHECK_OBJECT(par_self);
             tmp_expression_name_9 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[28]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[27]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2528,10 +2524,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[29];
+            tmp_dict_key_1 = mod_consts[28];
             CHECK_OBJECT(par_self);
             tmp_expression_name_10 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[30]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[29]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2545,10 +2541,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[31];
+            tmp_dict_key_1 = mod_consts[30];
             CHECK_OBJECT(par_self);
             tmp_expression_name_11 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[32]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[31]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2562,10 +2558,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[33];
+            tmp_dict_key_1 = mod_consts[32];
             CHECK_OBJECT(par_self);
             tmp_expression_name_12 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[34]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[33]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2579,10 +2575,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[35];
+            tmp_dict_key_1 = mod_consts[34];
             CHECK_OBJECT(par_self);
             tmp_expression_name_13 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[36]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[35]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2596,10 +2592,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[37];
+            tmp_dict_key_1 = mod_consts[36];
             CHECK_OBJECT(par_self);
             tmp_expression_name_14 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[38]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[37]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2613,10 +2609,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[39];
+            tmp_dict_key_1 = mod_consts[38];
             CHECK_OBJECT(par_self);
             tmp_expression_name_15 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[40]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[39]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2630,10 +2626,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[41];
+            tmp_dict_key_1 = mod_consts[40];
             CHECK_OBJECT(par_self);
             tmp_expression_name_16 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[42]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[41]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2647,10 +2643,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[43];
+            tmp_dict_key_1 = mod_consts[42];
             CHECK_OBJECT(par_self);
             tmp_expression_name_17 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[44]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[43]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2664,10 +2660,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[45];
+            tmp_dict_key_1 = mod_consts[44];
             CHECK_OBJECT(par_self);
             tmp_expression_name_18 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[46]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[45]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2681,10 +2677,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[47];
+            tmp_dict_key_1 = mod_consts[46];
             CHECK_OBJECT(par_self);
             tmp_expression_name_19 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[48]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[47]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2698,10 +2694,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[49];
+            tmp_dict_key_1 = mod_consts[48];
             CHECK_OBJECT(par_self);
             tmp_expression_name_20 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[50]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[49]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2715,10 +2711,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[51];
+            tmp_dict_key_1 = mod_consts[50];
             CHECK_OBJECT(par_self);
             tmp_expression_name_21 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[52]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[51]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2732,10 +2728,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[53];
+            tmp_dict_key_1 = mod_consts[52];
             CHECK_OBJECT(par_self);
             tmp_expression_name_22 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[54]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[53]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2749,10 +2745,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[55];
+            tmp_dict_key_1 = mod_consts[54];
             CHECK_OBJECT(par_self);
             tmp_expression_name_23 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[56]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[55]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2766,10 +2762,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[57];
+            tmp_dict_key_1 = mod_consts[56];
             CHECK_OBJECT(par_self);
             tmp_expression_name_24 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[58]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[57]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2783,10 +2779,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[59];
+            tmp_dict_key_1 = mod_consts[58];
             CHECK_OBJECT(par_self);
             tmp_expression_name_25 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[60]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[59]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2800,10 +2796,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[61];
+            tmp_dict_key_1 = mod_consts[60];
             CHECK_OBJECT(par_self);
             tmp_expression_name_26 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[62]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[61]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2817,10 +2813,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[63];
+            tmp_dict_key_1 = mod_consts[62];
             CHECK_OBJECT(par_self);
             tmp_expression_name_27 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[64]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[63]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2834,10 +2830,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[65];
+            tmp_dict_key_1 = mod_consts[64];
             CHECK_OBJECT(par_self);
             tmp_expression_name_28 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[66]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[65]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2851,10 +2847,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[67];
+            tmp_dict_key_1 = mod_consts[66];
             CHECK_OBJECT(par_self);
             tmp_expression_name_29 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[68]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[67]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2868,10 +2864,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[69];
+            tmp_dict_key_1 = mod_consts[68];
             CHECK_OBJECT(par_self);
             tmp_expression_name_30 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[70]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[69]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2885,10 +2881,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
             tmp_res = PyDict_SetItem(tmp_assattr_value_2, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[71];
+            tmp_dict_key_1 = mod_consts[70];
             CHECK_OBJECT(par_self);
             tmp_expression_name_31 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[72]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[71]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2912,7 +2908,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         dict_build_noexception_1:;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[73], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[72], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2928,10 +2924,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
     {
         PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_value_3 = PyDict_Copy(mod_consts[74]);
+        tmp_assattr_value_3 = PyDict_Copy(mod_consts[73]);
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[75], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[74], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -2950,7 +2946,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__5___init__(struct Nuitka
         CHECK_OBJECT(par_self);
         tmp_called_instance_3 = par_self;
         frame_48d4db227342f3f7025bd3184a52cf5d->m_frame.f_lineno = 120;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[76]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[75]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3229,7 +3225,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__6_tuple_round(struct Nui
         PyObject *tmp_args_element_name_3;
         if (var_output == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3240,7 +3236,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__6_tuple_round(struct Nui
         }
 
         tmp_expression_name_1 = var_output;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[9]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3251,13 +3247,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__6_tuple_round(struct Nui
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[78]);
+        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[77]);
         assert(tmp_called_name_2 != NULL);
         CHECK_OBJECT(var_x);
         tmp_args_element_name_2 = var_x;
         if (par_p == NULL) {
             Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3427,7 +3423,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__6_tuple_round(struct Nui
     tmp_for_loop_1__for_iterator = NULL;
     if (var_output == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -3635,8 +3631,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         frame_f994a000cb7ab1cb85aee16275662166->m_frame.f_lineno = 139;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[81],
-            PyTuple_GET_ITEM(mod_consts[82], 0)
+            mod_consts[80],
+            PyTuple_GET_ITEM(mod_consts[81], 0)
         );
 
         if (tmp_assign_source_1 == NULL) {
@@ -3655,28 +3651,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_name_1;
         PyObject *tmp_subscript_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 140;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3687,16 +3671,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[85];
+        tmp_args_element_name_1 = mod_consts[83];
         CHECK_OBJECT(var_header_data);
-        tmp_expression_name_2 = var_header_data;
-        tmp_subscript_name_1 = mod_consts[86];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
+        tmp_expression_name_1 = var_header_data;
+        tmp_subscript_name_1 = mod_consts[84];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 140;
             type_description_1 = "oooooooo";
@@ -3708,7 +3692,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3725,31 +3708,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_subscript_name_2;
         PyObject *tmp_subscript_name_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 141;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3760,16 +3731,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[87];
+        tmp_args_element_name_3 = mod_consts[85];
         CHECK_OBJECT(var_header_data);
-        tmp_expression_name_5 = var_header_data;
-        tmp_subscript_name_2 = mod_consts[88];
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
+        tmp_expression_name_3 = var_header_data;
+        tmp_subscript_name_2 = mod_consts[86];
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_2);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 141;
             type_description_1 = "oooooooo";
@@ -3778,12 +3749,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         frame_f994a000cb7ab1cb85aee16275662166->m_frame.f_lineno = 141;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3793,9 +3763,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_3 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, 0);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_subscript_name_3 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_3, 0);
+        Py_DECREF(tmp_expression_name_2);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3820,7 +3790,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         PyObject *tmp_compexpr_right_2;
         CHECK_OBJECT(var_key);
         tmp_compexpr_left_1 = var_key;
-        tmp_compexpr_right_1 = mod_consts[89];
+        tmp_compexpr_right_1 = mod_consts[87];
         tmp_or_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
         if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
@@ -3852,7 +3822,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         assert(tmp_or_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(var_key);
         tmp_compexpr_left_2 = var_key;
-        tmp_compexpr_right_2 = mod_consts[90];
+        tmp_compexpr_right_2 = mod_consts[88];
         tmp_or_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
         if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
@@ -3883,7 +3853,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         PyObject *tmp_right_name_1;
         CHECK_OBJECT(var_framesize);
         tmp_left_name_1 = var_framesize;
-        tmp_right_name_1 = mod_consts[33];
+        tmp_right_name_1 = mod_consts[32];
         tmp_assign_source_4 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_1, tmp_right_name_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3907,7 +3877,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         CHECK_OBJECT(var_datasize);
         tmp_args_element_name_5 = var_datasize;
         frame_f994a000cb7ab1cb85aee16275662166->m_frame.f_lineno = 144;
-        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[81], tmp_args_element_name_5);
+        tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[80], tmp_args_element_name_5);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3923,31 +3893,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_subscript_name_4;
         PyObject *tmp_subscript_name_5;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 145;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3958,16 +3916,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_6 = mod_consts[91];
+        tmp_args_element_name_6 = mod_consts[89];
         CHECK_OBJECT(var_data);
-        tmp_expression_name_8 = var_data;
-        tmp_subscript_name_4 = mod_consts[86];
-        tmp_args_element_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_4);
+        tmp_expression_name_5 = var_data;
+        tmp_subscript_name_4 = mod_consts[84];
+        tmp_args_element_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_4);
         if (tmp_args_element_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 145;
             type_description_1 = "oooooooo";
@@ -3976,12 +3934,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         frame_f994a000cb7ab1cb85aee16275662166->m_frame.f_lineno = 145;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_expression_name_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_7);
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3991,9 +3948,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_5 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_5, 0);
-        Py_DECREF(tmp_expression_name_6);
+        tmp_subscript_name_5 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_5, 0);
+        Py_DECREF(tmp_expression_name_4);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4011,12 +3968,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         bool tmp_condition_result_2;
         PyObject *tmp_compexpr_left_3;
         PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         CHECK_OBJECT(var_msgtype);
         tmp_compexpr_left_3 = var_msgtype;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[73]);
+        tmp_expression_name_6 = par_self;
+        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[72]);
         if (tmp_compexpr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4054,9 +4011,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         PyObject *tmp_left_name_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_unicode_arg_1;
-        tmp_called_name_4 = LOOKUP_BUILTIN(mod_consts[92]);
+        tmp_called_name_4 = LOOKUP_BUILTIN(mod_consts[90]);
         assert(tmp_called_name_4 != NULL);
-        tmp_left_name_2 = mod_consts[93];
+        tmp_left_name_2 = mod_consts[91];
         CHECK_OBJECT(var_msgtype);
         tmp_unicode_arg_1 = var_msgtype;
         tmp_right_name_2 = PyObject_Unicode(tmp_unicode_arg_1);
@@ -4100,14 +4057,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
     branch_no_2:;
     {
         PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_6;
         PyObject *tmp_args_element_name_9;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_11 = par_self;
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[73]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_name_8 = par_self;
+        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[72]);
+        if (tmp_expression_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4119,8 +4076,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
         }
         CHECK_OBJECT(var_msgtype);
         tmp_subscript_name_6 = var_msgtype;
-        tmp_called_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_6);
-        Py_DECREF(tmp_expression_name_10);
+        tmp_called_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_6);
+        Py_DECREF(tmp_expression_name_7);
         if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4153,10 +4110,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__7_receive(struct Nuitka_
     {
         PyObject *tmp_called_name_6;
         PyObject *tmp_call_result_2;
-        tmp_called_name_6 = LOOKUP_BUILTIN(mod_consts[92]);
+        tmp_called_name_6 = LOOKUP_BUILTIN(mod_consts[90]);
         assert(tmp_called_name_6 != NULL);
         frame_f994a000cb7ab1cb85aee16275662166->m_frame.f_lineno = 150;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[94]);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[92]);
 
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4369,10 +4326,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__8__handle_close(struct N
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_value_1 = mod_consts[21];
+        tmp_assattr_value_1 = mod_consts[20];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[96], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[94], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4530,29 +4487,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 160;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4563,16 +4508,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 160;
             type_description_1 = "ooooooooo";
@@ -4584,7 +4529,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4596,7 +4540,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -4637,7 +4581,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     branch_yes_1:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_stop_name_1;
@@ -4647,10 +4591,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         PyObject *tmp_right_name_2;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_4 = par_data;
-        tmp_start_name_1 = mod_consts[29];
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_3 = par_data;
+        tmp_start_name_1 = mod_consts[28];
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -4679,7 +4623,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         tmp_subscript_name_3 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_assattr_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
+        tmp_assattr_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4693,7 +4637,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[99], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[97], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -4709,12 +4653,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_6;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_subscript_name_4;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_3;
@@ -4727,23 +4670,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         PyObject *tmp_left_name_6;
         PyObject *tmp_right_name_6;
         PyObject *tmp_subscript_name_5;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 164;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4754,14 +4686,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_7 = par_data;
-        tmp_left_name_3 = mod_consts[29];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_expression_name_5 = par_data;
+        tmp_left_name_3 = mod_consts[28];
+        tmp_left_name_4 = mod_consts[24];
         if (var_sourceid_num == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4777,7 +4709,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 164;
             type_description_1 = "ooooooooo";
@@ -4789,18 +4721,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 164;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_5 = mod_consts[33];
-        tmp_left_name_6 = mod_consts[25];
+        tmp_left_name_5 = mod_consts[32];
+        tmp_left_name_6 = mod_consts[24];
         if (var_sourceid_num == NULL) {
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4816,7 +4747,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 164;
@@ -4829,7 +4759,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 164;
@@ -4840,13 +4769,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_4 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_4);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_4);
         Py_DECREF(tmp_subscript_name_4);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 164;
             type_description_1 = "ooooooooo";
@@ -4855,12 +4784,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         frame_ccffd713bfcb3c91be440ed0bc9a67f0->m_frame.f_lineno = 164;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4870,9 +4798,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_5 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_5, 0);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_subscript_name_5 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_5, 0);
+        Py_DECREF(tmp_expression_name_4);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4911,7 +4839,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_6;
         PyObject *tmp_start_name_3;
         PyObject *tmp_left_name_7;
@@ -4928,12 +4856,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_8 = par_data;
-        tmp_left_name_7 = mod_consts[33];
-        tmp_left_name_8 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_7 = mod_consts[32];
+        tmp_left_name_8 = mod_consts[24];
         if (var_sourceid_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4967,11 +4895,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[33];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[32];
+        tmp_left_name_11 = mod_consts[24];
         if (var_sourceid_num == NULL) {
             Py_DECREF(tmp_start_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5005,7 +4933,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -5037,7 +4965,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         Py_DECREF(tmp_start_name_3);
         Py_DECREF(tmp_stop_name_3);
         assert(!(tmp_subscript_name_6 == NULL));
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_6);
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_6);
         Py_DECREF(tmp_subscript_name_6);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5055,12 +4983,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_10;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_4;
         PyObject *tmp_left_name_13;
@@ -5081,23 +5008,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         PyObject *tmp_left_name_20;
         PyObject *tmp_right_name_20;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 169;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5108,14 +5024,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_11 = par_data;
-        tmp_left_name_14 = mod_consts[33];
-        tmp_left_name_15 = mod_consts[25];
+        tmp_expression_name_8 = par_data;
+        tmp_left_name_14 = mod_consts[32];
+        tmp_left_name_15 = mod_consts[24];
         if (var_sourceid_num == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5131,7 +5047,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 169;
             type_description_1 = "ooooooooo";
@@ -5143,17 +5059,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 169;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_16 = mod_consts[25];
+        tmp_left_name_16 = mod_consts[24];
         if (var_userid_num == NULL) {
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[101]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5169,7 +5084,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_13);
 
             exception_lineno = 169;
@@ -5183,18 +5097,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 169;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_18 = mod_consts[41];
-        tmp_left_name_19 = mod_consts[25];
+        tmp_left_name_18 = mod_consts[40];
+        tmp_left_name_19 = mod_consts[24];
         if (var_sourceid_num == NULL) {
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[98]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5210,7 +5123,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
 
             exception_lineno = 169;
@@ -5223,19 +5135,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
 
             exception_lineno = 169;
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_20 = mod_consts[25];
+        tmp_left_name_20 = mod_consts[24];
         if (var_userid_num == NULL) {
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
             Py_DECREF(tmp_left_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[101]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5251,7 +5161,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
             Py_DECREF(tmp_left_name_17);
 
@@ -5266,7 +5175,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_4);
 
             exception_lineno = 169;
@@ -5277,13 +5185,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         Py_DECREF(tmp_start_name_4);
         Py_DECREF(tmp_stop_name_4);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_7);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 169;
             type_description_1 = "ooooooooo";
@@ -5292,12 +5200,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         frame_ccffd713bfcb3c91be440ed0bc9a67f0->m_frame.f_lineno = 169;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5307,9 +5214,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_8 = mod_consts[21];
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_8, 0);
-        Py_DECREF(tmp_expression_name_9);
+        tmp_subscript_name_8 = mod_consts[20];
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_8, 0);
+        Py_DECREF(tmp_expression_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5325,13 +5232,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_subscript_name_9;
         PyObject *tmp_start_name_5;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_5;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_12 = par_data;
+        tmp_expression_name_9 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_5 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -5349,7 +5256,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         tmp_subscript_name_9 = MAKE_SLICEOBJ2(tmp_start_name_5, tmp_stop_name_5);
         Py_DECREF(tmp_start_name_5);
         assert(!(tmp_subscript_name_9 == NULL));
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_9);
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_9);
         Py_DECREF(tmp_subscript_name_9);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5366,31 +5273,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_14;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_name_11;
         PyObject *tmp_subscript_name_10;
         PyObject *tmp_subscript_name_11;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 172;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5401,16 +5296,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[91];
+        tmp_args_element_name_7 = mod_consts[89];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_15 = var_payload;
-        tmp_subscript_name_10 = mod_consts[86];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_10);
+        tmp_expression_name_11 = var_payload;
+        tmp_subscript_name_10 = mod_consts[84];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 172;
             type_description_1 = "ooooooooo";
@@ -5419,12 +5314,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         frame_ccffd713bfcb3c91be440ed0bc9a67f0->m_frame.f_lineno = 172;
         {
             PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_13 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_expression_name_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5434,9 +5328,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_11 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_11, 0);
-        Py_DECREF(tmp_expression_name_13);
+        tmp_subscript_name_11 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_11, 0);
+        Py_DECREF(tmp_expression_name_10);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5452,13 +5346,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_subscript_name_12;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_17 = par_self;
-        tmp_expression_name_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[75]);
-        if (tmp_expression_name_16 == NULL) {
+        tmp_expression_name_13 = par_self;
+        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[74]);
+        if (tmp_expression_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5470,8 +5364,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         }
         CHECK_OBJECT(var_sim_status);
         tmp_subscript_name_12 = var_sim_status;
-        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_12);
-        Py_DECREF(tmp_expression_name_16);
+        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_12);
+        Py_DECREF(tmp_expression_name_12);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5487,13 +5381,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_name_14;
         PyObject *tmp_subscript_name_13;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_18 = var_payload;
-        tmp_subscript_name_13 = mod_consts[102];
-        tmp_assattr_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_13);
+        tmp_expression_name_14 = var_payload;
+        tmp_subscript_name_13 = mod_consts[100];
+        tmp_assattr_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_13);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5506,7 +5400,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[103], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[101], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -5522,22 +5416,22 @@ static PyObject *impl_powerworldDS_eventlet$$$function__9_dsmconnected(struct Nu
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[105];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[103];
         tmp_return_value = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_19;
+            PyObject *tmp_expression_name_15;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[75];
+            tmp_dict_key_1 = mod_consts[74];
             CHECK_OBJECT(var_status);
             tmp_dict_value_1 = var_status;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[106];
+            tmp_dict_key_1 = mod_consts[104];
             CHECK_OBJECT(par_self);
-            tmp_expression_name_19 = par_self;
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[103]);
+            tmp_expression_name_15 = par_self;
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[101]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5770,29 +5664,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 180;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5803,16 +5685,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 180;
             type_description_1 = "oooo";
@@ -5824,7 +5706,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5836,7 +5717,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -5854,12 +5735,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -5872,23 +5752,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 181;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5899,11 +5768,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -5911,7 +5780,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 181;
             type_description_1 = "oooo";
@@ -5923,14 +5792,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 181;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -5938,7 +5807,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 181;
@@ -5951,7 +5819,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 181;
@@ -5962,13 +5829,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 181;
             type_description_1 = "oooo";
@@ -5977,12 +5844,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
         frame_5d37a608bbafb0c0131247fc163d9061->m_frame.f_lineno = 181;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5992,9 +5858,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6061,7 +5927,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__10_dsmdisconnect(struct 
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    tmp_return_value = PyDict_Copy(mod_consts[107]);
+    tmp_return_value = PyDict_Copy(mod_consts[105]);
     goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
@@ -6188,29 +6054,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 189;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6221,16 +6075,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 189;
             type_description_1 = "ooNooooooooo";
@@ -6242,7 +6096,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6254,7 +6107,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -6272,12 +6125,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -6290,23 +6142,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 190;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6317,11 +6158,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -6329,7 +6170,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 190;
             type_description_1 = "ooNooooooooo";
@@ -6341,14 +6182,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 190;
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -6356,7 +6197,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 190;
@@ -6369,7 +6209,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 190;
@@ -6380,13 +6219,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 190;
             type_description_1 = "ooNooooooooo";
@@ -6395,12 +6234,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         frame_18af9b723e9d64a02bd57d19003f9a23->m_frame.f_lineno = 190;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6410,9 +6248,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6428,12 +6266,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -6454,23 +6291,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 192;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6481,11 +6307,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -6493,7 +6319,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 192;
             type_description_1 = "ooNooooooooo";
@@ -6505,13 +6331,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 192;
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -6519,7 +6345,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 192;
@@ -6533,14 +6358,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 192;
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -6548,7 +6373,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 192;
@@ -6561,14 +6385,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 192;
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -6576,7 +6399,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -6591,7 +6413,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 192;
@@ -6602,13 +6423,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 192;
             type_description_1 = "ooNooooooooo";
@@ -6617,12 +6438,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         frame_18af9b723e9d64a02bd57d19003f9a23->m_frame.f_lineno = 192;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6632,9 +6452,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6650,13 +6470,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -6674,7 +6494,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6691,31 +6511,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_subscript_name_8;
         PyObject *tmp_subscript_name_9;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 194;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6726,16 +6534,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[108];
+        tmp_args_element_name_7 = mod_consts[106];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_13 = var_payload;
-        tmp_subscript_name_8 = mod_consts[109];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_8);
+        tmp_expression_name_9 = var_payload;
+        tmp_subscript_name_8 = mod_consts[107];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 194;
             type_description_1 = "ooNooooooooo";
@@ -6744,12 +6552,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         frame_18af9b723e9d64a02bd57d19003f9a23->m_frame.f_lineno = 194;
         {
             PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_expression_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6759,9 +6566,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_9 = mod_consts[21];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_9, 0);
-        Py_DECREF(tmp_expression_name_11);
+        tmp_subscript_name_9 = mod_consts[20];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_9, 0);
+        Py_DECREF(tmp_expression_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6777,31 +6584,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_15;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_16;
+        PyObject *tmp_expression_name_11;
         PyObject *tmp_subscript_name_10;
         PyObject *tmp_subscript_name_11;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 195;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[84]);
         if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6812,16 +6607,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = mod_consts[91];
+        tmp_args_element_name_9 = mod_consts[89];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_16 = var_payload;
-        tmp_subscript_name_10 = mod_consts[98];
-        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_10);
+        tmp_expression_name_11 = var_payload;
+        tmp_subscript_name_10 = mod_consts[96];
+        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
         if (tmp_args_element_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 195;
             type_description_1 = "ooNooooooooo";
@@ -6830,12 +6625,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         frame_18af9b723e9d64a02bd57d19003f9a23->m_frame.f_lineno = 195;
         {
             PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_expression_name_14 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_expression_name_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_10);
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6845,9 +6639,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_11 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_11, 0);
-        Py_DECREF(tmp_expression_name_14);
+        tmp_subscript_name_11 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_11, 0);
+        Py_DECREF(tmp_expression_name_10);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6863,13 +6657,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_subscript_name_12;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_18 = par_self;
-        tmp_expression_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[75]);
-        if (tmp_expression_name_17 == NULL) {
+        tmp_expression_name_13 = par_self;
+        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[74]);
+        if (tmp_expression_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6881,8 +6675,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         }
         CHECK_OBJECT(var_status_index);
         tmp_subscript_name_12 = var_status_index;
-        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_12);
-        Py_DECREF(tmp_expression_name_17);
+        tmp_assign_source_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_12);
+        Py_DECREF(tmp_expression_name_12);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6905,7 +6699,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
         PyObject *tmp_right_name_14;
         CHECK_OBJECT(var_payloadsize);
         tmp_left_name_14 = var_payloadsize;
-        tmp_right_name_13 = mod_consts[45];
+        tmp_right_name_13 = mod_consts[44];
         tmp_left_name_13 = BINARY_OPERATION_SUB_OBJECT_OBJECT_LONG(tmp_left_name_14, tmp_right_name_13);
         if (tmp_left_name_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6917,7 +6711,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_14 = mod_consts[29];
+        tmp_right_name_14 = mod_consts[28];
         tmp_int_arg_1 = BINARY_OPERATION_TRUEDIV_OBJECT_OBJECT_LONG(tmp_left_name_13, tmp_right_name_14);
         Py_DECREF(tmp_left_name_13);
         if (tmp_int_arg_1 == NULL) {
@@ -6948,32 +6742,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_19;
         PyObject *tmp_args_element_name_11;
         PyObject *tmp_left_name_15;
         PyObject *tmp_right_name_15;
         PyObject *tmp_left_name_16;
         PyObject *tmp_right_name_16;
         PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_expression_name_14;
         PyObject *tmp_subscript_name_13;
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 199;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[84]);
         if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6984,16 +6766,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_15 = mod_consts[110];
+        tmp_left_name_15 = mod_consts[108];
         CHECK_OBJECT(var_number);
         tmp_left_name_16 = var_number;
-        tmp_right_name_16 = mod_consts[111];
+        tmp_right_name_16 = mod_consts[109];
         tmp_right_name_15 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_16, tmp_right_name_16);
         if (tmp_right_name_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 199;
             type_description_1 = "ooNooooooooo";
@@ -7005,21 +6787,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 199;
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_20 = var_payload;
-        tmp_subscript_name_13 = mod_consts[112];
-        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_13);
+        tmp_expression_name_14 = var_payload;
+        tmp_subscript_name_13 = mod_consts[110];
+        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_13);
         if (tmp_args_element_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
             Py_DECREF(tmp_args_element_name_11);
 
             exception_lineno = 199;
@@ -7032,7 +6813,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
         Py_DECREF(tmp_args_element_name_11);
         Py_DECREF(tmp_args_element_name_12);
         if (tmp_assign_source_9 == NULL) {
@@ -7056,28 +6836,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_21;
         PyObject *tmp_args_element_name_13;
         PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_22;
+        PyObject *tmp_expression_name_15;
         PyObject *tmp_subscript_name_14;
-        tmp_expression_name_21 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_21 == NULL)) {
-            tmp_expression_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_21 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 200;
-            type_description_1 = "ooNooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[84]);
         if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7088,16 +6856,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             type_description_1 = "ooNooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_13 = mod_consts[113];
+        tmp_args_element_name_13 = mod_consts[111];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_22 = var_payload;
-        tmp_subscript_name_14 = mod_consts[114];
-        tmp_args_element_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_22, tmp_subscript_name_14);
+        tmp_expression_name_15 = var_payload;
+        tmp_subscript_name_14 = mod_consts[112];
+        tmp_args_element_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_14);
         if (tmp_args_element_name_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 200;
             type_description_1 = "ooNooooooooo";
@@ -7109,7 +6877,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
             tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
         Py_DECREF(tmp_args_element_name_14);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7127,63 +6894,63 @@ static PyObject *impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata(str
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[115];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[113];
         tmp_return_value = _PyDict_NewPresized( 6 );
         {
-            PyObject *tmp_expression_name_23;
+            PyObject *tmp_expression_name_16;
             PyObject *tmp_subscript_name_15;
-            PyObject *tmp_expression_name_24;
+            PyObject *tmp_expression_name_17;
             PyObject *tmp_subscript_name_16;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[116];
+            tmp_dict_key_1 = mod_consts[114];
             CHECK_OBJECT(var_id);
             tmp_dict_value_1 = var_id;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[117];
+            tmp_dict_key_1 = mod_consts[115];
             CHECK_OBJECT(var_status);
             tmp_dict_value_1 = var_status;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[116];
+            CHECK_OBJECT(var_simtime);
+            tmp_expression_name_16 = var_simtime;
+            tmp_subscript_name_15 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_15, 0);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 210;
+                type_description_1 = "ooNooooooooo";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[117];
+            CHECK_OBJECT(var_simtime);
+            tmp_expression_name_17 = var_simtime;
+            tmp_subscript_name_16 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_16, 1);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 210;
+                type_description_1 = "ooNooooooooo";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[118];
-            CHECK_OBJECT(var_simtime);
-            tmp_expression_name_23 = var_simtime;
-            tmp_subscript_name_15 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_23, tmp_subscript_name_15, 0);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 210;
-                type_description_1 = "ooNooooooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[119];
-            CHECK_OBJECT(var_simtime);
-            tmp_expression_name_24 = var_simtime;
-            tmp_subscript_name_16 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_24, tmp_subscript_name_16, 1);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 210;
-                type_description_1 = "ooNooooooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[120];
             CHECK_OBJECT(par_data);
             tmp_dict_value_1 = par_data;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
@@ -7430,29 +7197,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 214;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7463,16 +7218,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 214;
             type_description_1 = "oooooooo";
@@ -7484,7 +7239,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7496,7 +7250,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -7514,12 +7268,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -7532,23 +7285,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 215;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7559,11 +7301,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -7571,7 +7313,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 215;
             type_description_1 = "oooooooo";
@@ -7583,14 +7325,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 215;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -7598,7 +7340,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 215;
@@ -7611,7 +7352,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 215;
@@ -7622,13 +7362,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 215;
             type_description_1 = "oooooooo";
@@ -7637,12 +7377,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         frame_d0098c5b37e9a31c62e54090019c424c->m_frame.f_lineno = 215;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7652,9 +7391,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7670,12 +7409,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -7696,23 +7434,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 217;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7723,11 +7450,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -7735,7 +7462,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 217;
             type_description_1 = "oooooooo";
@@ -7747,13 +7474,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 217;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -7761,7 +7488,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 217;
@@ -7775,14 +7501,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 217;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -7790,7 +7516,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 217;
@@ -7803,14 +7528,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 217;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -7818,7 +7542,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -7833,7 +7556,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 217;
@@ -7844,13 +7566,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 217;
             type_description_1 = "oooooooo";
@@ -7859,12 +7581,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         frame_d0098c5b37e9a31c62e54090019c424c->m_frame.f_lineno = 217;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7874,9 +7595,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7892,13 +7613,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -7916,7 +7637,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7934,28 +7655,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 219;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7966,16 +7675,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[122];
+        tmp_args_element_name_7 = mod_consts[120];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_12 = var_payload;
-        tmp_subscript_name_8 = mod_consts[123];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_8);
+        tmp_expression_name_8 = var_payload;
+        tmp_subscript_name_8 = mod_consts[121];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 219;
             type_description_1 = "oooooooo";
@@ -7987,7 +7696,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8004,31 +7712,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_14;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_subscript_name_9;
         PyObject *tmp_subscript_name_10;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 220;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[84]);
         if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8039,16 +7735,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = mod_consts[124];
+        tmp_args_element_name_9 = mod_consts[122];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_15 = var_payload;
-        tmp_subscript_name_9 = mod_consts[125];
-        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_9);
+        tmp_expression_name_10 = var_payload;
+        tmp_subscript_name_9 = mod_consts[123];
+        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_9);
         if (tmp_args_element_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 220;
             type_description_1 = "oooooooo";
@@ -8057,12 +7753,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
         frame_d0098c5b37e9a31c62e54090019c424c->m_frame.f_lineno = 220;
         {
             PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_expression_name_13 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_expression_name_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_10);
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8072,9 +7767,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_10 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_10, 0);
-        Py_DECREF(tmp_expression_name_13);
+        tmp_subscript_name_10 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_10, 0);
+        Py_DECREF(tmp_expression_name_9);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8091,25 +7786,61 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[126];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[124];
         tmp_return_value = _PyDict_NewPresized( 6 );
         {
-            PyObject *tmp_expression_name_16;
+            PyObject *tmp_expression_name_11;
             PyObject *tmp_subscript_name_11;
-            PyObject *tmp_expression_name_17;
+            PyObject *tmp_expression_name_12;
             PyObject *tmp_subscript_name_12;
-            PyObject *tmp_expression_name_18;
+            PyObject *tmp_expression_name_13;
             PyObject *tmp_subscript_name_13;
-            PyObject *tmp_expression_name_19;
+            PyObject *tmp_expression_name_14;
             PyObject *tmp_subscript_name_14;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[125];
+            CHECK_OBJECT(var_simtime);
+            tmp_expression_name_11 = var_simtime;
+            tmp_subscript_name_11 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_11, 0);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 221;
+                type_description_1 = "oooooooo";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
+            tmp_dict_key_1 = mod_consts[126];
+            CHECK_OBJECT(var_simtime);
+            tmp_expression_name_12 = var_simtime;
+            tmp_subscript_name_12 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_12, 1);
+            if (tmp_dict_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 221;
+                type_description_1 = "oooooooo";
+                goto dict_build_exception_1;
+            }
+            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
+            Py_DECREF(tmp_dict_value_1);
+            assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[127];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_16 = var_simtime;
-            tmp_subscript_name_11 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_11, 0);
+            tmp_expression_name_13 = var_simtime;
+            tmp_subscript_name_13 = mod_consts[24];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_13, 2);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8125,9 +7856,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[128];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_17 = var_simtime;
-            tmp_subscript_name_12 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_12, 1);
+            tmp_expression_name_14 = var_simtime;
+            tmp_subscript_name_14 = mod_consts[26];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_14, 3);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -8142,42 +7873,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation(st
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[129];
-            CHECK_OBJECT(var_simtime);
-            tmp_expression_name_18 = var_simtime;
-            tmp_subscript_name_13 = mod_consts[25];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_13, 2);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 221;
-                type_description_1 = "oooooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[130];
-            CHECK_OBJECT(var_simtime);
-            tmp_expression_name_19 = var_simtime;
-            tmp_subscript_name_14 = mod_consts[27];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_19, tmp_subscript_name_14, 3);
-            if (tmp_dict_value_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 221;
-                type_description_1 = "oooooooo";
-                goto dict_build_exception_1;
-            }
-            tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
-            Py_DECREF(tmp_dict_value_1);
-            assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[131];
             CHECK_OBJECT(var_speedup);
             tmp_dict_value_1 = var_speedup;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
@@ -8402,29 +8097,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 225;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8435,16 +8118,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 225;
             type_description_1 = "ooooooo";
@@ -8456,7 +8139,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8468,7 +8150,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -8486,12 +8168,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -8504,23 +8185,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 226;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8531,11 +8201,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -8543,7 +8213,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 226;
             type_description_1 = "ooooooo";
@@ -8555,14 +8225,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 226;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -8570,7 +8240,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 226;
@@ -8583,7 +8252,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 226;
@@ -8594,13 +8262,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 226;
             type_description_1 = "ooooooo";
@@ -8609,12 +8277,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         frame_51f5e8ddc52117e9a3cedd85542c8b12->m_frame.f_lineno = 226;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8624,9 +8291,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8642,12 +8309,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -8668,23 +8334,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 228;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8695,11 +8350,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -8707,7 +8362,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 228;
             type_description_1 = "ooooooo";
@@ -8719,13 +8374,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 228;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -8733,7 +8388,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 228;
@@ -8747,14 +8401,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 228;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -8762,7 +8416,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 228;
@@ -8775,14 +8428,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 228;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -8790,7 +8442,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -8805,7 +8456,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 228;
@@ -8816,13 +8466,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 228;
             type_description_1 = "ooooooo";
@@ -8831,12 +8481,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         frame_51f5e8ddc52117e9a3cedd85542c8b12->m_frame.f_lineno = 228;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8846,9 +8495,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8864,13 +8513,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -8888,7 +8537,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8906,28 +8555,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 230;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8938,16 +8575,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[113];
+        tmp_args_element_name_7 = mod_consts[111];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_12 = var_payload;
-        tmp_subscript_name_8 = mod_consts[132];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_8);
+        tmp_expression_name_8 = var_payload;
+        tmp_subscript_name_8 = mod_consts[130];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 230;
             type_description_1 = "ooooooo";
@@ -8959,7 +8596,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -8977,21 +8613,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[133];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[131];
         tmp_return_value = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_13;
+            PyObject *tmp_expression_name_9;
             PyObject *tmp_subscript_name_9;
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_expression_name_10;
             PyObject *tmp_subscript_name_10;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[134];
+            tmp_dict_key_1 = mod_consts[132];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_13 = var_simtime;
-            tmp_subscript_name_9 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_9, 0);
+            tmp_expression_name_9 = var_simtime;
+            tmp_subscript_name_9 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_9, 0);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9005,11 +8641,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation(st
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[135];
+            tmp_dict_key_1 = mod_consts[133];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_14 = var_simtime;
-            tmp_subscript_name_10 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_10, 1);
+            tmp_expression_name_10 = var_simtime;
+            tmp_subscript_name_10 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_10, 1);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9237,29 +8873,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 234;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9270,16 +8894,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 234;
             type_description_1 = "ooooooo";
@@ -9291,7 +8915,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9303,7 +8926,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -9321,12 +8944,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -9339,23 +8961,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 235;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9366,11 +8977,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -9378,7 +8989,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 235;
             type_description_1 = "ooooooo";
@@ -9390,14 +9001,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 235;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -9405,7 +9016,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 235;
@@ -9418,7 +9028,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 235;
@@ -9429,13 +9038,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 235;
             type_description_1 = "ooooooo";
@@ -9444,12 +9053,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         frame_86a8065d469be653249a94e7f5246bcb->m_frame.f_lineno = 235;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9459,9 +9067,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9477,12 +9085,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -9503,23 +9110,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 237;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9530,11 +9126,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -9542,7 +9138,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 237;
             type_description_1 = "ooooooo";
@@ -9554,13 +9150,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 237;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -9568,7 +9164,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 237;
@@ -9582,14 +9177,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 237;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -9597,7 +9192,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 237;
@@ -9610,14 +9204,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 237;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -9625,7 +9218,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -9640,7 +9232,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 237;
@@ -9651,13 +9242,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 237;
             type_description_1 = "ooooooo";
@@ -9666,12 +9257,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         frame_86a8065d469be653249a94e7f5246bcb->m_frame.f_lineno = 237;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9681,9 +9271,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9699,13 +9289,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -9723,7 +9313,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9741,28 +9331,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 239;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9773,16 +9351,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[113];
+        tmp_args_element_name_7 = mod_consts[111];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_12 = var_payload;
-        tmp_subscript_name_8 = mod_consts[132];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_8);
+        tmp_expression_name_8 = var_payload;
+        tmp_subscript_name_8 = mod_consts[130];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 239;
             type_description_1 = "ooooooo";
@@ -9794,7 +9372,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9812,21 +9389,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[136];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[134];
         tmp_return_value = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_13;
+            PyObject *tmp_expression_name_9;
             PyObject *tmp_subscript_name_9;
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_expression_name_10;
             PyObject *tmp_subscript_name_10;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[134];
+            tmp_dict_key_1 = mod_consts[132];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_13 = var_simtime;
-            tmp_subscript_name_9 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_9, 0);
+            tmp_expression_name_9 = var_simtime;
+            tmp_subscript_name_9 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_9, 0);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9840,11 +9417,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[135];
+            tmp_dict_key_1 = mod_consts[133];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_14 = var_simtime;
-            tmp_subscript_name_10 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_10, 1);
+            tmp_expression_name_10 = var_simtime;
+            tmp_subscript_name_10 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_10, 1);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10072,29 +9649,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 243;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10105,16 +9670,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 243;
             type_description_1 = "ooooooo";
@@ -10126,7 +9691,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10138,7 +9702,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -10156,12 +9720,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -10174,23 +9737,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 244;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10201,11 +9753,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -10213,7 +9765,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 244;
             type_description_1 = "ooooooo";
@@ -10225,14 +9777,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 244;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -10240,7 +9792,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 244;
@@ -10253,7 +9804,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 244;
@@ -10264,13 +9814,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 244;
             type_description_1 = "ooooooo";
@@ -10279,12 +9829,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         frame_4cc26a6e13d46b068e95142ba89540b8->m_frame.f_lineno = 244;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10294,9 +9843,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10312,12 +9861,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -10338,23 +9886,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 246;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10365,11 +9902,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -10377,7 +9914,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 246;
             type_description_1 = "ooooooo";
@@ -10389,13 +9926,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 246;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -10403,7 +9940,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 246;
@@ -10417,14 +9953,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 246;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -10432,7 +9968,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 246;
@@ -10445,14 +9980,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 246;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -10460,7 +9994,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -10475,7 +10008,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 246;
@@ -10486,13 +10018,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 246;
             type_description_1 = "ooooooo";
@@ -10501,12 +10033,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         frame_4cc26a6e13d46b068e95142ba89540b8->m_frame.f_lineno = 246;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10516,9 +10047,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10534,13 +10065,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -10558,7 +10089,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10576,28 +10107,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 248;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10608,16 +10127,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[113];
+        tmp_args_element_name_7 = mod_consts[111];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_12 = var_payload;
-        tmp_subscript_name_8 = mod_consts[132];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_8);
+        tmp_expression_name_8 = var_payload;
+        tmp_subscript_name_8 = mod_consts[130];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 248;
             type_description_1 = "ooooooo";
@@ -10629,7 +10148,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10647,21 +10165,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[137];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[135];
         tmp_return_value = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_13;
+            PyObject *tmp_expression_name_9;
             PyObject *tmp_subscript_name_9;
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_expression_name_10;
             PyObject *tmp_subscript_name_10;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[129];
+            tmp_dict_key_1 = mod_consts[127];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_13 = var_simtime;
-            tmp_subscript_name_9 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_9, 0);
+            tmp_expression_name_9 = var_simtime;
+            tmp_subscript_name_9 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_9, 0);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10675,11 +10193,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation(s
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[130];
+            tmp_dict_key_1 = mod_consts[128];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_14 = var_simtime;
-            tmp_subscript_name_10 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_10, 1);
+            tmp_expression_name_10 = var_simtime;
+            tmp_subscript_name_10 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_10, 1);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10907,29 +10425,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 252;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10940,16 +10446,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 252;
             type_description_1 = "ooooooo";
@@ -10961,7 +10467,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10973,7 +10478,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -10991,12 +10496,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -11009,23 +10513,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 253;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11036,11 +10529,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -11048,7 +10541,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 253;
             type_description_1 = "ooooooo";
@@ -11060,14 +10553,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 253;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -11075,7 +10568,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 253;
@@ -11088,7 +10580,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 253;
@@ -11099,13 +10590,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 253;
             type_description_1 = "ooooooo";
@@ -11114,12 +10605,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         frame_50d83e29c42eead1bdaff32295b25b40->m_frame.f_lineno = 253;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11129,9 +10619,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11147,12 +10637,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -11173,23 +10662,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 255;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11200,11 +10678,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -11212,7 +10690,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 255;
             type_description_1 = "ooooooo";
@@ -11224,13 +10702,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 255;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -11238,7 +10716,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 255;
@@ -11252,14 +10729,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 255;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -11267,7 +10744,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 255;
@@ -11280,14 +10756,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 255;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -11295,7 +10770,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -11310,7 +10784,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 255;
@@ -11321,13 +10794,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 255;
             type_description_1 = "ooooooo";
@@ -11336,12 +10809,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         frame_50d83e29c42eead1bdaff32295b25b40->m_frame.f_lineno = 255;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11351,9 +10823,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11369,13 +10841,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -11393,7 +10865,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11411,28 +10883,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_11;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_8;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 257;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11443,16 +10903,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[113];
+        tmp_args_element_name_7 = mod_consts[111];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_12 = var_payload;
-        tmp_subscript_name_8 = mod_consts[132];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_8);
+        tmp_expression_name_8 = var_payload;
+        tmp_subscript_name_8 = mod_consts[130];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 257;
             type_description_1 = "ooooooo";
@@ -11464,7 +10924,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11482,21 +10941,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[138];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[136];
         tmp_return_value = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_13;
+            PyObject *tmp_expression_name_9;
             PyObject *tmp_subscript_name_9;
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_expression_name_10;
             PyObject *tmp_subscript_name_10;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[139];
+            tmp_dict_key_1 = mod_consts[137];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_13 = var_simtime;
-            tmp_subscript_name_9 = mod_consts[21];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_9, 0);
+            tmp_expression_name_9 = var_simtime;
+            tmp_subscript_name_9 = mod_consts[20];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_9, tmp_subscript_name_9, 0);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -11510,11 +10969,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation(st
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[140];
+            tmp_dict_key_1 = mod_consts[138];
             CHECK_OBJECT(var_simtime);
-            tmp_expression_name_14 = var_simtime;
-            tmp_subscript_name_10 = mod_consts[23];
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_10, 1);
+            tmp_expression_name_10 = var_simtime;
+            tmp_subscript_name_10 = mod_consts[22];
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_10, 1);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -11693,7 +11152,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__17_dsmgetclientinfo(stru
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    tmp_return_value = PyDict_Copy(mod_consts[141]);
+    tmp_return_value = PyDict_Copy(mod_consts[139]);
     goto function_return_exit;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -11727,7 +11186,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__18_dsmtextmessage(struct
     PyObject *tmp_return_value = NULL;
 
     // Actual function body.
-    tmp_return_value = PyDict_Copy(mod_consts[142]);
+    tmp_return_value = PyDict_Copy(mod_consts[140]);
     goto function_return_exit;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
@@ -11865,29 +11324,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 273;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11898,16 +11345,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 273;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -11919,7 +11366,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11931,7 +11377,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -11949,12 +11395,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -11967,23 +11412,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 274;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11994,11 +11428,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -12006,7 +11440,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 274;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12018,14 +11452,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 274;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -12033,7 +11467,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 274;
@@ -12046,7 +11479,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 274;
@@ -12057,13 +11489,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 274;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12072,12 +11504,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 274;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12087,9 +11518,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12105,12 +11536,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -12131,23 +11561,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 276;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12158,11 +11577,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -12170,7 +11589,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 276;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12182,13 +11601,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 276;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -12196,7 +11615,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 276;
@@ -12210,14 +11628,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 276;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -12225,7 +11643,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 276;
@@ -12238,14 +11655,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 276;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -12253,7 +11669,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -12268,7 +11683,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 276;
@@ -12279,13 +11693,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 276;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12294,12 +11708,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 276;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12309,9 +11722,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12327,13 +11740,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -12351,7 +11764,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12374,31 +11787,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_subscript_name_8;
         PyObject *tmp_subscript_name_9;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 279;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12409,16 +11810,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[91];
+        tmp_args_element_name_7 = mod_consts[89];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_13 = var_payload;
-        tmp_subscript_name_8 = mod_consts[143];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_8);
+        tmp_expression_name_9 = var_payload;
+        tmp_subscript_name_8 = mod_consts[141];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 279;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12427,12 +11828,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 279;
         {
             PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_expression_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12442,9 +11842,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_9 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_9, 0);
-        Py_DECREF(tmp_expression_name_11);
+        tmp_subscript_name_9 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_9, 0);
+        Py_DECREF(tmp_expression_name_8);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12458,10 +11858,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         assert(var_objecttype_count == NULL);
         var_objecttype_count = tmp_assign_source_6;
     }
-    tmp_dictset_value = mod_consts[144];
+    tmp_dictset_value = mod_consts[142];
     CHECK_OBJECT(var_d);
     tmp_dictset_dict = var_d;
-    tmp_dictset_key = mod_consts[104];
+    tmp_dictset_key = mod_consts[102];
     tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
     assert(!(tmp_res != 0));
     {
@@ -12472,7 +11872,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_ass_subvalue_1 = var_objecttype_count;
         CHECK_OBJECT(var_d);
         tmp_ass_subscribed_1 = var_d;
-        tmp_ass_subscript_1 = mod_consts[145];
+        tmp_ass_subscript_1 = mod_consts[143];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -12487,7 +11887,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = mod_consts[57];
+        tmp_assign_source_7 = mod_consts[56];
         assert(var_point == NULL);
         Py_INCREF(tmp_assign_source_7);
         var_point = tmp_assign_source_7;
@@ -12501,7 +11901,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_13;
         if (var_payload == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12525,7 +11925,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
         if (var_point == NULL) {
             Py_DECREF(tmp_left_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12572,35 +11972,23 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     branch_no_1:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_15;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_16;
+        PyObject *tmp_expression_name_11;
         PyObject *tmp_subscript_name_10;
         PyObject *tmp_start_name_4;
         PyObject *tmp_stop_name_4;
         PyObject *tmp_left_name_14;
         PyObject *tmp_right_name_14;
         PyObject *tmp_subscript_name_11;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 284;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[84]);
         if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12611,10 +11999,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = mod_consts[91];
+        tmp_args_element_name_9 = mod_consts[89];
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12624,10 +12012,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_16 = var_payload;
+        tmp_expression_name_11 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12639,8 +12027,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_4 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12651,13 +12039,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_14 = var_point;
-        tmp_right_name_14 = mod_consts[25];
+        tmp_right_name_14 = mod_consts[24];
         tmp_stop_name_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_14, tmp_right_name_14);
         if (tmp_stop_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 284;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12666,13 +12054,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_10 = MAKE_SLICEOBJ2(tmp_start_name_4, tmp_stop_name_4);
         Py_DECREF(tmp_stop_name_4);
         assert(!(tmp_subscript_name_10 == NULL));
-        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_10);
+        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
         Py_DECREF(tmp_subscript_name_10);
         if (tmp_args_element_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 284;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -12681,12 +12069,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 284;
         {
             PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_expression_name_14 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_expression_name_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_10);
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12696,9 +12083,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_11 = mod_consts[21];
-        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_11, 0);
-        Py_DECREF(tmp_expression_name_14);
+        tmp_subscript_name_11 = mod_consts[20];
+        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_11, 0);
+        Py_DECREF(tmp_expression_name_10);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12719,7 +12106,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_name_12;
         PyObject *tmp_subscript_name_12;
         PyObject *tmp_start_name_5;
         PyObject *tmp_left_name_15;
@@ -12733,7 +12120,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_18;
         if (var_payload == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12743,10 +12130,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_17 = var_payload;
+        tmp_expression_name_12 = var_payload;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12757,7 +12144,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_15 = var_point;
-        tmp_right_name_15 = mod_consts[25];
+        tmp_right_name_15 = mod_consts[24];
         tmp_start_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_15, tmp_right_name_15);
         if (tmp_start_name_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12771,7 +12158,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
         if (var_point == NULL) {
             Py_DECREF(tmp_start_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12782,7 +12169,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_17 = var_point;
-        tmp_right_name_16 = mod_consts[25];
+        tmp_right_name_16 = mod_consts[24];
         tmp_left_name_16 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_17, tmp_right_name_16);
         if (tmp_left_name_16 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12794,7 +12181,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_18 = mod_consts[25];
+        tmp_left_name_18 = mod_consts[24];
         CHECK_OBJECT(var_object_name_num);
         tmp_right_name_18 = var_object_name_num;
         tmp_right_name_17 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_18, tmp_right_name_18);
@@ -12826,7 +12213,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         Py_DECREF(tmp_start_name_5);
         Py_DECREF(tmp_stop_name_5);
         assert(!(tmp_subscript_name_12 == NULL));
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_12);
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_12);
         Py_DECREF(tmp_subscript_name_12);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12841,7 +12228,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 285;
         tmp_assign_source_9 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[148],
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -12873,7 +12260,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_21;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12884,7 +12271,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_20 = var_point;
-        tmp_right_name_19 = mod_consts[25];
+        tmp_right_name_19 = mod_consts[24];
         tmp_left_name_19 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_20, tmp_right_name_19);
         if (tmp_left_name_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12896,7 +12283,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_21 = mod_consts[25];
+        tmp_left_name_21 = mod_consts[24];
         CHECK_OBJECT(var_object_name_num);
         tmp_right_name_21 = var_object_name_num;
         tmp_right_name_20 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_21, tmp_right_name_21);
@@ -12932,35 +12319,23 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_19;
         PyObject *tmp_args_element_name_11;
         PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_expression_name_14;
         PyObject *tmp_subscript_name_13;
         PyObject *tmp_start_name_6;
         PyObject *tmp_stop_name_6;
         PyObject *tmp_left_name_22;
         PyObject *tmp_right_name_22;
         PyObject *tmp_subscript_name_14;
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 287;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[84]);
         if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12971,10 +12346,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_11 = mod_consts[87];
+        tmp_args_element_name_11 = mod_consts[85];
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12984,18 +12359,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_20 = var_payload;
+        tmp_expression_name_14 = var_payload;
         CHECK_OBJECT(var_point);
         tmp_start_name_6 = var_point;
         CHECK_OBJECT(var_point);
         tmp_left_name_22 = var_point;
-        tmp_right_name_22 = mod_consts[29];
+        tmp_right_name_22 = mod_consts[28];
         tmp_stop_name_6 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_22, tmp_right_name_22);
         if (tmp_stop_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 287;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -13004,13 +12379,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_13 = MAKE_SLICEOBJ2(tmp_start_name_6, tmp_stop_name_6);
         Py_DECREF(tmp_stop_name_6);
         assert(!(tmp_subscript_name_13 == NULL));
-        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_13);
+        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_13);
         Py_DECREF(tmp_subscript_name_13);
         if (tmp_args_element_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 287;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -13019,12 +12394,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 287;
         {
             PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_expression_name_18 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            tmp_expression_name_13 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
         Py_DECREF(tmp_args_element_name_12);
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_name_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13034,9 +12408,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_14 = mod_consts[21];
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_14, 0);
-        Py_DECREF(tmp_expression_name_18);
+        tmp_subscript_name_14 = mod_consts[20];
+        tmp_assign_source_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_14, 0);
+        Py_DECREF(tmp_expression_name_13);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13059,10 +12433,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_assign_source_12;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_21;
         PyObject *tmp_args_element_name_13;
         PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_22;
+        PyObject *tmp_expression_name_15;
         PyObject *tmp_subscript_name_15;
         PyObject *tmp_start_name_7;
         PyObject *tmp_left_name_23;
@@ -13070,23 +12443,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_stop_name_7;
         PyObject *tmp_left_name_24;
         PyObject *tmp_right_name_24;
-        tmp_expression_name_21 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_21 == NULL)) {
-            tmp_expression_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_21 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 288;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[84]);
         if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13097,10 +12459,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_13 = mod_consts[149];
+        tmp_args_element_name_13 = mod_consts[147];
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13110,16 +12472,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_22 = var_payload;
+        tmp_expression_name_15 = var_payload;
         CHECK_OBJECT(var_point);
         tmp_left_name_23 = var_point;
-        tmp_right_name_23 = mod_consts[29];
+        tmp_right_name_23 = mod_consts[28];
         tmp_start_name_7 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_23, tmp_right_name_23);
         if (tmp_start_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 289;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -13127,13 +12489,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
         CHECK_OBJECT(var_point);
         tmp_left_name_24 = var_point;
-        tmp_right_name_24 = mod_consts[53];
+        tmp_right_name_24 = mod_consts[52];
         tmp_stop_name_7 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_24, tmp_right_name_24);
         if (tmp_stop_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
             Py_DECREF(tmp_start_name_7);
 
             exception_lineno = 289;
@@ -13144,13 +12505,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         Py_DECREF(tmp_start_name_7);
         Py_DECREF(tmp_stop_name_7);
         assert(!(tmp_subscript_name_15 == NULL));
-        tmp_args_element_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_22, tmp_subscript_name_15);
+        tmp_args_element_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_15);
         Py_DECREF(tmp_subscript_name_15);
         if (tmp_args_element_name_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 288;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -13162,7 +12523,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
         Py_DECREF(tmp_args_element_name_14);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13390,7 +12750,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[150];
+            exception_value = mod_consts[148];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -13590,7 +12950,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_25;
         CHECK_OBJECT(var_point);
         tmp_left_name_25 = var_point;
-        tmp_right_name_25 = mod_consts[53];
+        tmp_right_name_25 = mod_consts[52];
         tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_name_25, tmp_right_name_25);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -13611,12 +12971,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
         PyObject *tmp_unicode_arg_1;
-        PyObject *tmp_expression_name_23;
+        PyObject *tmp_expression_name_16;
         PyObject *tmp_subscript_name_16;
         tmp_ass_subvalue_2 = PyDict_New();
         if (var_d == NULL) {
             Py_DECREF(tmp_ass_subvalue_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[151]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13628,9 +12988,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_ass_subscribed_2 = var_d;
         CHECK_OBJECT(var_major_list);
-        tmp_expression_name_23 = var_major_list;
-        tmp_subscript_name_16 = mod_consts[21];
-        tmp_unicode_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_23, tmp_subscript_name_16, 0);
+        tmp_expression_name_16 = var_major_list;
+        tmp_subscript_name_16 = mod_consts[20];
+        tmp_unicode_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_16, tmp_subscript_name_16, 0);
         if (tmp_unicode_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13761,7 +13121,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_1;
         if (var_byte_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[150]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13772,7 +13132,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_1 = var_byte_num;
-        tmp_compexpr_right_1 = mod_consts[21];
+        tmp_compexpr_right_1 = mod_consts[20];
         tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
         if (tmp_tmp_condition_result_2_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13807,36 +13167,24 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_31;
         PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_24;
         PyObject *tmp_args_element_name_15;
         PyObject *tmp_left_name_26;
         PyObject *tmp_right_name_26;
         PyObject *tmp_left_name_27;
         PyObject *tmp_right_name_27;
         PyObject *tmp_args_element_name_16;
-        PyObject *tmp_expression_name_25;
+        PyObject *tmp_expression_name_17;
         PyObject *tmp_subscript_name_17;
         PyObject *tmp_start_name_8;
         PyObject *tmp_stop_name_8;
         PyObject *tmp_left_name_28;
         PyObject *tmp_right_name_28;
-        tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_24 == NULL)) {
-            tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_24 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 297;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[84]);
         if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13847,10 +13195,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_26 = mod_consts[110];
+        tmp_left_name_26 = mod_consts[108];
         if (var_byte_num == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[150]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13861,13 +13209,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_27 = var_byte_num;
-        tmp_right_name_27 = mod_consts[153];
+        tmp_right_name_27 = mod_consts[151];
         tmp_right_name_26 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_27, tmp_right_name_27);
         if (tmp_right_name_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+
 
             exception_lineno = 297;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -13879,16 +13227,15 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+
 
             exception_lineno = 297;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13898,11 +13245,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_25 = var_payload;
+        tmp_expression_name_17 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13914,9 +13260,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_8 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13928,9 +13273,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_left_name_28 = var_point;
         if (var_byte_num == NULL) {
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[150]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13946,7 +13290,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
 
             exception_lineno = 297;
@@ -13956,13 +13299,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_17 = MAKE_SLICEOBJ2(tmp_start_name_8, tmp_stop_name_8);
         Py_DECREF(tmp_stop_name_8);
         assert(!(tmp_subscript_name_17 == NULL));
-        tmp_args_element_name_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_25, tmp_subscript_name_17);
+        tmp_args_element_name_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_17);
         Py_DECREF(tmp_subscript_name_17);
         if (tmp_args_element_name_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_15);
 
             exception_lineno = 297;
@@ -13975,7 +13317,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_assign_source_31 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
         Py_DECREF(tmp_args_element_name_15);
         Py_DECREF(tmp_args_element_name_16);
         if (tmp_assign_source_31 == NULL) {
@@ -14028,7 +13369,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_30;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14041,7 +13382,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_left_name_30 = var_point;
         if (var_byte_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[150]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14076,7 +13417,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_2;
         if (var_word_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14087,7 +13428,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_2 = var_word_num;
-        tmp_compexpr_right_2 = mod_consts[21];
+        tmp_compexpr_right_2 = mod_consts[20];
         tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
         if (tmp_tmp_condition_result_3_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14122,14 +13463,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_34;
         PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_26;
         PyObject *tmp_args_element_name_17;
         PyObject *tmp_left_name_31;
         PyObject *tmp_right_name_31;
         PyObject *tmp_left_name_32;
         PyObject *tmp_right_name_32;
         PyObject *tmp_args_element_name_18;
-        PyObject *tmp_expression_name_27;
+        PyObject *tmp_expression_name_18;
         PyObject *tmp_subscript_name_18;
         PyObject *tmp_start_name_9;
         PyObject *tmp_stop_name_9;
@@ -14137,23 +13477,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_33;
         PyObject *tmp_left_name_34;
         PyObject *tmp_right_name_34;
-        tmp_expression_name_26 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_26 == NULL)) {
-            tmp_expression_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_26 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 301;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[84]);
         if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14164,10 +13493,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_31 = mod_consts[110];
+        tmp_left_name_31 = mod_consts[108];
         if (var_word_num == NULL) {
-            Py_DECREF(tmp_called_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14178,13 +13507,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_32 = var_word_num;
-        tmp_right_name_32 = mod_consts[155];
+        tmp_right_name_32 = mod_consts[153];
         tmp_right_name_31 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_32, tmp_right_name_32);
         if (tmp_right_name_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+
 
             exception_lineno = 301;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -14196,16 +13525,15 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+
 
             exception_lineno = 301;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14215,11 +13543,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_27 = var_payload;
+        tmp_expression_name_18 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14231,9 +13558,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_9 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14244,11 +13570,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_33 = var_point;
-        tmp_left_name_34 = mod_consts[25];
+        tmp_left_name_34 = mod_consts[24];
         if (var_word_num == NULL) {
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14264,7 +13589,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
 
             exception_lineno = 301;
@@ -14277,7 +13601,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
 
             exception_lineno = 301;
@@ -14287,13 +13610,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_18 = MAKE_SLICEOBJ2(tmp_start_name_9, tmp_stop_name_9);
         Py_DECREF(tmp_stop_name_9);
         assert(!(tmp_subscript_name_18 == NULL));
-        tmp_args_element_name_18 = LOOKUP_SUBSCRIPT(tmp_expression_name_27, tmp_subscript_name_18);
+        tmp_args_element_name_18 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_18);
         Py_DECREF(tmp_subscript_name_18);
         if (tmp_args_element_name_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
             Py_DECREF(tmp_args_element_name_17);
 
             exception_lineno = 301;
@@ -14306,7 +13628,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_assign_source_34 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_9);
         Py_DECREF(tmp_args_element_name_17);
         Py_DECREF(tmp_args_element_name_18);
         if (tmp_assign_source_34 == NULL) {
@@ -14361,7 +13682,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_37;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14372,10 +13693,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_36 = var_point;
-        tmp_left_name_37 = mod_consts[25];
+        tmp_left_name_37 = mod_consts[24];
         if (var_word_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14422,7 +13743,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_3;
         if (var_int_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14433,7 +13754,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_3 = var_int_num;
-        tmp_compexpr_right_3 = mod_consts[21];
+        tmp_compexpr_right_3 = mod_consts[20];
         tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
         if (tmp_tmp_condition_result_4_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14468,14 +13789,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_37;
         PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_28;
         PyObject *tmp_args_element_name_19;
         PyObject *tmp_left_name_38;
         PyObject *tmp_right_name_38;
         PyObject *tmp_left_name_39;
         PyObject *tmp_right_name_39;
         PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_29;
+        PyObject *tmp_expression_name_19;
         PyObject *tmp_subscript_name_19;
         PyObject *tmp_start_name_10;
         PyObject *tmp_stop_name_10;
@@ -14483,23 +13803,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_40;
         PyObject *tmp_left_name_41;
         PyObject *tmp_right_name_41;
-        tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_28 == NULL)) {
-            tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_28 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 305;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[84]);
         if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14510,10 +13819,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_38 = mod_consts[110];
+        tmp_left_name_38 = mod_consts[108];
         if (var_int_num == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14524,13 +13833,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_39 = var_int_num;
-        tmp_right_name_39 = mod_consts[157];
+        tmp_right_name_39 = mod_consts[155];
         tmp_right_name_38 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_39, tmp_right_name_39);
         if (tmp_right_name_38 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+
 
             exception_lineno = 305;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -14542,16 +13851,15 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
+
 
             exception_lineno = 305;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14561,11 +13869,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_29 = var_payload;
+        tmp_expression_name_19 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14577,9 +13884,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_10 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14590,11 +13896,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_40 = var_point;
-        tmp_left_name_41 = mod_consts[29];
+        tmp_left_name_41 = mod_consts[28];
         if (var_int_num == NULL) {
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14610,7 +13915,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
 
             exception_lineno = 305;
@@ -14623,7 +13927,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
 
             exception_lineno = 305;
@@ -14633,13 +13936,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_19 = MAKE_SLICEOBJ2(tmp_start_name_10, tmp_stop_name_10);
         Py_DECREF(tmp_stop_name_10);
         assert(!(tmp_subscript_name_19 == NULL));
-        tmp_args_element_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_29, tmp_subscript_name_19);
+        tmp_args_element_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_19);
         Py_DECREF(tmp_subscript_name_19);
         if (tmp_args_element_name_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_19);
 
             exception_lineno = 305;
@@ -14652,7 +13954,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_assign_source_37 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_10);
         Py_DECREF(tmp_args_element_name_19);
         Py_DECREF(tmp_args_element_name_20);
         if (tmp_assign_source_37 == NULL) {
@@ -14679,7 +13980,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_list_arg_3;
         if (var_item_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14718,7 +14019,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_44;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14729,10 +14030,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_43 = var_point;
-        tmp_left_name_44 = mod_consts[29];
+        tmp_left_name_44 = mod_consts[28];
         if (var_int_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[154]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14779,7 +14080,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_4;
         if (var_single_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[159]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[157]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14790,7 +14091,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_4 = var_single_num;
-        tmp_compexpr_right_4 = mod_consts[21];
+        tmp_compexpr_right_4 = mod_consts[20];
         tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
         if (tmp_tmp_condition_result_5_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14825,14 +14126,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_40;
         PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_30;
         PyObject *tmp_args_element_name_21;
         PyObject *tmp_left_name_45;
         PyObject *tmp_right_name_45;
         PyObject *tmp_left_name_46;
         PyObject *tmp_right_name_46;
         PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_31;
+        PyObject *tmp_expression_name_20;
         PyObject *tmp_subscript_name_20;
         PyObject *tmp_start_name_11;
         PyObject *tmp_stop_name_11;
@@ -14840,23 +14140,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_47;
         PyObject *tmp_left_name_48;
         PyObject *tmp_right_name_48;
-        tmp_expression_name_30 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_30 == NULL)) {
-            tmp_expression_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_11 == NULL)) {
+            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_30 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 309;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[84]);
         if (tmp_called_name_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14867,10 +14156,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_45 = mod_consts[110];
+        tmp_left_name_45 = mod_consts[108];
         if (var_single_num == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[159]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[157]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14881,13 +14170,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_46 = var_single_num;
-        tmp_right_name_46 = mod_consts[111];
+        tmp_right_name_46 = mod_consts[109];
         tmp_right_name_45 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_46, tmp_right_name_46);
         if (tmp_right_name_45 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 309;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -14899,16 +14188,15 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 309;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14918,11 +14206,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_31 = var_payload;
+        tmp_expression_name_20 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14934,9 +14221,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_11 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14947,11 +14233,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_47 = var_point;
-        tmp_left_name_48 = mod_consts[29];
+        tmp_left_name_48 = mod_consts[28];
         if (var_single_num == NULL) {
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[159]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[157]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14967,7 +14252,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
 
             exception_lineno = 309;
@@ -14980,7 +14264,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
 
             exception_lineno = 309;
@@ -14990,13 +14273,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_20 = MAKE_SLICEOBJ2(tmp_start_name_11, tmp_stop_name_11);
         Py_DECREF(tmp_stop_name_11);
         assert(!(tmp_subscript_name_20 == NULL));
-        tmp_args_element_name_22 = LOOKUP_SUBSCRIPT(tmp_expression_name_31, tmp_subscript_name_20);
+        tmp_args_element_name_22 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_20);
         Py_DECREF(tmp_subscript_name_20);
         if (tmp_args_element_name_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
             Py_DECREF(tmp_args_element_name_21);
 
             exception_lineno = 309;
@@ -15009,7 +14291,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_assign_source_40 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_11, call_args);
         }
 
-        Py_DECREF(tmp_called_name_11);
         Py_DECREF(tmp_args_element_name_21);
         Py_DECREF(tmp_args_element_name_22);
         if (tmp_assign_source_40 == NULL) {
@@ -15038,7 +14319,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_args_element_name_24;
         if (var_item_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15051,7 +14332,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_left_name_49 = var_item_list;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15064,13 +14345,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(var_single_field);
         tmp_args_element_name_23 = var_single_field;
-        tmp_args_element_name_24 = mod_consts[25];
+        tmp_args_element_name_24 = mod_consts[24];
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 310;
         {
             PyObject *call_args[] = {tmp_args_element_name_23, tmp_args_element_name_24};
             tmp_right_name_49 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
-                mod_consts[161],
+                mod_consts[159],
                 call_args
             );
         }
@@ -15109,7 +14390,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_51;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15120,10 +14401,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_50 = var_point;
-        tmp_left_name_51 = mod_consts[29];
+        tmp_left_name_51 = mod_consts[28];
         if (var_single_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[159]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[157]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15170,7 +14451,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_5;
         if (var_double_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[162]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15181,7 +14462,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_5 = var_double_num;
-        tmp_compexpr_right_5 = mod_consts[21];
+        tmp_compexpr_right_5 = mod_consts[20];
         tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
         if (tmp_tmp_condition_result_6_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15216,14 +14497,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_43;
         PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_32;
         PyObject *tmp_args_element_name_25;
         PyObject *tmp_left_name_52;
         PyObject *tmp_right_name_52;
         PyObject *tmp_left_name_53;
         PyObject *tmp_right_name_53;
         PyObject *tmp_args_element_name_26;
-        PyObject *tmp_expression_name_33;
+        PyObject *tmp_expression_name_21;
         PyObject *tmp_subscript_name_21;
         PyObject *tmp_start_name_12;
         PyObject *tmp_stop_name_12;
@@ -15231,23 +14511,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_54;
         PyObject *tmp_left_name_55;
         PyObject *tmp_right_name_55;
-        tmp_expression_name_32 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_32 == NULL)) {
-            tmp_expression_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_12 == NULL)) {
+            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_32 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 313;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_4;
-        }
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[84]);
         if (tmp_called_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15258,10 +14527,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_52 = mod_consts[110];
+        tmp_left_name_52 = mod_consts[108];
         if (var_double_num == NULL) {
-            Py_DECREF(tmp_called_name_12);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[162]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15272,13 +14541,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_53 = var_double_num;
-        tmp_right_name_53 = mod_consts[151];
+        tmp_right_name_53 = mod_consts[149];
         tmp_right_name_52 = BINARY_OPERATION_MULT_OBJECT_OBJECT_UNICODE(tmp_left_name_53, tmp_right_name_53);
         if (tmp_right_name_52 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+
 
             exception_lineno = 313;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -15290,16 +14559,15 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
+
 
             exception_lineno = 313;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_4;
         }
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15309,11 +14577,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_33 = var_payload;
+        tmp_expression_name_21 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15325,9 +14592,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_12 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15338,11 +14604,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_54 = var_point;
-        tmp_left_name_55 = mod_consts[37];
+        tmp_left_name_55 = mod_consts[36];
         if (var_double_num == NULL) {
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[162]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15358,7 +14623,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
 
             exception_lineno = 313;
@@ -15371,7 +14635,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
 
             exception_lineno = 313;
@@ -15381,13 +14644,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_21 = MAKE_SLICEOBJ2(tmp_start_name_12, tmp_stop_name_12);
         Py_DECREF(tmp_stop_name_12);
         assert(!(tmp_subscript_name_21 == NULL));
-        tmp_args_element_name_26 = LOOKUP_SUBSCRIPT(tmp_expression_name_33, tmp_subscript_name_21);
+        tmp_args_element_name_26 = LOOKUP_SUBSCRIPT(tmp_expression_name_21, tmp_subscript_name_21);
         Py_DECREF(tmp_subscript_name_21);
         if (tmp_args_element_name_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_25);
 
             exception_lineno = 313;
@@ -15400,7 +14662,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             tmp_assign_source_43 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_12, call_args);
         }
 
-        Py_DECREF(tmp_called_name_12);
         Py_DECREF(tmp_args_element_name_25);
         Py_DECREF(tmp_args_element_name_26);
         if (tmp_assign_source_43 == NULL) {
@@ -15429,7 +14690,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_args_element_name_28;
         if (var_item_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15442,7 +14703,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_left_name_56 = var_item_list;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15455,13 +14716,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_called_instance_3 = par_self;
         CHECK_OBJECT(var_double_field);
         tmp_args_element_name_27 = var_double_field;
-        tmp_args_element_name_28 = mod_consts[25];
+        tmp_args_element_name_28 = mod_consts[24];
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 314;
         {
             PyObject *call_args[] = {tmp_args_element_name_27, tmp_args_element_name_28};
             tmp_right_name_56 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_3,
-                mod_consts[161],
+                mod_consts[159],
                 call_args
             );
         }
@@ -15500,7 +14761,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_58;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15511,10 +14772,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_57 = var_point;
-        tmp_left_name_58 = mod_consts[37];
+        tmp_left_name_58 = mod_consts[36];
         if (var_double_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[162]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15561,7 +14822,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         int tmp_truth_name_6;
         if (var_str_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[163]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[161]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15572,7 +14833,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_compexpr_left_6 = var_str_num;
-        tmp_compexpr_right_6 = mod_consts[21];
+        tmp_compexpr_right_6 = mod_consts[20];
         tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
         if (tmp_tmp_condition_result_7_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15610,7 +14871,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_xrange_low_2;
         if (var_str_num == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[163]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[161]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15693,35 +14954,23 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_49;
-        PyObject *tmp_expression_name_34;
+        PyObject *tmp_expression_name_22;
         PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_35;
         PyObject *tmp_args_element_name_29;
         PyObject *tmp_args_element_name_30;
-        PyObject *tmp_expression_name_36;
+        PyObject *tmp_expression_name_23;
         PyObject *tmp_subscript_name_22;
         PyObject *tmp_start_name_13;
         PyObject *tmp_stop_name_13;
         PyObject *tmp_left_name_59;
         PyObject *tmp_right_name_59;
         PyObject *tmp_subscript_name_23;
-        tmp_expression_name_35 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_35 == NULL)) {
-            tmp_expression_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_13 == NULL)) {
+            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_35 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 318;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[84]);
         if (tmp_called_name_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15732,10 +14981,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_29 = mod_consts[91];
+        tmp_args_element_name_29 = mod_consts[89];
         if (var_payload == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15745,10 +14994,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_36 = var_payload;
+        tmp_expression_name_23 = var_payload;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15760,8 +15009,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
 
         tmp_start_name_13 = var_point;
         if (var_point == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15772,13 +15021,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_59 = var_point;
-        tmp_right_name_59 = mod_consts[25];
+        tmp_right_name_59 = mod_consts[24];
         tmp_stop_name_13 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_59, tmp_right_name_59);
         if (tmp_stop_name_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 318;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -15787,13 +15036,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_subscript_name_22 = MAKE_SLICEOBJ2(tmp_start_name_13, tmp_stop_name_13);
         Py_DECREF(tmp_stop_name_13);
         assert(!(tmp_subscript_name_22 == NULL));
-        tmp_args_element_name_30 = LOOKUP_SUBSCRIPT(tmp_expression_name_36, tmp_subscript_name_22);
+        tmp_args_element_name_30 = LOOKUP_SUBSCRIPT(tmp_expression_name_23, tmp_subscript_name_22);
         Py_DECREF(tmp_subscript_name_22);
         if (tmp_args_element_name_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 318;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -15802,12 +15051,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 318;
         {
             PyObject *call_args[] = {tmp_args_element_name_29, tmp_args_element_name_30};
-            tmp_expression_name_34 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
+            tmp_expression_name_22 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
         }
 
-        Py_DECREF(tmp_called_name_13);
         Py_DECREF(tmp_args_element_name_30);
-        if (tmp_expression_name_34 == NULL) {
+        if (tmp_expression_name_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15817,9 +15065,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_subscript_name_23 = mod_consts[21];
-        tmp_assign_source_49 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_34, tmp_subscript_name_23, 0);
-        Py_DECREF(tmp_expression_name_34);
+        tmp_subscript_name_23 = mod_consts[20];
+        tmp_assign_source_49 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_22, tmp_subscript_name_23, 0);
+        Py_DECREF(tmp_expression_name_22);
         if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15840,7 +15088,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     {
         PyObject *tmp_assign_source_50;
         PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_37;
+        PyObject *tmp_expression_name_24;
         PyObject *tmp_subscript_name_24;
         PyObject *tmp_start_name_14;
         PyObject *tmp_left_name_60;
@@ -15854,7 +15102,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_63;
         if (var_payload == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[144]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15864,10 +15112,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_37 = var_payload;
+        tmp_expression_name_24 = var_payload;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15878,7 +15126,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_60 = var_point;
-        tmp_right_name_60 = mod_consts[25];
+        tmp_right_name_60 = mod_consts[24];
         tmp_start_name_14 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_60, tmp_right_name_60);
         if (tmp_start_name_14 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15892,7 +15140,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
         if (var_point == NULL) {
             Py_DECREF(tmp_start_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -15903,7 +15151,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_62 = var_point;
-        tmp_right_name_61 = mod_consts[25];
+        tmp_right_name_61 = mod_consts[24];
         tmp_left_name_61 = BINARY_OPERATION_ADD_OBJECT_OBJECT_LONG(tmp_left_name_62, tmp_right_name_61);
         if (tmp_left_name_61 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15915,7 +15163,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_63 = mod_consts[25];
+        tmp_left_name_63 = mod_consts[24];
         CHECK_OBJECT(var_cha_num);
         tmp_right_name_63 = var_cha_num;
         tmp_right_name_62 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_63, tmp_right_name_63);
@@ -15947,7 +15195,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         Py_DECREF(tmp_start_name_14);
         Py_DECREF(tmp_stop_name_14);
         assert(!(tmp_subscript_name_24 == NULL));
-        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_37, tmp_subscript_name_24);
+        tmp_called_instance_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_24, tmp_subscript_name_24);
         Py_DECREF(tmp_subscript_name_24);
         if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15962,7 +15210,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 319;
         tmp_assign_source_50 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_4,
-            mod_consts[148],
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -15990,7 +15238,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_args_element_name_31;
         if (var_item_list == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16004,7 +15252,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         CHECK_OBJECT(var_string_field);
         tmp_args_element_name_31 = var_string_field;
         frame_8899b2ab64956ff84163cc1fb914b308->m_frame.f_lineno = 320;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[9], tmp_args_element_name_31);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[8], tmp_args_element_name_31);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16027,7 +15275,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         PyObject *tmp_right_name_66;
         if (var_point == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[147]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[145]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16038,8 +15286,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
 
         tmp_left_name_64 = var_point;
-        tmp_left_name_65 = mod_consts[25];
-        tmp_left_name_66 = mod_consts[25];
+        tmp_left_name_65 = mod_consts[24];
+        tmp_left_name_66 = mod_consts[24];
         CHECK_OBJECT(var_cha_num);
         tmp_right_name_66 = var_cha_num;
         tmp_right_name_65 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_66, tmp_right_name_66);
@@ -16127,17 +15375,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     branch_no_7:;
     {
         PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_38;
+        PyObject *tmp_expression_name_25;
         PyObject *tmp_call_result_2;
         PyObject *tmp_args_element_name_32;
         PyObject *tmp_args_element_name_33;
         PyObject *tmp_unicode_arg_2;
-        PyObject *tmp_expression_name_39;
+        PyObject *tmp_expression_name_26;
         PyObject *tmp_subscript_name_25;
         PyObject *tmp_args_element_name_34;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16147,8 +15395,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_38 = par_self;
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[164]);
+        tmp_expression_name_25 = par_self;
+        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[162]);
         if (tmp_called_name_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16161,7 +15409,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         }
         if (var_d == NULL) {
             Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[151]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16174,7 +15422,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         tmp_args_element_name_32 = var_d;
         if (var_major_list == NULL) {
             Py_DECREF(tmp_called_name_14);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[165]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[163]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16184,9 +15432,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_39 = var_major_list;
-        tmp_subscript_name_25 = mod_consts[21];
-        tmp_unicode_arg_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_39, tmp_subscript_name_25, 0);
+        tmp_expression_name_26 = var_major_list;
+        tmp_subscript_name_25 = mod_consts[20];
+        tmp_unicode_arg_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_26, tmp_subscript_name_25, 0);
         if (tmp_unicode_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16212,7 +15460,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
         if (var_item_list == NULL) {
             Py_DECREF(tmp_called_name_14);
             Py_DECREF(tmp_args_element_name_33);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[156]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -16300,7 +15548,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__19_dsmdictionary(struct 
     loop_end_1:;
     if (var_d == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[151]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -16674,7 +15922,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_1;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_1 = par_object_name;
-        tmp_compexpr_right_1 = mod_consts[167];
+        tmp_compexpr_right_1 = mod_consts[165];
         tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
         if (tmp_tmp_condition_result_1_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16708,7 +15956,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = LIST_COPY(mod_consts[168]);
+        tmp_assign_source_1 = LIST_COPY(mod_consts[166]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_1;
     }
@@ -16722,7 +15970,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_2;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_2 = par_object_name;
-        tmp_compexpr_right_2 = mod_consts[169];
+        tmp_compexpr_right_2 = mod_consts[167];
         tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
         if (tmp_tmp_condition_result_2_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16756,7 +16004,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = LIST_COPY(mod_consts[170]);
+        tmp_assign_source_2 = LIST_COPY(mod_consts[168]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_2;
     }
@@ -16770,7 +16018,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_3;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_3 = par_object_name;
-        tmp_compexpr_right_3 = mod_consts[171];
+        tmp_compexpr_right_3 = mod_consts[169];
         tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
         if (tmp_tmp_condition_result_3_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16804,7 +16052,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_3;
-        tmp_assign_source_3 = LIST_COPY(mod_consts[172]);
+        tmp_assign_source_3 = LIST_COPY(mod_consts[170]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_3;
     }
@@ -16818,7 +16066,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_4;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_4 = par_object_name;
-        tmp_compexpr_right_4 = mod_consts[173];
+        tmp_compexpr_right_4 = mod_consts[171];
         tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
         if (tmp_tmp_condition_result_4_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16852,7 +16100,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = LIST_COPY(mod_consts[174]);
+        tmp_assign_source_4 = LIST_COPY(mod_consts[172]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_4;
     }
@@ -16866,7 +16114,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_5;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_5 = par_object_name;
-        tmp_compexpr_right_5 = mod_consts[175];
+        tmp_compexpr_right_5 = mod_consts[173];
         tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
         if (tmp_tmp_condition_result_5_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16900,7 +16148,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_5;
-        tmp_assign_source_5 = LIST_COPY(mod_consts[176]);
+        tmp_assign_source_5 = LIST_COPY(mod_consts[174]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_5;
     }
@@ -16914,7 +16162,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_6;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_6 = par_object_name;
-        tmp_compexpr_right_6 = mod_consts[177];
+        tmp_compexpr_right_6 = mod_consts[175];
         tmp_tmp_condition_result_6_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
         if (tmp_tmp_condition_result_6_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16948,7 +16196,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_6;
-        tmp_assign_source_6 = LIST_COPY(mod_consts[178]);
+        tmp_assign_source_6 = LIST_COPY(mod_consts[176]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_6;
     }
@@ -16962,7 +16210,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_7;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_7 = par_object_name;
-        tmp_compexpr_right_7 = mod_consts[179];
+        tmp_compexpr_right_7 = mod_consts[177];
         tmp_tmp_condition_result_7_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
         if (tmp_tmp_condition_result_7_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16996,7 +16244,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_7:;
     {
         PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = LIST_COPY(mod_consts[180]);
+        tmp_assign_source_7 = LIST_COPY(mod_consts[178]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_7;
     }
@@ -17010,7 +16258,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_8;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_8 = par_object_name;
-        tmp_compexpr_right_8 = mod_consts[181];
+        tmp_compexpr_right_8 = mod_consts[179];
         tmp_tmp_condition_result_8_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
         if (tmp_tmp_condition_result_8_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17044,7 +16292,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_8:;
     {
         PyObject *tmp_assign_source_8;
-        tmp_assign_source_8 = LIST_COPY(mod_consts[182]);
+        tmp_assign_source_8 = LIST_COPY(mod_consts[180]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_8;
     }
@@ -17058,7 +16306,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_9;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_9 = par_object_name;
-        tmp_compexpr_right_9 = mod_consts[183];
+        tmp_compexpr_right_9 = mod_consts[181];
         tmp_tmp_condition_result_9_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
         if (tmp_tmp_condition_result_9_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17092,7 +16340,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_9:;
     {
         PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = LIST_COPY(mod_consts[184]);
+        tmp_assign_source_9 = LIST_COPY(mod_consts[182]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_9;
     }
@@ -17106,7 +16354,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_10;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_10 = par_object_name;
-        tmp_compexpr_right_10 = mod_consts[185];
+        tmp_compexpr_right_10 = mod_consts[183];
         tmp_tmp_condition_result_10_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_10, tmp_compexpr_right_10);
         if (tmp_tmp_condition_result_10_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17140,7 +16388,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_10:;
     {
         PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = LIST_COPY(mod_consts[186]);
+        tmp_assign_source_10 = LIST_COPY(mod_consts[184]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_10;
     }
@@ -17154,7 +16402,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_11;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_11 = par_object_name;
-        tmp_compexpr_right_11 = mod_consts[187];
+        tmp_compexpr_right_11 = mod_consts[185];
         tmp_tmp_condition_result_11_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_11, tmp_compexpr_right_11);
         if (tmp_tmp_condition_result_11_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17188,7 +16436,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_11:;
     {
         PyObject *tmp_assign_source_11;
-        tmp_assign_source_11 = LIST_COPY(mod_consts[188]);
+        tmp_assign_source_11 = LIST_COPY(mod_consts[186]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_11;
     }
@@ -17202,7 +16450,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_12;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_12 = par_object_name;
-        tmp_compexpr_right_12 = mod_consts[189];
+        tmp_compexpr_right_12 = mod_consts[187];
         tmp_tmp_condition_result_12_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_12, tmp_compexpr_right_12);
         if (tmp_tmp_condition_result_12_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17236,7 +16484,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_12:;
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = LIST_COPY(mod_consts[190]);
+        tmp_assign_source_12 = LIST_COPY(mod_consts[188]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_12;
     }
@@ -17250,7 +16498,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_13;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_13 = par_object_name;
-        tmp_compexpr_right_13 = mod_consts[191];
+        tmp_compexpr_right_13 = mod_consts[189];
         tmp_tmp_condition_result_13_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_13, tmp_compexpr_right_13);
         if (tmp_tmp_condition_result_13_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17284,7 +16532,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_13:;
     {
         PyObject *tmp_assign_source_13;
-        tmp_assign_source_13 = LIST_COPY(mod_consts[192]);
+        tmp_assign_source_13 = LIST_COPY(mod_consts[190]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_13;
     }
@@ -17298,7 +16546,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_14;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_14 = par_object_name;
-        tmp_compexpr_right_14 = mod_consts[193];
+        tmp_compexpr_right_14 = mod_consts[191];
         tmp_tmp_condition_result_14_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_14, tmp_compexpr_right_14);
         if (tmp_tmp_condition_result_14_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17332,7 +16580,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_14:;
     {
         PyObject *tmp_assign_source_14;
-        tmp_assign_source_14 = LIST_COPY(mod_consts[194]);
+        tmp_assign_source_14 = LIST_COPY(mod_consts[192]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_14;
     }
@@ -17346,7 +16594,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_15;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_15 = par_object_name;
-        tmp_compexpr_right_15 = mod_consts[195];
+        tmp_compexpr_right_15 = mod_consts[193];
         tmp_tmp_condition_result_15_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_15, tmp_compexpr_right_15);
         if (tmp_tmp_condition_result_15_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17380,7 +16628,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_15:;
     {
         PyObject *tmp_assign_source_15;
-        tmp_assign_source_15 = LIST_COPY(mod_consts[196]);
+        tmp_assign_source_15 = LIST_COPY(mod_consts[194]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_15;
     }
@@ -17394,7 +16642,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_16;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_16 = par_object_name;
-        tmp_compexpr_right_16 = mod_consts[197];
+        tmp_compexpr_right_16 = mod_consts[195];
         tmp_tmp_condition_result_16_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_16, tmp_compexpr_right_16);
         if (tmp_tmp_condition_result_16_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17428,7 +16676,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_16:;
     {
         PyObject *tmp_assign_source_16;
-        tmp_assign_source_16 = LIST_COPY(mod_consts[198]);
+        tmp_assign_source_16 = LIST_COPY(mod_consts[196]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_16;
     }
@@ -17442,7 +16690,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_17;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_17 = par_object_name;
-        tmp_compexpr_right_17 = mod_consts[199];
+        tmp_compexpr_right_17 = mod_consts[197];
         tmp_tmp_condition_result_17_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_17, tmp_compexpr_right_17);
         if (tmp_tmp_condition_result_17_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17476,7 +16724,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_17:;
     {
         PyObject *tmp_assign_source_17;
-        tmp_assign_source_17 = LIST_COPY(mod_consts[200]);
+        tmp_assign_source_17 = LIST_COPY(mod_consts[198]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_17;
     }
@@ -17490,7 +16738,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_18;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_18 = par_object_name;
-        tmp_compexpr_right_18 = mod_consts[201];
+        tmp_compexpr_right_18 = mod_consts[199];
         tmp_tmp_condition_result_18_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_18, tmp_compexpr_right_18);
         if (tmp_tmp_condition_result_18_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17524,7 +16772,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_18:;
     {
         PyObject *tmp_assign_source_18;
-        tmp_assign_source_18 = LIST_COPY(mod_consts[202]);
+        tmp_assign_source_18 = LIST_COPY(mod_consts[200]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_18;
     }
@@ -17538,7 +16786,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_19;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_19 = par_object_name;
-        tmp_compexpr_right_19 = mod_consts[203];
+        tmp_compexpr_right_19 = mod_consts[201];
         tmp_tmp_condition_result_19_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_19, tmp_compexpr_right_19);
         if (tmp_tmp_condition_result_19_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17572,7 +16820,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_19:;
     {
         PyObject *tmp_assign_source_19;
-        tmp_assign_source_19 = LIST_COPY(mod_consts[204]);
+        tmp_assign_source_19 = LIST_COPY(mod_consts[202]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_19;
     }
@@ -17586,7 +16834,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_20;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_20 = par_object_name;
-        tmp_compexpr_right_20 = mod_consts[205];
+        tmp_compexpr_right_20 = mod_consts[203];
         tmp_tmp_condition_result_20_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_20, tmp_compexpr_right_20);
         if (tmp_tmp_condition_result_20_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17620,7 +16868,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_20:;
     {
         PyObject *tmp_assign_source_20;
-        tmp_assign_source_20 = LIST_COPY(mod_consts[206]);
+        tmp_assign_source_20 = LIST_COPY(mod_consts[204]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_20;
     }
@@ -17634,7 +16882,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_21;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_21 = par_object_name;
-        tmp_compexpr_right_21 = mod_consts[207];
+        tmp_compexpr_right_21 = mod_consts[205];
         tmp_tmp_condition_result_21_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_21, tmp_compexpr_right_21);
         if (tmp_tmp_condition_result_21_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17668,7 +16916,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_21:;
     {
         PyObject *tmp_assign_source_21;
-        tmp_assign_source_21 = LIST_COPY(mod_consts[208]);
+        tmp_assign_source_21 = LIST_COPY(mod_consts[206]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_21;
     }
@@ -17682,7 +16930,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_22;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_22 = par_object_name;
-        tmp_compexpr_right_22 = mod_consts[209];
+        tmp_compexpr_right_22 = mod_consts[207];
         tmp_tmp_condition_result_22_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_22, tmp_compexpr_right_22);
         if (tmp_tmp_condition_result_22_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17716,7 +16964,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_22:;
     {
         PyObject *tmp_assign_source_22;
-        tmp_assign_source_22 = LIST_COPY(mod_consts[210]);
+        tmp_assign_source_22 = LIST_COPY(mod_consts[208]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_22;
     }
@@ -17730,7 +16978,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_23;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_23 = par_object_name;
-        tmp_compexpr_right_23 = mod_consts[211];
+        tmp_compexpr_right_23 = mod_consts[209];
         tmp_tmp_condition_result_23_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_23, tmp_compexpr_right_23);
         if (tmp_tmp_condition_result_23_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17764,7 +17012,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_23:;
     {
         PyObject *tmp_assign_source_23;
-        tmp_assign_source_23 = LIST_COPY(mod_consts[212]);
+        tmp_assign_source_23 = LIST_COPY(mod_consts[210]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_23;
     }
@@ -17778,7 +17026,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_24;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_24 = par_object_name;
-        tmp_compexpr_right_24 = mod_consts[213];
+        tmp_compexpr_right_24 = mod_consts[211];
         tmp_tmp_condition_result_24_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_24, tmp_compexpr_right_24);
         if (tmp_tmp_condition_result_24_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17812,7 +17060,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_24:;
     {
         PyObject *tmp_assign_source_24;
-        tmp_assign_source_24 = LIST_COPY(mod_consts[214]);
+        tmp_assign_source_24 = LIST_COPY(mod_consts[212]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_24;
     }
@@ -17826,7 +17074,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_25;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_25 = par_object_name;
-        tmp_compexpr_right_25 = mod_consts[215];
+        tmp_compexpr_right_25 = mod_consts[213];
         tmp_tmp_condition_result_25_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_25, tmp_compexpr_right_25);
         if (tmp_tmp_condition_result_25_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17860,7 +17108,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
     branch_yes_25:;
     {
         PyObject *tmp_assign_source_25;
-        tmp_assign_source_25 = LIST_COPY(mod_consts[216]);
+        tmp_assign_source_25 = LIST_COPY(mod_consts[214]);
         assert(var_keys == NULL);
         var_keys = tmp_assign_source_25;
     }
@@ -17895,7 +17143,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_ass_subscript_1;
         if (var_keys == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[217]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[215]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -17906,10 +17154,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         }
 
         tmp_ass_subvalue_1 = var_keys;
-        tmp_ass_subscribed_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[218]);
+        tmp_ass_subscribed_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[216]);
 
         if (unlikely(tmp_ass_subscribed_1 == NULL)) {
-            tmp_ass_subscribed_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[218]);
+            tmp_ass_subscribed_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[216]);
         }
 
         if (tmp_ass_subscribed_1 == NULL) {
@@ -17944,7 +17192,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyObject *tmp_iter_arg_1;
             if (var_keys == NULL) {
 
-                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[217]);
+                FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[215]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -18049,10 +17297,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyObject *tmp_subscript_name_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
-            tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[219]);
+            tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[217]);
 
             if (unlikely(tmp_expression_name_1 == NULL)) {
-                tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[219]);
+                tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[217]);
             }
 
             if (tmp_expression_name_1 == NULL) {
@@ -18464,7 +17712,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
 
                 exception_type = PyExc_ValueError;
                 Py_INCREF(PyExc_ValueError);
-                exception_value = mod_consts[6];
+                exception_value = mod_consts[5];
                 Py_INCREF(exception_value);
                 exception_tb = NULL;
 
@@ -18746,7 +17994,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_26;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_26 = par_object_name;
-        tmp_compexpr_right_26 = LIST_COPY(mod_consts[220]);
+        tmp_compexpr_right_26 = LIST_COPY(mod_consts[218]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_26, tmp_compexpr_left_26);
         Py_DECREF(tmp_compexpr_right_26);
         if (tmp_res == -1) {
@@ -18773,7 +18021,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_27;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_27 = par_object_name;
-        tmp_compexpr_right_27 = LIST_COPY(mod_consts[221]);
+        tmp_compexpr_right_27 = LIST_COPY(mod_consts[219]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_27, tmp_compexpr_left_27);
         Py_DECREF(tmp_compexpr_right_27);
         if (tmp_res == -1) {
@@ -18822,7 +18070,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         }
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_3 = par_item_list;
-        tmp_subscript_name_3 = mod_consts[21];
+        tmp_subscript_name_3 = mod_consts[20];
         tmp_unicode_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_3, 0);
         if (tmp_unicode_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18870,7 +18118,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_26;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_28 = par_object_name;
-        tmp_compexpr_right_28 = mod_consts[169];
+        tmp_compexpr_right_28 = mod_consts[167];
         tmp_tmp_condition_result_28_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_28, tmp_compexpr_right_28);
         if (tmp_tmp_condition_result_28_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18932,12 +18180,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = mod_consts[222];
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[223]);
+        tmp_expression_name_5 = mod_consts[220];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[221]);
         assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_6 = par_item_list;
-        tmp_subscript_name_5 = mod_consts[27];
+        tmp_subscript_name_5 = mod_consts[26];
         tmp_unicode_arg_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_5, 3);
         if (tmp_unicode_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18971,7 +18219,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_3, 0, tmp_tuple_element_1);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_7 = par_item_list;
-            tmp_subscript_name_6 = mod_consts[45];
+            tmp_subscript_name_6 = mod_consts[44];
             tmp_unicode_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 12);
             if (tmp_unicode_arg_3 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19044,7 +18292,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_27;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_29 = par_object_name;
-        tmp_compexpr_right_29 = mod_consts[171];
+        tmp_compexpr_right_29 = mod_consts[169];
         tmp_tmp_condition_result_29_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_29, tmp_compexpr_right_29);
         if (tmp_tmp_condition_result_29_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19106,12 +18354,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_9 = mod_consts[222];
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[223]);
+        tmp_expression_name_9 = mod_consts[220];
+        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[221]);
         assert(!(tmp_called_name_3 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_10 = par_item_list;
-        tmp_subscript_name_8 = mod_consts[21];
+        tmp_subscript_name_8 = mod_consts[20];
         tmp_unicode_arg_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_8, 0);
         if (tmp_unicode_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19145,7 +18393,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_4, 0, tmp_tuple_element_2);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_11 = par_item_list;
-            tmp_subscript_name_9 = mod_consts[29];
+            tmp_subscript_name_9 = mod_consts[28];
             tmp_unicode_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_9, 4);
             if (tmp_unicode_arg_5 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19218,7 +18466,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_28;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_30 = par_object_name;
-        tmp_compexpr_right_30 = mod_consts[173];
+        tmp_compexpr_right_30 = mod_consts[171];
         tmp_tmp_condition_result_30_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_30, tmp_compexpr_right_30);
         if (tmp_tmp_condition_result_30_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19280,12 +18528,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_13 = mod_consts[222];
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[223]);
+        tmp_expression_name_13 = mod_consts[220];
+        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[221]);
         assert(!(tmp_called_name_4 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_14 = par_item_list;
-        tmp_subscript_name_11 = mod_consts[21];
+        tmp_subscript_name_11 = mod_consts[20];
         tmp_unicode_arg_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_11, 0);
         if (tmp_unicode_arg_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19319,7 +18567,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_5, 0, tmp_tuple_element_3);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_15 = par_item_list;
-            tmp_subscript_name_12 = mod_consts[29];
+            tmp_subscript_name_12 = mod_consts[28];
             tmp_unicode_arg_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_15, tmp_subscript_name_12, 4);
             if (tmp_unicode_arg_7 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19394,7 +18642,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_31;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_31 = par_object_name;
-        tmp_compexpr_right_31 = LIST_COPY(mod_consts[224]);
+        tmp_compexpr_right_31 = LIST_COPY(mod_consts[222]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_31, tmp_compexpr_left_31);
         Py_DECREF(tmp_compexpr_right_31);
         if (tmp_res == -1) {
@@ -19425,7 +18673,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         int tmp_truth_name_29;
         CHECK_OBJECT(var_new_dict);
         tmp_expression_name_16 = var_new_dict;
-        tmp_subscript_name_13 = mod_consts[225];
+        tmp_subscript_name_13 = mod_consts[223];
         tmp_compexpr_left_32 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_13);
         if (tmp_compexpr_left_32 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19437,7 +18685,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_32 = mod_consts[21];
+        tmp_compexpr_right_32 = mod_consts[20];
         tmp_tmp_condition_result_32_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_32, tmp_compexpr_right_32);
         Py_DECREF(tmp_compexpr_left_32);
         if (tmp_tmp_condition_result_32_object_1 == NULL) {
@@ -19500,12 +18748,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_18 = mod_consts[222];
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[223]);
+        tmp_expression_name_18 = mod_consts[220];
+        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[221]);
         assert(!(tmp_called_name_5 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_19 = par_item_list;
-        tmp_subscript_name_15 = mod_consts[27];
+        tmp_subscript_name_15 = mod_consts[26];
         tmp_unicode_arg_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_19, tmp_subscript_name_15, 3);
         if (tmp_unicode_arg_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19542,7 +18790,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_6, 0, tmp_tuple_element_4);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_20 = par_item_list;
-            tmp_subscript_name_16 = mod_consts[29];
+            tmp_subscript_name_16 = mod_consts[28];
             tmp_unicode_arg_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_20, tmp_subscript_name_16, 4);
             if (tmp_unicode_arg_9 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19569,7 +18817,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_6, 1, tmp_tuple_element_4);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_21 = par_item_list;
-            tmp_subscript_name_17 = mod_consts[37];
+            tmp_subscript_name_17 = mod_consts[36];
             tmp_unicode_arg_10 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_21, tmp_subscript_name_17, 8);
             if (tmp_unicode_arg_10 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19641,7 +18889,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_33;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_33 = par_object_name;
-        tmp_compexpr_right_33 = LIST_COPY(mod_consts[226]);
+        tmp_compexpr_right_33 = LIST_COPY(mod_consts[224]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_33, tmp_compexpr_left_33);
         Py_DECREF(tmp_compexpr_right_33);
         if (tmp_res == -1) {
@@ -19692,12 +18940,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_23 = mod_consts[222];
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[223]);
+        tmp_expression_name_23 = mod_consts[220];
+        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[221]);
         assert(!(tmp_called_name_6 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_24 = par_item_list;
-        tmp_subscript_name_19 = mod_consts[21];
+        tmp_subscript_name_19 = mod_consts[20];
         tmp_unicode_arg_11 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_24, tmp_subscript_name_19, 0);
         if (tmp_unicode_arg_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19737,7 +18985,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_7, 0, tmp_tuple_element_5);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_25 = par_item_list;
-            tmp_subscript_name_20 = mod_consts[23];
+            tmp_subscript_name_20 = mod_consts[22];
             tmp_unicode_arg_12 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_25, tmp_subscript_name_20, 1);
             if (tmp_unicode_arg_12 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19764,7 +19012,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_7, 1, tmp_tuple_element_5);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_26 = par_item_list;
-            tmp_subscript_name_21 = mod_consts[29];
+            tmp_subscript_name_21 = mod_consts[28];
             tmp_unicode_arg_13 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_26, tmp_subscript_name_21, 4);
             if (tmp_unicode_arg_13 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19791,7 +19039,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_7, 2, tmp_tuple_element_5);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_27 = par_item_list;
-            tmp_subscript_name_22 = mod_consts[31];
+            tmp_subscript_name_22 = mod_consts[30];
             tmp_unicode_arg_14 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_27, tmp_subscript_name_22, 5);
             if (tmp_unicode_arg_14 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19862,7 +19110,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_34;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_34 = par_object_name;
-        tmp_compexpr_right_34 = LIST_COPY(mod_consts[227]);
+        tmp_compexpr_right_34 = LIST_COPY(mod_consts[225]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_34, tmp_compexpr_left_34);
         Py_DECREF(tmp_compexpr_right_34);
         if (tmp_res == -1) {
@@ -19913,12 +19161,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_29 = mod_consts[222];
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[223]);
+        tmp_expression_name_29 = mod_consts[220];
+        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[221]);
         assert(!(tmp_called_name_7 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_30 = par_item_list;
-        tmp_subscript_name_24 = mod_consts[25];
+        tmp_subscript_name_24 = mod_consts[24];
         tmp_unicode_arg_15 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_30, tmp_subscript_name_24, 2);
         if (tmp_unicode_arg_15 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19955,7 +19203,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_8, 0, tmp_tuple_element_6);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_31 = par_item_list;
-            tmp_subscript_name_25 = mod_consts[27];
+            tmp_subscript_name_25 = mod_consts[26];
             tmp_unicode_arg_16 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_31, tmp_subscript_name_25, 3);
             if (tmp_unicode_arg_16 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -19982,7 +19230,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_8, 1, tmp_tuple_element_6);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_32 = par_item_list;
-            tmp_subscript_name_26 = mod_consts[29];
+            tmp_subscript_name_26 = mod_consts[28];
             tmp_unicode_arg_17 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_32, tmp_subscript_name_26, 4);
             if (tmp_unicode_arg_17 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -20053,7 +19301,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_35;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_35 = par_object_name;
-        tmp_compexpr_right_35 = LIST_COPY(mod_consts[228]);
+        tmp_compexpr_right_35 = LIST_COPY(mod_consts[226]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_35, tmp_compexpr_left_35);
         Py_DECREF(tmp_compexpr_right_35);
         if (tmp_res == -1) {
@@ -20102,7 +19350,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         }
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_34 = par_item_list;
-        tmp_subscript_name_28 = mod_consts[23];
+        tmp_subscript_name_28 = mod_consts[22];
         tmp_unicode_arg_18 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_34, tmp_subscript_name_28, 1);
         if (tmp_unicode_arg_18 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20148,7 +19396,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
         PyObject *tmp_compexpr_right_36;
         CHECK_OBJECT(par_object_name);
         tmp_compexpr_left_36 = par_object_name;
-        tmp_compexpr_right_36 = LIST_COPY(mod_consts[229]);
+        tmp_compexpr_right_36 = LIST_COPY(mod_consts[227]);
         tmp_res = PySequence_Contains(tmp_compexpr_right_36, tmp_compexpr_left_36);
         Py_DECREF(tmp_compexpr_right_36);
         if (tmp_res == -1) {
@@ -20199,12 +19447,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_36 = mod_consts[222];
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[223]);
+        tmp_expression_name_36 = mod_consts[220];
+        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[221]);
         assert(!(tmp_called_name_8 == NULL));
         CHECK_OBJECT(par_item_list);
         tmp_expression_name_37 = par_item_list;
-        tmp_subscript_name_30 = mod_consts[23];
+        tmp_subscript_name_30 = mod_consts[22];
         tmp_unicode_arg_19 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_37, tmp_subscript_name_30, 1);
         if (tmp_unicode_arg_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20241,7 +19489,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_9, 0, tmp_tuple_element_7);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_38 = par_item_list;
-            tmp_subscript_name_31 = mod_consts[25];
+            tmp_subscript_name_31 = mod_consts[24];
             tmp_unicode_arg_20 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_38, tmp_subscript_name_31, 2);
             if (tmp_unicode_arg_20 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -20268,7 +19516,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__20_dict_generator(struct
             PyTuple_SET_ITEM(tmp_args_element_name_9, 1, tmp_tuple_element_7);
             CHECK_OBJECT(par_item_list);
             tmp_expression_name_39 = par_item_list;
-            tmp_subscript_name_32 = mod_consts[39];
+            tmp_subscript_name_32 = mod_consts[38];
             tmp_unicode_arg_21 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_39, tmp_subscript_name_32, 9);
             if (tmp_unicode_arg_21 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -20531,29 +19779,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 433;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20564,16 +19800,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 433;
             type_description_1 = "ooooooo";
@@ -20585,7 +19821,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20597,7 +19832,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -20615,12 +19850,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -20633,23 +19867,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 434;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20660,11 +19883,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -20672,7 +19895,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 434;
             type_description_1 = "ooooooo";
@@ -20684,14 +19907,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 434;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -20699,7 +19922,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 434;
@@ -20712,7 +19934,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 434;
@@ -20723,13 +19944,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 434;
             type_description_1 = "ooooooo";
@@ -20738,12 +19959,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         frame_f79d5c9636b1846ba36ec3a87bf43c5d->m_frame.f_lineno = 434;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20753,9 +19973,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20771,12 +19991,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -20797,23 +20016,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 436;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20824,11 +20032,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -20836,7 +20044,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 436;
             type_description_1 = "ooooooo";
@@ -20848,13 +20056,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 436;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -20862,7 +20070,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 436;
@@ -20876,14 +20083,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 436;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -20891,7 +20098,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 436;
@@ -20904,14 +20110,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 436;
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -20919,7 +20124,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -20934,7 +20138,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 436;
@@ -20945,13 +20148,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 436;
             type_description_1 = "ooooooo";
@@ -20960,12 +20163,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         frame_f79d5c9636b1846ba36ec3a87bf43c5d->m_frame.f_lineno = 436;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20975,9 +20177,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20993,13 +20195,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -21017,7 +20219,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21034,31 +20236,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_subscript_name_8;
         PyObject *tmp_subscript_name_9;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 438;
-            type_description_1 = "ooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21069,16 +20259,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[108];
+        tmp_args_element_name_7 = mod_consts[106];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_13 = var_payload;
-        tmp_subscript_name_8 = mod_consts[86];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_8);
+        tmp_expression_name_9 = var_payload;
+        tmp_subscript_name_8 = mod_consts[84];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 438;
             type_description_1 = "ooooooo";
@@ -21087,12 +20277,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
         frame_f79d5c9636b1846ba36ec3a87bf43c5d->m_frame.f_lineno = 438;
         {
             PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_expression_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21102,9 +20291,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_9 = mod_consts[21];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_9, 0);
-        Py_DECREF(tmp_expression_name_11);
+        tmp_subscript_name_9 = mod_consts[20];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_9, 0);
+        Py_DECREF(tmp_expression_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21177,12 +20366,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__21_dsmok(struct Nuitka_F
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[230];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[228];
         tmp_return_value = _PyDict_NewPresized( 2 );
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[231];
+        tmp_dict_key_1 = mod_consts[229];
         CHECK_OBJECT(var_dok_id);
         tmp_dict_value_1 = var_dok_id;
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
@@ -21328,29 +20517,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         PyObject *tmp_assign_source_1;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 442;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[84]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21361,16 +20538,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[91];
+        tmp_args_element_name_1 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_3 = par_data;
-        tmp_subscript_name_1 = mod_consts[98];
-        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
+        tmp_expression_name_2 = par_data;
+        tmp_subscript_name_1 = mod_consts[96];
+        tmp_args_element_name_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
         if (tmp_args_element_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+
 
             exception_lineno = 442;
             type_description_1 = "oooooooooo";
@@ -21382,7 +20559,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             tmp_expression_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21394,7 +20570,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_2 = mod_consts[21];
+        tmp_subscript_name_2 = mod_consts[20];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_2, 0);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -21412,12 +20588,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_start_name_1;
         PyObject *tmp_left_name_1;
@@ -21430,23 +20605,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 443;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[84]);
         if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21457,11 +20621,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[91];
+        tmp_args_element_name_3 = mod_consts[89];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_6 = par_data;
-        tmp_left_name_1 = mod_consts[29];
-        tmp_left_name_2 = mod_consts[25];
+        tmp_expression_name_4 = par_data;
+        tmp_left_name_1 = mod_consts[28];
+        tmp_left_name_2 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_2 = var_sourceid_num;
         tmp_right_name_1 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_2, tmp_right_name_2);
@@ -21469,7 +20633,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 443;
             type_description_1 = "oooooooooo";
@@ -21481,14 +20645,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 443;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_3 = mod_consts[33];
-        tmp_left_name_4 = mod_consts[25];
+        tmp_left_name_3 = mod_consts[32];
+        tmp_left_name_4 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_4 = var_sourceid_num;
         tmp_right_name_3 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_4, tmp_right_name_4);
@@ -21496,7 +20660,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 443;
@@ -21509,7 +20672,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_start_name_1);
 
             exception_lineno = 443;
@@ -21520,13 +20682,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         Py_DECREF(tmp_start_name_1);
         Py_DECREF(tmp_stop_name_1);
         assert(!(tmp_subscript_name_3 == NULL));
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
         Py_DECREF(tmp_subscript_name_3);
         if (tmp_args_element_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+
 
             exception_lineno = 443;
             type_description_1 = "oooooooooo";
@@ -21535,12 +20697,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 443;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21550,9 +20711,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_4 = mod_consts[21];
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_4, 0);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_name_4 = mod_consts[20];
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_4, 0);
+        Py_DECREF(tmp_expression_name_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21568,12 +20729,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_start_name_2;
         PyObject *tmp_left_name_5;
@@ -21594,23 +20754,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         PyObject *tmp_left_name_12;
         PyObject *tmp_right_name_12;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_3 == NULL)) {
+            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 445;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[84]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21621,11 +20770,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[87];
+        tmp_args_element_name_5 = mod_consts[85];
         CHECK_OBJECT(par_data);
-        tmp_expression_name_9 = par_data;
-        tmp_left_name_6 = mod_consts[33];
-        tmp_left_name_7 = mod_consts[25];
+        tmp_expression_name_6 = par_data;
+        tmp_left_name_6 = mod_consts[32];
+        tmp_left_name_7 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_6 = var_sourceid_num;
         tmp_right_name_5 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_7, tmp_right_name_6);
@@ -21633,7 +20782,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 445;
             type_description_1 = "oooooooooo";
@@ -21645,13 +20794,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 445;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_8 = mod_consts[25];
+        tmp_left_name_8 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_8 = var_userid_num;
         tmp_right_name_7 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_8, tmp_right_name_8);
@@ -21659,7 +20808,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_left_name_5);
 
             exception_lineno = 445;
@@ -21673,14 +20821,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 445;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_10 = mod_consts[41];
-        tmp_left_name_11 = mod_consts[25];
+        tmp_left_name_10 = mod_consts[40];
+        tmp_left_name_11 = mod_consts[24];
         CHECK_OBJECT(var_sourceid_num);
         tmp_right_name_10 = var_sourceid_num;
         tmp_right_name_9 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_11, tmp_right_name_10);
@@ -21688,7 +20836,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 445;
@@ -21701,14 +20848,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 445;
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_left_name_12 = mod_consts[25];
+        tmp_left_name_12 = mod_consts[24];
         CHECK_OBJECT(var_userid_num);
         tmp_right_name_12 = var_userid_num;
         tmp_right_name_11 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_12, tmp_right_name_12);
@@ -21716,7 +20862,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
             Py_DECREF(tmp_left_name_9);
 
@@ -21731,7 +20876,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
             Py_DECREF(tmp_start_name_2);
 
             exception_lineno = 445;
@@ -21742,13 +20886,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         Py_DECREF(tmp_start_name_2);
         Py_DECREF(tmp_stop_name_2);
         assert(!(tmp_subscript_name_5 == NULL));
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_5);
+        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_5);
         Py_DECREF(tmp_subscript_name_5);
         if (tmp_args_element_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 445;
             type_description_1 = "oooooooooo";
@@ -21757,12 +20901,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 445;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_6);
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21772,9 +20915,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[21];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_7, tmp_subscript_name_6, 0);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_subscript_name_6 = mod_consts[20];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_6, 0);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21790,13 +20933,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_7;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_start_name_3;
         PyObject *tmp_operand_name_1;
         PyObject *tmp_stop_name_3;
         CHECK_OBJECT(par_data);
-        tmp_expression_name_10 = par_data;
+        tmp_expression_name_7 = par_data;
         CHECK_OBJECT(var_payloadsize);
         tmp_operand_name_1 = var_payloadsize;
         tmp_start_name_3 = UNARY_OPERATION(PyNumber_Negative, tmp_operand_name_1);
@@ -21814,7 +20957,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         tmp_subscript_name_7 = MAKE_SLICEOBJ2(tmp_start_name_3, tmp_stop_name_3);
         Py_DECREF(tmp_start_name_3);
         assert(!(tmp_subscript_name_7 == NULL));
-        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        tmp_assign_source_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
         Py_DECREF(tmp_subscript_name_7);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21831,31 +20974,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_9;
         PyObject *tmp_subscript_name_8;
         PyObject *tmp_subscript_name_9;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 447;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[84]);
         if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21866,16 +20997,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_7 = mod_consts[108];
+        tmp_args_element_name_7 = mod_consts[106];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_13 = var_payload;
-        tmp_subscript_name_8 = mod_consts[109];
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_8);
+        tmp_expression_name_9 = var_payload;
+        tmp_subscript_name_8 = mod_consts[107];
+        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
         if (tmp_args_element_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 447;
             type_description_1 = "oooooooooo";
@@ -21884,12 +21015,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 447;
         {
             PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_expression_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21899,9 +21029,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_9 = mod_consts[21];
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_9, 0);
-        Py_DECREF(tmp_expression_name_11);
+        tmp_subscript_name_9 = mod_consts[20];
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_9, 0);
+        Py_DECREF(tmp_expression_name_8);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21917,31 +21047,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_15;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_args_element_name_10;
-        PyObject *tmp_expression_name_16;
+        PyObject *tmp_expression_name_11;
         PyObject *tmp_subscript_name_10;
         PyObject *tmp_subscript_name_11;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 448;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[84]);
         if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21952,16 +21070,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = mod_consts[87];
+        tmp_args_element_name_9 = mod_consts[85];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_16 = var_payload;
-        tmp_subscript_name_10 = mod_consts[88];
-        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_10);
+        tmp_expression_name_11 = var_payload;
+        tmp_subscript_name_10 = mod_consts[86];
+        tmp_args_element_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
         if (tmp_args_element_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 448;
             type_description_1 = "oooooooooo";
@@ -21970,12 +21088,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 448;
         {
             PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_expression_name_14 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_expression_name_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_10);
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21985,9 +21102,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_11 = mod_consts[21];
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_11, 0);
-        Py_DECREF(tmp_expression_name_14);
+        tmp_subscript_name_11 = mod_consts[20];
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_11, 0);
+        Py_DECREF(tmp_expression_name_10);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22003,31 +21120,19 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_name_12;
         PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_18;
         PyObject *tmp_args_element_name_11;
         PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_19;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_subscript_name_12;
         PyObject *tmp_subscript_name_13;
-        tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82]);
 
-        if (unlikely(tmp_expression_name_18 == NULL)) {
-            tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
         }
 
-        if (tmp_expression_name_18 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 449;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[84]);
         if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22038,16 +21143,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_11 = mod_consts[91];
+        tmp_args_element_name_11 = mod_consts[89];
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_19 = var_payload;
-        tmp_subscript_name_12 = mod_consts[232];
-        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_12);
+        tmp_expression_name_13 = var_payload;
+        tmp_subscript_name_12 = mod_consts[230];
+        tmp_args_element_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_12);
         if (tmp_args_element_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 449;
             type_description_1 = "oooooooooo";
@@ -22056,12 +21161,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 449;
         {
             PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_expression_name_17 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            tmp_expression_name_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
         Py_DECREF(tmp_args_element_name_12);
-        if (tmp_expression_name_17 == NULL) {
+        if (tmp_expression_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22071,9 +21175,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_13 = mod_consts[21];
-        tmp_assign_source_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_17, tmp_subscript_name_13, 0);
-        Py_DECREF(tmp_expression_name_17);
+        tmp_subscript_name_13 = mod_consts[20];
+        tmp_assign_source_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_13, 0);
+        Py_DECREF(tmp_expression_name_12);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22090,7 +21194,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_expression_name_14;
         PyObject *tmp_subscript_name_14;
         PyObject *tmp_start_name_4;
         PyObject *tmp_stop_name_4;
@@ -22099,10 +21203,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         PyObject *tmp_left_name_14;
         PyObject *tmp_right_name_14;
         CHECK_OBJECT(var_payload);
-        tmp_expression_name_20 = var_payload;
-        tmp_start_name_4 = mod_consts[37];
-        tmp_left_name_13 = mod_consts[37];
-        tmp_left_name_14 = mod_consts[25];
+        tmp_expression_name_14 = var_payload;
+        tmp_start_name_4 = mod_consts[36];
+        tmp_left_name_13 = mod_consts[36];
+        tmp_left_name_14 = mod_consts[24];
         CHECK_OBJECT(var_de_explain_num);
         tmp_right_name_14 = var_de_explain_num;
         tmp_right_name_13 = BINARY_OPERATION_MULT_OBJECT_LONG_OBJECT(tmp_left_name_14, tmp_right_name_14);
@@ -22131,7 +21235,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         tmp_subscript_name_14 = MAKE_SLICEOBJ2(tmp_start_name_4, tmp_stop_name_4);
         Py_DECREF(tmp_stop_name_4);
         assert(!(tmp_subscript_name_14 == NULL));
-        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_20, tmp_subscript_name_14);
+        tmp_called_instance_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_14);
         Py_DECREF(tmp_subscript_name_14);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22146,7 +21250,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
         frame_6b1ffeb33b6715911c9c9c0323ceadf2->m_frame.f_lineno = 450;
         tmp_assign_source_8 = CALL_METHOD_WITH_SINGLE_ARG(
             tmp_called_instance_1,
-            mod_consts[148],
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -22226,22 +21330,22 @@ static PyObject *impl_powerworldDS_eventlet$$$function__22_dsmerror(struct Nuitk
     {
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[104];
-        tmp_dict_value_1 = mod_consts[233];
+        tmp_dict_key_1 = mod_consts[102];
+        tmp_dict_value_1 = mod_consts[231];
         tmp_return_value = _PyDict_NewPresized( 4 );
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[231];
+        tmp_dict_key_1 = mod_consts[229];
         CHECK_OBJECT(var_de_id);
         tmp_dict_value_1 = var_de_id;
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[234];
+        tmp_dict_key_1 = mod_consts[232];
         CHECK_OBJECT(var_de_location);
         tmp_dict_value_1 = var_de_location;
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[235];
+        tmp_dict_key_1 = mod_consts[233];
         CHECK_OBJECT(var_de_explain);
         tmp_dict_value_1 = var_de_explain;
         tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
@@ -22387,10 +21491,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__23_dsmfile(struct Nuitka
     {
         PyObject *tmp_called_name_1;
         PyObject *tmp_call_result_1;
-        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[92]);
+        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[90]);
         assert(tmp_called_name_1 != NULL);
         frame_77b8dedb290932e824036995e16e3aef->m_frame.f_lineno = 454;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[236]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[234]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22557,14 +21661,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22575,11 +21679,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             goto frame_exception_exit_1;
         }
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 458;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22599,7 +21699,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         PyObject *tmp_expression_name_1;
         CHECK_OBJECT(par_self);
         tmp_expression_name_1 = par_self;
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[99]);
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[97]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22615,26 +21715,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_2 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_2 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22645,11 +21745,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
                 goto list_build_exception_1;
             }
             frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 460;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -22666,14 +21762,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 460;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22695,14 +21791,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22713,11 +21809,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             goto frame_exception_exit_1;
         }
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 461;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[241], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[239]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22734,14 +21826,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22752,11 +21844,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             goto frame_exception_exit_1;
         }
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 462;
-        tmp_assign_source_5 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22773,14 +21861,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22791,7 +21879,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             goto frame_exception_exit_1;
         }
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 463;
-        tmp_assign_source_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22808,21 +21896,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_int_arg_1;
         PyObject *tmp_left_name_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_right_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22832,18 +21919,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 466;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
         tmp_len_arg_1 = var_cmd_userid;
         tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
@@ -22851,20 +21927,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 466;
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[25];
+        tmp_right_name_1 = mod_consts[24];
         tmp_int_arg_1 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
         Py_DECREF(tmp_left_name_1);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 466;
             type_description_1 = "ooooooooooo";
@@ -22876,7 +21952,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 466;
             type_description_1 = "ooooooooooo";
@@ -22885,10 +21961,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 466;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22905,14 +21980,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_5;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_5 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22923,11 +21998,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             goto frame_exception_exit_1;
         }
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 467;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_5,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -22944,8 +22015,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_2;
@@ -22954,13 +22024,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_3;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22970,19 +22040,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 468;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_3 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_3 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_2 = BUILTIN_LEN(tmp_len_arg_2);
@@ -22990,7 +22049,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 468;
             type_description_1 = "ooooooooooo";
@@ -23006,7 +22065,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_2);
 
             exception_lineno = 468;
@@ -23020,10 +22078,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 468;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23040,10 +22097,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_instance_1;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_6 = mod_consts[239];
+        tmp_called_instance_1 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -23070,7 +22127,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 469;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_6, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23087,14 +22144,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_7;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_7 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23107,8 +22164,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__24_tcmdictionary(struct 
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_d3eab24daf2eeb087b2699d1efb654d1->m_frame.f_lineno = 473;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_7);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23480,14 +22537,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23498,11 +22555,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto frame_exception_exit_1;
         }
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 492;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23519,26 +22572,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23549,11 +22602,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
                 goto list_build_exception_1;
             }
             frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 493;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -23570,14 +22619,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 493;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23599,14 +22648,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23617,11 +22666,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto frame_exception_exit_1;
         }
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 494;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[247], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[245]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23638,14 +22683,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23656,7 +22701,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto frame_exception_exit_1;
         }
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 495;
-        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_5, mod_consts[242]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23673,14 +22718,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23691,11 +22736,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto frame_exception_exit_1;
         }
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 496;
-        tmp_assign_source_5 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_6, mod_consts[240]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23715,7 +22756,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23731,21 +22772,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_int_arg_1;
         PyObject *tmp_left_name_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_right_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23755,18 +22795,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 498;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
         tmp_len_arg_1 = var_cmd_userid;
         tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
@@ -23774,20 +22803,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 498;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[25];
+        tmp_right_name_1 = mod_consts[24];
         tmp_int_arg_1 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
         Py_DECREF(tmp_left_name_1);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 498;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -23799,7 +22828,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 498;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -23808,10 +22837,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 498;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23828,12 +22856,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_subscript_name_1;
         CHECK_OBJECT(par_opt);
-        tmp_expression_name_4 = par_opt;
-        tmp_subscript_name_1 = mod_consts[21];
-        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_1, 0);
+        tmp_expression_name_3 = par_opt;
+        tmp_subscript_name_1 = mod_consts[20];
+        tmp_assign_source_8 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_3, tmp_subscript_name_1, 0);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23849,12 +22877,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_2;
         CHECK_OBJECT(par_opt);
-        tmp_expression_name_5 = par_opt;
-        tmp_subscript_name_2 = mod_consts[23];
-        tmp_assign_source_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_2, 1);
+        tmp_expression_name_4 = par_opt;
+        tmp_subscript_name_2 = mod_consts[22];
+        tmp_assign_source_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_2, 1);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23870,16 +22898,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_name_8;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_5 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23889,17 +22917,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = mod_consts[108];
+        tmp_args_element_name_4 = mod_consts[106];
         CHECK_OBJECT(var_tgdid);
         tmp_args_element_name_5 = var_tgdid;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 501;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_10 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_5,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -23917,18 +22941,17 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_len_arg_2;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -23938,18 +22961,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 502;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_6 = mod_consts[91];
+        tmp_args_element_name_6 = mod_consts[89];
         CHECK_OBJECT(var_target);
         tmp_len_arg_2 = var_target;
         tmp_args_element_name_7 = BUILTIN_LEN(tmp_len_arg_2);
@@ -23957,7 +22969,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 502;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -23966,10 +22978,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 502;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_7);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -23986,7 +22997,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[239];
+        tmp_assign_source_12 = mod_consts[237];
         assert(var_cmd_repeat == NULL);
         Py_INCREF(tmp_assign_source_12);
         var_cmd_repeat = tmp_assign_source_12;
@@ -24065,21 +23076,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     {
         PyObject *tmp_assign_source_17;
         PyObject *tmp_left_name_2;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_8;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_len_arg_3;
         PyObject *tmp_right_name_2;
-        PyObject *tmp_called_name_6;
+        PyObject *tmp_called_name_11;
         PyObject *tmp_args_element_name_10;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24089,18 +23099,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[237]);
-        if (tmp_called_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 512;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_8 = mod_consts[91];
+        tmp_args_element_name_8 = mod_consts[89];
         CHECK_OBJECT(var_obj_str);
         tmp_len_arg_3 = var_obj_str;
         tmp_args_element_name_9 = BUILTIN_LEN(tmp_len_arg_3);
@@ -24108,7 +23107,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 512;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24117,10 +23116,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 512;
         {
             PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_left_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_left_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_9);
         if (tmp_left_name_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24132,13 +23130,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_11 == NULL)) {
+            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_name_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24151,7 +23149,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         CHECK_OBJECT(var_obj_str);
         tmp_args_element_name_10 = var_obj_str;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 512;
-        tmp_right_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_10);
+        tmp_right_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_10);
         if (tmp_right_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24184,22 +23182,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_name_12;
         PyObject *tmp_args_element_name_11;
         PyObject *tmp_args_element_name_12;
         PyObject *tmp_len_arg_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_3;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_12 == NULL)) {
+            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_called_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24209,21 +23206,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[237]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 513;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_11 = mod_consts[91];
+        tmp_args_element_name_11 = mod_consts[89];
         if (var_target == NULL) {
-            Py_DECREF(tmp_called_name_7);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24233,28 +23219,28 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_10 = var_target;
+        tmp_expression_name_6 = var_target;
         CHECK_OBJECT(var_single_target);
         tmp_subscript_name_3 = var_single_target;
-        tmp_expression_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_3);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_name_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_3);
+        if (tmp_expression_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 513;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_4 = mod_consts[248];
-        tmp_len_arg_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_4);
-        Py_DECREF(tmp_expression_name_9);
+        tmp_subscript_name_4 = mod_consts[246];
+        tmp_len_arg_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_4);
+        Py_DECREF(tmp_expression_name_5);
         if (tmp_len_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 513;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24266,7 +23252,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 513;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24275,10 +23261,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 513;
         {
             PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+            tmp_assign_source_18 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_12, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
         Py_DECREF(tmp_args_element_name_12);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24299,22 +23284,21 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_name_13;
         PyObject *tmp_args_element_name_13;
         PyObject *tmp_args_element_name_14;
         PyObject *tmp_len_arg_5;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_subscript_name_6;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_13 == NULL)) {
+            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_called_name_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24324,21 +23308,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[237]);
-        if (tmp_called_name_8 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 514;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_13 = mod_consts[249];
+        tmp_args_element_name_13 = mod_consts[247];
         if (var_target == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24348,28 +23321,28 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_13 = var_target;
+        tmp_expression_name_8 = var_target;
         CHECK_OBJECT(var_single_target);
         tmp_subscript_name_5 = var_single_target;
-        tmp_expression_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_5);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_5);
+        if (tmp_expression_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+
 
             exception_lineno = 514;
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_6 = mod_consts[250];
-        tmp_len_arg_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_6);
-        Py_DECREF(tmp_expression_name_12);
+        tmp_subscript_name_6 = mod_consts[248];
+        tmp_len_arg_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_6);
+        Py_DECREF(tmp_expression_name_7);
         if (tmp_len_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+
 
             exception_lineno = 514;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24381,7 +23354,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_8);
+
 
             exception_lineno = 514;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24390,10 +23363,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 514;
         {
             PyObject *call_args[] = {tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_assign_source_19 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
+            tmp_assign_source_19 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
         Py_DECREF(tmp_args_element_name_14);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24414,7 +23386,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_20;
-        tmp_assign_source_20 = mod_consts[239];
+        tmp_assign_source_20 = mod_consts[237];
         {
             PyObject *old = var_cmd_field_type;
             var_cmd_field_type = tmp_assign_source_20;
@@ -24425,7 +23397,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_21;
-        tmp_assign_source_21 = mod_consts[239];
+        tmp_assign_source_21 = mod_consts[237];
         {
             PyObject *old = var_cmd_field_obj;
             var_cmd_field_obj = tmp_assign_source_21;
@@ -24437,13 +23409,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_subscript_name_8;
         if (var_target == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24453,11 +23425,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_15 = var_target;
+        tmp_expression_name_10 = var_target;
         CHECK_OBJECT(var_single_target);
         tmp_subscript_name_7 = var_single_target;
-        tmp_expression_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_7);
-        if (tmp_expression_name_14 == NULL) {
+        tmp_expression_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        if (tmp_expression_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24467,9 +23439,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_8 = mod_consts[248];
-        tmp_iter_arg_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_8);
-        Py_DECREF(tmp_expression_name_14);
+        tmp_subscript_name_8 = mod_consts[246];
+        tmp_iter_arg_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
+        Py_DECREF(tmp_expression_name_9);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24556,17 +23528,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_left_name_3;
         PyObject *tmp_right_name_3;
         PyObject *tmp_left_name_4;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_16;
+        PyObject *tmp_called_name_14;
         PyObject *tmp_args_element_name_15;
         PyObject *tmp_args_element_name_16;
         PyObject *tmp_len_arg_6;
         PyObject *tmp_right_name_4;
-        PyObject *tmp_called_name_10;
+        PyObject *tmp_called_name_15;
         PyObject *tmp_args_element_name_17;
         if (var_cmd_field_type == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[249]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24577,13 +23548,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
 
         tmp_left_name_3 = var_cmd_field_type;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_14 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_14 == NULL)) {
+            tmp_called_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_called_name_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24593,18 +23564,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[237]);
-        if (tmp_called_name_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 519;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_args_element_name_15 = mod_consts[91];
+        tmp_args_element_name_15 = mod_consts[89];
         CHECK_OBJECT(var_field_str);
         tmp_len_arg_6 = var_field_str;
         tmp_args_element_name_16 = BUILTIN_LEN(tmp_len_arg_6);
@@ -24612,7 +23572,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+
 
             exception_lineno = 519;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -24621,10 +23581,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 519;
         {
             PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16};
-            tmp_left_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
+            tmp_left_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_14, call_args);
         }
 
-        Py_DECREF(tmp_called_name_9);
         Py_DECREF(tmp_args_element_name_16);
         if (tmp_left_name_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -24636,13 +23595,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_10 == NULL)) {
-            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_15 == NULL)) {
+            tmp_called_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_10 == NULL) {
+        if (tmp_called_name_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24655,7 +23614,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         CHECK_OBJECT(var_field_str);
         tmp_args_element_name_17 = var_field_str;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 519;
-        tmp_right_name_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_17);
+        tmp_right_name_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_17);
         if (tmp_right_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24741,13 +23700,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     {
         PyObject *tmp_assign_source_27;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_12;
         PyObject *tmp_subscript_name_9;
         PyObject *tmp_subscript_name_10;
         if (var_target == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24757,11 +23716,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_18 = var_target;
+        tmp_expression_name_12 = var_target;
         CHECK_OBJECT(var_single_target);
         tmp_subscript_name_9 = var_single_target;
-        tmp_expression_name_17 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_9);
-        if (tmp_expression_name_17 == NULL) {
+        tmp_expression_name_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_9);
+        if (tmp_expression_name_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24771,9 +23730,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_10 = mod_consts[250];
-        tmp_iter_arg_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_10);
-        Py_DECREF(tmp_expression_name_17);
+        tmp_subscript_name_10 = mod_consts[248];
+        tmp_iter_arg_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
+        Py_DECREF(tmp_expression_name_11);
         if (tmp_iter_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -24929,12 +23888,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_assign_source_33;
         PyObject *tmp_left_name_5;
         PyObject *tmp_right_name_5;
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_name_16;
         PyObject *tmp_args_element_name_18;
         PyObject *tmp_args_element_name_19;
         if (var_cmd_field_obj == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[252]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[250]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -24945,13 +23904,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
 
         tmp_left_name_5 = var_cmd_field_obj;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_16 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_16 == NULL)) {
+            tmp_called_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -24961,17 +23920,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_args_element_name_18 = mod_consts[249];
+        tmp_args_element_name_18 = mod_consts[247];
         CHECK_OBJECT(var_single_id);
         tmp_args_element_name_19 = var_single_id;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 523;
         {
             PyObject *call_args[] = {tmp_args_element_name_18, tmp_args_element_name_19};
-            tmp_right_name_5 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_6,
-                mod_consts[237],
-                call_args
-            );
+            tmp_right_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_16, call_args);
         }
 
         if (tmp_right_name_5 == NULL) {
@@ -25026,17 +23981,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_left_name_6;
         PyObject *tmp_right_name_6;
         PyObject *tmp_left_name_7;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_19;
+        PyObject *tmp_called_name_17;
         PyObject *tmp_args_element_name_20;
         PyObject *tmp_args_element_name_21;
         PyObject *tmp_len_arg_7;
         PyObject *tmp_right_name_7;
-        PyObject *tmp_called_name_12;
+        PyObject *tmp_called_name_18;
         PyObject *tmp_args_element_name_22;
         if (var_cmd_field_obj == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[252]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[250]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -25047,13 +24001,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
 
         tmp_left_name_6 = var_cmd_field_obj;
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_17 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_17 == NULL)) {
+            tmp_called_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_called_name_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25063,18 +24017,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[237]);
-        if (tmp_called_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 525;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto try_except_handler_5;
-        }
-        tmp_args_element_name_20 = mod_consts[91];
+        tmp_args_element_name_20 = mod_consts[89];
         CHECK_OBJECT(var_single_id);
         tmp_len_arg_7 = var_single_id;
         tmp_args_element_name_21 = BUILTIN_LEN(tmp_len_arg_7);
@@ -25082,7 +24025,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 525;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -25091,10 +24034,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 525;
         {
             PyObject *call_args[] = {tmp_args_element_name_20, tmp_args_element_name_21};
-            tmp_left_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_11, call_args);
+            tmp_left_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_17, call_args);
         }
 
-        Py_DECREF(tmp_called_name_11);
         Py_DECREF(tmp_args_element_name_21);
         if (tmp_left_name_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25106,13 +24048,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_12 == NULL)) {
-            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_18 == NULL)) {
+            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_12 == NULL) {
+        if (tmp_called_name_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25125,7 +24067,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         CHECK_OBJECT(var_single_id);
         tmp_args_element_name_22 = var_single_id;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 525;
-        tmp_right_name_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_22);
+        tmp_right_name_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_18, tmp_args_element_name_22);
         if (tmp_right_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -25267,7 +24209,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_right_name_12;
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -25295,7 +24237,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
         if (var_cmd_field_type == NULL) {
             Py_DECREF(tmp_left_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[249]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -25334,7 +24276,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
         if (var_cmd_field_obj == NULL) {
             Py_DECREF(tmp_left_name_9);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[252]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[250]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -25439,7 +24381,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         }
         if (var_cmd_repeat == NULL) {
             Py_DECREF(tmp_left_name_13);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -25486,16 +24428,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_name_19;
         PyObject *tmp_args_element_name_23;
         PyObject *tmp_args_element_name_24;
-        tmp_called_instance_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_19 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_7 == NULL)) {
-            tmp_called_instance_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_19 == NULL)) {
+            tmp_called_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_7 == NULL) {
+        if (tmp_called_name_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25505,17 +24447,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_23 = mod_consts[87];
+        tmp_args_element_name_23 = mod_consts[85];
         CHECK_OBJECT(var_payloadsize);
         tmp_args_element_name_24 = var_payloadsize;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 529;
         {
             PyObject *call_args[] = {tmp_args_element_name_23, tmp_args_element_name_24};
-            tmp_assign_source_38 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_7,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_38 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_19, call_args);
         }
 
         if (tmp_assign_source_38 == NULL) {
@@ -25533,8 +24471,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_39;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_called_name_20;
         PyObject *tmp_args_element_name_25;
         PyObject *tmp_args_element_name_26;
         PyObject *tmp_left_name_15;
@@ -25547,13 +24484,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         PyObject *tmp_len_arg_10;
         PyObject *tmp_right_name_17;
         PyObject *tmp_right_name_18;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_20 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_20 == NULL)) {
+            tmp_called_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_called_name_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25563,19 +24500,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             type_description_1 = "ooooooooooooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[237]);
-        if (tmp_called_name_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 530;
-            type_description_1 = "ooooooooooooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_25 = mod_consts[87];
-        tmp_left_name_18 = mod_consts[45];
+        tmp_args_element_name_25 = mod_consts[85];
+        tmp_left_name_18 = mod_consts[44];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_9 = var_cmd_sourceid;
         tmp_right_name_15 = BUILTIN_LEN(tmp_len_arg_9);
@@ -25583,7 +24509,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 530;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -25599,7 +24525,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
             Py_DECREF(tmp_left_name_17);
 
             exception_lineno = 530;
@@ -25610,7 +24535,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         Py_DECREF(tmp_left_name_17);
         Py_DECREF(tmp_right_name_16);
         assert(!(tmp_left_name_16 == NULL));
-        tmp_right_name_17 = mod_consts[29];
+        tmp_right_name_17 = mod_consts[28];
         tmp_left_name_15 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_16, tmp_right_name_17);
         Py_DECREF(tmp_left_name_16);
         assert(!(tmp_left_name_15 == NULL));
@@ -25622,7 +24547,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 530;
             type_description_1 = "ooooooooooooooooooooooooooooo";
@@ -25631,10 +24556,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 530;
         {
             PyObject *call_args[] = {tmp_args_element_name_25, tmp_args_element_name_26};
-            tmp_assign_source_39 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
+            tmp_assign_source_39 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_20, call_args);
         }
 
-        Py_DECREF(tmp_called_name_13);
         Py_DECREF(tmp_args_element_name_26);
         if (tmp_assign_source_39 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25651,10 +24575,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     {
         PyObject *tmp_assign_source_40;
-        PyObject *tmp_called_instance_8;
+        PyObject *tmp_called_instance_1;
         PyObject *tmp_args_element_name_27;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_8 = mod_consts[239];
+        tmp_called_instance_1 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_27 = PyList_New(9);
@@ -25684,7 +24608,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         tmp_list_element_2 = var_cmd_payload;
         PyList_SET_ITEM0(tmp_args_element_name_27, 8, tmp_list_element_2);
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 531;
-        tmp_assign_source_40 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[223], tmp_args_element_name_27);
+        tmp_assign_source_40 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[221], tmp_args_element_name_27);
         Py_DECREF(tmp_args_element_name_27);
         if (tmp_assign_source_40 == NULL) {
             assert(ERROR_OCCURRED());
@@ -25701,14 +24625,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_9;
-        PyObject *tmp_expression_name_21;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_28;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_21 = par_self;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[15]);
-        if (tmp_called_instance_9 == NULL) {
+        tmp_expression_name_13 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[14]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -25721,8 +24645,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__25_tcmgetdata(struct Nui
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_28 = var_cmd_packet;
         frame_002a2bbc36b97e2a247ec6f064893ff5->m_frame.f_lineno = 535;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[246], tmp_args_element_name_28);
-        Py_DECREF(tmp_called_instance_9);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[244], tmp_args_element_name_28);
+        Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -26149,14 +25073,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26167,11 +25091,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             goto frame_exception_exit_1;
         }
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 541;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26188,26 +25108,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26218,11 +25138,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
                 goto list_build_exception_1;
             }
             frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 542;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -26239,14 +25155,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 542;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26268,14 +25184,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26286,11 +25202,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             goto frame_exception_exit_1;
         }
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 543;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[255], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[253]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26307,14 +25219,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26325,11 +25237,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             goto frame_exception_exit_1;
         }
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 544;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26346,14 +25254,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26364,7 +25272,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             goto frame_exception_exit_1;
         }
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 545;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26384,7 +25292,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -26400,21 +25308,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_int_arg_1;
         PyObject *tmp_left_name_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_right_name_1;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26424,18 +25331,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 547;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
         tmp_len_arg_1 = var_cmd_userid;
         tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
@@ -26443,20 +25339,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 547;
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[25];
+        tmp_right_name_1 = mod_consts[24];
         tmp_int_arg_1 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
         Py_DECREF(tmp_left_name_1);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 547;
             type_description_1 = "ooooooooooooo";
@@ -26468,7 +25364,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 547;
             type_description_1 = "ooooooooooooo";
@@ -26477,10 +25373,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 547;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26497,23 +25392,23 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_8;
-        tmp_assign_source_8 = mod_consts[25];
+        tmp_assign_source_8 = mod_consts[24];
         assert(var_payloadsize == NULL);
         Py_INCREF(tmp_assign_source_8);
         var_payloadsize = tmp_assign_source_8;
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_name_8;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_5 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26523,17 +25418,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = mod_consts[87];
+        tmp_args_element_name_4 = mod_consts[85];
         CHECK_OBJECT(var_payloadsize);
         tmp_args_element_name_5 = var_payloadsize;
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 549;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_5,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -26551,16 +25442,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26570,17 +25461,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_6 = mod_consts[108];
+        tmp_args_element_name_6 = mod_consts[106];
         CHECK_OBJECT(par_opt);
         tmp_args_element_name_7 = par_opt;
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 550;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_10 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_6,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -26598,8 +25485,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_8;
         PyObject *tmp_args_element_name_9;
         PyObject *tmp_left_name_2;
@@ -26612,13 +25498,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         PyObject *tmp_len_arg_3;
         PyObject *tmp_right_name_4;
         PyObject *tmp_right_name_5;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26628,19 +25514,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 551;
-            type_description_1 = "ooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_8 = mod_consts[87];
-        tmp_left_name_5 = mod_consts[45];
+        tmp_args_element_name_8 = mod_consts[85];
+        tmp_left_name_5 = mod_consts[44];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_2 = BUILTIN_LEN(tmp_len_arg_2);
@@ -26648,7 +25523,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 551;
             type_description_1 = "ooooooooooooo";
@@ -26664,7 +25539,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_4);
 
             exception_lineno = 551;
@@ -26675,7 +25549,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         Py_DECREF(tmp_left_name_4);
         Py_DECREF(tmp_right_name_3);
         assert(!(tmp_left_name_3 == NULL));
-        tmp_right_name_4 = mod_consts[29];
+        tmp_right_name_4 = mod_consts[28];
         tmp_left_name_2 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_3, tmp_right_name_4);
         Py_DECREF(tmp_left_name_3);
         assert(!(tmp_left_name_2 == NULL));
@@ -26687,7 +25561,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 551;
             type_description_1 = "ooooooooooooo";
@@ -26696,10 +25570,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 551;
         {
             PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_9);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26716,10 +25589,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_1;
         PyObject *tmp_args_element_name_10;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_1 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_10 = PyList_New(9);
@@ -26749,7 +25622,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         tmp_list_element_2 = var_cmd_tGD_id;
         PyList_SET_ITEM0(tmp_args_element_name_10, 8, tmp_list_element_2);
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 552;
-        tmp_assign_source_12 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_10);
+        tmp_assign_source_12 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[221], tmp_args_element_name_10);
         Py_DECREF(tmp_args_element_name_10);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26766,14 +25639,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_11;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -26786,8 +25659,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(struct
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_11 = var_cmd_packet;
         frame_476eedb6fa72e5fa6331f2efe0c0cdbd->m_frame.f_lineno = 556;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_11);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[244], tmp_args_element_name_11);
+        Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -27141,7 +26014,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_subscript_name_1;
         CHECK_OBJECT(par_opt);
         tmp_expression_name_1 = par_opt;
-        tmp_subscript_name_1 = mod_consts[27];
+        tmp_subscript_name_1 = mod_consts[26];
         tmp_assign_source_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 3);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27158,14 +26031,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27176,11 +26049,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto frame_exception_exit_1;
         }
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 574;
-        tmp_assign_source_2 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27197,26 +26066,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_2;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_2 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_2 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27227,11 +26096,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
                 goto list_build_exception_1;
             }
             frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 575;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -27248,14 +26113,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 575;
-        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27277,14 +26142,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27295,11 +26160,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto frame_exception_exit_1;
         }
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 576;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[256], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[254]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27316,14 +26177,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27334,11 +26195,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto frame_exception_exit_1;
         }
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 577;
-        tmp_assign_source_5 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27355,14 +26212,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27373,7 +26230,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto frame_exception_exit_1;
         }
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 578;
-        tmp_assign_source_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_6 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27393,7 +26250,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_expression_name_3;
         CHECK_OBJECT(par_self);
         tmp_expression_name_3 = par_self;
-        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[99]);
+        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[97]);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -27409,21 +26266,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_int_arg_1;
         PyObject *tmp_left_name_1;
         PyObject *tmp_len_arg_1;
         PyObject *tmp_right_name_1;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27433,18 +26289,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 582;
-            type_description_1 = "ooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
         tmp_len_arg_1 = var_cmd_userid;
         tmp_left_name_1 = BUILTIN_LEN(tmp_len_arg_1);
@@ -27452,20 +26297,20 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 582;
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_right_name_1 = mod_consts[25];
+        tmp_right_name_1 = mod_consts[24];
         tmp_int_arg_1 = BINARY_OPERATION_TRUEDIV_OBJECT_LONG_LONG(tmp_left_name_1, tmp_right_name_1);
         Py_DECREF(tmp_left_name_1);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 582;
             type_description_1 = "ooooooooooooooooooo";
@@ -27477,7 +26322,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 582;
             type_description_1 = "ooooooooooooooooooo";
@@ -27486,10 +26331,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 582;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27506,19 +26350,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_name_8;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_name_4;
         PyObject *tmp_subscript_name_2;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27528,27 +26371,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 583;
-            type_description_1 = "ooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[108];
+        tmp_args_element_name_4 = mod_consts[106];
         CHECK_OBJECT(par_opt);
-        tmp_expression_name_6 = par_opt;
-        tmp_subscript_name_2 = mod_consts[21];
-        tmp_args_element_name_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_2, 0);
+        tmp_expression_name_4 = par_opt;
+        tmp_subscript_name_2 = mod_consts[20];
+        tmp_args_element_name_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_2, 0);
         if (tmp_args_element_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 583;
             type_description_1 = "ooooooooooooooooooo";
@@ -27557,10 +26389,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 583;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27577,19 +26408,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_name_5;
         PyObject *tmp_subscript_name_3;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27599,27 +26429,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[237]);
-        if (tmp_called_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 584;
-            type_description_1 = "ooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_6 = mod_consts[87];
+        tmp_args_element_name_6 = mod_consts[85];
         CHECK_OBJECT(par_opt);
-        tmp_expression_name_8 = par_opt;
-        tmp_subscript_name_3 = mod_consts[23];
-        tmp_args_element_name_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_8, tmp_subscript_name_3, 1);
+        tmp_expression_name_5 = par_opt;
+        tmp_subscript_name_3 = mod_consts[22];
+        tmp_args_element_name_7 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_3, 1);
         if (tmp_args_element_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 584;
             type_description_1 = "ooooooooooooooooooo";
@@ -27628,10 +26447,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 584;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_7);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27648,19 +26466,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_8;
         PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_name_6;
         PyObject *tmp_subscript_name_4;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27670,27 +26487,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[237]);
-        if (tmp_called_name_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 585;
-            type_description_1 = "ooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_8 = mod_consts[87];
+        tmp_args_element_name_8 = mod_consts[85];
         CHECK_OBJECT(par_opt);
-        tmp_expression_name_10 = par_opt;
-        tmp_subscript_name_4 = mod_consts[25];
-        tmp_args_element_name_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_4, 2);
+        tmp_expression_name_6 = par_opt;
+        tmp_subscript_name_4 = mod_consts[24];
+        tmp_args_element_name_9 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_6, tmp_subscript_name_4, 2);
         if (tmp_args_element_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_6);
+
 
             exception_lineno = 585;
             type_description_1 = "ooooooooooooooooooo";
@@ -27699,10 +26505,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 585;
         {
             PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            tmp_assign_source_11 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
         Py_DECREF(tmp_args_element_name_9);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27719,7 +26524,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = mod_consts[239];
+        tmp_assign_source_12 = mod_consts[237];
         assert(var_cmd_repeat == NULL);
         Py_INCREF(tmp_assign_source_12);
         var_cmd_repeat = tmp_assign_source_12;
@@ -27788,17 +26593,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_left_name_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_left_name_3;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_called_name_11;
         PyObject *tmp_args_element_name_10;
         PyObject *tmp_args_element_name_11;
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_3;
-        PyObject *tmp_called_name_8;
+        PyObject *tmp_called_name_12;
         PyObject *tmp_args_element_name_12;
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -27809,13 +26613,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         }
 
         tmp_left_name_2 = var_cmd_repeat;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_11 == NULL)) {
+            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_called_name_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27825,18 +26629,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[237]);
-        if (tmp_called_name_7 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 588;
-            type_description_1 = "ooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_10 = mod_consts[91];
+        tmp_args_element_name_10 = mod_consts[89];
         CHECK_OBJECT(var_obj);
         tmp_len_arg_2 = var_obj;
         tmp_args_element_name_11 = BUILTIN_LEN(tmp_len_arg_2);
@@ -27844,7 +26637,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_7);
+
 
             exception_lineno = 588;
             type_description_1 = "ooooooooooooooooooo";
@@ -27853,10 +26646,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 588;
         {
             PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11};
-            tmp_left_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+            tmp_left_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_11, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
         Py_DECREF(tmp_args_element_name_11);
         if (tmp_left_name_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27868,13 +26660,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_12 == NULL)) {
+            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_name_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27887,7 +26679,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         CHECK_OBJECT(var_obj);
         tmp_args_element_name_12 = var_obj;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 588;
-        tmp_right_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_12);
+        tmp_right_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_12);
         if (tmp_right_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -27930,13 +26722,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     {
         PyObject *tmp_assign_source_17;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_name_8;
         PyObject *tmp_subscript_name_5;
         PyObject *tmp_subscript_name_6;
         if (var_target == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -27946,11 +26738,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_13 = var_target;
+        tmp_expression_name_8 = var_target;
         CHECK_OBJECT(var_obj);
         tmp_subscript_name_5 = var_obj;
-        tmp_expression_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_5);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_5);
+        if (tmp_expression_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -27960,9 +26752,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_6 = mod_consts[116];
-        tmp_iter_arg_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_6);
-        Py_DECREF(tmp_expression_name_12);
+        tmp_subscript_name_6 = mod_consts[114];
+        tmp_iter_arg_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_6);
+        Py_DECREF(tmp_expression_name_7);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -28055,12 +26847,12 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_assign_source_20;
         PyObject *tmp_left_name_4;
         PyObject *tmp_right_name_4;
-        PyObject *tmp_called_instance_5;
+        PyObject *tmp_called_name_13;
         PyObject *tmp_args_element_name_13;
         PyObject *tmp_args_element_name_14;
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28071,13 +26863,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         }
 
         tmp_left_name_4 = var_cmd_repeat;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_13 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_13 == NULL)) {
+            tmp_called_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_5 == NULL) {
+        if (tmp_called_name_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28087,17 +26879,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_args_element_name_13 = mod_consts[249];
+        tmp_args_element_name_13 = mod_consts[247];
         CHECK_OBJECT(var_single_id);
         tmp_args_element_name_14 = var_single_id;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 591;
         {
             PyObject *call_args[] = {tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_right_name_4 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_5,
-                mod_consts[237],
-                call_args
-            );
+            tmp_right_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
         }
 
         if (tmp_right_name_4 == NULL) {
@@ -28152,17 +26940,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_left_name_5;
         PyObject *tmp_right_name_5;
         PyObject *tmp_left_name_6;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_called_name_14;
         PyObject *tmp_args_element_name_15;
         PyObject *tmp_args_element_name_16;
         PyObject *tmp_len_arg_3;
         PyObject *tmp_right_name_6;
-        PyObject *tmp_called_name_10;
+        PyObject *tmp_called_name_15;
         PyObject *tmp_args_element_name_17;
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28173,13 +26960,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         }
 
         tmp_left_name_5 = var_cmd_repeat;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_14 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_14 == NULL)) {
+            tmp_called_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_called_name_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28189,18 +26976,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[237]);
-        if (tmp_called_name_9 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 593;
-            type_description_1 = "ooooooooooooooooooo";
-            goto try_except_handler_3;
-        }
-        tmp_args_element_name_15 = mod_consts[91];
+        tmp_args_element_name_15 = mod_consts[89];
         CHECK_OBJECT(var_single_id);
         tmp_len_arg_3 = var_single_id;
         tmp_args_element_name_16 = BUILTIN_LEN(tmp_len_arg_3);
@@ -28208,7 +26984,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_9);
+
 
             exception_lineno = 593;
             type_description_1 = "ooooooooooooooooooo";
@@ -28217,10 +26993,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 593;
         {
             PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16};
-            tmp_left_name_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
+            tmp_left_name_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_14, call_args);
         }
 
-        Py_DECREF(tmp_called_name_9);
         Py_DECREF(tmp_args_element_name_16);
         if (tmp_left_name_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28232,13 +27007,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_10 == NULL)) {
-            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_15 == NULL)) {
+            tmp_called_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_10 == NULL) {
+        if (tmp_called_name_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28251,7 +27026,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         CHECK_OBJECT(var_single_id);
         tmp_args_element_name_17 = var_single_id;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 593;
-        tmp_right_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_17);
+        tmp_right_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_17);
         if (tmp_right_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -28341,25 +27116,24 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_left_name_7;
         PyObject *tmp_right_name_7;
         PyObject *tmp_left_name_8;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_called_name_16;
         PyObject *tmp_args_element_name_18;
         PyObject *tmp_args_element_name_19;
         PyObject *tmp_len_arg_4;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_name_10;
         PyObject *tmp_subscript_name_7;
         PyObject *tmp_subscript_name_8;
         PyObject *tmp_right_name_8;
-        PyObject *tmp_called_name_12;
+        PyObject *tmp_called_name_17;
         PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_expression_name_19;
+        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_name_12;
         PyObject *tmp_subscript_name_9;
         PyObject *tmp_subscript_name_10;
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28370,13 +27144,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         }
 
         tmp_left_name_7 = var_cmd_repeat;
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_16 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_16 == NULL)) {
+            tmp_called_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
+        if (tmp_called_name_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28386,21 +27160,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[237]);
-        if (tmp_called_name_11 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 594;
-            type_description_1 = "ooooooooooooooooooo";
-            goto try_except_handler_2;
-        }
-        tmp_args_element_name_18 = mod_consts[91];
+        tmp_args_element_name_18 = mod_consts[89];
         if (var_target == NULL) {
-            Py_DECREF(tmp_called_name_11);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28410,28 +27173,28 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_17 = var_target;
+        tmp_expression_name_10 = var_target;
         CHECK_OBJECT(var_obj);
         tmp_subscript_name_7 = var_obj;
-        tmp_expression_name_16 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_7);
-        if (tmp_expression_name_16 == NULL) {
+        tmp_expression_name_9 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_7);
+        if (tmp_expression_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 594;
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_8 = mod_consts[257];
-        tmp_len_arg_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_8);
-        Py_DECREF(tmp_expression_name_16);
+        tmp_subscript_name_8 = mod_consts[255];
+        tmp_len_arg_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_8);
+        Py_DECREF(tmp_expression_name_9);
         if (tmp_len_arg_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 594;
             type_description_1 = "ooooooooooooooooooo";
@@ -28443,7 +27206,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_11);
+
 
             exception_lineno = 594;
             type_description_1 = "ooooooooooooooooooo";
@@ -28452,10 +27215,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 594;
         {
             PyObject *call_args[] = {tmp_args_element_name_18, tmp_args_element_name_19};
-            tmp_left_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_11, call_args);
+            tmp_left_name_8 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_16, call_args);
         }
 
-        Py_DECREF(tmp_called_name_11);
         Py_DECREF(tmp_args_element_name_19);
         if (tmp_left_name_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28467,13 +27229,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        tmp_called_name_17 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_12 == NULL)) {
-            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_17 == NULL)) {
+            tmp_called_name_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_12 == NULL) {
+        if (tmp_called_name_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28485,7 +27247,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         }
         if (var_target == NULL) {
             Py_DECREF(tmp_left_name_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[13]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[12]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28495,11 +27257,11 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_19 = var_target;
+        tmp_expression_name_12 = var_target;
         CHECK_OBJECT(var_obj);
         tmp_subscript_name_9 = var_obj;
-        tmp_expression_name_18 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_9);
-        if (tmp_expression_name_18 == NULL) {
+        tmp_expression_name_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_9);
+        if (tmp_expression_name_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28509,9 +27271,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto try_except_handler_2;
         }
-        tmp_subscript_name_10 = mod_consts[257];
-        tmp_args_element_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_10);
-        Py_DECREF(tmp_expression_name_18);
+        tmp_subscript_name_10 = mod_consts[255];
+        tmp_args_element_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_10);
+        Py_DECREF(tmp_expression_name_11);
         if (tmp_args_element_name_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -28523,7 +27285,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             goto try_except_handler_2;
         }
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 594;
-        tmp_right_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_20);
+        tmp_right_name_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_20);
         Py_DECREF(tmp_args_element_name_20);
         if (tmp_right_name_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28612,10 +27374,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_left_name_9;
         PyObject *tmp_right_name_9;
         PyObject *tmp_len_arg_5;
-        tmp_left_name_9 = mod_consts[41];
+        tmp_left_name_9 = mod_consts[40];
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28645,16 +27407,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_called_instance_6;
+        PyObject *tmp_called_name_18;
         PyObject *tmp_args_element_name_21;
         PyObject *tmp_args_element_name_22;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_18 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_18 == NULL)) {
+            tmp_called_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28664,17 +27426,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_21 = mod_consts[87];
+        tmp_args_element_name_21 = mod_consts[85];
         CHECK_OBJECT(var_payloadsize);
         tmp_args_element_name_22 = var_payloadsize;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 596;
         {
             PyObject *call_args[] = {tmp_args_element_name_21, tmp_args_element_name_22};
-            tmp_assign_source_24 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_6,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_24 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_18, call_args);
         }
 
         if (tmp_assign_source_24 == NULL) {
@@ -28692,8 +27450,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_25;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_called_name_19;
         PyObject *tmp_args_element_name_23;
         PyObject *tmp_args_element_name_24;
         PyObject *tmp_left_name_10;
@@ -28706,13 +27463,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyObject *tmp_len_arg_7;
         PyObject *tmp_right_name_12;
         PyObject *tmp_right_name_13;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_19 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_19 == NULL)) {
+            tmp_called_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_called_name_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28722,19 +27479,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             type_description_1 = "ooooooooooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[237]);
-        if (tmp_called_name_13 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 597;
-            type_description_1 = "ooooooooooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_23 = mod_consts[87];
-        tmp_left_name_13 = mod_consts[45];
+        tmp_args_element_name_23 = mod_consts[85];
+        tmp_left_name_13 = mod_consts[44];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_6 = var_cmd_sourceid;
         tmp_right_name_10 = BUILTIN_LEN(tmp_len_arg_6);
@@ -28742,7 +27488,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 597;
             type_description_1 = "ooooooooooooooooooo";
@@ -28758,7 +27504,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
             Py_DECREF(tmp_left_name_12);
 
             exception_lineno = 597;
@@ -28769,7 +27514,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         Py_DECREF(tmp_left_name_12);
         Py_DECREF(tmp_right_name_11);
         assert(!(tmp_left_name_11 == NULL));
-        tmp_right_name_12 = mod_consts[29];
+        tmp_right_name_12 = mod_consts[28];
         tmp_left_name_10 = BINARY_OPERATION_ADD_OBJECT_LONG_LONG(tmp_left_name_11, tmp_right_name_12);
         Py_DECREF(tmp_left_name_11);
         assert(!(tmp_left_name_10 == NULL));
@@ -28781,7 +27526,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_13);
+
 
             exception_lineno = 597;
             type_description_1 = "ooooooooooooooooooo";
@@ -28790,10 +27535,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 597;
         {
             PyObject *call_args[] = {tmp_args_element_name_23, tmp_args_element_name_24};
-            tmp_assign_source_25 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
+            tmp_assign_source_25 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_19, call_args);
         }
 
-        Py_DECREF(tmp_called_name_13);
         Py_DECREF(tmp_args_element_name_24);
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28810,13 +27554,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
     }
     {
         PyObject *tmp_assign_source_26;
-        PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_21;
+        PyObject *tmp_called_name_20;
+        PyObject *tmp_expression_name_13;
         PyObject *tmp_args_element_name_25;
         PyObject *tmp_list_element_2;
-        tmp_expression_name_21 = mod_consts[239];
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[223]);
-        assert(!(tmp_called_name_14 == NULL));
+        tmp_expression_name_13 = mod_consts[237];
+        tmp_called_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[221]);
+        assert(!(tmp_called_name_20 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_25 = PyList_New(12);
@@ -28853,7 +27597,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         PyList_SET_ITEM0(tmp_args_element_name_25, 10, tmp_list_element_2);
         if (var_cmd_repeat == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[253]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[251]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -28868,14 +27612,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         goto list_build_noexception_2;
         // Exception handling pass through code for list_build:
         list_build_exception_2:;
-        Py_DECREF(tmp_called_name_14);
+        Py_DECREF(tmp_called_name_20);
         Py_DECREF(tmp_args_element_name_25);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_2:;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 598;
-        tmp_assign_source_26 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, tmp_args_element_name_25);
-        Py_DECREF(tmp_called_name_14);
+        tmp_assign_source_26 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_20, tmp_args_element_name_25);
+        Py_DECREF(tmp_called_name_20);
         Py_DECREF(tmp_args_element_name_25);
         if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
@@ -28891,14 +27635,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         var_cmd_packet = tmp_assign_source_26;
     }
     {
-        PyObject *tmp_called_instance_7;
-        PyObject *tmp_expression_name_22;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_name_14;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_26;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_22 = par_self;
-        tmp_called_instance_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[15]);
-        if (tmp_called_instance_7 == NULL) {
+        tmp_expression_name_14 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[14]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -28911,8 +27655,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__27_tcmcommand(struct Nui
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_26 = var_cmd_packet;
         frame_79524e885f5a67d01a8685a8ead964a9->m_frame.f_lineno = 603;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[246], tmp_args_element_name_26);
-        Py_DECREF(tmp_called_instance_7);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[244], tmp_args_element_name_26);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -29205,14 +27949,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29223,11 +27967,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 608;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29244,26 +27984,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29274,11 +28014,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
                 goto list_build_exception_1;
             }
             frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 609;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -29295,14 +28031,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 609;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29324,14 +28060,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29342,11 +28078,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 610;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[259], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[257]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29363,14 +28095,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29381,11 +28113,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 611;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29402,14 +28130,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29420,7 +28148,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 612;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29440,7 +28168,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -29456,19 +28184,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29478,24 +28205,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 614;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 614;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -29503,7 +28219,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 614;
             type_description_1 = "ooooooooooo";
@@ -29515,7 +28231,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 614;
             type_description_1 = "ooooooooooo";
@@ -29524,10 +28240,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 614;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29544,14 +28259,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29562,11 +28277,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             goto frame_exception_exit_1;
         }
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 615;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29583,8 +28294,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_1;
@@ -29593,13 +28303,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29609,19 +28319,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             type_description_1 = "ooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 616;
-            type_description_1 = "ooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -29629,7 +28328,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 616;
             type_description_1 = "ooooooooooo";
@@ -29645,7 +28344,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 616;
@@ -29659,10 +28357,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 616;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29679,10 +28376,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -29709,7 +28406,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 617;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -29726,14 +28423,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -29746,8 +28443,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__28_tcminfo(struct Nuitka
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_c3d642784c960fd3db1e835f2b8ac424->m_frame.f_lineno = 621;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -30076,14 +28773,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30094,11 +28791,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             goto frame_exception_exit_1;
         }
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 626;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30115,26 +28808,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30145,11 +28838,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
                 goto list_build_exception_1;
             }
             frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 627;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -30166,14 +28855,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 627;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30195,14 +28884,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30213,11 +28902,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             goto frame_exception_exit_1;
         }
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 628;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[260], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[258]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30234,14 +28919,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30252,11 +28937,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             goto frame_exception_exit_1;
         }
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 629;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30273,14 +28954,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30291,7 +28972,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             goto frame_exception_exit_1;
         }
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 630;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30311,7 +28992,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -30327,19 +29008,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30349,24 +29029,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 632;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 632;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -30374,7 +29043,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 632;
             type_description_1 = "oooooooooo";
@@ -30386,7 +29055,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 632;
             type_description_1 = "oooooooooo";
@@ -30395,10 +29064,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 632;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30415,14 +29083,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30433,11 +29101,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             goto frame_exception_exit_1;
         }
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 633;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30454,8 +29118,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_1;
@@ -30464,13 +29127,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30480,19 +29143,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 634;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -30500,7 +29152,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 634;
             type_description_1 = "oooooooooo";
@@ -30516,7 +29168,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 634;
@@ -30530,10 +29181,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 634;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30550,10 +29200,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -30580,7 +29230,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 635;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30597,14 +29247,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30617,8 +29267,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart(st
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_8ff0daf0b1081a60439fb1ea83492653->m_frame.f_lineno = 639;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -30943,10 +29593,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     {
         PyObject *tmp_called_name_1;
         PyObject *tmp_call_result_1;
-        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[92]);
+        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[90]);
         assert(tmp_called_name_1 != NULL);
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 644;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[261]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[259]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -30962,14 +29612,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_2;
+        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_2 == NULL)) {
+            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -30980,11 +29630,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             goto frame_exception_exit_1;
         }
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 645;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_2, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31001,26 +29647,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_name_3;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_2 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_3 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_4;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_4 == NULL)) {
+                tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31031,11 +29677,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
                 goto list_build_exception_1;
             }
             frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 646;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -31052,14 +29694,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 646;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_2);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31081,14 +29723,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31099,11 +29741,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             goto frame_exception_exit_1;
         }
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 647;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[262], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[260]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31120,14 +29758,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31138,11 +29776,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             goto frame_exception_exit_1;
         }
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 648;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_6, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31159,14 +29793,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_7;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31177,7 +29811,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             goto frame_exception_exit_1;
         }
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 649;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_7, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31197,7 +29831,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -31213,19 +29847,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_8;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31235,24 +29868,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 651;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 651;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -31260,7 +29882,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 651;
             type_description_1 = "oooooooooo";
@@ -31272,7 +29894,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 651;
             type_description_1 = "oooooooooo";
@@ -31281,10 +29903,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 651;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31301,14 +29922,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_9;
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31319,11 +29940,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             goto frame_exception_exit_1;
         }
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 652;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_9, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31340,8 +29957,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_1;
@@ -31350,13 +29966,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31366,19 +29982,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 653;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -31386,7 +29991,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+
 
             exception_lineno = 653;
             type_description_1 = "oooooooooo";
@@ -31402,7 +30007,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 653;
@@ -31416,10 +30020,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 653;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31436,10 +30039,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -31466,7 +30069,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 654;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31483,14 +30086,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_2;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31503,8 +30106,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause(st
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_073fc1668bedf6fa78bb671b6f4f8c24->m_frame.f_lineno = 658;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -31828,14 +30431,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31846,11 +30449,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             goto frame_exception_exit_1;
         }
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 663;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31867,26 +30466,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31897,11 +30496,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
                 goto list_build_exception_1;
             }
             frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 664;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -31918,14 +30513,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 664;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31947,14 +30542,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -31965,11 +30560,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             goto frame_exception_exit_1;
         }
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 665;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[263], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[261]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31986,14 +30577,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32004,11 +30595,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             goto frame_exception_exit_1;
         }
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 666;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32025,14 +30612,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32043,7 +30630,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             goto frame_exception_exit_1;
         }
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 667;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32063,7 +30650,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -32079,19 +30666,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32101,24 +30687,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 669;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 669;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -32126,7 +30701,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 669;
             type_description_1 = "oooooooooo";
@@ -32138,7 +30713,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 669;
             type_description_1 = "oooooooooo";
@@ -32147,10 +30722,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 669;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32167,14 +30741,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32185,11 +30759,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             goto frame_exception_exit_1;
         }
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 670;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32206,8 +30776,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_1;
@@ -32216,13 +30785,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32232,19 +30801,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 671;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -32252,7 +30810,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 671;
             type_description_1 = "oooooooooo";
@@ -32268,7 +30826,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 671;
@@ -32282,10 +30839,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 671;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32302,10 +30858,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -32332,7 +30888,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 672;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32349,14 +30905,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32369,8 +30925,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_dd43dad8104932508686d4a2c4f04687->m_frame.f_lineno = 676;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -32694,14 +31250,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32712,11 +31268,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             goto frame_exception_exit_1;
         }
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 681;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32733,26 +31285,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32763,11 +31315,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
                 goto list_build_exception_1;
             }
             frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 682;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -32784,14 +31332,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 682;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32813,14 +31361,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32831,11 +31379,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             goto frame_exception_exit_1;
         }
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 683;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[264], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[262]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32852,14 +31396,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32870,11 +31414,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             goto frame_exception_exit_1;
         }
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 684;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32891,14 +31431,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32909,7 +31449,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             goto frame_exception_exit_1;
         }
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 685;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32929,7 +31469,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -32945,19 +31485,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -32967,24 +31506,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 687;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 687;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -32992,7 +31520,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 687;
             type_description_1 = "oooooooooo";
@@ -33004,7 +31532,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 687;
             type_description_1 = "oooooooooo";
@@ -33013,10 +31541,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 687;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33033,14 +31560,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33051,11 +31578,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             goto frame_exception_exit_1;
         }
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 688;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[245], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[243]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33072,8 +31595,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
         PyObject *tmp_left_name_1;
@@ -33082,13 +31604,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33098,19 +31620,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 689;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_4 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[53];
+        tmp_args_element_name_4 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[52];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -33118,7 +31629,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 689;
             type_description_1 = "oooooooooo";
@@ -33134,7 +31645,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 689;
@@ -33148,10 +31658,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 689;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33168,10 +31677,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_7 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_6 = PyList_New(8);
@@ -33198,7 +31707,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         tmp_list_element_2 = var_cmd_payloadsize;
         PyList_SET_ITEM0(tmp_args_element_name_6, 7, tmp_list_element_2);
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 690;
-        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_7, mod_consts[223], tmp_args_element_name_6);
+        tmp_assign_source_10 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_6);
         Py_DECREF(tmp_args_element_name_6);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33215,14 +31724,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_8;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_7;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_8 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33235,8 +31744,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort(st
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_7 = var_cmd_packet;
         frame_e026f1f0520a94d742bafec8b46b820e->m_frame.f_lineno = 694;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[246], tmp_args_element_name_7);
-        Py_DECREF(tmp_called_instance_8);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_7);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -33562,14 +32071,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33580,11 +32089,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             goto frame_exception_exit_1;
         }
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 700;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33601,26 +32106,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33631,11 +32136,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
                 goto list_build_exception_1;
             }
             frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 701;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -33652,14 +32153,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 701;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33681,14 +32182,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33699,11 +32200,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             goto frame_exception_exit_1;
         }
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 702;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[265], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[263]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33720,14 +32217,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33738,11 +32235,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             goto frame_exception_exit_1;
         }
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 703;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33759,14 +32252,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33777,7 +32270,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             goto frame_exception_exit_1;
         }
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 704;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33797,7 +32290,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -33813,19 +32306,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33835,24 +32327,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 706;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 706;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -33860,7 +32341,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 706;
             type_description_1 = "oooooooooooo";
@@ -33872,7 +32353,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 706;
             type_description_1 = "oooooooooooo";
@@ -33881,10 +32362,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 706;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33901,14 +32381,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33919,11 +32399,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             goto frame_exception_exit_1;
         }
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 707;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[266], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[264]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33940,16 +32416,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
-        tmp_called_instance_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_7 == NULL)) {
-            tmp_called_instance_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_7 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -33959,17 +32435,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = mod_consts[249];
+        tmp_args_element_name_4 = mod_consts[247];
         CHECK_OBJECT(par_opt);
         tmp_args_element_name_5 = par_opt;
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 708;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_7,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -33987,8 +32459,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_left_name_1;
@@ -33997,13 +32468,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34013,19 +32484,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 709;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_6 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[61];
+        tmp_args_element_name_6 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[60];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -34033,7 +32493,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 709;
             type_description_1 = "oooooooooooo";
@@ -34049,7 +32509,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 709;
@@ -34063,10 +32522,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 709;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_7);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34083,10 +32541,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_instance_8;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_8;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_8 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_8 = PyList_New(9);
@@ -34116,7 +32574,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         tmp_list_element_2 = var_cmd_payload;
         PyList_SET_ITEM0(tmp_args_element_name_8, 8, tmp_list_element_2);
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 710;
-        tmp_assign_source_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[223], tmp_args_element_name_8);
+        tmp_assign_source_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_8);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34133,14 +32591,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_9;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_9;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_9 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34153,8 +32611,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps(s
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_9 = var_cmd_packet;
         frame_8b41d8af58b6e1e821412083d825796f->m_frame.f_lineno = 714;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[246], tmp_args_element_name_9);
-        Py_DECREF(tmp_called_instance_9);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_9);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -34491,14 +32949,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_1;
+        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_1 == NULL)) {
+            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_1 == NULL) {
+        if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34509,11 +32967,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             goto frame_exception_exit_1;
         }
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 720;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[238], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_1, mod_consts[236]);
 
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34530,26 +32984,26 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_name_2;
         PyObject *tmp_expression_name_1;
         PyObject *tmp_args_element_name_1;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_1 = mod_consts[239];
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[223]);
-        assert(!(tmp_called_name_1 == NULL));
+        tmp_expression_name_1 = mod_consts[237];
+        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[221]);
+        assert(!(tmp_called_name_2 == NULL));
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_1 = var_cmd_key;
         tmp_args_element_name_1 = PyList_New(2);
         {
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_name_3;
             PyList_SET_ITEM0(tmp_args_element_name_1, 0, tmp_list_element_1);
-            tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+            tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-            if (unlikely(tmp_called_instance_2 == NULL)) {
-                tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+            if (unlikely(tmp_called_name_3 == NULL)) {
+                tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_called_name_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34560,11 +33014,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
                 goto list_build_exception_1;
             }
             frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 721;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[237],
-                &PyTuple_GET_ITEM(mod_consts[240], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_3, mod_consts[238]);
 
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -34581,14 +33031,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         goto list_build_noexception_1;
         // Exception handling pass through code for list_build:
         list_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 721;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34610,14 +33060,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_3;
-        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_4;
+        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_3 == NULL)) {
-            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_4 == NULL)) {
+            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_3 == NULL) {
+        if (tmp_called_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34628,11 +33078,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             goto frame_exception_exit_1;
         }
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 722;
-        tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[267], 0)
-        );
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_4, mod_consts[265]);
 
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34649,14 +33095,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_instance_4;
-        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_5;
+        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_4 == NULL)) {
-            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_5 == NULL)) {
+            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_4 == NULL) {
+        if (tmp_called_name_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34667,11 +33113,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             goto frame_exception_exit_1;
         }
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 723;
-        tmp_assign_source_4 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_4,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[242], 0)
-        );
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_5, mod_consts[240]);
 
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34688,14 +33130,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243]);
+        PyObject *tmp_called_name_6;
+        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[243]);
+        if (unlikely(tmp_called_name_6 == NULL)) {
+            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[241]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_name_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34706,7 +33148,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             goto frame_exception_exit_1;
         }
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 724;
-        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[244]);
+        tmp_assign_source_5 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[242]);
 
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34726,7 +33168,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(par_self);
         tmp_expression_name_2 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[99]);
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[97]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -34742,19 +33184,18 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_name_7;
         PyObject *tmp_args_element_name_2;
         PyObject *tmp_args_element_name_3;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_name_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_7 == NULL)) {
+            tmp_called_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_called_name_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34764,24 +33205,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[237]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 726;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[91];
+        tmp_args_element_name_2 = mod_consts[89];
         CHECK_OBJECT(var_cmd_userid);
-        tmp_called_instance_5 = var_cmd_userid;
+        tmp_called_instance_1 = var_cmd_userid;
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 726;
         tmp_len_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[148],
+            tmp_called_instance_1,
+            mod_consts[146],
             PyTuple_GET_ITEM(mod_consts[1], 0)
         );
 
@@ -34789,7 +33219,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 726;
             type_description_1 = "oooooooooooo";
@@ -34801,7 +33231,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+
 
             exception_lineno = 726;
             type_description_1 = "oooooooooooo";
@@ -34810,10 +33240,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 726;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34830,14 +33259,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_instance_6;
-        tmp_called_instance_6 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        PyObject *tmp_called_name_8;
+        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_6 == NULL)) {
-            tmp_called_instance_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_8 == NULL)) {
+            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_6 == NULL) {
+        if (tmp_called_name_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34848,11 +33277,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             goto frame_exception_exit_1;
         }
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 727;
-        tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_6,
-            mod_consts[237],
-            &PyTuple_GET_ITEM(mod_consts[268], 0)
-        );
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_name_8, mod_consts[266]);
 
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34869,16 +33294,16 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_called_instance_7;
+        PyObject *tmp_called_name_9;
         PyObject *tmp_args_element_name_4;
         PyObject *tmp_args_element_name_5;
-        tmp_called_instance_7 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_called_instance_7 == NULL)) {
-            tmp_called_instance_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_9 == NULL)) {
+            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_called_instance_7 == NULL) {
+        if (tmp_called_name_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34888,17 +33313,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_4 = mod_consts[269];
+        tmp_args_element_name_4 = mod_consts[267];
         CHECK_OBJECT(par_opt);
         tmp_args_element_name_5 = par_opt;
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 728;
         {
             PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_assign_source_9 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_7,
-                mod_consts[237],
-                call_args
-            );
+            tmp_assign_source_9 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_9, call_args);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -34916,8 +33337,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_name_10;
         PyObject *tmp_args_element_name_6;
         PyObject *tmp_args_element_name_7;
         PyObject *tmp_left_name_1;
@@ -34926,13 +33346,13 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         PyObject *tmp_len_arg_2;
         PyObject *tmp_right_name_2;
         PyObject *tmp_len_arg_3;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83]);
+        tmp_called_name_10 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
+        if (unlikely(tmp_called_name_10 == NULL)) {
+            tmp_called_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[235]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_called_name_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -34942,19 +33362,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             type_description_1 = "oooooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[237]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 729;
-            type_description_1 = "oooooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_6 = mod_consts[87];
-        tmp_left_name_2 = mod_consts[69];
+        tmp_args_element_name_6 = mod_consts[85];
+        tmp_left_name_2 = mod_consts[68];
         CHECK_OBJECT(var_cmd_sourceid);
         tmp_len_arg_2 = var_cmd_sourceid;
         tmp_right_name_1 = BUILTIN_LEN(tmp_len_arg_2);
@@ -34962,7 +33371,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+
 
             exception_lineno = 729;
             type_description_1 = "oooooooooooo";
@@ -34978,7 +33387,6 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_left_name_1);
 
             exception_lineno = 729;
@@ -34992,10 +33400,9 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 729;
         {
             PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_4, call_args);
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
         Py_DECREF(tmp_args_element_name_7);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35012,10 +33419,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_called_instance_8;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_args_element_name_8;
         PyObject *tmp_list_element_2;
-        tmp_called_instance_8 = mod_consts[239];
+        tmp_called_instance_2 = mod_consts[237];
         CHECK_OBJECT(var_cmd_key);
         tmp_list_element_2 = var_cmd_key;
         tmp_args_element_name_8 = PyList_New(9);
@@ -35045,7 +33452,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         tmp_list_element_2 = var_cmd_payload;
         PyList_SET_ITEM0(tmp_args_element_name_8, 8, tmp_list_element_2);
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 730;
-        tmp_assign_source_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_8, mod_consts[223], tmp_args_element_name_8);
+        tmp_assign_source_11 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_8);
         Py_DECREF(tmp_args_element_name_8);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35062,14 +33469,14 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
     }
     // Tried code:
     {
-        PyObject *tmp_called_instance_9;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_instance_3;
+        PyObject *tmp_expression_name_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_args_element_name_9;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_called_instance_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[15]);
-        if (tmp_called_instance_9 == NULL) {
+        tmp_expression_name_3 = par_self;
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[14]);
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -35082,8 +33489,8 @@ static PyObject *impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosec
         CHECK_OBJECT(var_cmd_packet);
         tmp_args_element_name_9 = var_cmd_packet;
         frame_df94fadbbbb8e1f56da515757b0f8a1b->m_frame.f_lineno = 734;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_9, mod_consts[246], tmp_args_element_name_9);
-        Py_DECREF(tmp_called_instance_9);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[244], tmp_args_element_name_9);
+        Py_DECREF(tmp_called_instance_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -35392,10 +33799,10 @@ static PyObject *impl_powerworldDS_eventlet$$$function__35_tcmgetfile(struct Nui
     {
         PyObject *tmp_called_name_1;
         PyObject *tmp_call_result_1;
-        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[92]);
+        tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[90]);
         assert(tmp_called_name_1 != NULL);
         frame_332ae05733d40451ef6aa73962e9dee6->m_frame.f_lineno = 739;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[236]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[234]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35563,7 +33970,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[21];
+        tmp_assign_source_2 = mod_consts[20];
         assert(var_pos == NULL);
         Py_INCREF(tmp_assign_source_2);
         var_pos = tmp_assign_source_2;
@@ -35576,7 +33983,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         PyObject *tmp_compexpr_right_1;
         if (var_pos == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[270]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[268]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35589,7 +33996,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         tmp_compexpr_left_1 = var_pos;
         if (par_n == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[271]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[269]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35647,7 +34054,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         PyObject *tmp_stop_name_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[160]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[158]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35658,7 +34065,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         }
 
         tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[15]);
+        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[14]);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -35669,7 +34076,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[272]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[270]);
         Py_DECREF(tmp_expression_name_1);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35684,7 +34091,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         tmp_called_name_2 = (PyObject *)&PyMemoryView_Type;
         if (var_buff == NULL) {
             Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[273]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[271]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35710,7 +34117,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         if (var_pos == NULL) {
             Py_DECREF(tmp_called_name_1);
             Py_DECREF(tmp_expression_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[270]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[268]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35766,7 +34173,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         int tmp_truth_name_1;
         CHECK_OBJECT(var_cr);
         tmp_compexpr_left_2 = var_cr;
-        tmp_compexpr_right_2 = mod_consts[21];
+        tmp_compexpr_right_2 = mod_consts[20];
         tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
         if (tmp_tmp_condition_result_2_object_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35815,7 +34222,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
         PyObject *tmp_right_name_1;
         if (var_pos == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[270]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[268]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -35857,7 +34264,7 @@ static PyObject *impl_powerworldDS_eventlet$$$function__36__recv_n_bytes(struct 
     loop_end_1:;
     if (var_buff == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[273]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[271]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -36002,9 +34409,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__10_dsmdisconnect() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__10_dsmdisconnect,
-        mod_consts[24],
+        mod_consts[23],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[308],
+        mod_consts[310],
 #endif
         codeobj_5d37a608bbafb0c0131247fc163d9061,
         NULL,
@@ -36027,9 +34434,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__10_dsmdisconnec
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__11_dsmsimulationdata() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__11_dsmsimulationdata,
-        mod_consts[26],
+        mod_consts[25],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[309],
+        mod_consts[311],
 #endif
         codeobj_18af9b723e9d64a02bd57d19003f9a23,
         NULL,
@@ -36038,7 +34445,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__11_dsmsimulatio
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[121],
+        mod_consts[119],
         NULL,
         0
     );
@@ -36052,9 +34459,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__11_dsmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__12_dsmstartsimulation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__12_dsmstartsimulation,
-        mod_consts[28],
+        mod_consts[27],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[310],
+        mod_consts[312],
 #endif
         codeobj_d0098c5b37e9a31c62e54090019c424c,
         NULL,
@@ -36077,9 +34484,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__12_dsmstartsimu
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__13_dsmpausesimulation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__13_dsmpausesimulation,
-        mod_consts[30],
+        mod_consts[29],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[311],
+        mod_consts[313],
 #endif
         codeobj_51f5e8ddc52117e9a3cedd85542c8b12,
         NULL,
@@ -36102,9 +34509,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__13_dsmpausesimu
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation,
-        mod_consts[32],
+        mod_consts[31],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[312],
+        mod_consts[314],
 #endif
         codeobj_86a8065d469be653249a94e7f5246bcb,
         NULL,
@@ -36127,9 +34534,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__14_dsmcontinues
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__15_dsmfinishsimulation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__15_dsmfinishsimulation,
-        mod_consts[34],
+        mod_consts[33],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[313],
+        mod_consts[315],
 #endif
         codeobj_4cc26a6e13d46b068e95142ba89540b8,
         NULL,
@@ -36152,9 +34559,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__15_dsmfinishsim
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__16_dsmabortsimulation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__16_dsmabortsimulation,
-        mod_consts[36],
+        mod_consts[35],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[314],
+        mod_consts[316],
 #endif
         codeobj_50d83e29c42eead1bdaff32295b25b40,
         NULL,
@@ -36177,9 +34584,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__16_dsmabortsimu
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__17_dsmgetclientinfo() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__17_dsmgetclientinfo,
-        mod_consts[38],
+        mod_consts[37],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[315],
+        mod_consts[317],
 #endif
         codeobj_69862306cdb4e5511307845945d057f4,
         NULL,
@@ -36202,9 +34609,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__17_dsmgetclient
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__18_dsmtextmessage() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__18_dsmtextmessage,
-        mod_consts[40],
+        mod_consts[39],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[316],
+        mod_consts[318],
 #endif
         codeobj_552558de76491a485d6fa828e658729e,
         NULL,
@@ -36227,9 +34634,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__18_dsmtextmessa
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__19_dsmdictionary() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__19_dsmdictionary,
-        mod_consts[52],
+        mod_consts[51],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[317],
+        mod_consts[319],
 #endif
         codeobj_8899b2ab64956ff84163cc1fb914b308,
         NULL,
@@ -36238,7 +34645,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__19_dsmdictionar
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[166],
+        mod_consts[164],
         NULL,
         0
     );
@@ -36252,7 +34659,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__19_dsmdictionar
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__1_utf16be() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__1_utf16be,
-        mod_consts[243],
+        mod_consts[241],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -36277,9 +34684,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__1_utf16be() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__20_dict_generator() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__20_dict_generator,
-        mod_consts[164],
+        mod_consts[162],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[318],
+        mod_consts[320],
 #endif
         codeobj_b23d81068002d2e8cd6e332909f8fd82,
         NULL,
@@ -36302,9 +34709,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__20_dict_generat
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__21_dsmok() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__21_dsmok,
-        mod_consts[54],
+        mod_consts[53],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[319],
+        mod_consts[321],
 #endif
         codeobj_f79d5c9636b1846ba36ec3a87bf43c5d,
         NULL,
@@ -36327,9 +34734,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__21_dsmok() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__22_dsmerror() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__22_dsmerror,
-        mod_consts[56],
+        mod_consts[55],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[320],
+        mod_consts[322],
 #endif
         codeobj_6b1ffeb33b6715911c9c9c0323ceadf2,
         NULL,
@@ -36352,9 +34759,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__22_dsmerror() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__23_dsmfile() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__23_dsmfile,
-        mod_consts[72],
+        mod_consts[71],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[321],
+        mod_consts[323],
 #endif
         codeobj_77b8dedb290932e824036995e16e3aef,
         NULL,
@@ -36377,9 +34784,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__23_dsmfile() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__24_tcmdictionary(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__24_tcmdictionary,
-        mod_consts[50],
+        mod_consts[49],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[323],
+        mod_consts[325],
 #endif
         codeobj_d3eab24daf2eeb087b2699d1efb654d1,
         defaults,
@@ -36402,9 +34809,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__24_tcmdictionar
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__25_tcmgetdata() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__25_tcmgetdata,
-        mod_consts[44],
+        mod_consts[43],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[324],
+        mod_consts[326],
 #endif
         codeobj_002a2bbc36b97e2a247ec6f064893ff5,
         NULL,
@@ -36413,7 +34820,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__25_tcmgetdata()
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[254],
+        mod_consts[252],
         NULL,
         0
     );
@@ -36427,9 +34834,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__25_tcmgetdata()
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__26_tcmgetdatabyid,
-        mod_consts[46],
+        mod_consts[45],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[327],
+        mod_consts[329],
 #endif
         codeobj_476eedb6fa72e5fa6331f2efe0c0cdbd,
         NULL,
@@ -36452,9 +34859,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__26_tcmgetdataby
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__27_tcmcommand() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__27_tcmcommand,
-        mod_consts[48],
+        mod_consts[47],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[328],
+        mod_consts[330],
 #endif
         codeobj_79524e885f5a67d01a8685a8ead964a9,
         NULL,
@@ -36463,7 +34870,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__27_tcmcommand()
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[258],
+        mod_consts[256],
         NULL,
         0
     );
@@ -36477,9 +34884,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__27_tcmcommand()
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__28_tcminfo(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__28_tcminfo,
-        mod_consts[42],
+        mod_consts[41],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[329],
+        mod_consts[331],
 #endif
         codeobj_c3d642784c960fd3db1e835f2b8ac424,
         defaults,
@@ -36502,9 +34909,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__28_tcminfo(PyOb
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__29_tcmsimulationstart() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__29_tcmsimulationstart,
-        mod_consts[58],
+        mod_consts[57],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[330],
+        mod_consts[332],
 #endif
         codeobj_8ff0daf0b1081a60439fb1ea83492653,
         NULL,
@@ -36527,7 +34934,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__29_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__2_isplit,
-        mod_consts[286],
+        mod_consts[288],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -36552,9 +34959,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit$$$function__1_lambda(struct Nuitka_CellObject **closure) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__2_isplit$$$function__1_lambda,
-        mod_consts[4],
+        mod_consts[3],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[5],
+        mod_consts[4],
 #endif
         codeobj_b337fdb5a7c28d05c547cf7e7e8268eb,
         NULL,
@@ -36577,9 +34984,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit$$$func
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__30_tcmsimulationpause() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__30_tcmsimulationpause,
-        mod_consts[60],
+        mod_consts[59],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[331],
+        mod_consts[333],
 #endif
         codeobj_073fc1668bedf6fa78bb671b6f4f8c24,
         NULL,
@@ -36602,9 +35009,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__30_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue,
-        mod_consts[62],
+        mod_consts[61],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[332],
+        mod_consts[334],
 #endif
         codeobj_dd43dad8104932508686d4a2c4f04687,
         NULL,
@@ -36627,9 +35034,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__31_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__32_tcmsimulationabort() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__32_tcmsimulationabort,
-        mod_consts[64],
+        mod_consts[63],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[333],
+        mod_consts[335],
 #endif
         codeobj_e026f1f0520a94d742bafec8b46b820e,
         NULL,
@@ -36652,9 +35059,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__32_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps,
-        mod_consts[66],
+        mod_consts[65],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[334],
+        mod_consts[336],
 #endif
         codeobj_8b41d8af58b6e1e821412083d825796f,
         NULL,
@@ -36677,9 +35084,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__33_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__34_tcmsimulationruntosecond() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__34_tcmsimulationruntosecond,
-        mod_consts[68],
+        mod_consts[67],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[335],
+        mod_consts[337],
 #endif
         codeobj_df94fadbbbb8e1f56da515757b0f8a1b,
         NULL,
@@ -36702,9 +35109,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__34_tcmsimulatio
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__35_tcmgetfile() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__35_tcmgetfile,
-        mod_consts[70],
+        mod_consts[69],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[336],
+        mod_consts[338],
 #endif
         codeobj_332ae05733d40451ef6aa73962e9dee6,
         NULL,
@@ -36727,9 +35134,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__35_tcmgetfile()
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__36__recv_n_bytes() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__36__recv_n_bytes,
-        mod_consts[81],
+        mod_consts[80],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[337],
+        mod_consts[339],
 #endif
         codeobj_6cdd465b1fb3a4782a1149ce76e8dd14,
         NULL,
@@ -36738,7 +35145,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__36__recv_n_byte
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[274],
+        mod_consts[272],
         NULL,
         0
     );
@@ -36752,11 +35159,36 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__36__recv_n_byte
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__3_list2list() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__3_list2list,
-        mod_consts[287],
+        mod_consts[289],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
         codeobj_b94c2132a48f11cec8189baa9f03be13,
+        NULL,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_powerworldDS_eventlet,
+        mod_consts[9],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__4_find() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_powerworldDS_eventlet$$$function__4_find,
+        mod_consts[13],
+#if PYTHON_VERSION >= 0x300
+        NULL,
+#endif
+        codeobj_d19fc578b42ba81aea842a037cb17c02,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -36774,37 +35206,12 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__3_list2list() {
 
 
 
-static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__4_find() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_powerworldDS_eventlet$$$function__4_find,
-        mod_consts[14],
-#if PYTHON_VERSION >= 0x300
-        NULL,
-#endif
-        codeobj_d19fc578b42ba81aea842a037cb17c02,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_powerworldDS_eventlet,
-        mod_consts[11],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__5___init__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__5___init__,
-        mod_consts[300],
+        mod_consts[302],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[301],
+        mod_consts[303],
 #endif
         codeobj_48d4db227342f3f7025bd3184a52cf5d,
         NULL,
@@ -36827,9 +35234,9 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__5___init__() {
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__6_tuple_round() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__6_tuple_round,
-        mod_consts[161],
+        mod_consts[159],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[302],
+        mod_consts[304],
 #endif
         codeobj_adc3fbe08f93a46b0154a2f2a1c05991,
         NULL,
@@ -36838,7 +35245,7 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__6_tuple_round()
         NULL,
 #endif
         module_powerworldDS_eventlet,
-        mod_consts[80],
+        mod_consts[79],
         NULL,
         0
     );
@@ -36852,12 +35259,37 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__6_tuple_round()
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__7_receive(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__7_receive,
-        mod_consts[76],
+        mod_consts[75],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[304],
+        mod_consts[306],
 #endif
         codeobj_f994a000cb7ab1cb85aee16275662166,
         defaults,
+#if PYTHON_VERSION >= 0x300
+        NULL,
+        NULL,
+#endif
+        module_powerworldDS_eventlet,
+        mod_consts[93],
+        NULL,
+        0
+    );
+
+
+    return (PyObject *)result;
+}
+
+
+
+static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__8__handle_close() {
+    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
+        impl_powerworldDS_eventlet$$$function__8__handle_close,
+        mod_consts[307],
+#if PYTHON_VERSION >= 0x300
+        mod_consts[308],
+#endif
+        codeobj_394fa8a4aab3416a785808386d4f0c04,
+        NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
         NULL,
@@ -36874,37 +35306,12 @@ static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__7_receive(PyObj
 
 
 
-static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__8__handle_close() {
-    struct Nuitka_FunctionObject *result = Nuitka_Function_New(
-        impl_powerworldDS_eventlet$$$function__8__handle_close,
-        mod_consts[305],
-#if PYTHON_VERSION >= 0x300
-        mod_consts[306],
-#endif
-        codeobj_394fa8a4aab3416a785808386d4f0c04,
-        NULL,
-#if PYTHON_VERSION >= 0x300
-        NULL,
-        NULL,
-#endif
-        module_powerworldDS_eventlet,
-        mod_consts[97],
-        NULL,
-        0
-    );
-
-
-    return (PyObject *)result;
-}
-
-
-
 static PyObject *MAKE_FUNCTION_powerworldDS_eventlet$$$function__9_dsmconnected() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_powerworldDS_eventlet$$$function__9_dsmconnected,
-        mod_consts[22],
+        mod_consts[21],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[307],
+        mod_consts[309],
 #endif
         codeobj_ccffd713bfcb3c91be440ed0bc9a67f0,
         NULL,
@@ -37305,6 +35712,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     PyObject *tmp_class_creation_1__class_decl_dict = NULL;
     PyObject *tmp_class_creation_1__metaclass = NULL;
     PyObject *tmp_class_creation_1__prepared = NULL;
+    PyObject *tmp_import_from_1__module = NULL;
     struct Nuitka_FrameObject *frame_e7ac78da55f8ebd94c258a7679d8648d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
@@ -37312,6 +35720,10 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+    PyObject *exception_keeper_type_1;
+    PyObject *exception_keeper_value_1;
+    PyTracebackObject *exception_keeper_tb_1;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     int tmp_res;
     PyObject *tmp_dictdel_dict;
     PyObject *tmp_dictdel_key;
@@ -37320,10 +35732,6 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     struct Nuitka_FrameObject *frame_42f984e06fe63d929f54ce381e847422_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
     static struct Nuitka_FrameObject *cache_frame_42f984e06fe63d929f54ce381e847422_2 = NULL;
-    PyObject *exception_keeper_type_1;
-    PyObject *exception_keeper_value_1;
-    PyTracebackObject *exception_keeper_tb_1;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -37332,17 +35740,21 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
+    PyObject *exception_keeper_type_4;
+    PyObject *exception_keeper_value_4;
+    PyTracebackObject *exception_keeper_tb_4;
+    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
 
     // Module code.
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[275], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[273], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[276], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[274], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_e7ac78da55f8ebd94c258a7679d8648d = MAKE_MODULE_FRAME(codeobj_e7ac78da55f8ebd94c258a7679d8648d, module_powerworldDS_eventlet);
@@ -37357,14 +35769,14 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[277]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[275]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[277]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[275]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[278], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[276], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -37380,14 +35792,14 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[277]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[275]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[277]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[275]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[279], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[277], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -37402,7 +35814,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[280], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[278], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -37412,11 +35824,11 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_locals_arg_name_1;
         PyObject *tmp_fromlist_name_1;
         PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[281];
+        tmp_name_name_1 = mod_consts[279];
         tmp_globals_arg_name_1 = (PyObject *)moduledict_powerworldDS_eventlet;
         tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[282];
-        tmp_level_name_1 = mod_consts[21];
+        tmp_fromlist_name_1 = mod_consts[280];
+        tmp_level_name_1 = mod_consts[20];
         frame_e7ac78da55f8ebd94c258a7679d8648d->m_frame.f_lineno = 1;
         tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
         if (tmp_import_name_from_1 == NULL) {
@@ -37433,11 +35845,11 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             tmp_assign_source_4 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_powerworldDS_eventlet,
-                mod_consts[15],
-                mod_consts[21]
+                mod_consts[14],
+                mod_consts[20]
             );
         } else {
-            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[15]);
+            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[14]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -37451,7 +35863,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
@@ -37460,11 +35872,11 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_locals_arg_name_2;
         PyObject *tmp_fromlist_name_2;
         PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[83];
+        tmp_name_name_2 = mod_consts[281];
         tmp_globals_arg_name_2 = (PyObject *)moduledict_powerworldDS_eventlet;
         tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[21];
+        tmp_fromlist_name_2 = mod_consts[282];
+        tmp_level_name_2 = mod_consts[20];
         frame_e7ac78da55f8ebd94c258a7679d8648d->m_frame.f_lineno = 3;
         tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
         if (tmp_assign_source_5 == NULL) {
@@ -37477,84 +35889,183 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_5);
+        assert(tmp_import_from_1__module == NULL);
+        tmp_import_from_1__module = tmp_assign_source_5;
     }
+    // Tried code:
     {
         PyObject *tmp_assign_source_6;
+        PyObject *tmp_import_name_from_2;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_2 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_2)) {
+            tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_2,
+                (PyObject *)moduledict_powerworldDS_eventlet,
+                mod_consts[235],
+                mod_consts[20]
+            );
+        } else {
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[235]);
+        }
+
+        if (tmp_assign_source_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 3;
+
+            goto try_except_handler_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[235], tmp_assign_source_6);
+    }
+    {
+        PyObject *tmp_assign_source_7;
+        PyObject *tmp_import_name_from_3;
+        CHECK_OBJECT(tmp_import_from_1__module);
+        tmp_import_name_from_3 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_3)) {
+            tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_3,
+                (PyObject *)moduledict_powerworldDS_eventlet,
+                mod_consts[82],
+                mod_consts[20]
+            );
+        } else {
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[82]);
+        }
+
+        if (tmp_assign_source_7 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 3;
+
+            goto try_except_handler_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_7);
+    }
+    goto try_end_1;
+    // Exception handler code:
+    try_except_handler_1:;
+    exception_keeper_type_1 = exception_type;
+    exception_keeper_value_1 = exception_value;
+    exception_keeper_tb_1 = exception_tb;
+    exception_keeper_lineno_1 = exception_lineno;
+    exception_type = NULL;
+    exception_value = NULL;
+    exception_tb = NULL;
+    exception_lineno = 0;
+
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
+    // Re-raise.
+    exception_type = exception_keeper_type_1;
+    exception_value = exception_keeper_value_1;
+    exception_tb = exception_keeper_tb_1;
+    exception_lineno = exception_keeper_lineno_1;
+
+    goto frame_exception_exit_1;
+    // End of try:
+    try_end_1:;
+    CHECK_OBJECT(tmp_import_from_1__module);
+    Py_DECREF(tmp_import_from_1__module);
+    tmp_import_from_1__module = NULL;
+    {
+        PyObject *tmp_assign_source_8;
+        PyObject *tmp_import_name_from_4;
         PyObject *tmp_name_name_3;
         PyObject *tmp_globals_arg_name_3;
         PyObject *tmp_locals_arg_name_3;
         PyObject *tmp_fromlist_name_3;
         PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[2];
+        tmp_name_name_3 = mod_consts[283];
         tmp_globals_arg_name_3 = (PyObject *)moduledict_powerworldDS_eventlet;
         tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = Py_None;
-        tmp_level_name_3 = mod_consts[21];
+        tmp_fromlist_name_3 = mod_consts[284];
+        tmp_level_name_3 = mod_consts[20];
         frame_e7ac78da55f8ebd94c258a7679d8648d->m_frame.f_lineno = 4;
-        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
-        assert(!(tmp_assign_source_6 == NULL));
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_6);
-    }
-    {
-        PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = LIST_COPY(mod_consts[283]);
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[284], tmp_assign_source_7);
-    }
-    {
-        PyObject *tmp_assign_source_8;
-        tmp_assign_source_8 = LIST_COPY(mod_consts[285]);
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[219], tmp_assign_source_8);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        assert(!(tmp_import_name_from_4 == NULL));
+        if (PyModule_Check(tmp_import_name_from_4)) {
+            tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
+                tmp_import_name_from_4,
+                (PyObject *)moduledict_powerworldDS_eventlet,
+                mod_consts[2],
+                mod_consts[20]
+            );
+        } else {
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[2]);
+        }
+
+        Py_DECREF(tmp_import_name_from_4);
+        assert(!(tmp_assign_source_8 == NULL));
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = PyDict_New();
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[218], tmp_assign_source_9);
+        tmp_assign_source_9 = LIST_COPY(mod_consts[285]);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[286], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
-
-
-        tmp_assign_source_10 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__1_utf16be();
-
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[243], tmp_assign_source_10);
+        tmp_assign_source_10 = LIST_COPY(mod_consts[287]);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[217], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
-
-
-        tmp_assign_source_11 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit();
-
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[286], tmp_assign_source_11);
+        tmp_assign_source_11 = PyDict_New();
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[216], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
 
 
-        tmp_assign_source_12 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__3_list2list();
+        tmp_assign_source_12 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__1_utf16be();
 
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[287], tmp_assign_source_12);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[241], tmp_assign_source_12);
     }
     {
         PyObject *tmp_assign_source_13;
 
 
-        tmp_assign_source_13 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__4_find();
+        tmp_assign_source_13 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__2_isplit();
 
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[288], tmp_assign_source_13);
+    }
+    {
+        PyObject *tmp_assign_source_14;
+
+
+        tmp_assign_source_14 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__3_list2list();
+
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[289], tmp_assign_source_14);
+    }
+    {
+        PyObject *tmp_assign_source_15;
+
+
+        tmp_assign_source_15 = MAKE_FUNCTION_powerworldDS_eventlet$$$function__4_find();
+
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_15);
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_14;
+        PyObject *tmp_assign_source_16;
         PyObject *tmp_dircall_arg1_1;
-        tmp_dircall_arg1_1 = mod_consts[288];
+        tmp_dircall_arg1_1 = mod_consts[290];
         Py_INCREF(tmp_dircall_arg1_1);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_14 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_16 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_14 == NULL) {
+        if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -37562,19 +36073,19 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_14;
+        tmp_class_creation_1__bases = tmp_assign_source_16;
     }
     {
-        PyObject *tmp_assign_source_15;
-        tmp_assign_source_15 = PyDict_New();
+        PyObject *tmp_assign_source_17;
+        tmp_assign_source_17 = PyDict_New();
         assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_15;
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_17;
     }
     {
-        PyObject *tmp_assign_source_16;
+        PyObject *tmp_assign_source_18;
         PyObject *tmp_metaclass_name_1;
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_key_name_1;
@@ -37587,7 +36098,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_expression_name_1;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[289];
+        tmp_key_name_1 = mod_consts[291];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
@@ -37601,7 +36112,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[289];
+        tmp_key_name_2 = mod_consts[291];
         tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
         if (tmp_metaclass_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -37611,7 +36122,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         goto condexpr_end_1;
         condexpr_false_1:;
@@ -37625,7 +36136,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
@@ -37636,7 +36147,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_name_1 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[21];
+        tmp_subscript_name_1 = mod_consts[20];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -37646,7 +36157,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
@@ -37658,7 +36169,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         goto condexpr_end_2;
         condexpr_false_2:;
@@ -37668,9 +36179,9 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_16 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
+        tmp_assign_source_18 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
         Py_DECREF(tmp_metaclass_name_1);
-        if (tmp_assign_source_16 == NULL) {
+        if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -37678,16 +36189,16 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_16;
+        tmp_class_creation_1__metaclass = tmp_assign_source_18;
     }
     {
         nuitka_bool tmp_condition_result_3;
         PyObject *tmp_key_name_3;
         PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[289];
+        tmp_key_name_3 = mod_consts[291];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
@@ -37702,7 +36213,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[289];
+    tmp_dictdel_key = mod_consts[291];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -37712,7 +36223,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         exception_lineno = 74;
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_1:;
     {
@@ -37720,7 +36231,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_expression_name_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[290]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[292]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -37730,7 +36241,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     }
     branch_yes_2:;
     {
-        PyObject *tmp_assign_source_17;
+        PyObject *tmp_assign_source_19;
         PyObject *tmp_called_name_1;
         PyObject *tmp_expression_name_3;
         PyObject *tmp_args_name_1;
@@ -37738,7 +36249,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_kwargs_name_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[290]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[292]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -37747,9 +36258,9 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
-        tmp_tuple_element_1 = mod_consts[291];
+        tmp_tuple_element_1 = mod_consts[293];
         tmp_args_name_1 = PyTuple_New(2);
         PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -37758,10 +36269,10 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
         frame_e7ac78da55f8ebd94c258a7679d8648d->m_frame.f_lineno = 74;
-        tmp_assign_source_17 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
+        tmp_assign_source_19 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_name_1);
-        if (tmp_assign_source_17 == NULL) {
+        if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -37769,10 +36280,10 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_17;
+        tmp_class_creation_1__prepared = tmp_assign_source_19;
     }
     {
         nuitka_bool tmp_condition_result_5;
@@ -37780,7 +36291,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_expression_name_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_name_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[292]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[294]);
         tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
         if (tmp_res == -1) {
@@ -37791,7 +36302,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
@@ -37811,11 +36322,11 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[293];
+        tmp_left_name_1 = mod_consts[295];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[294];
-        tmp_getattr_default_1 = mod_consts[295];
+        tmp_getattr_attr_1 = mod_consts[296];
+        tmp_getattr_default_1 = mod_consts[297];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -37825,7 +36336,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         tmp_right_name_1 = PyTuple_New(2);
         {
@@ -37836,7 +36347,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_name_5 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_name_5 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[294]);
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[296]);
             Py_DECREF(tmp_expression_name_5);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -37854,7 +36365,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
         Py_DECREF(tmp_right_name_1);
-        goto try_except_handler_1;
+        goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
@@ -37867,7 +36378,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_1;
+            goto try_except_handler_2;
         }
         exception_type = tmp_raise_type_1;
         Py_INCREF(tmp_raise_type_1);
@@ -37875,20 +36386,20 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         exception_lineno = 74;
         RAISE_EXCEPTION_IMPLICIT(&exception_type, &exception_value, &exception_tb);
 
-        goto try_except_handler_1;
+        goto try_except_handler_2;
     }
     branch_no_3:;
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_assign_source_18;
-        tmp_assign_source_18 = PyDict_New();
+        PyObject *tmp_assign_source_20;
+        tmp_assign_source_20 = PyDict_New();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_18;
+        tmp_class_creation_1__prepared = tmp_assign_source_20;
     }
     branch_end_2:;
     {
-        PyObject *tmp_assign_source_19;
+        PyObject *tmp_assign_source_21;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
@@ -37898,31 +36409,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[296];
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[297], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 74;
-
-            goto try_except_handler_3;
-        }
         tmp_dictset_value = mod_consts[298];
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[275], tmp_dictset_value);
-        if (tmp_res != 0) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 74;
-
-            goto try_except_handler_3;
-        }
-        tmp_dictset_value = mod_consts[291];
         tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[299], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -37932,7 +36419,31 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_3;
+            goto try_except_handler_4;
+        }
+        tmp_dictset_value = mod_consts[300];
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[273], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 74;
+
+            goto try_except_handler_4;
+        }
+        tmp_dictset_value = mod_consts[293];
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[301], tmp_dictset_value);
+        if (tmp_res != 0) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 74;
+
+            goto try_except_handler_4;
         }
         if (isFrameUnusable(cache_frame_42f984e06fe63d929f54ce381e847422_2)) {
             Py_XDECREF(cache_frame_42f984e06fe63d929f54ce381e847422_2);
@@ -37965,7 +36476,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__5___init__();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[300], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[302], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -37981,7 +36492,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__6_tuple_round();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[161], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[159], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -37995,13 +36506,13 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         }
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[303];
+            tmp_defaults_1 = mod_consts[305];
             Py_INCREF(tmp_defaults_1);
 
 
             tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__7_receive(tmp_defaults_1);
 
-            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[76], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[75], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -38018,7 +36529,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__8__handle_close();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[305], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[307], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38034,7 +36545,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__9_dsmconnected();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[22], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[21], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38050,7 +36561,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__10_dsmdisconnect();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[24], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[23], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38066,7 +36577,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__11_dsmsimulationdata();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[26], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[25], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38082,7 +36593,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__12_dsmstartsimulation();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[28], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[27], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38098,7 +36609,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__13_dsmpausesimulation();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[30], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[29], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38114,7 +36625,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__14_dsmcontinuesimulation();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[32], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[31], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38130,7 +36641,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__15_dsmfinishsimulation();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[34], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[33], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38146,7 +36657,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__16_dsmabortsimulation();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[36], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[35], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38162,7 +36673,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__17_dsmgetclientinfo();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[38], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[37], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38178,7 +36689,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__18_dsmtextmessage();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[40], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[39], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38194,7 +36705,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__19_dsmdictionary();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[52], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[51], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38210,7 +36721,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__20_dict_generator();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[164], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[162], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38226,7 +36737,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__21_dsmok();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[54], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[53], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38242,7 +36753,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__22_dsmerror();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[56], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[55], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38258,7 +36769,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__23_dsmfile();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[72], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[71], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38272,13 +36783,13 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[322];
+            tmp_defaults_2 = mod_consts[324];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__24_tcmdictionary(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[50], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[49], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -38295,7 +36806,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__25_tcmgetdata();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[44], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[43], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38311,8 +36822,8 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             PyObject *tmp_annotations_1;
             PyObject *tmp_dict_key_1;
             PyObject *tmp_dict_value_1;
-            tmp_dict_key_1 = mod_consts[325];
-            tmp_dict_value_1 = PyObject_GetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[326]);
+            tmp_dict_key_1 = mod_consts[327];
+            tmp_dict_value_1 = PyObject_GetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[328]);
 
             if (tmp_dict_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
@@ -38331,7 +36842,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__26_tcmgetdatabyid(tmp_annotations_1);
 
-            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[46], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[45], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -38348,7 +36859,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__27_tcmcommand();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[48], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[47], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38362,13 +36873,13 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         }
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[303];
+            tmp_defaults_3 = mod_consts[305];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__28_tcminfo(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[42], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[41], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -38385,7 +36896,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__29_tcmsimulationstart();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[58], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[57], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38401,7 +36912,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__30_tcmsimulationpause();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[60], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[59], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38417,7 +36928,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__31_tcmsimulationcontinue();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[62], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[61], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38433,7 +36944,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__32_tcmsimulationabort();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[64], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[63], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38449,7 +36960,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__33_tcmsimulationnsteps();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[66], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[65], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38465,7 +36976,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__34_tcmsimulationruntosecond();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[68], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[67], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38481,7 +36992,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__35_tcmgetfile();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[70], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[69], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38497,7 +37008,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
         tmp_dictset_value = MAKE_FUNCTION_powerworldDS_eventlet$$$function__36__recv_n_bytes();
 
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[81], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[80], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -38562,7 +37073,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         goto skip_nested_handling_1;
         nested_frame_exit_1:;
 
-        goto try_except_handler_3;
+        goto try_except_handler_4;
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_6;
@@ -38570,7 +37081,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             PyObject *tmp_compexpr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_compexpr_left_1 = tmp_class_creation_1__bases;
-            tmp_compexpr_right_1 = mod_consts[288];
+            tmp_compexpr_right_1 = mod_consts[290];
             tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
@@ -38580,7 +37091,7 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
                 exception_lineno = 74;
 
-                goto try_except_handler_3;
+                goto try_except_handler_4;
             }
             if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
                 goto branch_yes_4;
@@ -38590,8 +37101,8 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             assert(tmp_condition_result_6 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_4:;
-        tmp_dictset_value = mod_consts[288];
-        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[338], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[290];
+        tmp_res = PyObject_SetItem(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74, mod_consts[340], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -38600,18 +37111,18 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
             exception_lineno = 74;
 
-            goto try_except_handler_3;
+            goto try_except_handler_4;
         }
         branch_no_4:;
         {
-            PyObject *tmp_assign_source_20;
+            PyObject *tmp_assign_source_22;
             PyObject *tmp_called_name_2;
             PyObject *tmp_args_name_2;
             PyObject *tmp_tuple_element_3;
             PyObject *tmp_kwargs_name_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[291];
+            tmp_tuple_element_3 = mod_consts[293];
             tmp_args_name_2 = PyTuple_New(3);
             PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -38622,9 +37133,9 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
             tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
             frame_e7ac78da55f8ebd94c258a7679d8648d->m_frame.f_lineno = 74;
-            tmp_assign_source_20 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
+            tmp_assign_source_22 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
             Py_DECREF(tmp_args_name_2);
-            if (tmp_assign_source_20 == NULL) {
+            if (tmp_assign_source_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -38632,53 +37143,24 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
 
                 exception_lineno = 74;
 
-                goto try_except_handler_3;
+                goto try_except_handler_4;
             }
             assert(outline_0_var___class__ == NULL);
-            outline_0_var___class__ = tmp_assign_source_20;
+            outline_0_var___class__ = tmp_assign_source_22;
         }
         CHECK_OBJECT(outline_0_var___class__);
-        tmp_assign_source_19 = outline_0_var___class__;
-        Py_INCREF(tmp_assign_source_19);
+        tmp_assign_source_21 = outline_0_var___class__;
+        Py_INCREF(tmp_assign_source_21);
+        goto try_return_handler_4;
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_4:;
+        Py_DECREF(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74);
+        locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74 = NULL;
         goto try_return_handler_3;
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_3:;
-        Py_DECREF(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74);
-        locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74 = NULL;
-        goto try_return_handler_2;
         // Exception handler code:
-        try_except_handler_3:;
-        exception_keeper_type_1 = exception_type;
-        exception_keeper_value_1 = exception_value;
-        exception_keeper_tb_1 = exception_tb;
-        exception_keeper_lineno_1 = exception_lineno;
-        exception_type = NULL;
-        exception_value = NULL;
-        exception_tb = NULL;
-        exception_lineno = 0;
-
-        Py_DECREF(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74);
-        locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74 = NULL;
-        // Re-raise.
-        exception_type = exception_keeper_type_1;
-        exception_value = exception_keeper_value_1;
-        exception_tb = exception_keeper_tb_1;
-        exception_lineno = exception_keeper_lineno_1;
-
-        goto try_except_handler_2;
-        // End of try:
-        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-        return NULL;
-        // Return handler code:
-        try_return_handler_2:;
-        CHECK_OBJECT(outline_0_var___class__);
-        Py_DECREF(outline_0_var___class__);
-        outline_0_var___class__ = NULL;
-        goto outline_result_1;
-        // Exception handler code:
-        try_except_handler_2:;
+        try_except_handler_4:;
         exception_keeper_type_2 = exception_type;
         exception_keeper_value_2 = exception_value;
         exception_keeper_tb_2 = exception_tb;
@@ -38688,11 +37170,40 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         exception_tb = NULL;
         exception_lineno = 0;
 
+        Py_DECREF(locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74);
+        locals_powerworldDS_eventlet$$$class__1_PowerWorldDS_74 = NULL;
         // Re-raise.
         exception_type = exception_keeper_type_2;
         exception_value = exception_keeper_value_2;
         exception_tb = exception_keeper_tb_2;
         exception_lineno = exception_keeper_lineno_2;
+
+        goto try_except_handler_3;
+        // End of try:
+        NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
+        return NULL;
+        // Return handler code:
+        try_return_handler_3:;
+        CHECK_OBJECT(outline_0_var___class__);
+        Py_DECREF(outline_0_var___class__);
+        outline_0_var___class__ = NULL;
+        goto outline_result_1;
+        // Exception handler code:
+        try_except_handler_3:;
+        exception_keeper_type_3 = exception_type;
+        exception_keeper_value_3 = exception_value;
+        exception_keeper_tb_3 = exception_tb;
+        exception_keeper_lineno_3 = exception_lineno;
+        exception_type = NULL;
+        exception_value = NULL;
+        exception_tb = NULL;
+        exception_lineno = 0;
+
+        // Re-raise.
+        exception_type = exception_keeper_type_3;
+        exception_value = exception_keeper_value_3;
+        exception_tb = exception_keeper_tb_3;
+        exception_lineno = exception_keeper_lineno_3;
 
         goto outline_exception_1;
         // End of try:
@@ -38700,17 +37211,17 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
         return NULL;
         outline_exception_1:;
         exception_lineno = 74;
-        goto try_except_handler_1;
+        goto try_except_handler_2;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[291], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_powerworldDS_eventlet, (Nuitka_StringObject *)mod_consts[293], tmp_assign_source_21);
     }
-    goto try_end_1;
+    goto try_end_2;
     // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_3 = exception_type;
-    exception_keeper_value_3 = exception_value;
-    exception_keeper_tb_3 = exception_tb;
-    exception_keeper_lineno_3 = exception_lineno;
+    try_except_handler_2:;
+    exception_keeper_type_4 = exception_type;
+    exception_keeper_value_4 = exception_value;
+    exception_keeper_tb_4 = exception_tb;
+    exception_keeper_lineno_4 = exception_lineno;
     exception_type = NULL;
     exception_value = NULL;
     exception_tb = NULL;
@@ -38725,14 +37236,14 @@ PyObject *modulecode_powerworldDS_eventlet(PyObject *module, struct Nuitka_MetaP
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
     // Re-raise.
-    exception_type = exception_keeper_type_3;
-    exception_value = exception_keeper_value_3;
-    exception_tb = exception_keeper_tb_3;
-    exception_lineno = exception_keeper_lineno_3;
+    exception_type = exception_keeper_type_4;
+    exception_value = exception_keeper_value_4;
+    exception_tb = exception_keeper_tb_4;
+    exception_lineno = exception_keeper_lineno_4;
 
     goto frame_exception_exit_1;
     // End of try:
-    try_end_1:;
+    try_end_2:;
 
     // Restore frame exception if necessary.
 #if 0

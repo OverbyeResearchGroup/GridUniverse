@@ -172,10 +172,10 @@ static PyObject *MAKE_GENERATOR_urllib3$contrib$pyopenssl$$$genexpr__1_genexpr(s
 static PyObject *MAKE_GENERATOR_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__10_recv_into();
@@ -5542,7 +5542,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_2 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6282,7 +6282,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -6768,7 +6768,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -7503,7 +7503,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -17350,7 +17350,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_11 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19958,7 +19958,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_45 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_45 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_45 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20954,7 +20954,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_54 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_54 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_54 == NULL) {
             assert(ERROR_OCCURRED());

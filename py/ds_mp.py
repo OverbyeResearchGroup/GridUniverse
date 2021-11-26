@@ -1,12 +1,10 @@
-import eventlet
+from eventlet import wsgi, listen, wrap_ssl
 from eventlet.queue import Queue
-# eventlet.monkey_patch()
 
-from json import load, loads
+from json import load
 from sys import argv, stdout
 from os import environ
 
-# from queue import Queue
 from random import randrange
 from msgpack import dumps
 
@@ -28,21 +26,17 @@ args = argv
 if len(args) <= 3:
     ip = "192.168.1.221"
     port = "5557"
-    server_port = "9999"
+    server_port = "9990"
 else:
     ip = args[1]
     port = args[2]
     server_port = args[3]
 print(f"Connecting to {ip}:{port}")
 
-# create a Socket.IO server
-# sio = socketio.AsyncServer(logger=True, engineio_logger=True, cors_allowed_origins='*')
-# app = web.Application()
-# sio.attach(app)
 sio = Server(async_mode='eventlet', cors_allowed_origins='*')
 app = WSGIApp(sio)
 
-queue = Queue(1000)
+queue = Queue(100)
 
 topic_prefix = "S000"
 
@@ -55,6 +49,7 @@ def connect(sid, environ):
     print('connect ', sid)
     clients[sid] = {}
     clients[sid]["status"] = "Connected"
+    sio.emit('OK', dumps({"status": "connected"}), room=sid)
 
 
 @sio.event
@@ -463,7 +458,7 @@ def background_work(ip, port, sio, queue):
     sim.setup()
     while True:
         sim.update()
-        sio.sleep(0.001)
+        sio.sleep(0.01)
 
 
 def main():
@@ -486,11 +481,13 @@ def main():
     # sio.start_background_task(target=periodic_job)
 
     # app.run(port=9999, debug=True)
-    eventlet.wsgi.server(eventlet.listen(('', int(server_port))), app)
+    # wsgi.server(listen(('', int(server_port))), app)
+    wsgi.server(wrap_ssl(listen(('', int(server_port))),
+                         certfile='80053852_tauri.cert',
+                         keyfile='80053852_tauri.key',
+                         server_side=True),
+                app)
 
 
 if __name__ == "__main__":
-    # print(sys.executable)
-    # print(getcwd())
-    # print(sys.path)
     main()

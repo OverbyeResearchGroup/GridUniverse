@@ -107,7 +107,7 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_COROUTINE_aiohttp$web_server$$$function__6_shutdown$$$coroutine__1_shutdown(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
@@ -1797,7 +1797,7 @@ static PyObject *aiohttp$web_server$$$function__6_shutdown$$$coroutine__1_shutdo
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_expression_name_4 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_4 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());

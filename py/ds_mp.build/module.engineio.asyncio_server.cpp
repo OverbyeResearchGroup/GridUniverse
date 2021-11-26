@@ -177,16 +177,16 @@ static PyObject *MAKE_COROUTINE_engineio$asyncio_server$$$function__17__trigger_
 static PyObject *MAKE_COROUTINE_engineio$asyncio_server$$$function__18__service_task$$$coroutine__1__service_task(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_engineio$asyncio_server$$$function__10_start_background_task();
@@ -2024,7 +2024,7 @@ static PyObject *impl_engineio$asyncio_server$$$function__7_session(struct Nuitk
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_1 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5373,7 +5373,7 @@ static PyObject *engineio$asyncio_server$$$function__9_handle_request$$$coroutin
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_4 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_expression_name_4 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5472,7 +5472,7 @@ static PyObject *engineio$asyncio_server$$$function__9_handle_request$$$coroutin
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_assign_source_3 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10836,7 +10836,7 @@ static PyObject *impl_engineio$asyncio_server$$$function__10_start_background_ta
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_args_element_name_1 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_args_element_name_1 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_args_element_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11385,7 +11385,7 @@ static PyObject *impl_engineio$asyncio_server$$$function__12_create_queue(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -11741,7 +11741,7 @@ static PyObject *impl_engineio$asyncio_server$$$function__14_create_event(struct
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -15398,7 +15398,7 @@ static PyObject *engineio$asyncio_server$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            coroutine_heap->tmp_return_value = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            coroutine_heap->tmp_return_value = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -15491,7 +15491,7 @@ static PyObject *engineio$asyncio_server$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2};
-            tmp_expression_name_9 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_name_9 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_expression_name_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15961,7 +15961,7 @@ static PyObject *engineio$asyncio_server$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3, tmp_dircall_arg2_3};
-            tmp_assign_source_5 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_5 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16541,7 +16541,7 @@ static PyObject *engineio$asyncio_server$$$function__17__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            coroutine_heap->tmp_return_value = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            coroutine_heap->tmp_return_value = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -19291,7 +19291,7 @@ PyObject *modulecode_engineio$asyncio_server(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_11 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());

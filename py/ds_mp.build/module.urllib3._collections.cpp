@@ -171,7 +171,7 @@ static PyObject *MAKE_GENERATOR_urllib3$_collections$$$function__28_iteritems$$$
 static PyObject *MAKE_GENERATOR_urllib3$_collections$$$function__29_itermerged$$$genobj__1_itermerged(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_urllib3$_collections$$$function__10_keys();
@@ -18014,7 +18014,7 @@ PyObject *modulecode_urllib3$_collections(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_27 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_27 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18868,7 +18868,7 @@ PyObject *modulecode_urllib3$_collections(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_35 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_35 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());

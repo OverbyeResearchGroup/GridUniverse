@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-dialog v-model="show" :key="id" max-width="1000px">
+    <v-dialog v-model="show" :key="id" width="600">
       <v-toolbar dark flat>
         <v-toolbar-title>{{ name }} {{ volt }} {{ type }}</v-toolbar-title>
         <template v-slot:extension>
           <v-tabs centered v-model="currentItem">
-            <!-- <v-tabs-slider color="brown"></v-tabs-slider> -->
+            <v-tabs-slider color="brown"></v-tabs-slider>
             <v-tab
               :key="'General'"
               :href="'#tab-General'"

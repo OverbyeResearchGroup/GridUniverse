@@ -127,10 +127,10 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_GENERATOR__distutils_hack$$$function__9_pip_imported_during_build$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION__distutils_hack$$$function__10_add_shim();
@@ -2345,7 +2345,7 @@ static PyObject *impl__distutils_hack$$$function__6_find_spec(struct Nuitka_Func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_1 = impl___main__$$$function__4_complex_call_helper_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__6_complex_call_helper_star_dict(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2726,7 +2726,7 @@ static PyObject *impl__distutils_hack$$$function__7_spec_for_distutils(struct Nu
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_4 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());

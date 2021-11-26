@@ -122,10 +122,10 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_aiohttp$client_proto$$$function__10_resume_reading(PyObject *annotations, struct Nuitka_CellObject **closure);
@@ -2759,7 +2759,7 @@ static PyObject *impl_aiohttp$client_proto$$$function__7_connection_lost(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_8 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_8 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9886,7 +9886,7 @@ PyObject *modulecode_aiohttp$client_proto(PyObject *module, struct Nuitka_MetaPa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_25 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_25 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());

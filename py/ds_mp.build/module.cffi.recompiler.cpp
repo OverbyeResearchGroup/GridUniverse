@@ -328,19 +328,19 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__4_complex_call_helper_pos_star_list_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1_complex_call_helper_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_star_list(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_cffi$recompiler$$$function__10_as_python_expr();
@@ -52008,7 +52008,7 @@ static PyObject *impl_cffi$recompiler$$$function__51__generate_cpy_struct_decl(s
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -52203,7 +52203,7 @@ static PyObject *impl_cffi$recompiler$$$function__52__generate_cpy_struct_ctx(st
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -73408,7 +73408,7 @@ static PyObject *impl_cffi$recompiler$$$function__92__modname_to_file(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_args_element_name_1 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_args_element_name_1 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_args_element_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -73720,7 +73720,7 @@ static PyObject *impl_cffi$recompiler$$$function__92__modname_to_file(struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_2};
-            tmp_tuple_element_2 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_tuple_element_2 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -75598,7 +75598,7 @@ static PyObject *impl_cffi$recompiler$$$function__95__patch_for_embedding$$$func
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_return_value = impl___main__$$$function__8_complex_call_helper_pos_star_list_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__4_complex_call_helper_pos_star_list_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -77165,7 +77165,7 @@ static PyObject *impl_cffi$recompiler$$$function__97_recompile(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1};
-            tmp_assign_source_9 = impl___main__$$$function__1_complex_call_helper_star_list(dir_call_args);
+            tmp_assign_source_9 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -77348,7 +77348,7 @@ static PyObject *impl_cffi$recompiler$$$function__97_recompile(struct Nuitka_Fun
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_2, tmp_dircall_arg3_1};
-            tmp_assign_source_13 = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_assign_source_13 = impl___main__$$$function__7_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -87601,7 +87601,7 @@ PyObject *modulecode_cffi$recompiler(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_55 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_55 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_55 == NULL) {
             assert(ERROR_OCCURRED());

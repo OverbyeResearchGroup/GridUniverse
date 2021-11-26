@@ -208,7 +208,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$web_app$$$function__43__on_startup$$$cor
 static PyObject *MAKE_COROUTINE_aiohttp$web_app$$$function__44__on_cleanup$$$coroutine__1__on_cleanup(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(PyObject **python_pars);
@@ -21163,7 +21163,7 @@ PyObject *modulecode_aiohttp$web_app(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_70 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_70 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_70 == NULL) {
             assert(ERROR_OCCURRED());
@@ -26679,7 +26679,7 @@ PyObject *modulecode_aiohttp$web_app(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_77 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_77 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_77 == NULL) {
             assert(ERROR_OCCURRED());
@@ -27742,7 +27742,7 @@ PyObject *modulecode_aiohttp$web_app(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_87 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_87 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_87 == NULL) {
             assert(ERROR_OCCURRED());

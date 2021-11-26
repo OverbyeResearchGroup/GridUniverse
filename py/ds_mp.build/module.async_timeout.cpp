@@ -138,7 +138,7 @@ static PyObject *MAKE_COROUTINE_async_timeout$$$function__6___aenter__$$$corouti
 static PyObject *MAKE_COROUTINE_async_timeout$$$function__7___aexit__$$$coroutine__1___aexit__(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_async_timeout$$$function__10_reject(PyObject *annotations);
@@ -7613,7 +7613,7 @@ PyObject *modulecode_async_timeout(PyObject *module, struct Nuitka_MetaPathBased
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_20 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_20 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());

@@ -120,7 +120,7 @@ static PyObject *MAKE_COROUTINE_socketio$asyncio_aiopika_manager$$$function__6__
 static PyObject *MAKE_ASYNCGEN_socketio$asyncio_aiopika_manager$$$function__7__listen$$$asyncgen__1__listen(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$asyncio_aiopika_manager$$$function__1___init__(PyObject *defaults, struct Nuitka_CellObject **closure);
@@ -6328,7 +6328,7 @@ PyObject *modulecode_socketio$asyncio_aiopika_manager(PyObject *module, struct N
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_10 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());

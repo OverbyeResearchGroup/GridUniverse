@@ -98,7 +98,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_cffi$error$$$function__1___str__();
@@ -1163,7 +1163,7 @@ PyObject *modulecode_cffi$error(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_4 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_4 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1814,7 +1814,7 @@ PyObject *modulecode_cffi$error(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_11 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2481,7 +2481,7 @@ PyObject *modulecode_cffi$error(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_18 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_18 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3144,7 +3144,7 @@ PyObject *modulecode_cffi$error(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_25 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_25 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3807,7 +3807,7 @@ PyObject *modulecode_cffi$error(PyObject *module, struct Nuitka_MetaPathBasedLoa
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_32 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_32 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_32 == NULL) {
             assert(ERROR_OCCURRED());

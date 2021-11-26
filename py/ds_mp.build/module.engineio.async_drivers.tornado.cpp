@@ -165,10 +165,10 @@ static PyObject *MAKE_COROUTINE_engineio$async_drivers$tornado$$$function__7_sen
 static PyObject *MAKE_COROUTINE_engineio$async_drivers$tornado$$$function__8_wait$$$coroutine__1_wait(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_engineio$async_drivers$tornado$$$function__1_get_tornado_handler();
@@ -369,7 +369,7 @@ static PyObject *impl_engineio$async_drivers$tornado$$$function__1_get_tornado_h
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_2 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_2 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1417,7 +1417,7 @@ static PyObject *impl_engineio$async_drivers$tornado$$$function__1_get_tornado_h
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_call_result_1 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_call_result_1 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2143,7 +2143,7 @@ static PyObject *engineio$async_drivers$tornado$$$function__1_get_tornado_handle
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_1 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4705,7 +4705,7 @@ static PyObject *impl_engineio$async_drivers$tornado$$$function__2_translate_req
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_1 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11242,7 +11242,7 @@ PyObject *modulecode_engineio$async_drivers$tornado(PyObject *module, struct Nui
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_13 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_13 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());

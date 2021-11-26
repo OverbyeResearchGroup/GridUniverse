@@ -176,13 +176,13 @@ static PyObject *MAKE_GENERATOR_eventlet$support$greendns$$$function__18_getalia
 static PyObject *MAKE_GENERATOR_eventlet$support$greendns$$$function__22__getaddrinfo_lookup$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__5_complex_call_helper_pos_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_pos_star_dict(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__7_complex_call_helper_star_list_star_dict(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__8_complex_call_helper_star_list_star_dict(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_eventlet$support$greendns$$$function__10__load();
@@ -490,7 +490,7 @@ static PyObject *impl_eventlet$support$greendns$$$function__1_import_patched(str
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_return_value = impl___main__$$$function__5_complex_call_helper_pos_star_dict(dir_call_args);
+            tmp_return_value = impl___main__$$$function__7_complex_call_helper_pos_star_dict(dir_call_args);
         }
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -10223,7 +10223,7 @@ static PyObject *impl_eventlet$support$greendns$$$function__17_query$$$function_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_1 = impl___main__$$$function__7_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34089,7 +34089,7 @@ PyObject *modulecode_eventlet$support$greendns(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_42 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_42 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_42 == NULL) {
             assert(ERROR_OCCURRED());
@@ -34768,7 +34768,7 @@ PyObject *modulecode_eventlet$support$greendns(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_49 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_49 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_49 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35780,7 +35780,7 @@ PyObject *modulecode_eventlet$support$greendns(PyObject *module, struct Nuitka_M
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_56 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_56 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_56 == NULL) {
             assert(ERROR_OCCURRED());

@@ -252,7 +252,7 @@ static PyObject *MAKE_GENERATOR_multidict$_multidict_py$$$function__57__iter$$$g
 static PyObject *MAKE_GENERATOR_multidict$_multidict_py$$$function__61__iter$$$genobj__1__iter(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_multidict$_multidict_py$$$function__10___iter__();
@@ -28809,7 +28809,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_11 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31042,7 +31042,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_34 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_34 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_34 == NULL) {
             assert(ERROR_OCCURRED());
@@ -31773,7 +31773,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_42 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_42 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_42 == NULL) {
             assert(ERROR_OCCURRED());
@@ -32528,7 +32528,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4};
-            tmp_assign_source_50 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_50 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_50 == NULL) {
             assert(ERROR_OCCURRED());
@@ -33762,7 +33762,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_5};
-            tmp_assign_source_58 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_58 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_58 == NULL) {
             assert(ERROR_OCCURRED());
@@ -35629,7 +35629,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_6};
-            tmp_assign_source_78 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_78 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_78 == NULL) {
             assert(ERROR_OCCURRED());
@@ -36402,7 +36402,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_7};
-            tmp_assign_source_86 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_86 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_86 == NULL) {
             assert(ERROR_OCCURRED());
@@ -37175,7 +37175,7 @@ PyObject *modulecode_multidict$_multidict_py(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_8};
-            tmp_assign_source_94 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_94 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_94 == NULL) {
             assert(ERROR_OCCURRED());

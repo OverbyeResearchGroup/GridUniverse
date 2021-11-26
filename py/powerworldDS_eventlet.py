@@ -1,7 +1,7 @@
 from eventlet.green import socket
 # import socket
-import struct
-import itertools
+from struct import pack, unpack
+from itertools import groupby
 
 # Load the default parameters corresponding to the PWDS Protocol Nov-08-2017
 DATAFIELD = ["LoadMW", "LoadMvar", "ShuntMW", "ShuntMvar", "FrequencyAve", "ExportMW", "ExportMvar",  # 0-6
@@ -48,7 +48,7 @@ def utf16be(word):
 
 
 def isplit(iterable, splitters):
-    return [list(g) for k, g in itertools.groupby(iterable, lambda x: x in splitters) if not k]
+    return [list(g) for k, g in groupby(iterable, lambda x: x in splitters) if not k]
 
 
 def list2list(detail):
@@ -137,12 +137,12 @@ class PowerWorldDS(object):
         Receive messages from the socket
         """
         header_data = self._recv_n_bytes(6)
-        key = struct.unpack('!' + 2 * 'B', header_data[0:2])
-        framesize = struct.unpack('!I', header_data[2:6])[0]
+        key = unpack('!' + 2 * 'B', header_data[0:2])
+        framesize = unpack('!I', header_data[2:6])[0]
         if key == (111, 1) or key == (111, 2):
             datasize = framesize - 6
             data = self._recv_n_bytes(datasize)
-            msgtype = struct.unpack('!H', data[0:2])[0]
+            msgtype = unpack('!H', data[0:2])[0]
             if msgtype not in self.msgtypes:
                 print("Unexpected message received: " + str(msgtype));
             return self.msgtypes[msgtype](data)
@@ -157,19 +157,19 @@ class PowerWorldDS(object):
 
     def dsmconnected(self, data):
         #TODO: cancel all the shared class variable
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
         if sourceid_num:
             self.sourceid = data[4: 4 + 2 * sourceid_num]
             # print(self.sourceid.decode('utf-16BE'))
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         if userid_num:
             userid = data[6 + 2 * sourceid_num: 6 + 2 * sourceid_num + 2 * userid_num]
             # print(userid)
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         # print(payloadsize)
         payload = data[-payloadsize:]
-        sim_status = struct.unpack('!H', payload[0:2])[0]
+        sim_status = unpack('!H', payload[0:2])[0]
         status = self.status[sim_status]
         # print(status)
         self.guid = payload[2:]
@@ -177,8 +177,8 @@ class PowerWorldDS(object):
         return {'type': 'dsmConnected', 'status': status, 'GUID': self.guid}
 
     def dsmdisconnect(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         return {'type': 'dsmDisconnect'}
 
     def dsmsimulationdata(self, data):
@@ -186,18 +186,18 @@ class PowerWorldDS(object):
         Receive the data frame and translate to the readable data according to the DS protocol
         """
         time_base = float(1000000)
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        id = struct.unpack('!h', payload[:2])[0]
-        status_index = struct.unpack('!H', payload[2:4])[0]
+        id = unpack('!h', payload[:2])[0]
+        status_index = unpack('!H', payload[2:4])[0]
         status = self.status[status_index]
         number = int((payloadsize - 12) / 4)
         # print(payloadsize, number)
-        data = struct.unpack('!' + number * 'f', payload[12:])
-        simtime = struct.unpack('!' + 2 * 'I', payload[4:12])
+        data = unpack('!' + number * 'f', payload[12:])
+        simtime = unpack('!' + 2 * 'I', payload[4:12])
         # utc_simtime = datetime.datetime.utcfromtimestamp(simtime[0])
         # sim_time = str(utc_simtime) + str(round(simtime[1] / time_base, 3))[1:4]
         # simdata = [sim_time] + data[:self.req_data]
@@ -211,50 +211,50 @@ class PowerWorldDS(object):
                 'Data': data}
 
     def dsmstartsimulation(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        simtime = struct.unpack('!' + 4 * 'I', payload[:16])
-        speedup = struct.unpack('!' + 'f', payload[16:])[0]
+        simtime = unpack('!' + 4 * 'I', payload[:16])
+        speedup = unpack('!' + 'f', payload[16:])[0]
         return {'type': 'dsmStartSimulation', 'start-soc': simtime[0], 'start-fsec': simtime[1], 'end-soc': simtime[2], 'end-fsec': simtime[3],
                 'speedup': speedup}
 
     def dsmpausesimulation(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        simtime = struct.unpack('!' + 2 * 'I', payload[:8])
+        simtime = unpack('!' + 2 * 'I', payload[:8])
         return {'type': 'dsmPauseSimulation', 'current-soc': simtime[0], 'current-fsec': simtime[1]}
 
     def dsmcontinuesimulation(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        simtime = struct.unpack('!' + 2 * 'I', payload[:8])
+        simtime = unpack('!' + 2 * 'I', payload[:8])
         return {'type': 'dsmContinueSimulation', 'current-soc': simtime[0], 'current-fsec': simtime[1]}
 
     def dsmfinishsimulation(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        simtime = struct.unpack('!' + 2 * 'I', payload[:8])
+        simtime = unpack('!' + 2 * 'I', payload[:8])
         return {'type': 'dsmFinishSimulation', 'end-soc': simtime[0], 'end-fsec': simtime[1]}
 
     def dsmabortsimulation(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        simtime = struct.unpack('!' + 2 * 'I', payload[:8])
+        simtime = unpack('!' + 2 * 'I', payload[:8])
         return {'type': 'dsmAbortSimulation', 'abort-soc': simtime[0], 'abort-fsec': simtime[1]}
 
     def dsmgetclientinfo(self, data):
@@ -270,22 +270,22 @@ class PowerWorldDS(object):
         Receive the dictionary frame from DS
         """
         #print("dsmdictionary")
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-        struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+        unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
         d = dict()
-        objecttype_count = struct.unpack('!H', payload[16:18])[0]
+        objecttype_count = unpack('!H', payload[16:18])[0]
         d['type'] = 'dsmDictionary'
         d['ObjectType Count'] = objecttype_count
         point = 18
         while len(payload) - point:
-            object_name_num = struct.unpack('!H', payload[point:point + 2])[0]
+            object_name_num = unpack('!H', payload[point:point + 2])[0]
             object_name = payload[point + 2:point + 2 + 2 * object_name_num].decode('utf-16BE')
             point = point + 2 + 2 * object_name_num
-            object_num = struct.unpack('!I', payload[point:point + 4])[0]
-            (byte_num, word_num, int_num, single_num, double_num, str_num) = struct.unpack('!' + 6 * 'H', payload[
+            object_num = unpack('!I', payload[point:point + 4])[0]
+            (byte_num, word_num, int_num, single_num, double_num, str_num) = unpack('!' + 6 * 'H', payload[
                                                                                                           point + 4:point + 16])
             major_list = [object_name, object_num, byte_num, word_num, int_num, single_num, double_num, str_num]
             point += 16
@@ -294,28 +294,28 @@ class PowerWorldDS(object):
             for n in range(object_num):
                 item_list = []
                 if byte_num > 0:
-                    byte_field = struct.unpack('!' + byte_num * 'b', payload[point: point + byte_num])
+                    byte_field = unpack('!' + byte_num * 'b', payload[point: point + byte_num])
                     item_list += list(byte_field)
                     point += byte_num
                 if word_num > 0:
-                    word_field = struct.unpack('!' + word_num * 'H', payload[point: point + 2 * word_num])
+                    word_field = unpack('!' + word_num * 'H', payload[point: point + 2 * word_num])
                     item_list += list(word_field)
                     point += 2 * word_num
                 if int_num > 0:
-                    int_field = struct.unpack('!' + int_num * 'i', payload[point:point + 4 * int_num])
+                    int_field = unpack('!' + int_num * 'i', payload[point:point + 4 * int_num])
                     item_list += list(int_field)
                     point += 4 * int_num
                 if single_num > 0:
-                    single_field = struct.unpack('!' + single_num * 'f', payload[point:point + 4 * single_num])
+                    single_field = unpack('!' + single_num * 'f', payload[point:point + 4 * single_num])
                     item_list += self.tuple_round(single_field, 2)
                     point += 4 * single_num
                 if double_num > 0:
-                    double_field = struct.unpack('!' + double_num * 'd', payload[point: point + 8 * double_num])
+                    double_field = unpack('!' + double_num * 'd', payload[point: point + 8 * double_num])
                     item_list += self.tuple_round(double_field, 2)
                     point += 8 * double_num
                 if str_num > 0:
                     for i in range(str_num):
-                        cha_num = struct.unpack('!H', payload[point: point + 2])[0]
+                        cha_num = unpack('!H', payload[point: point + 2])[0]
                         string_field = payload[point + 2: point + 2 + 2 * cha_num].decode('utf-16BE')
                         item_list.append(string_field)
                         point += 2 + 2 * cha_num
@@ -430,23 +430,23 @@ class PowerWorldDS(object):
             dict_d[object_name][','.join((str(item_list[1]), str(item_list[2]), str(item_list[9])))] = new_dict
 
     def dsmok(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        dok_id = struct.unpack('!h', payload[0:2])[0]
+        dok_id = unpack('!h', payload[0:2])[0]
         return {'type': 'dsmOK', 'request id': dok_id}
 
     def dsmerror(self, data):
-        sourceid_num = struct.unpack('!H', data[2:4])[0]
-        userid_num = struct.unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
+        sourceid_num = unpack('!H', data[2:4])[0]
+        userid_num = unpack('!H', data[4 + 2 * sourceid_num: 6 + 2 * sourceid_num])[0]
         payloadsize = \
-            struct.unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
+            unpack('!I', data[6 + 2 * sourceid_num + 2 * userid_num:10 + 2 * sourceid_num + 2 * userid_num])[0]
         payload = data[-payloadsize:]
-        de_id = struct.unpack('!h', payload[:2])[0]
-        de_location = struct.unpack('!I', payload[2:6])[0]
-        de_explain_num = struct.unpack('!H', payload[6:8])[0]
+        de_id = unpack('!h', payload[:2])[0]
+        de_location = unpack('!I', payload[2:6])[0]
+        de_explain_num = unpack('!H', payload[6:8])[0]
         de_explain = payload[8:8 + 2 * de_explain_num].decode('utf-16BE')
         return {'type': 'dsmError', 'request id': de_id, 'error location': de_location, 'explanation': de_explain}
 
@@ -455,17 +455,17 @@ class PowerWorldDS(object):
 
     def tcmdictionary(self, user="undefined"):
         #print('tcmdictionary')
-        cmd_key = struct.pack('!B', 111)
+        cmd_key = pack('!B', 111)
         cmd_userid = self.sourceid
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 14)  # 14 = tcmDictionary
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 14)  # 14 = tcmDictionary
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         # print(cmd_userid)
         # print(len(cmd_userid))
-        cmd_userid_num = struct.pack('!H', int(len(cmd_userid)/2))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', int(len(cmd_userid)/2))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                               cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                               cmd_userid, cmd_payloadsize])
@@ -489,18 +489,18 @@ class PowerWorldDS(object):
             ...
         }
         """
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 11)  # 11 = tcmGetData
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 11)  # 11 = tcmGetData
         cmd_sourceid = utf16be("vpdc")
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', int(len(cmd_userid) / 2))
+        cmd_userid_num = pack('!H', int(len(cmd_userid) / 2))
         tgdid = opt[0]
         target = opt[1]
-        cmd_tGD_id = struct.pack('!h', tgdid)
-        cmd_tGD_obj_num = struct.pack('!H', len(target))
-        # cmd_tGD_obj_num = struct.pack('!H', 1)
+        cmd_tGD_id = pack('!h', tgdid)
+        cmd_tGD_obj_num = pack('!H', len(target))
+        # cmd_tGD_obj_num = pack('!H', 1)
         # print(len(target))
         cmd_repeat = b""
         for single_target in target:
@@ -509,25 +509,25 @@ class PowerWorldDS(object):
             # print(target[single_target]['Object'])
             # print(len(target[single_target]['Object']))
             obj_str = single_target
-            cmd_obj_str = struct.pack('!H', len(obj_str)) + utf16be(obj_str)
-            cmd_field_num = struct.pack('!H', len(target[single_target]['Field']))
-            cmd_obj_num = struct.pack('!i', len(target[single_target]['Object']))
+            cmd_obj_str = pack('!H', len(obj_str)) + utf16be(obj_str)
+            cmd_field_num = pack('!H', len(target[single_target]['Field']))
+            cmd_obj_num = pack('!i', len(target[single_target]['Object']))
             cmd_field_type = b""
             cmd_field_obj = b""
             for field in target[single_target]['Field']:
                 field_str = field
-                cmd_field_type += struct.pack('!H', len(field_str)) + utf16be(field_str)
+                cmd_field_type += pack('!H', len(field_str)) + utf16be(field_str)
             for obj in target[single_target]['Object']:
                 for single_id in obj:
                     if type(single_id) is int:
-                        cmd_field_obj += struct.pack('!i', single_id)
+                        cmd_field_obj += pack('!i', single_id)
                     elif type(single_id) is str:
-                        cmd_field_obj += struct.pack('!H', len(single_id)) + utf16be(single_id)
+                        cmd_field_obj += pack('!H', len(single_id)) + utf16be(single_id)
             cmd_repeat += cmd_obj_str + cmd_field_num + cmd_field_type + cmd_obj_num + cmd_field_obj
         cmd_payload = cmd_tGD_id + cmd_tGD_obj_num + cmd_repeat
         payloadsize = len(cmd_payload)
-        cmd_tGD_payloadsize = struct.pack('!I', payloadsize)
-        cmd_framesize = struct.pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)  # Re-calculate
+        cmd_tGD_payloadsize = pack('!I', payloadsize)
+        cmd_framesize = pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)  # Re-calculate
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                               cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                               cmd_userid, cmd_tGD_payloadsize, cmd_payload])
@@ -538,17 +538,17 @@ class PowerWorldDS(object):
 
     def tcmgetdatabyid(self, opt: int):
         # opt =(int)id;
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 12)  # 12 = tcmGetDataByID
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 12)  # 12 = tcmGetDataByID
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', int(len(cmd_userid) / 2))
+        cmd_userid_num = pack('!H', int(len(cmd_userid) / 2))
         payloadsize = 2
-        cmd_tGD_payloadsize = struct.pack('!I', payloadsize)
-        cmd_tGD_id = struct.pack('!h', opt)
-        cmd_framesize = struct.pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)
+        cmd_tGD_payloadsize = pack('!I', payloadsize)
+        cmd_tGD_id = pack('!h', opt)
+        cmd_framesize = pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                               cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                               cmd_userid, cmd_tGD_payloadsize, cmd_tGD_id])
@@ -571,30 +571,30 @@ class PowerWorldDS(object):
 
         """
         target = opt[3]
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 13)  # 13 = tcmCommand
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 13)  # 13 = tcmCommand
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         # print("haha:", len(cmd_sourceid))
         cmd_userid = self.sourceid
         # print("here:", len(cmd_userid))
-        cmd_userid_num = struct.pack('!H', int(len(cmd_userid)/2))
-        cmd_tcc_id = struct.pack('!h', opt[0])
-        cmd_tcc_soc = struct.pack('!I', opt[1])  # Use a zero for this field and the next to immediately execute the command
-        cmd_tcc_frac = struct.pack('!I', opt[2])
+        cmd_userid_num = pack('!H', int(len(cmd_userid)/2))
+        cmd_tcc_id = pack('!h', opt[0])
+        cmd_tcc_soc = pack('!I', opt[1])  # Use a zero for this field and the next to immediately execute the command
+        cmd_tcc_frac = pack('!I', opt[2])
         cmd_repeat = b""
         for obj in target:
-            cmd_repeat += struct.pack('!H', len(obj)) + utf16be(obj)
+            cmd_repeat += pack('!H', len(obj)) + utf16be(obj)
             for single_id in target[obj]['ID']:
                 if type(single_id) is int:
-                    cmd_repeat += struct.pack('!i', single_id)
+                    cmd_repeat += pack('!i', single_id)
                 elif type(single_id) is str:
-                    cmd_repeat += struct.pack('!H', len(single_id)) + utf16be(single_id)
-            cmd_repeat += struct.pack('!H', len(target[obj]['Action'])) + utf16be(target[obj]['Action'])
+                    cmd_repeat += pack('!H', len(single_id)) + utf16be(single_id)
+            cmd_repeat += pack('!H', len(target[obj]['Action'])) + utf16be(target[obj]['Action'])
         payloadsize = 2 + 8 + len(cmd_repeat)
-        cmd_payloadsize = struct.pack('!I', payloadsize)
-        cmd_framesize = struct.pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)
+        cmd_payloadsize = pack('!I', payloadsize)
+        cmd_framesize = pack('!I', 12 + len(cmd_sourceid) + len(cmd_userid) + 4 + payloadsize)
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                               cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                               cmd_userid, cmd_payloadsize, cmd_tcc_id, cmd_tcc_soc,
@@ -605,15 +605,15 @@ class PowerWorldDS(object):
         # pass
 
     def tcminfo(self, opt=None):
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 10)  # 10 = tcmInfo
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 10)  # 10 = tcmInfo
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                               cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                               cmd_userid, cmd_payloadsize])
@@ -623,15 +623,15 @@ class PowerWorldDS(object):
             pass
 
     def tcmsimulationstart(self):
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 18)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 18)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize])
@@ -642,15 +642,15 @@ class PowerWorldDS(object):
 
     def tcmsimulationpause(self):
         print("Try to pause");
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 19)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 19)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize])
@@ -660,15 +660,15 @@ class PowerWorldDS(object):
             pass
 
     def tcmsimulationcontinue(self):
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 20)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 20)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize])
@@ -678,15 +678,15 @@ class PowerWorldDS(object):
             pass
 
     def tcmsimulationabort(self):
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 21)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 21)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 0)
-        cmd_framesize = struct.pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 0)
+        cmd_framesize = pack('!I', 16 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize])
@@ -697,16 +697,16 @@ class PowerWorldDS(object):
 
     def tcmsimulationnsteps(self, opt):
         # opt = step number
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 22)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 22)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 4)
-        cmd_payload = struct.pack('!i', opt)
-        cmd_framesize = struct.pack('!I', 20 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 4)
+        cmd_payload = pack('!i', opt)
+        cmd_framesize = pack('!I', 20 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize, cmd_payload])
@@ -717,16 +717,16 @@ class PowerWorldDS(object):
 
     def tcmsimulationruntosecond(self, opt):
         # opt = (double) the specified elapsed time
-        cmd_key = struct.pack('!B', 111)
-        cmd_key = b"".join([cmd_key, struct.pack('!B', 2)])
-        cmd_messagetype = struct.pack('!H', 23)
-        cmd_sourceid_num = struct.pack('!H', 4)
+        cmd_key = pack('!B', 111)
+        cmd_key = b"".join([cmd_key, pack('!B', 2)])
+        cmd_messagetype = pack('!H', 23)
+        cmd_sourceid_num = pack('!H', 4)
         cmd_sourceid = utf16be("vpdc")
         cmd_userid = self.sourceid
-        cmd_userid_num = struct.pack('!H', len(cmd_userid.decode('utf-16BE')))
-        cmd_payloadsize = struct.pack('!I', 8)
-        cmd_payload = struct.pack('!d', opt)
-        cmd_framesize = struct.pack('!I', 24 + len(cmd_sourceid) + len(cmd_userid))
+        cmd_userid_num = pack('!H', len(cmd_userid.decode('utf-16BE')))
+        cmd_payloadsize = pack('!I', 8)
+        cmd_payload = pack('!d', opt)
+        cmd_framesize = pack('!I', 24 + len(cmd_sourceid) + len(cmd_userid))
         cmd_packet = b"".join([cmd_key, cmd_framesize, cmd_messagetype,
                                cmd_sourceid_num, cmd_sourceid, cmd_userid_num,
                                cmd_userid, cmd_payloadsize, cmd_payload])

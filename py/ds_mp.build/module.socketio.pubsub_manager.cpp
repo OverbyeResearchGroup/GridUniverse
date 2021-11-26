@@ -116,10 +116,10 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__6_complex_call_helper_pos_star_list(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__2_complex_call_helper_pos_star_list(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$pubsub_manager$$$function__10__handle_callback();
@@ -2765,7 +2765,7 @@ static PyObject *impl_socketio$pubsub_manager$$$function__9__handle_emit(struct 
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_3 = impl___main__$$$function__6_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_assign_source_3 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6472,7 +6472,7 @@ PyObject *modulecode_socketio$pubsub_manager(PyObject *module, struct Nuitka_Met
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_10 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());

@@ -109,19 +109,45 @@ export default {
       "reply",
     ];
     const info = this.$store.state.loginInfo;
+    const options = {
+      secure: true,
+      reconnect: true,
+      rejectUnauthorized: false,
+    };
+    console.log(window.location.hostname);
+    console.log(window.location.href);
 
     if (info.direct) {
-      this.socket = io(`ws://localhost:${info.server_port}`);
+      this.socket = io(`https://localhost:${info.server_port}`);
     } else {
-      this.socket = io(`ws://${info.ip}:${info.server_port}`);
+      this.socket = io(`https://${info.ip}:${info.server_port}`);
     }
+
+    this.socket.io.on("error", (error) => {
+      console.log(error);
+      // iziToast.error({
+      //   title: "System",
+      //   message: error,
+      //   position: "topRight",
+      // });
+    });
 
     this.socket.on("connect", () => {
       console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
+      iziToast.success({
+        title: "System",
+        message: "Connected",
+        position: "topRight",
+      });
     });
 
     this.socket.on("disconnect", () => {
       console.log(this.socket.id); // undefined
+      iziToast.error({
+        title: "System",
+        message: "Disconnected",
+        position: "topRight",
+      });
     });
 
     topics.forEach((topic) => {
@@ -259,7 +285,7 @@ export default {
     backend_online: function () {
       iziToast.success({
         title: "System",
-        message: "DS backend is connected",
+        message: "DS is connected",
         // color: 'yellow',
         position: "topRight",
       });

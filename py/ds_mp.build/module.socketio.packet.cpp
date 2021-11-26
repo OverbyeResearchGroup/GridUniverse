@@ -124,7 +124,7 @@ static void createModuleCodeObjects(void) {
 }
 
 // The module function declarations.
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_socketio$packet$$$function__10__to_dict();
@@ -10064,7 +10064,7 @@ PyObject *modulecode_socketio$packet(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_22 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_22 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());

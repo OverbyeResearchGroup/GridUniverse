@@ -149,7 +149,7 @@ static void createModuleCodeObjects(void) {
 static PyObject *MAKE_GENERATOR_websocket$_abnf$$$function__8_format$$$genexpr__1_genexpr(struct Nuitka_CellObject **closure);
 
 
-NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__3__mro_entries_conversion(PyObject **python_pars);
+NUITKA_CROSS_MODULE PyObject *impl___main__$$$function__1__mro_entries_conversion(PyObject **python_pars);
 
 
 static PyObject *MAKE_FUNCTION_websocket$_abnf$$$function__10_mask();
@@ -15281,7 +15281,7 @@ PyObject *modulecode_websocket$_abnf(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_30 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_30 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_30 == NULL) {
             assert(ERROR_OCCURRED());
@@ -16781,7 +16781,7 @@ PyObject *modulecode_websocket$_abnf(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_38 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_38 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_38 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17652,7 +17652,7 @@ PyObject *modulecode_websocket$_abnf(PyObject *module, struct Nuitka_MetaPathBas
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_46 = impl___main__$$$function__3__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_46 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
         if (tmp_assign_source_46 == NULL) {
             assert(ERROR_OCCURRED());

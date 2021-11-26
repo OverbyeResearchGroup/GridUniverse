@@ -29,14 +29,14 @@
                       type="text"
                       v-model="model.username"
                     ></v-text-field>
-                    <v-text-field
+                    <!-- <v-text-field
                       append-icon="build"
                       name="simID"
                       label="Simulation ID"
                       :rules="[rules.id]"
                       v-model="simID"
                       v-on:keyup.enter="login"
-                    ></v-text-field>
+                    ></v-text-field> -->
                     <v-layout>
                       <v-flex grow>
                         <v-text-field
@@ -48,12 +48,12 @@
                       <v-flex xs4 v-if="ds_direct">
                         <v-text-field
                           name="port"
-                          label="Port"
+                          label="DS Port"
                           v-model="port"
                         ></v-text-field>
                       </v-flex>
                     </v-layout>
-                    <v-layout v-if="!ds_direct">
+                    <v-layout>
                       <v-flex xs12>
                         <v-text-field
                           name="server_port"
@@ -105,11 +105,7 @@
 
 <script>
 import { Command } from "@tauri-apps/api/shell";
-import { resourceDir } from "@tauri-apps/api/path";
-// import {
-//   sendNotification,
-//   requestPermission,
-// } from "@tauri-apps/api/notification";
+import { resourceDir, currentDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
 import { encode, decode } from "@msgpack/msgpack";
 
@@ -138,7 +134,7 @@ export default {
       accessCode: null,
       ip: "localhost",
       port: "5557",
-      server_port: "9999",
+      server_port: "9990",
       ds_direct: true,
       rules: {
         id: (value) => {
@@ -169,25 +165,25 @@ export default {
           server_port: this.server_port,
         };
         if (this.ds_direct) {
-          let resource_dir;
-          resourceDir().then((data) => {
-            console.log(data);
-            resource_dir = data;
-            const client_path =
-              resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
-            const command = new Command(client_path, [
-              this.ip,
-              this.port,
-              this.server_port,
-            ]).spawn();
-          });
+          // let resource_dir;
+          // resourceDir().then((data) => {
+          //   console.log(data);
+          //   resource_dir = data;
+          //   const client_path =
+          //     resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
+          //   const command = new Command(client_path, [
+          //     this.ip,
+          //     this.port,
+          //     this.server_port,
+          //   ]).spawn();
+          // });
 
-          // const command = Command.sidecar("ds_client", [
-          //   this.ip,
-          //   this.port,
-          //   this.server_port,
-          // ]);
-          // const output = command.execute();
+          const command = Command.sidecar("ds_client", [
+            this.ip,
+            this.port,
+            this.server_port,
+          ]);
+          const output = command.execute();
         }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);
