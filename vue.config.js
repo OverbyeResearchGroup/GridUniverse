@@ -4,7 +4,7 @@
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 module.exports = {
-  // publicPath: '/~zeyumao2/',
+  publicPath: '/~zeyumao2/',
   transpileDependencies: [
     'vue-echarts',
     'resize-detector',
@@ -26,33 +26,33 @@ module.exports = {
       ...Object.keys({}).filter(d => !whiteListedModules.includes(d))]
   },
   pluginOptions: {
-    electronBuilder: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      chainWebpackRendererProcess(config) {
-        config.plugins.delete('workbox')
-        config.plugins.delete('pwa')
-      },
-      builderOptions: {
-        win: {
-          'signAndEditExecutable': false,
-          "icon": "src/assets/grid.ico",
-          target: [
-            'portable'
-          ]
-        },
-        portable: {
-          artifactName: '${name}-${version}.exe'
-        },
-        extraFiles: [
-          {
-            "from": "pydist",
-            "to": "resources/pydist",
-            "filter": ["**/*"]
-          }
-        ]
-      }
+    // electronBuilder: {
+    //   nodeIntegration: true,
+    //   contextIsolation: false,
+    //   chainWebpackRendererProcess(config) {
+    //     config.plugins.delete('workbox')
+    //     config.plugins.delete('pwa')
+    //   },
+    //   builderOptions: {
+    //     win: {
+    //       'signAndEditExecutable': false,
+    //       "icon": "src/assets/grid.ico",
+    //       target: [
+    //         'portable'
+    //       ]
+    //     },
+    //     portable: {
+    //       artifactName: '${name}-${version}.exe'
+    //     },
+    //     extraFiles: [
+    //       {
+    //         "from": "pydist",
+    //         "to": "resources/pydist",
+    //         "filter": ["**/*"]
+    //       }
+    //     ]
+    //   }
 
-    }
+    // }
   }
 }

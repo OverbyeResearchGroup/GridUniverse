@@ -76,6 +76,7 @@
                   <v-checkbox
                     label="Connect to DS"
                     v-model="ds_direct"
+                    disabled
                   ></v-checkbox>
                   <v-spacer></v-spacer>
                   <v-btn text color="primary" @click="login" :loading="loading"
@@ -108,7 +109,7 @@
 // import { resourceDir, currentDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
 import { encode } from "@msgpack/msgpack";
-import { ipcRenderer } from "electron";
+// import { ipcRenderer } from "electron";
 
 const dashboard = import("../components/Dashboard");
 const loadingComponent = {
@@ -136,7 +137,7 @@ export default {
       ip: "localhost",
       port: "5557",
       server_port: "9990",
-      ds_direct: true,
+      ds_direct: false,
       rules: {
         id: (value) => {
           const pattern = /[0-9]/g;
@@ -165,28 +166,6 @@ export default {
           port: this.port,
           server_port: this.server_port,
         };
-        if (this.ds_direct) {
-          // let resource_dir;
-          // resourceDir().then((data) => {
-          //   console.log(data);
-          //   resource_dir = data;
-          //   const client_path =
-          //     resource_dir + "ds_client-x86_64-pc-windows-msvc.exe";
-          //   const command = new Command(client_path, [
-          //     this.ip,
-          //     this.port,
-          //     this.server_port,
-          //   ]).spawn();
-          // });
-      
-          ipcRenderer.send("connect", encode(config));
-          // const command = Command.sidecar("ds_client", [
-          //   this.ip,
-          //   this.port,
-          //   this.server_port,
-          // ]);
-          // const output = command.execute();
-        }
         this.$store.commit("setLoginInfo", config);
         this.$store.commit("setArea", this.area);
         this.$store.commit("setSimID", "S" + this.simID);
