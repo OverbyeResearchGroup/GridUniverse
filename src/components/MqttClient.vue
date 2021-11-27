@@ -118,9 +118,9 @@ export default {
     console.log(window.location.href);
 
     if (info.direct) {
-      this.socket = io(`http://localhost:${info.server_port}`);
+      this.socket = io(`http://localhost:${info.server_port}`, { transports: ["websocket"] });
     } else {
-      this.socket = io(`http://${info.ip}:${info.server_port}`);
+      this.socket = io(`http://${info.ip}:${info.server_port}`, { transports: ["websocket"] });
     }
 
     this.socket.io.on("error", (error) => {
