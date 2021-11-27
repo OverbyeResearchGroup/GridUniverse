@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="show" :key="id" max-width="900px">
+  <v-dialog v-model="show" :key="id" width="900">
     <v-toolbar color="cyan" dark tabs>
       <v-toolbar-title>{{ name }} {{ volt }} {{ type }}</v-toolbar-title>
       <v-tabs slot="extension" centered color="cyan" slider-color="yellow">

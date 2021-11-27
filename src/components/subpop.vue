@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog v-model="show" :key="id" width="600">
+    <v-dialog v-model="show" :key="id" width="900">
       <v-toolbar dark flat>
         <v-toolbar-title>{{ name }} {{ volt }} {{ type }}</v-toolbar-title>
         <template v-slot:extension>

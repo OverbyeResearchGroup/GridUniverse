@@ -87,7 +87,7 @@ table.v-table thead th:not(:first-child) {
 </style>
 
 <script>
-import "echarts-leaflet";
+import {interpolate, isobands} from "../assets/uTurf.js";
 import GeoJSON from "geojson";
 
 export default {
@@ -300,14 +300,14 @@ export default {
       console.log("JSON TO GEOJSON: " + (t1 - t0));
       console.log(ramdompts_ipl);
       // var tin = turf.tin(ramdompts_ipl, 'obs');
-      var contours_pts = window.turf.interpolate(ramdompts_ipl, 4, {
+      var contours_pts = interpolate(ramdompts_ipl, 4, {
         gridType: "points",
         property: "GICElectricFieldVKM",
         units: "miles",
       });
       t1 = performance.now();
       console.log("JSON TO INTERPOLATION: " + (t1 - t0));
-      var contours = window.turf.isobands(
+      var contours = isobands(
         contours_pts,
         [0, 0.1, 0.5, 1, 2, 3, 4, 5],
         {
@@ -447,14 +447,14 @@ export default {
             // console.log('JSON TO GEOJSON: ' + (t1 - t0));
             // console.log(ramdompts_ipl);
             // var contours_pts = turf.tin(ramdompts_ipl, 'GICElectricFieldVKM');
-            var contours_pts = window.turf.interpolate(ramdompts_ipl, 4, {
+            var contours_pts = interpolate(ramdompts_ipl, 4, {
               gridType: "points",
               property: "GICElectricFieldVKM",
               units: "miles",
             });
             // t1 = performance.now();
             // console.log('JSON TO INTERPOLATION: ' + (t1 - t0));
-            var contours = window.turf.isobands(
+            var contours = isobands(
               contours_pts,
               [0, 0.1, 0.5, 1, 2, 3, 4, 5, 6],
               {
