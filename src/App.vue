@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import Spinner from "vue-spinkit";
+// import Spinner from "vue-spinkit";
 import Login from "./views/Login";
-const dashboard = import("./components/Dashboard");
-const loadingComponent = {
-  render(h) {
-    return <Spinner name="pacman" color="#2243a5" class="loading" />;
-  },
-};
+// const dashboard = import("./components/Dashboard");
+// const loadingComponent = {
+//   render(h) {
+//     return <Spinner name="pacman" color="#2243a5" class="loading" />;
+//   },
+// };
 
 export default {
   name: "App",
@@ -30,30 +30,20 @@ export default {
     };
   },
   components: {
-    Spinner: Spinner,
+    // Spinner: Spinner,
     Login,
-    dashboard: () => ({
-      component: dashboard,
-      component: new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(dashboard);
-        }, 3000);
-      }),
-      loading: loadingComponent,
-      delay: 0,
-    }),
+    // dashboard: () => ({
+    //   component: dashboard,
+    //   component: new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       resolve(dashboard);
+    //     }, 3000);
+    //   }),
+    //   loading: loadingComponent,
+    //   delay: 0,
+    // }),
   },
-  mounted() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 3000);
-    setTimeout(() => {
-      this.styleDashboard = {
-        position: "absolute",
-        width: "100%",
-      };
-    }, 3200);
-  },
+  mounted() {},
 };
 </script>
 

@@ -14,7 +14,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win
+let mainWindow
 
 // Change the default app name
 if (process.platform === 'win32') {
@@ -26,9 +26,10 @@ protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: tru
 
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({
-    width: 800, height: 600, icon: path.join(__static, 'grid.ico'),
+  mainWindow = new BrowserWindow({
+    width: 1200, height: 800, icon: path.join(__static, 'grid.ico'),
     autoHideMenuBar: true,
+    show: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -37,16 +38,20 @@ function createWindow() {
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
-    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
-    if (!process.env.IS_TEST) win.webContents.openDevTools()
+    mainWindow.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
+    if (!process.env.IS_TEST) mainWindow.webContents.openDevTools()
   } else {
     createProtocol('app')
     // Load the index.html when not in development
-    win.loadURL('app://./index.html')
+    mainWindow.loadURL('app://./index.html')
   }
 
-  win.on('closed', () => {
-    win = null
+  mainWindow.on('ready-to-show', function () {
+    mainWindow.show()
+  })
+
+  mainWindow.on('closed', () => {
+    mainWindow = null
   })
 }
 
@@ -111,7 +116,7 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (win === null) {
+  if (mainWindow === null) {
     createWindow()
   }
 })

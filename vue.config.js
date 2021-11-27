@@ -37,7 +37,6 @@ module.exports = {
         win: {
           'signAndEditExecutable': false,
           "icon": "src/assets/grid.ico",
-          "compression": "maximum",
           target: [
             'portable'
           ]

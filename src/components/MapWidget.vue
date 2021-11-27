@@ -51,7 +51,6 @@
 // import * as echarts from "echarts";
 // import 'echarts-leaflet';
 import { mapGetters, mapState } from "vuex";
-require("leaflet.sync");
 import "leaflet/dist/leaflet.css";
 import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
