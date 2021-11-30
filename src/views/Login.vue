@@ -108,7 +108,8 @@
 // import { resourceDir, currentDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
 import { encode } from "@msgpack/msgpack";
-import { ipcRenderer } from "electron";
+// import { ipcRenderer } from "electron";
+// import "../assets/neutralino.js";
 
 const dashboard = import("../components/Dashboard");
 const loadingComponent = {
@@ -178,27 +179,33 @@ export default {
           //     this.server_port,
           //   ]).spawn();
           // });
-      
-          ipcRenderer.send("connect", encode(config));
+
+          // ipcRenderer.send("connect", encode(config));
           // const command = Command.sidecar("ds_client", [
           //   this.ip,
           //   this.port,
           //   this.server_port,
           // ]);
           // const output = command.execute();
+          console.log(Neutralino);
+          
+          
+          Neutralino.os.showMessageBox("Welcome", "Hello Neutralinojs");
+          
+          // Neutralino.os.execCommand(`./ds_client.exe ${this.ip} ${this.port} ${this.server_port}`, { shouldRunInBackground: true });
         }
-        this.$store.commit("setLoginInfo", config);
-        this.$store.commit("setArea", this.area);
-        this.$store.commit("setSimID", "S" + this.simID);
-        this.$store.commit("setUsername", this.model.username);
-        this.loading = true;
-        setTimeout(() => {
-          this.showDash = true;
-          // this.$router.push('/dashboard');
-        }, 1000);
-        setTimeout(() => {
-          this.$store.state.socket.emit("register", this.model.username);
-        }, 2000);
+        // this.$store.commit("setLoginInfo", config);
+        // this.$store.commit("setArea", this.area);
+        // this.$store.commit("setSimID", "S" + this.simID);
+        // this.$store.commit("setUsername", this.model.username);
+        // this.loading = true;
+        // setTimeout(() => {
+        //   this.showDash = true;
+        //   // this.$router.push('/dashboard');
+        // }, 1000);
+        // setTimeout(() => {
+        //   this.$store.state.socket.emit("register", this.model.username);
+        // }, 2000);
       }
     },
   },

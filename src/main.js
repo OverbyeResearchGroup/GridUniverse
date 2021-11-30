@@ -10,7 +10,8 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import { Tabs, TabPane } from "element-ui";
 import 'element-ui/lib/theme-chalk/index.css';
 import 'izitoast/dist/css/iziToast.css';
-import StatusIndicator from 'vue-status-indicator'
+import StatusIndicator from 'vue-status-indicator';
+import "./assets/neutralino.js";
 
 
 const opts = {
@@ -47,3 +48,5 @@ new Vue({
     Vuetify,
     template: '<App/>'
 }).$mount('#app');
+
+Neutralino.init();
