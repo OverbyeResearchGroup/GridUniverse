@@ -166,7 +166,11 @@ import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { LinesChart, EffectScatterChart, ScatterChart } from "echarts/charts";
 import { TooltipComponent } from "echarts/components";
+// import * as echarts from "echarts/dist/echarts.min.js";
+// import "../assets/echarts-extension-leaflet.min.js";
 import "../assets/echarts-extension-leaflet.esm.js";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
 echarts.use([
   CanvasRenderer,
@@ -175,6 +179,7 @@ echarts.use([
   ScatterChart,
   TooltipComponent,
 ]);
+
 
 var chart = "";
 var map = "";
@@ -516,7 +521,7 @@ export default {
         ],
       };
       // initialize echarts
-      chart = echarts.init(document.getElementById("main"));
+      chart = echarts.init(document.getElementById("main"), "dark");
       chart.setOption(echartsOptions);
       // get leaflet instance
       var map = chart.getModel().getComponent("leaflet").getMap();

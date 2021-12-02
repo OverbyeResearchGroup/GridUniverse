@@ -57,6 +57,8 @@ import { CanvasRenderer } from "echarts/renderers";
 import { LinesChart, ScatterChart, HeatmapChart } from "echarts/charts";
 import { TooltipComponent, VisualMapComponent } from "echarts/components";
 import "../assets/echarts-extension-leaflet.esm.js";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
 echarts.use([
   CanvasRenderer,
@@ -349,7 +351,7 @@ export default {
       };
 
       // initialize echarts
-      chart = echarts.init(document.getElementById("lower_map"));
+      chart = echarts.init(document.getElementById("lower_map"), "dark");
       chart.setOption(echartsOptions);
       // top_chart = echarts.init(document.getElementById("upper_map"));
       // top_chart.setOption(top_echartsOptions);

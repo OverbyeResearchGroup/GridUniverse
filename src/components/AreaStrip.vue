@@ -1,9 +1,9 @@
 <template>
-  <v-chart :options="option" theme="dark" :autoresize="true"></v-chart>
+  <div id="areastrip" class="areastrip"></div>
 </template>
 
 <script>
-import { use } from "echarts/core";
+import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { LineChart } from "echarts/charts";
 import {
@@ -12,9 +12,10 @@ import {
   TooltipComponent,
   SingleAxisComponent,
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
-use([
+echarts.use([
   CanvasRenderer,
   LineChart,
   GridComponent,
@@ -23,13 +24,11 @@ use([
   SingleAxisComponent
 ]);
 
+let chart = "";
+
 export default {
   name: "areastrip",
   components: {
-    VChart
-  },
-  provide: {
-    [THEME_KEY]: "dark"
   },
   data() {
     return {
@@ -85,13 +84,23 @@ export default {
     };
   },
   mounted() {
+    chart = echarts.init(document.getElementById("areastrip"), "dark");
+    chart.setOption(this.option);
     this.Interval = setInterval(() => {
       this.updateChart();
     }, 1000);
   },
   methods: {
     updateChart() {
-      this.option.series[0].data = this.$store.state.areaLoad;
+      // this.option.series[0].data = this.$store.state.areaLoad;
+      chart.setOption({
+        series: [
+          {
+            id: "real",
+            data: this.$store.state.areaLoad
+          }
+        ]
+      });
     }
   },
   beforeDestroy() {
@@ -101,7 +110,7 @@ export default {
 </script>
 
 <style scoped>
-.echarts {
+.areastrip {
   z-index: 0;
   height: 900px;
   width: 100%;
