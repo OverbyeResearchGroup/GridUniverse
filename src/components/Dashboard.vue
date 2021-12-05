@@ -18,7 +18,7 @@
       <v-btn icon @click="handleFullScreen()">
         <v-icon>fullscreen</v-icon>
       </v-btn>
-      <v-menu left bottom>
+      <v-menu left bottom v-model="menu_model">
         <template v-slot:activator="{ on }">
           <v-btn icon text v-on="on" @click="$store.commit('resetbadge')">
             <v-badge color="red" overlap v-model="badgeShow">
@@ -27,7 +27,7 @@
             </v-badge>
           </v-btn>
         </template>
-        <NotificationList v-on:changeHeight="changeHeight"></NotificationList>
+        <NotificationList v-if="menu_model" v-on:changeHeight="changeHeight"></NotificationList>
       </v-menu>
     </v-app-bar>
 
@@ -353,6 +353,7 @@ export default {
       startDialog: false,
       reportDialog: false,
       showToolbar: true,
+      menu_model: false
     };
   },
   computed: {

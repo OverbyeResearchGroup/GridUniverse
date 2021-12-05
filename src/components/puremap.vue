@@ -521,7 +521,7 @@ export default {
         ],
       };
       // initialize echarts
-      chart = echarts.init(document.getElementById("main"), "dark");
+      chart = echarts.init(document.getElementById("main"));
       chart.setOption(echartsOptions);
       // get leaflet instance
       var map = chart.getModel().getComponent("leaflet").getMap();

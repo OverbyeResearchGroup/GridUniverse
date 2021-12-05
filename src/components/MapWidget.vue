@@ -351,7 +351,7 @@ export default {
       };
 
       // initialize echarts
-      chart = echarts.init(document.getElementById("lower_map"), "dark");
+      chart = echarts.init(document.getElementById("lower_map"));
       chart.setOption(echartsOptions);
       // top_chart = echarts.init(document.getElementById("upper_map"));
       // top_chart.setOption(top_echartsOptions);
