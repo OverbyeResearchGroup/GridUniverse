@@ -48,8 +48,6 @@
 
 
 <script>
-// import * as echarts from "echarts";
-// import 'echarts-leaflet';
 import { mapGetters, mapState } from "vuex";
 import "leaflet/dist/leaflet.css";
 import * as echarts from "echarts/core";
