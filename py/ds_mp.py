@@ -462,7 +462,7 @@ def background_work(ip, port, sio, queue):
     sim.setup()
     while True:
         sim.update()
-        sio.sleep(0.01)
+        sio.sleep(0.001)
 
 
 def main():

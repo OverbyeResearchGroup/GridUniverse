@@ -28,7 +28,7 @@
  */
 // import * as echarts from 'echarts/lib/echarts';
 import * as echarts from "echarts/core";
-import { graphic, matrix, util, version as version$1, ComponentModel, ComponentView, getInstanceByDom } from 'echarts/lib/export/core';
+import { graphic, matrix, util, version as version$1, ComponentModel, ComponentView, getInstanceByDom } from 'echarts/core';
 import L, { DomUtil } from 'leaflet';
 
 /* global L */

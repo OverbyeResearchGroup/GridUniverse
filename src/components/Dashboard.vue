@@ -370,7 +370,7 @@ export default {
     reportpop: () => import("./reportpop"),
     MqttClient,
     Home: () => import("../views/Home"),
-    IkView: () => import("../views/Ik-view"),
+    // IkView: () => import("../views/Ik-view"),
     generator: () => import("../views/generator-view.vue"),
     load: () => import("../views/load-view.vue"),
     shunt: () => import("../views/shunt-view.vue"),

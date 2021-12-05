@@ -6,13 +6,14 @@
   "author": "Zeyu Mao",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --open --modern",
+    "build": "vue-cli-service build",
     "build-report": "vue-cli-service build --modern --report",
     "python:build": "pyinstaller --noconfirm --onefile --console --add-data ./py/datafields.json --distpath ./pydist ./py/ds_client.py",
     "tauri:build": "node move-binary.js && vue-cli-service tauri:build",
     "tauri:serve": "node move-binary.js && vue-cli-service tauri:serve",
     "electron:serve": "vue-cli-service electron:serve",
-    "electron:build": "vue-cli-service electron:build"
+    "electron:build": "vue-cli-service electron:build",
+    "tauri": "tauri"
   },
   "main": "background.js",
   "dependencies": {
@@ -46,6 +47,7 @@
     "webkul-micron": "^1.1.6"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.10",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-vuex": "^4.5.15",

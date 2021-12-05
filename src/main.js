@@ -6,7 +6,7 @@ import Vuetify from 'vuetify/lib';
 import './registerServiceWorker';
 import 'vuetify/dist/vuetify.min.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import 'izitoast/dist/css/iziToast.css';
+import 'izitoast/dist/css/iziToast.min.css';
 import StatusIndicator from 'vue-status-indicator'
 
 

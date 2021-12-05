@@ -1,4 +1,4 @@
-export const darkTheme = {
+const darkTheme = {
     darkMode: true,
     color: [
         '#4992ff',
@@ -96,3 +96,5 @@ export const darkTheme = {
         }
     },
 }
+
+export default darkTheme;

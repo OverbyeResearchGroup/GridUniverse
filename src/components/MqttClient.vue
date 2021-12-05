@@ -29,7 +29,7 @@
 <script>
 import { mapGetters } from "vuex";
 import fingerprint from "fingerprintjs2";
-import iziToast from "izitoast";
+import iziToast from "izitoast/dist/js/iziToast.min.js";
 // import Push from "push.js";
 import { encode, decode } from "@msgpack/msgpack";
 // import { ipcRenderer } from "electron";

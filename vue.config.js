@@ -85,7 +85,9 @@ module.exports = {
           'signAndEditExecutable': false,
           "icon": "src/assets/grid.ico",
           target: [
-            'portable'
+            'portable',
+            'msi',
+            { "target": "nsis", "arch": [ "x64" ] }
           ]
         },
         portable: {
