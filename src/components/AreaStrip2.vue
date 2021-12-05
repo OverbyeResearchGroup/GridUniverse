@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-chart :options="option" theme="dark" :autoresize="true"></v-chart>
+    <div id="areastrip2" class="areastrip2"></div>
   </div>
 </template>
 
 <script>
-import { use } from "echarts/core";
+import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { LineChart } from "echarts/charts";
 import {
@@ -16,9 +16,10 @@ import {
   SingleAxisComponent,
   DatasetComponent
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
-use([
+echarts.use([
   CanvasRenderer,
   LineChart,
   TitleComponent,
@@ -29,13 +30,12 @@ use([
   DatasetComponent
 ]);
 
+
+let chart = "";
+
 export default {
   name: "areastrip2",
   components: {
-    VChart
-  },
-  provide: {
-    [THEME_KEY]: "dark"
   },
   data() {
     return {
@@ -468,6 +468,7 @@ export default {
     };
   },
   mounted() {
+    chart = echarts.init(document.getElementById("areastrip2"), "dark");
     this.Interval = setInterval(() => {
       this.updateChart();
     }, 1000);
@@ -481,6 +482,7 @@ export default {
         this.option.series[1].data = this.$store.state.areaLoad.slice(-119);
       }
       this.option.dataset.source = this.$store.state.busVoltage;
+      chart.setOption(this.option);
     }
   },
   beforeDestroy() {
@@ -490,7 +492,7 @@ export default {
 </script>
 
 <style scoped>
-.echarts {
+.areastrip2 {
   z-index: 0;
   height: 1080px;
   width: 100%;

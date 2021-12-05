@@ -19,6 +19,8 @@ import * as echarts from "echarts/core";
 import { PieChart } from "echarts/charts";
 import { TooltipComponent, LegendComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
 echarts.use([, TooltipComponent, LegendComponent, PieChart, CanvasRenderer]);
 

@@ -29,19 +29,19 @@
 <script>
 import { mapGetters } from "vuex";
 import fingerprint from "fingerprintjs2";
-import iziToast from "izitoast";
+import iziToast from "izitoast/dist/js/iziToast.min.js";
 // import Push from "push.js";
 import { encode, decode } from "@msgpack/msgpack";
 // import { ipcRenderer } from "electron";
 import io from "socket.io-client";
 
-var client = {};
+let client = null;
+let socket = null;
 
 export default {
   name: "MqttClient",
   data() {
     return {
-      client: null,
       usermessage: "Initialized",
       datamessage: "Initialized",
       clientid: null,
@@ -114,21 +114,21 @@ export default {
       reconnect: true,
       rejectUnauthorized: false,
     };
-    console.log(window.location.hostname);
-    console.log(window.location.href);
+    // console.log(window.location.hostname);
+    // console.log(window.location.href);
 
     if (info.direct) {
-      this.socket = io(`http://localhost:${info.server_port}`, { transports: ["websocket"] });
+      socket = io(`http://localhost:${info.server_port}`, { transports: ["websocket"] });
     } else {
-      this.socket = io(`http://${info.ip}:${info.server_port}`, { transports: ["websocket"] });
+      socket = io(`http://${info.ip}:${info.server_port}`, { transports: ["websocket"] });
     }
 
-    this.socket.io.on("error", (error) => {
+    socket.io.on("error", (error) => {
       console.log(error);
     });
 
-    this.socket.on("connect", () => {
-      console.log(this.socket.id); // x8WIv7-mJelg7on_ALbx
+    socket.on("connect", () => {
+      console.log(socket.id); // x8WIv7-mJelg7on_ALbx
       iziToast.success({
         title: "System",
         message: "Connected",
@@ -136,8 +136,8 @@ export default {
       });
     });
 
-    this.socket.on("disconnect", () => {
-      console.log(this.socket.id); // undefined
+    socket.on("disconnect", () => {
+      console.log(socket.id); // undefined
       iziToast.error({
         title: "System",
         message: "Disconnected",
@@ -146,13 +146,13 @@ export default {
     });
 
     topics.forEach((topic) => {
-      this.socket.on(topic, (data) => {
+      socket.on(topic, (data) => {
         // console.log(topic, data);
         this.onMessage(topic, decode(data));
       });
     });
 
-    this.$store.commit("setSocket", this.socket);
+    this.$store.commit("setSocket", socket);
   },
   computed: {
     ...mapGetters([
@@ -178,7 +178,7 @@ export default {
         action: this.$store.state.message[3],
       };
       // ipcRenderer.send(this.simID + "/user/cmd", JSON.stringify(temp));
-      this.socket.emit(this.simID + "/user/cmd", temp);
+      socket.emit(this.simID + "/user/cmd", temp);
       this.$store.commit("addReportUser", {
         time: this.$store.state.currentTime,
         event: [temp.type, temp.id, temp.action],
@@ -193,11 +193,11 @@ export default {
       }
     },
     getQuery: function (newVal, oldVal) {
-      this.socket.emit("query");
+      socket.emit("query");
     },
     getNewSubscribe: function (newVal, oldVal) {
       // ipcRenderer.send("subscribe", newVal);
-      this.socket.on(newVal, (data) => {
+      socket.on(newVal, (data) => {
         // console.log(newVal, data);
         this.onMessage(newVal, decode(data));
       });
@@ -214,7 +214,7 @@ export default {
       //   "User #" + this.$store.state.username + ": " + newVal[1]
       //   // 'User #' + this.clientid + ': ' + newVal[1]
       // );
-      this.socket.emit(
+      socket.emit(
         newVal[0],
         "User #" + this.$store.state.username + ": " + newVal[1]
       );
@@ -225,7 +225,7 @@ export default {
         //   this.simID + "/user/system",
         //   this.$store.state.username + ":" + "Start"
         // );
-        this.socket.emit(
+        socket.emit(
           this.simID + "/user/system",
           this.$store.state.username + ":" + "Start"
         );
@@ -237,7 +237,7 @@ export default {
         //     "run till seconds " +
         //     this.$store.state.simtime
         // );
-        this.socket.emit(
+        socket.emit(
           this.simID + "/user/system",
           this.$store.state.username +
             ":" +
@@ -252,7 +252,7 @@ export default {
       //   this.simID + "/user/system",
       //   this.$store.state.username + ":" + "Continue"
       // );
-      this.socket.emit(
+      socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Continue"
       );
@@ -262,7 +262,7 @@ export default {
       //   this.simID + "/user/system",
       //   this.$store.state.username + ":" + "Pause"
       // );
-      this.socket.emit(
+      socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Pause"
       );
@@ -272,7 +272,7 @@ export default {
       //   this.simID + "/user/system",
       //   this.$store.state.username + ":" + "Abort"
       // );
-      this.socket.emit(
+      socket.emit(
         this.simID + "/user/system",
         this.$store.state.username + ":" + "Abort"
       );
@@ -294,7 +294,7 @@ export default {
       //     schedule: newVal,
       //   })
       // );
-      this.socket.emit(
+      socket.emit(
         this.simID + "/user/schedule",
         JSON.stringify({
           user: this.$store.state.username,

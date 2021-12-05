@@ -1,8 +1,12 @@
 <template>
-  <v-card lazy>
-    <el-tabs :tab-position="'left'" v-model="activeTab" @tab-click="tabclick">
-      <el-tab-pane v-for="item in tabs" :key="item" :label="item" lazy>
-        <v-card>
+  <v-card>
+    <v-tabs vertical v-model="activeTab">
+      <v-tab v-for="tab in tabs" :key="tab">
+        {{ tab }}
+      </v-tab>
+
+      <v-tab-item v-for="tab in tabs" :key="tab">
+        <v-card flat>
           <v-card-title class="headline"> Data </v-card-title>
           <v-data-table
             :headers="headers"
@@ -21,7 +25,7 @@
             </template>
           </v-data-table>
         </v-card>
-        <v-card v-if="item != 'Bus'">
+        <v-card flat v-if="activeTab != 0">
           <v-card-title class="headline"> Control </v-card-title>
           <v-form>
             <v-container>
@@ -58,8 +62,8 @@
             </v-container>
           </v-form>
         </v-card>
-      </el-tab-pane>
-    </el-tabs>
+      </v-tab-item>
+    </v-tabs>
   </v-card>
 </template>
 
@@ -160,14 +164,52 @@ export default {
         this.InputDisabled = true;
       }
     },
-    tabclick(ele) {
+    getData() {
+      this.type = this.activeObj;
+      const temp = this.$store.state.parsedData;
+      let anchor = 0;
+      var arrlength;
+      var keyarr;
+      // console.log([this.type, this.id])
+
+      for (let ele in this.$store.state.fieldstore) {
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
+        keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
+        if (ele != this.type) {
+          anchor += arrlength * keyarr.length;
+        } else {
+          anchor += arrlength * keyarr.indexOf(this.id);
+          break;
+        }
+        // console.log(Object.keys(this.$store.state.fieldstore).indexOf(ele))
+        // console.log(Object.keys(this.$store.state.casedetail.content[ele]).length)
+        // console.log(this.$store.state.fieldstore[ele].length)
+      }
+      const spdata = temp.slice(anchor, anchor + arrlength);
+      let container = {};
+      for (let e in spdata) {
+        // console.log(this.$store.state.fieldstore[this.type][e]['value'])
+        container[this.$store.state.fieldstore[this.type]["Field"][e]] =
+          +spdata[e];
+      }
+      this.display = [container];
+    },
+  },
+  watch: {
+    dataflag: function () {
+      if (this.show.split("-")[1] === this.name) {
+        this.getData();
+      }
+    },
+    activeTab(newValue, oldValue) {
+      let ele = this.tabs[newValue];
       let temp = [];
-      this.activeObj = ele.label;
+      this.activeObj = ele;
       if (this.activeObj == "Bus") {
         this.id = this.detail["Int.Bus Number"].toString();
       } else {
         let key,
-          strArray = ele.label.split(" ");
+          strArray = ele.split(" ");
         if (strArray.length == 2) {
           key = strArray[1];
         } else {
@@ -210,43 +252,6 @@ export default {
         });
       }
       this.dropdown = temp;
-    },
-    getData() {
-      this.type = this.activeObj;
-      const temp = this.$store.state.parsedData;
-      let anchor = 0;
-      var arrlength;
-      var keyarr;
-      // console.log([this.type, this.id])
-
-      for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
-        keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
-        if (ele != this.type) {
-          anchor += arrlength * keyarr.length;
-        } else {
-          anchor += arrlength * keyarr.indexOf(this.id);
-          break;
-        }
-        // console.log(Object.keys(this.$store.state.fieldstore).indexOf(ele))
-        // console.log(Object.keys(this.$store.state.casedetail.content[ele]).length)
-        // console.log(this.$store.state.fieldstore[ele].length)
-      }
-      const spdata = temp.slice(anchor, anchor + arrlength);
-      let container = {};
-      for (let e in spdata) {
-        // console.log(this.$store.state.fieldstore[this.type][e]['value'])
-        container[this.$store.state.fieldstore[this.type]["Field"][e]] =
-          +spdata[e];
-      }
-      this.display = [container];
-    },
-  },
-  watch: {
-    dataflag: function () {
-      if (this.show.split("-")[1] === this.name) {
-        this.getData();
-      }
     },
   },
 };

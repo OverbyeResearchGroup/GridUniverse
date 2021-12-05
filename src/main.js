@@ -5,18 +5,14 @@ import store from './store';
 import Vuetify from 'vuetify/lib';
 import './registerServiceWorker';
 import 'vuetify/dist/vuetify.min.css';
-import '@mdi/font/css/materialdesignicons.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import { Tabs, TabPane } from "element-ui";
-import 'element-ui/lib/theme-chalk/index.css';
-import 'izitoast/dist/css/iziToast.css';
-import StatusIndicator from 'vue-status-indicator';
-import "./assets/neutralino.js";
+import 'izitoast/dist/css/iziToast.min.css';
+import StatusIndicator from 'vue-status-indicator'
 
 
 const opts = {
 	icons: {
-		iconfont: 'mdi'
+		iconfont: 'md',
 	},
 	theme: {dark: true},
 	options: {
@@ -35,8 +31,8 @@ const opts = {
 
 Vue.use(Vuetify);
 Vue.use(StatusIndicator);
-Vue.use(Tabs);
-Vue.use(TabPane);
+// Vue.use(Tabs);
+// Vue.use(TabPane);
 
 
 new Vue({
@@ -45,7 +41,6 @@ new Vue({
     vuetify: new Vuetify(opts),
     render: h => h(App),
     components: { App },
-    Vuetify,
     template: '<App/>'
 }).$mount('#app');
 

@@ -1,9 +1,9 @@
 <template>
-  <v-chart :options="option" theme="dark" :autoresize="true"></v-chart>
+  <div id="hourlystrip" class="hourlystrip"></div>
 </template>
 
 <script>
-import { use } from "echarts/core";
+import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { LineChart } from "echarts/charts";
 import {
@@ -12,9 +12,10 @@ import {
   GridComponent,
   SingleAxisComponent,
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
-use([
+echarts.use([
   CanvasRenderer,
   LineChart,
   TitleComponent,
@@ -23,13 +24,12 @@ use([
   SingleAxisComponent,
 ]);
 
+
+let chart = '';
+
 export default {
   name: "hourlystrip",
   components: {
-    VChart,
-  },
-  provide: {
-    [THEME_KEY]: "dark",
   },
   data() {
     return {
@@ -88,6 +88,8 @@ export default {
     };
   },
   mounted() {
+    chart = echarts.init(document.getElementById("hourlystrip"), "dark");
+    chart.setOption(this.option);
     this.Interval = setInterval(() => {
       this.updateChart();
     }, 1000);
@@ -99,6 +101,7 @@ export default {
       } else {
         this.option.series[0].data = this.$store.state.areaLoad.slice(-119);
       }
+      chart.setOption(this.option);
     }
   },
   beforeDestroy() {
@@ -108,7 +111,7 @@ export default {
 </script>
 
 <style scoped>
-.echarts {
+.hourlystrip {
   z-index: 0;
   height: 900px;
   width: 100%;

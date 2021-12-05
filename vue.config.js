@@ -26,6 +26,7 @@ module.exports = {
   },
   configureWebpack: {
     // Configuration applied to all builds
+    mode: "production",
     optimization: {
       splitChunks: {
         // chunks: 'all'
@@ -62,8 +63,16 @@ module.exports = {
       nodeEnv: 'production',
       minimize: true
     },
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.js$/,
+    //       loader: "webpack-remove-debug",
+    //     }
+    //   ]
+    // },
     externals: [
-      ...Object.keys({}).filter(d => !whiteListedModules.includes(d))]
+      ...Object.keys({}).filter(d => !whiteListedModules.includes(d))],
   },
   pluginOptions: {
     // electronBuilder: {

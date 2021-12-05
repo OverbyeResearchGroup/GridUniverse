@@ -18,10 +18,7 @@
       <v-btn icon @click="handleFullScreen()">
         <v-icon>fullscreen</v-icon>
       </v-btn>
-      <v-menu
-        left
-        bottom
-      >
+      <v-menu left bottom v-model="menu_model">
         <template v-slot:activator="{ on }">
           <v-btn icon text v-on="on" @click="$store.commit('resetbadge')">
             <v-badge color="red" overlap v-model="badgeShow">
@@ -30,7 +27,7 @@
             </v-badge>
           </v-btn>
         </template>
-        <NotificationList v-on:changeHeight="changeHeight"></NotificationList>
+        <NotificationList v-if="menu_model" v-on:changeHeight="changeHeight"></NotificationList>
       </v-menu>
     </v-app-bar>
 
@@ -43,7 +40,7 @@
         </div>
         <v-list-item :key="'home'" @click="$store.commit('setpage', 'Home')">
           <v-list-item-avatar>
-            <v-icon>mdi-home</v-icon>
+            <v-icon>home</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -55,7 +52,7 @@
           @click="$store.commit('setpage', 'generator')"
         >
           <v-list-item-avatar>
-            <v-icon>mdi-google-glass</v-icon>
+            <v-icon>bolt</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -64,7 +61,7 @@
         </v-list-item>
         <v-list-item :key="'load'" @click="$store.commit('setpage', 'load')">
           <v-list-item-avatar>
-            <v-icon>mdi-lightbulb</v-icon>
+            <v-icon>tungsten</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -73,7 +70,7 @@
         </v-list-item>
         <v-list-item :key="'shunt'" @click="$store.commit('setpage', 'shunt')">
           <v-list-item-avatar>
-            <v-icon>mdi-currency-usd</v-icon>
+            <v-icon>attach_money </v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -85,7 +82,7 @@
           @click="$store.commit('setpage', 'branch')"
         >
           <v-list-item-avatar>
-            <v-icon>linear_scale</v-icon>
+            <v-icon>show_chart</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -98,7 +95,7 @@
           @click="$store.commit('setpage', 'areastrip')"
         >
           <v-list-item-avatar>
-            <v-icon>linear_scale</v-icon>
+            <v-icon>area_chart</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -116,18 +113,18 @@
           </v-list-item-content>
         </v-list-item> -->
 
-        <v-list-item
+        <!-- <v-list-item
           :key="'sanddance'"
           @click="$store.commit('setpage', 'sanddance')"
         >
           <v-list-item-avatar>
-            <v-icon>linear_scale</v-icon>
+            <v-icon>mdi-chart-line-stacked</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
             <v-list-item-title>SandDance</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
         <!-- <v-list-item :key="'hourlystrip'" @click="$store.commit('setpage', 'hourlystrip')">
 						<v-list-item-avatar>
 							<v-icon>linear_scale</v-icon>
@@ -151,7 +148,7 @@
           @click="$store.commit('setpage', 'oneline')"
         >
           <v-list-item-avatar>
-            <v-icon>linear_scale</v-icon>
+            <v-icon>area_chart</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -163,7 +160,7 @@
           @click="$store.commit('setpage', 'generationVis')"
         >
           <v-list-item-avatar>
-            <v-icon>mdi-chart-bar</v-icon>
+            <v-icon>bar_chart</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -175,7 +172,7 @@
           @click="$store.commit('setpage', 'generationPie')"
         >
           <v-list-item-avatar>
-            <v-icon>mdi-chart-pie</v-icon>
+            <v-icon>pie_chart</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -187,7 +184,7 @@
           @click="$store.commit('setpage', 'sysInfo')"
         >
           <v-list-item-avatar>
-            <v-icon>mdi-file-document-box-multiple</v-icon>
+            <v-icon>dns</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -218,7 +215,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item :key="'contact'" @click="$store.commit('setpage', 'contact')">
+        <!-- <v-list-item :key="'contact'" @click="$store.commit('setpage', 'contact')">
           <v-list-item-avatar>
             <v-icon>chat</v-icon>
           </v-list-item-avatar>
@@ -226,7 +223,7 @@
           <v-list-item-content>
             <v-list-item-title>Contact</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
         <!-- <v-list-item :key="'start'" v-if="ready4start" @click="$store.commit('trigstartsim')"> -->
         <v-list-item :key="'start'" @click="startDialog = true">
           <v-list-item-avatar>
@@ -248,14 +245,14 @@
         <v-list-item :key="'abort'" @click="$store.commit('trigabortsim')">
           <!-- <v-list-item :key="'start'" @click="startDialog=true"> -->
           <v-list-item-avatar>
-            <v-icon>mdi-stop</v-icon>
+            <v-icon>close</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
             <v-list-item-title>Abort</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item
+        <!-- <v-list-item
           :key="'admin'"
           v-if="isAdmin"
           @click="$store.commit('setpage', 'admin')"
@@ -267,10 +264,10 @@
           <v-list-item-content>
             <v-list-item-title>Admin</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
+        </v-list-item> -->
         <v-list-item :key="'report'" @click="reportDialog = true">
           <v-list-item-avatar>
-            <v-icon>save_alt</v-icon>
+            <v-icon>summarize</v-icon>
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -325,11 +322,11 @@
 // import generator from "../views/generator-view";
 // import load from "../views/load-view";
 // import shunt from "../views/shunt-view";
-import admin from "../views/admin-view";
+// import admin from "../views/admin-view";
 // import branch from "../views/branch-view";
 // import areastrip from "./AreaStrip2";
 // import hourlystrip from "./HourlyStrip";
-import busstrip from "./BusStrip";
+// import busstrip from "./BusStrip";
 // import oneline from "./OneLine";
 // import sanddance from "./SandDance";
 // import generationVis from "../views/generation-bar-view";
@@ -356,6 +353,7 @@ export default {
       startDialog: false,
       reportDialog: false,
       showToolbar: true,
+      menu_model: false
     };
   },
   computed: {
@@ -373,11 +371,11 @@ export default {
     reportpop: () => import("./reportpop"),
     MqttClient,
     Home: () => import("../views/Home"),
-    IkView: () => import("../views/Ik-view"),
+    // IkView: () => import("../views/Ik-view"),
     generator: () => import("../views/generator-view.vue"),
     load: () => import("../views/load-view.vue"),
     shunt: () => import("../views/shunt-view.vue"),
-    admin,
+    // admin,
     NotificationList: () => import("./NotificationList"),
     // CostBot,
     AGCBot,
@@ -386,16 +384,16 @@ export default {
     // transformer,
     areastrip: () => import("./AreaStrip2.vue"),
     hourlystrip: () => import("./HourlyStrip.vue"),
-    busstrip,
+    busstrip: () => import("./BusStrip.vue"),
     oneline: () => import("./OneLine.vue"),
-    sanddance: () => import("./SandDance.vue"),
+    // sanddance: () => import("./SandDance.vue"),
     marquee,
     Clock,
     generationVis: () => import("../views/generation-bar-view.vue"),
     generationPie: () => import("../views/generation-pie-view.vue"),
     sysInfo: () => import("../views/system-info-view.vue"),
     DataProcessing,
-    contact
+    contact,
   },
   methods: {
     handleFullScreen() {
