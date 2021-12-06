@@ -188,24 +188,24 @@ export default {
           // ]);
           // const output = command.execute();
           console.log(Neutralino);
+          console.log(window.NL_CWD);
           
+          // Neutralino.os.showMessageBox("Welcome", "Hello Neutralinojs");
           
-          Neutralino.os.showMessageBox("Welcome", "Hello Neutralinojs");
-          
-          // Neutralino.os.execCommand(`./ds_client.exe ${this.ip} ${this.port} ${this.server_port}`, { shouldRunInBackground: true });
+          Neutralino.os.execCommand(`./ds_client.exe ${this.ip} ${this.port} ${this.server_port}`, { shouldRunInBackground: true });
         }
-        // this.$store.commit("setLoginInfo", config);
-        // this.$store.commit("setArea", this.area);
-        // this.$store.commit("setSimID", "S" + this.simID);
-        // this.$store.commit("setUsername", this.model.username);
-        // this.loading = true;
-        // setTimeout(() => {
-        //   this.showDash = true;
-        //   // this.$router.push('/dashboard');
-        // }, 1000);
-        // setTimeout(() => {
-        //   this.$store.state.socket.emit("register", this.model.username);
-        // }, 2000);
+        this.$store.commit("setLoginInfo", config);
+        this.$store.commit("setArea", this.area);
+        this.$store.commit("setSimID", "S" + this.simID);
+        this.$store.commit("setUsername", this.model.username);
+        this.loading = true;
+        setTimeout(() => {
+          this.showDash = true;
+          // this.$router.push('/dashboard');
+        }, 1000);
+        setTimeout(() => {
+          this.$store.state.socket.emit("register", this.model.username);
+        }, 2000);
       }
     },
   },

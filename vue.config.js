@@ -2,6 +2,7 @@
 // let whiteListedModules = ["@supermap/iclient-leaflet"]
 // const zlib = require('zlib');
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
   // publicPath: '/~zeyumao2/',
@@ -27,6 +28,15 @@ module.exports = {
   configureWebpack: {
     // Configuration applied to all builds
     mode: "production",
+    plugins: [
+      new FileManagerPlugin({
+        events: {
+          onEnd: {
+            copy: [{ source: './resources/neutralino.js', destination: './resources/js/neutralino.js' }]
+          }
+        }
+      }),
+    ],
     optimization: {
       splitChunks: {
         // chunks: 'all'

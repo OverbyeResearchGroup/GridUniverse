@@ -6,7 +6,7 @@
   "enableNativeAPI": true,
   "url": "/resources/",
   "logging": {
-    "enabled": true
+    "enabled": false
   },
   "nativeBlockList": [],
   "globalVariables": {},
@@ -20,7 +20,7 @@
       "fullScreen": false,
       "alwaysOnTop": false,
       "icon": "/resources/grid.ico",
-      "enableInspector": true,
+      "enableInspector": false,
       "borderless": false,
       "maximize": false
     },
@@ -30,7 +30,7 @@
   "cli": {
     "binaryName": "GridVerse",
     "resourcesPath": "/resources/",
-    "clientLibrary": "/resources/neutralino.js",
+    "clientLibrary": "/src/assets/neutralino.js",
     "binaryVersion": "3.3.0",
     "clientVersion": "3.3.0"
   }

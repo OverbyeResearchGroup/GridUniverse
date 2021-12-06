@@ -7,14 +7,16 @@ import './registerServiceWorker';
 import 'vuetify/dist/vuetify.min.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import 'izitoast/dist/css/iziToast.min.css';
-import StatusIndicator from 'vue-status-indicator'
+import StatusIndicator from 'vue-status-indicator';
+
+Neutralino.init();
 
 
 const opts = {
 	icons: {
 		iconfont: 'md',
 	},
-	theme: {dark: true},
+	theme: { dark: true },
 	options: {
 		themeVariations: ['primary', 'secondary', 'accent'],
 		extra: {
@@ -36,12 +38,10 @@ Vue.use(StatusIndicator);
 
 
 new Vue({
-    router,
-    store,
-    vuetify: new Vuetify(opts),
-    render: h => h(App),
-    components: { App },
-    template: '<App/>'
+	router,
+	store,
+	vuetify: new Vuetify(opts),
+	render: h => h(App),
+	components: { App },
+	template: '<App/>'
 }).$mount('#app');
-
-Neutralino.init();
