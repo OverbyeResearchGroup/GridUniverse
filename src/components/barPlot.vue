@@ -4,7 +4,7 @@
     <!-- Creating the generation bar chart. -->
     <v-layout row wrap>
       <v-flex lg12 sm12 xs12>
-        <v-chart :option="genBar" :theme="theme" autoresize />
+        <div id="barplot" class="barplot"/>
       </v-flex>
     </v-layout>
   </v-container>
@@ -12,14 +12,14 @@
 
 <style>
 /** For PowerWeb, the size needs to be in pixel format. */
-.echarts {
+.barplot {
   width: 100%;
   height: 800px;
 }
 </style>
 
 <script>
-import { use } from "echarts/core";
+import * as echarts from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { BarChart } from "echarts/charts";
 import {
@@ -28,9 +28,10 @@ import {
   GridComponent,
   SingleAxisComponent,
 } from "echarts/components";
-import VChart, { THEME_KEY } from "vue-echarts";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
-use([
+echarts.use([
   CanvasRenderer,
   BarChart,
   TitleComponent,
@@ -39,18 +40,15 @@ use([
   SingleAxisComponent,
 ]);
 
+let chart = '';
+
 export default {
   name: "barplot",
   components: {
-    VChart,
-  },
-  provide: {
-    [THEME_KEY]: "dark",
   },
   data() {
     return {
       // You can manually set the theme for each plot for visibility.
-      theme: "dark",
       // These are the options for the Generation Bar Graph
       genXaxis: [],
       genYaxis: [],
@@ -76,6 +74,7 @@ export default {
           temp.push(this.$store.state.genData[i]["MW"]);
           this.genYaxis = temp;
         }
+        chart.setOption(this.genBar);
       } catch (e) {
         console.log(e);
       }
@@ -87,6 +86,8 @@ export default {
   mounted() {
     // For every initialization method, you have to call it through mounted.
     this.initGenPlot();
+    chart = echarts.init(document.getElementById("barplot"), "dark");
+    chart.setOption(this.genBar);
     this.Process = setInterval(() => {
       this.updateGenPlot();
     }, 1000);

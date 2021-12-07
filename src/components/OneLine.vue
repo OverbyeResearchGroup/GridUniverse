@@ -10,6 +10,8 @@ import { CanvasRenderer } from "echarts/renderers";
 import { LinesChart, EffectScatterChart, ScatterChart } from "echarts/charts";
 import { TooltipComponent } from "echarts/components";
 import "../assets/echarts-extension-leaflet.esm.js";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
 echarts.use([
   CanvasRenderer,
@@ -147,7 +149,7 @@ export default {
       ],
     };
     // initialize echarts
-    chart = echarts.init(document.getElementById("chart"));
+    chart = echarts.init(document.getElementById("chart"), "dark");
     chart.setOption(echartsOptions);
     var map = chart.getModel().getComponent("leaflet").getMap();
     const url =

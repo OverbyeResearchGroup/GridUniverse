@@ -28,9 +28,6 @@
 </template>
 
 <script>
-// require('echarts/extension/bmap/bmap');
-// import * as echarts from "echarts";
-// import 'echarts-gl/dist/echarts-gl';
 import linepop from "./linepop";
 import subpop from "./subpop";
 

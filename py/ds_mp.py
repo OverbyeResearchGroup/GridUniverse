@@ -253,13 +253,13 @@ def setup_dictionary_data(ds, data_package_id):
 
 class SimulationInstance:
 
-    def __init__(self, id, ip, port, client, ds, queue):
+    def __init__(self, id, ip, port, client, queue):
         print(f"Simulation ID {id} initialized to connect {ip} {port}")
         stdout.flush()
         self.id = id
         self.ip = ip
         self.port = port
-        self.ds = ds
+        self.ds = PowerWorldDS(ip, int(port))
         self.client = client
         self.last_known_state = "Initialized"
         self.topic_prefix = "S" + str(self.id).zfill(3)
@@ -360,13 +360,18 @@ class SimulationInstance:
             self.last_known_state = " Not able to connect to the DS"
 
     def regular_update(self):
-        self.ds.msgtypes[12](self.data_package_id)
-        data = self.get_data()
-        if data is None:
-            return
-        data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
-        topic = "/ds/data"
-        self.client.emit(topic, dumps(data))
+        try:
+            self.ds.msgtypes[12](self.data_package_id)
+            data = self.get_data()
+            if data is None:
+                return
+            data['Data'] = list(map(lambda n: round(n, 2), data['Data']))
+            topic = "/ds/data"
+            self.client.emit(topic, dumps(data))
+        except AttributeError:
+            print("DS is disconnected")
+            print("Reconnecting...")
+            self.ds = PowerWorldDS(self.ip, int(self.port))
 
     def write_status(self):
         print("ID " + str(self.id).zfill(3) + " Port " + str(
@@ -453,12 +458,11 @@ def regular_publisher(queue):
 
 
 def background_work(ip, port, sio, queue):
-    ds = PowerWorldDS(ip, int(port))
-    sim = SimulationInstance(0, ip, int(port), sio, ds, queue)
+    sim = SimulationInstance(0, ip, int(port), sio, queue)
     sim.setup()
     while True:
         sim.update()
-        sio.sleep(0.01)
+        sio.sleep(0.002)
 
 
 def main():

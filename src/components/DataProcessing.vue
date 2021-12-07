@@ -1,6 +1,6 @@
 <script>
 import { mapGetters } from "vuex";
-import * as math from "mathjs";
+import { median, max } from "mathjs/lib/esm/number";
 
 var gens = [];
 var areaData = [];
@@ -18,7 +18,7 @@ export default {
       marginalcost: [],
       gens: null,
       areaData: [],
-      areaDataLength: this.$store.state.fieldstore["Area"]['Field'].length,
+      areaDataLength: this.$store.state.fieldstore["Area"]["Field"].length,
       busAnchor: 0,
       busDataLength: 0,
       busArrLength: 0,
@@ -46,8 +46,11 @@ export default {
       areaBus: {},
       branchArray: [],
       transformerArray: [],
-      busIDArray: [4195, 4146, 4056, 4181, 4192, 4039, 4151, 4196, 4073, 4070, 4158, 4140, 4113, 4080, 4004, 4183, 4041],
-      busIndexArray: []
+      busIDArray: [
+        4195, 4146, 4056, 4181, 4192, 4039, 4151, 4196, 4073, 4070, 4158, 4140,
+        4113, 4080, 4004, 4183, 4041,
+      ],
+      busIndexArray: [],
     };
   },
   methods: {
@@ -77,25 +80,22 @@ export default {
               name: temp.content.Substation[ele]["String.Name"],
               value: [
                 temp.content.Substation[ele]["Double.Latitude"],
-                temp.content.Substation[ele]["Double.Longitude"]
+                temp.content.Substation[ele]["Double.Longitude"],
               ],
               attributes: { Gen: false, Shunt: false },
-              bus: []
+              bus: [],
             });
           } else {
             otherSub.push({
               name: temp.content.Substation[ele]["String.Name"],
               value: [
                 temp.content.Substation[ele]["Double.Latitude"],
-                temp.content.Substation[ele]["Double.Longitude"]
-              ]
+                temp.content.Substation[ele]["Double.Longitude"],
+              ],
             });
           }
         }
-        this.$store.commit("setCenter", [
-          math.median(longList),
-          math.median(latList)
-        ]);
+        this.$store.commit("setCenter", [median(longList), median(latList)]);
         for (let ele in temp.content.Branch) {
           const fromid = ele.split(",")[0];
           const toid = ele.split(",")[1];
@@ -106,7 +106,7 @@ export default {
               ]["Double.Latitude"],
               temp.content.Substation[
                 temp.content.Bus[fromid]["Int.Sub Number"].toString()
-              ]["Double.Longitude"]
+              ]["Double.Longitude"],
             ],
             [
               temp.content.Substation[
@@ -114,13 +114,13 @@ export default {
               ]["Double.Latitude"],
               temp.content.Substation[
                 temp.content.Bus[toid]["Int.Sub Number"].toString()
-              ]["Double.Longitude"]
-            ]
+              ]["Double.Longitude"],
+            ],
           ];
           if (
             [
               temp.content.Branch[ele]["FromArea"],
-              temp.content.Branch[ele]["ToArea"]
+              temp.content.Branch[ele]["ToArea"],
             ].includes(+this.$store.state.area)
           ) {
             this.branchArray.push(count_b);
@@ -138,8 +138,8 @@ export default {
               count: 1,
               attributes: {
                 MVALimit: temp.content.Branch[ele]["Single.MVA Limit"],
-                volt: temp.content.Bus[fromid]["Single.Nominal kV"]
-              }
+                volt: temp.content.Bus[fromid]["Single.Nominal kV"],
+              },
             });
           } else {
             if (temp.content.Branch[ele]["Byte.Type"] == 0) {
@@ -152,7 +152,7 @@ export default {
                   temp.content.Substation[
                     temp.content.Bus[toid]["Int.Sub Number"].toString()
                   ]["String.Name"].split("_")[0],
-                coords: coords
+                coords: coords,
               });
             }
           }
@@ -168,7 +168,7 @@ export default {
               ]["Double.Longitude"],
               temp.content.Substation[
                 temp.content.Bus[fromid]["Int.Sub Number"].toString()
-              ]["Double.Latitude"]
+              ]["Double.Latitude"],
             ],
             [
               temp.content.Substation[
@@ -176,13 +176,13 @@ export default {
               ]["Double.Longitude"],
               temp.content.Substation[
                 temp.content.Bus[toid]["Int.Sub Number"].toString()
-              ]["Double.Latitude"]
-            ]
+              ]["Double.Latitude"],
+            ],
           ];
           if (
             [
               temp.content.Transformer[ele]["FromArea"],
-              temp.content.Transformer[ele]["ToArea"]
+              temp.content.Transformer[ele]["ToArea"],
             ].includes(+this.$store.state.area)
           ) {
             this.transformerArray.push(count_b);
@@ -198,7 +198,7 @@ export default {
                 ]["String.Name"].split("_")[0],
               coords: coords,
               count: 1,
-              attributes: {}
+              attributes: {},
             });
           }
           count_b++;
@@ -256,7 +256,7 @@ export default {
         this.$store.commit("setTransformerDict", this.transformerDict);
         this.$store.commit("setOtherArea", {
           Substation: otherSub,
-          Branch: otherBranch
+          Branch: otherBranch,
         });
         this.$store.commit("updateSubDetail", this.subdetail);
       }
@@ -267,7 +267,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Bus") {
@@ -292,12 +292,10 @@ export default {
         ) {
           // this.highRiskLines[key] = val;
           this.violateBuses[key] = {};
-          this.violateBuses[key][
-            "name"
-          ] = this.$store.state.areadetail.content.Bus[key]["String.Name"];
-          this.violateBuses[key]["Vpu"] = busData[
-            this.busArray[i] * this.busArrLength
-          ];
+          this.violateBuses[key]["name"] =
+            this.$store.state.areadetail.content.Bus[key]["String.Name"];
+          this.violateBuses[key]["Vpu"] =
+            busData[this.busArray[i] * this.busArrLength];
           this.violateBuses[key]["Max"] = val["Single.Min Limit"];
           this.violateBuses[key]["Min"] = val["Single.Max Limit"];
           this.violateBuses[key]["SubID"] = val["Int.Sub Number"];
@@ -307,7 +305,7 @@ export default {
             ]["Double.Longitude"],
             this.$store.state.areadetail.content.Substation[
               val["Int.Sub Number"].toString()
-            ]["Double.Latitude"]
+            ]["Double.Latitude"],
           ];
         } else if (key in this.violateBuses) {
           delete this.violateBuses[key];
@@ -323,7 +321,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Branch") {
@@ -341,7 +339,7 @@ export default {
       var valueFieldArr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyCaseArr = Object.keys(this.$store.state.areadetail.content[ele]);
         valueFieldArr = Object.values(this.$store.state.fieldstore[ele]);
         if (ele != "Transformer") {
@@ -371,17 +369,15 @@ export default {
             this.$store.state.casedetail.content.Bus[key.split(",")[1]][
               "String.Name"
             ];
-          this.highRiskLines[key]["MVA"] = branchData[
-            index * this.branchArrLength + 3
-          ];
+          this.highRiskLines[key]["MVA"] =
+            branchData[index * this.branchArrLength + 3];
           this.highRiskLines[key]["Ratio"] = (
             (branchData[index * this.branchArrLength + 3] /
               this.linedata[index].attributes.MVALimit) *
             100
           ).toFixed(2);
-          this.highRiskLines[key]["MVALimit"] = this.linedata[
-            index
-          ].attributes.MVALimit;
+          this.highRiskLines[key]["MVALimit"] =
+            this.linedata[index].attributes.MVALimit;
           this.highRiskLines[key]["coords"] = this.linedata[index].coords;
         } else if (key in this.highRiskLines) {
           delete this.highRiskLines[key];
@@ -407,9 +403,10 @@ export default {
           +this.$store.state.area
         ) {
           this.genArray.push(count);
-          subID = this.$store.state.areadetail.content.Bus[i.split(",")[0]][
-            "Int.Sub Number"
-          ];
+          subID =
+            this.$store.state.areadetail.content.Bus[i.split(",")[0]][
+              "Int.Sub Number"
+            ];
           temp.push({
             value: [
               this.$store.state.areadetail.content.Substation[subID.toString()][
@@ -417,7 +414,7 @@ export default {
               ],
               this.$store.state.areadetail.content.Substation[subID.toString()][
                 "Double.Longitude"
-              ]
+              ],
             ],
             key: i,
             name: this.$store.state.areadetail.content.Bus[i.split(",")[0]][
@@ -425,27 +422,32 @@ export default {
             ], //i,
             Status: 1,
             vStatus: 1,
-            MWMax: this.$store.state.areadetail.content.Gen[i][
-              "Single.MW Max Limit"
-            ],
-            MWMin: this.$store.state.areadetail.content.Gen[i][
-              "Single.MW Min Limit"
-            ],
+            MWMax:
+              this.$store.state.areadetail.content.Gen[i][
+                "Single.MW Max Limit"
+              ],
+            MWMin:
+              this.$store.state.areadetail.content.Gen[i][
+                "Single.MW Min Limit"
+              ],
             MW: 0,
             Mvar: 0,
             MWSetpoint: 0,
             VpuSetpoint: 1,
-            OperationCost: this.$store.state.areadetail.content.Gen[i][
-              "MarginalCostCoefficients"
-            ][1],
-            MarginalCostCoefficients: this.$store.state.areadetail.content.Gen[
-              i
-            ]["MarginalCostCoefficients"],
-            MarginalCost: this.$store.state.areadetail.content.Gen[i][
-              "MarginalCostCoefficients"
-            ][0],
+            OperationCost:
+              this.$store.state.areadetail.content.Gen[i][
+                "MarginalCostCoefficients"
+              ][1],
+            MarginalCostCoefficients:
+              this.$store.state.areadetail.content.Gen[i][
+                "MarginalCostCoefficients"
+              ],
+            MarginalCost:
+              this.$store.state.areadetail.content.Gen[i][
+                "MarginalCostCoefficients"
+              ][0],
             id: this.$store.state.areadetail.content.Gen[i]["String.ID"],
-            AGC: false
+            AGC: false,
           });
         }
         count++;
@@ -463,7 +465,7 @@ export default {
       var keyarr;
 
       for (let ele in this.$store.state.fieldstore) {
-        arrlength = this.$store.state.fieldstore[ele]['Field'].length;
+        arrlength = this.$store.state.fieldstore[ele]["Field"].length;
         keyarr = Object.keys(this.$store.state.areadetail.content[ele]);
         if (ele != "Gen") {
           anchor += arrlength * keyarr.length;
@@ -486,14 +488,11 @@ export default {
         this.area_index * this.areaDataLength,
         this.area_index * this.areaDataLength + this.areaDataLength
       );
-      busData = temp.slice(
-        this.busAnchor,
-        this.busAnchor + this.busDataLength
-      );
+      busData = temp.slice(this.busAnchor, this.busAnchor + this.busDataLength);
       let tempVoltageData = ["2018/11/29 " + this.$store.state.clockTime];
-      this.busIndexArray.forEach((e)=>{
-        tempVoltageData.push(busData[9*e] + (Math.random()-0.5)/100); // 9 is the length of fields for bus
-      })
+      this.busIndexArray.forEach((e) => {
+        tempVoltageData.push(busData[9 * e] + (Math.random() - 0.5) / 100); // 9 is the length of fields for bus
+      });
       branchData = temp.slice(
         this.branchAnchor,
         this.branchAnchor + this.branchDataLength
@@ -509,7 +508,7 @@ export default {
       this.$store.commit("setBusVoltage", tempVoltageData);
       this.$store.commit("setAreaLoad", [
         "2018/11/29 " + this.$store.state.clockTime,
-        areaData[2]
+        areaData[2],
       ]);
       for (let i in gens) {
         gens[i].MW =
@@ -538,9 +537,7 @@ export default {
     },
     updateMC() {
       for (let i in gens) {
-        gens[i].MarginalCost = gens[
-          i
-        ].MarginalCostCoefficients[0].toFixed(2);
+        gens[i].MarginalCost = gens[i].MarginalCostCoefficients[0].toFixed(2);
       }
       this.$store.commit("updateGenData", gens);
     },
@@ -579,7 +576,7 @@ export default {
           // console.log([temp, this.$store.state.areaData[0]])
           // console.log(deltaCost/this.$store.state.areaData[0])
           deltaCost +=
-            math.max(this.$store.state.ACE, 0) * this.$store.state.aceCost +
+            max(this.$store.state.ACE, 0) * this.$store.state.aceCost +
             deltaScheduleCost;
           // console.log(deltaScheduleCost);
           this.$store.commit("updateUnitTimeCost", +deltaCost.toFixed(0));
@@ -596,26 +593,26 @@ export default {
         Bus: {
           anchor: this.busAnchor,
           length: this.busArrLength, //For a single bus object, not for the whole bus list
-          list: this.busArray
+          list: this.busArray,
         },
         Gen: {
           anchor: this.anchor,
           length: this.genDataLength,
-          list: this.genArray
+          list: this.genArray,
         },
         Branch: {
           anchor: this.branchAnchor,
           length: this.branchArrLength,
-          list: this.branchArray
+          list: this.branchArray,
         },
         Transformer: {
           anchor: this.transformerAnchor,
           length: this.transformerArrLength,
-          list: this.transformerArray
-        }
+          list: this.transformerArray,
+        },
       };
       this.$store.commit("setAreaHelper", areaHelper);
-    }
+    },
   },
   created() {
     this.before_init();
@@ -630,7 +627,7 @@ export default {
       if (this.$store.state.status === "running") {
         this.$store.commit("addReportData", {
           time: this.$store.state.currentTime,
-          areaData: areaData
+          areaData: areaData,
         });
       }
       var status, mwmax;
@@ -661,13 +658,13 @@ export default {
         if (this.formatRiskBuses.length > 0) {
           this.$store.commit("addReportViolate", {
             time: this.$store.state.currentTime,
-            Bus: this.formatRiskBuses
+            Bus: this.formatRiskBuses,
           });
         }
         if (this.formatRiskLines.length > 0) {
           this.$store.commit("addReportViolate", {
             time: this.$store.state.currentTime,
-            Branch: this.formatRiskLines
+            Branch: this.formatRiskLines,
           });
         }
       }
@@ -692,28 +689,28 @@ export default {
         this.$store.commit("addReportScore", {
           time: this.$store.state.currentTime,
           RIndex: RIndex,
-          TCost: this.$store.state.totalCost
+          TCost: this.$store.state.totalCost,
         });
       }
     }, 1000);
   },
   computed: {
     ...mapGetters({
-      rawData: "rawData"
-    })
+      rawData: "rawData",
+    }),
   },
   watch: {
-    rawData: function() {
+    rawData: function () {
       this.regularLoop();
       this.onMonitorRiskBus();
       this.onMonitorRiskBranch();
-    }
+    },
   },
   render() {
     // We don't need to render
     // anything with this component
     return null;
-  }
+  },
 };
 </script>
 

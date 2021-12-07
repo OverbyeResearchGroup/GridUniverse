@@ -48,8 +48,6 @@
 
 
 <script>
-// import * as echarts from "echarts";
-// import 'echarts-leaflet';
 import { mapGetters, mapState } from "vuex";
 import "leaflet/dist/leaflet.css";
 import * as echarts from "echarts/core";
@@ -57,6 +55,8 @@ import { CanvasRenderer } from "echarts/renderers";
 import { LinesChart, ScatterChart, HeatmapChart } from "echarts/charts";
 import { TooltipComponent, VisualMapComponent } from "echarts/components";
 import "../assets/echarts-extension-leaflet.esm.js";
+import darkTheme from "../assets/dark.js";
+echarts.registerTheme('dark', darkTheme);
 
 echarts.use([
   CanvasRenderer,

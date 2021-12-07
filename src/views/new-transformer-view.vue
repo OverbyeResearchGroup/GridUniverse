@@ -154,8 +154,7 @@ table.v-table thead th:not(:first-child) {
 </style>
 
 <script>
-import "echarts-leaflet";
-import { abs } from 'mathjs';
+import { abs } from 'mathjs/lib/esm/number';
 
 export default {
   // props: {
