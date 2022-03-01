@@ -1,7 +1,7 @@
 {
   "applicationId": "com.zeyumao.gridverse",
   "port": 0,
-  "defaultMode": "window",
+  "defaultMode": "browser",
   "enableServer": true,
   "enableNativeAPI": true,
   "url": "/resources/",

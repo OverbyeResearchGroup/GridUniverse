@@ -32,7 +32,7 @@
     </v-app-bar>
 
     <v-navigation-drawer fixed app clipped width="160" v-model="drawer">
-      <v-list dense id="step1">
+      <v-list nav dense id="step1">
         <div id="step4">
           <v-list-item :key="'clock'">
             <Clock></Clock>

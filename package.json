@@ -14,7 +14,8 @@
     "electron:serve": "vue-cli-service electron:serve",
     "electron:build": "vue-cli-service electron:build",
     "neu:serve": "neu run",
-    "neu:build": "neu build"
+    "neu:build": "neu build",
+    "neu": "neu"
   },
   "dependencies": {
     "@msgpack/msgpack": "^2.7.1",
@@ -46,7 +47,7 @@
     "webkul-micron": "^1.1.6"
   },
   "devDependencies": {
-    "@neutralinojs/neu": "^7.1.0",
+    "@neutralinojs/neu": "7.0",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-vuex": "^4.5.15",
