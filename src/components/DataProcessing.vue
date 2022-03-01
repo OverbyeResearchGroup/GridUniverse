@@ -419,7 +419,7 @@ export default {
             key: i,
             name: this.$store.state.areadetail.content.Bus[i.split(",")[0]][
               "String.Name"
-            ], //i,
+            ] + " " + this.$store.state.areadetail.content.Gen[i]["String.ID"], //i,
             Status: 1,
             vStatus: 1,
             MWMax:

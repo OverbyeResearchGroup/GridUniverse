@@ -154,7 +154,7 @@ export default {
             name: Object.freeze(
               this.areadetail.content.Bus[i.split(",")[0]]["String.Name"] +
                 " " +
-                i.split(",")[1]
+                this.areadetail.content.Load[i]["String.ID"]
             ),
             Status: 1,
             vStatus: true,
