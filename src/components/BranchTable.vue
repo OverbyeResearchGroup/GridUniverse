@@ -172,7 +172,7 @@ export default {
               "-" +
               this.$store.state.casedetail.content.Bus[i.split(",")[1]][
                 "String.Name"
-              ],
+              ] + " " + this.$store.state.areadetail.content.Branch[i]["String.CircuitID"],
             id: this.$store.state.areadetail.content.Branch[i][
               "String.CircuitID"
             ],
