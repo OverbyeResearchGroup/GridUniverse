@@ -15,7 +15,9 @@ module.exports = {
     'vuetify'
   ],
   chainWebpack: config => {
-    config.plugin("loadshReplace").use(new LodashModuleReplacementPlugin());
+    config.plugin("loadshReplace").use(new LodashModuleReplacementPlugin({
+      'shorthands': true
+    }));
     config.module
       .rule('images')
       .use('image-webpack-loader')
