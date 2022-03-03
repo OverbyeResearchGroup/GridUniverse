@@ -1,3 +1,4 @@
+
 from eventlet import wsgi, listen
 from eventlet.queue import Queue
 
@@ -10,6 +11,7 @@ from msgpack import dumps
 
 from socketio import Server, WSGIApp
 from powerworldDS_eventlet import PowerWorldDS
+
 
 print("DS Client is loading ...", flush=True)
 
@@ -35,12 +37,13 @@ print(f"Connecting to {ip}:{port}")
 
 sio = Server(async_mode='eventlet', cors_allowed_origins='*')
 app = WSGIApp(sio)
-
+sock = listen(('', int(server_port)))
 queue = Queue(100)
 
 topic_prefix = "S000"
 
 clients = {}
+online = []
 room = "webrtc"
 
 
@@ -49,13 +52,23 @@ def connect(sid, environ):
     print('connect ', sid)
     clients[sid] = {}
     clients[sid]["status"] = "Connected"
+    if sid not in online:
+        online.append(sid)
     sio.emit('OK', dumps({"status": "connected"}), room=sid)
 
 
 @sio.event
 def disconnect(sid):
+    global sock
     print('disconnect ', sid)
     clients[sid]["status"] = "Disconnected"
+    try:
+        online.remove(sid)
+    except ValueError:
+        pass
+    if len(online) == 0:
+        print("No active connection!")
+        sock.close()
 
 
 @sio.on('*')
@@ -466,6 +479,7 @@ def background_work(ip, port, sio, queue):
 
 
 def main():
+    global sock, app
     clientname = 'electron' + '{:03}'.format(randrange(1, 10 ** 3))
 
     # Set up the zmq publishers
@@ -485,7 +499,10 @@ def main():
     # sio.start_background_task(target=periodic_job)
 
     # app.run(port=9999, debug=True)
-    wsgi.server(listen(('', int(server_port))), app)
+    try:
+        wsgi.server(sock, app, socket_timeout=2)
+    except OSError:
+        print("wsgi server exited")
     # wsgi.server(wrap_ssl(listen(('', int(server_port))),
     #                      certfile='80053852_tauri.cert',
     #                      keyfile='80053852_tauri.key',
