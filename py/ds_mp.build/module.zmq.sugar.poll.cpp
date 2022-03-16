@@ -1,5 +1,5 @@
 /* Generated code for Python module 'zmq.sugar.poll'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_zmq$sugar$poll;
 PyDictObject *moduledict_zmq$sugar$poll;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[89];
+static PyObject *mod_consts[88];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[89];
+static Py_hash_t mod_consts_hash[88];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 89; i++) {
+        for(int i = 0; i < 88; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_zmq$sugar$poll(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 89; i++) {
+    for(int i = 0; i < 88; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -89,16 +89,16 @@ static PyCodeObject *codeobj_9138efe39efad4bc0647e68f6a48a90e;
 static PyCodeObject *codeobj_98795a220305e43b24fe20327aeef66d;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[79]); CHECK_OBJECT(module_filename_obj);
-    codeobj_cbba7c7bb8a8d1d051ae4406a52b722b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[80], NULL, NULL, 0, 0, 0);
-    codeobj_6127353abb1ea66e43a6343ef0c33783 = MAKE_CODEOBJECT(module_filename_obj, 17, CO_NOFREE, mod_consts[61], mod_consts[81], NULL, 0, 0, 0);
-    codeobj_305d45facda0229df51ddcb03d98f119 = MAKE_CODEOBJECT(module_filename_obj, 27, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[82], NULL, 2, 0, 0);
-    codeobj_46352a79716aa80e79218df5f427dcdd = MAKE_CODEOBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[83], NULL, 1, 0, 0);
-    codeobj_4610d227f40e251b79b150bd8754b9c8 = MAKE_CODEOBJECT(module_filename_obj, 61, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[84], NULL, 3, 0, 0);
-    codeobj_d1620bbf8941a20979fd64a8ff39d98c = MAKE_CODEOBJECT(module_filename_obj, 79, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[74], mod_consts[85], NULL, 2, 0, 0);
-    codeobj_4ccea769d7effbf6ecf3a995c3bfb674 = MAKE_CODEOBJECT(module_filename_obj, 30, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[5], mod_consts[86], NULL, 3, 0, 0);
-    codeobj_9138efe39efad4bc0647e68f6a48a90e = MAKE_CODEOBJECT(module_filename_obj, 108, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[87], NULL, 4, 0, 0);
-    codeobj_98795a220305e43b24fe20327aeef66d = MAKE_CODEOBJECT(module_filename_obj, 65, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[88], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[77]); CHECK_OBJECT(module_filename_obj);
+    codeobj_cbba7c7bb8a8d1d051ae4406a52b722b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[78], NULL, NULL, 0, 0, 0);
+    codeobj_6127353abb1ea66e43a6343ef0c33783 = MAKE_CODEOBJECT(module_filename_obj, 17, CO_NOFREE, mod_consts[59], mod_consts[79], NULL, 0, 0, 0);
+    codeobj_305d45facda0229df51ddcb03d98f119 = MAKE_CODEOBJECT(module_filename_obj, 27, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[80], NULL, 2, 0, 0);
+    codeobj_46352a79716aa80e79218df5f427dcdd = MAKE_CODEOBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[63], mod_consts[81], NULL, 1, 0, 0);
+    codeobj_4610d227f40e251b79b150bd8754b9c8 = MAKE_CODEOBJECT(module_filename_obj, 61, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[82], NULL, 3, 0, 0);
+    codeobj_d1620bbf8941a20979fd64a8ff39d98c = MAKE_CODEOBJECT(module_filename_obj, 79, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[83], NULL, 2, 0, 0);
+    codeobj_4ccea769d7effbf6ecf3a995c3bfb674 = MAKE_CODEOBJECT(module_filename_obj, 30, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[5], mod_consts[84], NULL, 3, 0, 0);
+    codeobj_9138efe39efad4bc0647e68f6a48a90e = MAKE_CODEOBJECT(module_filename_obj, 108, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[74], mod_consts[85], NULL, 4, 0, 0);
+    codeobj_98795a220305e43b24fe20327aeef66d = MAKE_CODEOBJECT(module_filename_obj, 65, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[3], mod_consts[86], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -333,15 +333,15 @@ static PyObject *impl_zmq$sugar$poll$$$function__2___contains__(struct Nuitka_Fu
 
     // Framed code:
     {
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_socket);
-        tmp_compexpr_left_1 = par_socket;
+        tmp_cmp_expr_left_1 = par_socket;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -351,8 +351,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__2___contains__(struct Nuitka_Fu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -537,15 +537,15 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     branch_yes_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_socket);
-        tmp_compexpr_left_1 = par_socket;
+        tmp_cmp_expr_left_1 = par_socket;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -555,8 +555,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -577,13 +577,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[1]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[1]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -594,9 +594,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_socket);
-        tmp_subscript_name_1 = par_socket;
-        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = par_socket;
+        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -614,7 +614,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(par_socket);
         tmp_tuple_element_1 = par_socket;
@@ -624,8 +624,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
         tmp_tuple_element_1 = par_flags;
         PyTuple_SET_ITEM0(tmp_ass_subvalue_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[0]);
+        tmp_expression_value_4 = par_self;
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[0]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -657,10 +657,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_len_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[0]);
+        tmp_expression_value_5 = par_self;
+        tmp_len_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[0]);
         if (tmp_len_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -688,13 +688,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_tuple_element_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[0]);
+        tmp_expression_value_6 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[0]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -707,15 +707,15 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
         }
         CHECK_OBJECT(par_socket);
         tmp_tuple_element_2 = par_socket;
-        tmp_args_element_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 0, tmp_tuple_element_2);
+        tmp_args_element_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(par_flags);
         tmp_tuple_element_2 = par_flags;
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 1, tmp_tuple_element_2);
         frame_4ccea769d7effbf6ecf3a995c3bfb674->m_frame.f_lineno = 52;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[2], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[2], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -731,13 +731,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_ass_subscript_2;
         CHECK_OBJECT(var_idx);
         tmp_ass_subvalue_2 = var_idx;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[1]);
+        tmp_expression_value_7 = par_self;
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[1]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -768,15 +768,15 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     branch_no_1:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(par_socket);
-        tmp_compexpr_left_2 = par_socket;
+        tmp_cmp_expr_left_2 = par_socket;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[1]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_expression_value_8 = par_self;
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[1]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -786,8 +786,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_2, tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -809,13 +809,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__3_register(struct Nuitka_Functi
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_socket);
-        tmp_args_element_name_2 = par_socket;
+        tmp_args_element_value_2 = par_socket;
         frame_4ccea769d7effbf6ecf3a995c3bfb674->m_frame.f_lineno = 56;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[3], tmp_args_element_name_2);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[3], tmp_args_element_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -997,17 +997,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__4_modify(struct Nuitka_Function
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_socket);
-        tmp_args_element_name_1 = par_socket;
+        tmp_args_element_value_1 = par_socket;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_2 = par_flags;
+        tmp_args_element_value_2 = par_flags;
         frame_4610d227f40e251b79b150bd8754b9c8->m_frame.f_lineno = 63;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
                 mod_consts[5],
@@ -1196,13 +1196,26 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[1]);
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 73;
+            type_description_1 = "oooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1213,10 +1226,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_socket);
-        tmp_args_element_name_1 = par_socket;
+        tmp_args_element_value_1 = par_socket;
         frame_98795a220305e43b24fe20327aeef66d->m_frame.f_lineno = 73;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[7], tmp_args_element_name_1);
-        Py_DECREF(tmp_called_instance_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1231,14 +1244,27 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
         var_idx = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[0]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[0]);
+        if (tmp_expression_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 74;
+            type_description_1 = "oooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[7]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1249,10 +1275,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_idx);
-        tmp_args_element_name_2 = var_idx;
+        tmp_args_element_value_2 = var_idx;
         frame_98795a220305e43b24fe20327aeef66d->m_frame.f_lineno = 74;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[7], tmp_args_element_name_2);
-        Py_DECREF(tmp_called_instance_2);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1268,15 +1294,15 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_start_name_1;
-        PyObject *tmp_stop_name_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_start_value_1;
+        PyObject *tmp_stop_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[0]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[0]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1287,13 +1313,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_idx);
-        tmp_start_name_1 = var_idx;
-        tmp_stop_name_1 = Py_None;
-        tmp_subscript_name_1 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_iter_arg_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_3);
-        Py_DECREF(tmp_subscript_name_1);
+        tmp_start_value_1 = var_idx;
+        tmp_stop_value_1 = Py_None;
+        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_iter_arg_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_5);
+        Py_DECREF(tmp_subscript_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1549,7 +1575,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
 
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_7;
         if (par_self == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[9]);
@@ -1562,8 +1588,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = par_self;
-        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[1]);
+        tmp_expression_value_7 = par_self;
+        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[1]);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1596,13 +1622,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
     // Tried code:
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_subscript_value_2;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_6 = tmp_inplace_assign_subscr_1__target;
+        tmp_expression_value_8 = tmp_inplace_assign_subscr_1__target;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_2 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_2);
+        tmp_subscript_value_2 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_2);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1622,12 +1648,12 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_subscr_1__value;
-        tmp_right_name_1 = mod_consts[10];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_subscr_1__value;
+        tmp_right_value_1 = mod_consts[10];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1638,7 +1664,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__5_unregister(struct Nuitka_Func
             type_description_1 = "oooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_12 = tmp_left_name_1;
+        tmp_assign_source_12 = tmp_left_value_1;
         tmp_inplace_assign_subscr_1__value = tmp_assign_source_12;
 
     }
@@ -1919,16 +1945,14 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_or_right_value_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_timeout);
-        tmp_compexpr_left_1 = par_timeout;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_or_left_value_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_cmp_expr_left_1 = par_timeout;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_or_left_value_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         tmp_or_left_truth_1 = tmp_or_left_value_1 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_or_left_truth_1 == 1) {
             goto or_left_1;
@@ -1937,10 +1961,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
         }
         or_right_1:;
         CHECK_OBJECT(par_timeout);
-        tmp_compexpr_left_2 = par_timeout;
-        tmp_compexpr_right_2 = mod_consts[12];
-        tmp_tmp_or_right_value_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_or_right_value_1_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_timeout;
+        tmp_cmp_expr_right_2 = mod_consts[12];
+        tmp_or_right_value_1 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1950,19 +1974,6 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_or_right_value_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_or_right_value_1_object_1);
-
-            exception_lineno = 101;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_or_right_value_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_or_right_value_1_object_1);
         tmp_condition_result_1 = tmp_or_right_value_1;
         goto or_end_1;
         or_left_1:;
@@ -1973,6 +1984,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -1996,7 +2008,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
         CHECK_OBJECT(par_timeout);
         tmp_isinstance_inst_1 = par_timeout;
         tmp_isinstance_cls_1 = (PyObject *)&PyFloat_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2042,17 +2054,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
     branch_no_2:;
     branch_end_1:;
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_kw_call_dict_value_0_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[14]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[14]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2063,8 +2075,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[0]);
+        tmp_expression_value_1 = par_self;
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[0]);
         if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2092,7 +2104,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__6_poll(struct Nuitka_FunctionOb
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[16]);
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[16]);
         }
 
         Py_DECREF(tmp_kw_call_arg_value_0_1);
@@ -2291,12 +2303,12 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     // Actual function body.
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_timeout);
-        tmp_compexpr_left_1 = par_timeout;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_timeout;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -2348,12 +2360,12 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_int_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(par_timeout);
-        tmp_left_name_1 = par_timeout;
-        tmp_right_name_1 = mod_consts[18];
-        tmp_int_arg_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_FLOAT(tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = par_timeout;
+        tmp_right_value_1 = mod_consts[18];
+        tmp_int_arg_1 = BINARY_OPERATION_MULT_OBJECT_OBJECT_FLOAT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_int_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2386,15 +2398,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_timeout);
-        tmp_compexpr_left_2 = par_timeout;
-        tmp_compexpr_right_2 = mod_consts[12];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_timeout;
+        tmp_cmp_expr_right_2 = mod_consts[12];
+        tmp_condition_result_2 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2404,24 +2414,12 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 137;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
@@ -2447,16 +2445,16 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         PyObject *tmp_assign_source_5;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_set_arg_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_right_value_3;
         CHECK_OBJECT(par_rlist);
-        tmp_left_name_3 = par_rlist;
+        tmp_left_value_3 = par_rlist;
         CHECK_OBJECT(par_wlist);
-        tmp_right_name_2 = par_wlist;
-        tmp_left_name_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_2);
-        if (tmp_left_name_2 == NULL) {
+        tmp_right_value_2 = par_wlist;
+        tmp_left_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_2);
+        if (tmp_left_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2467,9 +2465,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_xlist);
-        tmp_right_name_3 = par_xlist;
-        tmp_set_arg_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_3);
-        Py_DECREF(tmp_left_name_2);
+        tmp_right_value_3 = par_xlist;
+        tmp_set_arg_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_3);
+        Py_DECREF(tmp_left_value_2);
         if (tmp_set_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2492,18 +2490,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_5 = MAKE_ITERATOR(tmp_iter_arg_1);
+        tmp_assign_source_5 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_1);
         Py_DECREF(tmp_iter_arg_1);
-        if (tmp_assign_source_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 140;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
+        assert(!(tmp_assign_source_5 == NULL));
         assert(tmp_for_loop_1__for_iterator == NULL);
         tmp_for_loop_1__for_iterator = tmp_assign_source_5;
     }
@@ -2560,24 +2549,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_s);
-        tmp_compexpr_left_3 = var_s;
-        if (par_rlist == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 142;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_3 = par_rlist;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
+        tmp_cmp_expr_left_3 = var_s;
+        CHECK_OBJECT(par_rlist);
+        tmp_cmp_expr_right_3 = par_rlist;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2598,17 +2576,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_4 = var_flags;
-        tmp_right_name_4 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
+        tmp_left_value_4 = var_flags;
+        tmp_right_value_4 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[19]);
 
-        if (unlikely(tmp_right_name_4 == NULL)) {
-            tmp_right_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+        if (unlikely(tmp_right_value_4 == NULL)) {
+            tmp_right_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
-        if (tmp_right_name_4 == NULL) {
+        if (tmp_right_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2618,7 +2596,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_result = BINARY_OPERATION_BITOR_LONG_OBJECT_INPLACE(&tmp_left_name_4, tmp_right_name_4);
+        tmp_result = BINARY_OPERATION_BITOR_LONG_OBJECT_INPLACE(&tmp_left_value_4, tmp_right_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2629,31 +2607,20 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_9 = tmp_left_name_4;
+        tmp_assign_source_9 = tmp_left_value_4;
         var_flags = tmp_assign_source_9;
 
     }
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(var_s);
-        tmp_compexpr_left_4 = var_s;
-        if (par_wlist == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 144;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_4 = par_wlist;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
+        tmp_cmp_expr_left_4 = var_s;
+        CHECK_OBJECT(par_wlist);
+        tmp_cmp_expr_right_4 = par_wlist;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2674,17 +2641,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_5 = var_flags;
-        tmp_right_name_5 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
+        tmp_left_value_5 = var_flags;
+        tmp_right_value_5 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_right_name_5 == NULL)) {
-            tmp_right_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+        if (unlikely(tmp_right_value_5 == NULL)) {
+            tmp_right_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        if (tmp_right_name_5 == NULL) {
+        if (tmp_right_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2694,7 +2661,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_name_5, tmp_right_name_5);
+        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_value_5, tmp_right_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2705,31 +2672,20 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_10 = tmp_left_name_5;
+        tmp_assign_source_10 = tmp_left_value_5;
         var_flags = tmp_assign_source_10;
 
     }
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         CHECK_OBJECT(var_s);
-        tmp_compexpr_left_5 = var_s;
-        if (par_xlist == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 146;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_5 = par_xlist;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
+        tmp_cmp_expr_left_5 = var_s;
+        CHECK_OBJECT(par_xlist);
+        tmp_cmp_expr_right_5 = par_xlist;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2750,11 +2706,11 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     branch_yes_5:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
         if (var_flags == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2764,14 +2720,14 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_2;
         }
 
-        tmp_left_name_6 = var_flags;
-        tmp_right_name_6 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[25]);
+        tmp_left_value_6 = var_flags;
+        tmp_right_value_6 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
 
-        if (unlikely(tmp_right_name_6 == NULL)) {
-            tmp_right_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+        if (unlikely(tmp_right_value_6 == NULL)) {
+            tmp_right_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
         }
 
-        if (tmp_right_name_6 == NULL) {
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2781,7 +2737,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_name_6, tmp_right_name_6);
+        tmp_result = BINARY_OPERATION_BITOR_OBJECT_OBJECT_INPLACE(&tmp_left_value_6, tmp_right_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2792,16 +2748,16 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_11 = tmp_left_name_6;
+        tmp_assign_source_11 = tmp_left_value_6;
         var_flags = tmp_assign_source_11;
 
     }
     branch_no_5:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_tuple_element_1;
         if (var_sockets == NULL) {
 
@@ -2815,9 +2771,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_1 = var_sockets;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[2]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = var_sockets;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2829,11 +2785,11 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         }
         CHECK_OBJECT(var_s);
         tmp_tuple_element_1 = var_s;
-        tmp_args_element_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 0, tmp_tuple_element_1);
+        tmp_args_element_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 0, tmp_tuple_element_1);
         if (var_flags == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[24]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2844,19 +2800,19 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         }
 
         tmp_tuple_element_1 = var_flags;
-        PyTuple_SET_ITEM0(tmp_args_element_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_element_value_1, 1, tmp_tuple_element_1);
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         frame_9138efe39efad4bc0647e68f6a48a90e->m_frame.f_lineno = 148;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2914,16 +2870,16 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[14]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[14]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2945,13 +2901,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = var_sockets;
+        tmp_args_element_value_2 = var_sockets;
         CHECK_OBJECT(par_timeout);
-        tmp_args_element_name_3 = par_timeout;
+        tmp_args_element_value_3 = par_timeout;
         frame_9138efe39efad4bc0647e68f6a48a90e->m_frame.f_lineno = 149;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_assign_source_12 == NULL) {
@@ -2970,7 +2926,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     {
         PyObject *tmp_assign_source_13;
         PyObject *tmp_iter_arg_2;
-        tmp_iter_arg_2 = DEEP_COPY_TUPLE(mod_consts[26]);
+        tmp_iter_arg_2 = DEEP_COPY_TUPLE(mod_consts[23]);
         tmp_assign_source_13 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_2);
         Py_DECREF(tmp_iter_arg_2);
         assert(!(tmp_assign_source_13 == NULL));
@@ -3065,7 +3021,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[27];
+            exception_value = mod_consts[24];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -3135,9 +3091,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         tmp_assign_source_17 = tmp_tuple_unpack_1__element_1;
         {
             PyObject *old = par_rlist;
+            assert(old != NULL);
             par_rlist = tmp_assign_source_17;
             Py_INCREF(par_rlist);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -3150,9 +3107,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         tmp_assign_source_18 = tmp_tuple_unpack_1__element_2;
         {
             PyObject *old = par_wlist;
+            assert(old != NULL);
             par_wlist = tmp_assign_source_18;
             Py_INCREF(par_wlist);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -3165,9 +3123,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         tmp_assign_source_19 = tmp_tuple_unpack_1__element_3;
         {
             PyObject *old = par_xlist;
+            assert(old != NULL);
             par_xlist = tmp_assign_source_19;
             Py_INCREF(par_xlist);
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -3423,17 +3382,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
 
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_7 = var_flags;
-        tmp_right_name_7 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
+        tmp_left_value_7 = var_flags;
+        tmp_right_value_7 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[19]);
 
-        if (unlikely(tmp_right_name_7 == NULL)) {
-            tmp_right_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+        if (unlikely(tmp_right_value_7 == NULL)) {
+            tmp_right_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
-        if (tmp_right_name_7 == NULL) {
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3443,7 +3402,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_6 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_7, tmp_right_name_7);
+        tmp_condition_result_6 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_7, tmp_right_value_7);
         if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3465,10 +3424,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (par_rlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3480,9 +3439,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
 
         tmp_called_instance_1 = par_rlist;
         CHECK_OBJECT(var_s);
-        tmp_args_element_name_4 = var_s;
+        tmp_args_element_value_4 = var_s;
         frame_9138efe39efad4bc0647e68f6a48a90e->m_frame.f_lineno = 153;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[2], tmp_args_element_name_4);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[2], tmp_args_element_value_4);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3498,17 +3457,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_8 = var_flags;
-        tmp_right_name_8 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
+        tmp_left_value_8 = var_flags;
+        tmp_right_value_8 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_right_name_8 == NULL)) {
-            tmp_right_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+        if (unlikely(tmp_right_value_8 == NULL)) {
+            tmp_right_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        if (tmp_right_name_8 == NULL) {
+        if (tmp_right_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3518,7 +3477,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_7 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_8, tmp_right_name_8);
+        tmp_condition_result_7 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_8, tmp_right_value_8);
         if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3538,13 +3497,13 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_5;
         if (par_wlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3554,9 +3513,9 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_5;
         }
 
-        tmp_expression_name_2 = par_wlist;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[2]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_2 = par_wlist;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3567,8 +3526,8 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_5;
         }
         if (var_s == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[28]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[27]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3578,10 +3537,10 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_5 = var_s;
+        tmp_args_element_value_5 = var_s;
         frame_9138efe39efad4bc0647e68f6a48a90e->m_frame.f_lineno = 155;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
-        Py_DECREF(tmp_called_name_3);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3597,17 +3556,17 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_left_name_9;
-        PyObject *tmp_right_name_9;
+        PyObject *tmp_left_value_9;
+        PyObject *tmp_right_value_9;
         CHECK_OBJECT(var_flags);
-        tmp_left_name_9 = var_flags;
-        tmp_right_name_9 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[25]);
+        tmp_left_value_9 = var_flags;
+        tmp_right_value_9 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
 
-        if (unlikely(tmp_right_name_9 == NULL)) {
-            tmp_right_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+        if (unlikely(tmp_right_value_9 == NULL)) {
+            tmp_right_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
         }
 
-        if (tmp_right_name_9 == NULL) {
+        if (tmp_right_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3617,7 +3576,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             type_description_1 = "oooooooo";
             goto try_except_handler_5;
         }
-        tmp_condition_result_8 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_name_9, tmp_right_name_9);
+        tmp_condition_result_8 = BINARY_OPERATION_BITAND_NBOOL_OBJECT_OBJECT(tmp_left_value_9, tmp_right_value_9);
         if (tmp_condition_result_8 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3637,36 +3596,12 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
     }
     branch_yes_8:;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_6;
         if (par_xlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 157;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_3 = par_xlist;
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[2]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 157;
-            type_description_1 = "oooooooo";
-            goto try_except_handler_5;
-        }
-        if (var_s == NULL) {
-            Py_DECREF(tmp_called_name_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[28]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -3677,10 +3612,34 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_6 = var_s;
+        tmp_expression_value_3 = par_xlist;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[2]);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 157;
+            type_description_1 = "oooooooo";
+            goto try_except_handler_5;
+        }
+        if (var_s == NULL) {
+            Py_DECREF(tmp_called_value_4);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[27]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 157;
+            type_description_1 = "oooooooo";
+            goto try_except_handler_5;
+        }
+
+        tmp_args_element_value_6 = var_s;
         frame_9138efe39efad4bc0647e68f6a48a90e->m_frame.f_lineno = 157;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_4);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3741,7 +3700,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         PyObject *tmp_tuple_element_2;
         if (par_rlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[19]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[25]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3756,7 +3715,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         PyTuple_SET_ITEM0(tmp_return_value, 0, tmp_tuple_element_2);
         if (par_wlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[21]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[26]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3770,7 +3729,7 @@ static PyObject *impl_zmq$sugar$poll$$$function__7_select(struct Nuitka_Function
         PyTuple_SET_ITEM0(tmp_return_value, 1, tmp_tuple_element_2);
         if (par_xlist == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[23]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[28]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -3942,9 +3901,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__1___init__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$sugar$poll$$$function__1___init__,
-        mod_consts[65],
+        mod_consts[63],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[66],
+        mod_consts[64],
 #endif
         codeobj_46352a79716aa80e79218df5f427dcdd,
         NULL,
@@ -3967,9 +3926,9 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__1___init__() {
 static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__2___contains__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$sugar$poll$$$function__2___contains__,
-        mod_consts[67],
+        mod_consts[65],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[68],
+        mod_consts[66],
 #endif
         codeobj_305d45facda0229df51ddcb03d98f119,
         NULL,
@@ -3994,7 +3953,7 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__3_register(PyObject *d
         impl_zmq$sugar$poll$$$function__3_register,
         mod_consts[5],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[69],
+        mod_consts[67],
 #endif
         codeobj_4ccea769d7effbf6ecf3a995c3bfb674,
         defaults,
@@ -4017,9 +3976,9 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__3_register(PyObject *d
 static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__4_modify(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$sugar$poll$$$function__4_modify,
-        mod_consts[70],
+        mod_consts[68],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[71],
+        mod_consts[69],
 #endif
         codeobj_4610d227f40e251b79b150bd8754b9c8,
         defaults,
@@ -4044,7 +4003,7 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__5_unregister() {
         impl_zmq$sugar$poll$$$function__5_unregister,
         mod_consts[3],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[72],
+        mod_consts[70],
 #endif
         codeobj_98795a220305e43b24fe20327aeef66d,
         NULL,
@@ -4067,9 +4026,9 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__5_unregister() {
 static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__6_poll(PyObject *defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$sugar$poll$$$function__6_poll,
-        mod_consts[74],
+        mod_consts[72],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[75],
+        mod_consts[73],
 #endif
         codeobj_d1620bbf8941a20979fd64a8ff39d98c,
         defaults,
@@ -4092,7 +4051,7 @@ static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__6_poll(PyObject *defau
 static PyObject *MAKE_FUNCTION_zmq$sugar$poll$$$function__7_select(PyObject *defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$sugar$poll$$$function__7_select,
-        mod_consts[76],
+        mod_consts[74],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4287,63 +4246,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("zmq.sugar.poll");
+
+    // Store the module for future use.
     module_zmq$sugar$poll = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.sugar.poll: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("zmq.sugar.poll: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.sugar.poll: Calling createModuleConstants().\n");
+        PRINT_STRING("zmq.sugar.poll: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.sugar.poll: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("zmq.sugar.poll: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initzmq$sugar$poll\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_zmq$sugar$poll = MODULE_DICT(module_zmq$sugar$poll);
 
@@ -4364,7 +4327,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT0(
             moduledict_zmq$sugar$poll,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[87]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)const_str_plain___name__);
@@ -4414,7 +4377,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -4575,29 +4538,10 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[37];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_zmq$sugar$poll;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[38];
-        tmp_level_name_1 = mod_consts[12];
-        frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 6;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
-        if (tmp_assign_source_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 6;
-
-            goto frame_exception_exit_1;
-        }
+        tmp_assign_source_4 = IMPORT_HARD_TYPING();
+        assert(!(tmp_assign_source_4 == NULL));
         assert(tmp_import_from_1__module == NULL);
+        Py_INCREF(tmp_assign_source_4);
         tmp_import_from_1__module = tmp_assign_source_4;
     }
     // Tried code:
@@ -4610,11 +4554,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[39],
+                mod_consts[37],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[39]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[37]);
         }
 
         if (tmp_assign_source_5 == NULL) {
@@ -4627,7 +4571,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[37], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
@@ -4638,11 +4582,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[40],
+                mod_consts[38],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[40]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[38]);
         }
 
         if (tmp_assign_source_6 == NULL) {
@@ -4655,7 +4599,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[40], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[38], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
@@ -4666,11 +4610,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[41],
+                mod_consts[39],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[41]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[39]);
         }
 
         if (tmp_assign_source_7 == NULL) {
@@ -4683,7 +4627,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
@@ -4694,11 +4638,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[42],
+                mod_consts[40],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[42]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[40]);
         }
 
         if (tmp_assign_source_8 == NULL) {
@@ -4711,7 +4655,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[40], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
@@ -4722,11 +4666,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[43],
+                mod_consts[41],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[43]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[41]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -4739,7 +4683,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
@@ -4750,11 +4694,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[44],
+                mod_consts[42],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[44]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[42]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -4767,7 +4711,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_10);
     }
     goto try_end_1;
     // Exception handler code:
@@ -4798,18 +4742,18 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     tmp_import_from_1__module = NULL;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[45];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_zmq$sugar$poll;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[12];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[43];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_zmq$sugar$poll;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[12];
         frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 8;
-        tmp_assign_source_11 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_11 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4820,23 +4764,23 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[45], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[43], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
         PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[46];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_zmq$sugar$poll;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[47];
-        tmp_level_name_3 = mod_consts[12];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[44];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_zmq$sugar$poll;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[45];
+        tmp_level_value_2 = mod_consts[12];
         frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 9;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4873,18 +4817,18 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[48];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_zmq$sugar$poll;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[49];
-        tmp_level_name_4 = mod_consts[10];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[46];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_zmq$sugar$poll;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[47];
+        tmp_level_value_3 = mod_consts[10];
         frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 10;
-        tmp_assign_source_13 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_assign_source_13 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4908,11 +4852,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[20],
+                mod_consts[19],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[20]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[19]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -4925,7 +4869,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
@@ -4936,11 +4880,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_15 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[22],
+                mod_consts[20],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[22]);
+            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[20]);
         }
 
         if (tmp_assign_source_15 == NULL) {
@@ -4953,7 +4897,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
@@ -4964,11 +4908,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_10,
                 (PyObject *)moduledict_zmq$sugar$poll,
-                mod_consts[25],
+                mod_consts[22],
                 mod_consts[12]
             );
         } else {
-            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[25]);
+            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[22]);
         }
 
         if (tmp_assign_source_16 == NULL) {
@@ -4981,7 +4925,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[25], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_16);
     }
     goto try_end_2;
     // Exception handler code:
@@ -5019,47 +4963,39 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     // Tried code:
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[50];
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[48];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[50];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 17;
-
-            goto try_except_handler_3;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[48];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
         goto condexpr_end_1;
         condexpr_false_1:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[51];
-        tmp_assign_source_18 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = mod_consts[49];
+        tmp_assign_source_18 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5074,16 +5010,16 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__metaclass = tmp_assign_source_18;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[50];
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[48];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -5092,7 +5028,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[50];
+    tmp_dictdel_key = mod_consts[48];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -5107,10 +5043,10 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[52]);
+        tmp_expression_value_1 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_1, mod_consts[50]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -5121,14 +5057,14 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_19;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_name_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_value_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[52]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[50]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5138,12 +5074,12 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_3;
         }
-        tmp_args_name_1 = mod_consts[53];
+        tmp_args_value_1 = mod_consts[51];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 17;
-        tmp_assign_source_19 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_19 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5158,14 +5094,14 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         tmp_class_creation_1__prepared = tmp_assign_source_19;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_3;
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[54]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_3 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[52]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5176,8 +5112,8 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_3;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -5187,18 +5123,18 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[55];
+        tmp_left_value_1 = mod_consts[53];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[56];
-        tmp_getattr_default_1 = mod_consts[57];
+        tmp_getattr_attr_1 = mod_consts[54];
+        tmp_getattr_default_1 = mod_consts[55];
         tmp_tuple_element_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5210,17 +5146,17 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_3;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_4;
+            PyObject *tmp_expression_value_4;
             PyObject *tmp_type_arg_1;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
-            tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
-            assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[56]);
-            Py_DECREF(tmp_expression_name_4);
+            tmp_expression_value_4 = BUILTIN_TYPE1(tmp_type_arg_1);
+            assert(!(tmp_expression_value_4 == NULL));
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[54]);
+            Py_DECREF(tmp_expression_value_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5231,17 +5167,17 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5281,8 +5217,8 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[58];
-        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[59], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[56];
+        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[57], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5293,7 +5229,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[60];
+        tmp_dictset_value = mod_consts[58];
         tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[31], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5305,8 +5241,8 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[61];
-        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[62], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[59];
+        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[60], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -5318,7 +5254,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             goto try_except_handler_5;
         }
         tmp_dictset_value = PyDict_New();
-        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[63], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[61], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5359,24 +5295,24 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         // Framed code:
         {
             PyObject *tmp_ass_subvalue_1;
-            PyObject *tmp_expression_name_5;
-            PyObject *tmp_subscript_name_1;
-            PyObject *tmp_expression_name_6;
-            PyObject *tmp_subscript_name_2;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_subscript_value_1;
+            PyObject *tmp_expression_value_6;
+            PyObject *tmp_subscript_value_2;
             PyObject *tmp_tuple_element_2;
             PyObject *tmp_ass_subscribed_1;
             PyObject *tmp_ass_subscript_1;
-            tmp_expression_name_5 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[41]);
+            tmp_expression_value_5 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[39]);
 
-            if (tmp_expression_name_5 == NULL) {
+            if (tmp_expression_value_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41]);
+                    tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39]);
 
-                    if (unlikely(tmp_expression_name_5 == NULL)) {
-                        tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+                    if (unlikely(tmp_expression_value_5 == NULL)) {
+                        tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
                     }
 
-                    if (tmp_expression_name_5 == NULL) {
+                    if (tmp_expression_value_5 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5386,54 +5322,54 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_5);
+                    Py_INCREF(tmp_expression_value_5);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_expression_name_6 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[43]);
+            tmp_expression_value_6 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[41]);
 
-            if (tmp_expression_name_6 == NULL) {
+            if (tmp_expression_value_6 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[43]);
+                    tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41]);
 
-                    if (unlikely(tmp_expression_name_6 == NULL)) {
-                        tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[43]);
+                    if (unlikely(tmp_expression_value_6 == NULL)) {
+                        tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
                     }
 
-                    if (tmp_expression_name_6 == NULL) {
+                    if (tmp_expression_value_6 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_expression_name_5);
+                        Py_DECREF(tmp_expression_value_5);
 
                         exception_lineno = 20;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_6);
+                    Py_INCREF(tmp_expression_value_6);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_tuple_element_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[39]);
+            tmp_tuple_element_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[37]);
 
             if (tmp_tuple_element_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39]);
+                    tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[37]);
 
                     if (unlikely(tmp_tuple_element_2 == NULL)) {
-                        tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
+                        tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[37]);
                     }
 
                     if (tmp_tuple_element_2 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_expression_name_5);
-                        Py_DECREF(tmp_expression_name_6);
+                        Py_DECREF(tmp_expression_value_5);
+                        Py_DECREF(tmp_expression_value_6);
 
                         exception_lineno = 20;
                         type_description_2 = "o";
@@ -5445,45 +5381,36 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                 }
             }
 
-            tmp_subscript_name_2 = PyTuple_New(2);
-            PyTuple_SET_ITEM(tmp_subscript_name_2, 0, tmp_tuple_element_2);
-            tmp_tuple_element_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[64]);
+            tmp_subscript_value_2 = PyTuple_New(2);
+            PyTuple_SET_ITEM(tmp_subscript_value_2, 0, tmp_tuple_element_2);
+            tmp_tuple_element_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[62]);
 
             if (tmp_tuple_element_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
                     tmp_tuple_element_2 = (PyObject *)&PyLong_Type;
                     Py_INCREF(tmp_tuple_element_2);
                 } else {
-                    goto tuple_build_exception_2;
+                    goto frame_exception_exit_2;
                 }
             }
 
-            PyTuple_SET_ITEM(tmp_subscript_name_2, 1, tmp_tuple_element_2);
-            goto tuple_build_noexception_2;
-            // Exception handling pass through code for tuple_build:
-            tuple_build_exception_2:;
-            Py_DECREF(tmp_expression_name_5);
-            Py_DECREF(tmp_expression_name_6);
-            Py_DECREF(tmp_subscript_name_2);
-            goto frame_exception_exit_2;
-            // Finished with no exception for tuple_build:
-            tuple_build_noexception_2:;
-            tmp_subscript_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_2);
-            Py_DECREF(tmp_expression_name_6);
-            Py_DECREF(tmp_subscript_name_2);
-            if (tmp_subscript_name_1 == NULL) {
+            PyTuple_SET_ITEM(tmp_subscript_value_2, 1, tmp_tuple_element_2);
+            tmp_subscript_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_6, tmp_subscript_value_2);
+            Py_DECREF(tmp_expression_value_6);
+            Py_DECREF(tmp_subscript_value_2);
+            if (tmp_subscript_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_expression_name_5);
+                Py_DECREF(tmp_expression_value_5);
 
                 exception_lineno = 20;
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_ass_subvalue_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_1);
-            Py_DECREF(tmp_expression_name_5);
-            Py_DECREF(tmp_subscript_name_1);
+            tmp_ass_subvalue_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_1);
+            Py_DECREF(tmp_expression_value_5);
+            Py_DECREF(tmp_subscript_value_1);
             if (tmp_ass_subvalue_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5494,11 +5421,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_ass_subscribed_1 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[63]);
+            tmp_ass_subscribed_1 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[61]);
 
             if (unlikely(tmp_ass_subscribed_1 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
                 Py_DECREF(tmp_ass_subvalue_1);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[63]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[61]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -5536,14 +5463,14 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             PyObject *tmp_ass_subvalue_2;
             PyObject *tmp_ass_subscribed_2;
             PyObject *tmp_ass_subscript_2;
-            tmp_ass_subvalue_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[40]);
+            tmp_ass_subvalue_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[38]);
 
             if (tmp_ass_subvalue_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_ass_subvalue_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[40]);
+                    tmp_ass_subvalue_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[38]);
 
                     if (unlikely(tmp_ass_subvalue_2 == NULL)) {
-                        tmp_ass_subvalue_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
+                        tmp_ass_subvalue_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
                     }
 
                     if (tmp_ass_subvalue_2 == NULL) {
@@ -5562,11 +5489,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                 }
             }
 
-            tmp_ass_subscribed_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[63]);
+            tmp_ass_subscribed_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[61]);
 
             if (unlikely(tmp_ass_subscribed_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
                 Py_DECREF(tmp_ass_subvalue_2);
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[63]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[61]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -5604,7 +5531,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_zmq$sugar$poll$$$function__1___init__();
 
-        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[65], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[63], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5620,7 +5547,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_dictset_value = MAKE_FUNCTION_zmq$sugar$poll$$$function__2___contains__();
 
-        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[67], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[65], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -5635,22 +5562,22 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         {
             PyObject *tmp_defaults_1;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_left_name_2;
-            PyObject *tmp_right_name_2;
+            PyObject *tmp_left_value_2;
+            PyObject *tmp_right_value_2;
             PyObject *tmp_annotations_1;
             PyObject *tmp_dict_key_1;
             PyObject *tmp_dict_value_1;
-            tmp_left_name_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[20]);
+            tmp_left_value_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[19]);
 
-            if (tmp_left_name_2 == NULL) {
+            if (tmp_left_value_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_left_name_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
+                    tmp_left_value_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[19]);
 
-                    if (unlikely(tmp_left_name_2 == NULL)) {
-                        tmp_left_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+                    if (unlikely(tmp_left_value_2 == NULL)) {
+                        tmp_left_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
                     }
 
-                    if (tmp_left_name_2 == NULL) {
+                    if (tmp_left_value_2 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5660,41 +5587,41 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_left_name_2);
+                    Py_INCREF(tmp_left_value_2);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_right_name_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[22]);
+            tmp_right_value_2 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[20]);
 
-            if (tmp_right_name_2 == NULL) {
+            if (tmp_right_value_2 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_right_name_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
+                    tmp_right_value_2 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
 
-                    if (unlikely(tmp_right_name_2 == NULL)) {
-                        tmp_right_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+                    if (unlikely(tmp_right_value_2 == NULL)) {
+                        tmp_right_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
                     }
 
-                    if (tmp_right_name_2 == NULL) {
+                    if (tmp_right_value_2 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_left_name_2);
+                        Py_DECREF(tmp_left_value_2);
 
                         exception_lineno = 30;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_right_name_2);
+                    Py_INCREF(tmp_right_value_2);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_tuple_element_3 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-            Py_DECREF(tmp_left_name_2);
-            Py_DECREF(tmp_right_name_2);
+            tmp_tuple_element_3 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+            Py_DECREF(tmp_left_value_2);
+            Py_DECREF(tmp_right_value_2);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5707,8 +5634,8 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             }
             tmp_defaults_1 = PyTuple_New(1);
             PyTuple_SET_ITEM(tmp_defaults_1, 0, tmp_tuple_element_3);
-            tmp_dict_key_1 = mod_consts[24];
-            tmp_dict_value_1 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[64]);
+            tmp_dict_key_1 = mod_consts[21];
+            tmp_dict_value_1 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[62]);
 
             if (tmp_dict_value_1 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
@@ -5743,19 +5670,19 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         {
             PyObject *tmp_defaults_2;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_left_name_3;
-            PyObject *tmp_right_name_3;
-            tmp_left_name_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[20]);
+            PyObject *tmp_left_value_3;
+            PyObject *tmp_right_value_3;
+            tmp_left_value_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[19]);
 
-            if (tmp_left_name_3 == NULL) {
+            if (tmp_left_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_left_name_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
+                    tmp_left_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[19]);
 
-                    if (unlikely(tmp_left_name_3 == NULL)) {
-                        tmp_left_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
+                    if (unlikely(tmp_left_value_3 == NULL)) {
+                        tmp_left_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
                     }
 
-                    if (tmp_left_name_3 == NULL) {
+                    if (tmp_left_value_3 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5765,41 +5692,41 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_left_name_3);
+                    Py_INCREF(tmp_left_value_3);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_right_name_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[22]);
+            tmp_right_value_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[20]);
 
-            if (tmp_right_name_3 == NULL) {
+            if (tmp_right_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_right_name_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[22]);
+                    tmp_right_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[20]);
 
-                    if (unlikely(tmp_right_name_3 == NULL)) {
-                        tmp_right_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[22]);
+                    if (unlikely(tmp_right_value_3 == NULL)) {
+                        tmp_right_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
                     }
 
-                    if (tmp_right_name_3 == NULL) {
+                    if (tmp_right_value_3 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_left_name_3);
+                        Py_DECREF(tmp_left_value_3);
 
                         exception_lineno = 61;
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_right_name_3);
+                    Py_INCREF(tmp_right_value_3);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_tuple_element_4 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_name_3, tmp_right_name_3);
-            Py_DECREF(tmp_left_name_3);
-            Py_DECREF(tmp_right_name_3);
+            tmp_tuple_element_4 = BINARY_OPERATION_BITOR_OBJECT_OBJECT_OBJECT(tmp_left_value_3, tmp_right_value_3);
+            Py_DECREF(tmp_left_value_3);
+            Py_DECREF(tmp_right_value_3);
             if (tmp_tuple_element_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5816,7 +5743,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             tmp_dictset_value = MAKE_FUNCTION_zmq$sugar$poll$$$function__4_modify(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[70], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[68], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -5850,21 +5777,21 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             PyObject *tmp_annotations_2;
             PyObject *tmp_dict_key_2;
             PyObject *tmp_dict_value_2;
-            PyObject *tmp_expression_name_7;
-            PyObject *tmp_subscript_name_3;
-            tmp_defaults_3 = mod_consts[73];
+            PyObject *tmp_expression_value_7;
+            PyObject *tmp_subscript_value_3;
+            tmp_defaults_3 = mod_consts[71];
             tmp_dict_key_2 = mod_consts[15];
-            tmp_expression_name_7 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[42]);
+            tmp_expression_value_7 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[40]);
 
-            if (tmp_expression_name_7 == NULL) {
+            if (tmp_expression_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[42]);
+                    tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[40]);
 
-                    if (unlikely(tmp_expression_name_7 == NULL)) {
-                        tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
+                    if (unlikely(tmp_expression_value_7 == NULL)) {
+                        tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
                     }
 
-                    if (tmp_expression_name_7 == NULL) {
+                    if (tmp_expression_value_7 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5874,26 +5801,26 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
                         type_description_2 = "o";
                         goto frame_exception_exit_2;
                     }
-                    Py_INCREF(tmp_expression_name_7);
+                    Py_INCREF(tmp_expression_value_7);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_subscript_name_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[64]);
+            tmp_subscript_value_3 = PyObject_GetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[62]);
 
-            if (tmp_subscript_name_3 == NULL) {
+            if (tmp_subscript_value_3 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_subscript_name_3 = (PyObject *)&PyLong_Type;
-                    Py_INCREF(tmp_subscript_name_3);
+                    tmp_subscript_value_3 = (PyObject *)&PyLong_Type;
+                    Py_INCREF(tmp_subscript_value_3);
                 } else {
                     goto frame_exception_exit_2;
                 }
             }
 
-            tmp_dict_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_3);
-            Py_DECREF(tmp_expression_name_7);
-            Py_DECREF(tmp_subscript_name_3);
+            tmp_dict_value_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_3);
+            Py_DECREF(tmp_expression_value_7);
+            Py_DECREF(tmp_subscript_value_3);
             if (tmp_dict_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5913,7 +5840,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
             tmp_dictset_value = MAKE_FUNCTION_zmq$sugar$poll$$$function__6_poll(tmp_defaults_3, tmp_annotations_2);
 
-            tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[74], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_zmq$sugar$poll$$$class__1_Poller_17, mod_consts[72], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -5983,24 +5910,24 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         skip_nested_handling_1:;
         {
             PyObject *tmp_assign_source_22;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_5;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_5 = mod_consts[61];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_5);
-            tmp_tuple_element_5 = mod_consts[51];
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_5);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_5 = mod_consts[59];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_5);
+            tmp_tuple_element_5 = mod_consts[49];
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_5);
             tmp_tuple_element_5 = locals_zmq$sugar$poll$$$class__1_Poller_17;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_5);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_cbba7c7bb8a8d1d051ae4406a52b722b->m_frame.f_lineno = 17;
-            tmp_assign_source_22 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_22 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_22 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6079,7 +6006,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         exception_lineno = 17;
         goto try_except_handler_3;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_21);
     }
     goto try_end_3;
     // Exception handler code:
@@ -6093,9 +6020,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     Py_XDECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
@@ -6108,9 +6037,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     goto frame_exception_exit_1;
     // End of try:
     try_end_3:;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -6121,12 +6052,12 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_annotations_3;
         PyObject *tmp_dict_key_3;
         PyObject *tmp_dict_value_3;
-        tmp_defaults_4 = mod_consts[73];
-        tmp_dict_key_3 = mod_consts[19];
-        tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41]);
+        tmp_defaults_4 = mod_consts[71];
+        tmp_dict_key_3 = mod_consts[25];
+        tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39]);
 
         if (unlikely(tmp_dict_value_3 == NULL)) {
-            tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+            tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
         if (tmp_dict_value_3 == NULL) {
@@ -6141,15 +6072,15 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
         }
         tmp_annotations_3 = _PyDict_NewPresized( 4 );
         {
-            PyObject *tmp_expression_name_8;
-            PyObject *tmp_subscript_name_4;
+            PyObject *tmp_expression_value_8;
+            PyObject *tmp_subscript_value_4;
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[21];
-            tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41]);
+            tmp_dict_key_3 = mod_consts[26];
+            tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39]);
 
             if (unlikely(tmp_dict_value_3 == NULL)) {
-                tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+                tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
             }
 
             if (tmp_dict_value_3 == NULL) {
@@ -6164,11 +6095,11 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             }
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
-            tmp_dict_key_3 = mod_consts[23];
-            tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[41]);
+            tmp_dict_key_3 = mod_consts[28];
+            tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[39]);
 
             if (unlikely(tmp_dict_value_3 == NULL)) {
-                tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
+                tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
             }
 
             if (tmp_dict_value_3 == NULL) {
@@ -6184,13 +6115,13 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_3, tmp_dict_value_3);
             assert(!(tmp_res != 0));
             tmp_dict_key_3 = mod_consts[15];
-            tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[42]);
+            tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[40]);
 
-            if (unlikely(tmp_expression_name_8 == NULL)) {
-                tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
+            if (unlikely(tmp_expression_value_8 == NULL)) {
+                tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[40]);
             }
 
-            if (tmp_expression_name_8 == NULL) {
+            if (tmp_expression_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6200,8 +6131,8 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
                 goto dict_build_exception_1;
             }
-            tmp_subscript_name_4 = (PyObject *)&PyLong_Type;
-            tmp_dict_value_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_4);
+            tmp_subscript_value_4 = (PyObject *)&PyLong_Type;
+            tmp_dict_value_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_4);
             if (tmp_dict_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6228,7 +6159,7 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_23 = MAKE_FUNCTION_zmq$sugar$poll$$$function__7_select(tmp_defaults_4, tmp_annotations_3);
 
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[74], tmp_assign_source_23);
     }
 
     // Restore frame exception if necessary.
@@ -6261,12 +6192,27 @@ PyObject *modulecode_zmq$sugar$poll(PyObject *module, struct Nuitka_MetaPathBase
     frame_no_exception_2:;
     {
         PyObject *tmp_assign_source_24;
-        tmp_assign_source_24 = LIST_COPY(mod_consts[77]);
-        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[78], tmp_assign_source_24);
+        tmp_assign_source_24 = LIST_COPY(mod_consts[75]);
+        UPDATE_STRING_DICT1(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_24);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("zmq.sugar.poll", false);
 
     return module_zmq$sugar$poll;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$sugar$poll, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("zmq$sugar$poll", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

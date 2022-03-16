@@ -1,5 +1,5 @@
 /* Generated code for Python module 'urllib3.contrib.pyopenssl'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_urllib3$contrib$pyopenssl;
 PyDictObject *moduledict_urllib3$contrib$pyopenssl;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[306];
+static PyObject *mod_consts[303];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[306];
+static Py_hash_t mod_consts_hash[303];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 306; i++) {
+        for(int i = 0; i < 303; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_urllib3$contrib$pyopenssl(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 306; i++) {
+    for(int i = 0; i < 303; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -121,48 +121,48 @@ static PyCodeObject *codeobj_d39a2ceb68778c63bae45a4832188a0d;
 static PyCodeObject *codeobj_d4c29602735d5a16ae59da56f2ac1fe4;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[275]); CHECK_OBJECT(module_filename_obj);
-    codeobj_e865ac717db885e66e87fcdac48f898c = MAKE_CODEOBJECT(module_filename_obj, 109, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[276], NULL, 1, 0, 0);
-    codeobj_4de9d256e19342f7b32a6c13b4f38245 = MAKE_CODEOBJECT(module_filename_obj, 261, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[277], NULL, 1, 0, 0);
-    codeobj_7364c15ae83078b219869a33533c3d8a = MAKE_CODEOBJECT(module_filename_obj, 471, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS, mod_consts[141], mod_consts[278], mod_consts[279], 0, 0, 0);
-    codeobj_bc0ebc0e34a0d367efd16eb90c7bf870 = MAKE_CODEOBJECT(module_filename_obj, 256, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[280], mod_consts[281], NULL, 1, 0, 0);
-    codeobj_833292ff8ab6d3d774ad77e976a55616 = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[280], mod_consts[282], NULL, 1, 0, 0);
-    codeobj_2f3568602c4f3e158331aa02a89bd39a = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[283], NULL, NULL, 0, 0, 0);
-    codeobj_81957acd24f455cae97c47bf33b09f7b = MAKE_CODEOBJECT(module_filename_obj, 416, CO_NOFREE, mod_consts[3], mod_consts[284], NULL, 0, 0, 0);
-    codeobj_9a7628ee5496cb5da6401b8ee2c425c4 = MAKE_CODEOBJECT(module_filename_obj, 268, CO_NOFREE, mod_consts[155], mod_consts[284], NULL, 0, 0, 0);
-    codeobj_96693693b8ff341a344bc34cf44c4ee4 = MAKE_CODEOBJECT(module_filename_obj, 275, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[230], mod_consts[285], NULL, 4, 0, 0);
-    codeobj_2872db7c05bbd4decd8b97479a1b5ab9 = MAKE_CODEOBJECT(module_filename_obj, 423, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[230], mod_consts[286], NULL, 2, 0, 0);
-    codeobj_19e3faa4272100d9c054389a00829ffe = MAKE_CODEOBJECT(module_filename_obj, 286, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[233], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_480e427b2834aab0be87398cd34470b3 = MAKE_CODEOBJECT(module_filename_obj, 171, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[57], mod_consts[288], NULL, 1, 0, 0);
-    codeobj_9b104f984591955822fb0c72e3ffb23d = MAKE_CODEOBJECT(module_filename_obj, 396, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[250], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_91f4367d641e8c192c21c89fc0779bc8 = MAKE_CODEOBJECT(module_filename_obj, 393, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[248], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_62c5dcf34ee773cef5f8c2b4eb8118bb = MAKE_CODEOBJECT(module_filename_obj, 343, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[103], mod_consts[289], NULL, 2, 0, 0);
-    codeobj_8f58df149d59afdf0ed0bb6e4d17d74c = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[290], NULL, 0, 0, 0);
-    codeobj_b553a6cee2c5b94270e48b91d137c33d = MAKE_CODEOBJECT(module_filename_obj, 510, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[291], NULL, 5, 0, 0);
-    codeobj_06ff57439f6c5921bda1e5b70b28ce7a = MAKE_CODEOBJECT(module_filename_obj, 366, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[73], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_278f7fca0825cf755a5eb1a53a79d0e5 = MAKE_CODEOBJECT(module_filename_obj, 134, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[226], NULL, NULL, 0, 0, 0);
-    codeobj_e76110ba4c1b7663c57ad4a6fcb390ce = MAKE_CODEOBJECT(module_filename_obj, 282, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[71], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_cad77ab8d9a66cffd15c71076c60ae78 = MAKE_CODEOBJECT(module_filename_obj, 214, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[115], mod_consts[292], NULL, 1, 0, 0);
-    codeobj_2ac61c5806efd8bb02bcb284d64c2c1d = MAKE_CODEOBJECT(module_filename_obj, 376, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[244], mod_consts[293], NULL, 2, 0, 0);
-    codeobj_bf47ff33e1f189ce2f1e13e82bb3c5be = MAKE_CODEOBJECT(module_filename_obj, 185, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[26], mod_consts[294], NULL, 1, 0, 0);
-    codeobj_cd162a2da0f8ece9affe946c36098f83 = MAKE_CODEOBJECT(module_filename_obj, 121, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[225], NULL, NULL, 0, 0, 0);
-    codeobj_f8f01c8027f4cb4cf2f2fa9c65ba9c95 = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[268], mod_consts[295], NULL, 4, 0, 0);
-    codeobj_0940cdda9bf7f6258a574b7f9c1a3c85 = MAKE_CODEOBJECT(module_filename_obj, 454, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[296], NULL, 4, 0, 0);
-    codeobj_e8df877aa208daf753dd8854dd4bc189 = MAKE_CODEOBJECT(module_filename_obj, 405, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[253], mod_consts[297], NULL, 3, 0, 0);
-    codeobj_789724113356f0263fe2d137c34b26c3 = MAKE_CODEOBJECT(module_filename_obj, 430, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_c5e5dda17f479599491a55f5142b3c79 = MAKE_CODEOBJECT(module_filename_obj, 434, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[298], NULL, 2, 0, 0);
-    codeobj_64eb19571fca640a12d45e343a3371fe = MAKE_CODEOBJECT(module_filename_obj, 292, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[74], mod_consts[299], NULL, 1, 0, 0);
-    codeobj_0d13199b641e14047e3e44d8b0a45d84 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[95], mod_consts[300], NULL, 1, 0, 0);
-    codeobj_7c8d894d400ad2d1025e3ee890926af4 = MAKE_CODEOBJECT(module_filename_obj, 354, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[239], mod_consts[301], NULL, 2, 0, 0);
-    codeobj_8032fe0183f9b1929b752fb10ed9b8f6 = MAKE_CODEOBJECT(module_filename_obj, 474, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[270], mod_consts[302], NULL, 2, 0, 0);
-    codeobj_2162eeebd584d9934db486c68ccc5d52 = MAKE_CODEOBJECT(module_filename_obj, 449, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[263], mod_consts[303], NULL, 2, 0, 0);
-    codeobj_065eb212fda0cf5ea378ab648b43fccd = MAKE_CODEOBJECT(module_filename_obj, 446, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[131], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_ccc2d17660b5f7df38c565023e96b2b5 = MAKE_CODEOBJECT(module_filename_obj, 340, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[96], mod_consts[304], NULL, 2, 0, 0);
-    codeobj_0ee3a28d3757ac15b08b41e7af9563d5 = MAKE_CODEOBJECT(module_filename_obj, 362, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[105], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_4c39721523a778792c826180b400e0e7 = MAKE_CODEOBJECT(module_filename_obj, 439, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[260], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_8a42ec8e4f36e22b1d1878e55ae5ca49 = MAKE_CODEOBJECT(module_filename_obj, 443, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[260], mod_consts[298], NULL, 2, 0, 0);
-    codeobj_d39a2ceb68778c63bae45a4832188a0d = MAKE_CODEOBJECT(module_filename_obj, 390, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[246], mod_consts[287], NULL, 1, 0, 0);
-    codeobj_d4c29602735d5a16ae59da56f2ac1fe4 = MAKE_CODEOBJECT(module_filename_obj, 478, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[273], mod_consts[305], NULL, 6, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[272]); CHECK_OBJECT(module_filename_obj);
+    codeobj_e865ac717db885e66e87fcdac48f898c = MAKE_CODEOBJECT(module_filename_obj, 109, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[273], NULL, 1, 0, 0);
+    codeobj_4de9d256e19342f7b32a6c13b4f38245 = MAKE_CODEOBJECT(module_filename_obj, 261, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[1], mod_consts[274], NULL, 1, 0, 0);
+    codeobj_7364c15ae83078b219869a33533c3d8a = MAKE_CODEOBJECT(module_filename_obj, 471, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS, mod_consts[138], mod_consts[275], mod_consts[276], 0, 0, 0);
+    codeobj_bc0ebc0e34a0d367efd16eb90c7bf870 = MAKE_CODEOBJECT(module_filename_obj, 256, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[277], mod_consts[278], NULL, 1, 0, 0);
+    codeobj_833292ff8ab6d3d774ad77e976a55616 = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[277], mod_consts[279], NULL, 1, 0, 0);
+    codeobj_2f3568602c4f3e158331aa02a89bd39a = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[280], NULL, NULL, 0, 0, 0);
+    codeobj_81957acd24f455cae97c47bf33b09f7b = MAKE_CODEOBJECT(module_filename_obj, 416, CO_NOFREE, mod_consts[3], mod_consts[281], NULL, 0, 0, 0);
+    codeobj_9a7628ee5496cb5da6401b8ee2c425c4 = MAKE_CODEOBJECT(module_filename_obj, 268, CO_NOFREE, mod_consts[152], mod_consts[281], NULL, 0, 0, 0);
+    codeobj_96693693b8ff341a344bc34cf44c4ee4 = MAKE_CODEOBJECT(module_filename_obj, 275, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[227], mod_consts[282], NULL, 4, 0, 0);
+    codeobj_2872db7c05bbd4decd8b97479a1b5ab9 = MAKE_CODEOBJECT(module_filename_obj, 423, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[227], mod_consts[283], NULL, 2, 0, 0);
+    codeobj_19e3faa4272100d9c054389a00829ffe = MAKE_CODEOBJECT(module_filename_obj, 286, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[230], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_480e427b2834aab0be87398cd34470b3 = MAKE_CODEOBJECT(module_filename_obj, 171, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[54], mod_consts[285], NULL, 1, 0, 0);
+    codeobj_9b104f984591955822fb0c72e3ffb23d = MAKE_CODEOBJECT(module_filename_obj, 396, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[247], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_91f4367d641e8c192c21c89fc0779bc8 = MAKE_CODEOBJECT(module_filename_obj, 393, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[245], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_62c5dcf34ee773cef5f8c2b4eb8118bb = MAKE_CODEOBJECT(module_filename_obj, 343, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[100], mod_consts[286], NULL, 2, 0, 0);
+    codeobj_8f58df149d59afdf0ed0bb6e4d17d74c = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[2], mod_consts[287], NULL, 0, 0, 0);
+    codeobj_b553a6cee2c5b94270e48b91d137c33d = MAKE_CODEOBJECT(module_filename_obj, 510, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[127], mod_consts[288], NULL, 5, 0, 0);
+    codeobj_06ff57439f6c5921bda1e5b70b28ce7a = MAKE_CODEOBJECT(module_filename_obj, 366, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_278f7fca0825cf755a5eb1a53a79d0e5 = MAKE_CODEOBJECT(module_filename_obj, 134, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[223], NULL, NULL, 0, 0, 0);
+    codeobj_e76110ba4c1b7663c57ad4a6fcb390ce = MAKE_CODEOBJECT(module_filename_obj, 282, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_cad77ab8d9a66cffd15c71076c60ae78 = MAKE_CODEOBJECT(module_filename_obj, 214, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[289], NULL, 1, 0, 0);
+    codeobj_2ac61c5806efd8bb02bcb284d64c2c1d = MAKE_CODEOBJECT(module_filename_obj, 376, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[241], mod_consts[290], NULL, 2, 0, 0);
+    codeobj_bf47ff33e1f189ce2f1e13e82bb3c5be = MAKE_CODEOBJECT(module_filename_obj, 185, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[26], mod_consts[291], NULL, 1, 0, 0);
+    codeobj_cd162a2da0f8ece9affe946c36098f83 = MAKE_CODEOBJECT(module_filename_obj, 121, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[222], NULL, NULL, 0, 0, 0);
+    codeobj_f8f01c8027f4cb4cf2f2fa9c65ba9c95 = MAKE_CODEOBJECT(module_filename_obj, 466, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[265], mod_consts[292], NULL, 4, 0, 0);
+    codeobj_0940cdda9bf7f6258a574b7f9c1a3c85 = MAKE_CODEOBJECT(module_filename_obj, 454, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[293], NULL, 4, 0, 0);
+    codeobj_e8df877aa208daf753dd8854dd4bc189 = MAKE_CODEOBJECT(module_filename_obj, 405, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[250], mod_consts[294], NULL, 3, 0, 0);
+    codeobj_789724113356f0263fe2d137c34b26c3 = MAKE_CODEOBJECT(module_filename_obj, 430, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[254], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_c5e5dda17f479599491a55f5142b3c79 = MAKE_CODEOBJECT(module_filename_obj, 434, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[254], mod_consts[295], NULL, 2, 0, 0);
+    codeobj_64eb19571fca640a12d45e343a3371fe = MAKE_CODEOBJECT(module_filename_obj, 292, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[71], mod_consts[296], NULL, 1, 0, 0);
+    codeobj_0d13199b641e14047e3e44d8b0a45d84 = MAKE_CODEOBJECT(module_filename_obj, 317, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[92], mod_consts[297], NULL, 1, 0, 0);
+    codeobj_7c8d894d400ad2d1025e3ee890926af4 = MAKE_CODEOBJECT(module_filename_obj, 354, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[236], mod_consts[298], NULL, 2, 0, 0);
+    codeobj_8032fe0183f9b1929b752fb10ed9b8f6 = MAKE_CODEOBJECT(module_filename_obj, 474, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[267], mod_consts[299], NULL, 2, 0, 0);
+    codeobj_2162eeebd584d9934db486c68ccc5d52 = MAKE_CODEOBJECT(module_filename_obj, 449, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[260], mod_consts[300], NULL, 2, 0, 0);
+    codeobj_065eb212fda0cf5ea378ab648b43fccd = MAKE_CODEOBJECT(module_filename_obj, 446, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[128], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_ccc2d17660b5f7df38c565023e96b2b5 = MAKE_CODEOBJECT(module_filename_obj, 340, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[301], NULL, 2, 0, 0);
+    codeobj_0ee3a28d3757ac15b08b41e7af9563d5 = MAKE_CODEOBJECT(module_filename_obj, 362, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[102], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_4c39721523a778792c826180b400e0e7 = MAKE_CODEOBJECT(module_filename_obj, 439, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_8a42ec8e4f36e22b1d1878e55ae5ca49 = MAKE_CODEOBJECT(module_filename_obj, 443, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[257], mod_consts[295], NULL, 2, 0, 0);
+    codeobj_d39a2ceb68778c63bae45a4832188a0d = MAKE_CODEOBJECT(module_filename_obj, 390, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[243], mod_consts[284], NULL, 1, 0, 0);
+    codeobj_d4c29602735d5a16ae59da56f2ac1fe4 = MAKE_CODEOBJECT(module_filename_obj, 478, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[270], mod_consts[302], NULL, 6, 0, 0);
 }
 
 // The module function declarations.
@@ -629,19 +629,19 @@ static PyObject *urllib3$contrib$pyopenssl$$$genexpr__1_genexpr_context(struct N
     generator_heap->tmp_tuple_unpack_1__element_2 = NULL;
 
     {
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_tuple_element_1;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         CHECK_OBJECT(generator_heap->var_v);
         tmp_tuple_element_1 = generator_heap->var_v;
-        tmp_expression_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_expression_name_1, 0, tmp_tuple_element_1);
+        tmp_expression_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_expression_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(generator_heap->var_k);
         tmp_tuple_element_1 = generator_heap->var_k;
-        PyTuple_SET_ITEM0(tmp_expression_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_expression_value_1, 1, tmp_tuple_element_1);
         Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_1;
+        return tmp_expression_value_1;
         yield_return_1:
         Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
@@ -855,15 +855,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[2]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[2]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[2]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -874,7 +874,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
             goto frame_exception_exit_1;
         }
         frame_cd162a2da0f8ece9affe946c36098f83->m_frame.f_lineno = 124;
-        tmp_call_result_1 = CALL_FUNCTION_NO_ARGS(tmp_called_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -937,7 +937,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
     {
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         tmp_assattr_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_value_2 == NULL)) {
@@ -954,13 +954,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -970,7 +970,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[6]);
+        tmp_assattr_target_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
         if (tmp_assattr_target_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1044,7 +1044,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
     {
         PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         tmp_assattr_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[7]);
 
         if (unlikely(tmp_assattr_value_4 == NULL)) {
@@ -1061,13 +1061,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1077,7 +1077,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[6]);
+        tmp_assattr_target_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[6]);
         if (tmp_assattr_target_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1136,15 +1136,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
     {
         PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         tmp_assattr_value_6 = Py_True;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1154,7 +1154,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[6]);
+        tmp_assattr_target_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
         if (tmp_assattr_target_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1347,7 +1347,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
     {
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         tmp_assattr_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[10]);
 
         if (unlikely(tmp_assattr_value_2 == NULL)) {
@@ -1364,13 +1364,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1380,7 +1380,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[6]);
+        tmp_assattr_target_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[6]);
         if (tmp_assattr_target_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1454,7 +1454,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
     {
         PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         tmp_assattr_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[11]);
 
         if (unlikely(tmp_assattr_value_4 == NULL)) {
@@ -1471,13 +1471,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1487,7 +1487,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[6]);
+        tmp_assattr_target_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[6]);
         if (tmp_assattr_target_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1546,15 +1546,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
     {
         PyObject *tmp_assattr_value_6;
         PyObject *tmp_assattr_target_6;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         tmp_assattr_value_6 = Py_False;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1564,7 +1564,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urlli
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[6]);
+        tmp_assattr_target_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[6]);
         if (tmp_assattr_target_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1717,18 +1717,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[13];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[14];
-        tmp_level_name_1 = mod_consts[15];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[13];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[14];
+        tmp_level_value_1 = mod_consts[15];
         frame_8f58df149d59afdf0ed0bb6e4d17d74c->m_frame.f_lineno = 151;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1766,8 +1766,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
@@ -1775,8 +1775,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
         tmp_getattr_target_1 = var_Extensions;
         tmp_getattr_attr_1 = mod_consts[17];
         tmp_getattr_default_1 = Py_None;
-        tmp_compexpr_left_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1786,9 +1786,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -1813,18 +1813,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[19];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[20];
-        tmp_level_name_2 = mod_consts[15];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[19];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[20];
+        tmp_level_value_2 = mod_consts[15];
         frame_8f58df149d59afdf0ed0bb6e4d17d74c->m_frame.f_lineno = 161;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1862,11 +1862,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         CHECK_OBJECT(var_X509);
-        tmp_called_name_1 = var_X509;
+        tmp_called_value_1 = var_X509;
         frame_8f58df149d59afdf0ed0bb6e4d17d74c->m_frame.f_lineno = 163;
-        tmp_assign_source_3 = CALL_FUNCTION_NO_ARGS(tmp_called_name_1);
+        tmp_assign_source_3 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1882,8 +1882,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
@@ -1891,8 +1891,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
         tmp_getattr_target_2 = var_x509;
         tmp_getattr_attr_2 = mod_consts[22];
         tmp_getattr_default_2 = Py_None;
-        tmp_compexpr_left_2 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1902,9 +1902,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__3__validate_dependen
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -2105,12 +2105,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = mod_consts[28];
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = mod_consts[28];
         CHECK_OBJECT(par_name);
-        tmp_compexpr_right_1 = par_name;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = par_name;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2136,14 +2136,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(var_idna_encode);
-        tmp_called_name_1 = var_idna_encode;
+        tmp_called_value_1 = var_idna_encode;
         CHECK_OBJECT(par_name);
-        tmp_args_element_name_1 = par_name;
+        tmp_args_element_value_1 = par_name;
         frame_480e427b2834aab0be87398cd34470b3->m_frame.f_lineno = 206;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2164,12 +2164,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_name);
-        tmp_compexpr_left_2 = par_name;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_name;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -2183,70 +2183,26 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     goto branch_end_2;
     branch_no_2:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[29]);
-
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[29]);
-        }
-
-        if (tmp_expression_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 209;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[30]);
-        if (tmp_compexpr_left_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 209;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_right_3 = mod_consts[31];
-        tmp_condition_result_3 = RICH_COMPARE_GE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 209;
-            type_description_1 = "oo";
-            goto frame_exception_exit_1;
-        }
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_3;
-        } else {
-            goto branch_no_3;
-        }
-        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
-    }
-    branch_yes_3:;
-    {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_name);
-        tmp_called_instance_1 = par_name;
-        frame_480e427b2834aab0be87398cd34470b3->m_frame.f_lineno = 210;
-        tmp_assign_source_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[32],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_1 = par_name;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[29]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 210;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_480e427b2834aab0be87398cd34470b3->m_frame.f_lineno = 210;
+        tmp_assign_source_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2265,23 +2221,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
         }
 
     }
-    branch_no_3:;
     branch_end_2:;
-    if (par_name == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 211;
-        type_description_1 = "oo";
-        goto frame_exception_exit_1;
-    }
-
-    tmp_return_value = par_name;
-    Py_INCREF(tmp_return_value);
-    goto frame_return_exit_1;
 
 #if 0
     RESTORE_FRAME_EXCEPTION(frame_480e427b2834aab0be87398cd34470b3);
@@ -2343,13 +2283,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     goto try_except_handler_1;
 
     frame_no_exception_1:;
+    CHECK_OBJECT(par_name);
+    tmp_return_value = par_name;
+    Py_INCREF(tmp_return_value);
+    goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Return handler code:
     try_return_handler_1:;
     Py_XDECREF(par_name);
     par_name = NULL;
-    Py_XDECREF(var_idna_encode);
+    CHECK_OBJECT(var_idna_encode);
+    Py_DECREF(var_idna_encode);
     var_idna_encode = NULL;
     goto function_return_exit;
     // Exception handler code:
@@ -2365,7 +2310,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
 
     Py_XDECREF(par_name);
     par_name = NULL;
-    Py_XDECREF(var_idna_encode);
+    CHECK_OBJECT(var_idna_encode);
+    Py_DECREF(var_idna_encode);
     var_idna_encode = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_1;
@@ -2470,18 +2416,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[36];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[15];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[32];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[15];
         frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 191;
-        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2498,7 +2444,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        tmp_iter_arg_1 = mod_consts[37];
+        tmp_iter_arg_1 = mod_consts[33];
         tmp_assign_source_2 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_1);
         assert(!(tmp_assign_source_2 == NULL));
         assert(tmp_for_loop_1__for_iterator == NULL);
@@ -2547,9 +2493,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         int tmp_truth_name_1;
         if (par_name == NULL) {
 
@@ -2563,11 +2510,23 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_3;
         }
 
-        tmp_called_instance_1 = par_name;
+        tmp_expression_value_1 = par_name;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[35]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 195;
+            type_description_1 = "ooo";
+            goto try_except_handler_3;
+        }
         CHECK_OBJECT(var_prefix);
-        tmp_args_element_name_1 = var_prefix;
+        tmp_args_element_value_1 = var_prefix;
         frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 195;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[38], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2600,11 +2559,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_start_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_start_value_1;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_stop_name_1;
+        PyObject *tmp_stop_value_1;
         if (par_name == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
@@ -2617,11 +2576,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_1 = par_name;
+        tmp_expression_value_2 = par_name;
         CHECK_OBJECT(var_prefix);
         tmp_len_arg_1 = var_prefix;
-        tmp_start_name_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_start_name_1 == NULL) {
+        tmp_start_value_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_start_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2631,12 +2590,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             type_description_1 = "ooo";
             goto try_except_handler_3;
         }
-        tmp_stop_name_1 = Py_None;
-        tmp_subscript_name_1 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
-        Py_DECREF(tmp_start_name_1);
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
+        tmp_stop_value_1 = Py_None;
+        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        Py_DECREF(tmp_start_value_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_assign_source_5 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2655,21 +2614,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
 
     }
     {
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(var_prefix);
-        tmp_called_instance_2 = var_prefix;
-        frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 197;
-        tmp_left_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[40], 0)
-        );
-
-        if (tmp_left_name_1 == NULL) {
+        tmp_expression_value_3 = var_prefix;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2679,36 +2634,51 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             type_description_1 = "ooo";
             goto try_except_handler_3;
         }
-        if (var_idna == NULL) {
-            Py_DECREF(tmp_left_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 197;
+        tmp_left_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[37]);
+
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_left_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
 
             exception_lineno = 197;
             type_description_1 = "ooo";
             goto try_except_handler_3;
         }
+        CHECK_OBJECT(var_idna);
+        tmp_expression_value_4 = var_idna;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[36]);
+        if (tmp_called_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
 
-        tmp_called_instance_3 = var_idna;
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_left_value_1);
+
+            exception_lineno = 197;
+            type_description_1 = "ooo";
+            goto try_except_handler_3;
+        }
         CHECK_OBJECT(par_name);
-        tmp_args_element_name_2 = par_name;
+        tmp_args_element_value_2 = par_name;
         frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 197;
-        tmp_right_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[39], tmp_args_element_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 197;
             type_description_1 = "ooo";
             goto try_except_handler_3;
         }
-        tmp_return_value = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_return_value = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2775,24 +2745,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     Py_DECREF(tmp_for_loop_1__for_iterator);
     tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_3;
-        if (var_idna == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 198;
-            type_description_1 = "ooo";
-            goto try_except_handler_2;
-        }
-
-        tmp_expression_name_2 = var_idna;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[39]);
-        if (tmp_called_name_1 == NULL) {
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
+        CHECK_OBJECT(var_idna);
+        tmp_expression_value_5 = var_idna;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[36]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2803,7 +2762,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_2;
         }
         if (par_name == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[34]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -2814,10 +2773,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_3 = par_name;
+        tmp_args_element_value_3 = par_name;
         frame_bf47ff33e1f189ce2f1e13e82bb3c5be->m_frame.f_lineno = 198;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2858,14 +2817,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
         if (var_idna == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[36]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[32]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2875,9 +2834,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_4 = var_idna;
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[41]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_7 = var_idna;
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[38]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2887,9 +2846,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             type_description_1 = "ooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[42]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[39]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2899,8 +2858,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib
             type_description_1 = "ooo";
             goto try_except_handler_4;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3174,12 +3133,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_attribute_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_attribute_value_1;
         CHECK_OBJECT(par_peer_cert);
-        tmp_expression_name_1 = par_peer_cert;
-        tmp_attribute_name_1 = mod_consts[43];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_1, tmp_attribute_name_1);
+        tmp_expression_value_1 = par_peer_cert;
+        tmp_attribute_value_1 = mod_consts[40];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_1, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3204,7 +3163,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         CHECK_OBJECT(par_peer_cert);
         tmp_called_instance_1 = par_peer_cert;
         frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 220;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[43]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[40]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3222,17 +3181,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[41]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[41]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3242,13 +3201,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[45]);
+        tmp_args_element_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[42]);
 
-        if (unlikely(tmp_args_element_name_1 == NULL)) {
-            tmp_args_element_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[45]);
+        if (unlikely(tmp_args_element_value_1 == NULL)) {
+            tmp_args_element_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[42]);
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3259,9 +3218,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_peer_cert);
-        tmp_expression_name_2 = par_peer_cert;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[22]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_2 = par_peer_cert;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[22]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3273,11 +3232,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         }
         frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 224;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3295,16 +3254,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     // Tried code:
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(var_cert);
-        tmp_expression_name_5 = var_cert;
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[46]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = var_cert;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[43]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3314,9 +3273,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3326,38 +3285,38 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 229;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[48]);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[45]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 229;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
         frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 229;
-        tmp_expression_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3367,8 +3326,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[49]);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[46]);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3409,17 +3368,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_7;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_7;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3429,8 +3388,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[50]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[47]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3440,8 +3399,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3466,18 +3425,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     branch_no_2:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_8;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+        PyObject *tmp_expression_value_8;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3487,7 +3446,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[51]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[48]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3498,14 +3457,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_2 = PyTuple_New(4);
+        tmp_cmp_expr_right_2 = PyTuple_New(4);
         {
-            PyObject *tmp_expression_name_9;
-            PyTuple_SET_ITEM(tmp_compexpr_right_2, 0, tmp_tuple_element_1);
-            tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[52]);
+            PyObject *tmp_expression_value_9;
+            PyTuple_SET_ITEM(tmp_cmp_expr_right_2, 0, tmp_tuple_element_1);
+            tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[49]);
 
             if (unlikely(tmp_tuple_element_1 == NULL)) {
-                tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+                tmp_tuple_element_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[49]);
             }
 
             if (tmp_tuple_element_1 == NULL) {
@@ -3518,14 +3477,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 type_description_1 = "ooooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM0(tmp_compexpr_right_2, 1, tmp_tuple_element_1);
-            tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+            PyTuple_SET_ITEM0(tmp_cmp_expr_right_2, 1, tmp_tuple_element_1);
+            tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-            if (unlikely(tmp_expression_name_9 == NULL)) {
-                tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+            if (unlikely(tmp_expression_value_9 == NULL)) {
+                tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
             }
 
-            if (tmp_expression_name_9 == NULL) {
+            if (tmp_expression_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3535,7 +3494,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 type_description_1 = "ooooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[53]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[50]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3546,19 +3505,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 type_description_1 = "ooooo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_compexpr_right_2, 2, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_cmp_expr_right_2, 2, tmp_tuple_element_1);
             tmp_tuple_element_1 = PyExc_UnicodeError;
-            PyTuple_SET_ITEM0(tmp_compexpr_right_2, 3, tmp_tuple_element_1);
+            PyTuple_SET_ITEM0(tmp_cmp_expr_right_2, 3, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_compexpr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3588,12 +3547,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
     {
         PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[51]);
 
         if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
         }
 
         if (tmp_called_instance_2 == NULL) {
@@ -3606,15 +3565,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_4 = mod_consts[56];
+        tmp_args_element_value_4 = mod_consts[53];
         CHECK_OBJECT(var_e);
-        tmp_args_element_name_5 = var_e;
+        tmp_args_element_value_5 = var_e;
         frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 241;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
-                mod_consts[55],
+                mod_consts[52],
                 call_args
             );
         }
@@ -3713,21 +3672,21 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         {
             PyObject *tmp_assign_source_6;
             PyObject *tmp_iter_arg_1;
-            PyObject *tmp_called_name_3;
-            PyObject *tmp_args_element_name_6;
-            PyObject *tmp_args_element_name_7;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_expression_name_10;
-            PyObject *tmp_args_element_name_8;
-            PyObject *tmp_expression_name_11;
-            tmp_called_name_3 = (PyObject *)&PyMap_Type;
-            tmp_args_element_name_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[57]);
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_args_element_value_6;
+            PyObject *tmp_args_element_value_7;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_expression_value_10;
+            PyObject *tmp_args_element_value_8;
+            PyObject *tmp_expression_value_11;
+            tmp_called_value_3 = (PyObject *)&PyMap_Type;
+            tmp_args_element_value_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[54]);
 
-            if (unlikely(tmp_args_element_name_6 == NULL)) {
-                tmp_args_element_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
+            if (unlikely(tmp_args_element_value_6 == NULL)) {
+                tmp_args_element_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
             }
 
-            if (tmp_args_element_name_6 == NULL) {
+            if (tmp_args_element_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3738,9 +3697,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 goto try_except_handler_5;
             }
             CHECK_OBJECT(var_ext);
-            tmp_expression_name_10 = var_ext;
-            tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[58]);
-            if (tmp_called_name_4 == NULL) {
+            tmp_expression_value_10 = var_ext;
+            tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[55]);
+            if (tmp_called_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3750,38 +3709,38 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 type_description_1 = "ooooo";
                 goto try_except_handler_5;
             }
-            tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+            tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-            if (unlikely(tmp_expression_name_11 == NULL)) {
-                tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+            if (unlikely(tmp_expression_value_11 == NULL)) {
+                tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
             }
 
-            if (tmp_expression_name_11 == NULL) {
+            if (tmp_expression_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_4);
+                Py_DECREF(tmp_called_value_4);
 
                 exception_lineno = 258;
                 type_description_1 = "ooooo";
                 goto try_except_handler_5;
             }
-            tmp_args_element_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[59]);
-            if (tmp_args_element_name_8 == NULL) {
+            tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[56]);
+            if (tmp_args_element_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_4);
+                Py_DECREF(tmp_called_value_4);
 
                 exception_lineno = 258;
                 type_description_1 = "ooooo";
                 goto try_except_handler_5;
             }
             frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 258;
-            tmp_args_element_name_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_8);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_8);
-            if (tmp_args_element_name_7 == NULL) {
+            tmp_args_element_value_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_8);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_8);
+            if (tmp_args_element_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3793,11 +3752,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             }
             frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 258;
             {
-                PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7};
-                tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7};
+                tmp_iter_arg_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
             }
 
-            Py_DECREF(tmp_args_element_name_7);
+            Py_DECREF(tmp_args_element_value_7);
             if (tmp_iter_arg_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -3898,12 +3857,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         }
         {
             bool tmp_condition_result_4;
-            PyObject *tmp_compexpr_left_3;
-            PyObject *tmp_compexpr_right_3;
+            PyObject *tmp_cmp_expr_left_3;
+            PyObject *tmp_cmp_expr_right_3;
             CHECK_OBJECT(outline_0_var_name);
-            tmp_compexpr_left_3 = outline_0_var_name;
-            tmp_compexpr_right_3 = Py_None;
-            tmp_condition_result_4 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+            tmp_cmp_expr_left_3 = outline_0_var_name;
+            tmp_cmp_expr_right_3 = Py_None;
+            tmp_condition_result_4 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
             if (tmp_condition_result_4 != false) {
                 goto branch_yes_4;
             } else {
@@ -3917,7 +3876,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
             PyObject *tmp_tuple_element_2;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
-            tmp_tuple_element_2 = mod_consts[60];
+            tmp_tuple_element_2 = mod_consts[57];
             tmp_append_value_1 = PyTuple_New(2);
             PyTuple_SET_ITEM0(tmp_append_value_1, 0, tmp_tuple_element_2);
             CHECK_OBJECT(outline_0_var_name);
@@ -4096,14 +4055,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         var_names = tmp_assign_source_5;
     }
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_9;
         CHECK_OBJECT(var_names);
-        tmp_expression_name_12 = var_names;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[61]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_12 = var_names;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[58]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4116,14 +4075,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         {
             PyObject *tmp_assign_source_10;
             PyObject *tmp_iter_arg_2;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_expression_name_13;
-            PyObject *tmp_args_element_name_10;
-            PyObject *tmp_expression_name_14;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_expression_value_13;
+            PyObject *tmp_args_element_value_10;
+            PyObject *tmp_expression_value_14;
             CHECK_OBJECT(var_ext);
-            tmp_expression_name_13 = var_ext;
-            tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[58]);
-            if (tmp_called_name_6 == NULL) {
+            tmp_expression_value_13 = var_ext;
+            tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[55]);
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4133,37 +4092,37 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
                 type_description_1 = "ooooo";
                 goto frame_exception_exit_1;
             }
-            tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47]);
+            tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44]);
 
-            if (unlikely(tmp_expression_name_14 == NULL)) {
-                tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
+            if (unlikely(tmp_expression_value_14 == NULL)) {
+                tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
             }
 
-            if (tmp_expression_name_14 == NULL) {
+            if (tmp_expression_value_14 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_6);
+                Py_DECREF(tmp_called_value_6);
 
                 exception_lineno = 262;
                 type_description_1 = "ooooo";
                 goto frame_exception_exit_1;
             }
-            tmp_args_element_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[62]);
-            if (tmp_args_element_name_10 == NULL) {
+            tmp_args_element_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[59]);
+            if (tmp_args_element_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_6);
+                Py_DECREF(tmp_called_value_6);
 
                 exception_lineno = 262;
                 type_description_1 = "ooooo";
                 goto frame_exception_exit_1;
             }
             frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 262;
-            tmp_iter_arg_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_10);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_10);
+            tmp_iter_arg_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_10);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_10);
             if (tmp_iter_arg_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -4195,7 +4154,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
 
             tmp_closure_1[0] = Nuitka_Cell_New0(tmp_genexpr_1__$0);
 
-            tmp_args_element_name_9 = MAKE_GENERATOR_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$genexpr__1_genexpr(tmp_closure_1);
+            tmp_args_element_value_9 = MAKE_GENERATOR_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$genexpr__1_genexpr(tmp_closure_1);
 
             goto try_return_handler_7;
         }
@@ -4208,16 +4167,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name(
         tmp_genexpr_1__$0 = NULL;
         goto outline_result_2;
         // End of try:
-        CHECK_OBJECT(tmp_genexpr_1__$0);
-        Py_DECREF(tmp_genexpr_1__$0);
-        tmp_genexpr_1__$0 = NULL;
         NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
         return NULL;
         outline_result_2:;
         frame_cad77ab8d9a66cffd15c71076c60ae78->m_frame.f_lineno = 261;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_9);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_9);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_9);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_9);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4502,14 +4458,14 @@ static PyObject *urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$gen
 
     }
     {
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_tuple_element_1;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
-        tmp_tuple_element_1 = mod_consts[64];
-        tmp_expression_name_1 = PyTuple_New(2);
+        tmp_tuple_element_1 = mod_consts[61];
+        tmp_expression_value_1 = PyTuple_New(2);
         {
             PyObject *tmp_unicode_arg_1;
-            PyTuple_SET_ITEM0(tmp_expression_name_1, 0, tmp_tuple_element_1);
+            PyTuple_SET_ITEM0(tmp_expression_value_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(generator_heap->var_name);
             tmp_unicode_arg_1 = generator_heap->var_name;
             tmp_tuple_element_1 = PyObject_Unicode(tmp_unicode_arg_1);
@@ -4523,18 +4479,18 @@ static PyObject *urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name$$$gen
                 generator_heap->type_description_1 = "No";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_expression_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM(tmp_expression_value_1, 1, tmp_tuple_element_1);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_expression_name_1);
+        Py_DECREF(tmp_expression_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         Nuitka_PreserveHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_1;
+        return tmp_expression_value_1;
         yield_return_1:
         Nuitka_RestoreHeap(generator_heap->yield_tmps, &tmp_tuple_element_1, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
@@ -4686,7 +4642,7 @@ static PyObject *MAKE_GENERATOR_urllib3$contrib$pyopenssl$$$function__5_get_subj
         module_urllib3$contrib$pyopenssl,
         mod_consts[1],
 #if PYTHON_VERSION >= 0x350
-        mod_consts[65],
+        mod_consts[62],
 #endif
         codeobj_4de9d256e19342f7b32a6c13b4f38245,
         closure,
@@ -4752,7 +4708,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         tmp_assattr_value_1 = par_connection;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[66], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[63], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4771,7 +4727,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         tmp_assattr_value_2 = par_socket;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[67], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[64], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4790,7 +4746,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         tmp_assattr_value_3 = par_suppress_ragged_eofs;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[68], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[65], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4808,7 +4764,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         tmp_assattr_value_4 = mod_consts[15];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[69], tmp_assattr_value_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[66], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4826,7 +4782,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__6___init__(struct Nu
         tmp_assattr_value_5 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_5 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[70], tmp_assattr_value_5);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_5, mod_consts[67], tmp_assattr_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -4977,10 +4933,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4992,7 +4948,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__7_fileno(struct Nuit
             goto frame_exception_exit_1;
         }
         frame_e76110ba4c1b7663c57ad4a6fcb390ce->m_frame.f_lineno = 283;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[71]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[68]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -5144,15 +5100,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5162,10 +5116,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[15];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[15];
+        tmp_condition_result_1 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5175,32 +5129,20 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 287;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[69]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[66]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5217,12 +5159,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
-        tmp_right_name_1 = mod_consts[72];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
+        tmp_right_value_1 = mod_consts[69];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5233,7 +5175,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
             type_description_1 = "o";
             goto try_except_handler_1;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -5244,7 +5186,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
         tmp_assattr_value_1 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[69], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[66], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5286,12 +5228,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_attribute_value_1;
-        int tmp_truth_name_2;
+        int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[70]);
+        tmp_expression_value_3 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[67]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5302,8 +5244,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_attribute_value_1);
-        if (tmp_truth_name_2 == -1) {
+        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_attribute_value_1);
+        if (tmp_truth_name_1 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5313,7 +5255,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_attribute_value_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -5328,7 +5270,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios(
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_19e3faa4272100d9c054389a00829ffe->m_frame.f_lineno = 290;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[73]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[70]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5431,7 +5373,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     PyObject *par_kwargs = python_pars[2];
     PyObject *var_data = NULL;
     PyObject *var_e = NULL;
-    nuitka_bool tmp_try_except_1__unhandled_indicator = NUITKA_BOOL_UNASSIGNED;
     struct Nuitka_FrameObject *frame_64eb19571fca640a12d45e343a3371fe;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
@@ -5467,11 +5408,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_5;
 
     // Actual function body.
-    {
-        nuitka_bool tmp_assign_source_1;
-        tmp_assign_source_1 = NUITKA_BOOL_TRUE;
-        tmp_try_except_1__unhandled_indicator = tmp_assign_source_1;
-    }
     // Tried code:
     if (isFrameUnusable(cache_frame_64eb19571fca640a12d45e343a3371fe)) {
         Py_XDECREF(cache_frame_64eb19571fca640a12d45e343a3371fe);
@@ -5502,16 +5438,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     // Framed code:
     // Tried code:
     {
-        PyObject *tmp_assign_source_2;
+        PyObject *tmp_assign_source_1;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[66]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[63]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5521,8 +5457,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[74]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[71]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5542,9 +5478,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_assign_source_2 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_assign_source_1 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
-        if (tmp_assign_source_2 == NULL) {
+        if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5555,7 +5491,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             goto try_except_handler_2;
         }
         assert(var_data == NULL);
-        var_data = tmp_assign_source_2;
+        var_data = tmp_assign_source_1;
     }
     goto try_end_1;
     // Exception handler code:
@@ -5569,11 +5505,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     exception_tb = NULL;
     exception_lineno = 0;
 
-    {
-        nuitka_bool tmp_assign_source_3;
-        tmp_assign_source_3 = NUITKA_BOOL_FALSE;
-        tmp_try_except_1__unhandled_indicator = tmp_assign_source_3;
-    }
     // Preserve existing published exception id 1.
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
@@ -5589,18 +5520,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5610,8 +5541,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[76]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[73]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5621,9 +5552,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[77]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[74]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5633,8 +5564,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5654,11 +5585,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     }
     branch_yes_1:;
     {
-        PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = EXC_VALUE(PyThreadState_GET());
+        PyObject *tmp_assign_source_2;
+        tmp_assign_source_2 = EXC_VALUE(PyThreadState_GET());
         assert(var_e == NULL);
-        Py_INCREF(tmp_assign_source_4);
-        var_e = tmp_assign_source_4;
+        Py_INCREF(tmp_assign_source_2);
+        var_e = tmp_assign_source_2;
     }
     // Tried code:
     {
@@ -5666,15 +5597,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[68]);
+        tmp_expression_value_5 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[65]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5716,9 +5647,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         }
         and_right_1:;
         CHECK_OBJECT(var_e);
-        tmp_expression_name_6 = var_e;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[78]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_expression_value_6 = var_e;
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[75]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5728,9 +5659,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_2 = mod_consts[79];
-        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_cmp_expr_right_2 = mod_consts[76];
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -5754,23 +5685,23 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
-    tmp_return_value = mod_consts[80];
+    tmp_return_value = mod_consts[77];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_4;
     goto branch_end_2;
     branch_no_2:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_unicode_arg_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[78]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[78]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5782,7 +5713,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         }
         if (var_e == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -5793,8 +5724,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         }
 
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_name_1 = PyObject_Unicode(tmp_unicode_arg_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = PyObject_Unicode(tmp_unicode_arg_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5805,8 +5736,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             goto try_except_handler_4;
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 299;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5858,18 +5789,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_no_1:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5879,8 +5810,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[76]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[73]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5890,9 +5821,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[83]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[80]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5902,8 +5833,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5924,15 +5855,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_yes_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[66]);
+        tmp_expression_value_9 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5944,9 +5875,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             goto try_except_handler_3;
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 301;
-        tmp_compexpr_left_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[84]);
+        tmp_cmp_expr_left_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[81]);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_compexpr_left_4 == NULL) {
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5956,48 +5887,48 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 301;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[76]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[73]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 301;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[85]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[82]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 301;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -6016,7 +5947,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
-    tmp_return_value = mod_consts[80];
+    tmp_return_value = mod_consts[77];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_3;
     goto branch_end_4;
@@ -6034,18 +5965,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_no_3:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
-        tmp_compexpr_left_5 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
+        tmp_cmp_expr_left_5 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6055,8 +5986,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[76]);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[73]);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6066,9 +5997,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[86]);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6078,8 +6009,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6099,22 +6030,22 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     }
     branch_yes_5:;
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_args_element_name_3;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_16;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_16;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6124,8 +6055,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[87]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[84]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6136,41 +6067,41 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             goto try_except_handler_3;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_15 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[67]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_15 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[64]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 306;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_16 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[67]);
+        tmp_expression_value_16 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[64]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 306;
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 306;
-        tmp_args_element_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[88]);
+        tmp_args_element_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[85]);
         Py_DECREF(tmp_called_instance_2);
-        if (tmp_args_element_name_3 == NULL) {
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 306;
             type_description_1 = "ooooo";
@@ -6178,14 +6109,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 306;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_operand_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6195,8 +6126,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6207,8 +6138,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -6217,14 +6148,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_yes_6:;
     {
         PyObject *tmp_raise_type_2;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[86]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6235,7 +6166,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             goto try_except_handler_3;
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 307;
-        tmp_raise_type_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[90]);
+        tmp_raise_type_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[87]);
 
         if (tmp_raise_type_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6257,12 +6188,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_no_6:;
     {
         PyObject *tmp_dircall_arg1_2;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_value_17;
         PyObject *tmp_dircall_arg2_2;
         PyObject *tmp_dircall_arg3_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_17 = par_self;
-        tmp_dircall_arg1_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[74]);
+        tmp_expression_value_17 = par_self;
+        tmp_dircall_arg1_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[71]);
         if (tmp_dircall_arg1_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6301,18 +6232,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     branch_no_5:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_expression_name_19;
-        tmp_compexpr_left_6 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_19;
+        tmp_cmp_expr_left_6 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_19 == NULL)) {
+            tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6322,8 +6253,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_18 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[76]);
-        if (tmp_expression_name_18 == NULL) {
+        tmp_expression_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[73]);
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6333,9 +6264,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_18);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_18);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6345,8 +6276,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6366,27 +6297,27 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     }
     branch_yes_7:;
     {
-        PyObject *tmp_assign_source_5;
-        tmp_assign_source_5 = EXC_VALUE(PyThreadState_GET());
+        PyObject *tmp_assign_source_3;
+        tmp_assign_source_3 = EXC_VALUE(PyThreadState_GET());
         assert(var_e == NULL);
-        Py_INCREF(tmp_assign_source_5);
-        var_e = tmp_assign_source_5;
+        Py_INCREF(tmp_assign_source_3);
+        var_e = tmp_assign_source_3;
     }
     // Tried code:
     {
         PyObject *tmp_raise_type_3;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_20 == NULL)) {
+            tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6396,8 +6327,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[93]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[90]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6407,24 +6338,24 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
-        tmp_left_name_1 = mod_consts[94];
+        tmp_left_value_1 = mod_consts[91];
         CHECK_OBJECT(var_e);
-        tmp_right_name_1 = var_e;
-        tmp_args_element_name_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_right_value_1 = var_e;
+        tmp_args_element_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 313;
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
         frame_64eb19571fca640a12d45e343a3371fe->m_frame.f_lineno = 313;
-        tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_raise_type_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6575,27 +6506,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     goto try_except_handler_1;
 
     frame_no_exception_1:;
-    {
-        bool tmp_condition_result_8;
-        nuitka_bool tmp_compexpr_left_7;
-        nuitka_bool tmp_compexpr_right_7;
-        assert(tmp_try_except_1__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_7 = tmp_try_except_1__unhandled_indicator;
-        tmp_compexpr_right_7 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_8 = (tmp_compexpr_left_7 == tmp_compexpr_right_7) ? true : false;
-        if (tmp_condition_result_8 != false) {
-            goto branch_yes_8;
-        } else {
-            goto branch_no_8;
-        }
-    }
-    branch_yes_8:;
     CHECK_OBJECT(var_data);
     tmp_return_value = var_data;
-    Py_INCREF(tmp_return_value);
-    goto try_return_handler_1;
-    branch_no_8:;
-    tmp_return_value = Py_None;
     Py_INCREF(tmp_return_value);
     goto try_return_handler_1;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
@@ -6616,8 +6528,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__9_recv(struct Nuitka
     exception_tb = NULL;
     exception_lineno = 0;
 
-    Py_XDECREF(var_data);
-    var_data = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_5;
     exception_value = exception_keeper_value_5;
@@ -6730,14 +6640,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     // Tried code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[66]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[63]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6747,8 +6657,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[95]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[92]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6810,18 +6720,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6831,8 +6741,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[76]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[73]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6842,9 +6752,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[77]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[74]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6854,8 +6764,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6887,15 +6797,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[68]);
+        tmp_expression_value_5 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[65]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6937,9 +6847,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         }
         and_right_1:;
         CHECK_OBJECT(var_e);
-        tmp_expression_name_6 = var_e;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[78]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_expression_value_6 = var_e;
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[75]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6949,9 +6859,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_2 = mod_consts[79];
-        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_cmp_expr_right_2 = mod_consts[76];
+        tmp_and_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_and_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -6982,16 +6892,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_no_2:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_unicode_arg_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[78]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[78]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7003,7 +6913,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         }
         if (var_e == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[82]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[79]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7014,8 +6924,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         }
 
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_name_1 = PyObject_Unicode(tmp_unicode_arg_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = PyObject_Unicode(tmp_unicode_arg_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7026,8 +6936,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             goto try_except_handler_3;
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 324;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7079,18 +6989,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_no_1:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7100,8 +7010,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[76]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[73]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7111,9 +7021,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[83]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[80]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7123,8 +7033,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7145,15 +7055,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_yes_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_9 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[66]);
+        tmp_expression_value_9 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7165,9 +7075,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             goto try_except_handler_2;
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 326;
-        tmp_compexpr_left_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[84]);
+        tmp_cmp_expr_left_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[81]);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_compexpr_left_4 == NULL) {
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7177,48 +7087,48 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 326;
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[76]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[73]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 326;
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[85]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[82]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 326;
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -7255,18 +7165,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_no_3:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
-        tmp_compexpr_left_5 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
+        tmp_cmp_expr_left_5 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7276,8 +7186,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[76]);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[73]);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7287,9 +7197,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[86]);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7299,8 +7209,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7320,22 +7230,22 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     }
     branch_yes_5:;
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_args_element_name_3;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_16;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_16;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7345,8 +7255,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[87]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[84]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7357,41 +7267,41 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_15 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[67]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_15 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[64]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 331;
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_16 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[67]);
+        tmp_expression_value_16 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[64]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 331;
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 331;
-        tmp_args_element_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[88]);
+        tmp_args_element_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[85]);
         Py_DECREF(tmp_called_instance_2);
-        if (tmp_args_element_name_3 == NULL) {
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 331;
             type_description_1 = "oooo";
@@ -7399,14 +7309,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 331;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_operand_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7416,8 +7326,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7428,8 +7338,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -7438,14 +7348,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_yes_6:;
     {
         PyObject *tmp_raise_type_2;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[86]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7456,7 +7366,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             goto try_except_handler_2;
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 332;
-        tmp_raise_type_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[90]);
+        tmp_raise_type_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[87]);
 
         if (tmp_raise_type_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7478,12 +7388,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_no_6:;
     {
         PyObject *tmp_dircall_arg1_2;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_value_17;
         PyObject *tmp_dircall_arg2_2;
         PyObject *tmp_dircall_arg3_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_17 = par_self;
-        tmp_dircall_arg1_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[95]);
+        tmp_expression_value_17 = par_self;
+        tmp_dircall_arg1_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[92]);
         if (tmp_dircall_arg1_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7522,18 +7432,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     branch_no_5:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_expression_name_19;
-        tmp_compexpr_left_6 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_19;
+        tmp_cmp_expr_left_6 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_19 == NULL)) {
+            tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7543,8 +7453,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_18 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[76]);
-        if (tmp_expression_name_18 == NULL) {
+        tmp_expression_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[73]);
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7554,9 +7464,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_18);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_18);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7566,8 +7476,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7596,18 +7506,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
     // Tried code:
     {
         PyObject *tmp_raise_type_3;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_20 == NULL)) {
+            tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7617,8 +7527,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[93]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[90]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7628,24 +7538,24 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__10_recv_into(struct 
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_1 = mod_consts[94];
+        tmp_left_value_1 = mod_consts[91];
         CHECK_OBJECT(var_e);
-        tmp_right_name_1 = var_e;
-        tmp_args_element_name_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_right_value_1 = var_e;
+        tmp_args_element_value_4 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 338;
             type_description_1 = "oooo";
             goto try_except_handler_4;
         }
         frame_0d13199b641e14047e3e44d8b0a45d84->m_frame.f_lineno = 338;
-        tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_raise_type_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7874,11 +7784,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7890,9 +7800,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__11_settimeout(struct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_timeout);
-        tmp_args_element_name_1 = par_timeout;
+        tmp_args_element_value_1 = par_timeout;
         frame_ccc2d17660b5f7df38c565023e96b2b5->m_frame.f_lineno = 341;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[96], tmp_args_element_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[93], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -8030,13 +7940,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
     static struct Nuitka_FrameObject *cache_frame_62c5dcf34ee773cef5f8c2b4eb8118bb = NULL;
-    PyObject *exception_keeper_type_4;
-    PyObject *exception_keeper_value_4;
-    PyTracebackObject *exception_keeper_tb_4;
-    NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_4;
 
     // Actual function body.
-    // Tried code:
     if (isFrameUnusable(cache_frame_62c5dcf34ee773cef5f8c2b4eb8118bb)) {
         Py_XDECREF(cache_frame_62c5dcf34ee773cef5f8c2b4eb8118bb);
 
@@ -8067,25 +7972,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     loop_start_1:;
     // Tried code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[94]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 346;
             type_description_1 = "ooo";
-            goto try_except_handler_2;
+            goto try_except_handler_1;
         }
 
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[66]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[63]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8093,11 +7998,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 346;
             type_description_1 = "ooo";
-            goto try_except_handler_2;
+            goto try_except_handler_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[98]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[95]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8105,24 +8010,24 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 346;
             type_description_1 = "ooo";
-            goto try_except_handler_2;
+            goto try_except_handler_1;
         }
         if (par_data == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[96]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 346;
             type_description_1 = "ooo";
-            goto try_except_handler_2;
+            goto try_except_handler_1;
         }
 
-        tmp_args_element_name_1 = par_data;
+        tmp_args_element_value_1 = par_data;
         frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = 346;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8131,14 +8036,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 346;
             type_description_1 = "ooo";
-            goto try_except_handler_2;
+            goto try_except_handler_1;
         }
         goto frame_return_exit_1;
     }
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Exception handler code:
-    try_except_handler_2:;
+    try_except_handler_1:;
     exception_keeper_type_1 = exception_type;
     exception_keeper_value_1 = exception_value;
     exception_keeper_tb_1 = exception_tb;
@@ -8163,18 +8068,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8182,10 +8087,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 347;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[76]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[73]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8193,11 +8098,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 347;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[100]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[97]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8205,10 +8110,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 347;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8217,7 +8122,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 347;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -8228,22 +8133,22 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     }
     branch_yes_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_3;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_3;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_7;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_7;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8251,10 +8156,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[101]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[98]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8262,82 +8167,82 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
+            Py_DECREF(tmp_called_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[94]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[67]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[64]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[94]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
 
-        tmp_expression_name_7 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[67]);
+        tmp_expression_value_7 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[64]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = 348;
-        tmp_args_element_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[88]);
+        tmp_args_element_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[85]);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_args_element_name_3 == NULL) {
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = 348;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        Py_DECREF(tmp_args_element_name_3);
-        if (tmp_operand_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8345,10 +8250,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8357,10 +8262,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 348;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -8369,14 +8274,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     branch_yes_2:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[86]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8384,10 +8289,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 349;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = 349;
-        tmp_raise_type_1 = CALL_FUNCTION_NO_ARGS(tmp_called_name_3);
+        tmp_raise_type_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_3);
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8396,32 +8301,32 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 349;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         exception_type = tmp_raise_type_1;
         exception_lineno = 349;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooo";
-        goto try_except_handler_3;
+        goto try_except_handler_2;
     }
     branch_no_2:;
-    goto try_continue_handler_3;
+    goto try_continue_handler_2;
     goto branch_end_1;
     branch_no_1:;
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8429,10 +8334,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 351;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_expression_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[76]);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[73]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8440,11 +8345,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 351;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[77]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[74]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8452,10 +8357,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 351;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8464,7 +8369,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 351;
             type_description_1 = "ooo";
-            goto try_except_handler_3;
+            goto try_except_handler_2;
         }
         tmp_condition_result_3 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_3 != false) {
@@ -8477,27 +8382,23 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = EXC_VALUE(PyThreadState_GET());
-        {
-            PyObject *old = var_e;
-            var_e = tmp_assign_source_1;
-            Py_INCREF(var_e);
-            Py_XDECREF(old);
-        }
-
+        assert(var_e == NULL);
+        Py_INCREF(tmp_assign_source_1);
+        var_e = tmp_assign_source_1;
     }
     // Tried code:
     {
         PyObject *tmp_raise_type_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_unicode_arg_1;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[78]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[78]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8505,12 +8406,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 352;
             type_description_1 = "ooo";
-            goto try_except_handler_4;
+            goto try_except_handler_3;
         }
         CHECK_OBJECT(var_e);
         tmp_unicode_arg_1 = var_e;
-        tmp_args_element_name_4 = PyObject_Unicode(tmp_unicode_arg_1);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_args_element_value_4 = PyObject_Unicode(tmp_unicode_arg_1);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8518,11 +8419,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 352;
             type_description_1 = "ooo";
-            goto try_except_handler_4;
+            goto try_except_handler_3;
         }
         frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = 352;
-        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_args_element_name_4);
+        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_raise_type_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8531,18 +8432,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
             exception_lineno = 352;
             type_description_1 = "ooo";
-            goto try_except_handler_4;
+            goto try_except_handler_3;
         }
         exception_type = tmp_raise_type_2;
         exception_lineno = 352;
         RAISE_EXCEPTION_WITH_TYPE(&exception_type, &exception_value, &exception_tb);
         type_description_1 = "ooo";
-        goto try_except_handler_4;
+        goto try_except_handler_3;
     }
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Exception handler code:
-    try_except_handler_4:;
+    try_except_handler_3:;
     exception_keeper_type_2 = exception_type;
     exception_keeper_value_2 = exception_value;
     exception_keeper_tb_2 = exception_tb;
@@ -8561,7 +8462,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     exception_tb = exception_keeper_tb_2;
     exception_lineno = exception_keeper_lineno_2;
 
-    goto try_except_handler_3;
+    goto try_except_handler_2;
     // End of try:
     goto branch_end_3;
     branch_no_3:;
@@ -8572,13 +8473,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
     if (exception_tb && exception_tb->tb_frame == &frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame) frame_62c5dcf34ee773cef5f8c2b4eb8118bb->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooo";
-    goto try_except_handler_3;
+    goto try_except_handler_2;
     branch_end_3:;
     branch_end_1:;
     NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
     return NULL;
     // Exception handler code:
-    try_except_handler_3:;
+    try_except_handler_2:;
     exception_keeper_type_3 = exception_type;
     exception_keeper_value_3 = exception_value;
     exception_keeper_tb_3 = exception_tb;
@@ -8599,7 +8500,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
 
     goto frame_exception_exit_1;
     // try continue handler code:
-    try_continue_handler_3:;
+    try_continue_handler_2:;
     // Restore previous exception id 1.
     SET_CURRENT_EXCEPTION(exception_preserved_type_1, exception_preserved_value_1, exception_preserved_tb_1);
 
@@ -8635,7 +8536,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     // Put the previous frame back on top.
     popFrameStack();
 
-    goto try_return_handler_1;
+    goto function_return_exit;
 
     frame_exception_exit_1:;
 
@@ -8676,37 +8577,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done(
     popFrameStack();
 
     // Return the error.
-    goto try_except_handler_1;
+    goto function_exception_exit;
 
     frame_no_exception_1:;
-    NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
-    return NULL;
-    // Return handler code:
-    try_return_handler_1:;
-    Py_XDECREF(var_e);
-    var_e = NULL;
-    goto function_return_exit;
-    // Exception handler code:
-    try_except_handler_1:;
-    exception_keeper_type_4 = exception_type;
-    exception_keeper_value_4 = exception_value;
-    exception_keeper_tb_4 = exception_tb;
-    exception_keeper_lineno_4 = exception_lineno;
-    exception_type = NULL;
-    exception_value = NULL;
-    exception_tb = NULL;
-    exception_lineno = 0;
-
-    Py_XDECREF(var_e);
-    var_e = NULL;
-    // Re-raise.
-    exception_type = exception_keeper_type_4;
-    exception_value = exception_keeper_value_4;
-    exception_tb = exception_keeper_tb_4;
-    exception_lineno = exception_keeper_lineno_4;
-
-    goto function_exception_exit;
-    // End of try:
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -8799,25 +8672,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     // Framed code:
     loop_start_1:;
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_len_arg_1;
         if (var_total_sent == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[102]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 356;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_left_1 = var_total_sent;
-        if (par_data == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
@@ -8829,9 +8689,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             goto frame_exception_exit_1;
         }
 
+        tmp_cmp_expr_left_1 = var_total_sent;
+        CHECK_OBJECT(par_data);
         tmp_len_arg_1 = par_data;
-        tmp_compexpr_right_1 = BUILTIN_LEN(tmp_len_arg_1);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = BUILTIN_LEN(tmp_len_arg_1);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8841,9 +8703,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_operand_value_1 = RICH_COMPARE_LT_OBJECT_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8853,8 +8715,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8865,8 +8727,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -8877,18 +8739,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_start_name_1;
-        PyObject *tmp_stop_name_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_start_value_1;
+        PyObject *tmp_stop_value_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[94]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8898,9 +8760,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[103]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[100]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8910,8 +8772,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        if (par_data == NULL) {
-            Py_DECREF(tmp_called_name_1);
+        CHECK_OBJECT(par_data);
+        tmp_expression_value_2 = par_data;
+        if (var_total_sent == NULL) {
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -8922,10 +8786,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = par_data;
+        tmp_start_value_1 = var_total_sent;
         if (var_total_sent == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[102]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8935,66 +8799,53 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_start_name_1 = var_total_sent;
-        if (var_total_sent == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[102]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
+        tmp_left_value_1 = var_total_sent;
+        tmp_right_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[101]);
+
+        if (unlikely(tmp_right_value_1 == NULL)) {
+            tmp_right_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[101]);
+        }
+
+        if (tmp_right_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 358;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-
-        tmp_left_name_1 = var_total_sent;
-        tmp_right_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[104]);
-
-        if (unlikely(tmp_right_name_1 == NULL)) {
-            tmp_right_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
-        }
-
-        if (tmp_right_name_1 == NULL) {
+        tmp_stop_value_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_stop_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 358;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_stop_name_1 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_stop_name_1 == NULL) {
+        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        Py_DECREF(tmp_stop_value_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_args_element_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-
-            exception_lineno = 358;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_subscript_name_1 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
-        Py_DECREF(tmp_stop_name_1);
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_args_element_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
-        if (tmp_args_element_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 358;
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
         frame_7c8d894d400ad2d1025e3ee890926af4->m_frame.f_lineno = 357;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9014,11 +8865,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (var_total_sent == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[102]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -9028,10 +8879,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_2 = var_total_sent;
+        tmp_left_value_2 = var_total_sent;
         CHECK_OBJECT(var_sent);
-        tmp_right_name_2 = var_sent;
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_sent;
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_2, tmp_right_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9042,7 +8893,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__13_sendall(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_3 = tmp_left_name_2;
+        tmp_assign_source_3 = tmp_left_value_2;
         var_total_sent = tmp_assign_source_3;
 
     }
@@ -9222,11 +9073,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[66]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9238,7 +9089,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__14_shutdown(struct N
             goto frame_exception_exit_1;
         }
         frame_0ee3a28d3757ac15b08b41e7af9563d5->m_frame.f_lineno = 364;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[105]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[102]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9394,15 +9245,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9412,10 +9261,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[72];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[69];
+        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9425,24 +9274,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 367;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     // Tried code:
@@ -9452,7 +9289,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
         tmp_assattr_value_1 = Py_True;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[70], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[67], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9466,10 +9303,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[66]);
+        tmp_expression_value_2 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9481,7 +9318,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             goto try_except_handler_1;
         }
         frame_06ff57439f6c5921bda1e5b70b28ce7a->m_frame.f_lineno = 370;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[73]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[70]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -9523,18 +9360,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9544,8 +9381,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto try_except_handler_2;
         }
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[76]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[73]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9555,9 +9392,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9567,8 +9404,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9636,10 +9473,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     branch_no_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[69]);
+        tmp_expression_value_5 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[66]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9656,12 +9493,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
-        tmp_right_name_1 = mod_consts[72];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
+        tmp_right_value_1 = mod_consts[69];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9672,7 +9509,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
             type_description_1 = "o";
             goto try_except_handler_3;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -9683,7 +9520,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__15_close(struct Nuit
         tmp_assattr_value_2 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[69], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[66], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -9866,10 +9703,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[66]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9881,7 +9718,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
             goto frame_exception_exit_1;
         }
         frame_2ac61c5806efd8bb02bcb284d64c2c1d->m_frame.f_lineno = 377;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[106]);
+        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[103]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9897,11 +9734,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
         var_x509 = tmp_assign_source_1;
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         CHECK_OBJECT(var_x509);
-        tmp_operand_name_1 = var_x509;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = var_x509;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9912,8 +9749,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -9949,20 +9786,20 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9972,8 +9809,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[107]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[104]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9983,9 +9820,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[108]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[105]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9995,55 +9832,55 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 383;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[107]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[104]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 383;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[109]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[106]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 383;
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_x509);
-        tmp_args_element_name_2 = var_x509;
+        tmp_args_element_value_2 = var_x509;
         frame_2ac61c5806efd8bb02bcb284d64c2c1d->m_frame.f_lineno = 383;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10063,18 +9900,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_tuple_element_3;
-        tmp_dict_key_1 = mod_consts[110];
-        tmp_tuple_element_3 = mod_consts[111];
+        tmp_dict_key_1 = mod_consts[107];
+        tmp_tuple_element_3 = mod_consts[108];
         tmp_tuple_element_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_called_instance_2;
             PyTuple_SET_ITEM0(tmp_tuple_element_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(var_x509);
             tmp_called_instance_2 = var_x509;
             frame_2ac61c5806efd8bb02bcb284d64c2c1d->m_frame.f_lineno = 386;
-            tmp_expression_name_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[112]);
-            if (tmp_expression_name_6 == NULL) {
+            tmp_expression_value_6 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[109]);
+            if (tmp_expression_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10084,8 +9921,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
                 type_description_1 = "ooo";
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[113]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[110]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10111,19 +9948,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
         PyTuple_SET_ITEM(tmp_dict_value_1, 0, tmp_tuple_element_1);
         tmp_return_value = _PyDict_NewPresized( 2 );
         {
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_element_name_3;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_element_value_3;
             tmp_res = PyDict_SetItem(tmp_return_value, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             assert(!(tmp_res != 0));
-            tmp_dict_key_1 = mod_consts[114];
-            tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[115]);
+            tmp_dict_key_1 = mod_consts[111];
+            tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[112]);
 
-            if (unlikely(tmp_called_name_2 == NULL)) {
-                tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[115]);
+            if (unlikely(tmp_called_value_2 == NULL)) {
+                tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[112]);
             }
 
-            if (tmp_called_name_2 == NULL) {
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10134,9 +9971,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert(struc
                 goto dict_build_exception_1;
             }
             CHECK_OBJECT(var_x509);
-            tmp_args_element_name_3 = var_x509;
+            tmp_args_element_value_3 = var_x509;
             frame_2ac61c5806efd8bb02bcb284d64c2c1d->m_frame.f_lineno = 387;
-            tmp_dict_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
+            tmp_dict_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -10325,10 +10162,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[66]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[63]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10340,7 +10177,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__17_version(struct Nu
             goto frame_exception_exit_1;
         }
         frame_d39a2ceb68778c63bae45a4832188a0d->m_frame.f_lineno = 391;
-        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[116]);
+        tmp_return_value = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[113]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -10491,10 +10328,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10511,12 +10348,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
-        tmp_right_name_1 = mod_consts[72];
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
+        tmp_right_value_1 = mod_consts[69];
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10527,7 +10364,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
             type_description_1 = "o";
             goto try_except_handler_1;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -10538,7 +10375,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__18__reuse(struct Nui
         tmp_assattr_value_1 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[69], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[66], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10708,15 +10545,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_tmp_condition_result_1_object_1;
-        int tmp_truth_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10726,10 +10561,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = mod_consts[72];
-        tmp_tmp_condition_result_1_object_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_tmp_condition_result_1_object_1 == NULL) {
+        tmp_cmp_expr_right_1 = mod_consts[69];
+        tmp_condition_result_1 = RICH_COMPARE_LT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_left_1);
+        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10739,24 +10574,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_condition_result_1_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_1_object_1);
-
-            exception_lineno = 397;
-            type_description_1 = "o";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_1 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_1_object_1);
         if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
         }
+        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_1:;
     {
@@ -10765,7 +10588,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         frame_9b104f984591955822fb0c72e3ffb23d->m_frame.f_lineno = 398;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[73]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[70]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10782,10 +10605,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     branch_no_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[69]);
+        tmp_expression_value_2 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[66]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10802,12 +10625,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
-        tmp_right_name_1 = mod_consts[72];
-        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
+        tmp_right_value_1 = mod_consts[69];
+        tmp_result = BINARY_OPERATION_SUB_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -10818,7 +10641,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
             type_description_1 = "o";
             goto try_except_handler_1;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -10829,7 +10652,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__19__drop(struct Nuit
         tmp_assattr_value_1 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[69], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[66], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11001,10 +10824,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[69]);
+        tmp_expression_value_1 = par_self;
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[66]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11021,12 +10844,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         CHECK_OBJECT(tmp_inplace_assign_1__value);
-        tmp_left_name_1 = tmp_inplace_assign_1__value;
-        tmp_right_name_1 = mod_consts[72];
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = tmp_inplace_assign_1__value;
+        tmp_right_value_1 = mod_consts[69];
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11037,7 +10860,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
             type_description_1 = "ooo";
             goto try_except_handler_1;
         }
-        tmp_assign_source_2 = tmp_left_name_1;
+        tmp_assign_source_2 = tmp_left_value_1;
         tmp_inplace_assign_1__value = tmp_assign_source_2;
 
     }
@@ -11048,7 +10871,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
         tmp_assattr_value_1 = tmp_inplace_assign_1__value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[69], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[66], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11088,17 +10911,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
     Py_DECREF(tmp_inplace_assign_1__value);
     tmp_inplace_assign_1__value = NULL;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[117]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[114]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[114]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11110,19 +10933,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__20_makefile(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(3);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(3);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_mode);
         tmp_tuple_element_1 = par_mode;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(par_bufsize);
         tmp_tuple_element_1 = par_bufsize;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 2, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[118]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 2, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[115]);
         frame_e8df877aa208daf753dd8854dd4bc189->m_frame.f_lineno = 407;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_return_value = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11278,16 +11101,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
     // Framed code:
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[119]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[116]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[119]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11298,8 +11121,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_protocol);
-        tmp_subscript_name_1 = par_protocol;
-        tmp_assattr_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_protocol;
+        tmp_assattr_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11312,7 +11135,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[120], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[117], tmp_assattr_value_1);
         Py_DECREF(tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -11327,19 +11150,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_assattr_target_2;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11349,8 +11172,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[76]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[73]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11360,9 +11183,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[121]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[118]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11373,22 +11196,22 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[120]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[117]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 425;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         frame_2872db7c05bbd4decd8b97479a1b5ab9->m_frame.f_lineno = 425;
-        tmp_assattr_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assattr_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11401,7 +11224,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[122], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[119], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -11420,7 +11243,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         tmp_assattr_value_3 = mod_consts[15];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[123], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[120], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11438,7 +11261,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__21___init__(struct N
         tmp_assattr_value_4 = Py_False;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[124], tmp_assattr_value_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[121], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11578,10 +11401,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__22_options(struct Nu
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[123]);
+        tmp_expression_value_1 = par_self;
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[120]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11733,7 +11556,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
         tmp_assattr_value_1 = par_value;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[123], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[120], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -11747,12 +11570,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[119]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11764,9 +11587,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__23_options(struct Nu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_1 = par_value;
+        tmp_args_element_value_1 = par_value;
         frame_c5e5dda17f479599491a55f5142b3c79->m_frame.f_lineno = 436;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[125], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[122], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11908,17 +11731,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[126]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[123]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[123]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11929,8 +11752,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[122]);
+        tmp_expression_value_2 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[119]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11942,9 +11765,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
             goto frame_exception_exit_1;
         }
         frame_4c39721523a778792c826180b400e0e7->m_frame.f_lineno = 440;
-        tmp_subscript_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[127]);
+        tmp_subscript_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[124]);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_subscript_name_1 == NULL) {
+        if (tmp_subscript_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11954,8 +11777,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode(struc
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
+        tmp_return_value = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12100,18 +11923,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[122]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[119]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12121,9 +11944,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[128]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[125]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12133,47 +11956,47 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[126]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 444;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_value);
-        tmp_subscript_name_1 = par_value;
-        tmp_args_element_name_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_1);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_subscript_value_1 = par_value;
+        tmp_args_element_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_1);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 444;
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[130]);
+        tmp_args_element_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[127]);
 
-        if (unlikely(tmp_args_element_name_2 == NULL)) {
-            tmp_args_element_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[130]);
+        if (unlikely(tmp_args_element_value_2 == NULL)) {
+            tmp_args_element_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             exception_lineno = 444;
             type_description_1 = "oo";
@@ -12181,12 +12004,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode(struc
         }
         frame_8a42ec8e4f36e22b1d1878e55ae5ca49->m_frame.f_lineno = 444;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12329,11 +12152,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[119]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12345,7 +12168,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verif
             goto frame_exception_exit_1;
         }
         frame_065eb212fda0cf5ea378ab648b43fccd->m_frame.f_lineno = 447;
-        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[131]);
+        tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[128]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12493,16 +12316,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_ciphers);
         tmp_isinstance_inst_1 = par_ciphers;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[132]);
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12512,7 +12335,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[133]);
+        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[130]);
         if (tmp_isinstance_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12523,7 +12346,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -12545,16 +12368,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_ciphers);
-        tmp_called_instance_1 = par_ciphers;
-        frame_2162eeebd584d9934db486c68ccc5d52->m_frame.f_lineno = 451;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_2 = par_ciphers;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[36]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 451;
+            type_description_1 = "oo";
+            goto frame_exception_exit_1;
+        }
+        frame_2162eeebd584d9934db486c68ccc5d52->m_frame.f_lineno = 451;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12575,14 +12407,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
     }
     branch_no_1:;
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[122]);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[119]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12593,10 +12425,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_ciphers);
-        tmp_args_element_name_1 = par_ciphers;
+        tmp_args_element_value_1 = par_ciphers;
         frame_2162eeebd584d9934db486c68ccc5d52->m_frame.f_lineno = 452;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[134], tmp_args_element_name_1);
-        Py_DECREF(tmp_called_instance_2);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[131], tmp_args_element_value_1);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12790,12 +12622,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_cafile);
-        tmp_compexpr_left_1 = par_cafile;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_cafile;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -12805,16 +12637,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_cafile);
-        tmp_called_instance_1 = par_cafile;
-        frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 456;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_1 = par_cafile;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[36]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 456;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 456;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12836,12 +12677,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_capath);
-        tmp_compexpr_left_2 = par_capath;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 != tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_capath;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 != tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -12851,16 +12692,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(par_capath);
-        tmp_called_instance_2 = par_capath;
-        frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 458;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_2 = par_capath;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[36]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 458;
+            type_description_1 = "ooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 458;
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12882,15 +12732,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     branch_no_2:;
     // Tried code:
     {
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[119]);
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12901,20 +12751,20 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_cafile);
-        tmp_args_element_name_1 = par_cafile;
+        tmp_args_element_value_1 = par_cafile;
         CHECK_OBJECT(par_capath);
-        tmp_args_element_name_2 = par_capath;
+        tmp_args_element_value_2 = par_capath;
         frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 460;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_3,
-                mod_consts[135],
+                tmp_called_instance_1,
+                mod_consts[132],
                 call_args
             );
         }
 
-        Py_DECREF(tmp_called_instance_3);
+        Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12929,12 +12779,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_cadata);
-        tmp_compexpr_left_3 = par_cadata;
-        tmp_compexpr_right_3 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_3 != tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = par_cadata;
+        tmp_cmp_expr_right_3 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_3 != tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -12943,17 +12793,17 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_4;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[122]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[119]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12963,9 +12813,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[135]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[132]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12975,40 +12825,40 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[136]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[133]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[136]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[133]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 462;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_cadata);
-        tmp_args_element_name_4 = par_cadata;
+        tmp_args_element_value_4 = par_cadata;
         frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 462;
-        tmp_args_element_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_4);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_args_element_value_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 462;
             type_description_1 = "ooooo";
             goto try_except_handler_2;
         }
         frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 462;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_3);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_3);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13049,18 +12899,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        tmp_compexpr_left_4 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        tmp_cmp_expr_left_4 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13070,8 +12920,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[76]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[73]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13081,9 +12931,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13093,8 +12943,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13123,18 +12973,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
     // Tried code:
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13144,8 +12994,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[93]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[90]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13155,24 +13005,24 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locat
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_1 = mod_consts[137];
+        tmp_left_value_1 = mod_consts[134];
         CHECK_OBJECT(var_e);
-        tmp_right_name_1 = var_e;
-        tmp_args_element_name_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_right_value_1 = var_e;
+        tmp_args_element_value_5 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 464;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
         frame_0940cdda9bf7f6258a574b7f9c1a3c85->m_frame.f_lineno = 464;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13426,12 +13276,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[119]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13443,9 +13293,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_certfile);
-        tmp_args_element_name_1 = par_certfile;
+        tmp_args_element_value_1 = par_certfile;
         frame_f8f01c8027f4cb4cf2f2fa9c65ba9c95->m_frame.f_lineno = 467;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[138], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[135], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -13461,12 +13311,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(Nuitka_Cell_GET(par_password));
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(par_password);
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(par_password);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -13475,20 +13325,20 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     }
     branch_yes_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(Nuitka_Cell_GET(par_password));
         tmp_isinstance_inst_1 = Nuitka_Cell_GET(par_password);
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[132]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13498,7 +13348,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[139]);
+        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[136]);
         if (tmp_isinstance_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13509,7 +13359,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -13521,8 +13371,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13533,8 +13383,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -13543,16 +13393,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(Nuitka_Cell_GET(par_password));
-        tmp_called_instance_2 = Nuitka_Cell_GET(par_password);
-        frame_f8f01c8027f4cb4cf2f2fa9c65ba9c95->m_frame.f_lineno = 470;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_3 = Nuitka_Cell_GET(par_password);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[36]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 470;
+            type_description_1 = "oooc";
+            goto frame_exception_exit_1;
+        }
+        frame_f8f01c8027f4cb4cf2f2fa9c65ba9c95->m_frame.f_lineno = 470;
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13572,15 +13431,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     }
     branch_no_2:;
     {
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         struct Nuitka_CellObject *tmp_closure_1[1];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[122]);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_4 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[119]);
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13594,12 +13453,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
         tmp_closure_1[0] = par_password;
         Py_INCREF(tmp_closure_1[0]);
 
-        tmp_args_element_name_2 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$$function__1_lambda(tmp_closure_1);
+        tmp_args_element_value_2 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$$function__1_lambda(tmp_closure_1);
 
         frame_f8f01c8027f4cb4cf2f2fa9c65ba9c95->m_frame.f_lineno = 471;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[140], tmp_args_element_name_2);
-        Py_DECREF(tmp_called_instance_3);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[137], tmp_args_element_value_2);
+        Py_DECREF(tmp_called_instance_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13614,18 +13473,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
     }
     branch_no_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         int tmp_or_left_truth_1;
         PyObject *tmp_or_left_value_1;
         PyObject *tmp_or_right_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[122]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[119]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13635,9 +13494,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             type_description_1 = "oooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[143]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[140]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13654,7 +13513,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 472;
             type_description_1 = "oooc";
@@ -13668,14 +13527,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(s
         or_right_1:;
         CHECK_OBJECT(par_certfile);
         tmp_or_right_value_1 = par_certfile;
-        tmp_args_element_name_3 = tmp_or_right_value_1;
+        tmp_args_element_value_3 = tmp_or_right_value_1;
         goto or_end_1;
         or_left_1:;
-        tmp_args_element_name_3 = tmp_or_left_value_1;
+        tmp_args_element_value_3 = tmp_or_left_value_1;
         or_end_1:;
         frame_f8f01c8027f4cb4cf2f2fa9c65ba9c95->m_frame.f_lineno = 472;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_1);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13853,7 +13712,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$
     // Framed code:
     if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
-        FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[144]);
+        FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[141]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -14117,13 +13976,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
             PyObject *tmp_called_instance_1;
-            PyObject *tmp_args_element_name_1;
+            PyObject *tmp_args_element_value_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
-            tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[132]);
+            tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
 
             if (unlikely(tmp_called_instance_1 == NULL)) {
-                tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+                tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
             }
 
             if (tmp_called_instance_1 == NULL) {
@@ -14137,9 +13996,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
                 goto try_except_handler_3;
             }
             CHECK_OBJECT(outline_0_var_p);
-            tmp_args_element_name_1 = outline_0_var_p;
+            tmp_args_element_value_1 = outline_0_var_p;
             frame_833292ff8ab6d3d774ad77e976a55616_2->m_frame.f_lineno = 475;
-            tmp_append_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[145], tmp_args_element_name_1);
+            tmp_append_value_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[142], tmp_args_element_value_1);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -14328,11 +14187,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
     }
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[119]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14344,9 +14203,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocol
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_protocols);
-        tmp_args_element_name_2 = par_protocols;
+        tmp_args_element_value_2 = par_protocols;
         frame_8032fe0183f9b1929b752fb10ed9b8f6->m_frame.f_lineno = 476;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[146], tmp_args_element_name_2);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[143], tmp_args_element_value_2);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -14551,19 +14410,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14573,8 +14432,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[76]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[73]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14584,9 +14443,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[147]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[144]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14597,28 +14456,28 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[122]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[119]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 486;
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_sock);
-        tmp_args_element_name_2 = par_sock;
+        tmp_args_element_value_2 = par_sock;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 486;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14636,16 +14495,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(par_server_hostname);
         tmp_isinstance_inst_1 = par_server_hostname;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[132]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[132]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14655,7 +14514,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[133]);
+        tmp_isinstance_cls_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[130]);
         if (tmp_isinstance_cls_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14666,7 +14525,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -14688,16 +14547,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(par_server_hostname);
-        tmp_called_instance_1 = par_server_hostname;
-        frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 489;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[39],
-            PyTuple_GET_ITEM(mod_consts[33], 0)
-        );
+        tmp_expression_value_5 = par_server_hostname;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[36]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 489;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 489;
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[30]);
+
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14719,12 +14587,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_server_hostname);
-        tmp_compexpr_left_1 = par_server_hostname;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_server_hostname;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -14733,15 +14601,15 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(var_cnx);
-        tmp_called_instance_2 = var_cnx;
+        tmp_called_instance_1 = var_cnx;
         CHECK_OBJECT(par_server_hostname);
-        tmp_args_element_name_3 = par_server_hostname;
+        tmp_args_element_value_3 = par_server_hostname;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 492;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[148], tmp_args_element_name_3);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[145], tmp_args_element_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14756,11 +14624,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     }
     branch_no_2:;
     {
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_2;
         PyObject *tmp_call_result_2;
         if (var_cnx == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14770,9 +14638,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_3 = var_cnx;
+        tmp_called_instance_2 = var_cnx;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 494;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[150]);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[147]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14788,11 +14656,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     loop_start_1:;
     // Tried code:
     {
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_3;
         if (var_cnx == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14802,9 +14670,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_4 = var_cnx;
+        tmp_called_instance_3 = var_cnx;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 498;
-        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[151]);
+        tmp_call_result_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[148]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14844,18 +14712,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14865,8 +14733,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[76]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[73]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14876,9 +14744,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[86]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[83]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14888,8 +14756,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14909,20 +14777,20 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     }
     branch_yes_3:;
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        bool tmp_condition_result_4;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_called_instance_4;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14932,8 +14800,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[87]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[84]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14944,8 +14812,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto try_except_handler_3;
         }
         if (par_sock == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14955,10 +14823,10 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_4 = par_sock;
+        tmp_args_element_value_4 = par_sock;
         if (par_sock == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
+            Py_DECREF(tmp_called_value_3);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14968,14 +14836,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto try_except_handler_3;
         }
 
-        tmp_called_instance_5 = par_sock;
+        tmp_called_instance_4 = par_sock;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 500;
-        tmp_args_element_name_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[88]);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_args_element_value_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[85]);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_3);
 
             exception_lineno = 500;
             type_description_1 = "oooooooo";
@@ -14983,13 +14851,13 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
         }
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 500;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_5);
-        if (tmp_operand_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_5);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14999,8 +14867,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -15011,8 +14879,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_condition_result_4 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -15021,14 +14889,14 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     branch_yes_4:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
+        PyObject *tmp_called_value_4;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[86]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15039,7 +14907,7 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto try_except_handler_3;
         }
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 501;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[153]);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_4, mod_consts[150]);
 
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15063,18 +14931,18 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     branch_no_3:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15084,8 +14952,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[76]);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[73]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15095,9 +14963,9 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[91]);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[88]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15107,8 +14975,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -15130,29 +14998,25 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = EXC_VALUE(PyThreadState_GET());
-        {
-            PyObject *old = var_e;
-            var_e = tmp_assign_source_3;
-            Py_INCREF(var_e);
-            Py_XDECREF(old);
-        }
-
+        assert(var_e == NULL);
+        Py_INCREF(tmp_assign_source_3);
+        var_e = tmp_assign_source_3;
     }
     // Tried code:
     {
         PyObject *tmp_raise_type_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15162,8 +15026,8 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[93]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[90]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15173,24 +15037,24 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
-        tmp_left_name_1 = mod_consts[154];
+        tmp_left_value_1 = mod_consts[151];
         CHECK_OBJECT(var_e);
-        tmp_right_name_1 = var_e;
-        tmp_args_element_name_6 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_right_value_1 = var_e;
+        tmp_args_element_value_6 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 504;
             type_description_1 = "oooooooo";
             goto try_except_handler_4;
         }
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 504;
-        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_raise_type_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15289,16 +15153,16 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     goto loop_start_1;
     loop_end_1:;
     {
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[155]);
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[152]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[155]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[152]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15310,6 +15174,19 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
         }
         if (var_cnx == NULL) {
 
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[146]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 507;
+            type_description_1 = "oooooooo";
+            goto frame_exception_exit_1;
+        }
+
+        tmp_args_element_value_7 = var_cnx;
+        if (par_sock == NULL) {
+
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[149]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -15320,24 +15197,11 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_7 = var_cnx;
-        if (par_sock == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[152]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 507;
-            type_description_1 = "oooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_8 = par_sock;
+        tmp_args_element_value_8 = par_sock;
         frame_d4c29602735d5a16ae59da56f2ac1fe4->m_frame.f_lineno = 507;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -15427,8 +15291,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     par_server_hostname = NULL;
     Py_XDECREF(var_cnx);
     var_cnx = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     goto function_return_exit;
     // Exception handler code:
     try_except_handler_1:;
@@ -15445,8 +15307,6 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(struc
     par_server_hostname = NULL;
     Py_XDECREF(var_cnx);
     var_cnx = NULL;
-    Py_XDECREF(var_e);
-    var_e = NULL;
     // Re-raise.
     exception_type = exception_keeper_type_4;
     exception_value = exception_keeper_value_4;
@@ -15545,12 +15405,12 @@ static PyObject *impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback(
 
     // Framed code:
     {
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_err_no);
-        tmp_compexpr_left_1 = par_err_no;
-        tmp_compexpr_right_1 = mod_consts[15];
-        tmp_return_value = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_cmp_expr_left_1 = par_err_no;
+        tmp_cmp_expr_right_1 = mod_consts[15];
+        tmp_return_value = RICH_COMPARE_EQ_OBJECT_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15671,9 +15531,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__10_recv_into() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__10_recv_into,
-        mod_consts[95],
+        mod_consts[92],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[236],
+        mod_consts[233],
 #endif
         codeobj_0d13199b641e14047e3e44d8b0a45d84,
         NULL,
@@ -15696,9 +15556,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__10_recv_int
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__11_settimeout() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__11_settimeout,
-        mod_consts[96],
+        mod_consts[93],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[237],
+        mod_consts[234],
 #endif
         codeobj_ccc2d17660b5f7df38c565023e96b2b5,
         NULL,
@@ -15721,9 +15581,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__11_settimeo
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__12__send_until_done() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__12__send_until_done,
-        mod_consts[103],
+        mod_consts[100],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[238],
+        mod_consts[235],
 #endif
         codeobj_62c5dcf34ee773cef5f8c2b4eb8118bb,
         NULL,
@@ -15746,9 +15606,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__12__send_un
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__13_sendall() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__13_sendall,
-        mod_consts[239],
+        mod_consts[236],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[240],
+        mod_consts[237],
 #endif
         codeobj_7c8d894d400ad2d1025e3ee890926af4,
         NULL,
@@ -15771,9 +15631,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__13_sendall(
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__14_shutdown() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__14_shutdown,
-        mod_consts[105],
+        mod_consts[102],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[241],
+        mod_consts[238],
 #endif
         codeobj_0ee3a28d3757ac15b08b41e7af9563d5,
         NULL,
@@ -15796,9 +15656,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__14_shutdown
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__15_close() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__15_close,
-        mod_consts[73],
+        mod_consts[70],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[242],
+        mod_consts[239],
 #endif
         codeobj_06ff57439f6c5921bda1e5b70b28ce7a,
         NULL,
@@ -15821,9 +15681,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__15_close() 
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__16_getpeercert(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__16_getpeercert,
-        mod_consts[244],
+        mod_consts[241],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[245],
+        mod_consts[242],
 #endif
         codeobj_2ac61c5806efd8bb02bcb284d64c2c1d,
         defaults,
@@ -15846,9 +15706,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__16_getpeerc
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__17_version() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__17_version,
-        mod_consts[246],
+        mod_consts[243],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[247],
+        mod_consts[244],
 #endif
         codeobj_d39a2ceb68778c63bae45a4832188a0d,
         NULL,
@@ -15871,9 +15731,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__17_version(
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__18__reuse() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__18__reuse,
-        mod_consts[248],
+        mod_consts[245],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[249],
+        mod_consts[246],
 #endif
         codeobj_91f4367d641e8c192c21c89fc0779bc8,
         NULL,
@@ -15896,9 +15756,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__18__reuse()
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__19__drop() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__19__drop,
-        mod_consts[250],
+        mod_consts[247],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[251],
+        mod_consts[248],
 #endif
         codeobj_9b104f984591955822fb0c72e3ffb23d,
         NULL,
@@ -15921,7 +15781,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__19__drop() 
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib3() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib3,
-        mod_consts[225],
+        mod_consts[222],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -15946,7 +15806,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__1_inject_in
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__20_makefile(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__20_makefile,
-        mod_consts[253],
+        mod_consts[250],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -15971,9 +15831,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__20_makefile
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__21___init__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__21___init__,
-        mod_consts[230],
+        mod_consts[227],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[255],
+        mod_consts[252],
 #endif
         codeobj_2872db7c05bbd4decd8b97479a1b5ab9,
         NULL,
@@ -15996,9 +15856,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__21___init__
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__22_options,
-        mod_consts[257],
+        mod_consts[254],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[258],
+        mod_consts[255],
 #endif
         codeobj_789724113356f0263fe2d137c34b26c3,
         NULL,
@@ -16021,9 +15881,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options(
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__23_options() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__23_options,
-        mod_consts[257],
+        mod_consts[254],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[258],
+        mod_consts[255],
 #endif
         codeobj_c5e5dda17f479599491a55f5142b3c79,
         NULL,
@@ -16046,9 +15906,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__23_options(
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_mode() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__24_verify_mode,
-        mod_consts[260],
+        mod_consts[257],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[261],
+        mod_consts[258],
 #endif
         codeobj_4c39721523a778792c826180b400e0e7,
         NULL,
@@ -16071,9 +15931,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_m
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__25_verify_mode() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__25_verify_mode,
-        mod_consts[260],
+        mod_consts[257],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[261],
+        mod_consts[258],
 #endif
         codeobj_8a42ec8e4f36e22b1d1878e55ae5ca49,
         NULL,
@@ -16096,9 +15956,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__25_verify_m
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__26_set_default_verify_paths() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__26_set_default_verify_paths,
-        mod_consts[131],
+        mod_consts[128],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[262],
+        mod_consts[259],
 #endif
         codeobj_065eb212fda0cf5ea378ab648b43fccd,
         NULL,
@@ -16121,9 +15981,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__26_set_defa
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__27_set_ciphers() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__27_set_ciphers,
-        mod_consts[263],
+        mod_consts[260],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[264],
+        mod_consts[261],
 #endif
         codeobj_2162eeebd584d9934db486c68ccc5d52,
         NULL,
@@ -16146,9 +16006,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__27_set_ciph
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__28_load_verify_locations(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__28_load_verify_locations,
-        mod_consts[135],
+        mod_consts[132],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[266],
+        mod_consts[263],
 #endif
         codeobj_0940cdda9bf7f6258a574b7f9c1a3c85,
         defaults,
@@ -16171,9 +16031,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__28_load_ver
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain,
-        mod_consts[268],
+        mod_consts[265],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[269],
+        mod_consts[266],
 #endif
         codeobj_f8f01c8027f4cb4cf2f2fa9c65ba9c95,
         defaults,
@@ -16196,9 +16056,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cer
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$$function__1_lambda(struct Nuitka_CellObject **closure) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain$$$function__1_lambda,
-        mod_consts[141],
+        mod_consts[138],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[142],
+        mod_consts[139],
 #endif
         codeobj_7364c15ae83078b219869a33533c3d8a,
         NULL,
@@ -16221,7 +16081,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cer
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__2_extract_from_urllib3() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__2_extract_from_urllib3,
-        mod_consts[226],
+        mod_consts[223],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -16246,9 +16106,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__2_extract_f
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocols() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocols,
-        mod_consts[270],
+        mod_consts[267],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[271],
+        mod_consts[268],
 #endif
         codeobj_8032fe0183f9b1929b752fb10ed9b8f6,
         NULL,
@@ -16271,9 +16131,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__30_set_alpn
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__31_wrap_socket,
-        mod_consts[273],
+        mod_consts[270],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[274],
+        mod_consts[271],
 #endif
         codeobj_d4c29602735d5a16ae59da56f2ac1fe4,
         defaults,
@@ -16296,7 +16156,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__31_wrap_soc
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__32__verify_callback() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__32__verify_callback,
-        mod_consts[130],
+        mod_consts[127],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -16346,7 +16206,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__3__validate
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib,
-        mod_consts[57],
+        mod_consts[54],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -16357,7 +16217,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__4__dnsname_
         NULL,
 #endif
         module_urllib3$contrib$pyopenssl,
-        mod_consts[35],
+        mod_consts[31],
         NULL,
         0
     );
@@ -16396,7 +16256,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__4__dnsname_
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name,
-        mod_consts[115],
+        mod_consts[112],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -16407,7 +16267,7 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__5_get_subj_
         NULL,
 #endif
         module_urllib3$contrib$pyopenssl,
-        mod_consts[63],
+        mod_consts[60],
         NULL,
         0
     );
@@ -16421,9 +16281,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__5_get_subj_
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__6___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__6___init__,
-        mod_consts[230],
+        mod_consts[227],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[231],
+        mod_consts[228],
 #endif
         codeobj_96693693b8ff341a344bc34cf44c4ee4,
         defaults,
@@ -16446,9 +16306,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__6___init__(
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__7_fileno() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__7_fileno,
-        mod_consts[71],
+        mod_consts[68],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[232],
+        mod_consts[229],
 #endif
         codeobj_e76110ba4c1b7663c57ad4a6fcb390ce,
         NULL,
@@ -16471,9 +16331,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__7_fileno() 
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__8__decref_socketios() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__8__decref_socketios,
-        mod_consts[233],
+        mod_consts[230],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[234],
+        mod_consts[231],
 #endif
         codeobj_19e3faa4272100d9c054389a00829ffe,
         NULL,
@@ -16496,9 +16356,9 @@ static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__8__decref_s
 static PyObject *MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__9_recv() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_urllib3$contrib$pyopenssl$$$function__9_recv,
-        mod_consts[74],
+        mod_consts[71],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[235],
+        mod_consts[232],
 #endif
         codeobj_64eb19571fca640a12d45e343a3371fe,
         NULL,
@@ -16718,63 +16578,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("urllib3.contrib.pyopenssl");
+
+    // Store the module for future use.
     module_urllib3$contrib$pyopenssl = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("urllib3.contrib.pyopenssl: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("urllib3.contrib.pyopenssl: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("urllib3.contrib.pyopenssl: Calling createModuleConstants().\n");
+        PRINT_STRING("urllib3.contrib.pyopenssl: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("urllib3.contrib.pyopenssl: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("urllib3.contrib.pyopenssl: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initurllib3$contrib$pyopenssl\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_urllib3$contrib$pyopenssl = MODULE_DICT(module_urllib3$contrib$pyopenssl);
 
@@ -16795,7 +16659,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         UPDATE_STRING_DICT0(
             moduledict_urllib3$contrib$pyopenssl,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[194]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)const_str_plain___name__);
@@ -16845,7 +16709,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -16895,7 +16759,6 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     PyObject *outline_1_var___class__ = NULL;
     PyObject *outline_2_var___class__ = NULL;
     PyObject *tmp_class_creation_1__bases = NULL;
-    PyObject *tmp_class_creation_1__bases_orig = NULL;
     PyObject *tmp_class_creation_1__class_decl_dict = NULL;
     PyObject *tmp_class_creation_1__metaclass = NULL;
     PyObject *tmp_class_creation_1__prepared = NULL;
@@ -16990,13 +16853,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[156];
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[157], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[153];
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[154], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[158], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[155], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_2f3568602c4f3e158331aa02a89bd39a = MAKE_MODULE_FRAME(codeobj_2f3568602c4f3e158331aa02a89bd39a, module_urllib3$contrib$pyopenssl);
@@ -17011,14 +16874,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[159]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[156]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[159]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[156]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[160], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[157], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -17034,14 +16897,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[159]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[156]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[159]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[156]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[161], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[158], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -17056,33 +16919,33 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[162], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[159], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 48;
         {
             PyObject *hard_module = IMPORT_HARD___FUTURE__();
-            tmp_assign_source_4 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[163]);
+            tmp_assign_source_4 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[160]);
         }
 
         assert(!(tmp_assign_source_4 == NULL));
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[163], tmp_assign_source_4);
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[160], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[164];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[15];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[161];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 50;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17093,23 +16956,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[165];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[166];
-        tmp_level_name_2 = mod_consts[15];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[162];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[163];
+        tmp_level_value_2 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 51;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17124,11 +16987,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[47],
+                mod_consts[44],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[47]);
+            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[44]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -17142,23 +17005,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[47], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[167];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[168];
-        tmp_level_name_3 = mod_consts[15];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[164];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[165];
+        tmp_level_value_3 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 52;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17173,11 +17036,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[169],
+                mod_consts[166],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[169]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[166]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -17191,23 +17054,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[45], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[42], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[170];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[171];
-        tmp_level_name_4 = mod_consts[15];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[167];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[168];
+        tmp_level_value_4 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 53;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17222,11 +17085,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[44],
+                mod_consts[41],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[44]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[41]);
         }
 
         Py_DECREF(tmp_import_name_from_3);
@@ -17240,24 +17103,24 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[44], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[41], tmp_assign_source_8);
     }
     // Tried code:
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[172];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[173];
-        tmp_level_name_5 = mod_consts[15];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[169];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[170];
+        tmp_level_value_5 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 56;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17272,11 +17135,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[52],
+                mod_consts[49],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[52]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[49]);
         }
 
         Py_DECREF(tmp_import_name_from_4);
@@ -17290,7 +17153,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[49], tmp_assign_source_9);
     }
     goto try_end_1;
     // Exception handler code:
@@ -17319,11 +17182,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -17333,26 +17196,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
     }
     branch_yes_1:;
-    {
-        PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = mod_consts[174];
-        assert(tmp_class_creation_1__bases_orig == NULL);
-        Py_INCREF(tmp_assign_source_10);
-        tmp_class_creation_1__bases_orig = tmp_assign_source_10;
-    }
     // Tried code:
     {
-        PyObject *tmp_assign_source_11;
+        PyObject *tmp_assign_source_10;
         PyObject *tmp_dircall_arg1_1;
-        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-        tmp_dircall_arg1_1 = tmp_class_creation_1__bases_orig;
+        tmp_dircall_arg1_1 = mod_consts[171];
         Py_INCREF(tmp_dircall_arg1_1);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1};
-            tmp_assign_source_11 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_10 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_11 == NULL) {
+        if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17363,54 +17218,49 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__bases == NULL);
-        tmp_class_creation_1__bases = tmp_assign_source_11;
+        tmp_class_creation_1__bases = tmp_assign_source_10;
+    }
+    {
+        PyObject *tmp_assign_source_11;
+        tmp_assign_source_11 = PyDict_New();
+        assert(tmp_class_creation_1__class_decl_dict == NULL);
+        tmp_class_creation_1__class_decl_dict = tmp_assign_source_11;
     }
     {
         PyObject *tmp_assign_source_12;
-        tmp_assign_source_12 = PyDict_New();
-        assert(tmp_class_creation_1__class_decl_dict == NULL);
-        tmp_class_creation_1__class_decl_dict = tmp_assign_source_12;
-    }
-    {
-        PyObject *tmp_assign_source_13;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_3;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[175];
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[175];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 59;
-
-            goto try_except_handler_3;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[172];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -17433,9 +17283,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_1 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[15];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
+        tmp_expression_value_1 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[15];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17446,9 +17296,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17460,15 +17310,15 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_13 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
-        if (tmp_assign_source_13 == NULL) {
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_12 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
+        if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17479,19 +17329,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__metaclass == NULL);
-        tmp_class_creation_1__metaclass = tmp_assign_source_13;
+        tmp_class_creation_1__metaclass = tmp_assign_source_12;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[175];
+        bool tmp_condition_result_4;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_4 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -17500,7 +17350,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_2:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[175];
+    tmp_dictdel_key = mod_consts[172];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -17515,10 +17365,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[176]);
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[173]);
         tmp_condition_result_5 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
@@ -17528,16 +17378,16 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_yes_3:;
     {
-        PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_assign_source_13;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[176]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[173]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17547,19 +17397,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_tuple_element_1 = mod_consts[52];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_tuple_element_1 = mod_consts[49];
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_1 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 59;
-        tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        if (tmp_assign_source_14 == NULL) {
+        tmp_assign_source_13 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17570,17 +17420,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_3;
         }
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_14;
+        tmp_class_creation_1__prepared = tmp_assign_source_13;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_4;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[177]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_4 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[174]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17591,8 +17441,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -17602,18 +17452,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[178];
+        tmp_left_value_1 = mod_consts[175];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[179];
-        tmp_getattr_default_1 = mod_consts[180];
+        tmp_getattr_attr_1 = mod_consts[176];
+        tmp_getattr_default_1 = mod_consts[177];
         tmp_tuple_element_2 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17625,17 +17475,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_3;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_5;
+            PyObject *tmp_expression_value_5;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_5 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_5 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[179]);
-            Py_DECREF(tmp_expression_name_5);
+            tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_5 == NULL));
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[176]);
+            Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -17646,17 +17496,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17679,14 +17529,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto branch_end_3;
     branch_no_3:;
     {
-        PyObject *tmp_assign_source_15;
-        tmp_assign_source_15 = PyDict_New();
+        PyObject *tmp_assign_source_14;
+        tmp_assign_source_14 = PyDict_New();
         assert(tmp_class_creation_1__prepared == NULL);
-        tmp_class_creation_1__prepared = tmp_assign_source_15;
+        tmp_class_creation_1__prepared = tmp_assign_source_14;
     }
     branch_end_3:;
     {
-        PyObject *tmp_assign_source_16;
+        PyObject *tmp_assign_source_15;
         {
             PyObject *tmp_set_locals_1;
             CHECK_OBJECT(tmp_class_creation_1__prepared);
@@ -17696,8 +17546,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[181];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[182], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[178];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[179], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17708,8 +17558,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[52];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[183], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[49];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[180], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17722,13 +17572,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_7;
-            PyObject *tmp_compexpr_left_2;
-            PyObject *tmp_compexpr_right_2;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_2 = tmp_class_creation_1__bases;
-            CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_2 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_7 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
+            tmp_cmp_expr_left_2 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_right_2 = mod_consts[171];
+            tmp_condition_result_7 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
             if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -17747,9 +17596,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             assert(tmp_condition_result_7 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_5:;
-        CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-        tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[184], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[171];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59, mod_consts[181], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17762,27 +17610,27 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         branch_no_5:;
         {
-            PyObject *tmp_assign_source_17;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_assign_source_16;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_3 = mod_consts[52];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
+            tmp_tuple_element_3 = mod_consts[49];
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_3 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
             tmp_tuple_element_3 = locals_urllib3$contrib$pyopenssl$$$class__1_UnsupportedExtension_59;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 59;
-            tmp_assign_source_17 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
-            if (tmp_assign_source_17 == NULL) {
+            tmp_assign_source_16 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
+            if (tmp_assign_source_16 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17793,11 +17641,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto try_except_handler_5;
             }
             assert(outline_0_var___class__ == NULL);
-            outline_0_var___class__ = tmp_assign_source_17;
+            outline_0_var___class__ = tmp_assign_source_16;
         }
         CHECK_OBJECT(outline_0_var___class__);
-        tmp_assign_source_16 = outline_0_var___class__;
-        Py_INCREF(tmp_assign_source_16);
+        tmp_assign_source_15 = outline_0_var___class__;
+        Py_INCREF(tmp_assign_source_15);
         goto try_return_handler_5;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -17860,7 +17708,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         exception_lineno = 59;
         goto try_except_handler_3;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[49], tmp_assign_source_15);
     }
     goto try_end_2;
     // Exception handler code:
@@ -17874,9 +17722,6 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     exception_tb = NULL;
     exception_lineno = 0;
 
-    CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-    Py_DECREF(tmp_class_creation_1__bases_orig);
-    tmp_class_creation_1__bases_orig = NULL;
     Py_XDECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
     Py_XDECREF(tmp_class_creation_1__class_decl_dict);
@@ -17894,14 +17739,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto try_except_handler_2;
     // End of try:
     try_end_2:;
-    CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-    Py_DECREF(tmp_class_creation_1__bases_orig);
-    tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -17950,20 +17795,20 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // End of try:
     try_end_1:;
     {
-        PyObject *tmp_assign_source_18;
+        PyObject *tmp_assign_source_17;
         PyObject *tmp_import_name_from_5;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[185];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[186];
-        tmp_level_name_6 = mod_consts[15];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[182];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[183];
+        tmp_level_value_6 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 63;
-        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17975,18 +17820,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_5)) {
-            tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_17 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[136],
+                mod_consts[133],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[136]);
+            tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[133]);
         }
 
         Py_DECREF(tmp_import_name_from_5);
-        if (tmp_assign_source_18 == NULL) {
+        if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -17996,23 +17841,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[136], tmp_assign_source_18);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[133], tmp_assign_source_17);
     }
     {
-        PyObject *tmp_assign_source_19;
+        PyObject *tmp_assign_source_18;
         PyObject *tmp_import_name_from_6;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[67];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[187];
-        tmp_level_name_7 = mod_consts[15];
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[64];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = mod_consts[184];
+        tmp_level_value_7 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 64;
-        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_import_name_from_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18024,18 +17869,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_6)) {
-            tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[188],
+                mod_consts[185],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[188]);
+            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[185]);
         }
 
         Py_DECREF(tmp_import_name_from_6);
-        if (tmp_assign_source_19 == NULL) {
+        if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18045,23 +17890,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[78], tmp_assign_source_18);
     }
     {
-        PyObject *tmp_assign_source_20;
+        PyObject *tmp_assign_source_19;
         PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[67];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[189];
-        tmp_level_name_8 = mod_consts[15];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[64];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_8 = Py_None;
+        tmp_fromlist_value_8 = mod_consts[186];
+        tmp_level_value_8 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 65;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
+        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
         if (tmp_import_name_from_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18073,18 +17918,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_7)) {
-            tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[89],
+                mod_consts[86],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[89]);
+            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[86]);
         }
 
         Py_DECREF(tmp_import_name_from_7);
-        if (tmp_assign_source_20 == NULL) {
+        if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18094,24 +17939,24 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_19);
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_21;
+        PyObject *tmp_assign_source_20;
         PyObject *tmp_import_name_from_8;
-        PyObject *tmp_name_name_9;
-        PyObject *tmp_globals_arg_name_9;
-        PyObject *tmp_locals_arg_name_9;
-        PyObject *tmp_fromlist_name_9;
-        PyObject *tmp_level_name_9;
-        tmp_name_name_9 = mod_consts[67];
-        tmp_globals_arg_name_9 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_9 = Py_None;
-        tmp_fromlist_name_9 = mod_consts[190];
-        tmp_level_name_9 = mod_consts[15];
+        PyObject *tmp_name_value_9;
+        PyObject *tmp_globals_arg_value_9;
+        PyObject *tmp_locals_arg_value_9;
+        PyObject *tmp_fromlist_value_9;
+        PyObject *tmp_level_value_9;
+        tmp_name_value_9 = mod_consts[64];
+        tmp_globals_arg_value_9 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_9 = Py_None;
+        tmp_fromlist_value_9 = mod_consts[187];
+        tmp_level_value_9 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 68;
-        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_name_9, tmp_globals_arg_name_9, tmp_locals_arg_name_9, tmp_fromlist_name_9, tmp_level_name_9);
+        tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_value_9, tmp_globals_arg_value_9, tmp_locals_arg_value_9, tmp_fromlist_value_9, tmp_level_value_9);
         if (tmp_import_name_from_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18123,18 +17968,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_6;
         }
         if (PyModule_Check(tmp_import_name_from_8)) {
-            tmp_assign_source_21 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[117],
+                mod_consts[114],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_21 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[117]);
+            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[114]);
         }
 
         Py_DECREF(tmp_import_name_from_8);
-        if (tmp_assign_source_21 == NULL) {
+        if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18144,7 +17989,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_6;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[117], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[114], tmp_assign_source_20);
     }
     goto try_end_4;
     // Exception handler code:
@@ -18173,11 +18018,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // Tried code:
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_3 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_3 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         assert(!(tmp_res == -1));
         tmp_condition_result_8 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_8 != false) {
@@ -18188,25 +18033,25 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_yes_6:;
     {
-        PyObject *tmp_assign_source_22;
-        tmp_assign_source_22 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[117], tmp_assign_source_22);
+        PyObject *tmp_assign_source_21;
+        tmp_assign_source_21 = Py_None;
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[114], tmp_assign_source_21);
     }
     {
-        PyObject *tmp_assign_source_23;
+        PyObject *tmp_assign_source_22;
         PyObject *tmp_import_name_from_9;
-        PyObject *tmp_name_name_10;
-        PyObject *tmp_globals_arg_name_10;
-        PyObject *tmp_locals_arg_name_10;
-        PyObject *tmp_fromlist_name_10;
-        PyObject *tmp_level_name_10;
-        tmp_name_name_10 = mod_consts[191];
-        tmp_globals_arg_name_10 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_10 = Py_None;
-        tmp_fromlist_name_10 = mod_consts[192];
-        tmp_level_name_10 = mod_consts[193];
+        PyObject *tmp_name_value_10;
+        PyObject *tmp_globals_arg_value_10;
+        PyObject *tmp_locals_arg_value_10;
+        PyObject *tmp_fromlist_value_10;
+        PyObject *tmp_level_value_10;
+        tmp_name_value_10 = mod_consts[188];
+        tmp_globals_arg_value_10 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_10 = Py_None;
+        tmp_fromlist_value_10 = mod_consts[189];
+        tmp_level_value_10 = mod_consts[190];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 71;
-        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_name_10, tmp_globals_arg_name_10, tmp_locals_arg_name_10, tmp_fromlist_name_10, tmp_level_name_10);
+        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_value_10, tmp_globals_arg_value_10, tmp_locals_arg_value_10, tmp_fromlist_value_10, tmp_level_value_10);
         if (tmp_import_name_from_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18218,18 +18063,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_7;
         }
         if (PyModule_Check(tmp_import_name_from_9)) {
-            tmp_assign_source_23 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_22 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[194],
+                mod_consts[191],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_23 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[194]);
+            tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[191]);
         }
 
         Py_DECREF(tmp_import_name_from_9);
-        if (tmp_assign_source_23 == NULL) {
+        if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18239,7 +18084,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_7;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[194], tmp_assign_source_23);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[191], tmp_assign_source_22);
     }
     goto branch_end_6;
     branch_no_6:;
@@ -18285,20 +18130,20 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     // End of try:
     try_end_4:;
     {
-        PyObject *tmp_assign_source_24;
-        PyObject *tmp_name_name_11;
-        PyObject *tmp_globals_arg_name_11;
-        PyObject *tmp_locals_arg_name_11;
-        PyObject *tmp_fromlist_name_11;
-        PyObject *tmp_level_name_11;
-        tmp_name_name_11 = mod_consts[195];
-        tmp_globals_arg_name_11 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_11 = Py_None;
-        tmp_fromlist_name_11 = Py_None;
-        tmp_level_name_11 = mod_consts[15];
+        PyObject *tmp_assign_source_23;
+        PyObject *tmp_name_value_11;
+        PyObject *tmp_globals_arg_value_11;
+        PyObject *tmp_locals_arg_value_11;
+        PyObject *tmp_fromlist_value_11;
+        PyObject *tmp_level_value_11;
+        tmp_name_value_11 = mod_consts[192];
+        tmp_globals_arg_value_11 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_11 = Py_None;
+        tmp_fromlist_value_11 = Py_None;
+        tmp_level_value_11 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 73;
-        tmp_assign_source_24 = IMPORT_MODULE5(tmp_name_name_11, tmp_globals_arg_name_11, tmp_locals_arg_name_11, tmp_fromlist_name_11, tmp_level_name_11);
-        if (tmp_assign_source_24 == NULL) {
+        tmp_assign_source_23 = IMPORT_MODULE5(tmp_name_value_11, tmp_globals_arg_value_11, tmp_locals_arg_value_11, tmp_fromlist_value_11, tmp_level_value_11);
+        if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18308,23 +18153,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[195], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[192], tmp_assign_source_23);
     }
     {
-        PyObject *tmp_assign_source_25;
-        PyObject *tmp_name_name_12;
-        PyObject *tmp_globals_arg_name_12;
-        PyObject *tmp_locals_arg_name_12;
-        PyObject *tmp_fromlist_name_12;
-        PyObject *tmp_level_name_12;
-        tmp_name_name_12 = mod_consts[92];
-        tmp_globals_arg_name_12 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_12 = Py_None;
-        tmp_fromlist_name_12 = Py_None;
-        tmp_level_name_12 = mod_consts[15];
+        PyObject *tmp_assign_source_24;
+        PyObject *tmp_name_value_12;
+        PyObject *tmp_globals_arg_value_12;
+        PyObject *tmp_locals_arg_value_12;
+        PyObject *tmp_fromlist_value_12;
+        PyObject *tmp_level_value_12;
+        tmp_name_value_12 = mod_consts[89];
+        tmp_globals_arg_value_12 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_12 = Py_None;
+        tmp_fromlist_value_12 = Py_None;
+        tmp_level_value_12 = mod_consts[15];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 74;
-        tmp_assign_source_25 = IMPORT_MODULE5(tmp_name_name_12, tmp_globals_arg_name_12, tmp_locals_arg_name_12, tmp_fromlist_name_12, tmp_level_name_12);
-        if (tmp_assign_source_25 == NULL) {
+        tmp_assign_source_24 = IMPORT_MODULE5(tmp_name_value_12, tmp_globals_arg_value_12, tmp_locals_arg_value_12, tmp_fromlist_value_12, tmp_level_value_12);
+        if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18334,30 +18179,29 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_24);
+    }
+    {
+        PyObject *tmp_assign_source_25;
+        tmp_assign_source_25 = IMPORT_HARD_SYS();
+        assert(!(tmp_assign_source_25 == NULL));
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[193], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
-        frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 75;
-        tmp_assign_source_26 = IMPORT_HARD_SYS();
-        assert(!(tmp_assign_source_26 == NULL));
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_26);
-    }
-    {
-        PyObject *tmp_assign_source_27;
         PyObject *tmp_import_name_from_10;
-        PyObject *tmp_name_name_13;
-        PyObject *tmp_globals_arg_name_13;
-        PyObject *tmp_locals_arg_name_13;
-        PyObject *tmp_fromlist_name_13;
-        PyObject *tmp_level_name_13;
-        tmp_name_name_13 = mod_consts[196];
-        tmp_globals_arg_name_13 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_13 = Py_None;
-        tmp_fromlist_name_13 = mod_consts[197];
-        tmp_level_name_13 = mod_consts[193];
+        PyObject *tmp_name_value_13;
+        PyObject *tmp_globals_arg_value_13;
+        PyObject *tmp_locals_arg_value_13;
+        PyObject *tmp_fromlist_value_13;
+        PyObject *tmp_level_value_13;
+        tmp_name_value_13 = mod_consts[194];
+        tmp_globals_arg_value_13 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_13 = Py_None;
+        tmp_fromlist_value_13 = mod_consts[195];
+        tmp_level_value_13 = mod_consts[190];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 77;
-        tmp_import_name_from_10 = IMPORT_MODULE5(tmp_name_name_13, tmp_globals_arg_name_13, tmp_locals_arg_name_13, tmp_fromlist_name_13, tmp_level_name_13);
+        tmp_import_name_from_10 = IMPORT_MODULE5(tmp_name_value_13, tmp_globals_arg_value_13, tmp_locals_arg_value_13, tmp_fromlist_value_13, tmp_level_value_13);
         if (tmp_import_name_from_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18369,18 +18213,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_10)) {
-            tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_26 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_10,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
                 mod_consts[4],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[4]);
+            tmp_assign_source_26 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[4]);
         }
 
         Py_DECREF(tmp_import_name_from_10);
-        if (tmp_assign_source_27 == NULL) {
+        if (tmp_assign_source_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18390,23 +18234,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4], tmp_assign_source_27);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4], tmp_assign_source_26);
     }
     {
-        PyObject *tmp_assign_source_28;
+        PyObject *tmp_assign_source_27;
         PyObject *tmp_import_name_from_11;
-        PyObject *tmp_name_name_14;
-        PyObject *tmp_globals_arg_name_14;
-        PyObject *tmp_locals_arg_name_14;
-        PyObject *tmp_fromlist_name_14;
-        PyObject *tmp_level_name_14;
-        tmp_name_name_14 = mod_consts[198];
-        tmp_globals_arg_name_14 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_14 = Py_None;
-        tmp_fromlist_name_14 = mod_consts[199];
-        tmp_level_name_14 = mod_consts[193];
+        PyObject *tmp_name_value_14;
+        PyObject *tmp_globals_arg_value_14;
+        PyObject *tmp_locals_arg_value_14;
+        PyObject *tmp_fromlist_value_14;
+        PyObject *tmp_level_value_14;
+        tmp_name_value_14 = mod_consts[196];
+        tmp_globals_arg_value_14 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_14 = Py_None;
+        tmp_fromlist_value_14 = mod_consts[197];
+        tmp_level_value_14 = mod_consts[190];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 78;
-        tmp_import_name_from_11 = IMPORT_MODULE5(tmp_name_name_14, tmp_globals_arg_name_14, tmp_locals_arg_name_14, tmp_fromlist_name_14, tmp_level_name_14);
+        tmp_import_name_from_11 = IMPORT_MODULE5(tmp_name_value_14, tmp_globals_arg_value_14, tmp_locals_arg_value_14, tmp_fromlist_value_14, tmp_level_value_14);
         if (tmp_import_name_from_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18418,18 +18262,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_11)) {
-            tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_27 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_11,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[132],
+                mod_consts[129],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[132]);
+            tmp_assign_source_27 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[129]);
         }
 
         Py_DECREF(tmp_import_name_from_11);
-        if (tmp_assign_source_28 == NULL) {
+        if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18439,23 +18283,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[132], tmp_assign_source_28);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_27);
     }
     {
-        PyObject *tmp_assign_source_29;
+        PyObject *tmp_assign_source_28;
         PyObject *tmp_import_name_from_12;
-        PyObject *tmp_name_name_15;
-        PyObject *tmp_globals_arg_name_15;
-        PyObject *tmp_locals_arg_name_15;
-        PyObject *tmp_fromlist_name_15;
-        PyObject *tmp_level_name_15;
-        tmp_name_name_15 = mod_consts[200];
-        tmp_globals_arg_name_15 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
-        tmp_locals_arg_name_15 = Py_None;
-        tmp_fromlist_name_15 = mod_consts[201];
-        tmp_level_name_15 = mod_consts[193];
+        PyObject *tmp_name_value_15;
+        PyObject *tmp_globals_arg_value_15;
+        PyObject *tmp_locals_arg_value_15;
+        PyObject *tmp_fromlist_value_15;
+        PyObject *tmp_level_value_15;
+        tmp_name_value_15 = mod_consts[198];
+        tmp_globals_arg_value_15 = (PyObject *)moduledict_urllib3$contrib$pyopenssl;
+        tmp_locals_arg_value_15 = Py_None;
+        tmp_fromlist_value_15 = mod_consts[199];
+        tmp_level_value_15 = mod_consts[190];
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 79;
-        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_name_15, tmp_globals_arg_name_15, tmp_locals_arg_name_15, tmp_fromlist_name_15, tmp_level_name_15);
+        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_value_15, tmp_globals_arg_value_15, tmp_locals_arg_value_15, tmp_fromlist_value_15, tmp_level_value_15);
         if (tmp_import_name_from_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18467,18 +18311,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         if (PyModule_Check(tmp_import_name_from_12)) {
-            tmp_assign_source_29 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_28 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_12,
                 (PyObject *)moduledict_urllib3$contrib$pyopenssl,
-                mod_consts[202],
+                mod_consts[200],
                 mod_consts[15]
             );
         } else {
-            tmp_assign_source_29 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[202]);
+            tmp_assign_source_28 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[200]);
         }
 
         Py_DECREF(tmp_import_name_from_12);
-        if (tmp_assign_source_29 == NULL) {
+        if (tmp_assign_source_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18488,32 +18332,32 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[200], tmp_assign_source_28);
+    }
+    {
+        PyObject *tmp_assign_source_29;
+        tmp_assign_source_29 = LIST_COPY(mod_consts[201]);
         UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[202], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
-        tmp_assign_source_30 = LIST_COPY(mod_consts[203]);
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[204], tmp_assign_source_30);
+        tmp_assign_source_30 = Py_True;
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
-        tmp_assign_source_31 = Py_True;
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_31);
-    }
-    {
-        PyObject *tmp_assign_source_32;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18523,7 +18367,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[205]);
+        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[203]);
         if (tmp_dict_key_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18534,13 +18378,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18550,8 +18394,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[76]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[73]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18561,8 +18405,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[206]);
-        Py_DECREF(tmp_expression_name_7);
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[204]);
+        Py_DECREF(tmp_expression_value_7);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18573,14 +18417,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_32 = _PyDict_NewPresized( 3 );
+        tmp_assign_source_31 = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_9;
-            PyObject *tmp_expression_name_10;
-            PyObject *tmp_expression_name_11;
-            PyObject *tmp_expression_name_12;
-            PyObject *tmp_expression_name_13;
-            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_1, tmp_dict_value_1);
+            PyObject *tmp_expression_value_9;
+            PyObject *tmp_expression_value_10;
+            PyObject *tmp_expression_value_11;
+            PyObject *tmp_expression_value_12;
+            PyObject *tmp_expression_value_13;
+            tmp_res = PyDict_SetItem(tmp_assign_source_31, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             Py_DECREF(tmp_dict_key_1);
             if (tmp_res != 0) {
@@ -18593,10 +18437,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[202]);
+            tmp_dict_key_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[200]);
 
             if (unlikely(tmp_dict_key_1 == NULL)) {
-                tmp_dict_key_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[202]);
+                tmp_dict_key_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[200]);
             }
 
             if (tmp_dict_key_1 == NULL) {
@@ -18609,13 +18453,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+            tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-            if (unlikely(tmp_expression_name_10 == NULL)) {
-                tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+            if (unlikely(tmp_expression_value_10 == NULL)) {
+                tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
             }
 
-            if (tmp_expression_name_10 == NULL) {
+            if (tmp_expression_value_10 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18625,8 +18469,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[76]);
-            if (tmp_expression_name_9 == NULL) {
+            tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[73]);
+            if (tmp_expression_value_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18636,8 +18480,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[206]);
-            Py_DECREF(tmp_expression_name_9);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[204]);
+            Py_DECREF(tmp_expression_value_9);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18648,7 +18492,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_1, tmp_dict_value_1);
+            tmp_res = PyDict_SetItem(tmp_assign_source_31, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18660,13 +18504,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+            tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-            if (unlikely(tmp_expression_name_11 == NULL)) {
-                tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            if (unlikely(tmp_expression_value_11 == NULL)) {
+                tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
-            if (tmp_expression_name_11 == NULL) {
+            if (tmp_expression_value_11 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18676,7 +18520,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[207]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[205]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18687,13 +18531,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+            tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-            if (unlikely(tmp_expression_name_13 == NULL)) {
-                tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+            if (unlikely(tmp_expression_value_13 == NULL)) {
+                tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
             }
 
-            if (tmp_expression_name_13 == NULL) {
+            if (tmp_expression_value_13 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18703,8 +18547,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[76]);
-            if (tmp_expression_name_12 == NULL) {
+            tmp_expression_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[73]);
+            if (tmp_expression_value_12 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18714,8 +18558,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[208]);
-            Py_DECREF(tmp_expression_name_12);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[206]);
+            Py_DECREF(tmp_expression_value_12);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -18726,7 +18570,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_1;
             }
-            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_1, tmp_dict_value_1);
+            tmp_res = PyDict_SetItem(tmp_assign_source_31, tmp_dict_key_1, tmp_dict_value_1);
             Py_DECREF(tmp_dict_value_1);
             Py_DECREF(tmp_dict_key_1);
             if (tmp_res != 0) {
@@ -18743,29 +18587,29 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         goto dict_build_noexception_1;
         // Exception handling pass through code for dict_build:
         dict_build_exception_1:;
-        Py_DECREF(tmp_assign_source_32);
+        Py_DECREF(tmp_assign_source_31);
         goto frame_exception_exit_1;
         // Finished with no exception for dict_build:
         dict_build_noexception_1:;
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[119], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_31);
     }
     {
         nuitka_bool tmp_condition_result_9;
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_attribute_name_1;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_attribute_name_2;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_attribute_value_1;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_attribute_value_2;
+        tmp_expression_value_14 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_14 == NULL)) {
+            tmp_expression_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18775,8 +18619,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_1 = mod_consts[209];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_14, tmp_attribute_name_1);
+        tmp_attribute_value_1 = mod_consts[207];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_14, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18805,13 +18649,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto and_left_1;
         }
         and_right_1:;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_16 == NULL)) {
+            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18821,8 +18665,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[76]);
-        if (tmp_expression_name_15 == NULL) {
+        tmp_expression_value_15 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[73]);
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18832,9 +18676,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_2 = mod_consts[210];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_15, tmp_attribute_name_2);
-        Py_DECREF(tmp_expression_name_15);
+        tmp_attribute_value_2 = mod_consts[208];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_15, tmp_attribute_value_2);
+        Py_DECREF(tmp_expression_value_15);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18860,18 +18704,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_7:;
     {
         PyObject *tmp_ass_subvalue_1;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_expression_value_18;
         PyObject *tmp_ass_subscribed_1;
         PyObject *tmp_ass_subscript_1;
-        PyObject *tmp_expression_name_19;
-        tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_expression_value_19;
+        tmp_expression_value_18 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_18 == NULL)) {
-            tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_18 == NULL)) {
+            tmp_expression_value_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18881,8 +18725,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[76]);
-        if (tmp_expression_name_17 == NULL) {
+        tmp_expression_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[73]);
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18892,8 +18736,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[210]);
-        Py_DECREF(tmp_expression_name_17);
+        tmp_ass_subvalue_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[208]);
+        Py_DECREF(tmp_expression_value_17);
         if (tmp_ass_subvalue_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18904,10 +18748,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[119]);
+        tmp_ass_subscribed_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[116]);
 
         if (unlikely(tmp_ass_subscribed_1 == NULL)) {
-            tmp_ass_subscribed_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[119]);
+            tmp_ass_subscribed_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
         }
 
         if (tmp_ass_subscribed_1 == NULL) {
@@ -18920,13 +18764,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_19 == NULL)) {
-            tmp_expression_name_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_19 == NULL)) {
+            tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18936,7 +18780,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[209]);
+        tmp_ass_subscript_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[207]);
         if (tmp_ass_subscript_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18967,18 +18811,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         int tmp_and_left_truth_2;
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_attribute_name_3;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_attribute_name_4;
-        tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_attribute_value_3;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_attribute_value_4;
+        tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_20 == NULL)) {
-            tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_20 == NULL)) {
+            tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_20 == NULL) {
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18988,8 +18832,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_3 = mod_consts[211];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_20, tmp_attribute_name_3);
+        tmp_attribute_value_3 = mod_consts[209];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_20, tmp_attribute_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19018,13 +18862,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto and_left_2;
         }
         and_right_2:;
-        tmp_expression_name_22 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_22 == NULL)) {
-            tmp_expression_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_22 == NULL)) {
+            tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_22 == NULL) {
+        if (tmp_expression_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19034,8 +18878,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[76]);
-        if (tmp_expression_name_21 == NULL) {
+        tmp_expression_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[73]);
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19045,9 +18889,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_4 = mod_consts[212];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_21, tmp_attribute_name_4);
-        Py_DECREF(tmp_expression_name_21);
+        tmp_attribute_value_4 = mod_consts[210];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_21, tmp_attribute_value_4);
+        Py_DECREF(tmp_expression_value_21);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19073,18 +18917,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_8:;
     {
         PyObject *tmp_ass_subvalue_2;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_expression_name_24;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
         PyObject *tmp_ass_subscribed_2;
         PyObject *tmp_ass_subscript_2;
-        PyObject *tmp_expression_name_25;
-        tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_expression_value_25;
+        tmp_expression_value_24 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_24 == NULL)) {
-            tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_24 == NULL)) {
+            tmp_expression_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_24 == NULL) {
+        if (tmp_expression_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19094,8 +18938,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[76]);
-        if (tmp_expression_name_23 == NULL) {
+        tmp_expression_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[73]);
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19105,8 +18949,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[212]);
-        Py_DECREF(tmp_expression_name_23);
+        tmp_ass_subvalue_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_23, mod_consts[210]);
+        Py_DECREF(tmp_expression_value_23);
         if (tmp_ass_subvalue_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19117,10 +18961,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[119]);
+        tmp_ass_subscribed_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[116]);
 
         if (unlikely(tmp_ass_subscribed_2 == NULL)) {
-            tmp_ass_subscribed_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[119]);
+            tmp_ass_subscribed_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
         }
 
         if (tmp_ass_subscribed_2 == NULL) {
@@ -19133,13 +18977,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_25 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        tmp_expression_value_25 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_25 == NULL)) {
-            tmp_expression_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_25 == NULL)) {
+            tmp_expression_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_25 == NULL) {
+        if (tmp_expression_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19149,7 +18993,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[211]);
+        tmp_ass_subscript_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[209]);
         if (tmp_ass_subscript_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19180,18 +19024,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         int tmp_and_left_truth_3;
         nuitka_bool tmp_and_left_value_3;
         nuitka_bool tmp_and_right_value_3;
-        PyObject *tmp_expression_name_26;
-        PyObject *tmp_attribute_name_5;
-        PyObject *tmp_expression_name_27;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_attribute_name_6;
-        tmp_expression_name_26 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_attribute_value_5;
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_attribute_value_6;
+        tmp_expression_value_26 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_26 == NULL)) {
-            tmp_expression_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_26 == NULL)) {
+            tmp_expression_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_26 == NULL) {
+        if (tmp_expression_value_26 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19201,8 +19045,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_5 = mod_consts[213];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_26, tmp_attribute_name_5);
+        tmp_attribute_value_5 = mod_consts[211];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_26, tmp_attribute_value_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19231,13 +19075,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto and_left_3;
         }
         and_right_3:;
-        tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_28 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_28 == NULL)) {
-            tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_28 == NULL)) {
+            tmp_expression_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_28 == NULL) {
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19247,8 +19091,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[76]);
-        if (tmp_expression_name_27 == NULL) {
+        tmp_expression_value_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[73]);
+        if (tmp_expression_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19258,9 +19102,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_6 = mod_consts[214];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_27, tmp_attribute_name_6);
-        Py_DECREF(tmp_expression_name_27);
+        tmp_attribute_value_6 = mod_consts[212];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_27, tmp_attribute_value_6);
+        Py_DECREF(tmp_expression_value_27);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19286,18 +19130,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_9:;
     {
         PyObject *tmp_ass_subvalue_3;
-        PyObject *tmp_expression_name_29;
-        PyObject *tmp_expression_name_30;
+        PyObject *tmp_expression_value_29;
+        PyObject *tmp_expression_value_30;
         PyObject *tmp_ass_subscribed_3;
         PyObject *tmp_ass_subscript_3;
-        PyObject *tmp_expression_name_31;
-        tmp_expression_name_30 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        PyObject *tmp_expression_value_31;
+        tmp_expression_value_30 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_30 == NULL)) {
-            tmp_expression_name_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_30 == NULL)) {
+            tmp_expression_value_30 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_30 == NULL) {
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19307,8 +19151,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_29 = LOOKUP_ATTRIBUTE(tmp_expression_name_30, mod_consts[76]);
-        if (tmp_expression_name_29 == NULL) {
+        tmp_expression_value_29 = LOOKUP_ATTRIBUTE(tmp_expression_value_30, mod_consts[73]);
+        if (tmp_expression_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19318,8 +19162,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[214]);
-        Py_DECREF(tmp_expression_name_29);
+        tmp_ass_subvalue_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[212]);
+        Py_DECREF(tmp_expression_value_29);
         if (tmp_ass_subvalue_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19330,10 +19174,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[119]);
+        tmp_ass_subscribed_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[116]);
 
         if (unlikely(tmp_ass_subscribed_3 == NULL)) {
-            tmp_ass_subscribed_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[119]);
+            tmp_ass_subscribed_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[116]);
         }
 
         if (tmp_ass_subscribed_3 == NULL) {
@@ -19346,13 +19190,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_31 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        tmp_expression_value_31 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_31 == NULL)) {
-            tmp_expression_name_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_31 == NULL)) {
+            tmp_expression_value_31 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_31 == NULL) {
+        if (tmp_expression_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19362,7 +19206,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscript_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_31, mod_consts[213]);
+        tmp_ass_subscript_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_31, mod_consts[211]);
         if (tmp_ass_subscript_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19389,19 +19233,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_no_9:;
     {
-        PyObject *tmp_assign_source_33;
+        PyObject *tmp_assign_source_32;
         PyObject *tmp_dict_key_2;
         PyObject *tmp_dict_value_2;
-        PyObject *tmp_expression_name_32;
-        PyObject *tmp_expression_name_33;
-        PyObject *tmp_expression_name_34;
-        tmp_expression_name_32 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_expression_value_33;
+        PyObject *tmp_expression_value_34;
+        tmp_expression_value_32 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-        if (unlikely(tmp_expression_name_32 == NULL)) {
-            tmp_expression_name_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+        if (unlikely(tmp_expression_value_32 == NULL)) {
+            tmp_expression_value_32 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
-        if (tmp_expression_name_32 == NULL) {
+        if (tmp_expression_value_32 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19411,7 +19255,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[215]);
+        tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[213]);
         if (tmp_dict_key_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19422,13 +19266,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_34 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+        tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-        if (unlikely(tmp_expression_name_34 == NULL)) {
-            tmp_expression_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+        if (unlikely(tmp_expression_value_34 == NULL)) {
+            tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
         }
 
-        if (tmp_expression_name_34 == NULL) {
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19438,8 +19282,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_33 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[76]);
-        if (tmp_expression_name_33 == NULL) {
+        tmp_expression_value_33 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[73]);
+        if (tmp_expression_value_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19449,8 +19293,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[216]);
-        Py_DECREF(tmp_expression_name_33);
+        tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[214]);
+        Py_DECREF(tmp_expression_value_33);
         if (tmp_dict_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19461,19 +19305,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_33 = _PyDict_NewPresized( 3 );
+        tmp_assign_source_32 = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_35;
-            PyObject *tmp_expression_name_36;
-            PyObject *tmp_expression_name_37;
-            PyObject *tmp_expression_name_38;
-            PyObject *tmp_left_name_2;
-            PyObject *tmp_expression_name_39;
-            PyObject *tmp_expression_name_40;
-            PyObject *tmp_right_name_2;
-            PyObject *tmp_expression_name_41;
-            PyObject *tmp_expression_name_42;
-            tmp_res = PyDict_SetItem(tmp_assign_source_33, tmp_dict_key_2, tmp_dict_value_2);
+            PyObject *tmp_expression_value_35;
+            PyObject *tmp_expression_value_36;
+            PyObject *tmp_expression_value_37;
+            PyObject *tmp_expression_value_38;
+            PyObject *tmp_left_value_2;
+            PyObject *tmp_expression_value_39;
+            PyObject *tmp_expression_value_40;
+            PyObject *tmp_right_value_2;
+            PyObject *tmp_expression_value_41;
+            PyObject *tmp_expression_value_42;
+            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_2, tmp_dict_value_2);
             Py_DECREF(tmp_dict_value_2);
             Py_DECREF(tmp_dict_key_2);
             if (tmp_res != 0) {
@@ -19486,13 +19330,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_35 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+            tmp_expression_value_35 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-            if (unlikely(tmp_expression_name_35 == NULL)) {
-                tmp_expression_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            if (unlikely(tmp_expression_value_35 == NULL)) {
+                tmp_expression_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
-            if (tmp_expression_name_35 == NULL) {
+            if (tmp_expression_value_35 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19502,7 +19346,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[217]);
+            tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[215]);
             if (tmp_dict_key_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -19513,13 +19357,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_37 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+            tmp_expression_value_37 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-            if (unlikely(tmp_expression_name_37 == NULL)) {
-                tmp_expression_name_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+            if (unlikely(tmp_expression_value_37 == NULL)) {
+                tmp_expression_value_37 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
             }
 
-            if (tmp_expression_name_37 == NULL) {
+            if (tmp_expression_value_37 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19529,8 +19373,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_36 = LOOKUP_ATTRIBUTE(tmp_expression_name_37, mod_consts[76]);
-            if (tmp_expression_name_36 == NULL) {
+            tmp_expression_value_36 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[73]);
+            if (tmp_expression_value_36 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19540,8 +19384,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_36, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_36);
+            tmp_dict_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_36, mod_consts[216]);
+            Py_DECREF(tmp_expression_value_36);
             if (tmp_dict_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -19552,7 +19396,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_res = PyDict_SetItem(tmp_assign_source_33, tmp_dict_key_2, tmp_dict_value_2);
+            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_2, tmp_dict_value_2);
             Py_DECREF(tmp_dict_value_2);
             Py_DECREF(tmp_dict_key_2);
             if (tmp_res != 0) {
@@ -19565,13 +19409,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_38 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[92]);
+            tmp_expression_value_38 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[89]);
 
-            if (unlikely(tmp_expression_name_38 == NULL)) {
-                tmp_expression_name_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[92]);
+            if (unlikely(tmp_expression_value_38 == NULL)) {
+                tmp_expression_value_38 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
-            if (tmp_expression_name_38 == NULL) {
+            if (tmp_expression_value_38 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19581,7 +19425,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[219]);
+            tmp_dict_key_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[217]);
             if (tmp_dict_key_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -19592,13 +19436,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_40 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+            tmp_expression_value_40 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-            if (unlikely(tmp_expression_name_40 == NULL)) {
-                tmp_expression_name_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+            if (unlikely(tmp_expression_value_40 == NULL)) {
+                tmp_expression_value_40 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
             }
 
-            if (tmp_expression_name_40 == NULL) {
+            if (tmp_expression_value_40 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19608,8 +19452,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_39 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[76]);
-            if (tmp_expression_name_39 == NULL) {
+            tmp_expression_value_39 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[73]);
+            if (tmp_expression_value_39 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19619,9 +19463,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_left_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[218]);
-            Py_DECREF(tmp_expression_name_39);
-            if (tmp_left_name_2 == NULL) {
+            tmp_left_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[216]);
+            Py_DECREF(tmp_expression_value_39);
+            if (tmp_left_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19631,51 +19475,51 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_42 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[75]);
+            tmp_expression_value_42 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[72]);
 
-            if (unlikely(tmp_expression_name_42 == NULL)) {
-                tmp_expression_name_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[75]);
+            if (unlikely(tmp_expression_value_42 == NULL)) {
+                tmp_expression_value_42 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[72]);
             }
 
-            if (tmp_expression_name_42 == NULL) {
+            if (tmp_expression_value_42 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 Py_DECREF(tmp_dict_key_2);
-                Py_DECREF(tmp_left_name_2);
+                Py_DECREF(tmp_left_value_2);
 
                 exception_lineno = 107;
 
                 goto dict_build_exception_2;
             }
-            tmp_expression_name_41 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[76]);
-            if (tmp_expression_name_41 == NULL) {
+            tmp_expression_value_41 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[73]);
+            if (tmp_expression_value_41 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 Py_DECREF(tmp_dict_key_2);
-                Py_DECREF(tmp_left_name_2);
+                Py_DECREF(tmp_left_value_2);
 
                 exception_lineno = 107;
 
                 goto dict_build_exception_2;
             }
-            tmp_right_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[220]);
-            Py_DECREF(tmp_expression_name_41);
-            if (tmp_right_name_2 == NULL) {
+            tmp_right_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[218]);
+            Py_DECREF(tmp_expression_value_41);
+            if (tmp_right_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
                 Py_DECREF(tmp_dict_key_2);
-                Py_DECREF(tmp_left_name_2);
+                Py_DECREF(tmp_left_value_2);
 
                 exception_lineno = 107;
 
                 goto dict_build_exception_2;
             }
-            tmp_dict_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-            Py_DECREF(tmp_left_name_2);
-            Py_DECREF(tmp_right_name_2);
+            tmp_dict_value_2 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+            Py_DECREF(tmp_left_value_2);
+            Py_DECREF(tmp_right_value_2);
             if (tmp_dict_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -19686,7 +19530,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto dict_build_exception_2;
             }
-            tmp_res = PyDict_SetItem(tmp_assign_source_33, tmp_dict_key_2, tmp_dict_value_2);
+            tmp_res = PyDict_SetItem(tmp_assign_source_32, tmp_dict_key_2, tmp_dict_value_2);
             Py_DECREF(tmp_dict_value_2);
             Py_DECREF(tmp_dict_key_2);
             if (tmp_res != 0) {
@@ -19703,41 +19547,31 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         goto dict_build_noexception_2;
         // Exception handling pass through code for dict_build:
         dict_build_exception_2:;
-        Py_DECREF(tmp_assign_source_33);
+        Py_DECREF(tmp_assign_source_32);
         goto frame_exception_exit_1;
         // Finished with no exception for dict_build:
         dict_build_noexception_2:;
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_33);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_32);
     }
     {
-        PyObject *tmp_assign_source_34;
+        PyObject *tmp_assign_source_33;
         PyObject *tmp_dict_seq_1;
         {
-            PyObject *tmp_assign_source_35;
+            PyObject *tmp_assign_source_34;
             PyObject *tmp_iter_arg_1;
-            PyObject *tmp_called_instance_1;
-            tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[129]);
+            PyObject *tmp_dict_arg_1;
+            tmp_dict_arg_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[126]);
 
-            if (unlikely(tmp_called_instance_1 == NULL)) {
-                tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
+            if (unlikely(tmp_dict_arg_1 == NULL)) {
+                tmp_dict_arg_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
             }
 
-            assert(!(tmp_called_instance_1 == NULL));
-            frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 109;
-            tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[221]);
-            if (tmp_iter_arg_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 109;
-
-                goto frame_exception_exit_1;
-            }
-            tmp_assign_source_35 = MAKE_ITERATOR(tmp_iter_arg_1);
+            assert(!(tmp_dict_arg_1 == NULL));
+            tmp_iter_arg_1 = DICT_ITERITEMS(tmp_dict_arg_1);
+            assert(!(tmp_iter_arg_1 == NULL));
+            tmp_assign_source_34 = MAKE_ITERATOR(tmp_iter_arg_1);
             Py_DECREF(tmp_iter_arg_1);
-            if (tmp_assign_source_35 == NULL) {
+            if (tmp_assign_source_34 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19748,7 +19582,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_1;
             }
             assert(tmp_genexpr_1__$0 == NULL);
-            tmp_genexpr_1__$0 = tmp_assign_source_35;
+            tmp_genexpr_1__$0 = tmp_assign_source_34;
         }
         // Tried code:
         {
@@ -19769,15 +19603,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         tmp_genexpr_1__$0 = NULL;
         goto outline_result_2;
         // End of try:
-        CHECK_OBJECT(tmp_genexpr_1__$0);
-        Py_DECREF(tmp_genexpr_1__$0);
-        tmp_genexpr_1__$0 = NULL;
         NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
         return NULL;
         outline_result_2:;
-        tmp_assign_source_34 = TO_DICT(tmp_dict_seq_1, NULL);
+        tmp_assign_source_33 = TO_DICT(tmp_dict_seq_1, NULL);
         Py_DECREF(tmp_dict_seq_1);
-        if (tmp_assign_source_34 == NULL) {
+        if (tmp_assign_source_33 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19787,23 +19618,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_34);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[123], tmp_assign_source_33);
+    }
+    {
+        PyObject *tmp_assign_source_35;
+        tmp_assign_source_35 = mod_consts[219];
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[101], tmp_assign_source_35);
     }
     {
         PyObject *tmp_assign_source_36;
-        tmp_assign_source_36 = mod_consts[222];
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[104], tmp_assign_source_36);
-    }
-    {
-        PyObject *tmp_assign_source_37;
-        PyObject *tmp_expression_name_43;
-        tmp_expression_name_43 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_expression_value_43;
+        tmp_expression_value_43 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_43 == NULL)) {
-            tmp_expression_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_43 == NULL)) {
+            tmp_expression_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_43 == NULL) {
+        if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19813,74 +19644,74 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_37 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[7]);
+        tmp_assign_source_36 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[7]);
+        if (tmp_assign_source_36 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 114;
+
+            goto frame_exception_exit_1;
+        }
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_36);
+    }
+    {
+        PyObject *tmp_assign_source_37;
+        PyObject *tmp_expression_value_44;
+        PyObject *tmp_expression_value_45;
+        tmp_expression_value_45 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+
+        if (unlikely(tmp_expression_value_45 == NULL)) {
+            tmp_expression_value_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        }
+
+        if (tmp_expression_value_45 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 115;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_44 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[6]);
+        if (tmp_expression_value_44 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 115;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_assign_source_37 = LOOKUP_ATTRIBUTE(tmp_expression_value_44, mod_consts[5]);
+        Py_DECREF(tmp_expression_value_44);
         if (tmp_assign_source_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
 
 
-            exception_lineno = 114;
+            exception_lineno = 115;
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_37);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_37);
     }
     {
         PyObject *tmp_assign_source_38;
-        PyObject *tmp_expression_name_44;
-        PyObject *tmp_expression_name_45;
-        tmp_expression_name_45 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_called_instance_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[192]);
 
-        if (unlikely(tmp_expression_name_45 == NULL)) {
-            tmp_expression_name_45 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[192]);
         }
 
-        if (tmp_expression_name_45 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 115;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_expression_name_44 = LOOKUP_ATTRIBUTE(tmp_expression_name_45, mod_consts[6]);
-        if (tmp_expression_name_44 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 115;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_assign_source_38 = LOOKUP_ATTRIBUTE(tmp_expression_name_44, mod_consts[5]);
-        Py_DECREF(tmp_expression_name_44);
-        if (tmp_assign_source_38 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 115;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_38);
-    }
-    {
-        PyObject *tmp_assign_source_39;
-        PyObject *tmp_called_instance_2;
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[195]);
-
-        if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[195]);
-        }
-
-        if (tmp_called_instance_2 == NULL) {
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19891,13 +19722,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto frame_exception_exit_1;
         }
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 118;
-        tmp_assign_source_39 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[223],
-            PyTuple_GET_ITEM(mod_consts[224], 0)
+        tmp_assign_source_38 = CALL_METHOD_WITH_SINGLE_ARG(
+            tmp_called_instance_1,
+            mod_consts[220],
+            PyTuple_GET_ITEM(mod_consts[221], 0)
         );
 
-        if (tmp_assign_source_39 == NULL) {
+        if (tmp_assign_source_38 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19907,60 +19738,60 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_39);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_38);
+    }
+    {
+        PyObject *tmp_assign_source_39;
+
+
+        tmp_assign_source_39 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib3();
+
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[222], tmp_assign_source_39);
     }
     {
         PyObject *tmp_assign_source_40;
 
 
-        tmp_assign_source_40 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__1_inject_into_urllib3();
+        tmp_assign_source_40 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__2_extract_from_urllib3();
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[225], tmp_assign_source_40);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[223], tmp_assign_source_40);
     }
     {
         PyObject *tmp_assign_source_41;
 
 
-        tmp_assign_source_41 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__2_extract_from_urllib3();
+        tmp_assign_source_41 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__3__validate_dependencies_met();
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[226], tmp_assign_source_41);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_41);
     }
     {
         PyObject *tmp_assign_source_42;
 
 
-        tmp_assign_source_42 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__3__validate_dependencies_met();
+        tmp_assign_source_42 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib();
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_42);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_42);
     }
     {
         PyObject *tmp_assign_source_43;
 
 
-        tmp_assign_source_43 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__4__dnsname_to_stdlib();
+        tmp_assign_source_43 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name();
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_43);
-    }
-    {
-        PyObject *tmp_assign_source_44;
-
-
-        tmp_assign_source_44 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__5_get_subj_alt_name();
-
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_44);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[112], tmp_assign_source_43);
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_45;
+        PyObject *tmp_assign_source_44;
         PyObject *tmp_dircall_arg1_2;
-        tmp_dircall_arg1_2 = mod_consts[227];
+        tmp_dircall_arg1_2 = mod_consts[224];
         Py_INCREF(tmp_dircall_arg1_2);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2};
-            tmp_assign_source_45 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_44 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_45 == NULL) {
+        if (tmp_assign_source_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19971,54 +19802,49 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_9;
         }
         assert(tmp_class_creation_2__bases == NULL);
-        tmp_class_creation_2__bases = tmp_assign_source_45;
+        tmp_class_creation_2__bases = tmp_assign_source_44;
+    }
+    {
+        PyObject *tmp_assign_source_45;
+        tmp_assign_source_45 = PyDict_New();
+        assert(tmp_class_creation_2__class_decl_dict == NULL);
+        tmp_class_creation_2__class_decl_dict = tmp_assign_source_45;
     }
     {
         PyObject *tmp_assign_source_46;
-        tmp_assign_source_46 = PyDict_New();
-        assert(tmp_class_creation_2__class_decl_dict == NULL);
-        tmp_class_creation_2__class_decl_dict = tmp_assign_source_46;
-    }
-    {
-        PyObject *tmp_assign_source_47;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_12;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
         nuitka_bool tmp_condition_result_13;
         int tmp_truth_name_2;
         PyObject *tmp_type_arg_3;
-        PyObject *tmp_expression_name_46;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[175];
+        PyObject *tmp_expression_value_46;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_12 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_12 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_12 != false) {
             goto condexpr_true_3;
         } else {
             goto condexpr_false_3;
         }
         condexpr_true_3:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[175];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 268;
-
-            goto try_except_handler_9;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[172];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
+        assert(!(tmp_metaclass_value_2 == NULL));
+        Py_INCREF(tmp_metaclass_value_2);
         goto condexpr_end_3;
         condexpr_false_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
@@ -20041,9 +19867,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         condexpr_true_4:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_expression_name_46 = tmp_class_creation_2__bases;
-        tmp_subscript_name_2 = mod_consts[15];
-        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_46, tmp_subscript_name_2, 0);
+        tmp_expression_value_46 = tmp_class_creation_2__bases;
+        tmp_subscript_value_2 = mod_consts[15];
+        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_46, tmp_subscript_value_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20054,9 +19880,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_9;
         }
-        tmp_metaclass_name_2 = BUILTIN_TYPE1(tmp_type_arg_3);
+        tmp_metaclass_value_2 = BUILTIN_TYPE1(tmp_type_arg_3);
         Py_DECREF(tmp_type_arg_3);
-        if (tmp_metaclass_name_2 == NULL) {
+        if (tmp_metaclass_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20068,15 +19894,15 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         goto condexpr_end_4;
         condexpr_false_4:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_2);
         condexpr_end_4:;
         condexpr_end_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_bases_name_2 = tmp_class_creation_2__bases;
-        tmp_assign_source_47 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
-        if (tmp_assign_source_47 == NULL) {
+        tmp_bases_value_2 = tmp_class_creation_2__bases;
+        tmp_assign_source_46 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
+        Py_DECREF(tmp_metaclass_value_2);
+        if (tmp_assign_source_46 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20087,19 +19913,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_9;
         }
         assert(tmp_class_creation_2__metaclass == NULL);
-        tmp_class_creation_2__metaclass = tmp_assign_source_47;
+        tmp_class_creation_2__metaclass = tmp_assign_source_46;
     }
     {
-        nuitka_bool tmp_condition_result_14;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[175];
+        bool tmp_condition_result_14;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_14 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_14 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_14 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_14 != false) {
             goto branch_yes_10;
         } else {
             goto branch_no_10;
@@ -20108,7 +19934,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_10:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[175];
+    tmp_dictdel_key = mod_consts[172];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -20123,10 +19949,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_no_10:;
     {
         nuitka_bool tmp_condition_result_15;
-        PyObject *tmp_expression_name_47;
+        PyObject *tmp_expression_value_47;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_47 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_47, mod_consts[176]);
+        tmp_expression_value_47 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_47, mod_consts[173]);
         tmp_condition_result_15 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_15 == NUITKA_BOOL_TRUE) {
             goto branch_yes_11;
@@ -20136,16 +19962,16 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_yes_11:;
     {
-        PyObject *tmp_assign_source_48;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_48;
-        PyObject *tmp_args_name_3;
+        PyObject *tmp_assign_source_47;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_48;
+        PyObject *tmp_args_value_3;
         PyObject *tmp_tuple_element_4;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_48 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_48, mod_consts[176]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_48 = tmp_class_creation_2__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[173]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20155,19 +19981,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_9;
         }
-        tmp_tuple_element_4 = mod_consts[155];
-        tmp_args_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_4);
+        tmp_tuple_element_4 = mod_consts[152];
+        tmp_args_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_4);
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_tuple_element_4 = tmp_class_creation_2__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_4);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 1, tmp_tuple_element_4);
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 268;
-        tmp_assign_source_48 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_3);
-        if (tmp_assign_source_48 == NULL) {
+        tmp_assign_source_47 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_3);
+        if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20178,17 +20004,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_9;
         }
         assert(tmp_class_creation_2__prepared == NULL);
-        tmp_class_creation_2__prepared = tmp_assign_source_48;
+        tmp_class_creation_2__prepared = tmp_assign_source_47;
     }
     {
-        nuitka_bool tmp_condition_result_16;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_49;
+        bool tmp_condition_result_16;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_49;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_49 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_49, mod_consts[177]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_49 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_49, mod_consts[174]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20199,8 +20025,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_9;
         }
-        tmp_condition_result_16 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_16 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_16 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_16 != false) {
             goto branch_yes_12;
         } else {
             goto branch_no_12;
@@ -20210,18 +20036,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         PyObject *tmp_tuple_element_5;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_3 = mod_consts[178];
+        tmp_left_value_3 = mod_consts[175];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[179];
-        tmp_getattr_default_2 = mod_consts[180];
+        tmp_getattr_attr_2 = mod_consts[176];
+        tmp_getattr_default_2 = mod_consts[177];
         tmp_tuple_element_5 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20233,17 +20059,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_9;
         }
-        tmp_right_name_3 = PyTuple_New(2);
+        tmp_right_value_3 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_50;
+            PyObject *tmp_expression_value_50;
             PyObject *tmp_type_arg_4;
-            PyTuple_SET_ITEM(tmp_right_name_3, 0, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_right_value_3, 0, tmp_tuple_element_5);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_4 = tmp_class_creation_2__prepared;
-            tmp_expression_name_50 = BUILTIN_TYPE1(tmp_type_arg_4);
-            assert(!(tmp_expression_name_50 == NULL));
-            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_50, mod_consts[179]);
-            Py_DECREF(tmp_expression_name_50);
+            tmp_expression_value_50 = BUILTIN_TYPE1(tmp_type_arg_4);
+            assert(!(tmp_expression_value_50 == NULL));
+            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[176]);
+            Py_DECREF(tmp_expression_value_50);
             if (tmp_tuple_element_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -20254,17 +20080,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_right_name_3, 1, tmp_tuple_element_5);
+            PyTuple_SET_ITEM(tmp_right_value_3, 1, tmp_tuple_element_5);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_right_name_3);
+        Py_DECREF(tmp_right_value_3);
         goto try_except_handler_9;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_3, tmp_right_name_3);
-        Py_DECREF(tmp_right_name_3);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_3, tmp_right_value_3);
+        Py_DECREF(tmp_right_value_3);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20287,14 +20113,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto branch_end_11;
     branch_no_11:;
     {
-        PyObject *tmp_assign_source_49;
-        tmp_assign_source_49 = PyDict_New();
+        PyObject *tmp_assign_source_48;
+        tmp_assign_source_48 = PyDict_New();
         assert(tmp_class_creation_2__prepared == NULL);
-        tmp_class_creation_2__prepared = tmp_assign_source_49;
+        tmp_class_creation_2__prepared = tmp_assign_source_48;
     }
     branch_end_11:;
     {
-        PyObject *tmp_assign_source_50;
+        PyObject *tmp_assign_source_49;
         {
             PyObject *tmp_set_locals_2;
             CHECK_OBJECT(tmp_class_creation_2__prepared);
@@ -20304,8 +20130,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[181];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[182], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[178];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[179], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20316,8 +20142,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_11;
         }
-        tmp_dictset_value = mod_consts[228];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[157], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[225];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[154], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20328,8 +20154,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_11;
         }
-        tmp_dictset_value = mod_consts[155];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[183], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[152];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[180], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20369,13 +20195,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         // Framed code:
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[229];
+            tmp_defaults_1 = mod_consts[226];
             Py_INCREF(tmp_defaults_1);
 
 
             tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__6___init__(tmp_defaults_1);
 
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[230], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[227], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -20392,7 +20218,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__7_fileno();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[71], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[68], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20408,7 +20234,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__8__decref_socketios();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[233], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[230], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20424,7 +20250,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__9_recv();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[74], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[71], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20440,7 +20266,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__10_recv_into();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[95], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[92], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20456,7 +20282,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__11_settimeout();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[96], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[93], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20472,7 +20298,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__12__send_until_done();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[103], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[100], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20488,7 +20314,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__13_sendall();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[239], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[236], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20504,7 +20330,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__14_shutdown();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[105], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[102], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20520,7 +20346,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__15_close();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[73], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[70], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20534,13 +20360,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[243];
+            tmp_defaults_2 = mod_consts[240];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__16_getpeercert(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[244], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[241], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -20557,7 +20383,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__17_version();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[246], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[243], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20573,7 +20399,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__18__reuse();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[248], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[245], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20589,7 +20415,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__19__drop();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[250], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[247], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20658,12 +20484,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_17;
-            PyObject *tmp_compexpr_left_4;
-            PyObject *tmp_compexpr_right_4;
+            PyObject *tmp_cmp_expr_left_4;
+            PyObject *tmp_cmp_expr_right_4;
             CHECK_OBJECT(tmp_class_creation_2__bases);
-            tmp_compexpr_left_4 = tmp_class_creation_2__bases;
-            tmp_compexpr_right_4 = mod_consts[227];
-            tmp_condition_result_17 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_4, tmp_compexpr_right_4);
+            tmp_cmp_expr_left_4 = tmp_class_creation_2__bases;
+            tmp_cmp_expr_right_4 = mod_consts[224];
+            tmp_condition_result_17 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
             if (tmp_condition_result_17 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -20682,8 +20508,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             assert(tmp_condition_result_17 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_13:;
-        tmp_dictset_value = mod_consts[227];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[184], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[224];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268, mod_consts[181], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20696,27 +20522,27 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         branch_no_13:;
         {
-            PyObject *tmp_assign_source_51;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_assign_source_50;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_6;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_4 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_6 = mod_consts[155];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_6);
+            tmp_called_value_4 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_6 = mod_consts[152];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_2__bases);
             tmp_tuple_element_6 = tmp_class_creation_2__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_6);
             tmp_tuple_element_6 = locals_urllib3$contrib$pyopenssl$$$class__2_WrappedSocket_268;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 268;
-            tmp_assign_source_51 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
-            if (tmp_assign_source_51 == NULL) {
+            tmp_assign_source_50 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
+            if (tmp_assign_source_50 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20727,11 +20553,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto try_except_handler_11;
             }
             assert(outline_1_var___class__ == NULL);
-            outline_1_var___class__ = tmp_assign_source_51;
+            outline_1_var___class__ = tmp_assign_source_50;
         }
         CHECK_OBJECT(outline_1_var___class__);
-        tmp_assign_source_50 = outline_1_var___class__;
-        Py_INCREF(tmp_assign_source_50);
+        tmp_assign_source_49 = outline_1_var___class__;
+        Py_INCREF(tmp_assign_source_49);
         goto try_return_handler_11;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -20794,7 +20620,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         exception_lineno = 268;
         goto try_except_handler_9;
         outline_result_3:;
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[155], tmp_assign_source_50);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[152], tmp_assign_source_49);
     }
     goto try_end_6;
     // Exception handler code:
@@ -20825,11 +20651,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto frame_exception_exit_1;
     // End of try:
     try_end_6:;
-    Py_XDECREF(tmp_class_creation_2__bases);
+    CHECK_OBJECT(tmp_class_creation_2__bases);
+    Py_DECREF(tmp_class_creation_2__bases);
     tmp_class_creation_2__bases = NULL;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
@@ -20838,10 +20667,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         nuitka_bool tmp_condition_result_18;
         PyObject *tmp_mvar_value_1;
         int tmp_truth_name_3;
-        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[117]);
+        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[114]);
 
         if (unlikely(tmp_mvar_value_1 == NULL)) {
-            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
+            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[114]);
         }
 
         if (tmp_mvar_value_1 == NULL) {
@@ -20874,27 +20703,27 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_yes_14:;
     {
-        PyObject *tmp_assign_source_52;
+        PyObject *tmp_assign_source_51;
         PyObject *tmp_defaults_3;
-        tmp_defaults_3 = mod_consts[252];
+        tmp_defaults_3 = mod_consts[249];
         Py_INCREF(tmp_defaults_3);
 
 
-        tmp_assign_source_52 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__20_makefile(tmp_defaults_3);
+        tmp_assign_source_51 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__20_makefile(tmp_defaults_3);
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[253], tmp_assign_source_52);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_51);
     }
     goto branch_end_14;
     branch_no_14:;
     {
-        PyObject *tmp_assign_source_53;
-        tmp_assign_source_53 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[194]);
+        PyObject *tmp_assign_source_52;
+        tmp_assign_source_52 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[191]);
 
-        if (unlikely(tmp_assign_source_53 == NULL)) {
-            tmp_assign_source_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[194]);
+        if (unlikely(tmp_assign_source_52 == NULL)) {
+            tmp_assign_source_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[191]);
         }
 
-        if (tmp_assign_source_53 == NULL) {
+        if (tmp_assign_source_52 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20904,23 +20733,23 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[253], tmp_assign_source_53);
+        UPDATE_STRING_DICT0(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[250], tmp_assign_source_52);
     }
     branch_end_14:;
     {
         PyObject *tmp_assattr_value_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[253]);
+        tmp_assattr_value_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[250]);
 
         if (unlikely(tmp_assattr_value_3 == NULL)) {
-            tmp_assattr_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[253]);
+            tmp_assattr_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[250]);
         }
 
         assert(!(tmp_assattr_value_3 == NULL));
-        tmp_assattr_target_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[155]);
+        tmp_assattr_target_3 = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[152]);
 
         if (unlikely(tmp_assattr_target_3 == NULL)) {
-            tmp_assattr_target_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[155]);
+            tmp_assattr_target_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[152]);
         }
 
         if (tmp_assattr_target_3 == NULL) {
@@ -20933,7 +20762,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto frame_exception_exit_1;
         }
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[253], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[250], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -20947,16 +20776,16 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_54;
+        PyObject *tmp_assign_source_53;
         PyObject *tmp_dircall_arg1_3;
-        tmp_dircall_arg1_3 = mod_consts[227];
+        tmp_dircall_arg1_3 = mod_consts[224];
         Py_INCREF(tmp_dircall_arg1_3);
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_3};
-            tmp_assign_source_54 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
+            tmp_assign_source_53 = impl___main__$$$function__1__mro_entries_conversion(dir_call_args);
         }
-        if (tmp_assign_source_54 == NULL) {
+        if (tmp_assign_source_53 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20967,54 +20796,49 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_12;
         }
         assert(tmp_class_creation_3__bases == NULL);
-        tmp_class_creation_3__bases = tmp_assign_source_54;
+        tmp_class_creation_3__bases = tmp_assign_source_53;
+    }
+    {
+        PyObject *tmp_assign_source_54;
+        tmp_assign_source_54 = PyDict_New();
+        assert(tmp_class_creation_3__class_decl_dict == NULL);
+        tmp_class_creation_3__class_decl_dict = tmp_assign_source_54;
     }
     {
         PyObject *tmp_assign_source_55;
-        tmp_assign_source_55 = PyDict_New();
-        assert(tmp_class_creation_3__class_decl_dict == NULL);
-        tmp_class_creation_3__class_decl_dict = tmp_assign_source_55;
-    }
-    {
-        PyObject *tmp_assign_source_56;
-        PyObject *tmp_metaclass_name_3;
-        nuitka_bool tmp_condition_result_19;
-        PyObject *tmp_key_name_7;
-        PyObject *tmp_dict_arg_name_7;
-        PyObject *tmp_dict_arg_name_8;
-        PyObject *tmp_key_name_8;
+        PyObject *tmp_metaclass_value_3;
+        bool tmp_condition_result_19;
+        PyObject *tmp_key_value_7;
+        PyObject *tmp_dict_arg_value_7;
+        PyObject *tmp_dict_arg_value_8;
+        PyObject *tmp_key_value_8;
         nuitka_bool tmp_condition_result_20;
         int tmp_truth_name_4;
         PyObject *tmp_type_arg_5;
-        PyObject *tmp_expression_name_51;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_bases_name_3;
-        tmp_key_name_7 = mod_consts[175];
+        PyObject *tmp_expression_value_51;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_bases_value_3;
+        tmp_key_value_7 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_7 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_7, tmp_key_name_7);
+        tmp_dict_arg_value_7 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_7, tmp_key_value_7);
         assert(!(tmp_res == -1));
-        tmp_condition_result_19 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_19 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_19 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_19 != false) {
             goto condexpr_true_5;
         } else {
             goto condexpr_false_5;
         }
         condexpr_true_5:;
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_8 = tmp_class_creation_3__class_decl_dict;
-        tmp_key_name_8 = mod_consts[175];
-        tmp_metaclass_name_3 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_8, tmp_key_name_8);
-        if (tmp_metaclass_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 416;
-
-            goto try_except_handler_12;
+        tmp_dict_arg_value_8 = tmp_class_creation_3__class_decl_dict;
+        tmp_key_value_8 = mod_consts[172];
+        tmp_metaclass_value_3 = DICT_GET_ITEM0(tmp_dict_arg_value_8, tmp_key_value_8);
+        if (tmp_metaclass_value_3 == NULL) {
+            tmp_metaclass_value_3 = Py_None;
         }
+        assert(!(tmp_metaclass_value_3 == NULL));
+        Py_INCREF(tmp_metaclass_value_3);
         goto condexpr_end_5;
         condexpr_false_5:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
@@ -21037,9 +20861,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         condexpr_true_6:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_expression_name_51 = tmp_class_creation_3__bases;
-        tmp_subscript_name_3 = mod_consts[15];
-        tmp_type_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_51, tmp_subscript_name_3, 0);
+        tmp_expression_value_51 = tmp_class_creation_3__bases;
+        tmp_subscript_value_3 = mod_consts[15];
+        tmp_type_arg_5 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_51, tmp_subscript_value_3, 0);
         if (tmp_type_arg_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21050,9 +20874,9 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_12;
         }
-        tmp_metaclass_name_3 = BUILTIN_TYPE1(tmp_type_arg_5);
+        tmp_metaclass_value_3 = BUILTIN_TYPE1(tmp_type_arg_5);
         Py_DECREF(tmp_type_arg_5);
-        if (tmp_metaclass_name_3 == NULL) {
+        if (tmp_metaclass_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21064,15 +20888,15 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         goto condexpr_end_6;
         condexpr_false_6:;
-        tmp_metaclass_name_3 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_3);
+        tmp_metaclass_value_3 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_3);
         condexpr_end_6:;
         condexpr_end_5:;
         CHECK_OBJECT(tmp_class_creation_3__bases);
-        tmp_bases_name_3 = tmp_class_creation_3__bases;
-        tmp_assign_source_56 = SELECT_METACLASS(tmp_metaclass_name_3, tmp_bases_name_3);
-        Py_DECREF(tmp_metaclass_name_3);
-        if (tmp_assign_source_56 == NULL) {
+        tmp_bases_value_3 = tmp_class_creation_3__bases;
+        tmp_assign_source_55 = SELECT_METACLASS(tmp_metaclass_value_3, tmp_bases_value_3);
+        Py_DECREF(tmp_metaclass_value_3);
+        if (tmp_assign_source_55 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21083,19 +20907,19 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_12;
         }
         assert(tmp_class_creation_3__metaclass == NULL);
-        tmp_class_creation_3__metaclass = tmp_assign_source_56;
+        tmp_class_creation_3__metaclass = tmp_assign_source_55;
     }
     {
-        nuitka_bool tmp_condition_result_21;
-        PyObject *tmp_key_name_9;
-        PyObject *tmp_dict_arg_name_9;
-        tmp_key_name_9 = mod_consts[175];
+        bool tmp_condition_result_21;
+        PyObject *tmp_key_value_9;
+        PyObject *tmp_dict_arg_value_9;
+        tmp_key_value_9 = mod_consts[172];
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_dict_arg_name_9 = tmp_class_creation_3__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_9, tmp_key_name_9);
+        tmp_dict_arg_value_9 = tmp_class_creation_3__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_9, tmp_key_value_9);
         assert(!(tmp_res == -1));
-        tmp_condition_result_21 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_21 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_21 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_21 != false) {
             goto branch_yes_15;
         } else {
             goto branch_no_15;
@@ -21104,7 +20928,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_yes_15:;
     CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_3__class_decl_dict;
-    tmp_dictdel_key = mod_consts[175];
+    tmp_dictdel_key = mod_consts[172];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -21119,10 +20943,10 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     branch_no_15:;
     {
         nuitka_bool tmp_condition_result_22;
-        PyObject *tmp_expression_name_52;
+        PyObject *tmp_expression_value_52;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_52 = tmp_class_creation_3__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_52, mod_consts[176]);
+        tmp_expression_value_52 = tmp_class_creation_3__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_52, mod_consts[173]);
         tmp_condition_result_22 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_22 == NUITKA_BOOL_TRUE) {
             goto branch_yes_16;
@@ -21132,16 +20956,16 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     }
     branch_yes_16:;
     {
-        PyObject *tmp_assign_source_57;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_53;
-        PyObject *tmp_args_name_5;
+        PyObject *tmp_assign_source_56;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_53;
+        PyObject *tmp_args_value_5;
         PyObject *tmp_tuple_element_7;
-        PyObject *tmp_kwargs_name_5;
+        PyObject *tmp_kwargs_value_5;
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
-        tmp_expression_name_53 = tmp_class_creation_3__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_53, mod_consts[176]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_53 = tmp_class_creation_3__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[173]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21152,18 +20976,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_12;
         }
         tmp_tuple_element_7 = mod_consts[3];
-        tmp_args_name_5 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_5, 0, tmp_tuple_element_7);
+        tmp_args_value_5 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 0, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_3__bases);
         tmp_tuple_element_7 = tmp_class_creation_3__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_5, 1, tmp_tuple_element_7);
+        PyTuple_SET_ITEM0(tmp_args_value_5, 1, tmp_tuple_element_7);
         CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-        tmp_kwargs_name_5 = tmp_class_creation_3__class_decl_dict;
+        tmp_kwargs_value_5 = tmp_class_creation_3__class_decl_dict;
         frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 416;
-        tmp_assign_source_57 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_5, tmp_kwargs_name_5);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_5);
-        if (tmp_assign_source_57 == NULL) {
+        tmp_assign_source_56 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_5, tmp_kwargs_value_5);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_5);
+        if (tmp_assign_source_56 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21174,17 +20998,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_12;
         }
         assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_57;
+        tmp_class_creation_3__prepared = tmp_assign_source_56;
     }
     {
-        nuitka_bool tmp_condition_result_23;
-        PyObject *tmp_operand_name_3;
-        PyObject *tmp_expression_name_54;
+        bool tmp_condition_result_23;
+        PyObject *tmp_operand_value_3;
+        PyObject *tmp_expression_value_54;
         CHECK_OBJECT(tmp_class_creation_3__prepared);
-        tmp_expression_name_54 = tmp_class_creation_3__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_54, mod_consts[177]);
-        tmp_operand_name_3 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_3);
+        tmp_expression_value_54 = tmp_class_creation_3__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_54, mod_consts[174]);
+        tmp_operand_value_3 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -21195,8 +21019,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_12;
         }
-        tmp_condition_result_23 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_23 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_23 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_23 != false) {
             goto branch_yes_17;
         } else {
             goto branch_no_17;
@@ -21206,18 +21030,18 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     {
         PyObject *tmp_raise_type_3;
         PyObject *tmp_raise_value_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
         PyObject *tmp_tuple_element_8;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_3 = PyExc_TypeError;
-        tmp_left_name_4 = mod_consts[178];
+        tmp_left_value_4 = mod_consts[175];
         CHECK_OBJECT(tmp_class_creation_3__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_3__metaclass;
-        tmp_getattr_attr_3 = mod_consts[179];
-        tmp_getattr_default_3 = mod_consts[180];
+        tmp_getattr_attr_3 = mod_consts[176];
+        tmp_getattr_default_3 = mod_consts[177];
         tmp_tuple_element_8 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -21229,17 +21053,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_12;
         }
-        tmp_right_name_4 = PyTuple_New(2);
+        tmp_right_value_4 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_55;
+            PyObject *tmp_expression_value_55;
             PyObject *tmp_type_arg_6;
-            PyTuple_SET_ITEM(tmp_right_name_4, 0, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_4, 0, tmp_tuple_element_8);
             CHECK_OBJECT(tmp_class_creation_3__prepared);
             tmp_type_arg_6 = tmp_class_creation_3__prepared;
-            tmp_expression_name_55 = BUILTIN_TYPE1(tmp_type_arg_6);
-            assert(!(tmp_expression_name_55 == NULL));
-            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_55, mod_consts[179]);
-            Py_DECREF(tmp_expression_name_55);
+            tmp_expression_value_55 = BUILTIN_TYPE1(tmp_type_arg_6);
+            assert(!(tmp_expression_value_55 == NULL));
+            tmp_tuple_element_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_55, mod_consts[176]);
+            Py_DECREF(tmp_expression_value_55);
             if (tmp_tuple_element_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21250,17 +21074,17 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
                 goto tuple_build_exception_3;
             }
-            PyTuple_SET_ITEM(tmp_right_name_4, 1, tmp_tuple_element_8);
+            PyTuple_SET_ITEM(tmp_right_value_4, 1, tmp_tuple_element_8);
         }
         goto tuple_build_noexception_3;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_3:;
-        Py_DECREF(tmp_right_name_4);
+        Py_DECREF(tmp_right_value_4);
         goto try_except_handler_12;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_3:;
-        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_right_name_4);
+        tmp_raise_value_3 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_right_value_4);
         if (tmp_raise_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21283,14 +21107,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto branch_end_16;
     branch_no_16:;
     {
-        PyObject *tmp_assign_source_58;
-        tmp_assign_source_58 = PyDict_New();
+        PyObject *tmp_assign_source_57;
+        tmp_assign_source_57 = PyDict_New();
         assert(tmp_class_creation_3__prepared == NULL);
-        tmp_class_creation_3__prepared = tmp_assign_source_58;
+        tmp_class_creation_3__prepared = tmp_assign_source_57;
     }
     branch_end_16:;
     {
-        PyObject *tmp_assign_source_59;
+        PyObject *tmp_assign_source_58;
         {
             PyObject *tmp_set_locals_3;
             CHECK_OBJECT(tmp_class_creation_3__prepared);
@@ -21300,8 +21124,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[181];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[182], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[178];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[179], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21312,8 +21136,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
             goto try_except_handler_14;
         }
-        tmp_dictset_value = mod_consts[254];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[157], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[251];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[154], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21325,7 +21149,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             goto try_except_handler_14;
         }
         tmp_dictset_value = mod_consts[3];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[183], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[180], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21367,7 +21191,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__21___init__();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[230], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[227], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -21381,11 +21205,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_24;
-            PyObject *tmp_called_name_6;
-            PyObject *tmp_args_element_name_1;
-            PyObject *tmp_called_name_7;
-            PyObject *tmp_args_element_name_2;
-            tmp_res = MAPPING_HAS_ITEM(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[256]);
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_args_element_value_1;
+            PyObject *tmp_called_value_7;
+            PyObject *tmp_args_element_value_2;
+            tmp_res = MAPPING_HAS_ITEM(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[253]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21404,11 +21228,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto condexpr_false_7;
             }
             condexpr_true_7:;
-            tmp_called_name_6 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[256]);
+            tmp_called_value_6 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[253]);
 
-            if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[256]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[253]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21417,7 +21241,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_name_6 == NULL) {
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21429,12 +21253,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_1 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options();
+            tmp_args_element_value_1 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 429;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_1);
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_1);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_1);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_1);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21447,14 +21271,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_7;
             condexpr_false_7:;
-            tmp_called_name_7 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_7 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_2 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options();
+            tmp_args_element_value_2 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__22_options();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 429;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_2);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21466,7 +21290,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
             condexpr_end_7:;
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[254], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21480,13 +21304,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
         }
         {
-            PyObject *tmp_called_instance_3;
-            PyObject *tmp_args_element_name_3;
-            tmp_called_instance_3 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257]);
+            PyObject *tmp_called_instance_2;
+            PyObject *tmp_args_element_value_3;
+            tmp_called_instance_2 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[254]);
 
-            if (unlikely(tmp_called_instance_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_instance_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[257]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[254]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21495,7 +21319,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_instance_3 == NULL) {
+            if (tmp_called_instance_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21507,12 +21331,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_3 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__23_options();
+            tmp_args_element_value_3 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__23_options();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 433;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[259], tmp_args_element_name_3);
-            Py_DECREF(tmp_called_instance_3);
-            Py_DECREF(tmp_args_element_name_3);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[256], tmp_args_element_value_3);
+            Py_DECREF(tmp_called_instance_2);
+            Py_DECREF(tmp_args_element_value_3);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21523,7 +21347,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[254], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21538,11 +21362,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             nuitka_bool tmp_condition_result_25;
-            PyObject *tmp_called_name_8;
-            PyObject *tmp_args_element_name_4;
-            PyObject *tmp_called_name_9;
-            PyObject *tmp_args_element_name_5;
-            tmp_res = MAPPING_HAS_ITEM(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[256]);
+            PyObject *tmp_called_value_8;
+            PyObject *tmp_args_element_value_4;
+            PyObject *tmp_called_value_9;
+            PyObject *tmp_args_element_value_5;
+            tmp_res = MAPPING_HAS_ITEM(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[253]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21561,11 +21385,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto condexpr_false_8;
             }
             condexpr_true_8:;
-            tmp_called_name_8 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[256]);
+            tmp_called_value_8 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[253]);
 
-            if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[256]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[253]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21574,7 +21398,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_name_8 == NULL) {
+            if (tmp_called_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21586,12 +21410,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_4 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_mode();
+            tmp_args_element_value_4 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_mode();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 438;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_4);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_4);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_4);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21604,14 +21428,14 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
             goto condexpr_end_8;
             condexpr_false_8:;
-            tmp_called_name_9 = (PyObject *)&PyProperty_Type;
+            tmp_called_value_9 = (PyObject *)&PyProperty_Type;
 
 
-            tmp_args_element_name_5 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_mode();
+            tmp_args_element_value_5 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__24_verify_mode();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 438;
-            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_5);
-            Py_DECREF(tmp_args_element_name_5);
+            tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_9, tmp_args_element_value_5);
+            Py_DECREF(tmp_args_element_value_5);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21623,7 +21447,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
             condexpr_end_8:;
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[260], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21637,13 +21461,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
         }
         {
-            PyObject *tmp_called_instance_4;
-            PyObject *tmp_args_element_name_6;
-            tmp_called_instance_4 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[260]);
+            PyObject *tmp_called_instance_3;
+            PyObject *tmp_args_element_value_6;
+            tmp_called_instance_3 = PyObject_GetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257]);
 
-            if (unlikely(tmp_called_instance_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_instance_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[260]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[257]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21652,7 +21476,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_instance_4 == NULL) {
+            if (tmp_called_instance_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21664,12 +21488,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             }
 
 
-            tmp_args_element_name_6 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__25_verify_mode();
+            tmp_args_element_value_6 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__25_verify_mode();
 
             frame_81957acd24f455cae97c47bf33b09f7b_3->m_frame.f_lineno = 442;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[259], tmp_args_element_name_6);
-            Py_DECREF(tmp_called_instance_4);
-            Py_DECREF(tmp_args_element_name_6);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[256], tmp_args_element_value_6);
+            Py_DECREF(tmp_called_instance_3);
+            Py_DECREF(tmp_args_element_value_6);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21680,7 +21504,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[260], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[257], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21697,7 +21521,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__26_set_default_verify_paths();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[131], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[128], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -21713,7 +21537,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__27_set_ciphers();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[263], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[260], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -21727,13 +21551,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[265];
+            tmp_defaults_4 = mod_consts[262];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__28_load_verify_locations(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[135], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[132], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21748,13 +21572,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_5;
-            tmp_defaults_5 = mod_consts[267];
+            tmp_defaults_5 = mod_consts[264];
             Py_INCREF(tmp_defaults_5);
 
 
             tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__29_load_cert_chain(tmp_defaults_5);
 
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[268], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[265], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21771,7 +21595,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
 
         tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__30_set_alpn_protocols();
 
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[270], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[267], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -21785,13 +21609,13 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         {
             PyObject *tmp_defaults_6;
-            tmp_defaults_6 = mod_consts[272];
+            tmp_defaults_6 = mod_consts[269];
             Py_INCREF(tmp_defaults_6);
 
 
             tmp_dictset_value = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__31_wrap_socket(tmp_defaults_6);
 
-            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[273], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[270], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21861,12 +21685,12 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         skip_nested_handling_2:;
         {
             nuitka_bool tmp_condition_result_26;
-            PyObject *tmp_compexpr_left_5;
-            PyObject *tmp_compexpr_right_5;
+            PyObject *tmp_cmp_expr_left_5;
+            PyObject *tmp_cmp_expr_right_5;
             CHECK_OBJECT(tmp_class_creation_3__bases);
-            tmp_compexpr_left_5 = tmp_class_creation_3__bases;
-            tmp_compexpr_right_5 = mod_consts[227];
-            tmp_condition_result_26 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_5, tmp_compexpr_right_5);
+            tmp_cmp_expr_left_5 = tmp_class_creation_3__bases;
+            tmp_cmp_expr_right_5 = mod_consts[224];
+            tmp_condition_result_26 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
             if (tmp_condition_result_26 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -21885,8 +21709,8 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
             assert(tmp_condition_result_26 != NUITKA_BOOL_UNASSIGNED);
         }
         branch_yes_18:;
-        tmp_dictset_value = mod_consts[227];
-        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[184], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[224];
+        tmp_res = PyObject_SetItem(locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416, mod_consts[181], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21899,27 +21723,27 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         }
         branch_no_18:;
         {
-            PyObject *tmp_assign_source_60;
-            PyObject *tmp_called_name_10;
-            PyObject *tmp_args_name_6;
+            PyObject *tmp_assign_source_59;
+            PyObject *tmp_called_value_10;
+            PyObject *tmp_args_value_6;
             PyObject *tmp_tuple_element_9;
-            PyObject *tmp_kwargs_name_6;
+            PyObject *tmp_kwargs_value_6;
             CHECK_OBJECT(tmp_class_creation_3__metaclass);
-            tmp_called_name_10 = tmp_class_creation_3__metaclass;
+            tmp_called_value_10 = tmp_class_creation_3__metaclass;
             tmp_tuple_element_9 = mod_consts[3];
-            tmp_args_name_6 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_6, 0, tmp_tuple_element_9);
+            tmp_args_value_6 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 0, tmp_tuple_element_9);
             CHECK_OBJECT(tmp_class_creation_3__bases);
             tmp_tuple_element_9 = tmp_class_creation_3__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 1, tmp_tuple_element_9);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 1, tmp_tuple_element_9);
             tmp_tuple_element_9 = locals_urllib3$contrib$pyopenssl$$$class__3_PyOpenSSLContext_416;
-            PyTuple_SET_ITEM0(tmp_args_name_6, 2, tmp_tuple_element_9);
+            PyTuple_SET_ITEM0(tmp_args_value_6, 2, tmp_tuple_element_9);
             CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
-            tmp_kwargs_name_6 = tmp_class_creation_3__class_decl_dict;
+            tmp_kwargs_value_6 = tmp_class_creation_3__class_decl_dict;
             frame_2f3568602c4f3e158331aa02a89bd39a->m_frame.f_lineno = 416;
-            tmp_assign_source_60 = CALL_FUNCTION(tmp_called_name_10, tmp_args_name_6, tmp_kwargs_name_6);
-            Py_DECREF(tmp_args_name_6);
-            if (tmp_assign_source_60 == NULL) {
+            tmp_assign_source_59 = CALL_FUNCTION(tmp_called_value_10, tmp_args_value_6, tmp_kwargs_value_6);
+            Py_DECREF(tmp_args_value_6);
+            if (tmp_assign_source_59 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21930,11 +21754,11 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
                 goto try_except_handler_14;
             }
             assert(outline_2_var___class__ == NULL);
-            outline_2_var___class__ = tmp_assign_source_60;
+            outline_2_var___class__ = tmp_assign_source_59;
         }
         CHECK_OBJECT(outline_2_var___class__);
-        tmp_assign_source_59 = outline_2_var___class__;
-        Py_INCREF(tmp_assign_source_59);
+        tmp_assign_source_58 = outline_2_var___class__;
+        Py_INCREF(tmp_assign_source_58);
         goto try_return_handler_14;
         NUITKA_CANNOT_GET_HERE("tried codes exits in all cases");
         return NULL;
@@ -21997,7 +21821,7 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
         exception_lineno = 416;
         goto try_except_handler_12;
         outline_result_4:;
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[3], tmp_assign_source_59);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[3], tmp_assign_source_58);
     }
     goto try_end_7;
     // Exception handler code:
@@ -22057,26 +21881,44 @@ PyObject *modulecode_urllib3$contrib$pyopenssl(PyObject *module, struct Nuitka_M
     goto module_exception_exit;
 
     frame_no_exception_3:;
-    Py_XDECREF(tmp_class_creation_3__bases);
+    CHECK_OBJECT(tmp_class_creation_3__bases);
+    Py_DECREF(tmp_class_creation_3__bases);
     tmp_class_creation_3__bases = NULL;
-    Py_XDECREF(tmp_class_creation_3__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_3__class_decl_dict);
+    Py_DECREF(tmp_class_creation_3__class_decl_dict);
     tmp_class_creation_3__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_3__metaclass);
+    CHECK_OBJECT(tmp_class_creation_3__metaclass);
+    Py_DECREF(tmp_class_creation_3__metaclass);
     tmp_class_creation_3__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_3__prepared);
     Py_DECREF(tmp_class_creation_3__prepared);
     tmp_class_creation_3__prepared = NULL;
     {
-        PyObject *tmp_assign_source_61;
+        PyObject *tmp_assign_source_60;
 
 
-        tmp_assign_source_61 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__32__verify_callback();
+        tmp_assign_source_60 = MAKE_FUNCTION_urllib3$contrib$pyopenssl$$$function__32__verify_callback();
 
-        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_61);
+        UPDATE_STRING_DICT1(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_60);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("urllib3.contrib.pyopenssl", false);
 
     return module_urllib3$contrib$pyopenssl;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_urllib3$contrib$pyopenssl, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("urllib3$contrib$pyopenssl", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

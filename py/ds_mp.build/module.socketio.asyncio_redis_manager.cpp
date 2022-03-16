@@ -1,5 +1,5 @@
 /* Generated code for Python module 'socketio.asyncio_redis_manager'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_socketio$asyncio_redis_manager;
 PyDictObject *moduledict_socketio$asyncio_redis_manager;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[84];
+static PyObject *mod_consts[85];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[84];
+static Py_hash_t mod_consts_hash[85];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 84; i++) {
+        for(int i = 0; i < 85; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_socketio$asyncio_redis_manager(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 84; i++) {
+    for(int i = 0; i < 85; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -184,15 +184,15 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_compexpr_left_1 == NULL)) {
-            tmp_compexpr_left_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_cmp_expr_left_1 == NULL)) {
+            tmp_cmp_expr_left_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_compexpr_left_1 == NULL) {
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -202,8 +202,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -226,18 +226,18 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_attribute_name_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_attribute_value_1;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -247,8 +247,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[2]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -258,9 +258,9 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_1 = mod_consts[3];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_1, tmp_attribute_name_1);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_attribute_value_1 = mod_consts[3];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_1, tmp_attribute_value_1);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -271,8 +271,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -283,8 +283,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -391,10 +391,10 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_value_0_1;
         PyObject *tmp_kw_call_value_1_1;
@@ -411,11 +411,11 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_3 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_3 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -425,9 +425,9 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[9]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[9]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -447,10 +447,10 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__1___init__(stru
         {
             PyObject *kw_values[3] = {tmp_kw_call_value_0_1, tmp_kw_call_value_1_1, tmp_kw_call_value_2_1};
 
-            tmp_call_result_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_1, kw_values, mod_consts[10]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_1, kw_values, mod_consts[10]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -615,21 +615,21 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_dircall_arg3_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_assattr_target_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -639,8 +639,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[2]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -650,8 +650,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -663,8 +663,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[5]);
+        tmp_expression_value_3 = par_self;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[5]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -678,8 +678,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
         tmp_dircall_arg2_1 = PyTuple_New(1);
         PyTuple_SET_ITEM(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_self);
-        tmp_expression_name_4 = par_self;
-        tmp_dircall_arg3_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[6]);
+        tmp_expression_value_4 = par_self;
+        tmp_dircall_arg3_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[6]);
         if (tmp_dircall_arg3_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -723,14 +723,14 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
     }
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_assattr_target_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[11]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = par_self;
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[11]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -740,9 +740,9 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[12]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[12]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -753,8 +753,8 @@ static PyObject *impl_socketio$asyncio_redis_manager$$$function__2__redis_connec
             goto frame_exception_exit_1;
         }
         frame_a133a0ece419e3aa111d0012065f0012->m_frame.f_lineno = 54;
-        tmp_assattr_value_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_1, &PyTuple_GET_ITEM(mod_consts[13], 0), mod_consts[14]);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assattr_value_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_1, &PyTuple_GET_ITEM(mod_consts[13], 0), mod_consts[14]);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assattr_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1021,8 +1021,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
     loop_start_1:;
     // Tried code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         if (coroutine_heap->var_retry == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[15]);
@@ -1035,8 +1035,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             goto try_except_handler_2;
         }
 
-        tmp_operand_name_1 = coroutine_heap->var_retry;
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = coroutine_heap->var_retry;
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1047,8 +1047,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -1087,17 +1087,17 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
     }
     branch_no_1:;
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_3;
         coroutine->m_frame->m_frame.f_lineno = 62;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -1111,9 +1111,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[11]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[11]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1123,9 +1123,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1136,7 +1136,7 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1147,51 +1147,51 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[18]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[18]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 63;
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[19]);
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[19]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             coroutine_heap->exception_lineno = 63;
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[20]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[20]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             coroutine_heap->exception_lineno = 63;
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[21]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1202,16 +1202,16 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 63;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
 
             coroutine_heap->exception_lineno = 63;
             coroutine_heap->type_description_1 = "cco";
@@ -1219,14 +1219,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
         }
         coroutine->m_frame->m_frame.f_lineno = 62;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_expression_name_2 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1236,9 +1236,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1248,14 +1248,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -1309,18 +1309,18 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1330,8 +1330,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_3;
         }
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[22]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[22]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1341,9 +1341,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[23]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1353,8 +1353,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__3__publish$$$corouti
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_3;
         }
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1959,13 +1959,13 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_await_result_1;
         asyncgen->m_frame->m_frame.f_lineno = 81;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
@@ -1980,9 +1980,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[12]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[12]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -1992,9 +1992,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[32]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[32]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2005,7 +2005,7 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
             asyncgen_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2016,23 +2016,23 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[18]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[18]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             asyncgen_heap->exception_lineno = 81;
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
         asyncgen->m_frame->m_frame.f_lineno = 81;
-        tmp_expression_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2042,9 +2042,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2054,14 +2054,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 1;
-        asyncgen->m_yieldfrom = tmp_expression_name_1;
+        asyncgen->m_yieldfrom = tmp_expression_value_1;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2101,10 +2101,10 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
     branch_no_1:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_value_name_1;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_value_value_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
@@ -2117,8 +2117,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[12]);
+        tmp_expression_value_7 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[12]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2130,9 +2130,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_2;
         }
         asyncgen->m_frame->m_frame.f_lineno = 83;
-        tmp_value_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[33]);
+        tmp_value_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[33]);
         Py_DECREF(tmp_called_instance_2);
-        if (tmp_value_name_1 == NULL) {
+        if (tmp_value_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2142,9 +2142,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_6 = ASYNC_MAKE_ITERATOR(tmp_value_name_1);
-        Py_DECREF(tmp_value_name_1);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = ASYNC_MAKE_ITERATOR(tmp_value_value_1);
+        Py_DECREF(tmp_value_value_1);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2154,14 +2154,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_value_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 2;
-        asyncgen->m_yieldfrom = tmp_expression_name_6;
+        asyncgen->m_yieldfrom = tmp_expression_value_6;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_value_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2197,12 +2197,12 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
     // Tried code:
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_value_name_2;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_value_value_2;
         CHECK_OBJECT(asyncgen_heap->tmp_for_loop_1__for_iterator);
-        tmp_value_name_2 = asyncgen_heap->tmp_for_loop_1__for_iterator;
-        tmp_expression_name_8 = ASYNC_ITERATOR_NEXT(tmp_value_name_2);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_value_value_2 = asyncgen_heap->tmp_for_loop_1__for_iterator;
+        tmp_expression_value_8 = ASYNC_ITERATOR_NEXT(tmp_value_value_2);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2212,14 +2212,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_4;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_value_2, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 3;
-        asyncgen->m_yieldfrom = tmp_expression_name_8;
+        asyncgen->m_yieldfrom = tmp_expression_value_8;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_3:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_value_2, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2264,11 +2264,11 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
 
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = asyncgen_heap->exception_keeper_type_1;
-        tmp_compexpr_right_1 = PyExc_StopAsyncIteration;
-        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = asyncgen_heap->exception_keeper_type_1;
+        tmp_cmp_expr_right_1 = PyExc_StopAsyncIteration;
+        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(asyncgen_heap->tmp_res == -1));
         tmp_condition_result_2 = (asyncgen_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -2307,13 +2307,13 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
 
     }
     {
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         CHECK_OBJECT(asyncgen_heap->var_message);
-        tmp_expression_name_9 = asyncgen_heap->var_message;
-        Py_INCREF(tmp_expression_name_9);
+        tmp_expression_value_9 = asyncgen_heap->var_message;
+        Py_INCREF(tmp_expression_value_9);
         asyncgen->m_yield_return_index = 4;
-        return tmp_expression_name_9;
+        return tmp_expression_value_9;
         yield_return_4:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -2397,18 +2397,18 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2418,8 +2418,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_expression_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[22]);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[22]);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2429,9 +2429,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[23]);
-        Py_DECREF(tmp_expression_name_10);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_10);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2441,8 +2441,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (asyncgen_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2462,14 +2462,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_args_element_value_3;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
@@ -2484,8 +2484,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
 
         tmp_called_instance_3 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
         asyncgen->m_frame->m_frame.f_lineno = 86;
-        tmp_expression_name_12 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[24]);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_value_12 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[24]);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2495,9 +2495,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[25]);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[25]);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2507,12 +2507,12 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_expression_name_13 = mod_consts[34];
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[35]);
-        assert(!(tmp_called_name_3 == NULL));
+        tmp_expression_value_13 = mod_consts[34];
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[35]);
+        assert(!(tmp_called_value_3 == NULL));
         if (asyncgen_heap->var_retry_sleep == NULL) {
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_LOCAL_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[36]);
             asyncgen_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2523,24 +2523,24 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_3 = asyncgen_heap->var_retry_sleep;
+        tmp_args_element_value_3 = asyncgen_heap->var_retry_sleep;
         asyncgen->m_frame->m_frame.f_lineno = 86;
-        tmp_args_element_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_3);
-        Py_DECREF(tmp_called_name_3);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_3);
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             asyncgen_heap->exception_lineno = 86;
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
         asyncgen->m_frame->m_frame.f_lineno = 86;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2565,20 +2565,20 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
 
     }
     {
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_await_result_2;
         asyncgen->m_frame->m_frame.f_lineno = 90;
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[37]);
+        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)mod_consts[37]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[37]);
+        if (unlikely(tmp_expression_value_16 == NULL)) {
+            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[37]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2588,8 +2588,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[38]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[38]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2600,7 +2600,7 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_5;
         }
         if (asyncgen_heap->var_retry_sleep == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[36]);
             asyncgen_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2611,11 +2611,11 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_4 = asyncgen_heap->var_retry_sleep;
+        tmp_args_element_value_4 = asyncgen_heap->var_retry_sleep;
         asyncgen->m_frame->m_frame.f_lineno = 90;
-        tmp_expression_name_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_4);
-        Py_DECREF(tmp_called_name_4);
-        if (tmp_expression_name_15 == NULL) {
+        tmp_expression_value_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_4);
+        Py_DECREF(tmp_called_value_4);
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2625,9 +2625,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_expression_name_14 = ASYNC_AWAIT(tmp_expression_name_15, await_normal);
-        Py_DECREF(tmp_expression_name_15);
-        if (tmp_expression_name_14 == NULL) {
+        tmp_expression_value_14 = ASYNC_AWAIT(tmp_expression_value_15, await_normal);
+        Py_DECREF(tmp_expression_value_15);
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2637,16 +2637,16 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         SAVE_ASYNCGEN_EXCEPTION(asyncgen);
         asyncgen->m_yield_return_index = 5;
-        asyncgen->m_yieldfrom = tmp_expression_name_14;
+        asyncgen->m_yieldfrom = tmp_expression_value_14;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_5:
         RESTORE_ASYNCGEN_EXCEPTION(asyncgen);
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2674,8 +2674,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         if (asyncgen_heap->var_retry_sleep == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[36]);
@@ -2688,9 +2688,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             goto try_except_handler_5;
         }
 
-        tmp_left_name_1 = asyncgen_heap->var_retry_sleep;
-        tmp_right_name_1 = mod_consts[39];
-        asyncgen_heap->tmp_result = BINARY_OPERATION_MULT_OBJECT_LONG_INPLACE(&tmp_left_name_1, tmp_right_name_1);
+        tmp_left_value_1 = asyncgen_heap->var_retry_sleep;
+        tmp_right_value_1 = mod_consts[39];
+        asyncgen_heap->tmp_result = BINARY_OPERATION_MULT_OBJECT_LONG_INPLACE(&tmp_left_value_1, tmp_right_value_1);
         if (asyncgen_heap->tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2701,21 +2701,19 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_8 = tmp_left_name_1;
+        tmp_assign_source_8 = tmp_left_value_1;
         asyncgen_heap->var_retry_sleep = tmp_assign_source_8;
 
     }
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(asyncgen_heap->var_retry_sleep);
-        tmp_compexpr_left_3 = asyncgen_heap->var_retry_sleep;
-        tmp_compexpr_right_3 = mod_consts[40];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = asyncgen_heap->var_retry_sleep;
+        tmp_cmp_expr_right_3 = mod_consts[40];
+        tmp_condition_result_4 = RICH_COMPARE_GT_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -2725,24 +2723,12 @@ static PyObject *socketio$asyncio_redis_manager$$$function__4__redis_listen_with
             asyncgen_heap->type_description_1 = "cooo";
             goto try_except_handler_5;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            asyncgen_heap->exception_lineno = 92;
-            asyncgen_heap->type_description_1 = "cooo";
-            goto try_except_handler_5;
-        }
-        tmp_condition_result_4 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
@@ -3077,8 +3063,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
@@ -3091,9 +3078,21 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[18]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[18]);
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
+
+
+            asyncgen_heap->exception_lineno = 96;
+            asyncgen_heap->type_description_1 = "coo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[43]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3104,13 +3103,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
         asyncgen->m_frame->m_frame.f_lineno = 96;
-        tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_1,
-            mod_consts[43],
-            PyTuple_GET_ITEM(mod_consts[44], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[44]);
 
-        Py_DECREF(tmp_called_instance_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3125,13 +3120,13 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
         asyncgen_heap->var_channel = tmp_assign_source_1;
     }
     {
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_await_result_1;
         asyncgen->m_frame->m_frame.f_lineno = 97;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
@@ -3146,9 +3141,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[12]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[12]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3158,9 +3153,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[32]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[32]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3171,7 +3166,7 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
             asyncgen_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3182,23 +3177,23 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[18]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_7 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[18]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             asyncgen_heap->exception_lineno = 97;
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
         asyncgen->m_frame->m_frame.f_lineno = 97;
-        tmp_expression_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3208,9 +3203,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = ASYNC_AWAIT(tmp_expression_name_3, await_normal);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3220,14 +3215,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 1;
-        asyncgen->m_yieldfrom = tmp_expression_name_2;
+        asyncgen->m_yieldfrom = tmp_expression_value_3;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3255,9 +3250,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_value_name_1;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_value_value_1;
+        PyObject *tmp_called_instance_1;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
@@ -3270,10 +3265,10 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_2 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_called_instance_1 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
         asyncgen->m_frame->m_frame.f_lineno = 98;
-        tmp_value_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[41]);
-        if (tmp_value_name_1 == NULL) {
+        tmp_value_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[41]);
+        if (tmp_value_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3283,9 +3278,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = ASYNC_MAKE_ITERATOR(tmp_value_name_1);
-        Py_DECREF(tmp_value_name_1);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_8 = ASYNC_MAKE_ITERATOR(tmp_value_value_1);
+        Py_DECREF(tmp_value_value_1);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3295,14 +3290,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_value_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 2;
-        asyncgen->m_yieldfrom = tmp_expression_name_7;
+        asyncgen->m_yieldfrom = tmp_expression_value_8;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_value_1, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3334,12 +3329,12 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     // Tried code:
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_value_name_2;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_value_value_2;
         CHECK_OBJECT(asyncgen_heap->tmp_for_loop_1__for_iterator);
-        tmp_value_name_2 = asyncgen_heap->tmp_for_loop_1__for_iterator;
-        tmp_expression_name_8 = ASYNC_ITERATOR_NEXT(tmp_value_name_2);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_value_value_2 = asyncgen_heap->tmp_for_loop_1__for_iterator;
+        tmp_expression_value_9 = ASYNC_ITERATOR_NEXT(tmp_value_value_2);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3349,14 +3344,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto try_except_handler_3;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_value_value_2, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 3;
-        asyncgen->m_yieldfrom = tmp_expression_name_8;
+        asyncgen->m_yieldfrom = tmp_expression_value_9;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_3:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_value_value_2, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3401,11 +3396,11 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
 
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = asyncgen_heap->exception_keeper_type_1;
-        tmp_compexpr_right_1 = PyExc_StopAsyncIteration;
-        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = asyncgen_heap->exception_keeper_type_1;
+        tmp_cmp_expr_right_1 = PyExc_StopAsyncIteration;
+        asyncgen_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(asyncgen_heap->tmp_res == -1));
         tmp_condition_result_1 = (asyncgen_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -3448,26 +3443,24 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_1;
         int tmp_and_left_truth_2;
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_tmp_and_left_value_2_object_1;
-        int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         CHECK_OBJECT(asyncgen_heap->var_message);
-        tmp_expression_name_9 = asyncgen_heap->var_message;
-        tmp_subscript_name_1 = mod_consts[18];
-        tmp_compexpr_left_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_expression_value_10 = asyncgen_heap->var_message;
+        tmp_subscript_value_1 = mod_consts[18];
+        tmp_cmp_expr_left_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3477,21 +3470,10 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto try_except_handler_2;
         }
-        if (asyncgen_heap->var_channel == NULL) {
-            Py_DECREF(tmp_compexpr_left_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[18]);
-            asyncgen_heap->exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            CHAIN_EXCEPTION(asyncgen_heap->exception_value);
-
-            asyncgen_heap->exception_lineno = 99;
-            asyncgen_heap->type_description_1 = "coo";
-            goto try_except_handler_2;
-        }
-
-        tmp_compexpr_right_2 = asyncgen_heap->var_channel;
-        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
+        CHECK_OBJECT(asyncgen_heap->var_channel);
+        tmp_cmp_expr_right_2 = asyncgen_heap->var_channel;
+        tmp_and_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_and_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -3521,10 +3503,10 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
         and_right_1:;
         assert(tmp_and_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(asyncgen_heap->var_message);
-        tmp_expression_name_10 = asyncgen_heap->var_message;
-        tmp_subscript_name_2 = mod_consts[45];
-        tmp_compexpr_left_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_2);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_11 = asyncgen_heap->var_message;
+        tmp_subscript_value_2 = mod_consts[45];
+        tmp_cmp_expr_left_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_2);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3534,10 +3516,10 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto try_except_handler_2;
         }
-        tmp_compexpr_right_3 = mod_consts[46];
-        tmp_tmp_and_left_value_2_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        if (tmp_tmp_and_left_value_2_object_1 == NULL) {
+        tmp_cmp_expr_right_3 = mod_consts[46];
+        tmp_and_left_value_2 = RICH_COMPARE_EQ_NBOOL_OBJECT_UNICODE(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        if (tmp_and_left_value_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3547,25 +3529,12 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto try_except_handler_2;
         }
-        tmp_truth_name_1 = CHECK_IF_TRUE(tmp_tmp_and_left_value_2_object_1);
-        if (tmp_truth_name_1 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_tmp_and_left_value_2_object_1);
-
-            asyncgen_heap->exception_lineno = 100;
-            asyncgen_heap->type_description_1 = "coo";
-            goto try_except_handler_2;
-        }
-        tmp_and_left_value_2 = tmp_truth_name_1 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_and_left_value_2_object_1);
         tmp_and_left_truth_2 = tmp_and_left_value_2 == NUITKA_BOOL_TRUE ? 1 : 0;
         if (tmp_and_left_truth_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-
+            Py_DECREF(tmp_and_left_value_2);
 
             asyncgen_heap->exception_lineno = 100;
             asyncgen_heap->type_description_1 = "coo";
@@ -3577,10 +3546,11 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto and_left_2;
         }
         and_right_2:;
-        tmp_compexpr_left_4 = mod_consts[21];
+        assert(tmp_and_left_value_2 != NUITKA_BOOL_UNASSIGNED);
+        tmp_cmp_expr_left_4 = mod_consts[21];
         CHECK_OBJECT(asyncgen_heap->var_message);
-        tmp_compexpr_right_4 = asyncgen_heap->var_message;
-        asyncgen_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
+        tmp_cmp_expr_right_4 = asyncgen_heap->var_message;
+        asyncgen_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
         if (asyncgen_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3611,15 +3581,15 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     }
     branch_yes_2:;
     {
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_3;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
         CHECK_OBJECT(asyncgen_heap->var_message);
-        tmp_expression_name_12 = asyncgen_heap->var_message;
-        tmp_subscript_name_3 = mod_consts[21];
-        tmp_expression_name_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_3);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_13 = asyncgen_heap->var_message;
+        tmp_subscript_value_3 = mod_consts[21];
+        tmp_expression_value_12 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_3);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3629,11 +3599,11 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_subscript_name_3, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_13, sizeof(PyObject *), &tmp_subscript_value_3, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 4;
-        return tmp_expression_name_11;
+        return tmp_expression_value_12;
         yield_return_4:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_subscript_name_3, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_13, sizeof(PyObject *), &tmp_subscript_value_3, sizeof(PyObject *), NULL);
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3691,13 +3661,13 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     Py_DECREF(asyncgen_heap->tmp_for_loop_1__for_iterator);
     asyncgen_heap->tmp_for_loop_1__for_iterator = NULL;
     {
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_18;
         PyObject *tmp_await_result_2;
         asyncgen->m_frame->m_frame.f_lineno = 102;
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
@@ -3712,9 +3682,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_16 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_expression_name_15 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[12]);
-        if (tmp_expression_name_15 == NULL) {
+        tmp_expression_value_17 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_expression_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[12]);
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3724,9 +3694,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[47]);
-        Py_DECREF(tmp_expression_name_15);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[47]);
+        Py_DECREF(tmp_expression_value_16);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3737,7 +3707,7 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(asyncgen->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, mod_consts[16]);
             asyncgen_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3748,23 +3718,23 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_17 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[18]);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_expression_value_18 = Nuitka_Cell_GET(asyncgen->m_closure[0]);
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[18]);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_3);
 
             asyncgen_heap->exception_lineno = 102;
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
         asyncgen->m_frame->m_frame.f_lineno = 102;
-        tmp_expression_name_14 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_expression_name_14 == NULL) {
+        tmp_expression_value_15 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3774,9 +3744,9 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_13 = ASYNC_AWAIT(tmp_expression_name_14, await_normal);
-        Py_DECREF(tmp_expression_name_14);
-        if (tmp_expression_name_13 == NULL) {
+        tmp_expression_value_14 = ASYNC_AWAIT(tmp_expression_value_15, await_normal);
+        Py_DECREF(tmp_expression_value_15);
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&asyncgen_heap->exception_type, &asyncgen_heap->exception_value, &asyncgen_heap->exception_tb);
@@ -3786,14 +3756,14 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
             asyncgen_heap->type_description_1 = "coo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_14, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_15, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), NULL);
         asyncgen->m_yield_return_index = 5;
-        asyncgen->m_yieldfrom = tmp_expression_name_13;
+        asyncgen->m_yieldfrom = tmp_expression_value_14;
         asyncgen->m_awaiting = true;
         return NULL;
 
         yield_return_5:
-        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_name_14, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_15, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(asyncgen_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), NULL);
         asyncgen->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3882,7 +3852,8 @@ static PyObject *socketio$asyncio_redis_manager$$$function__5__listen$$$asyncgen
     return NULL;
     // Return handler code:
     try_return_handler_1:;
-    Py_XDECREF(asyncgen_heap->var_channel);
+    CHECK_OBJECT(asyncgen_heap->var_channel);
+    Py_DECREF(asyncgen_heap->var_channel);
     asyncgen_heap->var_channel = NULL;
     Py_XDECREF(asyncgen_heap->var_message);
     asyncgen_heap->var_message = NULL;
@@ -4234,63 +4205,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("socketio.asyncio_redis_manager");
+
+    // Store the module for future use.
     module_socketio$asyncio_redis_manager = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_redis_manager: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("socketio.asyncio_redis_manager: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_redis_manager: Calling createModuleConstants().\n");
+        PRINT_STRING("socketio.asyncio_redis_manager: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_redis_manager: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("socketio.asyncio_redis_manager: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initsocketio$asyncio_redis_manager\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_socketio$asyncio_redis_manager = MODULE_DICT(module_socketio$asyncio_redis_manager);
 
@@ -4311,7 +4286,7 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         UPDATE_STRING_DICT0(
             moduledict_socketio$asyncio_redis_manager,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[84]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)const_str_plain___name__);
@@ -4361,7 +4336,7 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -4525,18 +4500,18 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[37];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[56];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[37];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[56];
         frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 1;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4551,18 +4526,18 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[19];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[56];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[19];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[56];
         frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 2;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4578,18 +4553,18 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     // Tried code:
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[0];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = Py_None;
-        tmp_level_name_3 = mod_consts[56];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[0];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = Py_None;
+        tmp_level_value_3 = mod_consts[56];
         frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 5;
-        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4629,11 +4604,11 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -4694,18 +4669,18 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[57];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[58];
-        tmp_level_name_4 = mod_consts[30];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[57];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_socketio$asyncio_redis_manager;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[58];
+        tmp_level_value_4 = mod_consts[30];
         frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 9;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4788,44 +4763,39 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     }
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_3;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[60];
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[60];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[60];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 12;
-
-            goto try_except_handler_3;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[60];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -4848,9 +4818,9 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_1 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[56];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
+        tmp_expression_value_1 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[56];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4861,9 +4831,9 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
 
             goto try_except_handler_3;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4875,14 +4845,14 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_12 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_12 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4897,16 +4867,16 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         tmp_class_creation_1__metaclass = tmp_assign_source_12;
     }
     {
-        nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[60];
+        bool tmp_condition_result_4;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[60];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_4 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_4 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_4 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -4930,10 +4900,10 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     branch_no_2:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[61]);
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[61]);
         tmp_condition_result_5 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
@@ -4944,15 +4914,15 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[61]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[61]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4963,17 +4933,17 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
             goto try_except_handler_3;
         }
         tmp_tuple_element_2 = mod_consts[62];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 12;
-        tmp_assign_source_13 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_13 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4988,14 +4958,14 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         tmp_class_creation_1__prepared = tmp_assign_source_13;
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_4;
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[63]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_4 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[63]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5006,8 +4976,8 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
 
             goto try_except_handler_3;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
@@ -5017,14 +4987,14 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[64];
+        tmp_left_value_1 = mod_consts[64];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
         tmp_getattr_attr_1 = mod_consts[65];
@@ -5040,17 +5010,17 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
 
             goto try_except_handler_3;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_5;
+            PyObject *tmp_expression_value_5;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_5 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_5 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[65]);
-            Py_DECREF(tmp_expression_name_5);
+            tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_5 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[65]);
+            Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5061,17 +5031,17 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_3;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5331,13 +5301,13 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_7;
-            PyObject *tmp_compexpr_left_2;
-            PyObject *tmp_compexpr_right_2;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_2 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_2 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_2 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_7 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
+            tmp_cmp_expr_right_2 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_7 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
             if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -5372,25 +5342,25 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
         branch_no_5:;
         {
             PyObject *tmp_assign_source_16;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_4 = mod_consts[62];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_4);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_4 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_4);
             tmp_tuple_element_4 = locals_socketio$asyncio_redis_manager$$$class__1_AsyncRedisManager_12;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_4cbea09f3695a6081bca9dce275bafeb->m_frame.f_lineno = 12;
-            tmp_assign_source_16 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_16 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_16 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5536,18 +5506,36 @@ PyObject *modulecode_socketio$asyncio_redis_manager(PyObject *module, struct Nui
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("socketio.asyncio_redis_manager", false);
+
     return module_socketio$asyncio_redis_manager;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_redis_manager, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("socketio$asyncio_redis_manager", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

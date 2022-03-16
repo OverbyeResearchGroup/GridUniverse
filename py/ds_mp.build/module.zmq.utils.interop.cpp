@@ -1,5 +1,5 @@
 /* Generated code for Python module 'zmq.utils.interop'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_zmq$utils$interop;
 PyDictObject *moduledict_zmq$utils$interop;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[24];
+static PyObject *mod_consts[23];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[24];
+static Py_hash_t mod_consts_hash[23];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 24; i++) {
+        for(int i = 0; i < 23; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_zmq$utils$interop(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 24; i++) {
+    for(int i = 0; i < 23; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -82,9 +82,9 @@ static PyCodeObject *codeobj_65682b7ed2f6f95f11bee2a4092942d5;
 static PyCodeObject *codeobj_6c0fca55e3a9e462335dd3c947461d29;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[21]); CHECK_OBJECT(module_filename_obj);
-    codeobj_65682b7ed2f6f95f11bee2a4092942d5 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[22], NULL, NULL, 0, 0, 0);
-    codeobj_6c0fca55e3a9e462335dd3c947461d29 = MAKE_CODEOBJECT(module_filename_obj, 12, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[20], mod_consts[23], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[19]); CHECK_OBJECT(module_filename_obj);
+    codeobj_65682b7ed2f6f95f11bee2a4092942d5 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[20], NULL, NULL, 0, 0, 0);
+    codeobj_6c0fca55e3a9e462335dd3c947461d29 = MAKE_CODEOBJECT(module_filename_obj, 12, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[18], mod_consts[21], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -165,7 +165,7 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
         CHECK_OBJECT(par_n);
         tmp_isinstance_inst_1 = par_n;
         tmp_isinstance_cls_1 = (PyObject *)&PyLong_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -197,18 +197,18 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[0];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_zmq$utils$interop;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[1];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[0];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_zmq$utils$interop;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[1];
         frame_6c0fca55e3a9e462335dd3c947461d29->m_frame.f_lineno = 20;
-        tmp_assign_source_2 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_2 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -254,11 +254,11 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_2 = (tmp_res == 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -311,12 +311,12 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
     try_end_1:;
     {
         bool tmp_condition_result_3;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
+        nuitka_bool tmp_cmp_expr_left_2;
+        nuitka_bool tmp_cmp_expr_right_2;
         assert(tmp_try_except_1__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = tmp_try_except_1__unhandled_indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_3 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = tmp_try_except_1__unhandled_indicator;
+        tmp_cmp_expr_right_2 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -359,12 +359,12 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_n);
         tmp_isinstance_inst_2 = par_n;
         CHECK_OBJECT(var_ffi);
-        tmp_expression_name_1 = var_ffi;
-        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
+        tmp_expression_value_1 = var_ffi;
+        tmp_isinstance_cls_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
         if (tmp_isinstance_cls_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -375,7 +375,7 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_cls_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -398,16 +398,16 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
     {
         PyObject *tmp_int_arg_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(var_ffi);
         tmp_called_instance_2 = var_ffi;
-        tmp_args_element_name_1 = mod_consts[5];
+        tmp_args_element_value_1 = mod_consts[5];
         CHECK_OBJECT(par_n);
-        tmp_args_element_name_2 = par_n;
+        tmp_args_element_value_2 = par_n;
         frame_6c0fca55e3a9e462335dd3c947461d29->m_frame.f_lineno = 27;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_int_arg_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_2,
                 mod_consts[4],
@@ -444,12 +444,12 @@ static PyObject *impl_zmq$utils$interop$$$function__1_cast_int_addr(struct Nuitk
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[6];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[6];
         CHECK_OBJECT(par_n);
-        tmp_right_name_1 = par_n;
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = par_n;
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -592,7 +592,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_zmq$utils$interop$$$function__1_cast_int_addr(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_zmq$utils$interop$$$function__1_cast_int_addr,
-        mod_consts[20],
+        mod_consts[18],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -781,63 +781,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("zmq.utils.interop");
+
+    // Store the module for future use.
     module_zmq$utils$interop = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.utils.interop: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("zmq.utils.interop: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.utils.interop: Calling createModuleConstants().\n");
+        PRINT_STRING("zmq.utils.interop: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.utils.interop: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("zmq.utils.interop: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initzmq$utils$interop\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_zmq$utils$interop = MODULE_DICT(module_zmq$utils$interop);
 
@@ -858,7 +862,7 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
         UPDATE_STRING_DICT0(
             moduledict_zmq$utils$interop,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[22]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$utils$interop, (Nuitka_StringObject *)const_str_plain___name__);
@@ -908,7 +912,7 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -1037,40 +1041,19 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[15];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_zmq$utils$interop;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[16];
-        tmp_level_name_1 = mod_consts[1];
-        frame_65682b7ed2f6f95f11bee2a4092942d5->m_frame.f_lineno = 9;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
-        if (tmp_import_name_from_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 9;
-
-            goto frame_exception_exit_1;
-        }
+        tmp_import_name_from_1 = IMPORT_HARD_TYPING();
+        assert(!(tmp_import_name_from_1 == NULL));
         if (PyModule_Check(tmp_import_name_from_1)) {
             tmp_assign_source_4 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_zmq$utils$interop,
-                mod_consts[17],
+                mod_consts[15],
                 mod_consts[1]
             );
         } else {
-            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[17]);
+            tmp_assign_source_4 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[15]);
         }
 
-        Py_DECREF(tmp_import_name_from_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1081,7 +1064,7 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_4);
     }
 
     // Restore frame exception if necessary.
@@ -1117,18 +1100,18 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
         PyObject *tmp_annotations_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[18];
-        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[17]);
+        tmp_dict_key_1 = mod_consts[16];
+        tmp_dict_value_1 = GET_STRING_DICT_VALUE(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[15]);
 
         if (unlikely(tmp_dict_value_1 == NULL)) {
-            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+            tmp_dict_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[15]);
         }
 
         assert(!(tmp_dict_value_1 == NULL));
         tmp_annotations_1 = _PyDict_NewPresized( 2 );
         tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        tmp_dict_key_1 = mod_consts[19];
+        tmp_dict_key_1 = mod_consts[17];
         tmp_dict_value_1 = (PyObject *)&PyLong_Type;
         tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
@@ -1136,11 +1119,26 @@ PyObject *modulecode_zmq$utils$interop(PyObject *module, struct Nuitka_MetaPathB
 
         tmp_assign_source_5 = MAKE_FUNCTION_zmq$utils$interop$$$function__1_cast_int_addr(tmp_annotations_1);
 
-        UPDATE_STRING_DICT1(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_zmq$utils$interop, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_5);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("zmq.utils.interop", false);
 
     return module_zmq$utils$interop;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$utils$interop, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("zmq$utils$interop", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

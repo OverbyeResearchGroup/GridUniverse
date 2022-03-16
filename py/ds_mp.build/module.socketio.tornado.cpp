@@ -1,5 +1,5 @@
 /* Generated code for Python module 'socketio.tornado'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_socketio$tornado;
 PyDictObject *moduledict_socketio$tornado;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[18];
+static PyObject *mod_consts[17];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[18];
+static Py_hash_t mod_consts_hash[17];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 18; i++) {
+        for(int i = 0; i < 17; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_socketio$tornado(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 18; i++) {
+    for(int i = 0; i < 17; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -82,9 +82,9 @@ static PyCodeObject *codeobj_ce47d4dc4c563ff75058bfc7976ccda4;
 static PyCodeObject *codeobj_767866511106b949ae49764ca90cd65b;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[15]); CHECK_OBJECT(module_filename_obj);
-    codeobj_ce47d4dc4c563ff75058bfc7976ccda4 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[16], NULL, NULL, 0, 0, 0);
-    codeobj_767866511106b949ae49764ca90cd65b = MAKE_CODEOBJECT(module_filename_obj, 10, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[14], mod_consts[17], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[13]); CHECK_OBJECT(module_filename_obj);
+    codeobj_ce47d4dc4c563ff75058bfc7976ccda4 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[14], NULL, NULL, 0, 0, 0);
+    codeobj_767866511106b949ae49764ca90cd65b = MAKE_CODEOBJECT(module_filename_obj, 10, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[12], mod_consts[15], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -138,16 +138,16 @@ static PyObject *impl_socketio$tornado$$$function__1_get_tornado_handler(struct 
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -158,9 +158,9 @@ static PyObject *impl_socketio$tornado$$$function__1_get_tornado_handler(struct 
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_socketio_server);
-        tmp_expression_name_1 = par_socketio_server;
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_expression_value_1 = par_socketio_server;
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -171,8 +171,8 @@ static PyObject *impl_socketio$tornado$$$function__1_get_tornado_handler(struct 
             goto frame_exception_exit_1;
         }
         frame_767866511106b949ae49764ca90cd65b->m_frame.f_lineno = 11;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -273,7 +273,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_socketio$tornado$$$function__1_get_tornado_handler() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_socketio$tornado$$$function__1_get_tornado_handler,
-        mod_consts[14],
+        mod_consts[12],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -462,63 +462,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("socketio.tornado");
+
+    // Store the module for future use.
     module_socketio$tornado = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.tornado: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("socketio.tornado: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.tornado: Calling createModuleConstants().\n");
+        PRINT_STRING("socketio.tornado: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.tornado: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("socketio.tornado: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initsocketio$tornado\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_socketio$tornado = MODULE_DICT(module_socketio$tornado);
 
@@ -539,7 +543,7 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
         UPDATE_STRING_DICT0(
             moduledict_socketio$tornado,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[16]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$tornado, (Nuitka_StringObject *)const_str_plain___name__);
@@ -589,7 +593,7 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -728,71 +732,26 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
     }
     {
         PyObject *tmp_assign_source_4;
-        frame_ce47d4dc4c563ff75058bfc7976ccda4->m_frame.f_lineno = 1;
         tmp_assign_source_4 = IMPORT_HARD_SYS();
         assert(!(tmp_assign_source_4 == NULL));
         UPDATE_STRING_DICT0(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[8], tmp_assign_source_4);
     }
-    {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[8]);
-
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
-        }
-
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[9]);
-        if (tmp_compexpr_left_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 2;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_right_1 = mod_consts[10];
-        tmp_condition_result_1 = RICH_COMPARE_GE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_condition_result_1 == NUITKA_BOOL_EXCEPTION) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 2;
-
-            goto frame_exception_exit_1;
-        }
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
-            goto branch_yes_1;
-        } else {
-            goto branch_no_1;
-        }
-        assert(tmp_condition_result_1 != NUITKA_BOOL_UNASSIGNED);
-    }
-    branch_yes_1:;
     // Tried code:
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[11];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_socketio$tornado;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[12];
-        tmp_level_name_1 = mod_consts[13];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[9];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_socketio$tornado;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[10];
+        tmp_level_value_1 = mod_consts[11];
         frame_ce47d4dc4c563ff75058bfc7976ccda4->m_frame.f_lineno = 4;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -807,11 +766,11 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_socketio$tornado,
-                mod_consts[14],
-                mod_consts[13]
+                mod_consts[12],
+                mod_consts[11]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[14]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[12]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -853,28 +812,28 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
     PUBLISH_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
     // Tried code:
     {
-        bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_2 = PyExc_ImportError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
+        bool tmp_condition_result_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_ImportError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_2 = (tmp_res != 0) ? true : false;
-        if (tmp_condition_result_2 != false) {
-            goto branch_yes_2;
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
+            goto branch_yes_1;
         } else {
-            goto branch_no_2;
+            goto branch_no_1;
         }
     }
-    branch_yes_2:;
+    branch_yes_1:;
     {
         PyObject *tmp_assign_source_6;
         tmp_assign_source_6 = Py_None;
         UPDATE_STRING_DICT0(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[0], tmp_assign_source_6);
     }
-    goto branch_end_2;
-    branch_no_2:;
+    goto branch_end_1;
+    branch_no_1:;
     tmp_result = RERAISE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
     if (unlikely(tmp_result == false)) {
         exception_lineno = 3;
@@ -883,7 +842,7 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
     if (exception_tb && exception_tb->tb_frame == &frame_ce47d4dc4c563ff75058bfc7976ccda4->m_frame) frame_ce47d4dc4c563ff75058bfc7976ccda4->m_frame.f_lineno = exception_tb->tb_lineno;
 
     goto try_except_handler_2;
-    branch_end_2:;
+    branch_end_1:;
     goto try_end_2;
     // Exception handler code:
     try_except_handler_2:;
@@ -916,7 +875,6 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
     return NULL;
     // End of try:
     try_end_1:;
-    branch_no_1:;
 
     // Restore frame exception if necessary.
 #if 0
@@ -952,11 +910,26 @@ PyObject *modulecode_socketio$tornado(PyObject *module, struct Nuitka_MetaPathBa
 
         tmp_assign_source_7 = MAKE_FUNCTION_socketio$tornado$$$function__1_get_tornado_handler();
 
-        UPDATE_STRING_DICT1(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_socketio$tornado, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_7);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("socketio.tornado", false);
 
     return module_socketio$tornado;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$tornado, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("socketio$tornado", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

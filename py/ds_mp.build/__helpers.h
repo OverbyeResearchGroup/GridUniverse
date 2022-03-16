@@ -3,4 +3,6 @@
 
 extern PyObject *CALL_FUNCTION_WITH_ARGS11(PyObject *called, PyObject *const *args);
 extern PyObject *CALL_FUNCTION_WITH_ARGS14(PyObject *called, PyObject *const *args);
+extern PyObject *CALL_FUNCTION_WITH_ARGS15(PyObject *called, PyObject *const *args);
+extern PyObject *CALL_FUNCTION_WITH_ARGS23(PyObject *called, PyObject *const *args);
 #endif

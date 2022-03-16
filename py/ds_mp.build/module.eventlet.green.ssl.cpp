@@ -1,5 +1,5 @@
 /* Generated code for Python module 'eventlet.green.ssl'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_eventlet$green$ssl;
 PyDictObject *moduledict_eventlet$green$ssl;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[259];
+static PyObject *mod_consts[248];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[259];
+static Py_hash_t mod_consts_hash[248];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 259; i++) {
+        for(int i = 0; i < 248; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_eventlet$green$ssl(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 259; i++) {
+    for(int i = 0; i < 248; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -115,42 +115,42 @@ static PyCodeObject *codeobj_d318a0cd49199714a2df990c61936204;
 static PyCodeObject *codeobj_f921922d2ea1027f962380551fa7f038;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[230]); CHECK_OBJECT(module_filename_obj);
-    codeobj_a63accb7d6712058edc3010d4caa7367 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[231], NULL, NULL, 0, 0, 0);
-    codeobj_a397bfb519e5b7a5213159885b8e72e6 = MAKE_CODEOBJECT(module_filename_obj, 442, CO_NOFREE, mod_consts[146], mod_consts[232], NULL, 0, 0, 0);
-    codeobj_661b44bf25fdd417851aeb573e8ea2bd = MAKE_CODEOBJECT(module_filename_obj, 43, CO_NOFREE, mod_consts[12], mod_consts[232], NULL, 0, 0, 0);
-    codeobj_d1e534867ba726ac0389d9f4a5c74f4f = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[37], mod_consts[233], NULL, 9, 0, 0);
-    codeobj_541e38a88859a0342ca4f389d4871334 = MAKE_CODEOBJECT(module_filename_obj, 57, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[13], mod_consts[234], NULL, 9, 0, 0);
-    codeobj_b0f3a9959f0ec8db82cf4260bc8eb982 = MAKE_CODEOBJECT(module_filename_obj, 255, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[85], mod_consts[235], NULL, 5, 0, 0);
-    codeobj_dc280611cd8adcd3c675705cb8013de7 = MAKE_CODEOBJECT(module_filename_obj, 156, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[60], mod_consts[236], NULL, 2, 0, 0);
-    codeobj_b8fe35d827751ea5b04bbc663c7a7728 = MAKE_CODEOBJECT(module_filename_obj, 31, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[10], mod_consts[237], NULL, 0, 0, 0);
-    codeobj_bedd62d016b2aa062d90233fc1dec0e5 = MAKE_CODEOBJECT(module_filename_obj, 315, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[113], mod_consts[238], NULL, 2, 0, 0);
-    codeobj_163013e6ba690a8212cd2ec5eb6100f7 = MAKE_CODEOBJECT(module_filename_obj, 388, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[129], mod_consts[239], NULL, 1, 0, 0);
-    codeobj_9a97654f3fdd09ee36b7b98c6091b8dd = MAKE_CODEOBJECT(module_filename_obj, 351, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[102], mod_consts[240], NULL, 2, 0, 0);
-    codeobj_f8556197024b0f5d60ede22450b1304b = MAKE_CODEOBJECT(module_filename_obj, 310, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[241], NULL, 1, 0, 0);
-    codeobj_52f3051cba6638f0d0e336e3397b589b = MAKE_CODEOBJECT(module_filename_obj, 415, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[212], mod_consts[242], NULL, 1, 0, 0);
-    codeobj_4561464775abffac1c16dd199666d061 = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[35], mod_consts[242], NULL, 1, 0, 0);
-    codeobj_13f2b5ff18ed85f36216b8dbca57f1df = MAKE_CODEOBJECT(module_filename_obj, 483, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[228], mod_consts[243], NULL, 0, 0, 0);
-    codeobj_959e1a4ffc1828929ef7a8c1701c85c5 = MAKE_CODEOBJECT(module_filename_obj, 470, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[143], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_72b2cbd8647c6873723f53ed4456509b = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[144], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_65ef77517eabfcb5ff9ab8ced9b850a8 = MAKE_CODEOBJECT(module_filename_obj, 457, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[139], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_f68c56a55342f56cd1d43b4cbe2cdbb2 = MAKE_CODEOBJECT(module_filename_obj, 183, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[63], mod_consts[245], NULL, 1, 0, 0);
-    codeobj_24f671d9207084bf3f1cb60811792656 = MAKE_CODEOBJECT(module_filename_obj, 242, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[92], mod_consts[246], NULL, 3, 0, 0);
-    codeobj_5a85a78e9d16419f08c288c3b21641a4 = MAKE_CODEOBJECT(module_filename_obj, 245, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[91], mod_consts[247], NULL, 4, 0, 0);
-    codeobj_5778d2e84f4b54b01c4c7e4660852c7c = MAKE_CODEOBJECT(module_filename_obj, 294, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[98], mod_consts[248], NULL, 4, 0, 0);
-    codeobj_dc61b0e7df3d827a4747b7513357ae6c = MAKE_CODEOBJECT(module_filename_obj, 300, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[99], mod_consts[249], NULL, 4, 0, 0);
-    codeobj_78461f08538093ef096ae3986e18fb16 = MAKE_CODEOBJECT(module_filename_obj, 192, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[250], NULL, 3, 0, 0);
-    codeobj_8b0e45e99dd8d540eb65c09000051555 = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[79], mod_consts[251], NULL, 3, 0, 0);
-    codeobj_236d89e64071ad9b5fc86a36f2732c8c = MAKE_CODEOBJECT(module_filename_obj, 200, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[72], mod_consts[252], NULL, 4, 0, 0);
-    codeobj_32823f2fa24967229ae3df4962fc68cf = MAKE_CODEOBJECT(module_filename_obj, 148, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[190], mod_consts[253], NULL, 2, 0, 0);
-    codeobj_7c4b656e75c73770cd55d34869ba027a = MAKE_CODEOBJECT(module_filename_obj, 142, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[43], mod_consts[254], NULL, 2, 0, 0);
-    codeobj_e7a5cffbfddb504549113caa19b9bbf5 = MAKE_CODEOBJECT(module_filename_obj, 427, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[215], mod_consts[255], NULL, 3, 0, 0);
-    codeobj_03fa506d4b75ae641eb4164ee6b111f6 = MAKE_CODEOBJECT(module_filename_obj, 306, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[100], mod_consts[241], NULL, 1, 0, 0);
-    codeobj_a0245e11844241f1b988271d332dba51 = MAKE_CODEOBJECT(module_filename_obj, 461, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[141], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_73844d414cb460022503c32013cd0657 = MAKE_CODEOBJECT(module_filename_obj, 465, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[142], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_c5833dd46aabbab75087e847b9dce90f = MAKE_CODEOBJECT(module_filename_obj, 445, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[174], mod_consts[256], NULL, 2, 0, 0);
-    codeobj_d318a0cd49199714a2df990c61936204 = MAKE_CODEOBJECT(module_filename_obj, 422, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[174], mod_consts[257], NULL, 1, 0, 0);
-    codeobj_f921922d2ea1027f962380551fa7f038 = MAKE_CODEOBJECT(module_filename_obj, 177, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[61], mod_consts[258], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[219]); CHECK_OBJECT(module_filename_obj);
+    codeobj_a63accb7d6712058edc3010d4caa7367 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[220], NULL, NULL, 0, 0, 0);
+    codeobj_a397bfb519e5b7a5213159885b8e72e6 = MAKE_CODEOBJECT(module_filename_obj, 442, CO_NOFREE, mod_consts[137], mod_consts[221], NULL, 0, 0, 0);
+    codeobj_661b44bf25fdd417851aeb573e8ea2bd = MAKE_CODEOBJECT(module_filename_obj, 43, CO_NOFREE, mod_consts[12], mod_consts[221], NULL, 0, 0, 0);
+    codeobj_d1e534867ba726ac0389d9f4a5c74f4f = MAKE_CODEOBJECT(module_filename_obj, 100, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[37], mod_consts[222], NULL, 9, 0, 0);
+    codeobj_541e38a88859a0342ca4f389d4871334 = MAKE_CODEOBJECT(module_filename_obj, 57, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[13], mod_consts[223], NULL, 9, 0, 0);
+    codeobj_b0f3a9959f0ec8db82cf4260bc8eb982 = MAKE_CODEOBJECT(module_filename_obj, 255, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[80], mod_consts[224], NULL, 5, 0, 0);
+    codeobj_dc280611cd8adcd3c675705cb8013de7 = MAKE_CODEOBJECT(module_filename_obj, 156, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[57], mod_consts[225], NULL, 2, 0, 0);
+    codeobj_b8fe35d827751ea5b04bbc663c7a7728 = MAKE_CODEOBJECT(module_filename_obj, 31, CO_GENERATOR | CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[10], mod_consts[226], NULL, 0, 0, 0);
+    codeobj_bedd62d016b2aa062d90233fc1dec0e5 = MAKE_CODEOBJECT(module_filename_obj, 315, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[107], mod_consts[227], NULL, 2, 0, 0);
+    codeobj_163013e6ba690a8212cd2ec5eb6100f7 = MAKE_CODEOBJECT(module_filename_obj, 388, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[121], mod_consts[228], NULL, 1, 0, 0);
+    codeobj_9a97654f3fdd09ee36b7b98c6091b8dd = MAKE_CODEOBJECT(module_filename_obj, 351, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[96], mod_consts[229], NULL, 2, 0, 0);
+    codeobj_f8556197024b0f5d60ede22450b1304b = MAKE_CODEOBJECT(module_filename_obj, 310, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[230], NULL, 1, 0, 0);
+    codeobj_52f3051cba6638f0d0e336e3397b589b = MAKE_CODEOBJECT(module_filename_obj, 415, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[201], mod_consts[231], NULL, 1, 0, 0);
+    codeobj_4561464775abffac1c16dd199666d061 = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[35], mod_consts[231], NULL, 1, 0, 0);
+    codeobj_13f2b5ff18ed85f36216b8dbca57f1df = MAKE_CODEOBJECT(module_filename_obj, 483, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[217], mod_consts[232], NULL, 0, 0, 0);
+    codeobj_959e1a4ffc1828929ef7a8c1701c85c5 = MAKE_CODEOBJECT(module_filename_obj, 470, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[134], mod_consts[233], NULL, 2, 0, 0);
+    codeobj_72b2cbd8647c6873723f53ed4456509b = MAKE_CODEOBJECT(module_filename_obj, 475, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[135], mod_consts[233], NULL, 2, 0, 0);
+    codeobj_65ef77517eabfcb5ff9ab8ced9b850a8 = MAKE_CODEOBJECT(module_filename_obj, 457, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[130], mod_consts[233], NULL, 2, 0, 0);
+    codeobj_f68c56a55342f56cd1d43b4cbe2cdbb2 = MAKE_CODEOBJECT(module_filename_obj, 183, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[60], mod_consts[234], NULL, 1, 0, 0);
+    codeobj_24f671d9207084bf3f1cb60811792656 = MAKE_CODEOBJECT(module_filename_obj, 242, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[235], NULL, 3, 0, 0);
+    codeobj_5a85a78e9d16419f08c288c3b21641a4 = MAKE_CODEOBJECT(module_filename_obj, 245, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[85], mod_consts[236], NULL, 4, 0, 0);
+    codeobj_5778d2e84f4b54b01c4c7e4660852c7c = MAKE_CODEOBJECT(module_filename_obj, 294, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[92], mod_consts[237], NULL, 4, 0, 0);
+    codeobj_dc61b0e7df3d827a4747b7513357ae6c = MAKE_CODEOBJECT(module_filename_obj, 300, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[93], mod_consts[238], NULL, 4, 0, 0);
+    codeobj_78461f08538093ef096ae3986e18fb16 = MAKE_CODEOBJECT(module_filename_obj, 192, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[65], mod_consts[239], NULL, 3, 0, 0);
+    codeobj_8b0e45e99dd8d540eb65c09000051555 = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[74], mod_consts[240], NULL, 3, 0, 0);
+    codeobj_236d89e64071ad9b5fc86a36f2732c8c = MAKE_CODEOBJECT(module_filename_obj, 200, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[69], mod_consts[241], NULL, 4, 0, 0);
+    codeobj_32823f2fa24967229ae3df4962fc68cf = MAKE_CODEOBJECT(module_filename_obj, 148, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[242], NULL, 2, 0, 0);
+    codeobj_7c4b656e75c73770cd55d34869ba027a = MAKE_CODEOBJECT(module_filename_obj, 142, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[243], NULL, 2, 0, 0);
+    codeobj_e7a5cffbfddb504549113caa19b9bbf5 = MAKE_CODEOBJECT(module_filename_obj, 427, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[204], mod_consts[244], NULL, 3, 0, 0);
+    codeobj_03fa506d4b75ae641eb4164ee6b111f6 = MAKE_CODEOBJECT(module_filename_obj, 306, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[94], mod_consts[230], NULL, 1, 0, 0);
+    codeobj_a0245e11844241f1b988271d332dba51 = MAKE_CODEOBJECT(module_filename_obj, 461, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[132], mod_consts[233], NULL, 2, 0, 0);
+    codeobj_73844d414cb460022503c32013cd0657 = MAKE_CODEOBJECT(module_filename_obj, 465, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[133], mod_consts[233], NULL, 2, 0, 0);
+    codeobj_c5833dd46aabbab75087e847b9dce90f = MAKE_CODEOBJECT(module_filename_obj, 445, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[165], mod_consts[245], NULL, 2, 0, 0);
+    codeobj_d318a0cd49199714a2df990c61936204 = MAKE_CODEOBJECT(module_filename_obj, 422, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARARGS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[165], mod_consts[246], NULL, 1, 0, 0);
+    codeobj_f921922d2ea1027f962380551fa7f038 = MAKE_CODEOBJECT(module_filename_obj, 177, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[58], mod_consts[247], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -425,15 +425,16 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -443,8 +444,20 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[1]);
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
+
+
+            generator_heap->exception_lineno = 32;
+            generator_heap->type_description_1 = "ccoo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[2]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -455,13 +468,9 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             goto frame_exception_exit_1;
         }
         generator->m_frame->m_frame.f_lineno = 32;
-        tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[2],
-            &PyTuple_GET_ITEM(mod_consts[3], 0)
-        );
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_1, mod_consts[3]);
 
-        Py_DECREF(tmp_called_instance_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -477,16 +486,17 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -496,8 +506,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[5]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[5]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -507,9 +517,21 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[1]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_called_instance_2 == NULL) {
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[1]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
+
+
+            generator_heap->exception_lineno = 33;
+            generator_heap->type_description_1 = "ccoo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[2]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -520,13 +542,9 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             goto frame_exception_exit_1;
         }
         generator->m_frame->m_frame.f_lineno = 33;
-        tmp_assign_source_2 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_2,
-            mod_consts[2],
-            &PyTuple_GET_ITEM(mod_consts[6], 0)
-        );
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_2, mod_consts[6]);
 
-        Py_DECREF(tmp_called_instance_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -543,8 +561,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_ass_subscript_1;
         tmp_ass_subvalue_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
@@ -562,13 +580,13 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -578,8 +596,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[5]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[5]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -589,8 +607,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[1]);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[1]);
+        Py_DECREF(tmp_expression_value_6);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -618,7 +636,7 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_2;
         PyObject *tmp_ass_subscribed_2;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_ass_subscript_2;
         tmp_ass_subvalue_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
@@ -636,13 +654,13 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -652,7 +670,7 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[1]);
+        tmp_ass_subscribed_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[1]);
         if (tmp_ass_subscribed_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -679,12 +697,12 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     }
     // Tried code:
     {
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_9;
         NUITKA_MAY_BE_UNUSED PyObject *tmp_yield_result_1;
-        tmp_expression_name_7 = Py_None;
-        Py_INCREF(tmp_expression_name_7);
+        tmp_expression_value_9 = Py_None;
+        Py_INCREF(tmp_expression_value_9);
         generator->m_yield_return_index = 1;
-        return tmp_expression_name_7;
+        return tmp_expression_value_9;
         yield_return_1:
         if (yield_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -726,17 +744,17 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_3;
         PyObject *tmp_ass_subscribed_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_ass_subscript_3;
         CHECK_OBJECT(generator_heap->var_tmp_sslcontext);
         tmp_ass_subvalue_3 = generator_heap->var_tmp_sslcontext;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -746,7 +764,7 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto try_except_handler_3;
         }
-        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[1]);
+        tmp_ass_subscribed_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[1]);
         if (tmp_ass_subscribed_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -774,18 +792,18 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_4;
         PyObject *tmp_ass_subscribed_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_ass_subscript_4;
         CHECK_OBJECT(generator_heap->var_tmp_sslsocket);
         tmp_ass_subvalue_4 = generator_heap->var_tmp_sslsocket;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_12 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_12 == NULL)) {
+            tmp_expression_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -795,8 +813,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[5]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[5]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -806,8 +824,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto try_except_handler_3;
         }
-        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[1]);
-        Py_DECREF(tmp_expression_name_9);
+        tmp_ass_subscribed_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[1]);
+        Py_DECREF(tmp_expression_value_11);
         if (tmp_ass_subscribed_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -869,17 +887,17 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_5;
         PyObject *tmp_ass_subscribed_5;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_ass_subscript_5;
         CHECK_OBJECT(generator_heap->var_tmp_sslcontext);
         tmp_ass_subvalue_5 = generator_heap->var_tmp_sslcontext;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -889,7 +907,7 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[1]);
+        tmp_ass_subscribed_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[1]);
         if (tmp_ass_subscribed_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -917,18 +935,18 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
     {
         PyObject *tmp_ass_subvalue_6;
         PyObject *tmp_ass_subscribed_6;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_ass_subscript_6;
         CHECK_OBJECT(generator_heap->var_tmp_sslsocket);
         tmp_ass_subvalue_6 = generator_heap->var_tmp_sslsocket;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -938,8 +956,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[5]);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_expression_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[5]);
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&generator_heap->exception_type, &generator_heap->exception_value, &generator_heap->exception_tb);
@@ -949,8 +967,8 @@ static PyObject *eventlet$green$ssl$$$function__1__original_ssl_context$$$genobj
             generator_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_ass_subscribed_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[1]);
-        Py_DECREF(tmp_expression_name_12);
+        tmp_ass_subscribed_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[1]);
+        Py_DECREF(tmp_expression_value_14);
         if (tmp_ass_subscribed_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1222,16 +1240,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     branch_yes_1:;
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1242,8 +1260,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_cls);
-        tmp_object_arg_name_1 = par_cls;
-        tmp_called_instance_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
+        tmp_object_arg_value_1 = par_cls;
+        tmp_called_instance_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1255,9 +1273,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_cls);
-        tmp_args_element_name_1 = par_cls;
+        tmp_args_element_value_1 = par_cls;
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 62;
-        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[13], tmp_args_element_name_1);
+        tmp_return_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[13], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
@@ -1274,8 +1292,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     goto branch_end_1;
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
         CHECK_OBJECT(par_sock);
@@ -1296,7 +1314,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1307,8 +1325,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1319,8 +1337,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -1329,15 +1347,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1348,9 +1366,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_sock);
-        tmp_args_element_name_2 = par_sock;
+        tmp_args_element_value_2 = par_sock;
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 65;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1373,14 +1391,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     // Tried code:
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[10]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[10]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1391,7 +1409,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto try_except_handler_2;
         }
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 66;
-        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_name_2);
+        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1407,12 +1425,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(tmp_with_1__source);
-        tmp_expression_name_1 = tmp_with_1__source;
-        tmp_called_name_3 = LOOKUP_SPECIAL(tmp_expression_name_1, mod_consts[15]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_1 = tmp_with_1__source;
+        tmp_called_value_3 = LOOKUP_SPECIAL(tmp_expression_value_1, mod_consts[15]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1423,8 +1441,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto try_except_handler_2;
         }
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 66;
-        tmp_assign_source_3 = CALL_FUNCTION_NO_ARGS(tmp_called_name_3);
-        Py_DECREF(tmp_called_name_3);
+        tmp_assign_source_3 = CALL_FUNCTION_NO_ARGS(tmp_called_value_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1440,10 +1458,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_with_1__source);
-        tmp_expression_name_2 = tmp_with_1__source;
-        tmp_assign_source_4 = LOOKUP_SPECIAL(tmp_expression_name_2, mod_consts[16]);
+        tmp_expression_value_2 = tmp_with_1__source;
+        tmp_assign_source_4 = LOOKUP_SPECIAL(tmp_expression_value_2, mod_consts[16]);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1462,33 +1480,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
         tmp_assign_source_5 = NUITKA_BOOL_TRUE;
         tmp_with_1__indicator = tmp_assign_source_5;
     }
-    // Tried code:
-    // Tried code:
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_key_value_1;
         CHECK_OBJECT(par_kw);
-        tmp_called_instance_2 = par_kw;
-        frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 67;
-        tmp_assign_source_6 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_2,
-            mod_consts[2],
-            PyTuple_GET_ITEM(mod_consts[17], 0)
-        );
-
+        tmp_dict_arg_value_1 = par_kw;
+        tmp_key_value_1 = mod_consts[17];
+        tmp_assign_source_6 = DICT_GET_ITEM0(tmp_dict_arg_value_1, tmp_key_value_1);
         if (tmp_assign_source_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 67;
-            type_description_1 = "oooooooooooooN";
-            goto try_except_handler_4;
+            tmp_assign_source_6 = Py_None;
         }
+        assert(!(tmp_assign_source_6 == NULL));
         assert(var_context == NULL);
+        Py_INCREF(tmp_assign_source_6);
         var_context = tmp_assign_source_6;
     }
+    // Tried code:
+    // Tried code:
     {
         nuitka_bool tmp_condition_result_3;
         int tmp_truth_name_2;
@@ -1514,26 +1523,30 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_kw_call_value_0_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_kw_call_value_1_1;
         PyObject *tmp_kw_call_value_2_1;
         PyObject *tmp_kw_call_value_3_1;
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
+        PyObject *tmp_default_value_1;
         PyObject *tmp_kw_call_value_4_1;
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_dict_arg_value_3;
+        PyObject *tmp_key_value_3;
         PyObject *tmp_kw_call_value_5_1;
         PyObject *tmp_kw_call_value_6_1;
-        PyObject *tmp_called_instance_5;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_key_value_4;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1543,8 +1556,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto try_except_handler_4;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[5]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[5]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1555,13 +1568,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto try_except_handler_4;
         }
         CHECK_OBJECT(par_sock);
-        tmp_expression_name_4 = par_sock;
-        tmp_kw_call_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[18]);
+        tmp_expression_value_4 = par_sock;
+        tmp_kw_call_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[18]);
         if (tmp_kw_call_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             exception_lineno = 70;
             type_description_1 = "oooooooooooooN";
@@ -1571,82 +1584,43 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
         tmp_kw_call_value_1_1 = par_server_side;
         tmp_kw_call_value_2_1 = Py_False;
         CHECK_OBJECT(par_kw);
-        tmp_called_instance_3 = par_kw;
-        frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 73;
-        tmp_kw_call_value_3_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_3,
-            mod_consts[2],
-            &PyTuple_GET_ITEM(mod_consts[19], 0)
-        );
-
+        tmp_dict_arg_value_2 = par_kw;
+        tmp_key_value_2 = mod_consts[19];
+        tmp_default_value_1 = Py_True;
+        tmp_kw_call_value_3_1 = DICT_GET_ITEM1(tmp_dict_arg_value_2, tmp_key_value_2);
         if (tmp_kw_call_value_3_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_kw_call_value_0_1);
-
-            exception_lineno = 73;
-            type_description_1 = "oooooooooooooN";
-            goto try_except_handler_4;
+            tmp_kw_call_value_3_1 = tmp_default_value_1;
+            Py_INCREF(tmp_kw_call_value_3_1);
         }
+        assert(!(tmp_kw_call_value_3_1 == NULL));
         CHECK_OBJECT(par_kw);
-        tmp_called_instance_4 = par_kw;
-        frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 74;
-        tmp_kw_call_value_4_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_4,
-            mod_consts[2],
-            PyTuple_GET_ITEM(mod_consts[20], 0)
-        );
-
+        tmp_dict_arg_value_3 = par_kw;
+        tmp_key_value_3 = mod_consts[20];
+        tmp_kw_call_value_4_1 = DICT_GET_ITEM0(tmp_dict_arg_value_3, tmp_key_value_3);
         if (tmp_kw_call_value_4_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_kw_call_value_0_1);
-            Py_DECREF(tmp_kw_call_value_3_1);
-
-            exception_lineno = 74;
-            type_description_1 = "oooooooooooooN";
-            goto try_except_handler_4;
+            tmp_kw_call_value_4_1 = Py_None;
         }
+        assert(!(tmp_kw_call_value_4_1 == NULL));
         CHECK_OBJECT(var_context);
         tmp_kw_call_value_5_1 = var_context;
         CHECK_OBJECT(par_kw);
-        tmp_called_instance_5 = par_kw;
-        frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 76;
-        tmp_kw_call_value_6_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[2],
-            PyTuple_GET_ITEM(mod_consts[21], 0)
-        );
-
+        tmp_dict_arg_value_4 = par_kw;
+        tmp_key_value_4 = mod_consts[21];
+        tmp_kw_call_value_6_1 = DICT_GET_ITEM0(tmp_dict_arg_value_4, tmp_key_value_4);
         if (tmp_kw_call_value_6_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_kw_call_value_0_1);
-            Py_DECREF(tmp_kw_call_value_3_1);
-            Py_DECREF(tmp_kw_call_value_4_1);
-
-            exception_lineno = 76;
-            type_description_1 = "oooooooooooooN";
-            goto try_except_handler_4;
+            tmp_kw_call_value_6_1 = Py_None;
         }
+        assert(!(tmp_kw_call_value_6_1 == NULL));
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 69;
         {
             PyObject *kw_values[7] = {tmp_kw_call_value_0_1, tmp_kw_call_value_1_1, tmp_kw_call_value_2_1, tmp_kw_call_value_3_1, tmp_kw_call_value_4_1, tmp_kw_call_value_5_1, tmp_kw_call_value_6_1};
 
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_4, kw_values, mod_consts[22]);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_4, kw_values, mod_consts[22]);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         Py_DECREF(tmp_kw_call_value_0_1);
         Py_DECREF(tmp_kw_call_value_3_1);
-        Py_DECREF(tmp_kw_call_value_4_1);
-        Py_DECREF(tmp_kw_call_value_6_1);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1664,9 +1638,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     branch_no_3:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_kw_call_value_0_2;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_kw_call_value_1_2;
         PyObject *tmp_kw_call_value_2_2;
         PyObject *tmp_kw_call_value_3_2;
@@ -1675,14 +1649,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
         PyObject *tmp_kw_call_value_6_2;
         PyObject *tmp_kw_call_value_7_1;
         PyObject *tmp_kw_call_value_8_1;
-        PyObject *tmp_called_instance_6;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[0]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[0]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1693,8 +1668,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             goto try_except_handler_4;
         }
         CHECK_OBJECT(par_sock);
-        tmp_expression_name_5 = par_sock;
-        tmp_kw_call_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[18]);
+        tmp_expression_value_5 = par_sock;
+        tmp_kw_call_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[18]);
         if (tmp_kw_call_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1719,33 +1694,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
         tmp_kw_call_value_6_2 = par_ca_certs;
         tmp_kw_call_value_7_1 = Py_False;
         CHECK_OBJECT(par_kw);
-        tmp_called_instance_6 = par_kw;
-        frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 88;
-        tmp_kw_call_value_8_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_6,
-            mod_consts[2],
-            PyTuple_GET_ITEM(mod_consts[23], 0)
-        );
-
+        tmp_dict_arg_value_5 = par_kw;
+        tmp_key_value_5 = mod_consts[23];
+        tmp_kw_call_value_8_1 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
         if (tmp_kw_call_value_8_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_kw_call_value_0_2);
-
-            exception_lineno = 88;
-            type_description_1 = "oooooooooooooN";
-            goto try_except_handler_4;
+            tmp_kw_call_value_8_1 = Py_None;
         }
+        assert(!(tmp_kw_call_value_8_1 == NULL));
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 79;
         {
             PyObject *kw_values[9] = {tmp_kw_call_value_0_2, tmp_kw_call_value_1_2, tmp_kw_call_value_2_2, tmp_kw_call_value_3_2, tmp_kw_call_value_4_2, tmp_kw_call_value_5_2, tmp_kw_call_value_6_2, tmp_kw_call_value_7_1, tmp_kw_call_value_8_1};
 
-            tmp_assign_source_8 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_5, kw_values, mod_consts[24]);
+            tmp_assign_source_8 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_5, kw_values, mod_consts[24]);
         }
 
         Py_DECREF(tmp_kw_call_value_0_2);
-        Py_DECREF(tmp_kw_call_value_8_1);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1787,11 +1750,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_BaseException;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_BaseException;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_4 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_4 != false) {
@@ -1807,24 +1770,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
         tmp_with_1__indicator = tmp_assign_source_9;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(tmp_with_1__exit);
-        tmp_called_name_6 = tmp_with_1__exit;
-        tmp_args_element_name_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_args_element_name_4 = EXC_VALUE(PyThreadState_GET());
-        tmp_args_element_name_5 = EXC_TRACEBACK(PyThreadState_GET());
+        tmp_called_value_6 = tmp_with_1__exit;
+        tmp_args_element_value_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_args_element_value_4 = EXC_VALUE(PyThreadState_GET());
+        tmp_args_element_value_5 = EXC_TRACEBACK(PyThreadState_GET());
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 88;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_operand_name_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_operand_value_2 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_6, call_args);
         }
 
-        if (tmp_operand_name_2 == NULL) {
+        if (tmp_operand_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1834,8 +1797,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto try_except_handler_5;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
-        Py_DECREF(tmp_operand_name_2);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        Py_DECREF(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1846,8 +1809,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
             type_description_1 = "oooooooooooooN";
             goto try_except_handler_5;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
             goto branch_no_5;
@@ -1920,12 +1883,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
 
     {
         bool tmp_condition_result_6;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
+        nuitka_bool tmp_cmp_expr_left_2;
+        nuitka_bool tmp_cmp_expr_right_2;
         assert(tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = tmp_with_1__indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_6 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = tmp_with_1__indicator;
+        tmp_cmp_expr_right_2 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_6 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
@@ -1934,12 +1897,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     }
     branch_yes_6:;
     {
-        PyObject *tmp_called_name_7;
+        PyObject *tmp_called_value_7;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(tmp_with_1__exit);
-        tmp_called_name_7 = tmp_with_1__exit;
+        tmp_called_value_7 = tmp_with_1__exit;
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 88;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_name_7, mod_consts[25]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_7, mod_consts[25]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1968,12 +1931,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     try_end_3:;
     {
         bool tmp_condition_result_7;
-        nuitka_bool tmp_compexpr_left_3;
-        nuitka_bool tmp_compexpr_right_3;
+        nuitka_bool tmp_cmp_expr_left_3;
+        nuitka_bool tmp_cmp_expr_right_3;
         assert(tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_3 = tmp_with_1__indicator;
-        tmp_compexpr_right_3 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_7 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = tmp_with_1__indicator;
+        tmp_cmp_expr_right_3 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
@@ -1982,12 +1945,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__2___new__(struct Nuitka_Fun
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_name_8;
+        PyObject *tmp_called_value_8;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(tmp_with_1__exit);
-        tmp_called_name_8 = tmp_with_1__exit;
+        tmp_called_value_8 = tmp_with_1__exit;
         frame_541e38a88859a0342ca4f389d4871334->m_frame.f_lineno = 88;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_name_8, mod_consts[25]);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_8, mod_consts[25]);
 
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2553,8 +2516,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
         CHECK_OBJECT(par_sock);
@@ -2575,7 +2538,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2586,8 +2549,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_operand_name_1 = (tmp_res != 0) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_operand_value_1 = (tmp_res != 0) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2598,8 +2561,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -2608,15 +2571,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2627,9 +2590,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_sock);
-        tmp_args_element_name_1 = par_sock;
+        tmp_args_element_value_1 = par_sock;
         frame_d1e534867ba726ac0389d9f4a5c74f4f->m_frame.f_lineno = 105;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2651,11 +2614,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     branch_no_1:;
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_assattr_target_1;
         CHECK_OBJECT(par_sock);
-        tmp_expression_name_1 = par_sock;
-        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[32]);
+        tmp_expression_value_1 = par_sock;
+        tmp_assattr_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_assattr_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2683,16 +2646,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2702,7 +2665,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[34]);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[34]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2808,22 +2771,22 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     branch_yes_3:;
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_dircall_arg4_1;
         PyObject *tmp_call_result_1;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2834,9 +2797,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_3 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_3 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2846,8 +2809,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[37]);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[37]);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2859,8 +2822,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_sock);
-        tmp_expression_name_4 = par_sock;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[18]);
+        tmp_expression_value_4 = par_sock;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[18]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2876,7 +2839,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             int tmp_and_left_truth_1;
             PyObject *tmp_and_left_value_1;
             PyObject *tmp_and_right_value_1;
-            PyObject *tmp_expression_name_5;
+            PyObject *tmp_expression_value_5;
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
             CHECK_OBJECT(par_keyfile);
             tmp_tuple_element_1 = par_keyfile;
@@ -2915,13 +2878,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
                 goto and_left_1;
             }
             and_right_1:;
-            tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
+            tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
 
-            if (unlikely(tmp_expression_name_5 == NULL)) {
-                tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+            if (unlikely(tmp_expression_value_5 == NULL)) {
+                tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
             }
 
-            if (tmp_expression_name_5 == NULL) {
+            if (tmp_expression_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2931,7 +2894,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
                 type_description_1 = "ooooooooooooN";
                 goto tuple_build_exception_1;
             }
-            tmp_and_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[34]);
+            tmp_and_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[34]);
             if (tmp_and_right_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -2986,14 +2949,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_expression_value_6;
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3003,7 +2966,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto try_except_handler_2;
         }
-        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[39]);
+        tmp_iter_arg_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[39]);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3070,31 +3033,20 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
 
     }
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[40]);
-        assert(tmp_called_name_2 != NULL);
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 125;
-            type_description_1 = "ooooooooooooN";
-            goto try_except_handler_3;
-        }
-
-        tmp_args_element_name_2 = par_self;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_called_value_2 = LOOKUP_BUILTIN(mod_consts[40]);
+        assert(tmp_called_value_2 != NULL);
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_2 = par_self;
         CHECK_OBJECT(var_fn);
-        tmp_args_element_name_3 = var_fn;
+        tmp_args_element_value_3 = var_fn;
         frame_d1e534867ba726ac0389d9f4a5c74f4f->m_frame.f_lineno = 125;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_call_result_2 == NULL) {
@@ -3179,11 +3131,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_AttributeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_AttributeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_4 = (tmp_res == 0) ? true : false;
         if (tmp_condition_result_4 != false) {
@@ -3236,16 +3188,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     try_end_2:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_3;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3255,7 +3207,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[42]);
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[41]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3304,18 +3256,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_assattr_value_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 131;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[36], tmp_assattr_value_3);
         Py_DECREF(tmp_assattr_value_3);
@@ -3331,18 +3272,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
         }
     }
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_instance_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_called_instance_3 == NULL)) {
+            tmp_called_instance_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3352,38 +3292,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[43]);
-        if (tmp_called_name_3 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 134;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 134;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_4 = par_self;
-        tmp_args_element_name_5 = mod_consts[44];
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_4 = par_self;
+        tmp_args_element_value_5 = mod_consts[43];
         frame_d1e534867ba726ac0389d9f4a5c74f4f->m_frame.f_lineno = 134;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_call_result_3 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_3,
+                mod_consts[42],
+                call_args
+            );
         }
 
-        Py_DECREF(tmp_called_name_3);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3397,20 +3318,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
         Py_DECREF(tmp_call_result_3);
     }
     {
-        nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_args_element_name_6;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
+        bool tmp_condition_result_6;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_called_instance_4;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[4]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+        if (unlikely(tmp_called_instance_4 == NULL)) {
+            tmp_called_instance_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_called_instance_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3420,34 +3340,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[35]);
-        if (tmp_called_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 135;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-        if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 135;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_args_element_name_6 = par_self;
+        CHECK_OBJECT(par_self);
+        tmp_args_element_value_6 = par_self;
         frame_d1e534867ba726ac0389d9f4a5c74f4f->m_frame.f_lineno = 135;
-        tmp_compexpr_left_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_4);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[35], tmp_args_element_value_6);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3457,10 +3354,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = mod_consts[44];
-        tmp_operand_name_2 = RICH_COMPARE_EQ_OBJECT_OBJECT_FLOAT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        if (tmp_operand_name_2 == NULL) {
+        tmp_cmp_expr_right_2 = mod_consts[43];
+        tmp_operand_value_2 = RICH_COMPARE_EQ_OBJECT_OBJECT_FLOAT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        if (tmp_operand_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3470,8 +3367,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
-        Py_DECREF(tmp_operand_name_2);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
+        Py_DECREF(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -3482,8 +3379,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             type_description_1 = "ooooooooooooN";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_6 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_6 != false) {
             goto branch_yes_6;
         } else {
             goto branch_no_6;
@@ -3506,20 +3403,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
         PyObject *tmp_assattr_target_4;
         CHECK_OBJECT(par_do_handshake_on_connect);
         tmp_assattr_value_4 = par_do_handshake_on_connect;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 138;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[45], tmp_assattr_value_4);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[44], tmp_assattr_value_4);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -3537,7 +3423,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
         int tmp_truth_name_4;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_attribute_value_3;
         int tmp_truth_name_5;
         CHECK_OBJECT(par_do_handshake_on_connect);
@@ -3570,20 +3456,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
             goto and_left_2;
         }
         and_right_2:;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 139;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_10 = par_self;
-        tmp_attribute_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[46]);
+        CHECK_OBJECT(par_self);
+        tmp_expression_value_8 = par_self;
+        tmp_attribute_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[45]);
         if (tmp_attribute_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3620,23 +3495,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__3___init__(struct Nuitka_Fu
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_instance_3;
+        PyObject *tmp_called_instance_5;
         PyObject *tmp_call_result_4;
-        if (par_self == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 140;
-            type_description_1 = "ooooooooooooN";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_called_instance_3 = par_self;
+        CHECK_OBJECT(par_self);
+        tmp_called_instance_5 = par_self;
         frame_d1e534867ba726ac0389d9f4a5c74f4f->m_frame.f_lineno = 140;
-        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[47]);
+        tmp_call_result_4 = CALL_METHOD_NO_ARGS(tmp_called_instance_5, mod_consts[46]);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4003,10 +3867,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__5_gettimeout(struct Nuitka_
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[36]);
+        tmp_expression_value_1 = par_self;
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[36]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4232,7 +4096,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__6_setblocking(struct Nuitka
     {
         PyObject *tmp_assattr_value_4;
         PyObject *tmp_assattr_target_4;
-        tmp_assattr_value_4 = mod_consts[44];
+        tmp_assattr_value_4 = mod_consts[43];
         CHECK_OBJECT(par_self);
         tmp_assattr_target_4 = par_self;
         tmp_result = SET_ATTRIBUTE(tmp_assattr_target_4, mod_consts[36], tmp_assattr_value_4);
@@ -4404,12 +4268,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[32]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4478,44 +4342,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         PyObject *tmp_dircall_arg1_2;
         PyObject *tmp_dircall_arg2_2;
         PyObject *tmp_dircall_arg3_2;
-        if (par_func == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[48]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 162;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_func);
         tmp_dircall_arg1_2 = par_func;
-        if (par_a == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[49]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 162;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_a);
         tmp_dircall_arg2_2 = par_a;
-        if (par_kw == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[50]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 162;
-            type_description_1 = "ooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kw);
         tmp_dircall_arg3_2 = par_kw;
         Py_INCREF(tmp_dircall_arg1_2);
         Py_INCREF(tmp_dircall_arg2_2);
@@ -4565,16 +4396,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[51]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[47]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4584,7 +4415,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             type_description_1 = "ooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4617,17 +4448,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     // Tried code:
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4638,10 +4469,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_1 = var_exc;
+        tmp_args_element_value_1 = var_exc;
         frame_dc280611cd8adcd3c675705cb8013de7->m_frame.f_lineno = 164;
-        tmp_compexpr_left_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4651,24 +4482,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[53]);
+        tmp_cmp_expr_right_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[49]);
 
-        if (unlikely(tmp_compexpr_right_2 == NULL)) {
-            tmp_compexpr_right_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
+        if (unlikely(tmp_cmp_expr_right_2 == NULL)) {
+            tmp_cmp_expr_right_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[49]);
         }
 
-        if (tmp_compexpr_right_2 == NULL) {
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
 
             exception_lineno = 164;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4688,21 +4519,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4714,7 +4545,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4728,7 +4559,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         tmp_kw_call_dict_value_0_1 = Py_True;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4751,13 +4582,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4768,7 +4599,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             goto try_except_handler_4;
         }
         frame_dc280611cd8adcd3c675705cb8013de7->m_frame.f_lineno = 168;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4784,7 +4615,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[57]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[54]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -4805,17 +4636,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_2;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_2;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4826,10 +4657,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_2 = var_exc;
+        tmp_args_element_value_2 = var_exc;
         frame_dc280611cd8adcd3c675705cb8013de7->m_frame.f_lineno = 169;
-        tmp_compexpr_left_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_2);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_2);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4839,24 +4670,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[58]);
+        tmp_cmp_expr_right_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
 
-        if (unlikely(tmp_compexpr_right_3 == NULL)) {
-            tmp_compexpr_right_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[58]);
+        if (unlikely(tmp_cmp_expr_right_3 == NULL)) {
+            tmp_cmp_expr_right_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
         }
 
-        if (tmp_compexpr_right_3 == NULL) {
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             exception_lineno = 169;
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -4876,21 +4707,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_kw_call_dict_value_1_2;
         PyObject *tmp_called_instance_2;
         PyObject *tmp_kw_call_dict_value_2_2;
-        PyObject *tmp_called_name_6;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_6;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4902,7 +4733,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4916,7 +4747,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         tmp_kw_call_dict_value_0_2 = Py_True;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -4939,13 +4770,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             type_description_1 = "ooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -4956,7 +4787,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
             goto try_except_handler_4;
         }
         frame_dc280611cd8adcd3c675705cb8013de7->m_frame.f_lineno = 173;
-        tmp_kw_call_dict_value_2_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[56]);
+        tmp_kw_call_dict_value_2_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_6, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4972,7 +4803,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__7__call_trampolining(struct
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2, tmp_kw_call_dict_value_2_2};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_5, args, kw_values, mod_consts[59]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_5, args, kw_values, mod_consts[56]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_2);
@@ -5258,17 +5089,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__8_write(struct Nuitka_Funct
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[60]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[57]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5278,57 +5109,57 @@ static PyObject *impl_eventlet$green$ssl$$$function__8_write(struct Nuitka_Funct
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 181;
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 181;
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[61]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[58]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 181;
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_2 = par_data;
+        tmp_args_element_value_2 = par_data;
         frame_f921922d2ea1027f962380551fa7f038->m_frame.f_lineno = 180;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5494,17 +5325,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
     // Tried code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_dircall_arg4_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[60]);
+        tmp_expression_value_1 = par_self;
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[57]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5515,13 +5346,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
             type_description_1 = "oooN";
             goto try_except_handler_1;
         }
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5532,9 +5363,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
             goto try_except_handler_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5544,8 +5375,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
             type_description_1 = "oooN";
             goto try_except_handler_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[63]);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[60]);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5609,16 +5440,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[64]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[61]);
 
-        if (unlikely(tmp_compexpr_right_1 == NULL)) {
-            tmp_compexpr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[64]);
+        if (unlikely(tmp_cmp_expr_right_1 == NULL)) {
+            tmp_cmp_expr_right_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
         }
 
-        if (tmp_compexpr_right_1 == NULL) {
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5628,7 +5459,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
             type_description_1 = "oooN";
             goto try_except_handler_2;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5647,7 +5478,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__9_read(struct Nuitka_Functi
         }
     }
     branch_yes_1:;
-    tmp_return_value = mod_consts[65];
+    tmp_return_value = mod_consts[62];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_2;
     goto branch_end_1;
@@ -5837,12 +5668,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5874,18 +5705,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[60]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[57]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5895,59 +5726,59 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
             type_description_1 = "oooN";
             goto frame_exception_exit_1;
         }
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 195;
             type_description_1 = "oooN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_3 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_3 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 195;
             type_description_1 = "oooN";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[68]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[65]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 195;
             type_description_1 = "oooN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_2 = par_data;
+        tmp_args_element_value_2 = par_data;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_3 = par_flags;
+        tmp_args_element_value_3 = par_flags;
         frame_78461f08538093ef096ae3986e18fb16->m_frame.f_lineno = 194;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5963,19 +5794,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5988,13 +5819,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
         CHECK_OBJECT(par_self);
         tmp_kw_call_arg_value_0_1 = par_self;
         tmp_kw_call_dict_value_0_1 = Py_True;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6005,7 +5836,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         frame_78461f08538093ef096ae3986e18fb16->m_frame.f_lineno = 197;
-        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[56]);
+        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6021,7 +5852,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[69]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[66]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -6039,13 +5870,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -6059,17 +5890,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__10_send(struct Nuitka_Funct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_4 = par_self;
+        tmp_args_element_value_4 = par_self;
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_5 = par_data;
+        tmp_args_element_value_5 = par_data;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_6 = par_flags;
+        tmp_args_element_value_6 = par_flags;
         frame_78461f08538093ef096ae3986e18fb16->m_frame.f_lineno = 198;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
             tmp_return_value = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_1,
-                mod_consts[68],
+                mod_consts[65],
                 call_args
             );
         }
@@ -6233,12 +6064,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6272,14 +6103,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_1 = mod_consts[71];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_left_value_1 = mod_consts[68];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6289,8 +6120,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6314,19 +6145,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6339,13 +6170,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
         CHECK_OBJECT(par_self);
         tmp_kw_call_arg_value_0_1 = par_self;
         tmp_kw_call_dict_value_0_1 = Py_True;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6356,7 +6187,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_236d89e64071ad9b5fc86a36f2732c8c->m_frame.f_lineno = 206;
-        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[56]);
+        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6372,7 +6203,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[69]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[66]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -6390,14 +6221,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -6411,19 +6242,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__11_sendto(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_2 = par_data;
+        tmp_args_element_value_2 = par_data;
         CHECK_OBJECT(par_addr);
-        tmp_args_element_name_3 = par_addr;
+        tmp_args_element_value_3 = par_addr;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_4 = par_flags;
+        tmp_args_element_value_4 = par_flags;
         frame_236d89e64071ad9b5fc86a36f2732c8c->m_frame.f_lineno = 207;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
             tmp_return_value = CALL_METHOD_WITH_ARGS4(
                 tmp_called_instance_1,
-                mod_consts[72],
+                mod_consts[69],
                 call_args
             );
         }
@@ -6618,12 +6449,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6656,15 +6487,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_2_object_1;
-        int tmp_truth_name_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_flags);
-        tmp_compexpr_left_1 = par_flags;
-        tmp_compexpr_right_1 = mod_consts[73];
-        tmp_tmp_condition_result_2_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_2_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = par_flags;
+        tmp_cmp_expr_right_1 = mod_consts[70];
+        tmp_condition_result_2 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_2 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6674,37 +6503,25 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_tmp_condition_result_2_object_1);
-        if (tmp_truth_name_2 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_2_object_1);
-
-            exception_lineno = 212;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_2 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_2_object_1);
         if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
         }
+        assert(tmp_condition_result_2 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_2:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_2;
-        tmp_left_name_1 = mod_consts[74];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_2;
+        tmp_left_value_1 = mod_consts[71];
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_name_2);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_value_2);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6714,8 +6531,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6758,7 +6575,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[73];
+        tmp_assign_source_2 = mod_consts[70];
         assert(var_count == NULL);
         Py_INCREF(tmp_assign_source_2);
         var_count = tmp_assign_source_2;
@@ -6773,13 +6590,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     loop_start_1:;
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        bool tmp_condition_result_3;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         if (var_count == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6789,22 +6606,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_2 = var_count;
-        if (var_amount == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 219;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_right_2 = var_amount;
-        tmp_operand_name_1 = RICH_COMPARE_LT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_cmp_expr_left_2 = var_count;
+        CHECK_OBJECT(var_amount);
+        tmp_cmp_expr_right_2 = var_amount;
+        tmp_operand_value_1 = RICH_COMPARE_LT_OBJECT_OBJECT_LONG(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6814,8 +6620,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -6826,8 +6632,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -6838,12 +6644,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     branch_no_3:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6853,9 +6659,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[68]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[65]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6866,8 +6672,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         if (var_data_to_send == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[77]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[73]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6877,10 +6683,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = var_data_to_send;
+        tmp_args_element_value_1 = var_data_to_send;
         frame_8b0e45e99dd8d540eb65c09000051555->m_frame.f_lineno = 220;
-        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6900,11 +6706,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (var_count == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[75]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[72]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -6914,10 +6720,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_2 = var_count;
+        tmp_left_value_2 = var_count;
         CHECK_OBJECT(var_v);
-        tmp_right_name_2 = var_v;
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_2, tmp_right_name_2);
+        tmp_right_value_2 = var_v;
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_2, tmp_right_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -6928,21 +6734,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_5 = tmp_left_name_2;
+        tmp_assign_source_5 = tmp_left_value_2;
         var_count = tmp_assign_source_5;
 
     }
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(var_v);
-        tmp_compexpr_left_3 = var_v;
-        tmp_compexpr_right_3 = mod_consts[73];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        if (tmp_tmp_condition_result_4_object_1 == NULL) {
+        tmp_cmp_expr_left_3 = var_v;
+        tmp_cmp_expr_right_3 = mod_consts[70];
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6952,40 +6756,28 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_4_object_1);
-
-            exception_lineno = 222;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_4 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
             goto branch_no_4;
         }
+        assert(tmp_condition_result_4 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6997,7 +6789,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -7009,13 +6801,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
 
         tmp_kw_call_arg_value_0_1 = par_self;
         tmp_kw_call_dict_value_0_1 = Py_True;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7026,7 +6818,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         frame_8b0e45e99dd8d540eb65c09000051555->m_frame.f_lineno = 223;
-        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[56]);
+        tmp_kw_call_dict_value_1_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7042,7 +6834,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[69]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[66]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -7062,30 +6854,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     branch_no_4:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_start_name_1;
-        PyObject *tmp_stop_name_1;
-        if (par_data == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[78]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 225;
-            type_description_1 = "ooooooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_4 = par_data;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_start_value_1;
+        PyObject *tmp_stop_value_1;
+        CHECK_OBJECT(par_data);
+        tmp_expression_value_4 = par_data;
         CHECK_OBJECT(var_count);
-        tmp_start_name_1 = var_count;
-        tmp_stop_name_1 = Py_None;
-        tmp_subscript_name_1 = MAKE_SLICEOBJ2(tmp_start_name_1, tmp_stop_name_1);
-        assert(!(tmp_subscript_name_1 == NULL));
-        tmp_assign_source_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_1);
-        Py_DECREF(tmp_subscript_name_1);
+        tmp_start_value_1 = var_count;
+        tmp_stop_value_1 = Py_None;
+        tmp_subscript_value_1 = MAKE_SLICEOBJ2(tmp_start_value_1, tmp_stop_value_1);
+        assert(!(tmp_subscript_value_1 == NULL));
+        tmp_assign_source_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_1);
+        Py_DECREF(tmp_subscript_value_1);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7116,18 +6897,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     goto loop_start_1;
     loop_end_1:;
-    if (var_amount == NULL) {
-
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[76]);
-        exception_tb = NULL;
-        NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-        CHAIN_EXCEPTION(exception_value);
-
-        exception_lineno = 226;
-        type_description_1 = "ooooooooo";
-        goto frame_exception_exit_1;
-    }
-
+    CHECK_OBJECT(var_amount);
     tmp_return_value = var_amount;
     Py_INCREF(tmp_return_value);
     goto frame_return_exit_1;
@@ -7137,13 +6907,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     // Tried code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -7157,17 +6927,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_2 = par_self;
+        tmp_args_element_value_2 = par_self;
         CHECK_OBJECT(par_data);
-        tmp_args_element_name_3 = par_data;
+        tmp_args_element_value_3 = par_data;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_4 = par_flags;
+        tmp_args_element_value_4 = par_flags;
         frame_8b0e45e99dd8d540eb65c09000051555->m_frame.f_lineno = 230;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
             tmp_return_value = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_1,
-                mod_consts[79],
+                mod_consts[74],
                 call_args
             );
         }
@@ -7212,17 +6982,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     // Tried code:
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_5;
-        tmp_compexpr_left_4 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_5;
+        tmp_cmp_expr_left_4 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7232,8 +7002,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[80]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[75]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7243,8 +7013,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7273,12 +7043,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     // Tried code:
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_attribute_value_2;
-        int tmp_truth_name_4;
+        int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[32]);
+        tmp_expression_value_6 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[32]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7289,8 +7059,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_truth_name_4 = CHECK_IF_TRUE(tmp_attribute_value_2);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_2 = CHECK_IF_TRUE(tmp_attribute_value_2);
+        if (tmp_truth_name_2 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7300,7 +7070,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_6 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_6 = tmp_truth_name_2 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_attribute_value_2);
         if (tmp_condition_result_6 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
@@ -7320,15 +7090,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     branch_no_6:;
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7339,9 +7109,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_e);
-        tmp_args_element_name_5 = var_e;
+        tmp_args_element_value_5 = var_e;
         frame_8b0e45e99dd8d540eb65c09000051555->m_frame.f_lineno = 234;
-        tmp_assign_source_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_5);
+        tmp_assign_source_8 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_5);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7357,18 +7127,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(var_erno);
-        tmp_compexpr_left_5 = var_erno;
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_cmp_expr_left_5 = var_erno;
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7378,8 +7148,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[82]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[77]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7389,8 +7159,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7410,21 +7180,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_kw_call_dict_value_1_2;
         PyObject *tmp_called_instance_2;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_6;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_6;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7451,13 +7221,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_called_name_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_6 == NULL)) {
-            tmp_called_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_6 == NULL)) {
+            tmp_called_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_6 == NULL) {
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7468,7 +7238,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             goto try_except_handler_4;
         }
         frame_8b0e45e99dd8d540eb65c09000051555->m_frame.f_lineno = 237;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_6, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_6, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7484,7 +7254,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_5, args, kw_values, mod_consts[59]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_5, args, kw_values, mod_consts[56]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_2);
@@ -7505,18 +7275,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
     branch_no_7:;
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(var_erno);
-        tmp_compexpr_left_6 = var_erno;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_cmp_expr_left_6 = var_erno;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7526,8 +7296,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[83]);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[78]);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7537,8 +7307,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
             type_description_1 = "ooooooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_6, tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_6, tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -7557,7 +7327,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__12_sendall(struct Nuitka_Fu
         }
     }
     branch_yes_8:;
-    tmp_return_value = mod_consts[84];
+    tmp_return_value = mod_consts[79];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_4;
     branch_no_8:;
@@ -7846,15 +7616,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__13_recv(struct Nuitka_Funct
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[85]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[80]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -7866,17 +7636,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__13_recv(struct Nuitka_Funct
         }
         CHECK_OBJECT(par_buflen);
         tmp_tuple_element_1 = par_buflen;
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_flags);
         tmp_tuple_element_1 = par_flags;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[86]);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[81]);
         frame_24f671d9207084bf3f1cb60811792656->m_frame.f_lineno = 243;
-        tmp_return_value = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_return_value = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8042,8 +7812,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
         int tmp_truth_name_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_buffer);
         tmp_truth_name_1 = CHECK_IF_TRUE(par_buffer);
         if (tmp_truth_name_1 == -1) {
@@ -8075,9 +7845,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
         }
         and_right_1:;
         CHECK_OBJECT(par_nbytes);
-        tmp_compexpr_left_1 = par_nbytes;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_and_right_value_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
+        tmp_cmp_expr_left_1 = par_nbytes;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_and_right_value_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         tmp_condition_result_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -8118,12 +7888,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(par_nbytes);
-        tmp_compexpr_left_2 = par_nbytes;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = par_nbytes;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -8133,7 +7903,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[87];
+        tmp_assign_source_2 = mod_consts[82];
         {
             PyObject *old = par_nbytes;
             assert(old != NULL);
@@ -8146,16 +7916,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
     branch_no_2:;
     branch_end_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[85]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[80]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8166,8 +7936,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
             goto frame_exception_exit_1;
         }
         if (par_nbytes == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[88]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[83]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8181,27 +7951,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__14_recv_into(struct Nuitka_
         CHECK_OBJECT(par_flags);
         tmp_kw_call_arg_value_1_1 = par_flags;
         tmp_kw_call_dict_value_0_1 = Py_True;
-        if (par_buffer == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[89]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 253;
-            type_description_1 = "oooo";
-            goto frame_exception_exit_1;
-        }
-
+        CHECK_OBJECT(par_buffer);
         tmp_kw_call_dict_value_1_1 = par_buffer;
         frame_5a85a78e9d16419f08c288c3b21641a4->m_frame.f_lineno = 253;
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[90]);
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[84]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8450,14 +8209,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8467,7 +8226,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[91]);
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[85]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8485,14 +8244,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8502,7 +8261,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[92]);
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[86]);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8519,12 +8278,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_end_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_3 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[67]);
+        tmp_expression_value_3 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[64]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8557,15 +8316,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_yes_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_tmp_condition_result_3_object_1;
-        int tmp_truth_name_3;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_flags);
-        tmp_compexpr_left_1 = par_flags;
-        tmp_compexpr_right_1 = mod_consts[73];
-        tmp_tmp_condition_result_3_object_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        if (tmp_tmp_condition_result_3_object_1 == NULL) {
+        tmp_cmp_expr_left_1 = par_flags;
+        tmp_cmp_expr_right_1 = mod_consts[70];
+        tmp_condition_result_3 = RICH_COMPARE_NE_NBOOL_OBJECT_LONG(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8575,39 +8332,27 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_truth_name_3 = CHECK_IF_TRUE(tmp_tmp_condition_result_3_object_1);
-        if (tmp_truth_name_3 == -1) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_tmp_condition_result_3_object_1);
-
-            exception_lineno = 263;
-            type_description_1 = "oooooooooo";
-            goto frame_exception_exit_1;
-        }
-        tmp_condition_result_3 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
-        Py_DECREF(tmp_tmp_condition_result_3_object_1);
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
         }
+        assert(tmp_condition_result_3 != NUITKA_BOOL_UNASSIGNED);
     }
     branch_yes_3:;
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_make_exception_arg_2;
-        PyObject *tmp_expression_name_5;
-        tmp_left_name_1 = mod_consts[93];
+        PyObject *tmp_expression_value_5;
+        tmp_left_value_1 = mod_consts[87];
         CHECK_OBJECT(var_plain_socket_function);
-        tmp_expression_name_4 = var_plain_socket_function;
-        tmp_right_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[94]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_expression_value_4 = var_plain_socket_function;
+        tmp_right_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[88]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8617,8 +8362,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_make_exception_arg_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8630,8 +8375,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_make_exception_arg_2 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_name_5);
+        tmp_expression_value_5 = par_self;
+        tmp_make_exception_arg_2 = LOOKUP_ATTRIBUTE_CLASS_SLOT(tmp_expression_value_5);
         if (tmp_make_exception_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8660,10 +8405,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_no_3:;
     {
         nuitka_bool tmp_condition_result_4;
-        int tmp_truth_name_4;
+        int tmp_truth_name_3;
         CHECK_OBJECT(par_into);
-        tmp_truth_name_4 = CHECK_IF_TRUE(par_into);
-        if (tmp_truth_name_4 == -1) {
+        tmp_truth_name_3 = CHECK_IF_TRUE(par_into);
+        if (tmp_truth_name_3 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8673,7 +8418,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = tmp_truth_name_3 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_4;
         } else {
@@ -8684,20 +8429,20 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_nbytes);
-        tmp_args_element_name_1 = par_nbytes;
+        tmp_args_element_value_1 = par_nbytes;
         CHECK_OBJECT(par_buffer_);
-        tmp_args_element_name_2 = par_buffer_;
+        tmp_args_element_value_2 = par_buffer_;
         frame_b0f3a9959f0ec8db82cf4260bc8eb982->m_frame.f_lineno = 268;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_assign_source_3 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[63],
+                mod_consts[60],
                 call_args
             );
         }
@@ -8720,13 +8465,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_nbytes);
-        tmp_args_element_name_3 = par_nbytes;
+        tmp_args_element_value_3 = par_nbytes;
         frame_b0f3a9959f0ec8db82cf4260bc8eb982->m_frame.f_lineno = 270;
-        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[63], tmp_args_element_name_3);
+        tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[60], tmp_args_element_value_3);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8767,10 +8512,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     // Tried code:
     {
         nuitka_bool tmp_condition_result_5;
-        int tmp_truth_name_5;
+        int tmp_truth_name_4;
         CHECK_OBJECT(par_into);
-        tmp_truth_name_5 = CHECK_IF_TRUE(par_into);
-        if (tmp_truth_name_5 == -1) {
+        tmp_truth_name_4 = CHECK_IF_TRUE(par_into);
+        if (tmp_truth_name_4 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8780,7 +8525,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_5 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = tmp_truth_name_4 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
         } else {
@@ -8791,19 +8536,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     {
         PyObject *tmp_called_instance_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(var_args);
         tmp_called_instance_3 = var_args;
-        tmp_args_element_name_4 = mod_consts[96];
+        tmp_args_element_value_4 = mod_consts[90];
         CHECK_OBJECT(par_buffer_);
-        tmp_args_element_name_5 = par_buffer_;
+        tmp_args_element_value_5 = par_buffer_;
         frame_b0f3a9959f0ec8db82cf4260bc8eb982->m_frame.f_lineno = 277;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_3,
-                mod_consts[95],
+                mod_consts[89],
                 call_args
             );
         }
@@ -8828,7 +8573,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
         tmp_dircall_arg1_1 = var_plain_socket_function;
         if (var_args == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[97]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[91]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -8886,17 +8631,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     // Tried code:
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_6;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_6;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_6 == NULL)) {
+            tmp_expression_value_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8906,8 +8651,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[80]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[75]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8917,8 +8662,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -8947,12 +8692,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     // Tried code:
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_attribute_value_2;
-        int tmp_truth_name_6;
+        int tmp_truth_name_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[32]);
+        tmp_expression_value_7 = par_self;
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[32]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8963,8 +8708,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_truth_name_6 = CHECK_IF_TRUE(tmp_attribute_value_2);
-        if (tmp_truth_name_6 == -1) {
+        tmp_truth_name_5 = CHECK_IF_TRUE(tmp_attribute_value_2);
+        if (tmp_truth_name_5 == -1) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8974,7 +8719,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_condition_result_7 = tmp_truth_name_6 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = tmp_truth_name_5 == 0 ? NUITKA_BOOL_FALSE : NUITKA_BOOL_TRUE;
         Py_DECREF(tmp_attribute_value_2);
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_7;
@@ -8994,15 +8739,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_no_7:;
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9013,9 +8758,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_e);
-        tmp_args_element_name_6 = var_e;
+        tmp_args_element_value_6 = var_e;
         frame_b0f3a9959f0ec8db82cf4260bc8eb982->m_frame.f_lineno = 282;
-        tmp_assign_source_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_6);
+        tmp_assign_source_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_6);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9031,18 +8776,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     }
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_8;
         CHECK_OBJECT(var_erno);
-        tmp_compexpr_left_3 = var_erno;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_cmp_expr_left_3 = var_erno;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9052,8 +8797,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[82]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[77]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9063,8 +8808,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9085,21 +8830,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_yes_8:;
     // Tried code:
     {
-        PyObject *tmp_called_name_2;
+        PyObject *tmp_called_value_2;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_called_instance_4;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_3;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_3;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9126,13 +8871,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9143,7 +8888,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             goto try_except_handler_5;
         }
         frame_b0f3a9959f0ec8db82cf4260bc8eb982->m_frame.f_lineno = 287;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_3, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9159,7 +8904,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[57]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[54]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -9203,16 +8948,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     // Tried code:
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        tmp_compexpr_left_4 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[64]);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        tmp_cmp_expr_left_4 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[61]);
 
-        if (unlikely(tmp_compexpr_right_4 == NULL)) {
-            tmp_compexpr_right_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[64]);
+        if (unlikely(tmp_cmp_expr_right_4 == NULL)) {
+            tmp_cmp_expr_right_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
         }
 
-        if (tmp_compexpr_right_4 == NULL) {
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9222,7 +8967,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_6;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_4, tmp_compexpr_right_4);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9241,7 +8986,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
         }
     }
     branch_yes_9:;
-    tmp_return_value = mod_consts[65];
+    tmp_return_value = mod_consts[62];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_6;
     goto branch_end_9;
@@ -9291,18 +9036,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
     branch_no_8:;
     {
         bool tmp_condition_result_10;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_9;
         CHECK_OBJECT(var_erno);
-        tmp_compexpr_left_5 = var_erno;
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_cmp_expr_left_5 = var_erno;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9312,8 +9057,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[83]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[78]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9323,8 +9068,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
             type_description_1 = "oooooooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9343,7 +9088,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__15__base_recv(struct Nuitka
         }
     }
     branch_yes_10:;
-    tmp_return_value = mod_consts[65];
+    tmp_return_value = mod_consts[62];
     Py_INCREF(tmp_return_value);
     goto try_return_handler_4;
     branch_no_10:;
@@ -9639,13 +9384,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[32]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9655,8 +9400,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9667,8 +9412,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -9676,21 +9421,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9717,13 +9462,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9734,7 +9479,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         frame_5778d2e84f4b54b01c4c7e4660852c7c->m_frame.f_lineno = 297;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9750,7 +9495,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[57]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[54]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -9770,18 +9515,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
     branch_no_1:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -9792,8 +9537,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_called_instance_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
+        tmp_object_arg_value_1 = par_self;
+        tmp_called_instance_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9805,17 +9550,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__16_recvfrom(struct Nuitka_F
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_addr);
-        tmp_args_element_name_1 = par_addr;
+        tmp_args_element_value_1 = par_addr;
         CHECK_OBJECT(par_buflen);
-        tmp_args_element_name_2 = par_buflen;
+        tmp_args_element_value_2 = par_buflen;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_3 = par_flags;
+        tmp_args_element_value_3 = par_flags;
         frame_5778d2e84f4b54b01c4c7e4660852c7c->m_frame.f_lineno = 298;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_return_value = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_2,
-                mod_consts[98],
+                mod_consts[92],
                 call_args
             );
         }
@@ -9984,13 +9729,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[32]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10000,8 +9745,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -10012,8 +9757,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -10021,21 +9766,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_called_instance_1;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_2;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_2;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10062,13 +9807,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             type_description_1 = "ooooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10079,7 +9824,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             goto frame_exception_exit_1;
         }
         frame_dc61b0e7df3d827a4747b7513357ae6c->m_frame.f_lineno = 303;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_2, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_2, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10095,7 +9840,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[57]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[54]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -10115,18 +9860,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
     branch_no_1:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10137,8 +9882,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_called_instance_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
+        tmp_object_arg_value_1 = par_self;
+        tmp_called_instance_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10150,17 +9895,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__17_recvfrom_into(struct Nui
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_buffer);
-        tmp_args_element_name_1 = par_buffer;
+        tmp_args_element_value_1 = par_buffer;
         CHECK_OBJECT(par_nbytes);
-        tmp_args_element_name_2 = par_nbytes;
+        tmp_args_element_value_2 = par_nbytes;
         CHECK_OBJECT(par_flags);
-        tmp_args_element_name_3 = par_flags;
+        tmp_args_element_value_3 = par_flags;
         frame_dc61b0e7df3d827a4747b7513357ae6c->m_frame.f_lineno = 304;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
             tmp_return_value = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_2,
-                mod_consts[99],
+                mod_consts[93],
                 call_args
             );
         }
@@ -10324,21 +10069,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__18_unwrap(struct Nuitka_Fun
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[14]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[14]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10349,9 +10094,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__18_unwrap(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[60]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[57]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10361,52 +10106,52 @@ static PyObject *impl_eventlet$green$ssl$$$function__18_unwrap(struct Nuitka_Fun
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 308;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 308;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[100]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_2 == NULL) {
+        tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[94]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 308;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
         frame_03fa506d4b75ae641eb4164ee6b111f6->m_frame.f_lineno = 307;
-        tmp_args_element_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10417,8 +10162,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__18_unwrap(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
         frame_03fa506d4b75ae641eb4164ee6b111f6->m_frame.f_lineno = 307;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10562,16 +10307,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__19_do_handshake(struct Nuit
 
     // Framed code:
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[60]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = par_self;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[57]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10581,51 +10326,51 @@ static PyObject *impl_eventlet$green$ssl$$$function__19_do_handshake(struct Nuit
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 313;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_2 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_2 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 313;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[47]);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[46]);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 313;
             type_description_1 = "oN";
             goto frame_exception_exit_1;
         }
         frame_f8556197024b0f5d60ede22450b1304b->m_frame.f_lineno = 312;
-        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10813,14 +10558,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10830,7 +10575,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[102]);
+        tmp_assign_source_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[96]);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10846,12 +10591,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[32]);
+        tmp_expression_value_2 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[32]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10883,19 +10628,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     }
     branch_yes_1:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(var_real_connect);
-        tmp_called_name_1 = var_real_connect;
+        tmp_called_value_1 = var_real_connect;
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_addr);
-        tmp_args_element_name_2 = par_addr;
+        tmp_args_element_value_2 = par_addr;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 318;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -10914,12 +10659,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[103]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[97]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[97]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -10933,8 +10678,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto frame_exception_exit_1;
         }
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 320;
-        tmp_expression_name_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[104]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[98]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10944,8 +10689,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[105]);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_assign_source_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[99]);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10961,14 +10706,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         PyObject *tmp_called_instance_2;
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 323;
-        tmp_compexpr_left_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[35]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_cmp_expr_left_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[35]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -10978,9 +10723,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -10991,12 +10736,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     loop_start_1:;
     // Tried code:
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         if (var_real_connect == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[106]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11006,10 +10751,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_2;
         }
 
-        tmp_called_name_2 = var_real_connect;
+        tmp_called_value_2 = var_real_connect;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11019,10 +10764,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_3 = par_self;
+        tmp_args_element_value_3 = par_self;
         if (par_addr == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[107]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[101]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11032,11 +10777,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_4 = par_addr;
+        tmp_args_element_value_4 = par_addr;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 326;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -11079,17 +10824,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_4;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_4;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11099,8 +10844,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[80]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[75]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11110,8 +10855,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_3;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11144,17 +10889,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_5;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_5;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11165,10 +10910,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_5 = var_exc;
+        tmp_args_element_value_5 = var_exc;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 328;
-        tmp_compexpr_left_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_cmp_expr_left_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_5);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11178,24 +10923,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[108]);
+        tmp_cmp_expr_right_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[102]);
 
-        if (unlikely(tmp_compexpr_right_3 == NULL)) {
-            tmp_compexpr_right_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[108]);
+        if (unlikely(tmp_cmp_expr_right_3 == NULL)) {
+            tmp_cmp_expr_right_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[102]);
         }
 
-        if (tmp_compexpr_right_3 == NULL) {
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             exception_lineno = 328;
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_left_3);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11215,18 +10960,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_4;
+        PyObject *tmp_called_value_4;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_kwargs_value_1;
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11238,7 +10983,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11249,13 +10994,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         }
 
         tmp_tuple_element_1 = par_self;
-        tmp_args_name_1 = PyTuple_New(1);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
-        tmp_kwargs_name_1 = PyDict_Copy(mod_consts[109]);
+        tmp_args_value_1 = PyTuple_New(1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
+        tmp_kwargs_value_1 = PyDict_Copy(mod_consts[103]);
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 329;
-        tmp_call_result_1 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_args_name_1);
-        Py_DECREF(tmp_kwargs_name_1);
+        tmp_call_result_1 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_args_value_1);
+        Py_DECREF(tmp_kwargs_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11272,17 +11017,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     branch_no_4:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_args_element_name_6;
-        tmp_called_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_args_element_value_6;
+        tmp_called_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_5 == NULL)) {
-            tmp_called_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_5 == NULL)) {
+            tmp_called_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_5 == NULL) {
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11293,10 +11038,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_4;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_6 = var_exc;
+        tmp_args_element_value_6 = var_exc;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 330;
-        tmp_compexpr_left_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_6);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_cmp_expr_left_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_5, tmp_args_element_value_6);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11306,24 +11051,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_compexpr_right_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[110]);
+        tmp_cmp_expr_right_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[104]);
 
-        if (unlikely(tmp_compexpr_right_4 == NULL)) {
-            tmp_compexpr_right_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[110]);
+        if (unlikely(tmp_cmp_expr_right_4 == NULL)) {
+            tmp_cmp_expr_right_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
         }
 
-        if (tmp_compexpr_right_4 == NULL) {
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             exception_lineno = 330;
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_left_4);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11454,15 +11199,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     branch_no_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_called_instance_3;
         CHECK_OBJECT(var_clock);
-        tmp_called_name_6 = var_clock;
+        tmp_called_value_6 = var_clock;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 335;
-        tmp_left_name_1 = CALL_FUNCTION_NO_ARGS(tmp_called_name_6);
-        if (tmp_left_name_1 == NULL) {
+        tmp_left_value_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_6);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11475,20 +11220,20 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         CHECK_OBJECT(par_self);
         tmp_called_instance_3 = par_self;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 335;
-        tmp_right_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[35]);
-        if (tmp_right_name_1 == NULL) {
+        tmp_right_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[35]);
+        if (tmp_right_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
 
             exception_lineno = 335;
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_assign_source_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11505,13 +11250,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     loop_start_2:;
     // Tried code:
     {
-        PyObject *tmp_called_name_7;
+        PyObject *tmp_called_value_7;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
         if (var_real_connect == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[106]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[100]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11521,10 +11266,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_5;
         }
 
-        tmp_called_name_7 = var_real_connect;
+        tmp_called_value_7 = var_real_connect;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11534,10 +11279,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_7 = par_self;
+        tmp_args_element_value_7 = par_self;
         if (par_addr == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[107]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[101]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11547,11 +11292,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_8 = par_addr;
+        tmp_args_element_value_8 = par_addr;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 338;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
         }
 
         if (tmp_call_result_2 == NULL) {
@@ -11593,17 +11338,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     // Tried code:
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_5;
-        tmp_compexpr_left_5 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_5;
+        tmp_cmp_expr_left_5 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11613,8 +11358,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_6;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[80]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[75]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11624,8 +11369,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_6;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11658,17 +11403,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     // Tried code:
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_args_element_name_9;
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_args_element_value_9;
+        tmp_called_value_8 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_8 == NULL)) {
+            tmp_called_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11679,10 +11424,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_7;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_9 = var_exc;
+        tmp_args_element_value_9 = var_exc;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 340;
-        tmp_compexpr_left_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_9);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_cmp_expr_left_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_8, tmp_args_element_value_9);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11692,24 +11437,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_compexpr_right_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[108]);
+        tmp_cmp_expr_right_6 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[102]);
 
-        if (unlikely(tmp_compexpr_right_6 == NULL)) {
-            tmp_compexpr_right_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[108]);
+        if (unlikely(tmp_cmp_expr_right_6 == NULL)) {
+            tmp_cmp_expr_right_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[102]);
         }
 
-        if (tmp_compexpr_right_6 == NULL) {
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_6);
+            Py_DECREF(tmp_cmp_expr_left_6);
 
             exception_lineno = 340;
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_6, tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_left_6);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_6, tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_left_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11729,23 +11474,23 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     }
     branch_yes_7:;
     {
-        PyObject *tmp_called_name_9;
+        PyObject *tmp_called_value_9;
         PyObject *tmp_call_result_3;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
-        PyObject *tmp_called_name_10;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
+        PyObject *tmp_called_value_10;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_11;
-        tmp_called_name_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_11;
+        tmp_called_value_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_9 == NULL)) {
-            tmp_called_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_9 == NULL)) {
+            tmp_called_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_9 == NULL) {
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11757,7 +11502,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -11771,19 +11516,6 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         tmp_kw_call_dict_value_0_1 = Py_True;
         if (var_end == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 343;
-            type_description_1 = "oooooo";
-            goto try_except_handler_7;
-        }
-
-        tmp_left_name_2 = var_end;
-        if (var_clock == NULL) {
-
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[105]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -11794,10 +11526,23 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_7;
         }
 
-        tmp_called_name_10 = var_clock;
+        tmp_left_value_2 = var_end;
+        if (var_clock == NULL) {
+
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
+            exception_tb = NULL;
+            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
+            CHAIN_EXCEPTION(exception_value);
+
+            exception_lineno = 343;
+            type_description_1 = "oooooo";
+            goto try_except_handler_7;
+        }
+
+        tmp_called_value_10 = var_clock;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 343;
-        tmp_right_name_2 = CALL_FUNCTION_NO_ARGS(tmp_called_name_10);
-        if (tmp_right_name_2 == NULL) {
+        tmp_right_value_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_10);
+        if (tmp_right_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11807,8 +11552,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_kw_call_dict_value_1_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_kw_call_dict_value_1_1 = BINARY_OPERATION_SUB_OBJECT_OBJECT_OBJECT(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11819,13 +11564,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_called_name_11 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_11 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_11 == NULL)) {
-            tmp_called_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_11 == NULL)) {
+            tmp_called_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_11 == NULL) {
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11836,7 +11581,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_7;
         }
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 343;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_11, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_11, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11852,7 +11597,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_9, args, kw_values, mod_consts[59]);
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_9, args, kw_values, mod_consts[56]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -11873,17 +11618,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     branch_no_7:;
     {
         bool tmp_condition_result_8;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_args_element_name_10;
-        tmp_called_name_12 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_args_element_value_10;
+        tmp_called_value_12 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_12 == NULL)) {
-            tmp_called_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_12 == NULL)) {
+            tmp_called_value_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_12 == NULL) {
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11894,10 +11639,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto try_except_handler_7;
         }
         CHECK_OBJECT(var_exc);
-        tmp_args_element_name_10 = var_exc;
+        tmp_args_element_value_10 = var_exc;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 344;
-        tmp_compexpr_left_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_10);
-        if (tmp_compexpr_left_7 == NULL) {
+        tmp_cmp_expr_left_7 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_10);
+        if (tmp_cmp_expr_left_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -11907,24 +11652,24 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_compexpr_right_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[110]);
+        tmp_cmp_expr_right_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[104]);
 
-        if (unlikely(tmp_compexpr_right_7 == NULL)) {
-            tmp_compexpr_right_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[110]);
+        if (unlikely(tmp_cmp_expr_right_7 == NULL)) {
+            tmp_cmp_expr_right_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
         }
 
-        if (tmp_compexpr_right_7 == NULL) {
+        if (tmp_cmp_expr_right_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_7);
+            Py_DECREF(tmp_cmp_expr_left_7);
 
             exception_lineno = 344;
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_7, tmp_compexpr_left_7);
-        Py_DECREF(tmp_compexpr_left_7);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_7, tmp_cmp_expr_left_7);
+        Py_DECREF(tmp_cmp_expr_left_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -12042,12 +11787,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     try_end_4:;
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_called_name_13;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_called_value_13;
         if (var_clock == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[105]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[99]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12057,10 +11802,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto frame_exception_exit_1;
         }
 
-        tmp_called_name_13 = var_clock;
+        tmp_called_value_13 = var_clock;
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 348;
-        tmp_compexpr_left_8 = CALL_FUNCTION_NO_ARGS(tmp_called_name_13);
-        if (tmp_compexpr_left_8 == NULL) {
+        tmp_cmp_expr_left_8 = CALL_FUNCTION_NO_ARGS(tmp_called_value_13);
+        if (tmp_cmp_expr_left_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12071,8 +11816,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto frame_exception_exit_1;
         }
         if (var_end == NULL) {
-            Py_DECREF(tmp_compexpr_left_8);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[111]);
+            Py_DECREF(tmp_cmp_expr_left_8);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[105]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12082,9 +11827,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_right_8 = var_end;
-        tmp_condition_result_9 = RICH_COMPARE_GE_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        Py_DECREF(tmp_compexpr_left_8);
+        tmp_cmp_expr_right_8 = var_end;
+        tmp_condition_result_9 = RICH_COMPARE_GE_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        Py_DECREF(tmp_cmp_expr_left_8);
         if (tmp_condition_result_9 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -12105,14 +11850,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
     branch_yes_9:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_14;
-        tmp_called_name_14 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        PyObject *tmp_called_value_14;
+        tmp_called_value_14 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_14 == NULL)) {
-            tmp_called_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_14 == NULL)) {
+            tmp_called_value_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_14 == NULL) {
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12123,7 +11868,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__20__socket_connect(struct N
             goto frame_exception_exit_1;
         }
         frame_bedd62d016b2aa062d90233fc1dec0e5->m_frame.f_lineno = 349;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_14, mod_consts[56]);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_14, mod_consts[53]);
 
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12372,12 +12117,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[67]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[64]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12411,7 +12156,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[112];
+        tmp_make_exception_arg_1 = mod_consts[106];
         frame_9a97654f3fdd09ee36b7b98c6091b8dd->m_frame.f_lineno = 357;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -12425,13 +12170,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_addr);
-        tmp_args_element_name_1 = par_addr;
+        tmp_args_element_value_1 = par_addr;
         frame_9a97654f3fdd09ee36b7b98c6091b8dd->m_frame.f_lineno = 358;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[113], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[107], tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12459,14 +12204,14 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     // Tried code:
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[114]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[108]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[114]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[108]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12476,7 +12221,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[115]);
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[109]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12522,11 +12267,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_AttributeError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_AttributeError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(tmp_res == -1));
         tmp_condition_result_2 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_2 != false) {
@@ -12538,16 +12283,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     branch_yes_2:;
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_2;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12557,7 +12302,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_3;
         }
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[34]);
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[34]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12590,17 +12335,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_5 = par_self;
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[116]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = par_self;
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[17]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12610,9 +12355,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_3;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[117]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[110]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12623,13 +12368,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             goto try_except_handler_3;
         }
         CHECK_OBJECT(par_self);
-        tmp_expression_name_6 = par_self;
-        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[118]);
+        tmp_expression_value_6 = par_self;
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[111]);
         if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             exception_lineno = 365;
             type_description_1 = "oooooo";
@@ -12643,10 +12388,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[119]);
+            tmp_assign_source_5 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[112]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_kw_call_arg_value_0_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12668,12 +12413,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         nuitka_bool tmp_condition_result_4;
         PyObject *tmp_mvar_value_1;
         int tmp_truth_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[120]);
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
+        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[113]);
 
         if (unlikely(tmp_mvar_value_1 == NULL)) {
-            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[120]);
+            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[113]);
         }
 
         if (tmp_mvar_value_1 == NULL) {
@@ -12705,8 +12450,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         }
         condexpr_true_1:;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_7 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[121]);
+        tmp_expression_value_7 = par_self;
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[114]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12720,8 +12465,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_8 = par_self;
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[116]);
+        tmp_expression_value_8 = par_self;
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[17]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12738,16 +12483,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_arg_value_1_2;
         PyObject *tmp_kw_call_dict_value_0_2;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_value_10;
         CHECK_OBJECT(var_context);
-        tmp_expression_name_9 = var_context;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[117]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_9 = var_context;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[110]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -12762,13 +12507,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         CHECK_OBJECT(var_server_side);
         tmp_kw_call_arg_value_1_2 = var_server_side;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_10 = par_self;
-        tmp_kw_call_dict_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[122]);
+        tmp_expression_value_10 = par_self;
+        tmp_kw_call_dict_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[20]);
         if (tmp_kw_call_dict_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             exception_lineno = 368;
             type_description_1 = "oooooo";
@@ -12778,10 +12523,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2, tmp_kw_call_arg_value_1_2};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_2};
-            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[20]);
+            tmp_assign_source_7 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[115]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_kw_call_dict_value_0_2);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12842,12 +12587,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     try_end_1:;
     {
         bool tmp_condition_result_5;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
+        nuitka_bool tmp_cmp_expr_left_2;
+        nuitka_bool tmp_cmp_expr_right_2;
         assert(tmp_try_except_1__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = tmp_try_except_1__unhandled_indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_5 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = tmp_try_except_1__unhandled_indicator;
+        tmp_cmp_expr_right_2 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_4;
         } else {
@@ -12860,12 +12605,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         PyObject *tmp_dircall_arg1_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_11;
+        PyObject *tmp_expression_value_11;
         PyObject *tmp_dircall_arg3_1;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_expression_value_17;
         if (var_sslwrap == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[115]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[109]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -12877,8 +12622,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
 
         tmp_dircall_arg1_1 = var_sslwrap;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_11 = par_self;
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[118]);
+        tmp_expression_value_11 = par_self;
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[111]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12891,15 +12636,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         }
         tmp_dircall_arg2_1 = PyTuple_New(7);
         {
-            PyObject *tmp_expression_name_12;
-            PyObject *tmp_expression_name_13;
-            PyObject *tmp_expression_name_14;
-            PyObject *tmp_expression_name_15;
-            PyObject *tmp_expression_name_16;
+            PyObject *tmp_expression_value_12;
+            PyObject *tmp_expression_value_13;
+            PyObject *tmp_expression_value_14;
+            PyObject *tmp_expression_value_15;
+            PyObject *tmp_expression_value_16;
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
             if (var_server_side == NULL) {
 
-                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[123]);
+                FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[116]);
                 exception_tb = NULL;
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
@@ -12912,8 +12657,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             tmp_tuple_element_1 = var_server_side;
             PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 1, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_12 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[26]);
+            tmp_expression_value_12 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[26]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12926,8 +12671,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             }
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 2, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_13 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[28]);
+            tmp_expression_value_13 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[28]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12940,8 +12685,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             }
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 3, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_14 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[29]);
+            tmp_expression_value_14 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[29]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12954,8 +12699,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             }
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 4, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_15 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[30]);
+            tmp_expression_value_15 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[30]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12968,8 +12713,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
             }
             PyTuple_SET_ITEM(tmp_dircall_arg2_1, 5, tmp_tuple_element_1);
             CHECK_OBJECT(par_self);
-            tmp_expression_name_16 = par_self;
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[31]);
+            tmp_expression_value_16 = par_self;
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[31]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -12990,8 +12735,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_17 = par_self;
-        tmp_dircall_arg3_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[124]);
+        tmp_expression_value_17 = par_self;
+        tmp_dircall_arg3_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[23]);
         if (tmp_dircall_arg3_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13034,10 +12779,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     // Tried code:
     {
         PyObject *tmp_mvar_value_2;
-        tmp_mvar_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[125]);
+        tmp_mvar_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[117]);
 
         if (unlikely(tmp_mvar_value_2 == NULL)) {
-            tmp_mvar_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
+            tmp_mvar_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
         }
 
         if (tmp_mvar_value_2 == NULL) {
@@ -13083,11 +12828,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     // Tried code:
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_3 = PyExc_NameError;
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_3 = PyExc_NameError;
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
         assert(!(tmp_res == -1));
         tmp_condition_result_6 = (tmp_res != 0) ? true : false;
         if (tmp_condition_result_6 != false) {
@@ -13102,7 +12847,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         PyObject *tmp_assattr_target_1;
         if (var_sslobj == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13115,7 +12860,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         tmp_assattr_value_1 = var_sslobj;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_1 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[67], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[64], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13172,12 +12917,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     try_end_3:;
     {
         bool tmp_condition_result_7;
-        nuitka_bool tmp_compexpr_left_4;
-        nuitka_bool tmp_compexpr_right_4;
+        nuitka_bool tmp_cmp_expr_left_4;
+        nuitka_bool tmp_cmp_expr_right_4;
         assert(tmp_try_except_2__unhandled_indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_4 = tmp_try_except_2__unhandled_indicator;
-        tmp_compexpr_right_4 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_7 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = tmp_try_except_2__unhandled_indicator;
+        tmp_cmp_expr_right_4 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_7 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_7 != false) {
             goto branch_yes_6;
         } else {
@@ -13226,17 +12971,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     branch_yes_7:;
     {
         PyObject *tmp_assattr_value_2;
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_kw_call_arg_value_0_3;
         PyObject *tmp_kw_call_dict_value_0_3;
         PyObject *tmp_assattr_target_2;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[125]);
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[117]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[117]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13248,7 +12993,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         }
         if (var_sslobj == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13265,7 +13010,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_3};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_3};
-            tmp_assattr_value_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_3, args, kw_values, mod_consts[127]);
+            tmp_assattr_value_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[119]);
         }
 
         if (tmp_assattr_value_2 == NULL) {
@@ -13280,7 +13025,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         }
         CHECK_OBJECT(par_self);
         tmp_assattr_target_2 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[67], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[64], tmp_assattr_value_2);
         Py_DECREF(tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -13300,7 +13045,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         PyObject *tmp_assattr_target_3;
         if (var_sslobj == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[126]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[118]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13313,7 +13058,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         tmp_assattr_value_3 = var_sslobj;
         CHECK_OBJECT(par_self);
         tmp_assattr_target_3 = par_self;
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[67], tmp_assattr_value_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[64], tmp_assattr_value_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -13329,12 +13074,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_expression_name_18;
+        PyObject *tmp_expression_value_18;
         PyObject *tmp_attribute_value_3;
         int tmp_truth_name_5;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_18 = par_self;
-        tmp_attribute_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[45]);
+        tmp_expression_value_18 = par_self;
+        tmp_attribute_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[44]);
         if (tmp_attribute_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13371,7 +13116,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__21_connect(struct Nuitka_Fu
         CHECK_OBJECT(par_self);
         tmp_called_instance_2 = par_self;
         frame_9a97654f3fdd09ee36b7b98c6091b8dd->m_frame.f_lineno = 386;
-        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[47]);
+        tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[46]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13608,12 +13353,12 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     // Framed code:
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[32]);
+        tmp_expression_value_1 = par_self;
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[32]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13649,11 +13394,11 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_args_element_value_1;
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -13667,9 +13412,9 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto try_except_handler_2;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         frame_163013e6ba690a8212cd2ec5eb6100f7->m_frame.f_lineno = 394;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[129], tmp_args_element_name_1);
+        tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[121], tmp_args_element_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13772,7 +13517,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[130];
+            exception_value = mod_consts[122];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -13863,16 +13608,16 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_iter_arg_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70]);
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13882,8 +13627,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto try_except_handler_5;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[129]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[121]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -13894,8 +13639,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto try_except_handler_5;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            Py_DECREF(tmp_called_value_1);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -13905,10 +13650,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_2 = par_self;
+        tmp_args_element_value_2 = par_self;
         frame_163013e6ba690a8212cd2ec5eb6100f7->m_frame.f_lineno = 398;
-        tmp_iter_arg_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
-        Py_DECREF(tmp_called_name_1);
+        tmp_iter_arg_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_2);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14023,7 +13768,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
 
             exception_type = PyExc_ValueError;
             Py_INCREF(PyExc_ValueError);
-            exception_value = mod_consts[130];
+            exception_value = mod_consts[122];
             Py_INCREF(exception_value);
             exception_tb = NULL;
 
@@ -14143,17 +13888,17 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     // Tried code:
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14163,8 +13908,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto try_except_handler_7;
         }
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[80]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[75]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14174,8 +13919,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto try_except_handler_7;
         }
-        tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14208,18 +13953,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_4;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_4;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[48]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14230,10 +13975,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto try_except_handler_8;
         }
         CHECK_OBJECT(var_e);
-        tmp_args_element_name_3 = var_e;
+        tmp_args_element_value_3 = var_e;
         frame_163013e6ba690a8212cd2ec5eb6100f7->m_frame.f_lineno = 401;
-        tmp_compexpr_left_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_cmp_expr_left_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_3);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14243,36 +13988,36 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto try_except_handler_8;
         }
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81]);
+        tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
+        if (unlikely(tmp_expression_value_4 == NULL)) {
+            tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[76]);
         }
 
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
 
             exception_lineno = 401;
             type_description_1 = "ooooo";
             goto try_except_handler_8;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[82]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[77]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
 
             exception_lineno = 401;
             type_description_1 = "ooooo";
             goto try_except_handler_8;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_2, tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14301,21 +14046,21 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     goto try_except_handler_8;
     branch_no_3:;
     {
-        PyObject *tmp_called_name_3;
+        PyObject *tmp_called_value_3;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_called_instance_2;
         PyObject *tmp_kw_call_dict_value_2_1;
-        PyObject *tmp_called_name_4;
-        tmp_called_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54]);
+        PyObject *tmp_called_value_4;
+        tmp_called_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50]);
 
-        if (unlikely(tmp_called_name_3 == NULL)) {
-            tmp_called_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[54]);
+        if (unlikely(tmp_called_value_3 == NULL)) {
+            tmp_called_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[50]);
         }
 
-        if (tmp_called_name_3 == NULL) {
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14327,7 +14072,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         }
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14341,7 +14086,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         tmp_kw_call_dict_value_0_1 = Py_True;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14364,13 +14109,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             type_description_1 = "ooooo";
             goto try_except_handler_8;
         }
-        tmp_called_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55]);
+        tmp_called_value_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52]);
 
-        if (unlikely(tmp_called_name_4 == NULL)) {
-            tmp_called_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[55]);
+        if (unlikely(tmp_called_value_4 == NULL)) {
+            tmp_called_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
-        if (tmp_called_name_4 == NULL) {
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14381,7 +14126,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto try_except_handler_8;
         }
         frame_163013e6ba690a8212cd2ec5eb6100f7->m_frame.f_lineno = 404;
-        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_4, mod_consts[56]);
+        tmp_kw_call_dict_value_2_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_4, mod_consts[53]);
 
         if (tmp_kw_call_dict_value_2_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -14397,7 +14142,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_3, args, kw_values, mod_consts[57]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[54]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_1_1);
@@ -14499,18 +14244,18 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
     branch_end_1:;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_type_arg_1;
         PyObject *tmp_kw_call_arg_value_0_2;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_kw_call_dict_value_1_2;
         PyObject *tmp_kw_call_dict_value_2_2;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_kw_call_dict_value_3_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         if (par_self == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14521,8 +14266,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         }
 
         tmp_type_arg_1 = par_self;
-        tmp_called_name_5 = BUILTIN_TYPE1(tmp_type_arg_1);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_5 = BUILTIN_TYPE1(tmp_type_arg_1);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -14537,8 +14282,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         tmp_kw_call_dict_value_0_2 = Py_True;
         tmp_kw_call_dict_value_1_2 = Py_False;
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            Py_DECREF(tmp_called_value_5);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14548,22 +14293,22 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = par_self;
-        tmp_kw_call_dict_value_2_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[131]);
+        tmp_expression_value_5 = par_self;
+        tmp_kw_call_dict_value_2_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[19]);
         if (tmp_kw_call_dict_value_2_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             exception_lineno = 410;
             type_description_1 = "ooooo";
             goto frame_exception_exit_1;
         }
         if (par_self == NULL) {
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             Py_DECREF(tmp_kw_call_dict_value_2_2);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[41]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[51]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -14573,13 +14318,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = par_self;
-        tmp_kw_call_dict_value_3_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[116]);
+        tmp_expression_value_6 = par_self;
+        tmp_kw_call_dict_value_3_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[17]);
         if (tmp_kw_call_dict_value_3_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             Py_DECREF(tmp_kw_call_dict_value_2_2);
 
             exception_lineno = 411;
@@ -14590,10 +14335,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__22_accept(struct Nuitka_Fun
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[4] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_2, tmp_kw_call_dict_value_2_2, tmp_kw_call_dict_value_3_1};
-            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_5, args, kw_values, mod_consts[132]);
+            tmp_assign_source_12 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_5, args, kw_values, mod_consts[123]);
         }
 
-        Py_DECREF(tmp_called_name_5);
+        Py_DECREF(tmp_called_value_5);
         Py_DECREF(tmp_kw_call_dict_value_2_2);
         Py_DECREF(tmp_kw_call_dict_value_3_1);
         if (tmp_assign_source_12 == NULL) {
@@ -14786,7 +14531,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__23_dup(struct Nuitka_Functi
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
-        tmp_make_exception_arg_1 = mod_consts[134];
+        tmp_make_exception_arg_1 = mod_consts[125];
         frame_52f3051cba6638f0d0e336e3397b589b->m_frame.f_lineno = 416;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_NotImplementedError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -15106,7 +14851,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__25_sslwrap_simple(struct Nu
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
@@ -15114,13 +14859,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__25_sslwrap_simple(struct Nu
         PyObject *tmp_kw_call_dict_value_3_1;
         PyObject *tmp_kw_call_dict_value_4_1;
         PyObject *tmp_kw_call_dict_value_5_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[12]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[12]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15137,10 +14882,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__25_sslwrap_simple(struct Nu
         CHECK_OBJECT(par_certfile);
         tmp_kw_call_dict_value_1_1 = par_certfile;
         tmp_kw_call_dict_value_2_1 = Py_False;
-        tmp_kw_call_dict_value_3_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[135]);
+        tmp_kw_call_dict_value_3_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[126]);
 
         if (unlikely(tmp_kw_call_dict_value_3_1 == NULL)) {
-            tmp_kw_call_dict_value_3_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
+            tmp_kw_call_dict_value_3_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
         if (tmp_kw_call_dict_value_3_1 == NULL) {
@@ -15153,10 +14898,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__25_sslwrap_simple(struct Nu
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_dict_value_4_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[136]);
+        tmp_kw_call_dict_value_4_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_kw_call_dict_value_4_1 == NULL)) {
-            tmp_kw_call_dict_value_4_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[136]);
+            tmp_kw_call_dict_value_4_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
         }
 
         if (tmp_kw_call_dict_value_4_1 == NULL) {
@@ -15174,7 +14919,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__25_sslwrap_simple(struct Nu
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[6] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1, tmp_kw_call_dict_value_3_1, tmp_kw_call_dict_value_4_1, tmp_kw_call_dict_value_5_1};
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[137]);
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[128]);
         }
 
         if (tmp_assign_source_1 == NULL) {
@@ -15386,7 +15131,7 @@ static PyObject *impl_eventlet$green$ssl$$$function__26_wrap_socket(struct Nuitk
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(par_a);
         tmp_dircall_arg3_1 = par_a;
-        tmp_dict_key_1 = mod_consts[116];
+        tmp_dict_key_1 = mod_consts[17];
         CHECK_OBJECT(par_self);
         tmp_dict_value_1 = par_self;
         tmp_dircall_arg4_1 = _PyDict_NewPresized( 1 );
@@ -15562,19 +15307,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__27_options(struct Nuitka_Fu
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15584,13 +15329,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__27_options(struct Nuitka_Fu
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_object_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_object_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_object_arg_name_1 == NULL)) {
-            tmp_object_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_object_arg_value_1 == NULL)) {
+            tmp_object_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_object_arg_name_1 == NULL) {
+        if (tmp_object_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15600,8 +15345,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__27_options(struct Nuitka_Fu
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15611,8 +15356,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__27_options(struct Nuitka_Fu
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[139]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[130]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15624,15 +15369,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__27_options(struct Nuitka_Fu
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_2 = par_value;
+        tmp_args_element_value_2 = par_value;
         frame_65ef77517eabfcb5ff9ab8ced9b850a8->m_frame.f_lineno = 458;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[131],
                 call_args
             );
         }
@@ -15782,19 +15527,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__28_verify_flags(struct Nuit
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15804,13 +15549,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__28_verify_flags(struct Nuit
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_object_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_object_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_object_arg_name_1 == NULL)) {
-            tmp_object_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_object_arg_value_1 == NULL)) {
+            tmp_object_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_object_arg_name_1 == NULL) {
+        if (tmp_object_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15820,8 +15565,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__28_verify_flags(struct Nuit
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -15831,8 +15576,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__28_verify_flags(struct Nuit
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[141]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[132]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15844,15 +15589,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__28_verify_flags(struct Nuit
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_2 = par_value;
+        tmp_args_element_value_2 = par_value;
         frame_a0245e11844241f1b988271d332dba51->m_frame.f_lineno = 462;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[131],
                 call_args
             );
         }
@@ -16002,19 +15747,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__29_verify_mode(struct Nuitk
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16024,13 +15769,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__29_verify_mode(struct Nuitk
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_object_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_object_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_object_arg_name_1 == NULL)) {
-            tmp_object_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_object_arg_value_1 == NULL)) {
+            tmp_object_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_object_arg_name_1 == NULL) {
+        if (tmp_object_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16040,8 +15785,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__29_verify_mode(struct Nuitk
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16051,8 +15796,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__29_verify_mode(struct Nuitk
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[142]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[133]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16064,15 +15809,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__29_verify_mode(struct Nuitk
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_2 = par_value;
+        tmp_args_element_value_2 = par_value;
         frame_73844d414cb460022503c32013cd0657->m_frame.f_lineno = 466;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[131],
                 call_args
             );
         }
@@ -16222,19 +15967,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__30_maximum_version(struct N
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16244,13 +15989,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__30_maximum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_object_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_object_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_object_arg_name_1 == NULL)) {
-            tmp_object_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_object_arg_value_1 == NULL)) {
+            tmp_object_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_object_arg_name_1 == NULL) {
+        if (tmp_object_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16260,8 +16005,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__30_maximum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16271,8 +16016,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__30_maximum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[143]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[134]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16284,15 +16029,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__30_maximum_version(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_2 = par_value;
+        tmp_args_element_value_2 = par_value;
         frame_959e1a4ffc1828929ef7a8c1701c85c5->m_frame.f_lineno = 471;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[131],
                 call_args
             );
         }
@@ -16442,19 +16187,19 @@ static PyObject *impl_eventlet$green$ssl$$$function__31_minimum_version(struct N
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        tmp_type_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        tmp_type_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_type_arg_name_1 == NULL)) {
-            tmp_type_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_type_arg_value_1 == NULL)) {
+            tmp_type_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_type_arg_name_1 == NULL) {
+        if (tmp_type_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16464,13 +16209,13 @@ static PyObject *impl_eventlet$green$ssl$$$function__31_minimum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_object_arg_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+        tmp_object_arg_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_object_arg_name_1 == NULL)) {
-            tmp_object_arg_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+        if (unlikely(tmp_object_arg_value_1 == NULL)) {
+            tmp_object_arg_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        if (tmp_object_arg_name_1 == NULL) {
+        if (tmp_object_arg_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16480,8 +16225,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__31_minimum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = BUILTIN_SUPER2(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = BUILTIN_SUPER2(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -16491,8 +16236,8 @@ static PyObject *impl_eventlet$green$ssl$$$function__31_minimum_version(struct N
             type_description_1 = "ooN";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[144]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[135]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16504,15 +16249,15 @@ static PyObject *impl_eventlet$green$ssl$$$function__31_minimum_version(struct N
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         CHECK_OBJECT(par_value);
-        tmp_args_element_name_2 = par_value;
+        tmp_args_element_value_2 = par_value;
         frame_72b2cbd8647c6873723f53ed4456509b->m_frame.f_lineno = 476;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
-                mod_consts[140],
+                mod_consts[131],
                 call_args
             );
         }
@@ -16671,10 +16416,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__32_green_create_default_con
         PyObject *tmp_dircall_arg1_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
-        tmp_dircall_arg1_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
+        tmp_dircall_arg1_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[136]);
 
         if (unlikely(tmp_dircall_arg1_1 == NULL)) {
-            tmp_dircall_arg1_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
+            tmp_dircall_arg1_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[136]);
         }
 
         if (tmp_dircall_arg1_1 == NULL) {
@@ -16715,10 +16460,10 @@ static PyObject *impl_eventlet$green$ssl$$$function__32_green_create_default_con
     {
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assattr_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[137]);
 
         if (unlikely(tmp_assattr_value_1 == NULL)) {
-            tmp_assattr_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assattr_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[137]);
         }
 
         if (tmp_assattr_value_1 == NULL) {
@@ -16862,9 +16607,9 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__10_send(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__10_send,
-        mod_consts[68],
+        mod_consts[65],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[196],
+        mod_consts[185],
 #endif
         codeobj_78461f08538093ef096ae3986e18fb16,
         defaults,
@@ -16887,9 +16632,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__10_send(PyObject *
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__11_sendto(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__11_sendto,
-        mod_consts[72],
+        mod_consts[69],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[197],
+        mod_consts[186],
 #endif
         codeobj_236d89e64071ad9b5fc86a36f2732c8c,
         defaults,
@@ -16912,9 +16657,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__11_sendto(PyObject
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__12_sendall(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__12_sendall,
-        mod_consts[79],
+        mod_consts[74],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[198],
+        mod_consts[187],
 #endif
         codeobj_8b0e45e99dd8d540eb65c09000051555,
         defaults,
@@ -16937,9 +16682,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__12_sendall(PyObjec
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__13_recv(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__13_recv,
-        mod_consts[92],
+        mod_consts[86],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[200],
+        mod_consts[189],
 #endif
         codeobj_24f671d9207084bf3f1cb60811792656,
         defaults,
@@ -16962,9 +16707,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__13_recv(PyObject *
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__14_recv_into(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__14_recv_into,
-        mod_consts[91],
+        mod_consts[85],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[202],
+        mod_consts[191],
 #endif
         codeobj_5a85a78e9d16419f08c288c3b21641a4,
         defaults,
@@ -16987,9 +16732,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__14_recv_into(PyObj
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__15__base_recv(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__15__base_recv,
-        mod_consts[85],
+        mod_consts[80],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[204],
+        mod_consts[193],
 #endif
         codeobj_b0f3a9959f0ec8db82cf4260bc8eb982,
         defaults,
@@ -17012,9 +16757,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__15__base_recv(PyOb
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__16_recvfrom(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__16_recvfrom,
-        mod_consts[98],
+        mod_consts[92],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[205],
+        mod_consts[194],
 #endif
         codeobj_5778d2e84f4b54b01c4c7e4660852c7c,
         defaults,
@@ -17037,9 +16782,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__16_recvfrom(PyObje
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__17_recvfrom_into(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__17_recvfrom_into,
-        mod_consts[99],
+        mod_consts[93],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[206],
+        mod_consts[195],
 #endif
         codeobj_dc61b0e7df3d827a4747b7513357ae6c,
         defaults,
@@ -17062,9 +16807,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__17_recvfrom_into(P
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__18_unwrap() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__18_unwrap,
-        mod_consts[100],
+        mod_consts[94],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[207],
+        mod_consts[196],
 #endif
         codeobj_03fa506d4b75ae641eb4164ee6b111f6,
         NULL,
@@ -17087,9 +16832,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__18_unwrap() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__19_do_handshake() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__19_do_handshake,
-        mod_consts[47],
+        mod_consts[46],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[208],
+        mod_consts[197],
 #endif
         codeobj_f8556197024b0f5d60ede22450b1304b,
         NULL,
@@ -17098,7 +16843,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__19_do_handshake() 
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[101],
+        mod_consts[95],
         NULL,
         0
     );
@@ -17137,9 +16882,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__1__original_ssl_co
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__20__socket_connect() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__20__socket_connect,
-        mod_consts[113],
+        mod_consts[107],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[209],
+        mod_consts[198],
 #endif
         codeobj_bedd62d016b2aa062d90233fc1dec0e5,
         NULL,
@@ -17162,9 +16907,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__20__socket_connect
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__21_connect() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__21_connect,
-        mod_consts[102],
+        mod_consts[96],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[210],
+        mod_consts[199],
 #endif
         codeobj_9a97654f3fdd09ee36b7b98c6091b8dd,
         NULL,
@@ -17173,7 +16918,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__21_connect() {
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[128],
+        mod_consts[120],
         NULL,
         0
     );
@@ -17187,9 +16932,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__21_connect() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__22_accept() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__22_accept,
-        mod_consts[129],
+        mod_consts[121],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[211],
+        mod_consts[200],
 #endif
         codeobj_163013e6ba690a8212cd2ec5eb6100f7,
         NULL,
@@ -17198,7 +16943,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__22_accept() {
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[133],
+        mod_consts[124],
         NULL,
         0
     );
@@ -17212,9 +16957,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__22_accept() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__23_dup() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__23_dup,
-        mod_consts[212],
+        mod_consts[201],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[213],
+        mod_consts[202],
 #endif
         codeobj_52f3051cba6638f0d0e336e3397b589b,
         NULL,
@@ -17237,7 +16982,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__23_dup() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__24_wrap_socket() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__24_wrap_socket,
-        mod_consts[174],
+        mod_consts[165],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -17262,7 +17007,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__24_wrap_socket() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__25_sslwrap_simple(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__25_sslwrap_simple,
-        mod_consts[215],
+        mod_consts[204],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -17273,7 +17018,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__25_sslwrap_simple(
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[138],
+        mod_consts[129],
         NULL,
         0
     );
@@ -17287,9 +17032,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__25_sslwrap_simple(
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__26_wrap_socket() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__26_wrap_socket,
-        mod_consts[174],
+        mod_consts[165],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[219],
+        mod_consts[208],
 #endif
         codeobj_c5833dd46aabbab75087e847b9dce90f,
         NULL,
@@ -17312,9 +17057,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__26_wrap_socket() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__27_options() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__27_options,
-        mod_consts[139],
+        mod_consts[130],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[222],
+        mod_consts[211],
 #endif
         codeobj_65ef77517eabfcb5ff9ab8ced9b850a8,
         NULL,
@@ -17337,9 +17082,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__27_options() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__28_verify_flags() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__28_verify_flags,
-        mod_consts[141],
+        mod_consts[132],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[223],
+        mod_consts[212],
 #endif
         codeobj_a0245e11844241f1b988271d332dba51,
         NULL,
@@ -17362,9 +17107,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__28_verify_flags() 
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__29_verify_mode() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__29_verify_mode,
-        mod_consts[142],
+        mod_consts[133],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[224],
+        mod_consts[213],
 #endif
         codeobj_73844d414cb460022503c32013cd0657,
         NULL,
@@ -17389,7 +17134,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__2___new__(PyObject
         impl_eventlet$green$ssl$$$function__2___new__,
         mod_consts[13],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[186],
+        mod_consts[175],
 #endif
         codeobj_541e38a88859a0342ca4f389d4871334,
         defaults,
@@ -17412,9 +17157,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__2___new__(PyObject
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__30_maximum_version() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__30_maximum_version,
-        mod_consts[143],
+        mod_consts[134],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[225],
+        mod_consts[214],
 #endif
         codeobj_959e1a4ffc1828929ef7a8c1701c85c5,
         NULL,
@@ -17437,9 +17182,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__30_maximum_version
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__31_minimum_version() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__31_minimum_version,
-        mod_consts[144],
+        mod_consts[135],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[226],
+        mod_consts[215],
 #endif
         codeobj_72b2cbd8647c6873723f53ed4456509b,
         NULL,
@@ -17462,7 +17207,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__31_minimum_version
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__32_green_create_default_context() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__32_green_create_default_context,
-        mod_consts[228],
+        mod_consts[217],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -17489,7 +17234,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__3___init__(PyObjec
         impl_eventlet$green$ssl$$$function__3___init__,
         mod_consts[37],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[187],
+        mod_consts[176],
 #endif
         codeobj_d1e534867ba726ac0389d9f4a5c74f4f,
         defaults,
@@ -17512,9 +17257,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__3___init__(PyObjec
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__4_settimeout() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__4_settimeout,
-        mod_consts[43],
+        mod_consts[42],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[188],
+        mod_consts[177],
 #endif
         codeobj_7c4b656e75c73770cd55d34869ba027a,
         NULL,
@@ -17539,7 +17284,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__5_gettimeout() {
         impl_eventlet$green$ssl$$$function__5_gettimeout,
         mod_consts[35],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[189],
+        mod_consts[178],
 #endif
         codeobj_4561464775abffac1c16dd199666d061,
         NULL,
@@ -17562,9 +17307,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__5_gettimeout() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__6_setblocking() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__6_setblocking,
-        mod_consts[190],
+        mod_consts[179],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[191],
+        mod_consts[180],
 #endif
         codeobj_32823f2fa24967229ae3df4962fc68cf,
         NULL,
@@ -17587,9 +17332,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__6_setblocking() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__7__call_trampolining() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__7__call_trampolining,
-        mod_consts[60],
+        mod_consts[57],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[192],
+        mod_consts[181],
 #endif
         codeobj_dc280611cd8adcd3c675705cb8013de7,
         NULL,
@@ -17612,9 +17357,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__7__call_trampolini
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__8_write() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__8_write,
-        mod_consts[61],
+        mod_consts[58],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[193],
+        mod_consts[182],
 #endif
         codeobj_f921922d2ea1027f962380551fa7f038,
         NULL,
@@ -17623,7 +17368,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__8_write() {
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[62],
+        mod_consts[59],
         NULL,
         0
     );
@@ -17637,9 +17382,9 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__8_write() {
 static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__9_read() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_eventlet$green$ssl$$$function__9_read,
-        mod_consts[63],
+        mod_consts[60],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[194],
+        mod_consts[183],
 #endif
         codeobj_f68c56a55342f56cd1d43b4cbe2cdbb2,
         NULL,
@@ -17648,7 +17393,7 @@ static PyObject *MAKE_FUNCTION_eventlet$green$ssl$$$function__9_read() {
         NULL,
 #endif
         module_eventlet$green$ssl,
-        mod_consts[66],
+        mod_consts[63],
         NULL,
         0
     );
@@ -17857,63 +17602,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("eventlet.green.ssl");
+
+    // Store the module for future use.
     module_eventlet$green$ssl = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.ssl: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("eventlet.green.ssl: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.ssl: Calling createModuleConstants().\n");
+        PRINT_STRING("eventlet.green.ssl: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.ssl: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("eventlet.green.ssl: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initeventlet$green$ssl\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_eventlet$green$ssl = MODULE_DICT(module_eventlet$green$ssl);
 
@@ -17934,7 +17683,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(
             moduledict_eventlet$green$ssl,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[79]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)const_str_plain___name__);
@@ -17984,7 +17733,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -18111,12 +17860,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[147], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[138], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[148], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[139], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_a63accb7d6712058edc3010d4caa7367 = MAKE_MODULE_FRAME(codeobj_a63accb7d6712058edc3010d4caa7367, module_eventlet$green$ssl);
@@ -18131,14 +17880,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[149]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[140]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[149]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[140]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[150], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[141], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -18154,14 +17903,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[149]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[140]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[149]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[140]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[151], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[142], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -18176,14 +17925,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[152], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[143], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        tmp_name_name_1 = mod_consts[153];
+        PyObject *tmp_name_value_1;
+        tmp_name_value_1 = mod_consts[144];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 1;
-        tmp_assign_source_4 = IMPORT_MODULE1(tmp_name_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE1(tmp_name_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18194,23 +17943,23 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154], tmp_assign_source_4);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_2 = mod_consts[155];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[156];
-        tmp_level_name_1 = mod_consts[73];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[146];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[147];
+        tmp_level_value_2 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 3;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18225,11 +17974,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[157],
-                mod_consts[73]
+                mod_consts[148],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[157]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[148]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -18243,26 +17992,26 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[157], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[148], tmp_assign_source_5);
     }
     {
-        PyObject *tmp_called_name_1;
+        PyObject *tmp_called_value_1;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_dir_arg_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[157]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[148]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[157]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[148]);
         }
 
-        assert(!(tmp_called_name_1 == NULL));
-        tmp_kw_call_arg_value_0_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        assert(!(tmp_called_value_1 == NULL));
+        tmp_kw_call_arg_value_0_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
         if (unlikely(tmp_kw_call_arg_value_0_1 == NULL)) {
-            tmp_kw_call_arg_value_0_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+            tmp_kw_call_arg_value_0_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
         if (tmp_kw_call_arg_value_0_1 == NULL) {
@@ -18276,10 +18025,10 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             goto frame_exception_exit_1;
         }
         tmp_kw_call_arg_value_1_1 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_dir_arg_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        tmp_dir_arg_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
         if (unlikely(tmp_dir_arg_1 == NULL)) {
-            tmp_dir_arg_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+            tmp_dir_arg_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
         if (tmp_dir_arg_1 == NULL) {
@@ -18307,7 +18056,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[158]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[149]);
         }
 
         Py_DECREF(tmp_kw_call_dict_value_0_1);
@@ -18325,25 +18074,24 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_6;
-        frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 6;
         tmp_assign_source_6 = IMPORT_HARD_SYS();
         assert(!(tmp_assign_source_6 == NULL));
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[159], tmp_assign_source_6);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[150], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_3 = mod_consts[160];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[161];
-        tmp_level_name_2 = mod_consts[73];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[151];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[152];
+        tmp_level_value_3 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 7;
-        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18367,11 +18115,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[81],
-                mod_consts[73]
+                mod_consts[76],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[81]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[76]);
         }
 
         if (tmp_assign_source_8 == NULL) {
@@ -18384,7 +18132,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
@@ -18395,11 +18143,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[103],
-                mod_consts[73]
+                mod_consts[97],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[103]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[97]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -18412,7 +18160,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[103], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[97], tmp_assign_source_9);
     }
     goto try_end_1;
     // Exception handler code:
@@ -18443,18 +18191,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     tmp_import_from_1__module = NULL;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_4 = mod_consts[162];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[163];
-        tmp_level_name_3 = mod_consts[73];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[153];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[154];
+        tmp_level_value_4 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 8;
-        tmp_assign_source_10 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_assign_source_10 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18478,11 +18226,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[164],
-                mod_consts[73]
+                mod_consts[155],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[164]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[155]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -18495,7 +18243,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[164], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[155], tmp_assign_source_11);
     }
     {
         PyObject *tmp_assign_source_12;
@@ -18507,7 +18255,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_eventlet$green$ssl,
                 mod_consts[14],
-                mod_consts[73]
+                mod_consts[70]
             );
         } else {
             tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[14]);
@@ -18534,11 +18282,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_13 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[108],
-                mod_consts[73]
+                mod_consts[102],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[108]);
+            tmp_assign_source_13 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[102]);
         }
 
         if (tmp_assign_source_13 == NULL) {
@@ -18551,7 +18299,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[108], tmp_assign_source_13);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[102], tmp_assign_source_13);
     }
     {
         PyObject *tmp_assign_source_14;
@@ -18562,11 +18310,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[110],
-                mod_consts[73]
+                mod_consts[104],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[110]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[104]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -18579,7 +18327,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[110], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[104], tmp_assign_source_14);
     }
     goto try_end_2;
     // Exception handler code:
@@ -18610,18 +18358,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     tmp_import_from_2__module = NULL;
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_5 = mod_consts[165];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[166];
-        tmp_level_name_4 = mod_consts[73];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[156];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[157];
+        tmp_level_value_5 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 11;
-        tmp_assign_source_15 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_assign_source_15 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_assign_source_15 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18645,11 +18393,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[54],
-                mod_consts[73]
+                mod_consts[50],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[54]);
+            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[50]);
         }
 
         if (tmp_assign_source_16 == NULL) {
@@ -18662,7 +18410,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[54], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
@@ -18673,11 +18421,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_17 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[64],
-                mod_consts[73]
+                mod_consts[61],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[64]);
+            tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[61]);
         }
 
         if (tmp_assign_source_17 == NULL) {
@@ -18690,7 +18438,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_3;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[64], tmp_assign_source_17);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_17);
     }
     goto try_end_3;
     // Exception handler code:
@@ -18721,18 +18469,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     tmp_import_from_3__module = NULL;
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_6 = mod_consts[167];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[168];
-        tmp_level_name_5 = mod_consts[73];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[158];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[159];
+        tmp_level_value_6 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 12;
-        tmp_assign_source_18 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_assign_source_18 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18756,11 +18504,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_19 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_10,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[52],
-                mod_consts[73]
+                mod_consts[48],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[52]);
+            tmp_assign_source_19 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[48]);
         }
 
         if (tmp_assign_source_19 == NULL) {
@@ -18773,7 +18521,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_4;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_19);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[48], tmp_assign_source_19);
     }
     {
         PyObject *tmp_assign_source_20;
@@ -18784,11 +18532,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_11,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[120],
-                mod_consts[73]
+                mod_consts[113],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[120]);
+            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[113]);
         }
 
         if (tmp_assign_source_20 == NULL) {
@@ -18801,7 +18549,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_4;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[120], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[113], tmp_assign_source_20);
     }
     goto try_end_4;
     // Exception handler code:
@@ -18832,18 +18580,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     tmp_import_from_4__module = NULL;
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_7 = mod_consts[33];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = Py_None;
-        tmp_level_name_6 = mod_consts[73];
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[33];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = Py_None;
+        tmp_level_value_7 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 13;
-        tmp_assign_source_21 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_assign_source_21 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18859,18 +18607,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_import_name_from_12;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_8 = mod_consts[169];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_eventlet$green$ssl;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[170];
-        tmp_level_name_7 = mod_consts[73];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[160];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_eventlet$green$ssl;
+        tmp_locals_arg_value_8 = Py_None;
+        tmp_fromlist_value_8 = mod_consts[161];
+        tmp_level_value_8 = mod_consts[70];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 14;
-        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
         if (tmp_import_name_from_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18885,11 +18633,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_22 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_12,
                 (PyObject *)moduledict_eventlet$green$ssl,
-                mod_consts[171],
-                mod_consts[73]
+                mod_consts[162],
+                mod_consts[70]
             );
         } else {
-            tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[171]);
+            tmp_assign_source_22 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[162]);
         }
 
         Py_DECREF(tmp_import_name_from_12);
@@ -18903,14 +18651,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[171], tmp_assign_source_22);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[162], tmp_assign_source_22);
     }
     {
         PyObject *tmp_assign_source_23;
-        PyObject *tmp_name_name_9;
-        tmp_name_name_9 = mod_consts[70];
+        PyObject *tmp_name_value_9;
+        tmp_name_value_9 = mod_consts[67];
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 16;
-        tmp_assign_source_23 = IMPORT_MODULE1(tmp_name_name_9);
+        tmp_assign_source_23 = IMPORT_MODULE1(tmp_name_value_9);
         if (tmp_assign_source_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18925,15 +18673,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[38]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[38]);
         }
 
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_assign_source_24 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[70]);
+        assert(!(tmp_expression_value_1 == NULL));
+        tmp_assign_source_24 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[67]);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18944,14 +18692,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[67], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
-        tmp_assign_source_25 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[51]);
+        tmp_assign_source_25 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[47]);
 
         if (unlikely(tmp_assign_source_25 == NULL)) {
-            tmp_assign_source_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[51]);
+            tmp_assign_source_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[47]);
         }
 
         if (tmp_assign_source_25 == NULL) {
@@ -18964,23 +18712,23 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_25);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
-        tmp_assign_source_26 = LIST_COPY(mod_consts[172]);
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[173], tmp_assign_source_26);
+        tmp_assign_source_26 = LIST_COPY(mod_consts[163]);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[164], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_2;
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -18990,7 +18738,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_27 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[7]);
+        tmp_assign_source_27 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[7]);
         if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19005,14 +18753,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_28;
-        PyObject *tmp_expression_name_3;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_3;
+        tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_3 == NULL)) {
+            tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19022,7 +18770,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[174]);
+        tmp_assign_source_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[165]);
         if (tmp_assign_source_28 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19040,10 +18788,10 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
-        tmp_getattr_target_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        tmp_getattr_target_1 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
         if (unlikely(tmp_getattr_target_1 == NULL)) {
-            tmp_getattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+            tmp_getattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
         if (tmp_getattr_target_1 == NULL) {
@@ -19073,62 +18821,20 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_30;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_4;
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[159]);
-
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[159]);
-        }
-
-        if (tmp_expression_name_4 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 27;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[175]);
-        if (tmp_compexpr_left_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 27;
-
-            goto frame_exception_exit_1;
-        }
-        tmp_compexpr_right_1 = mod_consts[176];
-        tmp_assign_source_30 = RICH_COMPARE_LT_OBJECT_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
-        Py_DECREF(tmp_compexpr_left_1);
-        if (tmp_assign_source_30 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 27;
-
-            goto frame_exception_exit_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_30);
+        tmp_assign_source_30 = Py_False;
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_args_element_name_1;
-        tmp_called_name_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[171]);
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_args_element_value_1;
+        tmp_called_value_2 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[162]);
 
-        if (unlikely(tmp_called_name_2 == NULL)) {
-            tmp_called_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[171]);
+        if (unlikely(tmp_called_value_2 == NULL)) {
+            tmp_called_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[162]);
         }
 
-        if (tmp_called_name_2 == NULL) {
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19140,11 +18846,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
 
 
-        tmp_args_element_name_1 = MAKE_FUNCTION_eventlet$green$ssl$$$function__1__original_ssl_context();
+        tmp_args_element_value_1 = MAKE_FUNCTION_eventlet$green$ssl$$$function__1__original_ssl_context();
 
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 30;
-        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_31 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_31 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19214,44 +18920,39 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_35;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[177];
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[166];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[177];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 43;
-
-            goto try_except_handler_5;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[166];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -19274,9 +18975,9 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_5 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[73];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_1, 0);
+        tmp_expression_value_4 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[70];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19287,9 +18988,9 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_5;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19301,14 +19002,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_35 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_35 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_35 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19323,16 +19024,16 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         tmp_class_creation_1__metaclass = tmp_assign_source_35;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[177];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[166];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -19341,7 +19042,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[177];
+    tmp_dictdel_key = mod_consts[166];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -19356,10 +19057,10 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_6 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_6, mod_consts[178]);
+        tmp_expression_value_5 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[167]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -19370,15 +19071,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_36;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_7 = tmp_class_creation_1__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[178]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_6 = tmp_class_creation_1__metaclass;
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[167]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -19389,17 +19090,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             goto try_except_handler_5;
         }
         tmp_tuple_element_2 = mod_consts[12];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 43;
-        tmp_assign_source_36 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_36 = CALL_FUNCTION(tmp_called_value_3, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_36 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19414,14 +19115,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         tmp_class_creation_1__prepared = tmp_assign_source_36;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_8;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_8 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_8, mod_consts[179]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_7 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_7, mod_consts[168]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -19432,8 +19133,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_5;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -19443,18 +19144,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_2;
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[180];
+        tmp_left_value_1 = mod_consts[169];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_2 = mod_consts[94];
-        tmp_getattr_default_2 = mod_consts[181];
+        tmp_getattr_attr_2 = mod_consts[88];
+        tmp_getattr_default_2 = mod_consts[170];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -19466,17 +19167,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_5;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_9;
+            PyObject *tmp_expression_value_8;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_9 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_9 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[94]);
-            Py_DECREF(tmp_expression_name_9);
+            tmp_expression_value_8 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_8 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[88]);
+            Py_DECREF(tmp_expression_value_8);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -19487,17 +19188,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_5;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19537,8 +19238,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[182];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[183], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[171];
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[172], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -19549,8 +19250,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_7;
         }
-        tmp_dictset_value = mod_consts[184];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[147], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[173];
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[138], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -19562,7 +19263,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             goto try_except_handler_7;
         }
         tmp_dictset_value = mod_consts[12];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[185], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[174], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -19612,14 +19313,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             PyTuple_SET_ITEM0(tmp_defaults_1, 2, tmp_tuple_element_4);
             tmp_tuple_element_4 = Py_False;
             PyTuple_SET_ITEM0(tmp_defaults_1, 3, tmp_tuple_element_4);
-            tmp_tuple_element_4 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[135]);
+            tmp_tuple_element_4 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[126]);
 
             if (tmp_tuple_element_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_tuple_element_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[135]);
+                    tmp_tuple_element_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[126]);
 
                     if (unlikely(tmp_tuple_element_4 == NULL)) {
-                        tmp_tuple_element_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
+                        tmp_tuple_element_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
                     }
 
                     if (tmp_tuple_element_4 == NULL) {
@@ -19639,14 +19340,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
             PyTuple_SET_ITEM(tmp_defaults_1, 4, tmp_tuple_element_4);
-            tmp_tuple_element_4 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[136]);
+            tmp_tuple_element_4 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[127]);
 
             if (tmp_tuple_element_4 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_tuple_element_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[136]);
+                    tmp_tuple_element_4 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[127]);
 
                     if (unlikely(tmp_tuple_element_4 == NULL)) {
-                        tmp_tuple_element_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[136]);
+                        tmp_tuple_element_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
                     }
 
                     if (tmp_tuple_element_4 == NULL) {
@@ -19704,14 +19405,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             PyTuple_SET_ITEM0(tmp_defaults_2, 1, tmp_tuple_element_5);
             tmp_tuple_element_5 = Py_False;
             PyTuple_SET_ITEM0(tmp_defaults_2, 2, tmp_tuple_element_5);
-            tmp_tuple_element_5 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[135]);
+            tmp_tuple_element_5 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[126]);
 
             if (tmp_tuple_element_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[135]);
+                    tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[126]);
 
                     if (unlikely(tmp_tuple_element_5 == NULL)) {
-                        tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[135]);
+                        tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
                     }
 
                     if (tmp_tuple_element_5 == NULL) {
@@ -19731,14 +19432,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
             PyTuple_SET_ITEM(tmp_defaults_2, 3, tmp_tuple_element_5);
-            tmp_tuple_element_5 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[136]);
+            tmp_tuple_element_5 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[127]);
 
             if (tmp_tuple_element_5 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[136]);
+                    tmp_tuple_element_5 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[127]);
 
                     if (unlikely(tmp_tuple_element_5 == NULL)) {
-                        tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[136]);
+                        tmp_tuple_element_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[127]);
                     }
 
                     if (tmp_tuple_element_5 == NULL) {
@@ -19790,7 +19491,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__4_settimeout();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[43], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[42], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -19822,7 +19523,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__6_setblocking();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[190], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[179], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -19838,7 +19539,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__7__call_trampolining();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[60], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[57], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -19854,7 +19555,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__8_write();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[61], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[58], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -19870,7 +19571,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__9_read();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[63], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[60], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -19884,13 +19585,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[195];
+            tmp_defaults_3 = mod_consts[184];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__10_send(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[68], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[65], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -19905,13 +19606,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[195];
+            tmp_defaults_4 = mod_consts[184];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__11_sendto(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[72], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[69], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -19926,13 +19627,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_5;
-            tmp_defaults_5 = mod_consts[195];
+            tmp_defaults_5 = mod_consts[184];
             Py_INCREF(tmp_defaults_5);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__12_sendall(tmp_defaults_5);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[79], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[74], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -19947,13 +19648,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_6;
-            tmp_defaults_6 = mod_consts[199];
+            tmp_defaults_6 = mod_consts[188];
             Py_INCREF(tmp_defaults_6);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__13_recv(tmp_defaults_6);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[92], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[86], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -19968,13 +19669,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_7;
-            tmp_defaults_7 = mod_consts[201];
+            tmp_defaults_7 = mod_consts[190];
             Py_INCREF(tmp_defaults_7);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__14_recv_into(tmp_defaults_7);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[91], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[85], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -19989,13 +19690,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_8;
-            tmp_defaults_8 = mod_consts[203];
+            tmp_defaults_8 = mod_consts[192];
             Py_INCREF(tmp_defaults_8);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__15__base_recv(tmp_defaults_8);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[85], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[80], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -20010,13 +19711,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_9;
-            tmp_defaults_9 = mod_consts[199];
+            tmp_defaults_9 = mod_consts[188];
             Py_INCREF(tmp_defaults_9);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__16_recvfrom(tmp_defaults_9);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[98], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[92], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -20031,13 +19732,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_10;
-            tmp_defaults_10 = mod_consts[201];
+            tmp_defaults_10 = mod_consts[190];
             Py_INCREF(tmp_defaults_10);
 
 
             tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__17_recvfrom_into(tmp_defaults_10);
 
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[99], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[93], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -20054,7 +19755,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__18_unwrap();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[100], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[94], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20070,7 +19771,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__19_do_handshake();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[47], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[46], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20086,7 +19787,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__20__socket_connect();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[113], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[107], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20102,7 +19803,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__21_connect();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[102], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[96], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20118,7 +19819,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__22_accept();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[129], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[121], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20134,7 +19835,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__23_dup();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[212], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[201], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20203,13 +19904,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_compexpr_left_2;
-            PyObject *tmp_compexpr_right_2;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_2 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_2 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_2, tmp_compexpr_right_2);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -20230,7 +19931,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[214], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43, mod_consts[203], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20244,25 +19945,25 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_no_4:;
         {
             PyObject *tmp_assign_source_39;
-            PyObject *tmp_called_name_4;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_6;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_4 = tmp_class_creation_1__metaclass;
+            tmp_called_value_4 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_6 = mod_consts[12];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_6);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_6 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_6);
             tmp_tuple_element_6 = locals_eventlet$green$ssl$$$class__1_GreenSSLSocket_43;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_6);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 43;
-            tmp_assign_source_39 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_39 = CALL_FUNCTION(tmp_called_value_4, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_39 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -20377,11 +20078,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
@@ -20412,19 +20116,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_assign_source_41 = MAKE_FUNCTION_eventlet$green$ssl$$$function__24_wrap_socket();
 
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[174], tmp_assign_source_41);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[165], tmp_assign_source_41);
     }
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_attribute_name_1;
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_attribute_value_1;
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20434,8 +20138,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_1 = mod_consts[215];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_10, tmp_attribute_name_1);
+        tmp_attribute_value_1 = mod_consts[204];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_9, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20457,26 +20161,26 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_42;
         PyObject *tmp_defaults_11;
-        tmp_defaults_11 = mod_consts[216];
+        tmp_defaults_11 = mod_consts[205];
         Py_INCREF(tmp_defaults_11);
 
 
         tmp_assign_source_42 = MAKE_FUNCTION_eventlet$green$ssl$$$function__25_sslwrap_simple(tmp_defaults_11);
 
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[215], tmp_assign_source_42);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[204], tmp_assign_source_42);
     }
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_attribute_name_2;
-        tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_attribute_value_2;
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_11 == NULL)) {
-            tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_11 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20486,8 +20190,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_2 = mod_consts[9];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_11, tmp_attribute_name_2);
+        tmp_attribute_value_2 = mod_consts[9];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_10, tmp_attribute_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20508,14 +20212,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_6:;
     {
         PyObject *tmp_assign_source_43;
-        PyObject *tmp_expression_name_12;
-        tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_11;
+        tmp_expression_value_11 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_12 == NULL)) {
-            tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_11 == NULL)) {
+            tmp_expression_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_12 == NULL) {
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20525,7 +20229,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_43 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[9]);
+        tmp_assign_source_43 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[9]);
         if (tmp_assign_source_43 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20586,44 +20290,39 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_47;
-        PyObject *tmp_metaclass_name_2;
-        nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_key_name_4;
-        PyObject *tmp_dict_arg_name_4;
-        PyObject *tmp_dict_arg_name_5;
-        PyObject *tmp_key_name_5;
+        PyObject *tmp_metaclass_value_2;
+        bool tmp_condition_result_9;
+        PyObject *tmp_key_value_4;
+        PyObject *tmp_dict_arg_value_4;
+        PyObject *tmp_dict_arg_value_5;
+        PyObject *tmp_key_value_5;
         nuitka_bool tmp_condition_result_10;
         int tmp_truth_name_2;
         PyObject *tmp_type_arg_3;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[177];
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_bases_value_2;
+        tmp_key_value_4 = mod_consts[166];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
+        tmp_dict_arg_value_4 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_4, tmp_key_value_4);
         assert(!(tmp_res == -1));
-        tmp_condition_result_9 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_9 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_9 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_9 != false) {
             goto condexpr_true_3;
         } else {
             goto condexpr_false_3;
         }
         condexpr_true_3:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[177];
-        tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
-        if (tmp_metaclass_name_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 442;
-
-            goto try_except_handler_8;
+        tmp_dict_arg_value_5 = tmp_class_creation_2__class_decl_dict;
+        tmp_key_value_5 = mod_consts[166];
+        tmp_metaclass_value_2 = DICT_GET_ITEM0(tmp_dict_arg_value_5, tmp_key_value_5);
+        if (tmp_metaclass_value_2 == NULL) {
+            tmp_metaclass_value_2 = Py_None;
         }
+        assert(!(tmp_metaclass_value_2 == NULL));
+        Py_INCREF(tmp_metaclass_value_2);
         goto condexpr_end_3;
         condexpr_false_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
@@ -20646,9 +20345,9 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         condexpr_true_4:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_expression_name_13 = tmp_class_creation_2__bases;
-        tmp_subscript_name_2 = mod_consts[73];
-        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_2, 0);
+        tmp_expression_value_12 = tmp_class_creation_2__bases;
+        tmp_subscript_value_2 = mod_consts[70];
+        tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_12, tmp_subscript_value_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20659,9 +20358,9 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        tmp_metaclass_name_2 = BUILTIN_TYPE1(tmp_type_arg_3);
+        tmp_metaclass_value_2 = BUILTIN_TYPE1(tmp_type_arg_3);
         Py_DECREF(tmp_type_arg_3);
-        if (tmp_metaclass_name_2 == NULL) {
+        if (tmp_metaclass_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20673,14 +20372,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         goto condexpr_end_4;
         condexpr_false_4:;
-        tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_2);
+        tmp_metaclass_value_2 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_2);
         condexpr_end_4:;
         condexpr_end_3:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
-        tmp_bases_name_2 = tmp_class_creation_2__bases;
-        tmp_assign_source_47 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
-        Py_DECREF(tmp_metaclass_name_2);
+        tmp_bases_value_2 = tmp_class_creation_2__bases;
+        tmp_assign_source_47 = SELECT_METACLASS(tmp_metaclass_value_2, tmp_bases_value_2);
+        Py_DECREF(tmp_metaclass_value_2);
         if (tmp_assign_source_47 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20695,16 +20394,16 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         tmp_class_creation_2__metaclass = tmp_assign_source_47;
     }
     {
-        nuitka_bool tmp_condition_result_11;
-        PyObject *tmp_key_name_6;
-        PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[177];
+        bool tmp_condition_result_11;
+        PyObject *tmp_key_value_6;
+        PyObject *tmp_dict_arg_value_6;
+        tmp_key_value_6 = mod_consts[166];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
+        tmp_dict_arg_value_6 = tmp_class_creation_2__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_6, tmp_key_value_6);
         assert(!(tmp_res == -1));
-        tmp_condition_result_11 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_11 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_11 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_11 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -20713,7 +20412,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_7:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[177];
+    tmp_dictdel_key = mod_consts[166];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -20728,10 +20427,10 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_no_7:;
     {
         nuitka_bool tmp_condition_result_12;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_value_13;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_14 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_14, mod_consts[178]);
+        tmp_expression_value_13 = tmp_class_creation_2__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_13, mod_consts[167]);
         tmp_condition_result_12 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_12 == NUITKA_BOOL_TRUE) {
             goto branch_yes_8;
@@ -20742,15 +20441,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_8:;
     {
         PyObject *tmp_assign_source_48;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_args_name_3;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_args_value_3;
         PyObject *tmp_tuple_element_8;
-        PyObject *tmp_kwargs_name_3;
+        PyObject *tmp_kwargs_value_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
-        tmp_expression_name_15 = tmp_class_creation_2__metaclass;
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[178]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_14 = tmp_class_creation_2__metaclass;
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[167]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20760,18 +20459,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        tmp_tuple_element_8 = mod_consts[146];
-        tmp_args_name_3 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_3, 0, tmp_tuple_element_8);
+        tmp_tuple_element_8 = mod_consts[137];
+        tmp_args_value_3 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 0, tmp_tuple_element_8);
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_tuple_element_8 = tmp_class_creation_2__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_8);
+        PyTuple_SET_ITEM0(tmp_args_value_3, 1, tmp_tuple_element_8);
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-        tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
+        tmp_kwargs_value_3 = tmp_class_creation_2__class_decl_dict;
         frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 442;
-        tmp_assign_source_48 = CALL_FUNCTION(tmp_called_name_5, tmp_args_name_3, tmp_kwargs_name_3);
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_name_3);
+        tmp_assign_source_48 = CALL_FUNCTION(tmp_called_value_5, tmp_args_value_3, tmp_kwargs_value_3);
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_value_3);
         if (tmp_assign_source_48 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20786,14 +20485,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         tmp_class_creation_2__prepared = tmp_assign_source_48;
     }
     {
-        nuitka_bool tmp_condition_result_13;
-        PyObject *tmp_operand_name_2;
-        PyObject *tmp_expression_name_16;
+        bool tmp_condition_result_13;
+        PyObject *tmp_operand_value_2;
+        PyObject *tmp_expression_value_15;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
-        tmp_expression_name_16 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_16, mod_consts[179]);
-        tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_expression_value_15 = tmp_class_creation_2__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_15, mod_consts[168]);
+        tmp_operand_value_2 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20804,8 +20503,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        tmp_condition_result_13 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_13 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_13 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_13 != false) {
             goto branch_yes_9;
         } else {
             goto branch_no_9;
@@ -20815,18 +20514,18 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_raise_type_2;
         PyObject *tmp_raise_value_2;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         PyObject *tmp_tuple_element_9;
         PyObject *tmp_getattr_target_3;
         PyObject *tmp_getattr_attr_3;
         PyObject *tmp_getattr_default_3;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[180];
+        tmp_left_value_2 = mod_consts[169];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_3 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_3 = mod_consts[94];
-        tmp_getattr_default_3 = mod_consts[181];
+        tmp_getattr_attr_3 = mod_consts[88];
+        tmp_getattr_default_3 = mod_consts[170];
         tmp_tuple_element_9 = BUILTIN_GETATTR(tmp_getattr_target_3, tmp_getattr_attr_3, tmp_getattr_default_3);
         if (tmp_tuple_element_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -20838,17 +20537,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        tmp_right_name_2 = PyTuple_New(2);
+        tmp_right_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_17;
+            PyObject *tmp_expression_value_16;
             PyObject *tmp_type_arg_4;
-            PyTuple_SET_ITEM(tmp_right_name_2, 0, tmp_tuple_element_9);
+            PyTuple_SET_ITEM(tmp_right_value_2, 0, tmp_tuple_element_9);
             CHECK_OBJECT(tmp_class_creation_2__prepared);
             tmp_type_arg_4 = tmp_class_creation_2__prepared;
-            tmp_expression_name_17 = BUILTIN_TYPE1(tmp_type_arg_4);
-            assert(!(tmp_expression_name_17 == NULL));
-            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[94]);
-            Py_DECREF(tmp_expression_name_17);
+            tmp_expression_value_16 = BUILTIN_TYPE1(tmp_type_arg_4);
+            assert(!(tmp_expression_value_16 == NULL));
+            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[88]);
+            Py_DECREF(tmp_expression_value_16);
             if (tmp_tuple_element_9 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -20859,17 +20558,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_4;
             }
-            PyTuple_SET_ITEM(tmp_right_name_2, 1, tmp_tuple_element_9);
+            PyTuple_SET_ITEM(tmp_right_value_2, 1, tmp_tuple_element_9);
         }
         goto tuple_build_noexception_4;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_4:;
-        Py_DECREF(tmp_right_name_2);
+        Py_DECREF(tmp_right_value_2);
         goto try_except_handler_8;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_4:;
-        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_2, tmp_right_name_2);
-        Py_DECREF(tmp_right_name_2);
+        tmp_raise_value_2 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_2, tmp_right_value_2);
+        Py_DECREF(tmp_right_value_2);
         if (tmp_raise_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20909,8 +20608,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[182];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[183], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[171];
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[172], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20921,8 +20620,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_10;
         }
-        tmp_dictset_value = mod_consts[146];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[185], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[137];
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[174], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20960,8 +20659,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         assert(Py_REFCNT(frame_a397bfb519e5b7a5213159885b8e72e6_3) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[217];
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[218], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[206];
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[207], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -20976,7 +20675,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_eventlet$green$ssl$$$function__26_wrap_socket();
 
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[174], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[165], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -20991,16 +20690,16 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         {
             nuitka_bool tmp_condition_result_14;
             nuitka_bool tmp_condition_result_15;
-            PyObject *tmp_called_name_6;
+            PyObject *tmp_called_value_6;
             PyObject *tmp_call_result_2;
-            PyObject *tmp_args_element_name_2;
-            PyObject *tmp_expression_name_18;
-            PyObject *tmp_args_element_name_3;
+            PyObject *tmp_args_element_value_2;
+            PyObject *tmp_expression_value_17;
+            PyObject *tmp_args_element_value_3;
             int tmp_truth_name_3;
-            PyObject *tmp_expression_name_19;
-            PyObject *tmp_expression_name_20;
-            PyObject *tmp_attribute_name_3;
-            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            PyObject *tmp_expression_value_18;
+            PyObject *tmp_expression_value_19;
+            PyObject *tmp_attribute_value_3;
+            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21019,11 +20718,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_5;
             }
             condexpr_true_5:;
-            tmp_called_name_6 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            tmp_called_value_6 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
-            if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[220]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[209]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21032,7 +20731,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_name_6 == NULL) {
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21042,53 +20741,53 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_expression_name_18 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_expression_value_17 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_18 == NULL) {
+            if (tmp_expression_value_17 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_18 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_18 == NULL)) {
-                        tmp_expression_name_18 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_17 == NULL)) {
+                        tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_18 == NULL) {
+                    if (tmp_expression_value_17 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_6);
+                        Py_DECREF(tmp_called_value_6);
 
                         exception_lineno = 450;
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_18);
+                    Py_INCREF(tmp_expression_value_17);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_args_element_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[139]);
-            Py_DECREF(tmp_expression_name_18);
-            if (tmp_args_element_name_2 == NULL) {
+            tmp_args_element_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[130]);
+            Py_DECREF(tmp_expression_value_17);
+            if (tmp_args_element_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_6);
+                Py_DECREF(tmp_called_value_6);
 
                 exception_lineno = 450;
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_args_element_name_3 = mod_consts[221];
+            tmp_args_element_value_3 = mod_consts[210];
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 450;
             {
-                PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-                tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+                tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
             }
 
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_call_result_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21114,17 +20813,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             Py_DECREF(tmp_call_result_2);
             goto condexpr_end_5;
             condexpr_false_5:;
-            tmp_expression_name_20 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_expression_value_19 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_20 == NULL) {
+            if (tmp_expression_value_19 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_20 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_19 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_20 == NULL)) {
-                        tmp_expression_name_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_19 == NULL)) {
+                        tmp_expression_value_19 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_20 == NULL) {
+                    if (tmp_expression_value_19 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21134,15 +20833,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_20);
+                    Py_INCREF(tmp_expression_value_19);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_expression_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[139]);
-            Py_DECREF(tmp_expression_name_20);
-            if (tmp_expression_name_19 == NULL) {
+            tmp_expression_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[130]);
+            Py_DECREF(tmp_expression_value_19);
+            if (tmp_expression_value_18 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21152,9 +20851,9 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_attribute_name_3 = mod_consts[221];
-            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_19, tmp_attribute_name_3);
-            Py_DECREF(tmp_expression_name_19);
+            tmp_attribute_value_3 = mod_consts[210];
+            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_18, tmp_attribute_value_3);
+            Py_DECREF(tmp_expression_value_18);
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
 
@@ -21176,19 +20875,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_yes_10:;
         {
             PyObject *tmp_called_instance_1;
-            PyObject *tmp_expression_name_21;
-            PyObject *tmp_args_element_name_4;
-            tmp_expression_name_21 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            PyObject *tmp_expression_value_20;
+            PyObject *tmp_args_element_value_4;
+            tmp_expression_value_20 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_21 == NULL) {
+            if (tmp_expression_value_20 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_21 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_20 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_21 == NULL)) {
-                        tmp_expression_name_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_20 == NULL)) {
+                        tmp_expression_value_20 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_21 == NULL) {
+                    if (tmp_expression_value_20 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21198,14 +20897,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_21);
+                    Py_INCREF(tmp_expression_value_20);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[139]);
-            Py_DECREF(tmp_expression_name_21);
+            tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[130]);
+            Py_DECREF(tmp_expression_value_20);
             if (tmp_called_instance_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21218,12 +20917,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
 
-            tmp_args_element_name_4 = MAKE_FUNCTION_eventlet$green$ssl$$$function__27_options();
+            tmp_args_element_value_4 = MAKE_FUNCTION_eventlet$green$ssl$$$function__27_options();
 
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 456;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[221], tmp_args_element_name_4);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[210], tmp_args_element_value_4);
             Py_DECREF(tmp_called_instance_1);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21234,7 +20933,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[139], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[130], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21249,19 +20948,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_called_instance_2;
-            PyObject *tmp_expression_name_22;
-            PyObject *tmp_args_element_name_5;
-            tmp_expression_name_22 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            PyObject *tmp_expression_value_21;
+            PyObject *tmp_args_element_value_5;
+            tmp_expression_value_21 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_22 == NULL) {
+            if (tmp_expression_value_21 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_22 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_21 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_22 == NULL)) {
-                        tmp_expression_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_21 == NULL)) {
+                        tmp_expression_value_21 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_22 == NULL) {
+                    if (tmp_expression_value_21 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21271,14 +20970,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_22);
+                    Py_INCREF(tmp_expression_value_21);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[141]);
-            Py_DECREF(tmp_expression_name_22);
+            tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[132]);
+            Py_DECREF(tmp_expression_value_21);
             if (tmp_called_instance_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21291,12 +20990,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
 
-            tmp_args_element_name_5 = MAKE_FUNCTION_eventlet$green$ssl$$$function__28_verify_flags();
+            tmp_args_element_value_5 = MAKE_FUNCTION_eventlet$green$ssl$$$function__28_verify_flags();
 
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 460;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[221], tmp_args_element_name_5);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[210], tmp_args_element_value_5);
             Py_DECREF(tmp_called_instance_2);
-            Py_DECREF(tmp_args_element_name_5);
+            Py_DECREF(tmp_args_element_value_5);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21307,7 +21006,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[141], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[132], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21322,19 +21021,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_called_instance_3;
-            PyObject *tmp_expression_name_23;
-            PyObject *tmp_args_element_name_6;
-            tmp_expression_name_23 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            PyObject *tmp_expression_value_22;
+            PyObject *tmp_args_element_value_6;
+            tmp_expression_value_22 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_23 == NULL) {
+            if (tmp_expression_value_22 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_23 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_23 == NULL)) {
-                        tmp_expression_name_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_22 == NULL)) {
+                        tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_23 == NULL) {
+                    if (tmp_expression_value_22 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21344,14 +21043,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_23);
+                    Py_INCREF(tmp_expression_value_22);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_23, mod_consts[142]);
-            Py_DECREF(tmp_expression_name_23);
+            tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[133]);
+            Py_DECREF(tmp_expression_value_22);
             if (tmp_called_instance_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21364,12 +21063,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
 
-            tmp_args_element_name_6 = MAKE_FUNCTION_eventlet$green$ssl$$$function__29_verify_mode();
+            tmp_args_element_value_6 = MAKE_FUNCTION_eventlet$green$ssl$$$function__29_verify_mode();
 
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 464;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[221], tmp_args_element_name_6);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[210], tmp_args_element_value_6);
             Py_DECREF(tmp_called_instance_3);
-            Py_DECREF(tmp_args_element_name_6);
+            Py_DECREF(tmp_args_element_value_6);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21380,7 +21079,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[142], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[133], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21396,14 +21095,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         {
             nuitka_bool tmp_condition_result_16;
             nuitka_bool tmp_condition_result_17;
-            PyObject *tmp_called_name_7;
+            PyObject *tmp_called_value_7;
             PyObject *tmp_call_result_3;
-            PyObject *tmp_args_element_name_7;
-            PyObject *tmp_args_element_name_8;
+            PyObject *tmp_args_element_value_7;
+            PyObject *tmp_args_element_value_8;
             int tmp_truth_name_4;
-            PyObject *tmp_expression_name_24;
-            PyObject *tmp_attribute_name_4;
-            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            PyObject *tmp_expression_value_23;
+            PyObject *tmp_attribute_value_4;
+            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21422,11 +21121,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_6;
             }
             condexpr_true_6:;
-            tmp_called_name_7 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            tmp_called_value_7 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
-            if (unlikely(tmp_called_name_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_7 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[220]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[209]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21435,7 +21134,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_name_7 == NULL) {
+            if (tmp_called_value_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21445,41 +21144,41 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_args_element_name_7 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_args_element_value_7 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_args_element_name_7 == NULL) {
+            if (tmp_args_element_value_7 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_args_element_value_7 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_args_element_name_7 == NULL)) {
-                        tmp_args_element_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_args_element_value_7 == NULL)) {
+                        tmp_args_element_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_args_element_name_7 == NULL) {
+                    if (tmp_args_element_value_7 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_7);
+                        Py_DECREF(tmp_called_value_7);
 
                         exception_lineno = 468;
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_args_element_name_7);
+                    Py_INCREF(tmp_args_element_value_7);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_args_element_name_8 = mod_consts[143];
+            tmp_args_element_value_8 = mod_consts[134];
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 468;
             {
-                PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-                tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+                tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
             }
 
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_7);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_7);
             if (tmp_call_result_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21505,17 +21204,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             Py_DECREF(tmp_call_result_3);
             goto condexpr_end_6;
             condexpr_false_6:;
-            tmp_expression_name_24 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_expression_value_23 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_24 == NULL) {
+            if (tmp_expression_value_23 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_24 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_23 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_24 == NULL)) {
-                        tmp_expression_name_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_23 == NULL)) {
+                        tmp_expression_value_23 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_24 == NULL) {
+                    if (tmp_expression_value_23 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21525,15 +21224,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_24);
+                    Py_INCREF(tmp_expression_value_23);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_attribute_name_4 = mod_consts[143];
-            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_24, tmp_attribute_name_4);
-            Py_DECREF(tmp_expression_name_24);
+            tmp_attribute_value_4 = mod_consts[134];
+            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_23, tmp_attribute_value_4);
+            Py_DECREF(tmp_expression_value_23);
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
 
@@ -21555,19 +21254,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_yes_11:;
         {
             PyObject *tmp_called_instance_4;
-            PyObject *tmp_expression_name_25;
-            PyObject *tmp_args_element_name_9;
-            tmp_expression_name_25 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            PyObject *tmp_expression_value_24;
+            PyObject *tmp_args_element_value_9;
+            tmp_expression_value_24 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_25 == NULL) {
+            if (tmp_expression_value_24 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_25 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_24 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_25 == NULL)) {
-                        tmp_expression_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_24 == NULL)) {
+                        tmp_expression_value_24 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_25 == NULL) {
+                    if (tmp_expression_value_24 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21577,14 +21276,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_25);
+                    Py_INCREF(tmp_expression_value_24);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[143]);
-            Py_DECREF(tmp_expression_name_25);
+            tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[134]);
+            Py_DECREF(tmp_expression_value_24);
             if (tmp_called_instance_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21597,12 +21296,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
 
-            tmp_args_element_name_9 = MAKE_FUNCTION_eventlet$green$ssl$$$function__30_maximum_version();
+            tmp_args_element_value_9 = MAKE_FUNCTION_eventlet$green$ssl$$$function__30_maximum_version();
 
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 469;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[221], tmp_args_element_name_9);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[210], tmp_args_element_value_9);
             Py_DECREF(tmp_called_instance_4);
-            Py_DECREF(tmp_args_element_name_9);
+            Py_DECREF(tmp_args_element_value_9);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21613,7 +21312,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[143], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[134], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21630,14 +21329,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         {
             nuitka_bool tmp_condition_result_18;
             nuitka_bool tmp_condition_result_19;
-            PyObject *tmp_called_name_8;
+            PyObject *tmp_called_value_8;
             PyObject *tmp_call_result_4;
-            PyObject *tmp_args_element_name_10;
-            PyObject *tmp_args_element_name_11;
+            PyObject *tmp_args_element_value_10;
+            PyObject *tmp_args_element_value_11;
             int tmp_truth_name_5;
-            PyObject *tmp_expression_name_26;
-            PyObject *tmp_attribute_name_5;
-            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            PyObject *tmp_expression_value_25;
+            PyObject *tmp_attribute_value_5;
+            tmp_res = MAPPING_HAS_ITEM(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -21656,11 +21355,11 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_7;
             }
             condexpr_true_7:;
-            tmp_called_name_8 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[220]);
+            tmp_called_value_8 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[209]);
 
-            if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
+            if (unlikely(tmp_called_value_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[220]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[209]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -21669,7 +21368,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_3;
             }
 
-            if (tmp_called_name_8 == NULL) {
+            if (tmp_called_value_8 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21679,41 +21378,41 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_args_element_name_10 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_args_element_value_10 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_args_element_name_10 == NULL) {
+            if (tmp_args_element_value_10 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_args_element_name_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_args_element_value_10 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_args_element_name_10 == NULL)) {
-                        tmp_args_element_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_args_element_value_10 == NULL)) {
+                        tmp_args_element_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_args_element_name_10 == NULL) {
+                    if (tmp_args_element_value_10 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                        Py_DECREF(tmp_called_name_8);
+                        Py_DECREF(tmp_called_value_8);
 
                         exception_lineno = 473;
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_args_element_name_10);
+                    Py_INCREF(tmp_args_element_value_10);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_args_element_name_11 = mod_consts[144];
+            tmp_args_element_value_11 = mod_consts[135];
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 473;
             {
-                PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11};
-                tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11};
+                tmp_call_result_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_8, call_args);
             }
 
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_10);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_10);
             if (tmp_call_result_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21739,17 +21438,17 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             Py_DECREF(tmp_call_result_4);
             goto condexpr_end_7;
             condexpr_false_7:;
-            tmp_expression_name_26 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            tmp_expression_value_25 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_26 == NULL) {
+            if (tmp_expression_value_25 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_26 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_25 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_26 == NULL)) {
-                        tmp_expression_name_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_25 == NULL)) {
+                        tmp_expression_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_26 == NULL) {
+                    if (tmp_expression_value_25 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21759,15 +21458,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_26);
+                    Py_INCREF(tmp_expression_value_25);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_attribute_name_5 = mod_consts[144];
-            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_26, tmp_attribute_name_5);
-            Py_DECREF(tmp_expression_name_26);
+            tmp_attribute_value_5 = mod_consts[135];
+            tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_25, tmp_attribute_value_5);
+            Py_DECREF(tmp_expression_value_25);
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
 
@@ -21789,19 +21488,19 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_yes_12:;
         {
             PyObject *tmp_called_instance_5;
-            PyObject *tmp_expression_name_27;
-            PyObject *tmp_args_element_name_12;
-            tmp_expression_name_27 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
+            PyObject *tmp_expression_value_26;
+            PyObject *tmp_args_element_value_12;
+            tmp_expression_value_26 = PyObject_GetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[8]);
 
-            if (tmp_expression_name_27 == NULL) {
+            if (tmp_expression_value_26 == NULL) {
                 if (CHECK_AND_CLEAR_KEY_ERROR_OCCURRED()) {
-                    tmp_expression_name_27 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
+                    tmp_expression_value_26 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[8]);
 
-                    if (unlikely(tmp_expression_name_27 == NULL)) {
-                        tmp_expression_name_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
+                    if (unlikely(tmp_expression_value_26 == NULL)) {
+                        tmp_expression_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
                     }
 
-                    if (tmp_expression_name_27 == NULL) {
+                    if (tmp_expression_value_26 == NULL) {
                         assert(ERROR_OCCURRED());
 
                         FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -21811,14 +21510,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                         type_description_2 = "o";
                         goto frame_exception_exit_3;
                     }
-                    Py_INCREF(tmp_expression_name_27);
+                    Py_INCREF(tmp_expression_value_26);
                 } else {
                     goto frame_exception_exit_3;
                 }
             }
 
-            tmp_called_instance_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[144]);
-            Py_DECREF(tmp_expression_name_27);
+            tmp_called_instance_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[135]);
+            Py_DECREF(tmp_expression_value_26);
             if (tmp_called_instance_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21831,12 +21530,12 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
             }
 
 
-            tmp_args_element_name_12 = MAKE_FUNCTION_eventlet$green$ssl$$$function__31_minimum_version();
+            tmp_args_element_value_12 = MAKE_FUNCTION_eventlet$green$ssl$$$function__31_minimum_version();
 
             frame_a397bfb519e5b7a5213159885b8e72e6_3->m_frame.f_lineno = 474;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[221], tmp_args_element_name_12);
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_5, mod_consts[210], tmp_args_element_value_12);
             Py_DECREF(tmp_called_instance_5);
-            Py_DECREF(tmp_args_element_name_12);
+            Py_DECREF(tmp_args_element_value_12);
             if (tmp_dictset_value == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -21847,7 +21546,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_3;
             }
-            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[144], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[135], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -21919,13 +21618,13 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         skip_nested_handling_2:;
         {
             nuitka_bool tmp_condition_result_20;
-            PyObject *tmp_compexpr_left_3;
-            PyObject *tmp_compexpr_right_3;
+            PyObject *tmp_cmp_expr_left_2;
+            PyObject *tmp_cmp_expr_right_2;
             CHECK_OBJECT(tmp_class_creation_2__bases);
-            tmp_compexpr_left_3 = tmp_class_creation_2__bases;
+            tmp_cmp_expr_left_2 = tmp_class_creation_2__bases;
             CHECK_OBJECT(tmp_class_creation_2__bases_orig);
-            tmp_compexpr_right_3 = tmp_class_creation_2__bases_orig;
-            tmp_condition_result_20 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_3, tmp_compexpr_right_3);
+            tmp_cmp_expr_right_2 = tmp_class_creation_2__bases_orig;
+            tmp_condition_result_20 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
             if (tmp_condition_result_20 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -21946,7 +21645,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_yes_13:;
         CHECK_OBJECT(tmp_class_creation_2__bases_orig);
         tmp_dictset_value = tmp_class_creation_2__bases_orig;
-        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[214], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442, mod_consts[203], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -21960,25 +21659,25 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         branch_no_13:;
         {
             PyObject *tmp_assign_source_51;
-            PyObject *tmp_called_name_9;
-            PyObject *tmp_args_name_4;
+            PyObject *tmp_called_value_9;
+            PyObject *tmp_args_value_4;
             PyObject *tmp_tuple_element_10;
-            PyObject *tmp_kwargs_name_4;
+            PyObject *tmp_kwargs_value_4;
             CHECK_OBJECT(tmp_class_creation_2__metaclass);
-            tmp_called_name_9 = tmp_class_creation_2__metaclass;
-            tmp_tuple_element_10 = mod_consts[146];
-            tmp_args_name_4 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_10);
+            tmp_called_value_9 = tmp_class_creation_2__metaclass;
+            tmp_tuple_element_10 = mod_consts[137];
+            tmp_args_value_4 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 0, tmp_tuple_element_10);
             CHECK_OBJECT(tmp_class_creation_2__bases);
             tmp_tuple_element_10 = tmp_class_creation_2__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_10);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 1, tmp_tuple_element_10);
             tmp_tuple_element_10 = locals_eventlet$green$ssl$$$class__2_GreenSSLContext_442;
-            PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_10);
+            PyTuple_SET_ITEM0(tmp_args_value_4, 2, tmp_tuple_element_10);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
-            tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
+            tmp_kwargs_value_4 = tmp_class_creation_2__class_decl_dict;
             frame_a63accb7d6712058edc3010d4caa7367->m_frame.f_lineno = 442;
-            tmp_assign_source_51 = CALL_FUNCTION(tmp_called_name_9, tmp_args_name_4, tmp_kwargs_name_4);
-            Py_DECREF(tmp_args_name_4);
+            tmp_assign_source_51 = CALL_FUNCTION(tmp_called_value_9, tmp_args_value_4, tmp_kwargs_value_4);
+            Py_DECREF(tmp_args_value_4);
             if (tmp_assign_source_51 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22057,7 +21756,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
         exception_lineno = 442;
         goto try_except_handler_8;
         outline_result_2:;
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[146], tmp_assign_source_50);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[137], tmp_assign_source_50);
     }
     goto try_end_6;
     // Exception handler code:
@@ -22094,21 +21793,24 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     CHECK_OBJECT(tmp_class_creation_2__bases_orig);
     Py_DECREF(tmp_class_creation_2__bases_orig);
     tmp_class_creation_2__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_2__bases);
+    CHECK_OBJECT(tmp_class_creation_2__bases);
+    Py_DECREF(tmp_class_creation_2__bases);
     tmp_class_creation_2__bases = NULL;
-    Py_XDECREF(tmp_class_creation_2__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
+    Py_DECREF(tmp_class_creation_2__class_decl_dict);
     tmp_class_creation_2__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_2__metaclass);
+    CHECK_OBJECT(tmp_class_creation_2__metaclass);
+    Py_DECREF(tmp_class_creation_2__metaclass);
     tmp_class_creation_2__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_2__prepared);
     Py_DECREF(tmp_class_creation_2__prepared);
     tmp_class_creation_2__prepared = NULL;
     {
         PyObject *tmp_assign_source_52;
-        tmp_assign_source_52 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assign_source_52 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[137]);
 
         if (unlikely(tmp_assign_source_52 == NULL)) {
-            tmp_assign_source_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assign_source_52 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[137]);
         }
 
         if (tmp_assign_source_52 == NULL) {
@@ -22125,15 +21827,15 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     }
     {
         nuitka_bool tmp_condition_result_21;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_attribute_name_6;
-        tmp_expression_name_28 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_27;
+        PyObject *tmp_attribute_value_6;
+        tmp_expression_value_27 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_28 == NULL)) {
-            tmp_expression_name_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_27 == NULL)) {
+            tmp_expression_value_27 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_28 == NULL) {
+        if (tmp_expression_value_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22143,8 +21845,8 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_attribute_name_6 = mod_consts[227];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_28, tmp_attribute_name_6);
+        tmp_attribute_value_6 = mod_consts[216];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_27, tmp_attribute_value_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -22165,14 +21867,14 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
     branch_yes_14:;
     {
         PyObject *tmp_assign_source_53;
-        PyObject *tmp_expression_name_29;
-        tmp_expression_name_29 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[154]);
+        PyObject *tmp_expression_value_28;
+        tmp_expression_value_28 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145]);
 
-        if (unlikely(tmp_expression_name_29 == NULL)) {
-            tmp_expression_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[154]);
+        if (unlikely(tmp_expression_value_28 == NULL)) {
+            tmp_expression_value_28 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
-        if (tmp_expression_name_29 == NULL) {
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22182,7 +21884,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_53 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[227]);
+        tmp_assign_source_53 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[216]);
         if (tmp_assign_source_53 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22193,7 +21895,7 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_53);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[136], tmp_assign_source_53);
     }
     {
         PyObject *tmp_assign_source_54;
@@ -22201,29 +21903,29 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
         tmp_assign_source_54 = MAKE_FUNCTION_eventlet$green$ssl$$$function__32_green_create_default_context();
 
-        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[228], tmp_assign_source_54);
+        UPDATE_STRING_DICT1(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[217], tmp_assign_source_54);
     }
     {
         PyObject *tmp_assign_source_55;
-        tmp_assign_source_55 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[228]);
+        tmp_assign_source_55 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[217]);
 
         if (unlikely(tmp_assign_source_55 == NULL)) {
-            tmp_assign_source_55 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[228]);
+            tmp_assign_source_55 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[217]);
         }
 
         assert(!(tmp_assign_source_55 == NULL));
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[227], tmp_assign_source_55);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[216], tmp_assign_source_55);
     }
     {
         PyObject *tmp_assign_source_56;
-        tmp_assign_source_56 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[228]);
+        tmp_assign_source_56 = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[217]);
 
         if (unlikely(tmp_assign_source_56 == NULL)) {
-            tmp_assign_source_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[228]);
+            tmp_assign_source_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[217]);
         }
 
         assert(!(tmp_assign_source_56 == NULL));
-        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[229], tmp_assign_source_56);
+        UPDATE_STRING_DICT0(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)mod_consts[218], tmp_assign_source_56);
     }
     branch_no_14:;
     branch_no_6:;
@@ -22257,8 +21959,23 @@ PyObject *modulecode_eventlet$green$ssl(PyObject *module, struct Nuitka_MetaPath
 
     frame_no_exception_3:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("eventlet.green.ssl", false);
+
     return module_eventlet$green$ssl;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_eventlet$green$ssl, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("eventlet$green$ssl", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

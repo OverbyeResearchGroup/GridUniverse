@@ -1,5 +1,5 @@
 /* Generated code for Python module 'eventlet.green.OpenSSL.tsafe'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_eventlet$green$OpenSSL$tsafe;
 PyDictObject *moduledict_eventlet$green$OpenSSL$tsafe;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[11];
+static PyObject *mod_consts[12];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[11];
+static Py_hash_t mod_consts_hash[12];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 11; i++) {
+        for(int i = 0; i < 12; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_eventlet$green$OpenSSL$tsafe(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 11; i++) {
+    for(int i = 0; i < 12; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -259,63 +259,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_eventlet$green$OpenSSL$tsafe(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("eventlet.green.OpenSSL.tsafe");
+
+    // Store the module for future use.
     module_eventlet$green$OpenSSL$tsafe = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling createModuleConstants().\n");
+        PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("eventlet.green.OpenSSL.tsafe: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initeventlet$green$OpenSSL$tsafe\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_eventlet$green$OpenSSL$tsafe = MODULE_DICT(module_eventlet$green$OpenSSL$tsafe);
 
@@ -336,7 +340,7 @@ PyObject *modulecode_eventlet$green$OpenSSL$tsafe(PyObject *module, struct Nuitk
         UPDATE_STRING_DICT0(
             moduledict_eventlet$green$OpenSSL$tsafe,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[11]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_eventlet$green$OpenSSL$tsafe, (Nuitka_StringObject *)const_str_plain___name__);
@@ -386,7 +390,7 @@ PyObject *modulecode_eventlet$green$OpenSSL$tsafe(PyObject *module, struct Nuitk
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -513,18 +517,18 @@ PyObject *modulecode_eventlet$green$OpenSSL$tsafe(PyObject *module, struct Nuitk
     }
     {
         PyObject *tmp_star_imported_1;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[6];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_eventlet$green$OpenSSL$tsafe;
-        tmp_locals_arg_name_1 = (PyObject *)moduledict_eventlet$green$OpenSSL$tsafe;
-        tmp_fromlist_name_1 = mod_consts[7];
-        tmp_level_name_1 = mod_consts[8];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[6];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_eventlet$green$OpenSSL$tsafe;
+        tmp_locals_arg_value_1 = (PyObject *)moduledict_eventlet$green$OpenSSL$tsafe;
+        tmp_fromlist_value_1 = mod_consts[7];
+        tmp_level_value_1 = mod_consts[8];
         frame_95be4c1aad59421ceb44760d76318f9e->m_frame.f_lineno = 1;
-        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_star_imported_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -578,8 +582,23 @@ PyObject *modulecode_eventlet$green$OpenSSL$tsafe(PyObject *module, struct Nuitk
 
     frame_no_exception_1:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("eventlet.green.OpenSSL.tsafe", false);
+
     return module_eventlet$green$OpenSSL$tsafe;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_eventlet$green$OpenSSL$tsafe, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("eventlet$green$OpenSSL$tsafe", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

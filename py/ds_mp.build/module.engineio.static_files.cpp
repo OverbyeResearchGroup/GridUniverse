@@ -1,5 +1,5 @@
 /* Generated code for Python module 'engineio.static_files'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_engineio$static_files;
 PyDictObject *moduledict_engineio$static_files;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[34];
+static PyObject *mod_consts[33];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[34];
+static Py_hash_t mod_consts_hash[33];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 34; i++) {
+        for(int i = 0; i < 33; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_engineio$static_files(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 34; i++) {
+    for(int i = 0; i < 33; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -82,9 +82,9 @@ static PyCodeObject *codeobj_e04d2cf590cb0a3e27a16f60f904a1d6;
 static PyCodeObject *codeobj_55b049306dadaf1056f49785c1448e5a;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[31]); CHECK_OBJECT(module_filename_obj);
-    codeobj_e04d2cf590cb0a3e27a16f60f904a1d6 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[32], NULL, NULL, 0, 0, 0);
-    codeobj_55b049306dadaf1056f49785c1448e5a = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[33], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[30]); CHECK_OBJECT(module_filename_obj);
+    codeobj_e04d2cf590cb0a3e27a16f60f904a1d6 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[31], NULL, NULL, 0, 0, 0);
+    codeobj_55b049306dadaf1056f49785c1448e5a = MAKE_CODEOBJECT(module_filename_obj, 13, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[29], mod_consts[32], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -105,16 +105,12 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     PyObject *var_f = NULL;
     PyObject *var_last = NULL;
     PyObject *var_ext = NULL;
-    PyObject *tmp_inplace_assign_subscr_1__subscript = NULL;
     PyObject *tmp_inplace_assign_subscr_1__target = NULL;
     PyObject *tmp_inplace_assign_subscr_1__value = NULL;
-    PyObject *tmp_inplace_assign_subscr_2__subscript = NULL;
     PyObject *tmp_inplace_assign_subscr_2__target = NULL;
     PyObject *tmp_inplace_assign_subscr_2__value = NULL;
-    PyObject *tmp_inplace_assign_subscr_3__subscript = NULL;
     PyObject *tmp_inplace_assign_subscr_3__target = NULL;
     PyObject *tmp_inplace_assign_subscr_3__value = NULL;
-    PyObject *tmp_inplace_assign_subscr_4__subscript = NULL;
     PyObject *tmp_inplace_assign_subscr_4__target = NULL;
     PyObject *tmp_inplace_assign_subscr_4__value = NULL;
     PyObject *tmp_tuple_unpack_1__element_1 = NULL;
@@ -198,13 +194,13 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_path);
-        tmp_compexpr_left_1 = par_path;
+        tmp_cmp_expr_left_1 = par_path;
         CHECK_OBJECT(par_static_files);
-        tmp_compexpr_right_1 = par_static_files;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = par_static_files;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -225,13 +221,13 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
         CHECK_OBJECT(par_static_files);
-        tmp_expression_name_1 = par_static_files;
+        tmp_expression_value_1 = par_static_files;
         CHECK_OBJECT(par_path);
-        tmp_subscript_name_1 = par_path;
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
+        tmp_subscript_value_1 = par_path;
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -256,10 +252,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     }
     loop_start_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         if (par_path == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
@@ -272,10 +268,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_2 = par_path;
-        tmp_compexpr_right_2 = mod_consts[0];
-        tmp_operand_name_1 = RICH_COMPARE_NE_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_cmp_expr_left_2 = par_path;
+        tmp_cmp_expr_right_2 = mod_consts[0];
+        tmp_operand_value_1 = RICH_COMPARE_NE_OBJECT_OBJECT_UNICODE(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -285,8 +281,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -297,8 +293,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -311,7 +307,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     {
         PyObject *tmp_assign_source_4;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_2;
         if (par_path == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[1]);
@@ -324,14 +321,22 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_2;
         }
 
-        tmp_called_instance_1 = par_path;
-        frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 30;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[2],
-            &PyTuple_GET_ITEM(mod_consts[3], 0)
-        );
+        tmp_expression_value_2 = par_path;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[2]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 30;
+            type_description_1 = "oooooo";
+            goto try_except_handler_2;
+        }
+        frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 30;
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_1, mod_consts[3]);
+
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -539,15 +544,15 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
 
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_1;
-        PyObject *tmp_right_name_2;
-        tmp_left_name_2 = mod_consts[5];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_1;
+        PyObject *tmp_right_value_2;
+        tmp_left_value_2 = mod_consts[5];
         CHECK_OBJECT(var_last);
-        tmp_right_name_1 = var_last;
-        tmp_left_name_1 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_name_2, tmp_right_name_1);
-        if (tmp_left_name_1 == NULL) {
+        tmp_right_value_1 = var_last;
+        tmp_left_value_1 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_value_2, tmp_right_value_1);
+        if (tmp_left_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -558,7 +563,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         if (var_extra_path == NULL) {
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
@@ -569,9 +574,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_right_name_2 = var_extra_path;
-        tmp_assign_source_9 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_1, tmp_right_name_2);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_2 = var_extra_path;
+        tmp_assign_source_9 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_1, tmp_right_value_2);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -591,24 +596,13 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         CHECK_OBJECT(par_path);
-        tmp_compexpr_left_3 = par_path;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 32;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_right_3 = par_static_files;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
+        tmp_cmp_expr_left_3 = par_path;
+        CHECK_OBJECT(par_static_files);
+        tmp_cmp_expr_right_3 = par_static_files;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -629,24 +623,13 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 33;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_2 = par_static_files;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_2;
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_3 = par_static_files;
         CHECK_OBJECT(par_path);
-        tmp_subscript_name_2 = par_path;
-        tmp_assign_source_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
+        tmp_subscript_value_2 = par_path;
+        tmp_assign_source_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_2);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -659,8 +642,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         }
         {
             PyObject *old = var_f;
+            assert(old != NULL);
             var_f = tmp_assign_source_10;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -669,15 +653,15 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_no_3:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         CHECK_OBJECT(par_path);
-        tmp_left_name_3 = par_path;
-        tmp_right_name_3 = mod_consts[5];
-        tmp_compexpr_left_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_name_3, tmp_right_name_3);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_left_value_3 = par_path;
+        tmp_right_value_3 = mod_consts[5];
+        tmp_cmp_expr_left_4 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -687,21 +671,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        if (par_static_files == NULL) {
-            Py_DECREF(tmp_compexpr_left_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 35;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_right_4 = par_static_files;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_left_4);
+        CHECK_OBJECT(par_static_files);
+        tmp_cmp_expr_right_4 = par_static_files;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -722,28 +695,17 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_4:;
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_right_name_4;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 36;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_3 = par_static_files;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_right_value_4;
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_4 = par_static_files;
         CHECK_OBJECT(par_path);
-        tmp_left_name_4 = par_path;
-        tmp_right_name_4 = mod_consts[5];
-        tmp_subscript_name_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_name_4, tmp_right_name_4);
-        if (tmp_subscript_name_3 == NULL) {
+        tmp_left_value_4 = par_path;
+        tmp_right_value_4 = mod_consts[5];
+        tmp_subscript_value_3 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_value_4, tmp_right_value_4);
+        if (tmp_subscript_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -753,8 +715,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
-        Py_DECREF(tmp_subscript_name_3);
+        tmp_assign_source_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_3);
+        Py_DECREF(tmp_subscript_value_3);
         if (tmp_assign_source_11 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -767,8 +729,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         }
         {
             PyObject *old = var_f;
+            assert(old != NULL);
             var_f = tmp_assign_source_11;
-            Py_XDECREF(old);
+            Py_DECREF(old);
         }
 
     }
@@ -793,7 +756,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         int tmp_truth_name_1;
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -828,7 +791,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         PyObject *tmp_isinstance_cls_1;
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -840,7 +803,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
 
         tmp_isinstance_inst_1 = var_f;
         tmp_isinstance_cls_1 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -863,10 +826,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         PyObject *tmp_assign_source_12;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
-        tmp_dict_key_1 = mod_consts[9];
+        tmp_dict_key_1 = mod_consts[8];
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -891,10 +854,11 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_no_6:;
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_called_instance_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -904,9 +868,21 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_2 = var_f;
+        tmp_expression_value_5 = var_f;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[9]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 42;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
         frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 42;
-        tmp_assign_source_13 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[10]);
+        tmp_assign_source_13 = CALL_FUNCTION_NO_ARGS(tmp_called_value_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -930,19 +906,33 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         int tmp_and_left_truth_1;
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_4;
         PyObject *tmp_call_result_1;
         int tmp_truth_name_2;
-        PyObject *tmp_called_instance_4;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_2;
         int tmp_truth_name_3;
         CHECK_OBJECT(var_f);
-        tmp_expression_name_4 = var_f;
-        tmp_subscript_name_4 = mod_consts[9];
-        tmp_called_instance_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_4);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_7 = var_f;
+        tmp_subscript_value_4 = mod_consts[8];
+        tmp_expression_value_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_7, tmp_subscript_value_4);
+        if (tmp_expression_value_6 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 43;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[10]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -953,13 +943,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 43;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
-            mod_consts[11],
-            PyTuple_GET_ITEM(mod_consts[12], 0)
-        );
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[11]);
 
-        Py_DECREF(tmp_called_instance_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1012,14 +998,22 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_4 = var_extra_path;
-        frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 43;
-        tmp_call_result_2 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_4,
-            mod_consts[13],
-            PyTuple_GET_ITEM(mod_consts[12], 0)
-        );
+        tmp_expression_value_8 = var_extra_path;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[12]);
+        if (tmp_called_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
 
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 43;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 43;
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_4, mod_consts[11]);
+
+        Py_DECREF(tmp_called_value_4);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1057,8 +1051,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_7:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_5;
         if (var_extra_path == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
@@ -1071,9 +1065,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = var_extra_path;
-        tmp_subscript_name_5 = mod_consts[14];
-        tmp_assign_source_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_5);
+        tmp_expression_value_9 = var_extra_path;
+        tmp_subscript_value_5 = mod_consts[13];
+        tmp_assign_source_14 = LOOKUP_SUBSCRIPT(tmp_expression_value_9, tmp_subscript_value_5);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1100,24 +1094,16 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         Py_INCREF(tmp_assign_source_15);
         tmp_inplace_assign_subscr_1__target = tmp_assign_source_15;
     }
-    {
-        PyObject *tmp_assign_source_16;
-        tmp_assign_source_16 = mod_consts[9];
-        assert(tmp_inplace_assign_subscr_1__subscript == NULL);
-        Py_INCREF(tmp_assign_source_16);
-        tmp_inplace_assign_subscr_1__subscript = tmp_assign_source_16;
-    }
     // Tried code:
     {
-        PyObject *tmp_assign_source_17;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_6;
+        PyObject *tmp_assign_source_16;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_6;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
-        tmp_expression_name_6 = tmp_inplace_assign_subscr_1__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_subscript_name_6 = tmp_inplace_assign_subscr_1__subscript;
-        tmp_assign_source_17 = LOOKUP_SUBSCRIPT(tmp_expression_name_6, tmp_subscript_name_6);
-        if (tmp_assign_source_17 == NULL) {
+        tmp_expression_value_10 = tmp_inplace_assign_subscr_1__target;
+        tmp_subscript_value_6 = mod_consts[8];
+        tmp_assign_source_16 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_6);
+        if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1128,14 +1114,14 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_4;
         }
         assert(tmp_inplace_assign_subscr_1__value == NULL);
-        tmp_inplace_assign_subscr_1__value = tmp_assign_source_17;
+        tmp_inplace_assign_subscr_1__value = tmp_assign_source_16;
     }
     {
-        PyObject *tmp_assign_source_18;
-        PyObject *tmp_left_name_5;
-        PyObject *tmp_right_name_5;
+        PyObject *tmp_assign_source_17;
+        PyObject *tmp_left_value_5;
+        PyObject *tmp_right_value_5;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
-        tmp_left_name_5 = tmp_inplace_assign_subscr_1__value;
+        tmp_left_value_5 = tmp_inplace_assign_subscr_1__value;
         if (var_extra_path == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[6]);
@@ -1148,8 +1134,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_4;
         }
 
-        tmp_right_name_5 = var_extra_path;
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_5, tmp_right_name_5);
+        tmp_right_value_5 = var_extra_path;
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_5, tmp_right_value_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1160,8 +1146,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_4;
         }
-        tmp_assign_source_18 = tmp_left_name_5;
-        tmp_inplace_assign_subscr_1__value = tmp_assign_source_18;
+        tmp_assign_source_17 = tmp_left_value_5;
+        tmp_inplace_assign_subscr_1__value = tmp_assign_source_17;
 
     }
     {
@@ -1172,8 +1158,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         tmp_ass_subvalue_1 = tmp_inplace_assign_subscr_1__value;
         CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
         tmp_ass_subscribed_1 = tmp_inplace_assign_subscr_1__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-        tmp_ass_subscript_1 = tmp_inplace_assign_subscr_1__subscript;
+        tmp_ass_subscript_1 = mod_consts[8];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_1, tmp_ass_subscript_1, tmp_ass_subvalue_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -1201,9 +1186,6 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
     Py_DECREF(tmp_inplace_assign_subscr_1__target);
     tmp_inplace_assign_subscr_1__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_1__subscript);
-    tmp_inplace_assign_subscr_1__subscript = NULL;
     Py_XDECREF(tmp_inplace_assign_subscr_1__value);
     tmp_inplace_assign_subscr_1__value = NULL;
     // Re-raise.
@@ -1218,24 +1200,34 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_1__target);
     Py_DECREF(tmp_inplace_assign_subscr_1__target);
     tmp_inplace_assign_subscr_1__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_1__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_1__subscript);
-    tmp_inplace_assign_subscr_1__subscript = NULL;
     CHECK_OBJECT(tmp_inplace_assign_subscr_1__value);
     Py_DECREF(tmp_inplace_assign_subscr_1__value);
     tmp_inplace_assign_subscr_1__value = NULL;
     {
         nuitka_bool tmp_condition_result_8;
-        PyObject *tmp_called_instance_5;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_7;
         PyObject *tmp_call_result_3;
         int tmp_truth_name_4;
         CHECK_OBJECT(var_f);
-        tmp_expression_name_7 = var_f;
-        tmp_subscript_name_7 = mod_consts[9];
-        tmp_called_instance_5 = LOOKUP_SUBSCRIPT(tmp_expression_name_7, tmp_subscript_name_7);
-        if (tmp_called_instance_5 == NULL) {
+        tmp_expression_value_12 = var_f;
+        tmp_subscript_value_7 = mod_consts[8];
+        tmp_expression_value_11 = LOOKUP_SUBSCRIPT(tmp_expression_value_12, tmp_subscript_value_7);
+        if (tmp_expression_value_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 46;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[10]);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1246,13 +1238,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 46;
-        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_5,
-            mod_consts[11],
-            PyTuple_GET_ITEM(mod_consts[12], 0)
-        );
+        tmp_call_result_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[11]);
 
-        Py_DECREF(tmp_called_instance_5);
+        Py_DECREF(tmp_called_value_5);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1285,23 +1273,12 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_8:;
     {
         bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        tmp_compexpr_left_5 = mod_consts[0];
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 47;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_compexpr_right_5 = par_static_files;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_5, tmp_compexpr_left_5);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        tmp_cmp_expr_left_5 = mod_consts[0];
+        CHECK_OBJECT(par_static_files);
+        tmp_cmp_expr_right_5 = par_static_files;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_5, tmp_cmp_expr_left_5);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1324,23 +1301,12 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         nuitka_bool tmp_condition_result_10;
         PyObject *tmp_isinstance_inst_2;
         PyObject *tmp_isinstance_cls_2;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_subscript_name_8;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 48;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_8 = par_static_files;
-        tmp_subscript_name_8 = mod_consts[0];
-        tmp_isinstance_inst_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_8);
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_subscript_value_8;
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_13 = par_static_files;
+        tmp_subscript_value_8 = mod_consts[0];
+        tmp_isinstance_inst_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_8);
         if (tmp_isinstance_inst_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1352,7 +1318,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         tmp_isinstance_cls_2 = (PyObject *)&PyUnicode_Type;
-        tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
+        tmp_res = PyObject_IsInstance(tmp_isinstance_inst_2, tmp_isinstance_cls_2);
         Py_DECREF(tmp_isinstance_inst_2);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -1373,31 +1339,23 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     }
     branch_yes_10:;
     {
-        PyObject *tmp_assign_source_19;
+        PyObject *tmp_assign_source_18;
         CHECK_OBJECT(var_f);
-        tmp_assign_source_19 = var_f;
+        tmp_assign_source_18 = var_f;
         assert(tmp_inplace_assign_subscr_2__target == NULL);
-        Py_INCREF(tmp_assign_source_19);
-        tmp_inplace_assign_subscr_2__target = tmp_assign_source_19;
-    }
-    {
-        PyObject *tmp_assign_source_20;
-        tmp_assign_source_20 = mod_consts[9];
-        assert(tmp_inplace_assign_subscr_2__subscript == NULL);
-        Py_INCREF(tmp_assign_source_20);
-        tmp_inplace_assign_subscr_2__subscript = tmp_assign_source_20;
+        Py_INCREF(tmp_assign_source_18);
+        tmp_inplace_assign_subscr_2__target = tmp_assign_source_18;
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_21;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_9;
+        PyObject *tmp_assign_source_19;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_9;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
-        tmp_expression_name_9 = tmp_inplace_assign_subscr_2__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-        tmp_subscript_name_9 = tmp_inplace_assign_subscr_2__subscript;
-        tmp_assign_source_21 = LOOKUP_SUBSCRIPT(tmp_expression_name_9, tmp_subscript_name_9);
-        if (tmp_assign_source_21 == NULL) {
+        tmp_expression_value_14 = tmp_inplace_assign_subscr_2__target;
+        tmp_subscript_value_9 = mod_consts[8];
+        tmp_assign_source_19 = LOOKUP_SUBSCRIPT(tmp_expression_value_14, tmp_subscript_value_9);
+        if (tmp_assign_source_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1408,32 +1366,21 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_5;
         }
         assert(tmp_inplace_assign_subscr_2__value == NULL);
-        tmp_inplace_assign_subscr_2__value = tmp_assign_source_21;
+        tmp_inplace_assign_subscr_2__value = tmp_assign_source_19;
     }
     {
-        PyObject *tmp_assign_source_22;
-        PyObject *tmp_left_name_6;
-        PyObject *tmp_right_name_6;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_10;
+        PyObject *tmp_assign_source_20;
+        PyObject *tmp_left_value_6;
+        PyObject *tmp_right_value_6;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_subscript_value_10;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__value);
-        tmp_left_name_6 = tmp_inplace_assign_subscr_2__value;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 49;
-            type_description_1 = "oooooo";
-            goto try_except_handler_5;
-        }
-
-        tmp_expression_name_10 = par_static_files;
-        tmp_subscript_name_10 = mod_consts[0];
-        tmp_right_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_10);
-        if (tmp_right_name_6 == NULL) {
+        tmp_left_value_6 = tmp_inplace_assign_subscr_2__value;
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_15 = par_static_files;
+        tmp_subscript_value_10 = mod_consts[0];
+        tmp_right_value_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_15, tmp_subscript_value_10);
+        if (tmp_right_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1443,8 +1390,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_6, tmp_right_name_6);
-        Py_DECREF(tmp_right_name_6);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_6, tmp_right_value_6);
+        Py_DECREF(tmp_right_value_6);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1455,8 +1402,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_5;
         }
-        tmp_assign_source_22 = tmp_left_name_6;
-        tmp_inplace_assign_subscr_2__value = tmp_assign_source_22;
+        tmp_assign_source_20 = tmp_left_value_6;
+        tmp_inplace_assign_subscr_2__value = tmp_assign_source_20;
 
     }
     {
@@ -1467,8 +1414,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         tmp_ass_subvalue_2 = tmp_inplace_assign_subscr_2__value;
         CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
         tmp_ass_subscribed_2 = tmp_inplace_assign_subscr_2__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-        tmp_ass_subscript_2 = tmp_inplace_assign_subscr_2__subscript;
+        tmp_ass_subscript_2 = mod_consts[8];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_2, tmp_ass_subscript_2, tmp_ass_subvalue_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -1496,9 +1442,6 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
     Py_DECREF(tmp_inplace_assign_subscr_2__target);
     tmp_inplace_assign_subscr_2__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_2__subscript);
-    tmp_inplace_assign_subscr_2__subscript = NULL;
     Py_XDECREF(tmp_inplace_assign_subscr_2__value);
     tmp_inplace_assign_subscr_2__value = NULL;
     // Re-raise.
@@ -1513,40 +1456,29 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_2__target);
     Py_DECREF(tmp_inplace_assign_subscr_2__target);
     tmp_inplace_assign_subscr_2__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_2__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_2__subscript);
-    tmp_inplace_assign_subscr_2__subscript = NULL;
     CHECK_OBJECT(tmp_inplace_assign_subscr_2__value);
     Py_DECREF(tmp_inplace_assign_subscr_2__value);
     tmp_inplace_assign_subscr_2__value = NULL;
     goto branch_end_10;
     branch_no_10:;
     {
-        PyObject *tmp_assign_source_23;
+        PyObject *tmp_assign_source_21;
         CHECK_OBJECT(var_f);
-        tmp_assign_source_23 = var_f;
+        tmp_assign_source_21 = var_f;
         assert(tmp_inplace_assign_subscr_3__target == NULL);
-        Py_INCREF(tmp_assign_source_23);
-        tmp_inplace_assign_subscr_3__target = tmp_assign_source_23;
-    }
-    {
-        PyObject *tmp_assign_source_24;
-        tmp_assign_source_24 = mod_consts[9];
-        assert(tmp_inplace_assign_subscr_3__subscript == NULL);
-        Py_INCREF(tmp_assign_source_24);
-        tmp_inplace_assign_subscr_3__subscript = tmp_assign_source_24;
+        Py_INCREF(tmp_assign_source_21);
+        tmp_inplace_assign_subscr_3__target = tmp_assign_source_21;
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_25;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_11;
+        PyObject *tmp_assign_source_22;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_subscript_value_11;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
-        tmp_expression_name_11 = tmp_inplace_assign_subscr_3__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-        tmp_subscript_name_11 = tmp_inplace_assign_subscr_3__subscript;
-        tmp_assign_source_25 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_11);
-        if (tmp_assign_source_25 == NULL) {
+        tmp_expression_value_16 = tmp_inplace_assign_subscr_3__target;
+        tmp_subscript_value_11 = mod_consts[8];
+        tmp_assign_source_22 = LOOKUP_SUBSCRIPT(tmp_expression_value_16, tmp_subscript_value_11);
+        if (tmp_assign_source_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1557,34 +1489,23 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_6;
         }
         assert(tmp_inplace_assign_subscr_3__value == NULL);
-        tmp_inplace_assign_subscr_3__value = tmp_assign_source_25;
+        tmp_inplace_assign_subscr_3__value = tmp_assign_source_22;
     }
     {
-        PyObject *tmp_assign_source_26;
-        PyObject *tmp_left_name_7;
-        PyObject *tmp_right_name_7;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_subscript_name_12;
-        PyObject *tmp_subscript_name_13;
+        PyObject *tmp_assign_source_23;
+        PyObject *tmp_left_value_7;
+        PyObject *tmp_right_value_7;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_subscript_value_12;
+        PyObject *tmp_subscript_value_13;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__value);
-        tmp_left_name_7 = tmp_inplace_assign_subscr_3__value;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 51;
-            type_description_1 = "oooooo";
-            goto try_except_handler_6;
-        }
-
-        tmp_expression_name_13 = par_static_files;
-        tmp_subscript_name_12 = mod_consts[0];
-        tmp_expression_name_12 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_12);
-        if (tmp_expression_name_12 == NULL) {
+        tmp_left_value_7 = tmp_inplace_assign_subscr_3__value;
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_18 = par_static_files;
+        tmp_subscript_value_12 = mod_consts[0];
+        tmp_expression_value_17 = LOOKUP_SUBSCRIPT(tmp_expression_value_18, tmp_subscript_value_12);
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1594,10 +1515,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_6;
         }
-        tmp_subscript_name_13 = mod_consts[9];
-        tmp_right_name_7 = LOOKUP_SUBSCRIPT(tmp_expression_name_12, tmp_subscript_name_13);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_right_name_7 == NULL) {
+        tmp_subscript_value_13 = mod_consts[8];
+        tmp_right_value_7 = LOOKUP_SUBSCRIPT(tmp_expression_value_17, tmp_subscript_value_13);
+        Py_DECREF(tmp_expression_value_17);
+        if (tmp_right_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1607,8 +1528,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_6;
         }
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_name_7, tmp_right_name_7);
-        Py_DECREF(tmp_right_name_7);
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_OBJECT_INPLACE(&tmp_left_value_7, tmp_right_value_7);
+        Py_DECREF(tmp_right_value_7);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1619,8 +1540,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_6;
         }
-        tmp_assign_source_26 = tmp_left_name_7;
-        tmp_inplace_assign_subscr_3__value = tmp_assign_source_26;
+        tmp_assign_source_23 = tmp_left_value_7;
+        tmp_inplace_assign_subscr_3__value = tmp_assign_source_23;
 
     }
     {
@@ -1631,8 +1552,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         tmp_ass_subvalue_3 = tmp_inplace_assign_subscr_3__value;
         CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
         tmp_ass_subscribed_3 = tmp_inplace_assign_subscr_3__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-        tmp_ass_subscript_3 = tmp_inplace_assign_subscr_3__subscript;
+        tmp_ass_subscript_3 = mod_consts[8];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_3, tmp_ass_subscript_3, tmp_ass_subvalue_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -1660,9 +1580,6 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
     Py_DECREF(tmp_inplace_assign_subscr_3__target);
     tmp_inplace_assign_subscr_3__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_3__subscript);
-    tmp_inplace_assign_subscr_3__subscript = NULL;
     Py_XDECREF(tmp_inplace_assign_subscr_3__value);
     tmp_inplace_assign_subscr_3__value = NULL;
     // Re-raise.
@@ -1677,35 +1594,21 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_3__target);
     Py_DECREF(tmp_inplace_assign_subscr_3__target);
     tmp_inplace_assign_subscr_3__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_3__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_3__subscript);
-    tmp_inplace_assign_subscr_3__subscript = NULL;
     CHECK_OBJECT(tmp_inplace_assign_subscr_3__value);
     Py_DECREF(tmp_inplace_assign_subscr_3__value);
     tmp_inplace_assign_subscr_3__value = NULL;
     {
         bool tmp_condition_result_11;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_14;
-        tmp_compexpr_left_6 = mod_consts[15];
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 52;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_14 = par_static_files;
-        tmp_subscript_name_14 = mod_consts[0];
-        tmp_compexpr_right_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_14, tmp_subscript_name_14);
-        if (tmp_compexpr_right_6 == NULL) {
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_14;
+        tmp_cmp_expr_left_6 = mod_consts[14];
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_19 = par_static_files;
+        tmp_subscript_value_14 = mod_consts[0];
+        tmp_cmp_expr_right_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_19, tmp_subscript_value_14);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1715,8 +1618,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_res = PySequence_Contains(tmp_compexpr_right_6, tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_6, tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1737,28 +1640,17 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_yes_11:;
     {
         PyObject *tmp_ass_subvalue_4;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_subscript_name_15;
-        PyObject *tmp_subscript_name_16;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_subscript_value_15;
+        PyObject *tmp_subscript_value_16;
         PyObject *tmp_ass_subscribed_4;
         PyObject *tmp_ass_subscript_4;
-        if (par_static_files == NULL) {
-
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 53;
-            type_description_1 = "oooooo";
-            goto frame_exception_exit_1;
-        }
-
-        tmp_expression_name_16 = par_static_files;
-        tmp_subscript_name_15 = mod_consts[0];
-        tmp_expression_name_15 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_15);
-        if (tmp_expression_name_15 == NULL) {
+        CHECK_OBJECT(par_static_files);
+        tmp_expression_value_21 = par_static_files;
+        tmp_subscript_value_15 = mod_consts[0];
+        tmp_expression_value_20 = LOOKUP_SUBSCRIPT(tmp_expression_value_21, tmp_subscript_value_15);
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1768,9 +1660,9 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_16 = mod_consts[15];
-        tmp_ass_subvalue_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_15, tmp_subscript_name_16);
-        Py_DECREF(tmp_expression_name_15);
+        tmp_subscript_value_16 = mod_consts[14];
+        tmp_ass_subvalue_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_20, tmp_subscript_value_16);
+        Py_DECREF(tmp_expression_value_20);
         if (tmp_ass_subvalue_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1783,7 +1675,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         }
         CHECK_OBJECT(var_f);
         tmp_ass_subscribed_4 = var_f;
-        tmp_ass_subscript_4 = mod_consts[15];
+        tmp_ass_subscript_4 = mod_consts[14];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_4, tmp_ass_subscript_4, tmp_ass_subvalue_4);
         Py_DECREF(tmp_ass_subvalue_4);
         if (tmp_result == false) {
@@ -1802,31 +1694,23 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     goto branch_end_9;
     branch_no_9:;
     {
-        PyObject *tmp_assign_source_27;
+        PyObject *tmp_assign_source_24;
         CHECK_OBJECT(var_f);
-        tmp_assign_source_27 = var_f;
+        tmp_assign_source_24 = var_f;
         assert(tmp_inplace_assign_subscr_4__target == NULL);
-        Py_INCREF(tmp_assign_source_27);
-        tmp_inplace_assign_subscr_4__target = tmp_assign_source_27;
-    }
-    {
-        PyObject *tmp_assign_source_28;
-        tmp_assign_source_28 = mod_consts[9];
-        assert(tmp_inplace_assign_subscr_4__subscript == NULL);
-        Py_INCREF(tmp_assign_source_28);
-        tmp_inplace_assign_subscr_4__subscript = tmp_assign_source_28;
+        Py_INCREF(tmp_assign_source_24);
+        tmp_inplace_assign_subscr_4__target = tmp_assign_source_24;
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_29;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_subscript_name_17;
+        PyObject *tmp_assign_source_25;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_subscript_value_17;
         CHECK_OBJECT(tmp_inplace_assign_subscr_4__target);
-        tmp_expression_name_17 = tmp_inplace_assign_subscr_4__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_4__subscript);
-        tmp_subscript_name_17 = tmp_inplace_assign_subscr_4__subscript;
-        tmp_assign_source_29 = LOOKUP_SUBSCRIPT(tmp_expression_name_17, tmp_subscript_name_17);
-        if (tmp_assign_source_29 == NULL) {
+        tmp_expression_value_22 = tmp_inplace_assign_subscr_4__target;
+        tmp_subscript_value_17 = mod_consts[8];
+        tmp_assign_source_25 = LOOKUP_SUBSCRIPT(tmp_expression_value_22, tmp_subscript_value_17);
+        if (tmp_assign_source_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1837,16 +1721,16 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto try_except_handler_7;
         }
         assert(tmp_inplace_assign_subscr_4__value == NULL);
-        tmp_inplace_assign_subscr_4__value = tmp_assign_source_29;
+        tmp_inplace_assign_subscr_4__value = tmp_assign_source_25;
     }
     {
-        PyObject *tmp_assign_source_30;
-        PyObject *tmp_left_name_8;
-        PyObject *tmp_right_name_8;
+        PyObject *tmp_assign_source_26;
+        PyObject *tmp_left_value_8;
+        PyObject *tmp_right_value_8;
         CHECK_OBJECT(tmp_inplace_assign_subscr_4__value);
-        tmp_left_name_8 = tmp_inplace_assign_subscr_4__value;
-        tmp_right_name_8 = mod_consts[16];
-        tmp_result = BINARY_OPERATION_ADD_OBJECT_UNICODE_INPLACE(&tmp_left_name_8, tmp_right_name_8);
+        tmp_left_value_8 = tmp_inplace_assign_subscr_4__value;
+        tmp_right_value_8 = mod_consts[15];
+        tmp_result = BINARY_OPERATION_ADD_OBJECT_UNICODE_INPLACE(&tmp_left_value_8, tmp_right_value_8);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1857,8 +1741,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto try_except_handler_7;
         }
-        tmp_assign_source_30 = tmp_left_name_8;
-        tmp_inplace_assign_subscr_4__value = tmp_assign_source_30;
+        tmp_assign_source_26 = tmp_left_value_8;
+        tmp_inplace_assign_subscr_4__value = tmp_assign_source_26;
 
     }
     {
@@ -1869,8 +1753,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         tmp_ass_subvalue_5 = tmp_inplace_assign_subscr_4__value;
         CHECK_OBJECT(tmp_inplace_assign_subscr_4__target);
         tmp_ass_subscribed_5 = tmp_inplace_assign_subscr_4__target;
-        CHECK_OBJECT(tmp_inplace_assign_subscr_4__subscript);
-        tmp_ass_subscript_5 = tmp_inplace_assign_subscr_4__subscript;
+        tmp_ass_subscript_5 = mod_consts[8];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_5, tmp_ass_subscript_5, tmp_ass_subvalue_5);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
@@ -1898,9 +1781,6 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_4__target);
     Py_DECREF(tmp_inplace_assign_subscr_4__target);
     tmp_inplace_assign_subscr_4__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_4__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_4__subscript);
-    tmp_inplace_assign_subscr_4__subscript = NULL;
     Py_XDECREF(tmp_inplace_assign_subscr_4__value);
     tmp_inplace_assign_subscr_4__value = NULL;
     // Re-raise.
@@ -1915,9 +1795,6 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     CHECK_OBJECT(tmp_inplace_assign_subscr_4__target);
     Py_DECREF(tmp_inplace_assign_subscr_4__target);
     tmp_inplace_assign_subscr_4__target = NULL;
-    CHECK_OBJECT(tmp_inplace_assign_subscr_4__subscript);
-    Py_DECREF(tmp_inplace_assign_subscr_4__subscript);
-    tmp_inplace_assign_subscr_4__subscript = NULL;
     CHECK_OBJECT(tmp_inplace_assign_subscr_4__value);
     Py_DECREF(tmp_inplace_assign_subscr_4__value);
     tmp_inplace_assign_subscr_4__value = NULL;
@@ -1925,12 +1802,12 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_no_8:;
     {
         bool tmp_condition_result_12;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        tmp_compexpr_left_7 = mod_consts[15];
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        tmp_cmp_expr_left_7 = mod_consts[14];
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1940,8 +1817,8 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_right_7 = var_f;
-        tmp_res = PySequence_Contains(tmp_compexpr_right_7, tmp_compexpr_left_7);
+        tmp_cmp_expr_right_7 = var_f;
+        tmp_res = PySequence_Contains(tmp_cmp_expr_right_7, tmp_cmp_expr_left_7);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1961,15 +1838,16 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     }
     branch_yes_12:;
     {
-        PyObject *tmp_assign_source_31;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_called_instance_6;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_subscript_name_18;
-        PyObject *tmp_subscript_name_19;
+        PyObject *tmp_assign_source_27;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_subscript_value_18;
+        PyObject *tmp_subscript_value_19;
         if (var_f == NULL) {
 
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -1979,10 +1857,22 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_19 = var_f;
-        tmp_subscript_name_18 = mod_consts[9];
-        tmp_called_instance_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_19, tmp_subscript_name_18);
-        if (tmp_called_instance_6 == NULL) {
+        tmp_expression_value_25 = var_f;
+        tmp_subscript_value_18 = mod_consts[8];
+        tmp_expression_value_24 = LOOKUP_SUBSCRIPT(tmp_expression_value_25, tmp_subscript_value_18);
+        if (tmp_expression_value_24 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 57;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[2]);
+        Py_DECREF(tmp_expression_value_24);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1993,14 +1883,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 57;
-        tmp_expression_name_18 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_6,
-            mod_consts[2],
-            PyTuple_GET_ITEM(mod_consts[17], 0)
-        );
+        tmp_expression_value_23 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_6, mod_consts[16]);
 
-        Py_DECREF(tmp_called_instance_6);
-        if (tmp_expression_name_18 == NULL) {
+        Py_DECREF(tmp_called_value_6);
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2010,10 +1896,10 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_19 = mod_consts[18];
-        tmp_assign_source_31 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_19, -1);
-        Py_DECREF(tmp_expression_name_18);
-        if (tmp_assign_source_31 == NULL) {
+        tmp_subscript_value_19 = mod_consts[17];
+        tmp_assign_source_27 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_23, tmp_subscript_value_19, -1);
+        Py_DECREF(tmp_expression_value_23);
+        if (tmp_assign_source_27 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2024,22 +1910,34 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         assert(var_ext == NULL);
-        var_ext = tmp_assign_source_31;
+        var_ext = tmp_assign_source_27;
     }
     {
         PyObject *tmp_ass_subvalue_6;
-        PyObject *tmp_called_instance_7;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_ass_subscribed_6;
         PyObject *tmp_ass_subscript_6;
-        tmp_called_instance_7 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[19]);
+        tmp_expression_value_26 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[18]);
 
-        if (unlikely(tmp_called_instance_7 == NULL)) {
-            tmp_called_instance_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[19]);
+        if (unlikely(tmp_expression_value_26 == NULL)) {
+            tmp_expression_value_26 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
         }
 
-        if (tmp_called_instance_7 == NULL) {
+        if (tmp_expression_value_26 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 58;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[19]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -2050,18 +1948,15 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(var_ext);
-        tmp_args_element_name_1 = var_ext;
-        tmp_args_element_name_2 = mod_consts[21];
+        tmp_args_element_value_1 = var_ext;
+        tmp_args_element_value_2 = mod_consts[20];
         frame_55b049306dadaf1056f49785c1448e5a->m_frame.f_lineno = 58;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_ass_subvalue_6 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_7,
-                mod_consts[20],
-                call_args
-            );
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_ass_subvalue_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
         }
 
+        Py_DECREF(tmp_called_value_7);
         if (tmp_ass_subvalue_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2074,7 +1969,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         }
         if (var_f == NULL) {
             Py_DECREF(tmp_ass_subvalue_6);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
             exception_tb = NULL;
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
@@ -2085,7 +1980,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
         }
 
         tmp_ass_subscribed_6 = var_f;
-        tmp_ass_subscript_6 = mod_consts[15];
+        tmp_ass_subscript_6 = mod_consts[14];
         tmp_result = SET_SUBSCRIPT(tmp_ass_subscribed_6, tmp_ass_subscript_6, tmp_ass_subvalue_6);
         Py_DECREF(tmp_ass_subvalue_6);
         if (tmp_result == false) {
@@ -2103,7 +1998,7 @@ static PyObject *impl_engineio$static_files$$$function__1_get_static_file(struct
     branch_no_5:;
     if (var_f == NULL) {
 
-        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[8]);
+        FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[7]);
         exception_tb = NULL;
         NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
         CHAIN_EXCEPTION(exception_value);
@@ -2253,7 +2148,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_engineio$static_files$$$function__1_get_static_file() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_engineio$static_files$$$function__1_get_static_file,
-        mod_consts[30],
+        mod_consts[29],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -2264,7 +2159,7 @@ static PyObject *MAKE_FUNCTION_engineio$static_files$$$function__1_get_static_fi
         NULL,
 #endif
         module_engineio$static_files,
-        mod_consts[22],
+        mod_consts[21],
         NULL,
         0
     );
@@ -2442,63 +2337,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("engineio.static_files");
+
+    // Store the module for future use.
     module_engineio$static_files = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("engineio.static_files: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("engineio.static_files: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("engineio.static_files: Calling createModuleConstants().\n");
+        PRINT_STRING("engineio.static_files: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("engineio.static_files: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("engineio.static_files: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initengineio$static_files\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_engineio$static_files = MODULE_DICT(module_engineio$static_files);
 
@@ -2519,7 +2418,7 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
         UPDATE_STRING_DICT0(
             moduledict_engineio$static_files,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[0]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)const_str_plain___name__);
@@ -2569,7 +2468,7 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -2627,12 +2526,12 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[23], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_e04d2cf590cb0a3e27a16f60f904a1d6 = MAKE_MODULE_FRAME(codeobj_e04d2cf590cb0a3e27a16f60f904a1d6, module_engineio$static_files);
@@ -2647,14 +2546,14 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[25]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[24]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[26], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[25], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2670,14 +2569,14 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[25]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[24]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[25]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[24]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[27], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[26], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -2721,12 +2620,12 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[27], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = PyDict_Copy(mod_consts[29]);
-        UPDATE_STRING_DICT1(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_4);
+        tmp_assign_source_4 = PyDict_Copy(mod_consts[28]);
+        UPDATE_STRING_DICT1(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
@@ -2734,11 +2633,26 @@ PyObject *modulecode_engineio$static_files(PyObject *module, struct Nuitka_MetaP
 
         tmp_assign_source_5 = MAKE_FUNCTION_engineio$static_files$$$function__1_get_static_file();
 
-        UPDATE_STRING_DICT1(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[30], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_engineio$static_files, (Nuitka_StringObject *)mod_consts[29], tmp_assign_source_5);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("engineio.static_files", false);
 
     return module_engineio$static_files;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_engineio$static_files, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("engineio$static_files", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'aiohttp.web_middlewares'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_aiohttp$web_middlewares;
 PyDictObject *moduledict_aiohttp$web_middlewares;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[99];
+static PyObject *mod_consts[96];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[99];
+static Py_hash_t mod_consts_hash[96];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 99; i++) {
+        for(int i = 0; i < 96; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_aiohttp$web_middlewares(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 99; i++) {
+    for(int i = 0; i < 96; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -87,14 +87,14 @@ static PyCodeObject *codeobj_da4894b869b2a4ba9f9c2a946b9d4468;
 static PyCodeObject *codeobj_5e06343547d28ad138cdf5ba13f7e894;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[89]); CHECK_OBJECT(module_filename_obj);
-    codeobj_19fcfe894e5f75b87c05866d687790d9 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[90], NULL, NULL, 0, 0, 0);
-    codeobj_0fabdab07d23b4ea8689c5a05ceb1934 = MAKE_CODEOBJECT(module_filename_obj, 21, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[9], mod_consts[91], NULL, 2, 0, 0);
-    codeobj_30ab6132a5cc09efa03f4b437736d4be = MAKE_CODEOBJECT(module_filename_obj, 113, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[88], mod_consts[92], NULL, 1, 0, 0);
-    codeobj_48dcaefa16e682e84def96041c67e663 = MAKE_CODEOBJECT(module_filename_obj, 115, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[19], mod_consts[93], mod_consts[94], 2, 0, 0);
-    codeobj_61f454acd023529471e887a70fa6bc71 = MAKE_CODEOBJECT(module_filename_obj, 80, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[19], mod_consts[95], mod_consts[96], 2, 0, 0);
-    codeobj_da4894b869b2a4ba9f9c2a946b9d4468 = MAKE_CODEOBJECT(module_filename_obj, 33, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], mod_consts[97], NULL, 1, 0, 0);
-    codeobj_5e06343547d28ad138cdf5ba13f7e894 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[87], mod_consts[98], NULL, 0, 4, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[86]); CHECK_OBJECT(module_filename_obj);
+    codeobj_19fcfe894e5f75b87c05866d687790d9 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[87], NULL, NULL, 0, 0, 0);
+    codeobj_0fabdab07d23b4ea8689c5a05ceb1934 = MAKE_CODEOBJECT(module_filename_obj, 21, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[9], mod_consts[88], NULL, 2, 0, 0);
+    codeobj_30ab6132a5cc09efa03f4b437736d4be = MAKE_CODEOBJECT(module_filename_obj, 113, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[85], mod_consts[89], NULL, 1, 0, 0);
+    codeobj_48dcaefa16e682e84def96041c67e663 = MAKE_CODEOBJECT(module_filename_obj, 115, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[19], mod_consts[90], mod_consts[91], 2, 0, 0);
+    codeobj_61f454acd023529471e887a70fa6bc71 = MAKE_CODEOBJECT(module_filename_obj, 80, CO_COROUTINE | CO_OPTIMIZED | CO_NEWLOCALS, mod_consts[19], mod_consts[92], mod_consts[93], 2, 0, 0);
+    codeobj_da4894b869b2a4ba9f9c2a946b9d4468 = MAKE_CODEOBJECT(module_filename_obj, 33, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], mod_consts[94], NULL, 1, 0, 0);
+    codeobj_5e06343547d28ad138cdf5ba13f7e894 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[84], mod_consts[95], NULL, 0, 4, 0);
 }
 
 // The module function declarations.
@@ -271,8 +271,8 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_kw_call_value_0_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -286,9 +286,9 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[1]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -299,7 +299,7 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[2]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -315,10 +315,10 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
         {
             PyObject *kw_values[1] = {tmp_kw_call_value_0_1};
 
-            tmp_assign_source_1 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_1, kw_values, mod_consts[3]);
+            tmp_assign_source_1 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_1, kw_values, mod_consts[3]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -334,12 +334,12 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_1;
         coroutine->m_frame->m_frame.f_lineno = 24;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -353,9 +353,9 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[4]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[4]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -365,8 +365,8 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             coroutine_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[5]);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[5]);
+        Py_DECREF(tmp_expression_value_4);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -378,11 +378,11 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_alt_request);
-        tmp_args_element_name_1 = coroutine_heap->var_alt_request;
+        tmp_args_element_value_1 = coroutine_heap->var_alt_request;
         coroutine->m_frame->m_frame.f_lineno = 24;
-        tmp_expression_name_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[6], tmp_args_element_name_1);
+        tmp_expression_value_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[6], tmp_args_element_value_1);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -392,9 +392,9 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             coroutine_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_2 = ASYNC_AWAIT(tmp_expression_name_3, await_normal);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = ASYNC_AWAIT(tmp_expression_value_3, await_normal);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -404,14 +404,14 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             coroutine_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_3, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_2;
+        coroutine->m_yieldfrom = tmp_expression_value_2;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_3, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -459,13 +459,13 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_6;
         CHECK_OBJECT(coroutine_heap->var_match_info);
-        tmp_expression_name_6 = coroutine_heap->var_match_info;
-        tmp_compexpr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[8]);
-        if (tmp_compexpr_left_1 == NULL) {
+        tmp_expression_value_6 = coroutine_heap->var_match_info;
+        tmp_cmp_expr_left_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[8]);
+        if (tmp_cmp_expr_left_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -475,9 +475,9 @@ static PyObject *aiohttp$web_middlewares$$$function__1__check_request_resolves$$
             coroutine_heap->type_description_1 = "ccoo";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
-        Py_DECREF(tmp_compexpr_left_1);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
+        Py_DECREF(tmp_cmp_expr_left_1);
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -858,7 +858,7 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
     // Framed code:
     {
         nuitka_bool tmp_assign_source_1;
-        PyObject *tmp_operand_name_1;
+        PyObject *tmp_operand_value_1;
         int tmp_and_left_truth_1;
         PyObject *tmp_and_left_value_1;
         PyObject *tmp_and_right_value_1;
@@ -883,12 +883,12 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
         and_right_1:;
         CHECK_OBJECT(Nuitka_Cell_GET(par_remove_slash));
         tmp_and_right_value_1 = Nuitka_Cell_GET(par_remove_slash);
-        tmp_operand_name_1 = tmp_and_right_value_1;
+        tmp_operand_value_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
-        tmp_operand_name_1 = tmp_and_left_value_1;
+        tmp_operand_value_1 = tmp_and_left_value_1;
         and_end_1:;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -904,10 +904,10 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_2;
+        PyObject *tmp_operand_value_2;
         assert(var_correct_configuration != NUITKA_BOOL_UNASSIGNED);
-        tmp_operand_name_2 = (var_correct_configuration == NUITKA_BOOL_TRUE) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
+        tmp_operand_value_2 = (var_correct_configuration == NUITKA_BOOL_TRUE) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_2);
         assert(!(tmp_res == -1));
         tmp_condition_result_1 = (tmp_res == 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -934,19 +934,19 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_annotations_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
         struct Nuitka_CellObject *tmp_closure_1[4];
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[13]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[13]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1031,11 +1031,11 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
         tmp_closure_1[3] = par_remove_slash;
         Py_INCREF(tmp_closure_1[3]);
 
-        tmp_args_element_name_1 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__3_normalize_path_middleware$$$function__1_impl(tmp_annotations_1, tmp_closure_1);
+        tmp_args_element_value_1 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__3_normalize_path_middleware$$$function__1_impl(tmp_annotations_1, tmp_closure_1);
 
         frame_5e06343547d28ad138cdf5ba13f7e894->m_frame.f_lineno = 79;
-        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1216,9 +1216,6 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__3_normalize_path_middl
     par_request = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_request);
-    Py_DECREF(par_request);
-    par_request = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -1385,8 +1382,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_isinstance_inst_1;
         PyObject *tmp_isinstance_cls_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -1399,9 +1396,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[22]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[22]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1411,8 +1408,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[23]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_isinstance_inst_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[23]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_isinstance_inst_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1439,7 +1436,7 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        coroutine_heap->tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         Py_DECREF(tmp_isinstance_inst_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
@@ -1467,10 +1464,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_3;
-        tmp_compexpr_left_1 = mod_consts[25];
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_3;
+        tmp_cmp_expr_left_1 = mod_consts[25];
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -1483,9 +1480,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[26]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[26]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1495,8 +1492,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -1519,8 +1516,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     {
         PyObject *tmp_assign_source_2;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -1533,9 +1531,21 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[26]);
-        if (tmp_called_instance_1 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[26]);
+        if (tmp_expression_value_4 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 84;
+            coroutine_heap->type_description_1 = "ccooooocccc";
+            goto try_except_handler_2;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[27]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1546,13 +1556,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto try_except_handler_2;
         }
         coroutine->m_frame->m_frame.f_lineno = 84;
-        tmp_iter_arg_1 = CALL_METHOD_WITH_ARGS2(
-            tmp_called_instance_1,
-            mod_consts[27],
-            &PyTuple_GET_ITEM(mod_consts[28], 0)
-        );
+        tmp_iter_arg_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_1, mod_consts[28]);
 
-        Py_DECREF(tmp_called_instance_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1740,12 +1746,12 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
 
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
-        tmp_left_name_1 = mod_consts[25];
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
+        tmp_left_value_1 = mod_consts[25];
         CHECK_OBJECT(coroutine_heap->var_query);
-        tmp_right_name_1 = coroutine_heap->var_query;
-        tmp_assign_source_7 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_name_1, tmp_right_name_1);
+        tmp_right_value_1 = coroutine_heap->var_query;
+        tmp_assign_source_7 = BINARY_OPERATION_ADD_OBJECT_UNICODE_OBJECT(tmp_left_value_1, tmp_right_value_1);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1775,7 +1781,7 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_6;
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -1788,8 +1794,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[26]);
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_assign_source_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[26]);
         if (tmp_assign_source_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1839,71 +1845,62 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         CHECK_OBJECT(coroutine_heap->var_paths_to_check);
-        tmp_expression_name_6 = coroutine_heap->var_paths_to_check;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[32]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_7 = coroutine_heap->var_paths_to_check;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[32]);
+        assert(!(tmp_called_value_2 == NULL));
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
+
+        if (unlikely(tmp_called_instance_1 == NULL)) {
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        }
+
+        if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 91;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
-
-        if (unlikely(tmp_called_instance_2 == NULL)) {
-            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
-        }
-
-        if (tmp_called_instance_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-
-            coroutine_heap->exception_lineno = 91;
-            coroutine_heap->type_description_1 = "ccooooocccc";
-            goto frame_exception_exit_1;
-        }
-        tmp_args_element_name_2 = mod_consts[35];
-        tmp_args_element_name_3 = mod_consts[36];
+        tmp_args_element_value_2 = mod_consts[35];
+        tmp_args_element_value_3 = mod_consts[36];
         CHECK_OBJECT(coroutine_heap->var_path);
-        tmp_args_element_name_4 = coroutine_heap->var_path;
+        tmp_args_element_value_4 = coroutine_heap->var_path;
         coroutine->m_frame->m_frame.f_lineno = 91;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_args_element_name_1 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_2,
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_args_element_value_1 = CALL_METHOD_WITH_ARGS3(
+                tmp_called_instance_1,
                 mod_consts[34],
                 call_args
             );
         }
 
-        if (tmp_args_element_name_1 == NULL) {
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 91;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 91;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_2, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1923,9 +1920,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
         nuitka_bool tmp_and_left_value_1;
         nuitka_bool tmp_and_right_value_1;
         int tmp_truth_name_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[37]);
@@ -1979,9 +1977,21 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[2]);
-        if (tmp_called_instance_3 == NULL) {
+        tmp_expression_value_9 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[2]);
+        if (tmp_expression_value_8 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 92;
+            coroutine_heap->type_description_1 = "ccooooocccc";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[38]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1992,14 +2002,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 92;
-        tmp_operand_name_1 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_3,
-            mod_consts[38],
-            PyTuple_GET_ITEM(mod_consts[39], 0)
-        );
+        tmp_operand_value_1 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_3, mod_consts[39]);
 
-        Py_DECREF(tmp_called_instance_3);
-        if (tmp_operand_name_1 == NULL) {
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2009,8 +2015,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2035,12 +2041,12 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_left_name_2;
-        PyObject *tmp_right_name_2;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_left_value_2;
+        PyObject *tmp_right_value_2;
         if (coroutine_heap->var_paths_to_check == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[40]);
@@ -2053,9 +2059,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = coroutine_heap->var_paths_to_check;
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[32]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_10 = coroutine_heap->var_paths_to_check;
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[32]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2066,7 +2072,7 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_path == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[2]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2077,23 +2083,23 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_2 = coroutine_heap->var_path;
-        tmp_right_name_2 = mod_consts[36];
-        tmp_args_element_name_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_name_2, tmp_right_name_2);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_left_value_2 = coroutine_heap->var_path;
+        tmp_right_value_2 = mod_consts[36];
+        tmp_args_element_value_5 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_value_2, tmp_right_value_2);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_4);
 
             coroutine_heap->exception_lineno = 93;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 93;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_5);
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_5);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_4, tmp_args_element_value_5);
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_5);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2113,8 +2119,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
         nuitka_bool tmp_and_left_value_2;
         nuitka_bool tmp_and_right_value_2;
         int tmp_truth_name_3;
-        PyObject *tmp_called_instance_4;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
         PyObject *tmp_call_result_3;
         int tmp_truth_name_4;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
@@ -2170,9 +2177,21 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_9 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_called_instance_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[2]);
-        if (tmp_called_instance_4 == NULL) {
+        tmp_expression_value_12 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[2]);
+        if (tmp_expression_value_11 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 94;
+            coroutine_heap->type_description_1 = "ccooooocccc";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[38]);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2183,13 +2202,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 94;
-        tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(
-            tmp_called_instance_4,
-            mod_consts[38],
-            PyTuple_GET_ITEM(mod_consts[39], 0)
-        );
+        tmp_call_result_3 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_5, mod_consts[39]);
 
-        Py_DECREF(tmp_called_instance_4);
+        Py_DECREF(tmp_called_value_5);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2226,12 +2241,12 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     branch_yes_5:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_call_result_4;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_1;
         if (coroutine_heap->var_paths_to_check == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[40]);
@@ -2244,9 +2259,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = coroutine_heap->var_paths_to_check;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[32]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_13 = coroutine_heap->var_paths_to_check;
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[32]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2257,7 +2272,7 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_path == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_6);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[2]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2268,23 +2283,23 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_11 = coroutine_heap->var_path;
-        tmp_subscript_name_1 = mod_consts[42];
-        tmp_args_element_name_6 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_1);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_expression_value_14 = coroutine_heap->var_path;
+        tmp_subscript_value_1 = mod_consts[42];
+        tmp_args_element_value_6 = LOOKUP_SUBSCRIPT(tmp_expression_value_14, tmp_subscript_value_1);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 95;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 95;
-        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_6, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2383,17 +2398,17 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     branch_yes_6:;
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_call_result_5;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_left_name_3;
-        PyObject *tmp_right_name_3;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_left_value_3;
+        PyObject *tmp_right_value_3;
         if (coroutine_heap->var_paths_to_check == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[40]);
@@ -2406,9 +2421,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_12 = coroutine_heap->var_paths_to_check;
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[32]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_expression_value_15 = coroutine_heap->var_paths_to_check;
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[32]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2418,38 +2433,38 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
+        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_16 == NULL)) {
+            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_7);
 
             coroutine_heap->exception_lineno = 97;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[34]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[34]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_7);
 
             coroutine_heap->exception_lineno = 97;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_8 = mod_consts[35];
-        tmp_args_element_name_9 = mod_consts[36];
+        tmp_args_element_value_8 = mod_consts[35];
+        tmp_args_element_value_9 = mod_consts[36];
         if (coroutine_heap->var_path == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[2]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2460,15 +2475,15 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_left_name_3 = coroutine_heap->var_path;
-        tmp_right_name_3 = mod_consts[36];
-        tmp_args_element_name_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_name_3, tmp_right_name_3);
-        if (tmp_args_element_name_10 == NULL) {
+        tmp_left_value_3 = coroutine_heap->var_path;
+        tmp_right_value_3 = mod_consts[36];
+        tmp_args_element_value_10 = BINARY_OPERATION_ADD_OBJECT_OBJECT_UNICODE(tmp_left_value_3, tmp_right_value_3);
+        if (tmp_args_element_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_called_value_8);
 
             coroutine_heap->exception_lineno = 97;
             coroutine_heap->type_description_1 = "ccooooocccc";
@@ -2476,26 +2491,26 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
         }
         coroutine->m_frame->m_frame.f_lineno = 97;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9, tmp_args_element_name_10};
-            tmp_args_element_name_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9, tmp_args_element_value_10};
+            tmp_args_element_value_7 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_10);
-        if (tmp_args_element_name_7 == NULL) {
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_10);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_7);
 
             coroutine_heap->exception_lineno = 97;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 97;
-        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_7);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_7);
+        tmp_call_result_5 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_7);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_7);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2595,18 +2610,18 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     branch_yes_7:;
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        tmp_expression_name_14 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        tmp_expression_value_17 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_14 == NULL)) {
-            tmp_expression_name_14 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_17 == NULL)) {
+            tmp_expression_value_17 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_14 == NULL) {
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2616,8 +2631,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[34]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[34]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2627,10 +2642,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_11 = mod_consts[35];
-        tmp_args_element_name_12 = mod_consts[36];
+        tmp_args_element_value_11 = mod_consts[35];
+        tmp_args_element_value_12 = mod_consts[36];
         if (coroutine_heap->var_path == NULL) {
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_9);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[2]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2641,14 +2656,14 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_13 = coroutine_heap->var_path;
+        tmp_args_element_value_13 = coroutine_heap->var_path;
         coroutine->m_frame->m_frame.f_lineno = 99;
         {
-            PyObject *call_args[] = {tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_assign_source_10 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_9, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
+        Py_DECREF(tmp_called_value_9);
         if (tmp_assign_source_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2663,12 +2678,12 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
         coroutine_heap->var_merged_slashes = tmp_assign_source_10;
     }
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_18;
         PyObject *tmp_call_result_6;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_2;
         if (coroutine_heap->var_paths_to_check == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[40]);
@@ -2681,9 +2696,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_15 = coroutine_heap->var_paths_to_check;
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[32]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_18 = coroutine_heap->var_paths_to_check;
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[32]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2694,23 +2709,23 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_merged_slashes);
-        tmp_expression_name_16 = coroutine_heap->var_merged_slashes;
-        tmp_subscript_name_2 = mod_consts[42];
-        tmp_args_element_name_14 = LOOKUP_SUBSCRIPT(tmp_expression_name_16, tmp_subscript_name_2);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_expression_value_19 = coroutine_heap->var_merged_slashes;
+        tmp_subscript_value_2 = mod_consts[42];
+        tmp_args_element_value_14 = LOOKUP_SUBSCRIPT(tmp_expression_value_19, tmp_subscript_value_2);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_10);
 
             coroutine_heap->exception_lineno = 100;
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 100;
-        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_14);
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_14);
+        tmp_call_result_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_10, tmp_args_element_value_14);
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_14);
         if (tmp_call_result_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2796,17 +2811,17 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     }
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_instance_5;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        tmp_called_instance_5 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
+        PyObject *tmp_called_instance_2;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        tmp_called_instance_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_called_instance_5 == NULL)) {
-            tmp_called_instance_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_called_instance_2 == NULL)) {
+            tmp_called_instance_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_called_instance_5 == NULL) {
+        if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2816,15 +2831,15 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_15 = mod_consts[43];
-        tmp_args_element_name_16 = mod_consts[36];
+        tmp_args_element_value_15 = mod_consts[43];
+        tmp_args_element_value_16 = mod_consts[36];
         CHECK_OBJECT(coroutine_heap->var_path);
-        tmp_args_element_name_17 = coroutine_heap->var_path;
+        tmp_args_element_value_17 = coroutine_heap->var_path;
         coroutine->m_frame->m_frame.f_lineno = 103;
         {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17};
+            PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17};
             tmp_assign_source_14 = CALL_METHOD_WITH_ARGS3(
-                tmp_called_instance_5,
+                tmp_called_instance_2,
                 mod_consts[34],
                 call_args
             );
@@ -2852,19 +2867,19 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     {
         PyObject *tmp_assign_source_15;
         PyObject *tmp_iter_arg_3;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_args_element_name_19;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_args_element_value_19;
         coroutine->m_frame->m_frame.f_lineno = 104;
-        tmp_called_name_8 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[9]);
+        tmp_called_value_11 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[9]);
 
-        if (unlikely(tmp_called_name_8 == NULL)) {
-            tmp_called_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[9]);
+        if (unlikely(tmp_called_value_11 == NULL)) {
+            tmp_called_value_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[9]);
         }
 
-        if (tmp_called_name_8 == NULL) {
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2886,16 +2901,16 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto try_except_handler_5;
         }
 
-        tmp_args_element_name_18 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_args_element_value_18 = Nuitka_Cell_GET(coroutine->m_closure[5]);
         CHECK_OBJECT(coroutine_heap->var_path);
-        tmp_args_element_name_19 = coroutine_heap->var_path;
+        tmp_args_element_value_19 = coroutine_heap->var_path;
         coroutine->m_frame->m_frame.f_lineno = 104;
         {
-            PyObject *call_args[] = {tmp_args_element_name_18, tmp_args_element_name_19};
-            tmp_expression_name_18 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_18, tmp_args_element_value_19};
+            tmp_expression_value_21 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_11, call_args);
         }
 
-        if (tmp_expression_name_18 == NULL) {
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2905,9 +2920,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto try_except_handler_5;
         }
-        tmp_expression_name_17 = ASYNC_AWAIT(tmp_expression_name_18, await_normal);
-        Py_DECREF(tmp_expression_name_18);
-        if (tmp_expression_name_17 == NULL) {
+        tmp_expression_value_20 = ASYNC_AWAIT(tmp_expression_value_21, await_normal);
+        Py_DECREF(tmp_expression_value_21);
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2917,14 +2932,14 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto try_except_handler_5;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_assign_source_15, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_assign_source_15, sizeof(PyObject *), &tmp_expression_value_21, sizeof(PyObject *), &tmp_called_value_11, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_17;
+        coroutine->m_yieldfrom = tmp_expression_value_20;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_assign_source_15, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_assign_source_15, sizeof(PyObject *), &tmp_expression_value_21, sizeof(PyObject *), &tmp_called_value_11, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3168,11 +3183,11 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     branch_yes_8:;
     {
         PyObject *tmp_raise_type_1;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_left_name_4;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_right_name_4;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_left_value_4;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_right_value_4;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[44]);
@@ -3185,11 +3200,11 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto try_except_handler_4;
         }
 
-        tmp_called_name_9 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[5]));
-        tmp_expression_name_19 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_left_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[26]);
-        if (tmp_left_name_4 == NULL) {
+        tmp_expression_value_22 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_left_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[26]);
+        if (tmp_left_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3199,22 +3214,11 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto try_except_handler_4;
         }
-        if (coroutine_heap->var_query == NULL) {
-            Py_DECREF(tmp_left_name_4);
-            FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[45]);
-            coroutine_heap->exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            CHAIN_EXCEPTION(coroutine_heap->exception_value);
-
-            coroutine_heap->exception_lineno = 106;
-            coroutine_heap->type_description_1 = "ccooooocccc";
-            goto try_except_handler_4;
-        }
-
-        tmp_right_name_4 = coroutine_heap->var_query;
-        tmp_args_element_name_20 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_name_4, tmp_right_name_4);
-        Py_DECREF(tmp_left_name_4);
-        if (tmp_args_element_name_20 == NULL) {
+        CHECK_OBJECT(coroutine_heap->var_query);
+        tmp_right_value_4 = coroutine_heap->var_query;
+        tmp_args_element_value_20 = BINARY_OPERATION_ADD_OBJECT_OBJECT_OBJECT(tmp_left_value_4, tmp_right_value_4);
+        Py_DECREF(tmp_left_value_4);
+        if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3225,8 +3229,8 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto try_except_handler_4;
         }
         coroutine->m_frame->m_frame.f_lineno = 106;
-        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_20);
-        Py_DECREF(tmp_args_element_name_20);
+        tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_12, tmp_args_element_value_20);
+        Py_DECREF(tmp_args_element_value_20);
         if (tmp_raise_type_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3289,10 +3293,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
     coroutine_heap->tmp_for_loop_1__for_iterator = NULL;
     branch_no_1:;
     {
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_args_element_name_21;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_args_element_value_21;
         coroutine->m_frame->m_frame.f_lineno = 108;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -3306,7 +3310,7 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_called_name_10 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_value_13 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -3319,10 +3323,10 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_21 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_args_element_value_21 = Nuitka_Cell_GET(coroutine->m_closure[5]);
         coroutine->m_frame->m_frame.f_lineno = 108;
-        tmp_expression_name_21 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_21);
-        if (tmp_expression_name_21 == NULL) {
+        tmp_expression_value_24 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_13, tmp_args_element_value_21);
+        if (tmp_expression_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3332,9 +3336,9 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_20 = ASYNC_AWAIT(tmp_expression_name_21, await_normal);
-        Py_DECREF(tmp_expression_name_21);
-        if (tmp_expression_name_20 == NULL) {
+        tmp_expression_value_23 = ASYNC_AWAIT(tmp_expression_value_24, await_normal);
+        Py_DECREF(tmp_expression_value_24);
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3344,14 +3348,14 @@ static PyObject *aiohttp$web_middlewares$$$function__3_normalize_path_middleware
             coroutine_heap->type_description_1 = "ccooooocccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_21, sizeof(PyObject *), &tmp_called_name_10, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_24, sizeof(PyObject *), &tmp_called_value_13, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_20;
+        coroutine->m_yieldfrom = tmp_expression_value_23;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_21, sizeof(PyObject *), &tmp_called_name_10, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_24, sizeof(PyObject *), &tmp_called_value_13, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3582,19 +3586,19 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__4__fix_request_current
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_annotations_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
         struct Nuitka_CellObject *tmp_closure_1[1];
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[13]);
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[13]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -3673,11 +3677,11 @@ static PyObject *impl_aiohttp$web_middlewares$$$function__4__fix_request_current
         tmp_closure_1[0] = par_app;
         Py_INCREF(tmp_closure_1[0]);
 
-        tmp_args_element_name_1 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__4__fix_request_current_app$$$function__1_impl(tmp_annotations_1, tmp_closure_1);
+        tmp_args_element_value_1 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__4__fix_request_current_app$$$function__1_impl(tmp_annotations_1, tmp_closure_1);
 
         frame_30ab6132a5cc09efa03f4b437736d4be->m_frame.f_lineno = 114;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_args_element_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_args_element_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3965,10 +3969,10 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     // Tried code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -3981,9 +3985,9 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[22]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[22]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3993,9 +3997,9 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             coroutine_heap->type_description_1 = "ccc";
             goto try_except_handler_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[47]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[46]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4006,7 +4010,7 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[4]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4017,10 +4021,10 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 116;
-        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4036,12 +4040,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__source);
-        tmp_expression_name_3 = coroutine_heap->tmp_with_1__source;
-        tmp_called_name_2 = LOOKUP_SPECIAL(tmp_expression_name_3, mod_consts[48]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_3 = coroutine_heap->tmp_with_1__source;
+        tmp_called_value_2 = LOOKUP_SPECIAL(tmp_expression_value_3, mod_consts[47]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4052,8 +4056,8 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 116;
-        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_name_2);
-        Py_DECREF(tmp_called_name_2);
+        tmp_assign_source_2 = CALL_FUNCTION_NO_ARGS(tmp_called_value_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4069,10 +4073,10 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__source);
-        tmp_expression_name_4 = coroutine_heap->tmp_with_1__source;
-        tmp_assign_source_3 = LOOKUP_SPECIAL(tmp_expression_name_4, mod_consts[49]);
+        tmp_expression_value_4 = coroutine_heap->tmp_with_1__source;
+        tmp_assign_source_3 = LOOKUP_SPECIAL(tmp_expression_value_4, mod_consts[48]);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4094,10 +4098,10 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     // Tried code:
     // Tried code:
     {
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_2;
         coroutine->m_frame->m_frame.f_lineno = 117;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -4111,7 +4115,7 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_3;
         }
 
-        tmp_called_name_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_value_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[0]);
@@ -4124,10 +4128,10 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 117;
-        tmp_expression_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_2);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_3, tmp_args_element_value_2);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4137,9 +4141,9 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             coroutine_heap->type_description_1 = "ccc";
             goto try_except_handler_3;
         }
-        tmp_expression_name_5 = ASYNC_AWAIT(tmp_expression_name_6, await_normal);
-        Py_DECREF(tmp_expression_name_6);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_5 = ASYNC_AWAIT(tmp_expression_value_6, await_normal);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4149,14 +4153,14 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             coroutine_heap->type_description_1 = "ccc";
             goto try_except_handler_3;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_6, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_6, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_5;
+        coroutine->m_yieldfrom = tmp_expression_value_5;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_6, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_6, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -4210,11 +4214,11 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     // Tried code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_BaseException;
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_BaseException;
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(coroutine_heap->tmp_res == -1));
         tmp_condition_result_1 = (coroutine_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_1 != false) {
@@ -4230,24 +4234,24 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
         coroutine_heap->tmp_with_1__indicator = tmp_assign_source_5;
     }
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__exit);
-        tmp_called_name_4 = coroutine_heap->tmp_with_1__exit;
-        tmp_args_element_name_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_args_element_name_4 = EXC_VALUE(PyThreadState_GET());
-        tmp_args_element_name_5 = EXC_TRACEBACK(PyThreadState_GET());
+        tmp_called_value_4 = coroutine_heap->tmp_with_1__exit;
+        tmp_args_element_value_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_args_element_value_4 = EXC_VALUE(PyThreadState_GET());
+        tmp_args_element_value_5 = EXC_TRACEBACK(PyThreadState_GET());
         coroutine->m_frame->m_frame.f_lineno = 117;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_operand_name_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_operand_value_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_4, call_args);
         }
 
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4257,8 +4261,8 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             coroutine_heap->type_description_1 = "ccc";
             goto try_except_handler_4;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -4269,8 +4273,8 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
             coroutine_heap->type_description_1 = "ccc";
             goto try_except_handler_4;
         }
-        tmp_condition_result_2 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -4334,12 +4338,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     try_return_handler_2:;
     {
         bool tmp_condition_result_3;
-        nuitka_bool tmp_compexpr_left_2;
-        nuitka_bool tmp_compexpr_right_2;
+        nuitka_bool tmp_cmp_expr_left_2;
+        nuitka_bool tmp_cmp_expr_right_2;
         assert(coroutine_heap->tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_2 = coroutine_heap->tmp_with_1__indicator;
-        tmp_compexpr_right_2 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_3 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = coroutine_heap->tmp_with_1__indicator;
+        tmp_cmp_expr_right_2 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -4348,12 +4352,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     }
     branch_yes_3:;
     {
-        PyObject *tmp_called_name_5;
+        PyObject *tmp_called_value_5;
         PyObject *tmp_call_result_1;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__exit);
-        tmp_called_name_5 = coroutine_heap->tmp_with_1__exit;
+        tmp_called_value_5 = coroutine_heap->tmp_with_1__exit;
         coroutine->m_frame->m_frame.f_lineno = 117;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_name_5, mod_consts[50]);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_5, mod_consts[49]);
 
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4382,12 +4386,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
 
     {
         bool tmp_condition_result_4;
-        nuitka_bool tmp_compexpr_left_3;
-        nuitka_bool tmp_compexpr_right_3;
+        nuitka_bool tmp_cmp_expr_left_3;
+        nuitka_bool tmp_cmp_expr_right_3;
         assert(coroutine_heap->tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_3 = coroutine_heap->tmp_with_1__indicator;
-        tmp_compexpr_right_3 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_4 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = coroutine_heap->tmp_with_1__indicator;
+        tmp_cmp_expr_right_3 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_4 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_4 != false) {
             goto branch_yes_4;
         } else {
@@ -4396,12 +4400,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     }
     branch_yes_4:;
     {
-        PyObject *tmp_called_name_6;
+        PyObject *tmp_called_value_6;
         PyObject *tmp_call_result_2;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__exit);
-        tmp_called_name_6 = coroutine_heap->tmp_with_1__exit;
+        tmp_called_value_6 = coroutine_heap->tmp_with_1__exit;
         coroutine->m_frame->m_frame.f_lineno = 117;
-        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_name_6, mod_consts[50]);
+        tmp_call_result_2 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_6, mod_consts[49]);
 
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4430,12 +4434,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     try_end_3:;
     {
         bool tmp_condition_result_5;
-        nuitka_bool tmp_compexpr_left_4;
-        nuitka_bool tmp_compexpr_right_4;
+        nuitka_bool tmp_cmp_expr_left_4;
+        nuitka_bool tmp_cmp_expr_right_4;
         assert(coroutine_heap->tmp_with_1__indicator != NUITKA_BOOL_UNASSIGNED);
-        tmp_compexpr_left_4 = coroutine_heap->tmp_with_1__indicator;
-        tmp_compexpr_right_4 = NUITKA_BOOL_TRUE;
-        tmp_condition_result_5 = (tmp_compexpr_left_4 == tmp_compexpr_right_4) ? true : false;
+        tmp_cmp_expr_left_4 = coroutine_heap->tmp_with_1__indicator;
+        tmp_cmp_expr_right_4 = NUITKA_BOOL_TRUE;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_4 == tmp_cmp_expr_right_4) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -4444,12 +4448,12 @@ static PyObject *aiohttp$web_middlewares$$$function__4__fix_request_current_app$
     }
     branch_yes_5:;
     {
-        PyObject *tmp_called_name_7;
+        PyObject *tmp_called_value_7;
         PyObject *tmp_call_result_3;
         CHECK_OBJECT(coroutine_heap->tmp_with_1__exit);
-        tmp_called_name_7 = coroutine_heap->tmp_with_1__exit;
+        tmp_called_value_7 = coroutine_heap->tmp_with_1__exit;
         coroutine->m_frame->m_frame.f_lineno = 117;
-        tmp_call_result_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_name_7, mod_consts[50]);
+        tmp_call_result_3 = CALL_FUNCTION_WITH_POSARGS3(tmp_called_value_7, mod_consts[49]);
 
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4603,7 +4607,7 @@ static PyObject *MAKE_COROUTINE_aiohttp$web_middlewares$$$function__4__fix_reque
         aiohttp$web_middlewares$$$function__4__fix_request_current_app$$$function__1_impl$$$coroutine__1_impl_context,
         module_aiohttp$web_middlewares,
         mod_consts[19],
-        mod_consts[46],
+        mod_consts[45],
         codeobj_48dcaefa16e682e84def96041c67e663,
         closure,
         3,
@@ -4666,7 +4670,7 @@ static PyObject *MAKE_FUNCTION_aiohttp$web_middlewares$$$function__2_middleware(
 static PyObject *MAKE_FUNCTION_aiohttp$web_middlewares$$$function__3_normalize_path_middleware(PyObject *kw_defaults, PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_aiohttp$web_middlewares$$$function__3_normalize_path_middleware,
-        mod_consts[87],
+        mod_consts[84],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4716,7 +4720,7 @@ static PyObject *MAKE_FUNCTION_aiohttp$web_middlewares$$$function__3_normalize_p
 static PyObject *MAKE_FUNCTION_aiohttp$web_middlewares$$$function__4__fix_request_current_app(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_aiohttp$web_middlewares$$$function__4__fix_request_current_app,
-        mod_consts[88],
+        mod_consts[85],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -4743,7 +4747,7 @@ static PyObject *MAKE_FUNCTION_aiohttp$web_middlewares$$$function__4__fix_reques
         impl_aiohttp$web_middlewares$$$function__4__fix_request_current_app$$$function__1_impl,
         mod_consts[19],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[46],
+        mod_consts[45],
 #endif
         codeobj_48dcaefa16e682e84def96041c67e663,
         NULL,
@@ -4935,63 +4939,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("aiohttp.web_middlewares");
+
+    // Store the module for future use.
     module_aiohttp$web_middlewares = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("aiohttp.web_middlewares: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("aiohttp.web_middlewares: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("aiohttp.web_middlewares: Calling createModuleConstants().\n");
+        PRINT_STRING("aiohttp.web_middlewares: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("aiohttp.web_middlewares: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("aiohttp.web_middlewares: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initaiohttp$web_middlewares\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_aiohttp$web_middlewares = MODULE_DICT(module_aiohttp$web_middlewares);
 
@@ -5012,7 +5020,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         UPDATE_STRING_DICT0(
             moduledict_aiohttp$web_middlewares,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[30]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)const_str_plain___name__);
@@ -5062,7 +5070,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -5131,12 +5139,12 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_1;
         tmp_assign_source_1 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_1);
+        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[50], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[51], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_19fcfe894e5f75b87c05866d687790d9 = MAKE_MODULE_FRAME(codeobj_19fcfe894e5f75b87c05866d687790d9, module_aiohttp$web_middlewares);
@@ -5151,14 +5159,14 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[53]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[52]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[54], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[53], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5174,14 +5182,14 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[53]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[52]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[53]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[52]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[55], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[54], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -5196,22 +5204,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[56], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[55], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[33];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[57];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[33];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[56];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 1;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5226,74 +5234,32 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[58];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[59];
-        tmp_level_name_2 = mod_consts[57];
-        frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 2;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
-        if (tmp_assign_source_5 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 2;
-
-            goto frame_exception_exit_1;
-        }
+        tmp_assign_source_5 = IMPORT_HARD_TYPING();
+        assert(!(tmp_assign_source_5 == NULL));
         assert(tmp_import_from_1__module == NULL);
+        Py_INCREF(tmp_assign_source_5);
         tmp_import_from_1__module = tmp_assign_source_5;
+    }
+    {
+        PyObject *tmp_assign_source_6;
+        tmp_assign_source_6 = Py_False;
+        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[57], tmp_assign_source_6);
     }
     // Tried code:
     {
-        PyObject *tmp_assign_source_6;
+        PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_1;
         CHECK_OBJECT(tmp_import_from_1__module);
         tmp_import_name_from_1 = tmp_import_from_1__module;
         if (PyModule_Check(tmp_import_name_from_1)) {
-            tmp_assign_source_6 = IMPORT_NAME_OR_MODULE(
+            tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[60],
-                mod_consts[57]
+                mod_consts[58],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_6 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[60]);
-        }
-
-        if (tmp_assign_source_6 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 2;
-
-            goto try_except_handler_1;
-        }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_6);
-    }
-    {
-        PyObject *tmp_assign_source_7;
-        PyObject *tmp_import_name_from_2;
-        CHECK_OBJECT(tmp_import_from_1__module);
-        tmp_import_name_from_2 = tmp_import_from_1__module;
-        if (PyModule_Check(tmp_import_name_from_2)) {
-            tmp_assign_source_7 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_2,
-                (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[61],
-                mod_consts[57]
-            );
-        } else {
-            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[61]);
+            tmp_assign_source_7 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[58]);
         }
 
         if (tmp_assign_source_7 == NULL) {
@@ -5306,22 +5272,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[58], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_import_name_from_3;
+        PyObject *tmp_import_name_from_2;
         CHECK_OBJECT(tmp_import_from_1__module);
-        tmp_import_name_from_3 = tmp_import_from_1__module;
-        if (PyModule_Check(tmp_import_name_from_3)) {
+        tmp_import_name_from_2 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_2)) {
             tmp_assign_source_8 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_3,
+                tmp_import_name_from_2,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[62],
-                mod_consts[57]
+                mod_consts[59],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[62]);
+            tmp_assign_source_8 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[59]);
         }
 
         if (tmp_assign_source_8 == NULL) {
@@ -5334,22 +5300,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[62], tmp_assign_source_8);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[59], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
-        PyObject *tmp_import_name_from_4;
+        PyObject *tmp_import_name_from_3;
         CHECK_OBJECT(tmp_import_from_1__module);
-        tmp_import_name_from_4 = tmp_import_from_1__module;
-        if (PyModule_Check(tmp_import_name_from_4)) {
+        tmp_import_name_from_3 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_3)) {
             tmp_assign_source_9 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_4,
+                tmp_import_name_from_3,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[63],
-                mod_consts[57]
+                mod_consts[60],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[63]);
+            tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[60]);
         }
 
         if (tmp_assign_source_9 == NULL) {
@@ -5362,22 +5328,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[63], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[60], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
-        PyObject *tmp_import_name_from_5;
+        PyObject *tmp_import_name_from_4;
         CHECK_OBJECT(tmp_import_from_1__module);
-        tmp_import_name_from_5 = tmp_import_from_1__module;
-        if (PyModule_Check(tmp_import_name_from_5)) {
+        tmp_import_name_from_4 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_4)) {
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_5,
+                tmp_import_name_from_4,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[64],
-                mod_consts[57]
+                mod_consts[61],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[64]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[61]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -5390,22 +5356,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[64], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[61], tmp_assign_source_10);
     }
     {
         PyObject *tmp_assign_source_11;
-        PyObject *tmp_import_name_from_6;
+        PyObject *tmp_import_name_from_5;
         CHECK_OBJECT(tmp_import_from_1__module);
-        tmp_import_name_from_6 = tmp_import_from_1__module;
-        if (PyModule_Check(tmp_import_name_from_6)) {
+        tmp_import_name_from_5 = tmp_import_from_1__module;
+        if (PyModule_Check(tmp_import_name_from_5)) {
             tmp_assign_source_11 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_6,
+                tmp_import_name_from_5,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[65],
-                mod_consts[57]
+                mod_consts[62],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[65]);
+            tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[62]);
         }
 
         if (tmp_assign_source_11 == NULL) {
@@ -5418,7 +5384,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[65], tmp_assign_source_11);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[62], tmp_assign_source_11);
     }
     goto try_end_1;
     // Exception handler code:
@@ -5449,20 +5415,20 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     tmp_import_from_1__module = NULL;
     {
         PyObject *tmp_assign_source_12;
-        PyObject *tmp_import_name_from_7;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[66];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[67];
-        tmp_level_name_3 = mod_consts[10];
+        PyObject *tmp_import_name_from_6;
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[63];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = mod_consts[64];
+        tmp_level_value_2 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 4;
-        tmp_import_name_from_7 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
-        if (tmp_import_name_from_7 == NULL) {
+        tmp_import_name_from_6 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
+        if (tmp_import_name_from_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5472,18 +5438,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_7)) {
+        if (PyModule_Check(tmp_import_name_from_6)) {
             tmp_assign_source_12 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_7,
+                tmp_import_name_from_6,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
                 mod_consts[16],
-                mod_consts[57]
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[16]);
+            tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[16]);
         }
 
-        Py_DECREF(tmp_import_name_from_7);
+        Py_DECREF(tmp_import_name_from_6);
         if (tmp_assign_source_12 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5498,18 +5464,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[68];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[69];
-        tmp_level_name_4 = mod_consts[10];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[65];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[66];
+        tmp_level_value_3 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 5;
-        tmp_assign_source_13 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_assign_source_13 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5526,18 +5492,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     // Tried code:
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_import_name_from_8;
+        PyObject *tmp_import_name_from_7;
         CHECK_OBJECT(tmp_import_from_2__module);
-        tmp_import_name_from_8 = tmp_import_from_2__module;
-        if (PyModule_Check(tmp_import_name_from_8)) {
+        tmp_import_name_from_7 = tmp_import_from_2__module;
+        if (PyModule_Check(tmp_import_name_from_7)) {
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_8,
+                tmp_import_name_from_7,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[70],
-                mod_consts[57]
+                mod_consts[67],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[70]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[67]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -5550,22 +5516,22 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[70], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[67], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
-        PyObject *tmp_import_name_from_9;
+        PyObject *tmp_import_name_from_8;
         CHECK_OBJECT(tmp_import_from_2__module);
-        tmp_import_name_from_9 = tmp_import_from_2__module;
-        if (PyModule_Check(tmp_import_name_from_9)) {
+        tmp_import_name_from_8 = tmp_import_from_2__module;
+        if (PyModule_Check(tmp_import_name_from_8)) {
             tmp_assign_source_15 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_9,
+                tmp_import_name_from_8,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[71],
-                mod_consts[57]
+                mod_consts[68],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[71]);
+            tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[68]);
         }
 
         if (tmp_assign_source_15 == NULL) {
@@ -5578,7 +5544,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[71], tmp_assign_source_15);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[68], tmp_assign_source_15);
     }
     goto try_end_2;
     // Exception handler code:
@@ -5609,20 +5575,20 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     tmp_import_from_2__module = NULL;
     {
         PyObject *tmp_assign_source_16;
-        PyObject *tmp_import_name_from_10;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[72];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[73];
-        tmp_level_name_5 = mod_consts[10];
+        PyObject *tmp_import_name_from_9;
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[69];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[70];
+        tmp_level_value_4 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 6;
-        tmp_import_name_from_10 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
-        if (tmp_import_name_from_10 == NULL) {
+        tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
+        if (tmp_import_name_from_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5632,18 +5598,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_10)) {
+        if (PyModule_Check(tmp_import_name_from_9)) {
             tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_10,
+                tmp_import_name_from_9,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
                 mod_consts[14],
-                mod_consts[57]
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[14]);
+            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[14]);
         }
 
-        Py_DECREF(tmp_import_name_from_10);
+        Py_DECREF(tmp_import_name_from_9);
         if (tmp_assign_source_16 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5658,20 +5624,20 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_17;
-        PyObject *tmp_import_name_from_11;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[74];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[75];
-        tmp_level_name_6 = mod_consts[10];
+        PyObject *tmp_import_name_from_10;
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[71];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[72];
+        tmp_level_value_5 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 7;
-        tmp_import_name_from_11 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
-        if (tmp_import_name_from_11 == NULL) {
+        tmp_import_name_from_10 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
+        if (tmp_import_name_from_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5681,18 +5647,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_11)) {
+        if (PyModule_Check(tmp_import_name_from_10)) {
             tmp_assign_source_17 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_11,
+                tmp_import_name_from_10,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
                 mod_consts[18],
-                mod_consts[57]
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[18]);
+            tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_10, mod_consts[18]);
         }
 
-        Py_DECREF(tmp_import_name_from_11);
+        Py_DECREF(tmp_import_name_from_10);
         if (tmp_assign_source_17 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5707,20 +5673,20 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_18;
-        PyObject *tmp_import_name_from_12;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[76];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[77];
-        tmp_level_name_7 = mod_consts[10];
+        PyObject *tmp_import_name_from_11;
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[73];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[74];
+        tmp_level_value_6 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 8;
-        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
-        if (tmp_import_name_from_12 == NULL) {
+        tmp_import_name_from_11 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
+        if (tmp_import_name_from_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5730,18 +5696,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_12)) {
+        if (PyModule_Check(tmp_import_name_from_11)) {
             tmp_assign_source_18 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_12,
+                tmp_import_name_from_11,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
                 mod_consts[24],
-                mod_consts[57]
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[24]);
+            tmp_assign_source_18 = IMPORT_NAME(tmp_import_name_from_11, mod_consts[24]);
         }
 
-        Py_DECREF(tmp_import_name_from_12);
+        Py_DECREF(tmp_import_name_from_11);
         if (tmp_assign_source_18 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5756,17 +5722,17 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_19;
-        tmp_assign_source_19 = mod_consts[78];
-        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_19);
+        tmp_assign_source_19 = mod_consts[75];
+        UPDATE_STRING_DICT0(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[76], tmp_assign_source_19);
     }
     {
         nuitka_bool tmp_condition_result_1;
         PyObject *tmp_mvar_value_1;
         int tmp_truth_name_1;
-        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[60]);
+        tmp_mvar_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[57]);
 
         if (unlikely(tmp_mvar_value_1 == NULL)) {
-            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
+            tmp_mvar_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[57]);
         }
 
         if (tmp_mvar_value_1 == NULL) {
@@ -5800,20 +5766,20 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_20;
-        PyObject *tmp_import_name_from_13;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[80];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_aiohttp$web_middlewares;
-        tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[81];
-        tmp_level_name_8 = mod_consts[10];
+        PyObject *tmp_import_name_from_12;
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[77];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_aiohttp$web_middlewares;
+        tmp_locals_arg_value_7 = Py_None;
+        tmp_fromlist_value_7 = mod_consts[78];
+        tmp_level_value_7 = mod_consts[10];
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 16;
-        tmp_import_name_from_13 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
-        if (tmp_import_name_from_13 == NULL) {
+        tmp_import_name_from_12 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
+        if (tmp_import_name_from_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5823,18 +5789,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        if (PyModule_Check(tmp_import_name_from_13)) {
+        if (PyModule_Check(tmp_import_name_from_12)) {
             tmp_assign_source_20 = IMPORT_NAME_OR_MODULE(
-                tmp_import_name_from_13,
+                tmp_import_name_from_12,
                 (PyObject *)moduledict_aiohttp$web_middlewares,
-                mod_consts[82],
-                mod_consts[57]
+                mod_consts[79],
+                mod_consts[56]
             );
         } else {
-            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_13, mod_consts[82]);
+            tmp_assign_source_20 = IMPORT_NAME(tmp_import_name_from_12, mod_consts[79]);
         }
 
-        Py_DECREF(tmp_import_name_from_13);
+        Py_DECREF(tmp_import_name_from_12);
         if (tmp_assign_source_20 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5845,19 +5811,19 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[82], tmp_assign_source_20);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[79], tmp_assign_source_20);
     }
     branch_no_1:;
     {
         PyObject *tmp_assign_source_21;
-        PyObject *tmp_called_name_1;
-        tmp_called_name_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[65]);
+        PyObject *tmp_called_value_1;
+        tmp_called_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[62]);
 
-        if (unlikely(tmp_called_name_1 == NULL)) {
-            tmp_called_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[65]);
+        if (unlikely(tmp_called_value_1 == NULL)) {
+            tmp_called_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[62]);
         }
 
-        if (tmp_called_name_1 == NULL) {
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5868,7 +5834,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
             goto frame_exception_exit_1;
         }
         frame_19fcfe894e5f75b87c05866d687790d9->m_frame.f_lineno = 18;
-        tmp_assign_source_21 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_name_1, mod_consts[83]);
+        tmp_assign_source_21 = CALL_FUNCTION_WITH_POSARGS1(tmp_called_value_1, mod_consts[80]);
 
         if (tmp_assign_source_21 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5880,7 +5846,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
@@ -5906,8 +5872,8 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         }
         tmp_annotations_1 = _PyDict_NewPresized( 3 );
         {
-            PyObject *tmp_expression_name_1;
-            PyObject *tmp_subscript_name_1;
+            PyObject *tmp_expression_value_1;
+            PyObject *tmp_subscript_value_1;
             PyObject *tmp_tuple_element_1;
             tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
@@ -5916,13 +5882,13 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
             tmp_res = PyDict_SetItem(tmp_annotations_1, tmp_dict_key_1, tmp_dict_value_1);
             assert(!(tmp_res != 0));
             tmp_dict_key_1 = mod_consts[17];
-            tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[63]);
+            tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[60]);
 
-            if (unlikely(tmp_expression_name_1 == NULL)) {
-                tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[63]);
+            if (unlikely(tmp_expression_value_1 == NULL)) {
+                tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[60]);
             }
 
-            if (tmp_expression_name_1 == NULL) {
+            if (tmp_expression_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5933,8 +5899,8 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
                 goto dict_build_exception_1;
             }
             tmp_tuple_element_1 = (PyObject *)&PyBool_Type;
-            tmp_subscript_name_1 = PyTuple_New(2);
-            PyTuple_SET_ITEM0(tmp_subscript_name_1, 0, tmp_tuple_element_1);
+            tmp_subscript_value_1 = PyTuple_New(2);
+            PyTuple_SET_ITEM0(tmp_subscript_value_1, 0, tmp_tuple_element_1);
             tmp_tuple_element_1 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[14]);
 
             if (unlikely(tmp_tuple_element_1 == NULL)) {
@@ -5951,16 +5917,16 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM0(tmp_subscript_name_1, 1, tmp_tuple_element_1);
+            PyTuple_SET_ITEM0(tmp_subscript_value_1, 1, tmp_tuple_element_1);
             goto tuple_build_noexception_1;
             // Exception handling pass through code for tuple_build:
             tuple_build_exception_1:;
-            Py_DECREF(tmp_subscript_name_1);
+            Py_DECREF(tmp_subscript_value_1);
             goto dict_build_exception_1;
             // Finished with no exception for tuple_build:
             tuple_build_noexception_1:;
-            tmp_dict_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_1, tmp_subscript_name_1);
-            Py_DECREF(tmp_subscript_name_1);
+            tmp_dict_value_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_1, tmp_subscript_value_1);
+            Py_DECREF(tmp_subscript_value_1);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5993,11 +5959,11 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         PyObject *tmp_annotations_2;
         PyObject *tmp_dict_key_2;
         PyObject *tmp_dict_value_2;
-        tmp_dict_key_2 = mod_consts[85];
-        tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[84]);
+        tmp_dict_key_2 = mod_consts[82];
+        tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[81]);
 
         if (unlikely(tmp_dict_value_2 == NULL)) {
-            tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[84]);
+            tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
         }
 
         if (tmp_dict_value_2 == NULL) {
@@ -6014,10 +5980,10 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         tmp_res = PyDict_SetItem(tmp_annotations_2, tmp_dict_key_2, tmp_dict_value_2);
         assert(!(tmp_res != 0));
         tmp_dict_key_2 = mod_consts[17];
-        tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[84]);
+        tmp_dict_value_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[81]);
 
         if (unlikely(tmp_dict_value_2 == NULL)) {
-            tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[84]);
+            tmp_dict_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
         }
 
         if (tmp_dict_value_2 == NULL) {
@@ -6047,17 +6013,17 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_24;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_2;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_list_element_1;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[62]);
+        tmp_expression_value_2 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[59]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[62]);
+        if (unlikely(tmp_expression_value_2 == NULL)) {
+            tmp_expression_value_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[59]);
         }
 
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6109,18 +6075,18 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         goto frame_exception_exit_1;
         // Finished with no exception for list_build:
         list_build_noexception_1:;
-        tmp_subscript_name_2 = PyTuple_New(2);
+        tmp_subscript_value_2 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_subscript_name_3;
-            PyTuple_SET_ITEM(tmp_subscript_name_2, 0, tmp_tuple_element_2);
-            tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[61]);
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_subscript_value_3;
+            PyTuple_SET_ITEM(tmp_subscript_value_2, 0, tmp_tuple_element_2);
+            tmp_expression_value_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[58]);
 
-            if (unlikely(tmp_expression_name_3 == NULL)) {
-                tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
+            if (unlikely(tmp_expression_value_3 == NULL)) {
+                tmp_expression_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[58]);
             }
 
-            if (tmp_expression_name_3 == NULL) {
+            if (tmp_expression_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6130,13 +6096,13 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto tuple_build_exception_2;
             }
-            tmp_subscript_name_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[18]);
+            tmp_subscript_value_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[18]);
 
-            if (unlikely(tmp_subscript_name_3 == NULL)) {
-                tmp_subscript_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
+            if (unlikely(tmp_subscript_value_3 == NULL)) {
+                tmp_subscript_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[18]);
             }
 
-            if (tmp_subscript_name_3 == NULL) {
+            if (tmp_subscript_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6146,7 +6112,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto tuple_build_exception_2;
             }
-            tmp_tuple_element_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_3, tmp_subscript_name_3);
+            tmp_tuple_element_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_3, tmp_subscript_value_3);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6157,17 +6123,17 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto tuple_build_exception_2;
             }
-            PyTuple_SET_ITEM(tmp_subscript_name_2, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_subscript_value_2, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_2;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_2:;
-        Py_DECREF(tmp_subscript_name_2);
+        Py_DECREF(tmp_subscript_value_2);
         goto frame_exception_exit_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_2:;
-        tmp_assign_source_24 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_2);
-        Py_DECREF(tmp_subscript_name_2);
+        tmp_assign_source_24 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_2);
+        Py_DECREF(tmp_subscript_value_2);
         if (tmp_assign_source_24 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6178,7 +6144,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_24);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[83], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
@@ -6202,10 +6168,10 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         tmp_res = PyDict_SetItem(tmp_kw_defaults_1, tmp_dict_key_3, tmp_dict_value_3);
         assert(!(tmp_res != 0));
         tmp_dict_key_3 = mod_consts[44];
-        tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[70]);
+        tmp_dict_value_3 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[67]);
 
         if (unlikely(tmp_dict_value_3 == NULL)) {
-            tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[70]);
+            tmp_dict_value_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[67]);
         }
 
         if (tmp_dict_value_3 == NULL) {
@@ -6231,8 +6197,8 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         tmp_dict_value_4 = (PyObject *)&PyBool_Type;
         tmp_annotations_3 = _PyDict_NewPresized( 5 );
         {
-            PyObject *tmp_expression_name_4;
-            PyObject *tmp_subscript_name_4;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_subscript_value_4;
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_4, tmp_dict_value_4);
             assert(!(tmp_res != 0));
             tmp_dict_key_4 = mod_consts[41];
@@ -6244,13 +6210,13 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
             tmp_res = PyDict_SetItem(tmp_annotations_3, tmp_dict_key_4, tmp_dict_value_4);
             assert(!(tmp_res != 0));
             tmp_dict_key_4 = mod_consts[44];
-            tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[64]);
+            tmp_expression_value_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[61]);
 
-            if (unlikely(tmp_expression_name_4 == NULL)) {
-                tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[64]);
+            if (unlikely(tmp_expression_value_4 == NULL)) {
+                tmp_expression_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[61]);
             }
 
-            if (tmp_expression_name_4 == NULL) {
+            if (tmp_expression_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6260,13 +6226,13 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto dict_build_exception_4;
             }
-            tmp_subscript_name_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[71]);
+            tmp_subscript_value_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[68]);
 
-            if (unlikely(tmp_subscript_name_4 == NULL)) {
-                tmp_subscript_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[71]);
+            if (unlikely(tmp_subscript_value_4 == NULL)) {
+                tmp_subscript_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[68]);
             }
 
-            if (tmp_subscript_name_4 == NULL) {
+            if (tmp_subscript_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -6276,7 +6242,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
                 goto dict_build_exception_4;
             }
-            tmp_dict_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_4);
+            tmp_dict_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_4);
             if (tmp_dict_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -6291,10 +6257,10 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
             Py_DECREF(tmp_dict_value_4);
             assert(!(tmp_res != 0));
             tmp_dict_key_4 = mod_consts[17];
-            tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[86]);
+            tmp_dict_value_4 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[83]);
 
             if (unlikely(tmp_dict_value_4 == NULL)) {
-                tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
+                tmp_dict_value_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
             }
 
             if (tmp_dict_value_4 == NULL) {
@@ -6322,7 +6288,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
         tmp_assign_source_25 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__3_normalize_path_middleware(tmp_kw_defaults_1, tmp_annotations_3);
 
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[87], tmp_assign_source_25);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
@@ -6330,15 +6296,15 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
         PyObject *tmp_dict_key_5;
         PyObject *tmp_dict_value_5;
         tmp_dict_key_5 = mod_consts[4];
-        tmp_dict_value_5 = mod_consts[82];
+        tmp_dict_value_5 = mod_consts[79];
         tmp_annotations_4 = _PyDict_NewPresized( 2 );
         tmp_res = PyDict_SetItem(tmp_annotations_4, tmp_dict_key_5, tmp_dict_value_5);
         assert(!(tmp_res != 0));
         tmp_dict_key_5 = mod_consts[17];
-        tmp_dict_value_5 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[86]);
+        tmp_dict_value_5 = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[83]);
 
         if (unlikely(tmp_dict_value_5 == NULL)) {
-            tmp_dict_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[86]);
+            tmp_dict_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[83]);
         }
 
         if (tmp_dict_value_5 == NULL) {
@@ -6364,7 +6330,7 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
         tmp_assign_source_26 = MAKE_FUNCTION_aiohttp$web_middlewares$$$function__4__fix_request_current_app(tmp_annotations_4);
 
-        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[88], tmp_assign_source_26);
+        UPDATE_STRING_DICT1(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_26);
     }
 
     // Restore frame exception if necessary.
@@ -6396,8 +6362,23 @@ PyObject *modulecode_aiohttp$web_middlewares(PyObject *module, struct Nuitka_Met
 
     frame_no_exception_1:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("aiohttp.web_middlewares", false);
+
     return module_aiohttp$web_middlewares;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_aiohttp$web_middlewares, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("aiohttp$web_middlewares", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'bidict.metadata'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -33,9 +33,9 @@ PyObject *module_bidict$metadata;
 PyDictObject *moduledict_bidict$metadata;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[35];
+static PyObject *mod_consts[34];
 #ifndef __NUITKA_NO_ASSERT__
-static Py_hash_t mod_consts_hash[35];
+static Py_hash_t mod_consts_hash[34];
 #endif
 
 static PyObject *module_filename_obj = NULL;
@@ -50,15 +50,15 @@ static void createModuleConstants(void) {
         constants_created = true;
 
 #ifndef __NUITKA_NO_ASSERT__
-        for(int i = 0; i < 35; i++) {
+        for(int i = 0; i < 34; i++) {
             mod_consts_hash[i] = DEEP_HASH(mod_consts[i]);
         }
 #endif
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -70,7 +70,7 @@ void checkModuleConstants_bidict$metadata(void) {
     // The module may not have been used at all, then ignore this.
     if (constants_created == false) return;
 
-    for(int i = 0; i < 35; i++) {
+    for(int i = 0; i < 34; i++) {
         assert(mod_consts_hash[i] == DEEP_HASH(mod_consts[i]));
         CHECK_OBJECT_DEEP(mod_consts[i]);
     }
@@ -82,9 +82,9 @@ static PyCodeObject *codeobj_06bfc6ae53dc121eda58b9edae768856;
 static PyCodeObject *codeobj_d0d123fcca2ef725957788c8ef23b86b;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[31]); CHECK_OBJECT(module_filename_obj);
-    codeobj_06bfc6ae53dc121eda58b9edae768856 = MAKE_CODEOBJECT(module_filename_obj, 18, CO_NEWLOCALS | CO_NOFREE, mod_consts[32], mod_consts[33], NULL, 1, 0, 0);
-    codeobj_d0d123fcca2ef725957788c8ef23b86b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[34], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[29]); CHECK_OBJECT(module_filename_obj);
+    codeobj_06bfc6ae53dc121eda58b9edae768856 = MAKE_CODEOBJECT(module_filename_obj, 18, CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[31], NULL, 1, 0, 0);
+    codeobj_d0d123fcca2ef725957788c8ef23b86b = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[32], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -261,63 +261,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("bidict.metadata");
+
+    // Store the module for future use.
     module_bidict$metadata = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("bidict.metadata: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("bidict.metadata: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("bidict.metadata: Calling createModuleConstants().\n");
+        PRINT_STRING("bidict.metadata: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("bidict.metadata: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("bidict.metadata: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initbidict$metadata\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_bidict$metadata = MODULE_DICT(module_bidict$metadata);
 
@@ -338,7 +342,7 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
         UPDATE_STRING_DICT0(
             moduledict_bidict$metadata,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[33]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_bidict$metadata, (Nuitka_StringObject *)const_str_plain___name__);
@@ -388,7 +392,7 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -555,41 +559,12 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
     }
     {
         PyObject *tmp_assign_source_9;
-        // Tried code:
         {
             PyObject *tmp_assign_source_10;
             PyObject *tmp_iter_arg_1;
-            PyObject *tmp_called_instance_1;
-            tmp_called_instance_1 = mod_consts[16];
-            frame_d0d123fcca2ef725957788c8ef23b86b->m_frame.f_lineno = 18;
-            tmp_iter_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(
-                tmp_called_instance_1,
-                mod_consts[17],
-                PyTuple_GET_ITEM(mod_consts[18], 0)
-            );
-
-            if (tmp_iter_arg_1 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 18;
-
-                goto try_except_handler_1;
-            }
-            tmp_assign_source_10 = MAKE_ITERATOR(tmp_iter_arg_1);
-            Py_DECREF(tmp_iter_arg_1);
-            if (tmp_assign_source_10 == NULL) {
-                assert(ERROR_OCCURRED());
-
-                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-                exception_lineno = 18;
-
-                goto try_except_handler_1;
-            }
+            tmp_iter_arg_1 = mod_consts[16];
+            tmp_assign_source_10 = MAKE_ITERATOR_INFALLIBLE(tmp_iter_arg_1);
+            assert(!(tmp_assign_source_10 == NULL));
             assert(tmp_listcomp_1__$0 == NULL);
             tmp_listcomp_1__$0 = tmp_assign_source_10;
         }
@@ -599,6 +574,7 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
             assert(tmp_listcomp_1__contraction == NULL);
             tmp_listcomp_1__contraction = tmp_assign_source_11;
         }
+        // Tried code:
         if (isFrameUnusable(cache_frame_06bfc6ae53dc121eda58b9edae768856_2)) {
             Py_XDECREF(cache_frame_06bfc6ae53dc121eda58b9edae768856_2);
 
@@ -669,13 +645,26 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
         {
             PyObject *tmp_append_list_1;
             PyObject *tmp_append_value_1;
-            PyObject *tmp_called_instance_2;
+            PyObject *tmp_called_value_1;
+            PyObject *tmp_expression_value_1;
             CHECK_OBJECT(tmp_listcomp_1__contraction);
             tmp_append_list_1 = tmp_listcomp_1__contraction;
             CHECK_OBJECT(outline_0_var_i);
-            tmp_called_instance_2 = outline_0_var_i;
+            tmp_expression_value_1 = outline_0_var_i;
+            tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[17]);
+            if (tmp_called_value_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 18;
+                type_description_2 = "o";
+                goto try_except_handler_2;
+            }
             frame_06bfc6ae53dc121eda58b9edae768856_2->m_frame.f_lineno = 18;
-            tmp_append_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[19]);
+            tmp_append_value_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_1);
             if (tmp_append_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -854,7 +843,7 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
         exception_lineno = 18;
         goto frame_exception_exit_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_9);
+        UPDATE_STRING_DICT1(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_9);
     }
 
     // Restore frame exception if necessary.
@@ -887,32 +876,47 @@ PyObject *modulecode_bidict$metadata(PyObject *module, struct Nuitka_MetaPathBas
     frame_no_exception_2:;
     {
         PyObject *tmp_assign_source_14;
-        tmp_assign_source_14 = mod_consts[21];
-        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_14);
+        tmp_assign_source_14 = mod_consts[19];
+        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
-        tmp_assign_source_15 = mod_consts[23];
-        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_15);
+        tmp_assign_source_15 = mod_consts[21];
+        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[22], tmp_assign_source_15);
     }
     {
         PyObject *tmp_assign_source_16;
-        tmp_assign_source_16 = mod_consts[25];
-        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[26], tmp_assign_source_16);
+        tmp_assign_source_16 = mod_consts[23];
+        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[24], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
-        tmp_assign_source_17 = mod_consts[27];
-        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_17);
+        tmp_assign_source_17 = mod_consts[25];
+        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[26], tmp_assign_source_17);
     }
     {
         PyObject *tmp_assign_source_18;
-        tmp_assign_source_18 = mod_consts[29];
-        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[30], tmp_assign_source_18);
+        tmp_assign_source_18 = mod_consts[27];
+        UPDATE_STRING_DICT0(moduledict_bidict$metadata, (Nuitka_StringObject *)mod_consts[28], tmp_assign_source_18);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("bidict.metadata", false);
 
     return module_bidict$metadata;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_bidict$metadata, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("bidict$metadata", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

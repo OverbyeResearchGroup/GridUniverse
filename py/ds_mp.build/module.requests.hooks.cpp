@@ -1,5 +1,5 @@
 /* Generated code for Python module 'requests.hooks'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -57,8 +57,8 @@ static void createModuleConstants(void) {
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -84,11 +84,11 @@ static PyCodeObject *codeobj_8b6babb7a28dfedf781188ae17934332;
 static PyCodeObject *codeobj_567ec930daad4b60bbfdd2db529f3a8a;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[16]); CHECK_OBJECT(module_filename_obj);
-    codeobj_d76c786ffe3284eebab74c9492c9e0e3 = MAKE_CODEOBJECT(module_filename_obj, 18, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[17], mod_consts[18], NULL, 1, 0, 0);
-    codeobj_211e5195444bfea6b9c2686018be5282 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[19], NULL, NULL, 0, 0, 0);
-    codeobj_8b6babb7a28dfedf781188ae17934332 = MAKE_CODEOBJECT(module_filename_obj, 17, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[14], NULL, NULL, 0, 0, 0);
-    codeobj_567ec930daad4b60bbfdd2db529f3a8a = MAKE_CODEOBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[15], mod_consts[20], NULL, 3, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[15]); CHECK_OBJECT(module_filename_obj);
+    codeobj_d76c786ffe3284eebab74c9492c9e0e3 = MAKE_CODEOBJECT(module_filename_obj, 18, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[16], mod_consts[17], NULL, 1, 0, 0);
+    codeobj_211e5195444bfea6b9c2686018be5282 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[18], NULL, NULL, 0, 0, 0);
+    codeobj_8b6babb7a28dfedf781188ae17934332 = MAKE_CODEOBJECT(module_filename_obj, 17, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[13], NULL, NULL, 0, 0, 0);
+    codeobj_567ec930daad4b60bbfdd2db529f3a8a = MAKE_CODEOBJECT(module_filename_obj, 23, CO_OPTIMIZED | CO_NEWLOCALS | CO_VARKEYWORDS | CO_NOFREE, mod_consts[14], mod_consts[19], NULL, 3, 0, 0);
 }
 
 // The module function declarations.
@@ -278,7 +278,9 @@ static PyObject *impl_requests$hooks$$$function__1_default_hooks(struct Nuitka_F
         tmp_dictset38_value_1 = PyList_New(0);
         CHECK_OBJECT(tmp_dictcontraction_1__contraction);
         tmp_dictset38_dict_1 = tmp_dictcontraction_1__contraction;
+        assert(PyDict_CheckExact(tmp_dictset38_dict_1));
         tmp_res = PyDict_SetItem(tmp_dictset38_dict_1, tmp_dictset38_key_1, tmp_dictset38_value_1);
+
         Py_DECREF(tmp_dictset38_value_1);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -631,14 +633,27 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_instance_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         CHECK_OBJECT(par_hooks);
-        tmp_called_instance_1 = par_hooks;
+        tmp_expression_value_1 = par_hooks;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[1]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 26;
+            type_description_1 = "oooooo";
+            goto frame_exception_exit_1;
+        }
         CHECK_OBJECT(par_key);
-        tmp_args_element_name_1 = par_key;
+        tmp_args_element_value_1 = par_key;
         frame_567ec930daad4b60bbfdd2db529f3a8a->m_frame.f_lineno = 26;
-        tmp_assign_source_2 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[1], tmp_args_element_name_1);
+        tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -682,12 +697,12 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     branch_yes_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_attribute_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_attribute_value_1;
         CHECK_OBJECT(par_hooks);
-        tmp_expression_name_1 = par_hooks;
-        tmp_attribute_name_1 = mod_consts[2];
-        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_name_1, tmp_attribute_name_1);
+        tmp_expression_value_2 = par_hooks;
+        tmp_attribute_value_1 = mod_consts[2];
+        tmp_res = BUILTIN_HASATTR_BOOL(tmp_expression_value_2, tmp_attribute_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -804,18 +819,7 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
         tmp_tuple_element_1 = par_hook_data;
         tmp_dircall_arg2_1 = PyTuple_New(1);
         PyTuple_SET_ITEM0(tmp_dircall_arg2_1, 0, tmp_tuple_element_1);
-        if (par_kwargs == NULL) {
-            Py_DECREF(tmp_dircall_arg2_1);
-            FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[4]);
-            exception_tb = NULL;
-            NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
-            CHAIN_EXCEPTION(exception_value);
-
-            exception_lineno = 31;
-            type_description_1 = "oooooo";
-            goto try_except_handler_2;
-        }
-
+        CHECK_OBJECT(par_kwargs);
         tmp_dircall_arg3_1 = par_kwargs;
         Py_INCREF(tmp_dircall_arg1_1);
         Py_INCREF(tmp_dircall_arg3_1);
@@ -843,12 +847,12 @@ static PyObject *impl_requests$hooks$$$function__2_dispatch_hook(struct Nuitka_F
     }
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(var__hook_data);
-        tmp_compexpr_left_1 = var__hook_data;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_3 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = var__hook_data;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_3 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_3 != false) {
             goto branch_yes_3;
         } else {
@@ -1065,7 +1069,7 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_requests$hooks$$$function__1_default_hooks() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_requests$hooks$$$function__1_default_hooks,
-        mod_consts[14],
+        mod_consts[13],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -1090,7 +1094,7 @@ static PyObject *MAKE_FUNCTION_requests$hooks$$$function__1_default_hooks() {
 static PyObject *MAKE_FUNCTION_requests$hooks$$$function__2_dispatch_hook() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_requests$hooks$$$function__2_dispatch_hook,
-        mod_consts[15],
+        mod_consts[14],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
@@ -1101,7 +1105,7 @@ static PyObject *MAKE_FUNCTION_requests$hooks$$$function__2_dispatch_hook() {
         NULL,
 #endif
         module_requests$hooks,
-        mod_consts[5],
+        mod_consts[4],
         NULL,
         0
     );
@@ -1280,63 +1284,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("requests.hooks");
+
+    // Store the module for future use.
     module_requests$hooks = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("requests.hooks: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("requests.hooks: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("requests.hooks: Calling createModuleConstants().\n");
+        PRINT_STRING("requests.hooks: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("requests.hooks: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("requests.hooks: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initrequests$hooks\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_requests$hooks = MODULE_DICT(module_requests$hooks);
 
@@ -1357,7 +1365,7 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         UPDATE_STRING_DICT0(
             moduledict_requests$hooks,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[20]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)const_str_plain___name__);
@@ -1407,7 +1415,7 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -1464,13 +1472,13 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
     // Module code.
     {
         PyObject *tmp_assign_source_1;
-        tmp_assign_source_1 = mod_consts[6];
-        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_1);
+        tmp_assign_source_1 = mod_consts[5];
+        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_1);
     }
     {
         PyObject *tmp_assign_source_2;
         tmp_assign_source_2 = module_filename_obj;
-        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[8], tmp_assign_source_2);
+        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_2);
     }
     // Frame without reuse.
     frame_211e5195444bfea6b9c2686018be5282 = MAKE_MODULE_FRAME(codeobj_211e5195444bfea6b9c2686018be5282, module_requests$hooks);
@@ -1485,14 +1493,14 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_1;
         PyObject *tmp_assattr_target_1;
         tmp_assattr_value_1 = module_filename_obj;
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[9]);
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[8]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[9]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[10], tmp_assattr_value_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[9], tmp_assattr_value_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1508,14 +1516,14 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
         PyObject *tmp_assattr_value_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_value_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[9]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[8]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[9]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[11], tmp_assattr_value_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[10], tmp_assattr_value_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -1559,11 +1567,11 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = LIST_COPY(mod_consts[13]);
+        tmp_assign_source_4 = LIST_COPY(mod_consts[12]);
         UPDATE_STRING_DICT1(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[0], tmp_assign_source_4);
     }
     {
@@ -1572,7 +1580,7 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_5 = MAKE_FUNCTION_requests$hooks$$$function__1_default_hooks();
 
-        UPDATE_STRING_DICT1(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
@@ -1580,11 +1588,26 @@ PyObject *modulecode_requests$hooks(PyObject *module, struct Nuitka_MetaPathBase
 
         tmp_assign_source_6 = MAKE_FUNCTION_requests$hooks$$$function__2_dispatch_hook();
 
-        UPDATE_STRING_DICT1(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_requests$hooks, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_6);
     }
+
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("requests.hooks", false);
 
     return module_requests$hooks;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_requests$hooks, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("requests$hooks", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

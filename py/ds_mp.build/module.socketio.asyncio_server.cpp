@@ -1,5 +1,5 @@
 /* Generated code for Python module 'socketio.asyncio_server'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -57,8 +57,8 @@ static void createModuleConstants(void) {
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -390,12 +390,12 @@ static PyObject *impl_socketio$asyncio_server$$$function__1___init__(struct Nuit
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         CHECK_OBJECT(par_client_manager);
-        tmp_compexpr_left_1 = par_client_manager;
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = par_client_manager;
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -445,9 +445,9 @@ static PyObject *impl_socketio$asyncio_server$$$function__1___init__(struct Nuit
     branch_no_1:;
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_type_arg_name_1;
-        PyObject *tmp_object_arg_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_type_arg_value_1;
+        PyObject *tmp_object_arg_value_1;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
@@ -465,11 +465,11 @@ static PyObject *impl_socketio$asyncio_server$$$function__1___init__(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_type_arg_name_1 = Nuitka_Cell_GET(self->m_closure[0]);
+        tmp_type_arg_value_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_self);
-        tmp_object_arg_name_1 = par_self;
-        tmp_expression_name_1 = BUILTIN_SUPER0(tmp_type_arg_name_1, tmp_object_arg_name_1);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_object_arg_value_1 = par_self;
+        tmp_expression_value_1 = BUILTIN_SUPER0(tmp_type_arg_value_1, tmp_object_arg_value_1);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -479,8 +479,8 @@ static PyObject *impl_socketio$asyncio_server$$$function__1___init__(struct Nuit
             type_description_1 = "ooooooc";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[3]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[3]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -710,13 +710,13 @@ static PyObject *impl_socketio$asyncio_server$$$function__3_attach(struct Nuitka
     // Framed code:
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_1 = par_self;
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[8]);
+        tmp_expression_value_1 = par_self;
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[8]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -728,12 +728,12 @@ static PyObject *impl_socketio$asyncio_server$$$function__3_attach(struct Nuitka
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(par_app);
-        tmp_args_element_name_1 = par_app;
+        tmp_args_element_value_1 = par_app;
         CHECK_OBJECT(par_socketio_path);
-        tmp_args_element_name_2 = par_socketio_path;
+        tmp_args_element_value_2 = par_socketio_path;
         frame_c5a92079d3469deab526f7028e79b702->m_frame.f_lineno = 111;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
                 mod_consts[9],
@@ -899,12 +899,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__4_emit(struct Nuitka_F
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_room);
-    Py_DECREF(par_room);
-    par_room = NULL;
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -1137,17 +1131,17 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         int tmp_or_left_truth_3;
         PyObject *tmp_or_left_value_3;
         PyObject *tmp_or_right_value_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_args_element_value_4;
         if (Nuitka_Cell_GET(coroutine->m_closure[6]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -1160,9 +1154,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[6]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[5]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[6]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[5]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1172,9 +1166,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             coroutine_heap->type_description_1 = "ccccccccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1184,9 +1178,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             coroutine_heap->type_description_1 = "ccccccccc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[18];
+        tmp_args_element_value_1 = mod_consts[18];
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[19]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1197,7 +1191,7 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[5]));
         tmp_or_left_value_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
         tmp_or_left_truth_3 = CHECK_IF_TRUE(tmp_or_left_value_3);
@@ -1205,7 +1199,7 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 161;
             coroutine_heap->type_description_1 = "ccccccccc";
@@ -1218,20 +1212,20 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
         }
         or_right_3:;
         tmp_or_right_value_3 = mod_consts[20];
-        tmp_args_element_name_3 = tmp_or_right_value_3;
+        tmp_args_element_value_3 = tmp_or_right_value_3;
         goto or_end_3;
         or_left_3:;
-        tmp_args_element_name_3 = tmp_or_left_value_3;
+        tmp_args_element_value_3 = tmp_or_left_value_3;
         or_end_3:;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[4]));
-        tmp_args_element_name_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_args_element_value_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
         coroutine->m_frame->m_frame.f_lineno = 160;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1245,11 +1239,11 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
@@ -1270,9 +1264,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[6]);
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[21]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[6]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[21]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1282,8 +1276,8 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             coroutine_heap->type_description_1 = "ccccccccc";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[22]);
-        Py_DECREF(tmp_expression_name_5);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[22]);
+        Py_DECREF(tmp_expression_value_5);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1400,9 +1394,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_expression_name_4 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_expression_value_4 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1412,9 +1406,9 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             coroutine_heap->type_description_1 = "ccccccccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1424,14 +1418,14 @@ static PyObject *socketio$asyncio_server$$$function__4_emit$$$coroutine__1_emit_
             coroutine_heap->type_description_1 = "ccccccccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -1720,10 +1714,10 @@ static PyObject *socketio$asyncio_server$$$function__5_send$$$coroutine__1_send_
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_dict_key_1;
@@ -1743,8 +1737,8 @@ static PyObject *socketio$asyncio_server$$$function__5_send$$$coroutine__1_send_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[22]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[22]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1880,9 +1874,9 @@ static PyObject *socketio$asyncio_server$$$function__5_send$$$coroutine__1_send_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_expression_name_2 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_expression_value_2 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1892,9 +1886,9 @@ static PyObject *socketio$asyncio_server$$$function__5_send$$$coroutine__1_send_
             coroutine_heap->type_description_1 = "cccccccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -1904,14 +1898,14 @@ static PyObject *socketio$asyncio_server$$$function__5_send$$$coroutine__1_send_
             coroutine_heap->type_description_1 = "cccccccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2227,10 +2221,10 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         int tmp_and_left_truth_1;
         bool tmp_and_left_value_1;
         bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[7]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[14]);
@@ -2243,9 +2237,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[7]);
-        tmp_compexpr_right_1 = Py_None;
-        tmp_and_left_value_1 = (tmp_compexpr_left_1 == tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[7]);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_and_left_value_1 = (tmp_cmp_expr_left_1 == tmp_cmp_expr_right_1) ? true : false;
         tmp_and_left_truth_1 = tmp_and_left_value_1 != false ? 1 : 0;
         if (tmp_and_left_truth_1 == 1) {
             goto and_right_1;
@@ -2265,9 +2259,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_2 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_compexpr_right_2 = Py_None;
-        tmp_and_right_value_1 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_and_right_value_1 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         tmp_condition_result_1 = tmp_and_right_value_1;
         goto and_end_1;
         and_left_1:;
@@ -2295,9 +2289,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
     }
     branch_no_1:;
     {
-        nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_2;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -2310,9 +2304,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[7]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[7]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2322,8 +2316,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2334,8 +2328,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_2 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_2 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_2 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
             goto branch_no_2;
@@ -2359,7 +2353,7 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -2372,8 +2366,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2423,10 +2417,10 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         coroutine_heap->var_event_callback = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
@@ -2447,8 +2441,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[22]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[22]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2597,9 +2591,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1, tmp_dircall_arg4_1};
-            tmp_expression_name_4 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
+            tmp_expression_value_4 = impl___main__$$$function__11_complex_call_helper_pos_keywords_star_dict(dir_call_args);
         }
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2609,9 +2603,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2621,14 +2615,14 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_dircall_arg4_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2656,22 +2650,22 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
     }
     // Tried code:
     {
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_1;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_await_result_2;
         coroutine->m_frame->m_frame.f_lineno = 265;
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2681,8 +2675,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[40]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[40]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2695,20 +2689,20 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine_heap->var_callback_event));
         tmp_called_instance_2 = Nuitka_Cell_GET(coroutine_heap->var_callback_event);
         coroutine->m_frame->m_frame.f_lineno = 265;
-        tmp_args_element_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[41]);
-        if (tmp_args_element_name_1 == NULL) {
+        tmp_args_element_value_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[41]);
+        if (tmp_args_element_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 265;
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[6]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_args_element_name_1);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_args_element_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[42]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2719,16 +2713,16 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[6]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[6]);
         coroutine->m_frame->m_frame.f_lineno = 265;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_1);
-        if (tmp_expression_name_7 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_1);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2738,9 +2732,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_2;
         }
-        tmp_expression_name_6 = ASYNC_AWAIT(tmp_expression_name_7, await_normal);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = ASYNC_AWAIT(tmp_expression_value_7, await_normal);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2750,14 +2744,14 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_6;
+        coroutine->m_yieldfrom = tmp_expression_value_6;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -2810,17 +2804,17 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_9;
-        tmp_compexpr_left_3 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_9;
+        tmp_cmp_expr_left_3 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_expression_name_9 == NULL)) {
-            tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_expression_name_9 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2830,8 +2824,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[43]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[43]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2841,8 +2835,8 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto try_except_handler_3;
         }
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -2941,29 +2935,27 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
     try_end_1:;
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
         PyObject *tmp_len_arg_1;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_tmp_condition_result_4_object_1;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_subscript_value_2;
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
         PyObject *tmp_len_arg_2;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_tmp_condition_result_5_object_1;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_4;
-        PyObject *tmp_subscript_name_5;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_4;
+        PyObject *tmp_subscript_value_5;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine_heap->var_callback_args));
-        tmp_expression_name_10 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
-        tmp_subscript_name_1 = mod_consts[45];
-        tmp_len_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_10, tmp_subscript_name_1, 0);
+        tmp_expression_value_10 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_len_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_10, tmp_subscript_value_1, 0);
         if (tmp_len_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -2974,9 +2966,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_4 = BUILTIN_LEN(tmp_len_arg_1);
+        tmp_cmp_expr_left_4 = BUILTIN_LEN(tmp_len_arg_1);
         Py_DECREF(tmp_len_arg_1);
-        if (tmp_compexpr_left_4 == NULL) {
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -2986,12 +2978,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = mod_consts[46];
-        tmp_tmp_condition_result_4_object_1 = RICH_COMPARE_GT_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        assert(!(tmp_tmp_condition_result_4_object_1 == NULL));
-        tmp_condition_result_4 = CHECK_IF_TRUE(tmp_tmp_condition_result_4_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_4_object_1);
+        tmp_cmp_expr_right_4 = mod_consts[46];
+        tmp_condition_result_4 = RICH_COMPARE_GT_CBOOL_LONG_LONG(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
         if (tmp_condition_result_4 != false) {
             goto condexpr_true_1;
         } else {
@@ -2999,9 +2988,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         }
         condexpr_true_1:;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine_heap->var_callback_args));
-        tmp_expression_name_11 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
-        tmp_subscript_name_2 = mod_consts[45];
-        coroutine_heap->tmp_return_value = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_11, tmp_subscript_name_2, 0);
+        tmp_expression_value_11 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
+        tmp_subscript_value_2 = mod_consts[45];
+        coroutine_heap->tmp_return_value = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_11, tmp_subscript_value_2, 0);
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3015,9 +3004,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine_heap->var_callback_args));
-        tmp_expression_name_12 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
-        tmp_subscript_name_3 = mod_consts[45];
-        tmp_len_arg_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_12, tmp_subscript_name_3, 0);
+        tmp_expression_value_12 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
+        tmp_subscript_value_3 = mod_consts[45];
+        tmp_len_arg_2 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_12, tmp_subscript_value_3, 0);
         if (tmp_len_arg_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3028,9 +3017,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_left_5 = BUILTIN_LEN(tmp_len_arg_2);
+        tmp_cmp_expr_left_5 = BUILTIN_LEN(tmp_len_arg_2);
         Py_DECREF(tmp_len_arg_2);
-        if (tmp_compexpr_left_5 == NULL) {
+        if (tmp_cmp_expr_left_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3040,12 +3029,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_5 = mod_consts[46];
-        tmp_tmp_condition_result_5_object_1 = RICH_COMPARE_EQ_OBJECT_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_left_5);
-        assert(!(tmp_tmp_condition_result_5_object_1 == NULL));
-        tmp_condition_result_5 = CHECK_IF_TRUE(tmp_tmp_condition_result_5_object_1) == 1;
-        Py_DECREF(tmp_tmp_condition_result_5_object_1);
+        tmp_cmp_expr_right_5 = mod_consts[46];
+        tmp_condition_result_5 = RICH_COMPARE_EQ_CBOOL_LONG_LONG(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_left_5);
         if (tmp_condition_result_5 != false) {
             goto condexpr_true_2;
         } else {
@@ -3053,10 +3039,10 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
         }
         condexpr_true_2:;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine_heap->var_callback_args));
-        tmp_expression_name_14 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
-        tmp_subscript_name_4 = mod_consts[45];
-        tmp_expression_name_13 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_14, tmp_subscript_name_4, 0);
-        if (tmp_expression_name_13 == NULL) {
+        tmp_expression_value_14 = Nuitka_Cell_GET(coroutine_heap->var_callback_args);
+        tmp_subscript_value_4 = mod_consts[45];
+        tmp_expression_value_13 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_14, tmp_subscript_value_4, 0);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3066,9 +3052,9 @@ static PyObject *socketio$asyncio_server$$$function__6_call$$$coroutine__1_call_
             coroutine_heap->type_description_1 = "cccccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_5 = mod_consts[45];
-        coroutine_heap->tmp_return_value = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_5, 0);
-        Py_DECREF(tmp_expression_name_13);
+        tmp_subscript_value_5 = mod_consts[45];
+        coroutine_heap->tmp_return_value = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_13, tmp_subscript_value_5, 0);
+        Py_DECREF(tmp_expression_value_13);
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3284,7 +3270,7 @@ static PyObject *impl_socketio$asyncio_server$$$function__6_call$$$coroutine__1_
     {
         PyObject *tmp_called_instance_1;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         if (Nuitka_Cell_GET(self->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&exception_type, &exception_value, mod_consts[49]);
@@ -3299,9 +3285,9 @@ static PyObject *impl_socketio$asyncio_server$$$function__6_call$$$coroutine__1_
 
         tmp_called_instance_1 = Nuitka_Cell_GET(self->m_closure[0]);
         CHECK_OBJECT(par_args);
-        tmp_args_element_name_1 = par_args;
+        tmp_args_element_value_1 = par_args;
         frame_b302cd739cc7d6938bec823f2f3ff0bf->m_frame.f_lineno = 259;
-        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[50], tmp_args_element_name_1);
+        tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[50], tmp_args_element_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3460,9 +3446,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__7_close_room(struct Nu
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -3623,13 +3606,13 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
 
     }
     {
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -3642,9 +3625,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[5]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[5]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3654,9 +3637,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3666,9 +3649,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = mod_consts[54];
+        tmp_args_element_value_1 = mod_consts[54];
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[15]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3679,16 +3662,16 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[0]));
-        tmp_args_element_name_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 284;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -3702,13 +3685,13 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 285;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -3723,9 +3706,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[21]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[21]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3735,9 +3718,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[55]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[55]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3748,7 +3731,7 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[15]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3759,17 +3742,17 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[0]));
-        tmp_args_element_name_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 285;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_expression_value_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_expression_name_4 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3779,9 +3762,9 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -3791,14 +3774,14 @@ static PyObject *socketio$asyncio_server$$$function__7_close_room$$$coroutine__1
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -3952,9 +3935,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__8_get_session(struct N
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -4124,11 +4104,11 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -4141,9 +4121,9 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4153,9 +4133,9 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[58]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[58]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4166,7 +4146,7 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4177,16 +4157,16 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[0]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 299;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4202,11 +4182,11 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
         coroutine->m_frame->m_frame.f_lineno = 300;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -4220,8 +4200,8 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[8]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[8]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4233,11 +4213,11 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_eio_sid);
-        tmp_args_element_name_3 = coroutine_heap->var_eio_sid;
+        tmp_args_element_value_3 = coroutine_heap->var_eio_sid;
         coroutine->m_frame->m_frame.f_lineno = 300;
-        tmp_expression_name_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[59], tmp_args_element_name_3);
+        tmp_expression_value_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[59], tmp_args_element_value_3);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4247,9 +4227,9 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4259,14 +4239,14 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -4294,25 +4274,34 @@ static PyObject *socketio$asyncio_server$$$function__8_get_session$$$coroutine__
         coroutine_heap->var_eio_session = tmp_assign_source_3;
     }
     {
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         CHECK_OBJECT(coroutine_heap->var_eio_session);
-        tmp_called_instance_2 = coroutine_heap->var_eio_session;
+        tmp_expression_value_6 = coroutine_heap->var_eio_session;
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[60]);
+        if (tmp_called_value_2 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 301;
+            coroutine_heap->type_description_1 = "cccoo";
+            goto frame_exception_exit_1;
+        }
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[0]));
-        tmp_args_element_name_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_args_element_name_5 = PyDict_New();
+        tmp_args_element_value_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_5 = PyDict_New();
         coroutine->m_frame->m_frame.f_lineno = 301;
         {
-            PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-            coroutine_heap->tmp_return_value = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[60],
-                call_args
-            );
+            PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+            coroutine_heap->tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_args_element_name_5);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_5);
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4500,9 +4489,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__9_save_session(struct 
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -4675,11 +4661,11 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -4692,9 +4678,9 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4704,9 +4690,9 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[58]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[58]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4717,7 +4703,7 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4728,16 +4714,16 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[0]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 312;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4753,11 +4739,11 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_3;
         coroutine->m_frame->m_frame.f_lineno = 313;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -4771,8 +4757,8 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[8]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[8]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -4784,11 +4770,11 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_eio_sid);
-        tmp_args_element_name_3 = coroutine_heap->var_eio_sid;
+        tmp_args_element_value_3 = coroutine_heap->var_eio_sid;
         coroutine->m_frame->m_frame.f_lineno = 313;
-        tmp_expression_name_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[59], tmp_args_element_name_3);
+        tmp_expression_value_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[59], tmp_args_element_value_3);
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_expression_name_4 == NULL) {
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4798,9 +4784,9 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -4810,14 +4796,14 @@ static PyObject *socketio$asyncio_server$$$function__9_save_session$$$coroutine_
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_instance_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -5116,44 +5102,39 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
     }
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[67];
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[67];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[67];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 338;
-            type_description_1 = "ocoo";
-            goto try_except_handler_2;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[67];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -5176,9 +5157,9 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_1 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[45];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
+        tmp_expression_value_1 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_1, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5189,9 +5170,9 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
             type_description_1 = "ocoo";
             goto try_except_handler_2;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5203,14 +5184,14 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_3 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_3 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5225,16 +5206,16 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         tmp_class_creation_1__metaclass = tmp_assign_source_3;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[67];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[67];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -5258,10 +5239,10 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_2, mod_consts[68]);
+        tmp_expression_value_2 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_2, mod_consts[68]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -5272,15 +5253,15 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[68]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[68]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -5291,17 +5272,17 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
             goto try_except_handler_2;
         }
         tmp_tuple_element_1 = mod_consts[69];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_1);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_1 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_1);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_1);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_58a8139c6e984f039f045593977aa629->m_frame.f_lineno = 338;
-        tmp_assign_source_4 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_4 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5316,14 +5297,14 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         tmp_class_creation_1__prepared = tmp_assign_source_4;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_4;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_4;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_4 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_4, mod_consts[70]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_4 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_4, mod_consts[70]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -5334,8 +5315,8 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
             type_description_1 = "ocoo";
             goto try_except_handler_2;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -5345,14 +5326,14 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_2;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[71];
+        tmp_left_value_1 = mod_consts[71];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
         tmp_getattr_attr_1 = mod_consts[72];
@@ -5368,17 +5349,17 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
             type_description_1 = "ocoo";
             goto try_except_handler_2;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_5;
+            PyObject *tmp_expression_value_5;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_5 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_5 == NULL));
-            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[72]);
-            Py_DECREF(tmp_expression_name_5);
+            tmp_expression_value_5 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_5 == NULL));
+            tmp_tuple_element_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[72]);
+            Py_DECREF(tmp_expression_value_5);
             if (tmp_tuple_element_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5389,17 +5370,17 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
                 type_description_1 = "ocoo";
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_2);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_2);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_2;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -5605,12 +5586,12 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_compexpr_left_1;
-            PyObject *tmp_compexpr_right_1;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_1 = tmp_class_creation_1__bases;
-            tmp_compexpr_right_1 = mod_consts[66];
-            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_right_1 = mod_consts[66];
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -5644,25 +5625,25 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
         branch_no_4:;
         {
             PyObject *tmp_assign_source_7;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_3;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_3 = mod_consts[69];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_3);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_3 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_3);
             tmp_tuple_element_3 = locals_socketio$asyncio_server$$$function__10_session$$$class__1__session_context_manager_338;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_58a8139c6e984f039f045593977aa629->m_frame.f_lineno = 338;
-            tmp_assign_source_7 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_7 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_7 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -5773,24 +5754,27 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
     goto frame_exception_exit_1;
     // End of try:
     try_end_1:;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
         CHECK_OBJECT(var__session_context_manager);
-        tmp_called_name_3 = var__session_context_manager;
+        tmp_called_value_3 = var__session_context_manager;
         CHECK_OBJECT(par_self);
-        tmp_args_element_name_1 = par_self;
+        tmp_args_element_value_1 = par_self;
         if (Nuitka_Cell_GET(par_sid) == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&exception_type, &exception_value, mod_consts[33]);
@@ -5803,13 +5787,13 @@ static PyObject *impl_socketio$asyncio_server$$$function__10_session(struct Nuit
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(par_sid);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(par_sid);
         CHECK_OBJECT(par_namespace);
-        tmp_args_element_name_3 = par_namespace;
+        tmp_args_element_value_3 = par_namespace;
         frame_58a8139c6e984f039f045593977aa629->m_frame.f_lineno = 354;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2, tmp_args_element_name_3};
-            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2, tmp_args_element_value_3};
+            tmp_return_value = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
         if (tmp_return_value == NULL) {
@@ -6301,14 +6285,14 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
     // Framed code:
     {
         PyObject *tmp_assattr_value_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_assattr_target_1;
         coroutine->m_frame->m_frame.f_lineno = 346;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
@@ -6323,9 +6307,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[85]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[85]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6335,9 +6319,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[59]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[59]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6348,7 +6332,7 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6361,7 +6345,7 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
 
         tmp_kw_call_arg_value_0_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6372,13 +6356,13 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[12]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[12]);
         if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 347;
             coroutine_heap->type_description_1 = "cc";
@@ -6388,12 +6372,12 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[86]);
+            tmp_expression_value_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_kw_call_dict_value_0_1);
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6403,9 +6387,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6415,14 +6399,14 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -6473,7 +6457,7 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
         }
     }
     {
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -6486,8 +6470,8 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__2___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        coroutine_heap->tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[63]);
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        coroutine_heap->tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[63]);
         if (coroutine_heap->tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -6733,16 +6717,16 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_arg_value_1_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_kw_call_dict_value_0_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_6;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 351;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
@@ -6757,9 +6741,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[85]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[85]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6769,9 +6753,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             coroutine_heap->type_description_1 = "cNc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[64]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[64]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6782,7 +6766,7 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6795,7 +6779,7 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
 
         tmp_kw_call_arg_value_0_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6806,20 +6790,20 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_kw_call_arg_value_1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[63]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_kw_call_arg_value_1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[63]);
         if (tmp_kw_call_arg_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 351;
             coroutine_heap->type_description_1 = "cNc";
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             Py_DECREF(tmp_kw_call_arg_value_1_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
@@ -6831,13 +6815,13 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[12]);
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_kw_call_dict_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[12]);
         if (tmp_kw_call_dict_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             Py_DECREF(tmp_kw_call_arg_value_1_1);
 
             coroutine_heap->exception_lineno = 352;
@@ -6848,13 +6832,13 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_1, args, kw_values, mod_consts[86]);
+            tmp_expression_value_2 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_1, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         Py_DECREF(tmp_kw_call_arg_value_1_1);
         Py_DECREF(tmp_kw_call_dict_value_0_1);
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6864,9 +6848,9 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             coroutine_heap->type_description_1 = "cNc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -6876,14 +6860,14 @@ static PyObject *socketio$asyncio_server$$$function__10_session$$$function__3___
             coroutine_heap->type_description_1 = "cNc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -7040,9 +7024,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__11_disconnect(struct N
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -7251,11 +7232,11 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -7268,9 +7249,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7280,9 +7261,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[89]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[89]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7293,7 +7274,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7304,16 +7285,16 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 372;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7331,13 +7312,13 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
     branch_no_1:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         coroutine->m_frame->m_frame.f_lineno = 374;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
@@ -7351,9 +7332,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[21]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[21]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7363,9 +7344,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[90]);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[90]);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7376,7 +7357,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7387,17 +7368,17 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 374;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_expression_value_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_expression_name_4 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7407,9 +7388,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_3 = ASYNC_AWAIT(tmp_expression_name_4, await_normal);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7419,14 +7400,14 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_3;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_4, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -7478,13 +7459,13 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -7497,9 +7478,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[5]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_8 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[5]);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7509,9 +7490,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_called_name_3 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7521,9 +7502,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_5 = mod_consts[91];
+        tmp_args_element_value_5 = mod_consts[91];
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7534,9 +7515,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7547,14 +7528,14 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_7 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_7 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 376;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
+        Py_DECREF(tmp_called_value_3);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7569,9 +7550,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -7586,9 +7567,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[21]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_10 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[21]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7598,9 +7579,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[92]);
-        Py_DECREF(tmp_expression_name_9);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[92]);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7611,7 +7592,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7624,7 +7605,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
 
         tmp_kw_call_arg_value_0_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7640,10 +7621,10 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_4, args, kw_values, mod_consts[86]);
+            tmp_assign_source_4 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_4, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -7658,16 +7639,16 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         coroutine_heap->var_eio_sid = tmp_assign_source_4;
     }
     {
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_14;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_14;
         PyObject *tmp_kw_call_arg_value_0_2;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 378;
@@ -7683,9 +7664,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_13 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[93]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_13 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[93]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7696,9 +7677,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_eio_sid);
-        tmp_args_element_name_8 = coroutine_heap->var_eio_sid;
+        tmp_args_element_value_8 = coroutine_heap->var_eio_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7709,50 +7690,50 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_14 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[94]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_expression_value_14 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[94]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             coroutine_heap->exception_lineno = 378;
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_15 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_15 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_15 == NULL)) {
-            tmp_expression_name_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_15 == NULL)) {
+            tmp_expression_value_15 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_15 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 379;
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[96]);
+        tmp_kw_call_arg_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_15, mod_consts[96]);
         if (tmp_kw_call_arg_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 379;
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_called_value_6);
             Py_DECREF(tmp_kw_call_arg_value_0_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
@@ -7769,16 +7750,16 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_2};
-            tmp_args_element_name_9 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_6, args, kw_values, mod_consts[86]);
+            tmp_args_element_value_9 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_6, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_6);
+        Py_DECREF(tmp_called_value_6);
         Py_DECREF(tmp_kw_call_arg_value_0_2);
-        if (tmp_args_element_name_9 == NULL) {
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             coroutine_heap->exception_lineno = 378;
             coroutine_heap->type_description_1 = "ccccoo";
@@ -7786,13 +7767,13 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         }
         coroutine->m_frame->m_frame.f_lineno = 378;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_expression_name_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_expression_value_12 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_9);
-        if (tmp_expression_name_12 == NULL) {
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_9);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7802,9 +7783,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_11 = ASYNC_AWAIT(tmp_expression_name_12, await_normal);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_11 = ASYNC_AWAIT(tmp_expression_value_12, await_normal);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7814,14 +7795,14 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_14, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_name_15, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_12, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_14, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_value_15, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_11;
+        coroutine->m_yieldfrom = tmp_expression_value_11;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_14, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_name_15, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_12, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_14, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_value_15, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -7848,13 +7829,13 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         Py_DECREF(tmp_await_result_1);
     }
     {
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
         PyObject *tmp_await_result_2;
         coroutine->m_frame->m_frame.f_lineno = 380;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -7869,9 +7850,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_18 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[97]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_18 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[97]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7881,9 +7862,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_10 = mod_consts[98];
+        tmp_args_element_value_10 = mod_consts[98];
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7894,9 +7875,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_11 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_11 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7907,15 +7888,15 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 380;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_expression_name_17 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12};
+            tmp_expression_value_17 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
-        if (tmp_expression_name_17 == NULL) {
+        Py_DECREF(tmp_called_value_7);
+        if (tmp_expression_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7925,9 +7906,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_16 = ASYNC_AWAIT(tmp_expression_name_17, await_normal);
-        Py_DECREF(tmp_expression_name_17);
-        if (tmp_expression_name_16 == NULL) {
+        tmp_expression_value_16 = ASYNC_AWAIT(tmp_expression_value_17, await_normal);
+        Py_DECREF(tmp_expression_value_17);
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -7937,14 +7918,14 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_17, sizeof(PyObject *), &tmp_called_name_7, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_17, sizeof(PyObject *), &tmp_called_value_7, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 3;
-        coroutine->m_yieldfrom = tmp_expression_name_16;
+        coroutine->m_yieldfrom = tmp_expression_value_16;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_3:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_17, sizeof(PyObject *), &tmp_called_name_7, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_17, sizeof(PyObject *), &tmp_called_value_7, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -7971,9 +7952,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         Py_DECREF(tmp_await_result_2);
     }
     {
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_expression_value_20;
         PyObject *tmp_call_result_2;
         PyObject *tmp_kw_call_arg_value_0_3;
         PyObject *tmp_kw_call_dict_value_0_3;
@@ -7989,9 +7970,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_19 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[21]);
-        if (tmp_expression_name_19 == NULL) {
+        tmp_expression_value_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_19 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[21]);
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8001,9 +7982,9 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[98]);
-        Py_DECREF(tmp_expression_name_19);
-        if (tmp_called_name_8 == NULL) {
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[98]);
+        Py_DECREF(tmp_expression_value_19);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8014,7 +7995,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8027,7 +8008,7 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
 
         tmp_kw_call_arg_value_0_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8043,10 +8024,10 @@ static PyObject *socketio$asyncio_server$$$function__11_disconnect$$$coroutine__
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_3};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_3};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_8, args, kw_values, mod_consts[86]);
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_8, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_8);
+        Py_DECREF(tmp_called_value_8);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8326,11 +8307,11 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_dircall_arg3_1;
         coroutine->m_frame->m_frame.f_lineno = 391;
@@ -8346,9 +8327,9 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[8]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[8]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8358,8 +8339,8 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[101]);
-        Py_DECREF(tmp_expression_name_3);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[101]);
+        Py_DECREF(tmp_expression_value_3);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8401,9 +8382,9 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_2 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
+            tmp_expression_value_2 = impl___main__$$$function__8_complex_call_helper_star_list_star_dict(dir_call_args);
         }
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8413,9 +8394,9 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8425,14 +8406,14 @@ static PyObject *socketio$asyncio_server$$$function__12_handle_request$$$corouti
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -8607,16 +8588,16 @@ static PyObject *impl_socketio$asyncio_server$$$function__13_start_background_ta
     // Framed code:
     {
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_dircall_arg3_1;
         PyObject *tmp_dircall_arg4_1;
         CHECK_OBJECT(par_self);
-        tmp_expression_name_2 = par_self;
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[8]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = par_self;
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[8]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -8626,8 +8607,8 @@ static PyObject *impl_socketio$asyncio_server$$$function__13_start_background_ta
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[104]);
-        Py_DECREF(tmp_expression_name_1);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[104]);
+        Py_DECREF(tmp_expression_value_1);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -8898,12 +8879,12 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_element_value_1;
         coroutine->m_frame->m_frame.f_lineno = 418;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -8917,9 +8898,9 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[8]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[8]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8929,9 +8910,9 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[107]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[107]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8942,7 +8923,7 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[108]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8953,11 +8934,11 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 418;
-        tmp_expression_name_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8967,9 +8948,9 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -8979,14 +8960,14 @@ static PyObject *socketio$asyncio_server$$$function__14_sleep$$$coroutine__1_sle
             coroutine_heap->type_description_1 = "cc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -9156,9 +9137,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__15__emit_internal(stru
     par_data = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_data);
-    Py_DECREF(par_data);
-    par_data = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -9294,7 +9272,7 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
 
         tmp_isinstance_inst_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         tmp_isinstance_cls_1 = (PyObject *)&PyTuple_Type;
-        coroutine_heap->tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        coroutine_heap->tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -9351,8 +9329,8 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
     branch_no_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
@@ -9365,9 +9343,9 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -9415,21 +9393,21 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
     branch_end_2:;
     branch_end_1:;
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
-        PyObject *tmp_left_name_1;
+        PyObject *tmp_left_value_1;
         PyObject *tmp_list_element_2;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_kw_call_dict_value_2_1;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 430;
@@ -9445,9 +9423,9 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[93]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[93]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9458,7 +9436,7 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9469,9 +9447,9 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[5]);
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9482,50 +9460,50 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[94]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[94]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 430;
             coroutine_heap->type_description_1 = "cccccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_5 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_5 == NULL)) {
+            tmp_expression_value_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 431;
             coroutine_heap->type_description_1 = "cccccc";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[111]);
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[111]);
         if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 431;
             coroutine_heap->type_description_1 = "cccccc";
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
@@ -9539,8 +9517,8 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
 
         tmp_kw_call_dict_value_0_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[19]);
             coroutine_heap->exception_tb = NULL;
@@ -9553,13 +9531,13 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
         }
 
         tmp_list_element_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_left_name_1 = PyList_New(1);
-        PyList_SET_ITEM0(tmp_left_name_1, 0, tmp_list_element_2);
+        tmp_left_value_1 = PyList_New(1);
+        PyList_SET_ITEM0(tmp_left_value_1, 0, tmp_list_element_2);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
-            Py_DECREF(tmp_left_name_1);
+            Py_DECREF(tmp_left_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9570,15 +9548,15 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_right_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_kw_call_dict_value_1_1 = BINARY_OPERATION_ADD_OBJECT_LIST_OBJECT(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_left_name_1);
+        tmp_right_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_kw_call_dict_value_1_1 = BINARY_OPERATION_ADD_OBJECT_LIST_OBJECT(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_left_value_1);
         if (tmp_kw_call_dict_value_1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
 
             coroutine_heap->exception_lineno = 431;
@@ -9586,8 +9564,8 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             Py_DECREF(tmp_kw_call_dict_value_1_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
@@ -9605,17 +9583,17 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_args_element_name_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[113]);
+            tmp_args_element_value_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[113]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_kw_call_arg_value_0_1);
         Py_DECREF(tmp_kw_call_dict_value_1_1);
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 430;
             coroutine_heap->type_description_1 = "cccccc";
@@ -9623,13 +9601,13 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
         }
         coroutine->m_frame->m_frame.f_lineno = 430;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_expression_name_2 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9639,9 +9617,9 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             coroutine_heap->type_description_1 = "cccccc";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -9651,14 +9629,14 @@ static PyObject *socketio$asyncio_server$$$function__15__emit_internal$$$corouti
             coroutine_heap->type_description_1 = "cccccc";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_left_name_1, sizeof(PyObject *), &tmp_list_element_2, sizeof(PyObject *), &tmp_right_name_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_left_value_1, sizeof(PyObject *), &tmp_list_element_2, sizeof(PyObject *), &tmp_right_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_left_name_1, sizeof(PyObject *), &tmp_list_element_2, sizeof(PyObject *), &tmp_right_name_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_left_value_1, sizeof(PyObject *), &tmp_list_element_2, sizeof(PyObject *), &tmp_right_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -9938,7 +9916,8 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[117]);
@@ -9951,9 +9930,21 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto frame_exception_exit_1;
         }
 
-        tmp_called_instance_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[118]);
+        if (tmp_called_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 435;
+            coroutine_heap->type_description_1 = "cccoo";
+            goto frame_exception_exit_1;
+        }
         coroutine->m_frame->m_frame.f_lineno = 435;
-        tmp_assign_source_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[118]);
+        tmp_assign_source_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9974,7 +9965,7 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
         CHECK_OBJECT(coroutine_heap->var_encoded_packet);
         tmp_isinstance_inst_1 = coroutine_heap->var_encoded_packet;
         tmp_isinstance_cls_1 = (PyObject *)&PyList_Type;
-        coroutine_heap->tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        coroutine_heap->tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -10053,13 +10044,13 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
 
     }
     {
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 438;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -10074,9 +10065,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[8]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[8]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10086,9 +10077,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto try_except_handler_2;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[30]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[30]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10099,7 +10090,7 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10110,17 +10101,17 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(coroutine_heap->var_ep);
-        tmp_args_element_name_2 = coroutine_heap->var_ep;
+        tmp_args_element_value_2 = coroutine_heap->var_ep;
         coroutine->m_frame->m_frame.f_lineno = 438;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        if (tmp_expression_name_2 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10130,9 +10121,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = ASYNC_AWAIT(tmp_expression_value_3, await_normal);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10142,14 +10133,14 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_3, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_2;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_3, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -10221,13 +10212,13 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
     goto branch_end_1;
     branch_no_1:;
     {
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         PyObject *tmp_await_result_2;
         coroutine->m_frame->m_frame.f_lineno = 440;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -10242,9 +10233,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[8]);
-        if (tmp_expression_name_7 == NULL) {
+        tmp_expression_value_9 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[8]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10254,9 +10245,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[30]);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[30]);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10267,7 +10258,7 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10278,17 +10269,17 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_3 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(coroutine_heap->var_encoded_packet);
-        tmp_args_element_name_4 = coroutine_heap->var_encoded_packet;
+        tmp_args_element_value_4 = coroutine_heap->var_encoded_packet;
         coroutine->m_frame->m_frame.f_lineno = 440;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_6 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_expression_value_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_expression_name_6 == NULL) {
+        Py_DECREF(tmp_called_value_3);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10298,9 +10289,9 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_5 = ASYNC_AWAIT(tmp_expression_name_6, await_normal);
-        Py_DECREF(tmp_expression_name_6);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = ASYNC_AWAIT(tmp_expression_value_7, await_normal);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10310,14 +10301,14 @@ static PyObject *socketio$asyncio_server$$$function__16__send_packet$$$coroutine
             coroutine_heap->type_description_1 = "cccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_6, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_expression_value_9, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_5;
+        coroutine->m_yieldfrom = tmp_expression_value_6;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_6, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_expression_value_9, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -10509,9 +10500,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__17__handle_connect(str
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -10722,11 +10710,11 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -10739,9 +10727,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10751,9 +10739,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[122]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[122]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10764,7 +10752,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10775,16 +10763,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 445;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10800,7 +10788,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     {
         nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
@@ -10815,8 +10803,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[123]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[123]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10848,16 +10836,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     branch_yes_1:;
     {
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_kw_call_arg_value_1_1;
         PyObject *tmp_dict_key_1;
         PyObject *tmp_dict_value_1;
@@ -10876,9 +10864,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[93]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[93]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10889,7 +10877,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10900,9 +10888,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -10913,42 +10901,42 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[94]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_7 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[94]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 447;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_8 == NULL)) {
-            tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_8 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_called_value_3);
 
             coroutine_heap->exception_lineno = 448;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[124]);
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[124]);
         if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_called_value_3);
 
             coroutine_heap->exception_lineno = 448;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -10966,17 +10954,17 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1, tmp_kw_call_arg_value_1_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_args_element_name_4 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_3, args, kw_values, mod_consts[86]);
+            tmp_args_element_value_4 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_3, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_3);
+        Py_DECREF(tmp_called_value_3);
         Py_DECREF(tmp_kw_call_arg_value_0_1);
         Py_DECREF(tmp_kw_call_arg_value_1_1);
-        if (tmp_args_element_name_4 == NULL) {
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 447;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -10984,13 +10972,13 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         coroutine->m_frame->m_frame.f_lineno = 447;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_expression_value_5 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_4);
-        if (tmp_expression_name_5 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_4);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11000,9 +10988,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = ASYNC_AWAIT(tmp_expression_name_5, await_normal);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_4 = ASYNC_AWAIT(tmp_expression_value_5, await_normal);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11012,14 +11000,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_5, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_5, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_4;
+        coroutine->m_yieldfrom = tmp_expression_value_4;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_5, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_5, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_kw_call_arg_value_1_1, sizeof(PyObject *), &tmp_dict_key_1, sizeof(PyObject *), &tmp_dict_value_1, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -11048,7 +11036,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     branch_no_1:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_called_instance_1;
         tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[44]);
 
@@ -11067,8 +11055,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 449;
-        tmp_expression_name_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[125]);
-        if (tmp_expression_name_9 == NULL) {
+        tmp_expression_value_9 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[125]);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11078,8 +11066,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[126]);
-        Py_DECREF(tmp_expression_name_9);
+        tmp_assign_source_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[126]);
+        Py_DECREF(tmp_expression_value_9);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11130,18 +11118,18 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_args_element_value_9;
         coroutine->m_frame->m_frame.f_lineno = 452;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
@@ -11155,9 +11143,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[97]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_expression_value_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[97]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11167,11 +11155,11 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_2;
         }
-        tmp_args_element_name_5 = mod_consts[122];
+        tmp_args_element_value_5 = mod_consts[122];
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11182,9 +11170,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_7 = coroutine_heap->var_sid;
+        tmp_args_element_value_7 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11195,21 +11183,21 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_14 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_14, mod_consts[127]);
-        if (tmp_expression_name_13 == NULL) {
+        tmp_expression_value_14 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_14, mod_consts[127]);
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             coroutine_heap->exception_lineno = 453;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_expression_name_13);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_expression_value_13);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11220,22 +11208,22 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_2;
         }
 
-        tmp_subscript_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_args_element_name_8 = LOOKUP_SUBSCRIPT(tmp_expression_name_13, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_13);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_subscript_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_8 = LOOKUP_SUBSCRIPT(tmp_expression_value_13, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_13);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
 
             coroutine_heap->exception_lineno = 453;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
-            Py_DECREF(tmp_args_element_name_8);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11246,16 +11234,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_9 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_9 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 452;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_expression_name_11 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_expression_value_11 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_8);
-        if (tmp_expression_name_11 == NULL) {
+        Py_DECREF(tmp_called_value_4);
+        Py_DECREF(tmp_args_element_value_8);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11265,9 +11253,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_10 = ASYNC_AWAIT(tmp_expression_name_11, await_normal);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_expression_value_10 = ASYNC_AWAIT(tmp_expression_value_11, await_normal);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11277,14 +11265,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_11, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_12, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_expression_name_14, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_11, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_12, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_expression_value_14, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_10;
+        coroutine->m_yieldfrom = tmp_expression_value_10;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_11, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_12, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_expression_name_14, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_11, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_12, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_expression_value_14, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -11316,17 +11304,17 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     // Tried code:
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_expression_name_19;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_19;
+        PyObject *tmp_subscript_value_2;
         coroutine->m_frame->m_frame.f_lineno = 456;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
@@ -11340,9 +11328,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[97]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[97]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11352,11 +11340,11 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_3;
         }
-        tmp_args_element_name_10 = mod_consts[122];
+        tmp_args_element_value_10 = mod_consts[122];
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_11 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_11 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11367,9 +11355,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_3;
         }
 
-        tmp_args_element_name_12 = coroutine_heap->var_sid;
+        tmp_args_element_value_12 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11380,21 +11368,21 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_3;
         }
 
-        tmp_expression_name_19 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_18 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[127]);
-        if (tmp_expression_name_18 == NULL) {
+        tmp_expression_value_19 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[127]);
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             coroutine_heap->exception_lineno = 457;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_3;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_expression_name_18);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_expression_value_18);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11405,14 +11393,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_3;
         }
 
-        tmp_subscript_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_args_element_name_13 = LOOKUP_SUBSCRIPT(tmp_expression_name_18, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_18);
-        if (tmp_args_element_name_13 == NULL) {
+        tmp_subscript_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_13 = LOOKUP_SUBSCRIPT(tmp_expression_value_18, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_18);
+        if (tmp_args_element_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             coroutine_heap->exception_lineno = 457;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -11420,13 +11408,13 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         coroutine->m_frame->m_frame.f_lineno = 456;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12, tmp_args_element_name_13};
-            tmp_expression_name_16 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12, tmp_args_element_value_13};
+            tmp_expression_value_16 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_13);
-        if (tmp_expression_name_16 == NULL) {
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_13);
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11436,9 +11424,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_3;
         }
-        tmp_expression_name_15 = ASYNC_AWAIT(tmp_expression_name_16, await_normal);
-        Py_DECREF(tmp_expression_name_16);
-        if (tmp_expression_name_15 == NULL) {
+        tmp_expression_value_15 = ASYNC_AWAIT(tmp_expression_value_16, await_normal);
+        Py_DECREF(tmp_expression_value_16);
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11448,14 +11436,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_3;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_16, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), &tmp_args_element_name_13, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_expression_name_19, sizeof(PyObject *), &tmp_subscript_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_16, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), &tmp_args_element_value_13, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_expression_value_19, sizeof(PyObject *), &tmp_subscript_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 3;
-        coroutine->m_yieldfrom = tmp_expression_name_15;
+        coroutine->m_yieldfrom = tmp_expression_value_15;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_3:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_16, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), &tmp_args_element_name_13, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_expression_name_19, sizeof(PyObject *), &tmp_subscript_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_16, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), &tmp_args_element_value_13, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_expression_value_19, sizeof(PyObject *), &tmp_subscript_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -11509,11 +11497,11 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     // Tried code:
     {
         bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        tmp_compexpr_left_1 = EXC_TYPE(PyThreadState_GET());
-        tmp_compexpr_right_1 = PyExc_TypeError;
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_1, tmp_compexpr_right_1);
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        tmp_cmp_expr_left_1 = EXC_TYPE(PyThreadState_GET());
+        tmp_cmp_expr_right_1 = PyExc_TypeError;
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
         assert(!(coroutine_heap->tmp_res == -1));
         tmp_condition_result_3 = (coroutine_heap->tmp_res != 0) ? true : false;
         if (tmp_condition_result_3 != false) {
@@ -11525,18 +11513,18 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_expression_name_24;
-        PyObject *tmp_subscript_name_3;
-        PyObject *tmp_args_element_name_18;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_subscript_value_3;
+        PyObject *tmp_args_element_value_18;
         coroutine->m_frame->m_frame.f_lineno = 459;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
@@ -11550,9 +11538,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_22 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[97]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_expression_value_22 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[97]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11562,11 +11550,11 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_14 = mod_consts[122];
+        tmp_args_element_value_14 = mod_consts[122];
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_15 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_15 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11577,9 +11565,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_4;
         }
 
-        tmp_args_element_name_16 = coroutine_heap->var_sid;
+        tmp_args_element_value_16 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11590,21 +11578,21 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_4;
         }
 
-        tmp_expression_name_24 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_24, mod_consts[127]);
-        if (tmp_expression_name_23 == NULL) {
+        tmp_expression_value_24 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_23 = LOOKUP_ATTRIBUTE(tmp_expression_value_24, mod_consts[127]);
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 460;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_4;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_6);
-            Py_DECREF(tmp_expression_name_23);
+            Py_DECREF(tmp_called_value_6);
+            Py_DECREF(tmp_expression_value_23);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11615,29 +11603,29 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto try_except_handler_4;
         }
 
-        tmp_subscript_name_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_args_element_name_17 = LOOKUP_SUBSCRIPT(tmp_expression_name_23, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_23);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_subscript_value_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_17 = LOOKUP_SUBSCRIPT(tmp_expression_value_23, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_23);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 460;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_4;
         }
-        tmp_args_element_name_18 = Py_None;
+        tmp_args_element_value_18 = Py_None;
         coroutine->m_frame->m_frame.f_lineno = 459;
         {
-            PyObject *call_args[] = {tmp_args_element_name_14, tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17, tmp_args_element_name_18};
-            tmp_expression_name_21 = CALL_FUNCTION_WITH_ARGS5(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_14, tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17, tmp_args_element_value_18};
+            tmp_expression_value_21 = CALL_FUNCTION_WITH_ARGS5(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_17);
-        if (tmp_expression_name_21 == NULL) {
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_17);
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11647,9 +11635,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_4;
         }
-        tmp_expression_name_20 = ASYNC_AWAIT(tmp_expression_name_21, await_normal);
-        Py_DECREF(tmp_expression_name_21);
-        if (tmp_expression_name_20 == NULL) {
+        tmp_expression_value_20 = ASYNC_AWAIT(tmp_expression_value_21, await_normal);
+        Py_DECREF(tmp_expression_value_21);
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11659,16 +11647,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_4;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_21, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_22, sizeof(PyObject *), &tmp_args_element_name_14, sizeof(PyObject *), &tmp_args_element_name_15, sizeof(PyObject *), &tmp_args_element_name_16, sizeof(PyObject *), &tmp_args_element_name_17, sizeof(PyObject *), &tmp_expression_name_23, sizeof(PyObject *), &tmp_expression_name_24, sizeof(PyObject *), &tmp_subscript_name_3, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_21, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_22, sizeof(PyObject *), &tmp_args_element_value_14, sizeof(PyObject *), &tmp_args_element_value_15, sizeof(PyObject *), &tmp_args_element_value_16, sizeof(PyObject *), &tmp_args_element_value_17, sizeof(PyObject *), &tmp_expression_value_23, sizeof(PyObject *), &tmp_expression_value_24, sizeof(PyObject *), &tmp_subscript_value_3, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), NULL);
         SAVE_COROUTINE_EXCEPTION(coroutine);
         coroutine->m_yield_return_index = 4;
-        coroutine->m_yieldfrom = tmp_expression_name_20;
+        coroutine->m_yieldfrom = tmp_expression_value_20;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_4:
         RESTORE_COROUTINE_EXCEPTION(coroutine);
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_21, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_22, sizeof(PyObject *), &tmp_args_element_name_14, sizeof(PyObject *), &tmp_args_element_name_15, sizeof(PyObject *), &tmp_args_element_name_16, sizeof(PyObject *), &tmp_args_element_name_17, sizeof(PyObject *), &tmp_expression_name_23, sizeof(PyObject *), &tmp_expression_name_24, sizeof(PyObject *), &tmp_subscript_name_3, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_21, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_22, sizeof(PyObject *), &tmp_args_element_value_14, sizeof(PyObject *), &tmp_args_element_value_15, sizeof(PyObject *), &tmp_args_element_value_16, sizeof(PyObject *), &tmp_args_element_value_17, sizeof(PyObject *), &tmp_expression_value_23, sizeof(PyObject *), &tmp_expression_value_24, sizeof(PyObject *), &tmp_subscript_value_3, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -11766,17 +11754,17 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     // Tried code:
     {
         bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_25;
-        tmp_compexpr_left_2 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_25 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[44]);
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_25;
+        tmp_cmp_expr_left_2 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_25 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[44]);
 
-        if (unlikely(tmp_expression_name_25 == NULL)) {
-            tmp_expression_name_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
+        if (unlikely(tmp_expression_value_25 == NULL)) {
+            tmp_expression_value_25 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[44]);
         }
 
-        if (tmp_expression_name_25 == NULL) {
+        if (tmp_expression_value_25 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11786,8 +11774,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_5;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[125]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[125]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -11797,8 +11785,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto try_except_handler_5;
         }
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -11827,10 +11815,10 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     // Tried code:
     {
         PyObject *tmp_assign_source_8;
-        PyObject *tmp_expression_name_26;
+        PyObject *tmp_expression_value_26;
         CHECK_OBJECT(coroutine_heap->var_exc);
-        tmp_expression_name_26 = coroutine_heap->var_exc;
-        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[126]);
+        tmp_expression_value_26 = coroutine_heap->var_exc;
+        tmp_assign_source_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[126]);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -11928,8 +11916,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     try_end_3:;
     {
         bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
         if (coroutine_heap->var_success == NULL) {
 
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[128]);
@@ -11942,9 +11930,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_3 = coroutine_heap->var_success;
-        tmp_compexpr_right_3 = Py_False;
-        tmp_condition_result_5 = (tmp_compexpr_left_3 == tmp_compexpr_right_3) ? true : false;
+        tmp_cmp_expr_left_3 = coroutine_heap->var_success;
+        tmp_cmp_expr_right_3 = Py_False;
+        tmp_condition_result_5 = (tmp_cmp_expr_left_3 == tmp_cmp_expr_right_3) ? true : false;
         if (tmp_condition_result_5 != false) {
             goto branch_yes_5;
         } else {
@@ -11954,7 +11942,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     branch_yes_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_expression_name_27;
+        PyObject *tmp_expression_value_27;
         PyObject *tmp_attribute_value_2;
         int tmp_truth_name_3;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
@@ -11969,8 +11957,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_27 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[123]);
+        tmp_expression_value_27 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_attribute_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[123]);
         if (tmp_attribute_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12002,12 +11990,12 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     branch_yes_6:;
     {
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_expression_name_29;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_expression_value_29;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_args_element_name_20;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_args_element_value_20;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -12020,9 +12008,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_29 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_28 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[21]);
-        if (tmp_expression_name_28 == NULL) {
+        tmp_expression_value_29 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_28 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[21]);
+        if (tmp_expression_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12032,9 +12020,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[92]);
-        Py_DECREF(tmp_expression_name_28);
-        if (tmp_called_name_7 == NULL) {
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[92]);
+        Py_DECREF(tmp_expression_value_28);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12045,7 +12033,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12056,16 +12044,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_19 = coroutine_heap->var_sid;
+        tmp_args_element_value_19 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 467;
         {
-            PyObject *call_args[] = {tmp_args_element_name_19, tmp_args_element_name_20};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_19, tmp_args_element_value_20};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
+        Py_DECREF(tmp_called_value_7);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12079,16 +12067,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_30;
-        PyObject *tmp_expression_name_31;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_32;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_called_name_9;
-        PyObject *tmp_expression_name_33;
+        PyObject *tmp_expression_value_30;
+        PyObject *tmp_expression_value_31;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_called_value_9;
+        PyObject *tmp_expression_value_33;
         PyObject *tmp_kw_call_arg_value_0_2;
-        PyObject *tmp_expression_name_34;
+        PyObject *tmp_expression_value_34;
         PyObject *tmp_kw_call_dict_value_0_2;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_await_result_2;
@@ -12105,9 +12093,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_32 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[93]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_32 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[93]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12118,7 +12106,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12129,9 +12117,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_21 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_21 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12142,50 +12130,50 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_33 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[94]);
-        if (tmp_called_name_9 == NULL) {
+        tmp_expression_value_33 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[94]);
+        if (tmp_called_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
 
             coroutine_heap->exception_lineno = 468;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_34 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_34 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_34 == NULL)) {
-            tmp_expression_name_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_34 == NULL)) {
+            tmp_expression_value_34 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_34 == NULL) {
+        if (tmp_expression_value_34 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_called_value_9);
 
             coroutine_heap->exception_lineno = 469;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[96]);
+        tmp_kw_call_arg_value_0_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[96]);
         if (tmp_kw_call_arg_value_0_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_called_value_9);
 
             coroutine_heap->exception_lineno = 469;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_fail_reason == NULL) {
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_called_name_9);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_called_value_9);
             Py_DECREF(tmp_kw_call_arg_value_0_2);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[129]);
             coroutine_heap->exception_tb = NULL;
@@ -12204,16 +12192,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_2};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_2, tmp_kw_call_dict_value_1_1};
-            tmp_args_element_name_22 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_9, args, kw_values, mod_consts[130]);
+            tmp_args_element_value_22 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_9, args, kw_values, mod_consts[130]);
         }
 
-        Py_DECREF(tmp_called_name_9);
+        Py_DECREF(tmp_called_value_9);
         Py_DECREF(tmp_kw_call_arg_value_0_2);
-        if (tmp_args_element_name_22 == NULL) {
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
 
             coroutine_heap->exception_lineno = 468;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -12221,13 +12209,13 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         coroutine->m_frame->m_frame.f_lineno = 468;
         {
-            PyObject *call_args[] = {tmp_args_element_name_21, tmp_args_element_name_22};
-            tmp_expression_name_31 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_21, tmp_args_element_value_22};
+            tmp_expression_value_31 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_22);
-        if (tmp_expression_name_31 == NULL) {
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_22);
+        if (tmp_expression_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12237,9 +12225,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_30 = ASYNC_AWAIT(tmp_expression_name_31, await_normal);
-        Py_DECREF(tmp_expression_name_31);
-        if (tmp_expression_name_30 == NULL) {
+        tmp_expression_value_30 = ASYNC_AWAIT(tmp_expression_value_31, await_normal);
+        Py_DECREF(tmp_expression_value_31);
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12249,14 +12237,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_31, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_expression_name_32, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_called_name_9, sizeof(PyObject *), &tmp_expression_name_33, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_name_34, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_31, sizeof(PyObject *), &tmp_called_value_8, sizeof(PyObject *), &tmp_expression_value_32, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_called_value_9, sizeof(PyObject *), &tmp_expression_value_33, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_value_34, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 5;
-        coroutine->m_yieldfrom = tmp_expression_name_30;
+        coroutine->m_yieldfrom = tmp_expression_value_30;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_5:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_31, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_expression_name_32, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_called_name_9, sizeof(PyObject *), &tmp_expression_name_33, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_name_34, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_31, sizeof(PyObject *), &tmp_called_value_8, sizeof(PyObject *), &tmp_expression_value_32, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_called_value_9, sizeof(PyObject *), &tmp_expression_value_33, sizeof(PyObject *), &tmp_kw_call_arg_value_0_2, sizeof(PyObject *), &tmp_expression_value_34, sizeof(PyObject *), &tmp_kw_call_dict_value_0_2, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -12285,16 +12273,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     goto branch_end_6;
     branch_no_6:;
     {
-        PyObject *tmp_expression_name_35;
-        PyObject *tmp_expression_name_36;
-        PyObject *tmp_called_name_10;
-        PyObject *tmp_expression_name_37;
-        PyObject *tmp_args_element_name_23;
-        PyObject *tmp_args_element_name_24;
-        PyObject *tmp_called_name_11;
-        PyObject *tmp_expression_name_38;
+        PyObject *tmp_expression_value_35;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_called_value_10;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_args_element_value_23;
+        PyObject *tmp_args_element_value_24;
+        PyObject *tmp_called_value_11;
+        PyObject *tmp_expression_value_38;
         PyObject *tmp_kw_call_arg_value_0_3;
-        PyObject *tmp_expression_name_39;
+        PyObject *tmp_expression_value_39;
         PyObject *tmp_kw_call_dict_value_0_3;
         PyObject *tmp_kw_call_dict_value_1_2;
         PyObject *tmp_await_result_3;
@@ -12311,9 +12299,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_37 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_10 = LOOKUP_ATTRIBUTE(tmp_expression_name_37, mod_consts[93]);
-        if (tmp_called_name_10 == NULL) {
+        tmp_expression_value_37 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_10 = LOOKUP_ATTRIBUTE(tmp_expression_value_37, mod_consts[93]);
+        if (tmp_called_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12324,7 +12312,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12335,9 +12323,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_23 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_23 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12348,50 +12336,50 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_38 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[94]);
-        if (tmp_called_name_11 == NULL) {
+        tmp_expression_value_38 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[94]);
+        if (tmp_called_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
 
             coroutine_heap->exception_lineno = 471;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_39 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_39 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_39 == NULL)) {
-            tmp_expression_name_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_39 == NULL)) {
+            tmp_expression_value_39 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_39 == NULL) {
+        if (tmp_expression_value_39 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_called_value_11);
 
             coroutine_heap->exception_lineno = 472;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[131]);
+        tmp_kw_call_arg_value_0_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[131]);
         if (tmp_kw_call_arg_value_0_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_called_value_11);
 
             coroutine_heap->exception_lineno = 472;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_fail_reason == NULL) {
-            Py_DECREF(tmp_called_name_10);
-            Py_DECREF(tmp_called_name_11);
+            Py_DECREF(tmp_called_value_10);
+            Py_DECREF(tmp_called_value_11);
             Py_DECREF(tmp_kw_call_arg_value_0_3);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[129]);
             coroutine_heap->exception_tb = NULL;
@@ -12410,16 +12398,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_3};
             PyObject *kw_values[2] = {tmp_kw_call_dict_value_0_3, tmp_kw_call_dict_value_1_2};
-            tmp_args_element_name_24 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_11, args, kw_values, mod_consts[130]);
+            tmp_args_element_value_24 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_11, args, kw_values, mod_consts[130]);
         }
 
-        Py_DECREF(tmp_called_name_11);
+        Py_DECREF(tmp_called_value_11);
         Py_DECREF(tmp_kw_call_arg_value_0_3);
-        if (tmp_args_element_name_24 == NULL) {
+        if (tmp_args_element_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_10);
+            Py_DECREF(tmp_called_value_10);
 
             coroutine_heap->exception_lineno = 471;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -12427,13 +12415,13 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         coroutine->m_frame->m_frame.f_lineno = 471;
         {
-            PyObject *call_args[] = {tmp_args_element_name_23, tmp_args_element_name_24};
-            tmp_expression_name_36 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_10, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_23, tmp_args_element_value_24};
+            tmp_expression_value_36 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_10, call_args);
         }
 
-        Py_DECREF(tmp_called_name_10);
-        Py_DECREF(tmp_args_element_name_24);
-        if (tmp_expression_name_36 == NULL) {
+        Py_DECREF(tmp_called_value_10);
+        Py_DECREF(tmp_args_element_value_24);
+        if (tmp_expression_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12443,9 +12431,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_35 = ASYNC_AWAIT(tmp_expression_name_36, await_normal);
-        Py_DECREF(tmp_expression_name_36);
-        if (tmp_expression_name_35 == NULL) {
+        tmp_expression_value_35 = ASYNC_AWAIT(tmp_expression_value_36, await_normal);
+        Py_DECREF(tmp_expression_value_36);
+        if (tmp_expression_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12455,14 +12443,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_36, sizeof(PyObject *), &tmp_called_name_10, sizeof(PyObject *), &tmp_expression_name_37, sizeof(PyObject *), &tmp_args_element_name_23, sizeof(PyObject *), &tmp_args_element_name_24, sizeof(PyObject *), &tmp_called_name_11, sizeof(PyObject *), &tmp_expression_name_38, sizeof(PyObject *), &tmp_kw_call_arg_value_0_3, sizeof(PyObject *), &tmp_expression_name_39, sizeof(PyObject *), &tmp_kw_call_dict_value_0_3, sizeof(PyObject *), &tmp_kw_call_dict_value_1_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_36, sizeof(PyObject *), &tmp_called_value_10, sizeof(PyObject *), &tmp_expression_value_37, sizeof(PyObject *), &tmp_args_element_value_23, sizeof(PyObject *), &tmp_args_element_value_24, sizeof(PyObject *), &tmp_called_value_11, sizeof(PyObject *), &tmp_expression_value_38, sizeof(PyObject *), &tmp_kw_call_arg_value_0_3, sizeof(PyObject *), &tmp_expression_value_39, sizeof(PyObject *), &tmp_kw_call_dict_value_0_3, sizeof(PyObject *), &tmp_kw_call_dict_value_1_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 6;
-        coroutine->m_yieldfrom = tmp_expression_name_35;
+        coroutine->m_yieldfrom = tmp_expression_value_35;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_6:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_36, sizeof(PyObject *), &tmp_called_name_10, sizeof(PyObject *), &tmp_expression_name_37, sizeof(PyObject *), &tmp_args_element_name_23, sizeof(PyObject *), &tmp_args_element_name_24, sizeof(PyObject *), &tmp_called_name_11, sizeof(PyObject *), &tmp_expression_name_38, sizeof(PyObject *), &tmp_kw_call_arg_value_0_3, sizeof(PyObject *), &tmp_expression_name_39, sizeof(PyObject *), &tmp_kw_call_dict_value_0_3, sizeof(PyObject *), &tmp_kw_call_dict_value_1_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_36, sizeof(PyObject *), &tmp_called_value_10, sizeof(PyObject *), &tmp_expression_value_37, sizeof(PyObject *), &tmp_args_element_value_23, sizeof(PyObject *), &tmp_args_element_value_24, sizeof(PyObject *), &tmp_called_value_11, sizeof(PyObject *), &tmp_expression_value_38, sizeof(PyObject *), &tmp_kw_call_arg_value_0_3, sizeof(PyObject *), &tmp_expression_value_39, sizeof(PyObject *), &tmp_kw_call_dict_value_0_3, sizeof(PyObject *), &tmp_kw_call_dict_value_1_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -12490,12 +12478,12 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     branch_end_6:;
     {
-        PyObject *tmp_called_name_12;
-        PyObject *tmp_expression_name_40;
-        PyObject *tmp_expression_name_41;
+        PyObject *tmp_called_value_12;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_expression_value_41;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_25;
-        PyObject *tmp_args_element_name_26;
+        PyObject *tmp_args_element_value_25;
+        PyObject *tmp_args_element_value_26;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -12508,9 +12496,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_41 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_40 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[21]);
-        if (tmp_expression_name_40 == NULL) {
+        tmp_expression_value_41 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_40 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[21]);
+        if (tmp_expression_value_40 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12520,9 +12508,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[98]);
-        Py_DECREF(tmp_expression_name_40);
-        if (tmp_called_name_12 == NULL) {
+        tmp_called_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[98]);
+        Py_DECREF(tmp_expression_value_40);
+        if (tmp_called_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12533,7 +12521,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_12);
+            Py_DECREF(tmp_called_value_12);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12544,16 +12532,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_25 = coroutine_heap->var_sid;
+        tmp_args_element_value_25 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[2]));
-        tmp_args_element_name_26 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_26 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 474;
         {
-            PyObject *call_args[] = {tmp_args_element_name_25, tmp_args_element_name_26};
-            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_12, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_25, tmp_args_element_value_26};
+            tmp_call_result_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_12, call_args);
         }
 
-        Py_DECREF(tmp_called_name_12);
+        Py_DECREF(tmp_called_value_12);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12569,9 +12557,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     goto branch_end_5;
     branch_no_5:;
     {
-        nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_42;
+        bool tmp_condition_result_7;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_42;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -12584,9 +12572,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_42 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[123]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_42 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[123]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12596,8 +12584,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -12608,8 +12596,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_7 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_7 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_7 != false) {
             goto branch_yes_7;
         } else {
             goto branch_no_7;
@@ -12617,16 +12605,16 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
     }
     branch_yes_7:;
     {
-        PyObject *tmp_expression_name_43;
-        PyObject *tmp_expression_name_44;
-        PyObject *tmp_called_name_13;
-        PyObject *tmp_expression_name_45;
-        PyObject *tmp_args_element_name_27;
-        PyObject *tmp_args_element_name_28;
-        PyObject *tmp_called_name_14;
-        PyObject *tmp_expression_name_46;
+        PyObject *tmp_expression_value_43;
+        PyObject *tmp_expression_value_44;
+        PyObject *tmp_called_value_13;
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_args_element_value_27;
+        PyObject *tmp_args_element_value_28;
+        PyObject *tmp_called_value_14;
+        PyObject *tmp_expression_value_46;
         PyObject *tmp_kw_call_arg_value_0_4;
-        PyObject *tmp_expression_name_47;
+        PyObject *tmp_expression_value_47;
         PyObject *tmp_kw_call_arg_value_1_2;
         PyObject *tmp_dict_key_2;
         PyObject *tmp_dict_value_2;
@@ -12645,9 +12633,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_45 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_13 = LOOKUP_ATTRIBUTE(tmp_expression_name_45, mod_consts[93]);
-        if (tmp_called_name_13 == NULL) {
+        tmp_expression_value_45 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_13 = LOOKUP_ATTRIBUTE(tmp_expression_value_45, mod_consts[93]);
+        if (tmp_called_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12658,7 +12646,7 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_13);
+            Py_DECREF(tmp_called_value_13);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12669,9 +12657,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_27 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_27 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_13);
+            Py_DECREF(tmp_called_value_13);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12682,42 +12670,42 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_46 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_called_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_46, mod_consts[94]);
-        if (tmp_called_name_14 == NULL) {
+        tmp_expression_value_46 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_called_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[94]);
+        if (tmp_called_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_13);
+            Py_DECREF(tmp_called_value_13);
 
             coroutine_heap->exception_lineno = 476;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_47 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_47 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_47 == NULL)) {
-            tmp_expression_name_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_47 == NULL)) {
+            tmp_expression_value_47 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_47 == NULL) {
+        if (tmp_expression_value_47 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_13);
-            Py_DECREF(tmp_called_name_14);
+            Py_DECREF(tmp_called_value_13);
+            Py_DECREF(tmp_called_value_14);
 
             coroutine_heap->exception_lineno = 477;
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_47, mod_consts[124]);
+        tmp_kw_call_arg_value_0_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[124]);
         if (tmp_kw_call_arg_value_0_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_13);
-            Py_DECREF(tmp_called_name_14);
+            Py_DECREF(tmp_called_value_13);
+            Py_DECREF(tmp_called_value_14);
 
             coroutine_heap->exception_lineno = 477;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -12725,8 +12713,8 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         tmp_dict_key_2 = mod_consts[33];
         if (coroutine_heap->var_sid == NULL) {
-            Py_DECREF(tmp_called_name_13);
-            Py_DECREF(tmp_called_name_14);
+            Py_DECREF(tmp_called_value_13);
+            Py_DECREF(tmp_called_value_14);
             Py_DECREF(tmp_kw_call_arg_value_0_4);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[33]);
             coroutine_heap->exception_tb = NULL;
@@ -12748,17 +12736,17 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_4, tmp_kw_call_arg_value_1_2};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_4};
-            tmp_args_element_name_28 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_name_14, args, kw_values, mod_consts[86]);
+            tmp_args_element_value_28 = CALL_FUNCTION_WITH_ARGS2_KWSPLIT(tmp_called_value_14, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_14);
+        Py_DECREF(tmp_called_value_14);
         Py_DECREF(tmp_kw_call_arg_value_0_4);
         Py_DECREF(tmp_kw_call_arg_value_1_2);
-        if (tmp_args_element_name_28 == NULL) {
+        if (tmp_args_element_value_28 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_13);
+            Py_DECREF(tmp_called_value_13);
 
             coroutine_heap->exception_lineno = 476;
             coroutine_heap->type_description_1 = "ccccoooo";
@@ -12766,13 +12754,13 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
         }
         coroutine->m_frame->m_frame.f_lineno = 476;
         {
-            PyObject *call_args[] = {tmp_args_element_name_27, tmp_args_element_name_28};
-            tmp_expression_name_44 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_13, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_27, tmp_args_element_value_28};
+            tmp_expression_value_44 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_13, call_args);
         }
 
-        Py_DECREF(tmp_called_name_13);
-        Py_DECREF(tmp_args_element_name_28);
-        if (tmp_expression_name_44 == NULL) {
+        Py_DECREF(tmp_called_value_13);
+        Py_DECREF(tmp_args_element_value_28);
+        if (tmp_expression_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12782,9 +12770,9 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_43 = ASYNC_AWAIT(tmp_expression_name_44, await_normal);
-        Py_DECREF(tmp_expression_name_44);
-        if (tmp_expression_name_43 == NULL) {
+        tmp_expression_value_43 = ASYNC_AWAIT(tmp_expression_value_44, await_normal);
+        Py_DECREF(tmp_expression_value_44);
+        if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -12794,14 +12782,14 @@ static PyObject *socketio$asyncio_server$$$function__17__handle_connect$$$corout
             coroutine_heap->type_description_1 = "ccccoooo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_44, sizeof(PyObject *), &tmp_called_name_13, sizeof(PyObject *), &tmp_expression_name_45, sizeof(PyObject *), &tmp_args_element_name_27, sizeof(PyObject *), &tmp_args_element_name_28, sizeof(PyObject *), &tmp_called_name_14, sizeof(PyObject *), &tmp_expression_name_46, sizeof(PyObject *), &tmp_kw_call_arg_value_0_4, sizeof(PyObject *), &tmp_expression_name_47, sizeof(PyObject *), &tmp_kw_call_arg_value_1_2, sizeof(PyObject *), &tmp_dict_key_2, sizeof(PyObject *), &tmp_dict_value_2, sizeof(PyObject *), &tmp_kw_call_dict_value_0_4, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_44, sizeof(PyObject *), &tmp_called_value_13, sizeof(PyObject *), &tmp_expression_value_45, sizeof(PyObject *), &tmp_args_element_value_27, sizeof(PyObject *), &tmp_args_element_value_28, sizeof(PyObject *), &tmp_called_value_14, sizeof(PyObject *), &tmp_expression_value_46, sizeof(PyObject *), &tmp_kw_call_arg_value_0_4, sizeof(PyObject *), &tmp_expression_value_47, sizeof(PyObject *), &tmp_kw_call_arg_value_1_2, sizeof(PyObject *), &tmp_dict_key_2, sizeof(PyObject *), &tmp_dict_value_2, sizeof(PyObject *), &tmp_kw_call_dict_value_0_4, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 7;
-        coroutine->m_yieldfrom = tmp_expression_name_43;
+        coroutine->m_yieldfrom = tmp_expression_value_43;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_7:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_44, sizeof(PyObject *), &tmp_called_name_13, sizeof(PyObject *), &tmp_expression_name_45, sizeof(PyObject *), &tmp_args_element_name_27, sizeof(PyObject *), &tmp_args_element_name_28, sizeof(PyObject *), &tmp_called_name_14, sizeof(PyObject *), &tmp_expression_name_46, sizeof(PyObject *), &tmp_kw_call_arg_value_0_4, sizeof(PyObject *), &tmp_expression_name_47, sizeof(PyObject *), &tmp_kw_call_arg_value_1_2, sizeof(PyObject *), &tmp_dict_key_2, sizeof(PyObject *), &tmp_dict_value_2, sizeof(PyObject *), &tmp_kw_call_dict_value_0_4, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_44, sizeof(PyObject *), &tmp_called_value_13, sizeof(PyObject *), &tmp_expression_value_45, sizeof(PyObject *), &tmp_args_element_value_27, sizeof(PyObject *), &tmp_args_element_value_28, sizeof(PyObject *), &tmp_called_value_14, sizeof(PyObject *), &tmp_expression_value_46, sizeof(PyObject *), &tmp_kw_call_arg_value_0_4, sizeof(PyObject *), &tmp_expression_value_47, sizeof(PyObject *), &tmp_kw_call_arg_value_1_2, sizeof(PyObject *), &tmp_dict_key_2, sizeof(PyObject *), &tmp_dict_value_2, sizeof(PyObject *), &tmp_kw_call_dict_value_0_4, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -12998,9 +12986,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__18__handle_disconnect(
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -13170,11 +13155,11 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -13187,9 +13172,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13199,9 +13184,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[135]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[135]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13212,7 +13197,7 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13223,16 +13208,16 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 482;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13247,12 +13232,12 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
         coroutine_heap->var_sid = tmp_assign_source_2;
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -13265,8 +13250,8 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[21]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[21]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13278,13 +13263,13 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_3 = coroutine_heap->var_sid;
+        tmp_args_element_value_3 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 483;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
-            tmp_operand_name_1 = CALL_METHOD_WITH_ARGS2(
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4};
+            tmp_operand_value_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
                 mod_consts[89],
                 call_args
@@ -13292,7 +13277,7 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
         }
 
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13302,8 +13287,8 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -13314,8 +13299,8 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -13327,9 +13312,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
     goto frame_return_exit_1;
     branch_no_1:;
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_call_result_1;
         PyObject *tmp_kw_call_arg_value_0_1;
         PyObject *tmp_kw_call_dict_value_0_1;
@@ -13345,9 +13330,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[21]);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[21]);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13357,9 +13342,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[92]);
-        Py_DECREF(tmp_expression_name_4);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[92]);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13377,10 +13362,10 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[1] = {tmp_kw_call_dict_value_0_1};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[86]);
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[86]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13394,12 +13379,12 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 486;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -13415,22 +13400,22 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
         }
 
         tmp_called_instance_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_args_element_name_5 = mod_consts[98];
+        tmp_args_element_value_5 = mod_consts[98];
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_7 = coroutine_heap->var_sid;
+        tmp_args_element_value_7 = coroutine_heap->var_sid;
         coroutine->m_frame->m_frame.f_lineno = 486;
         {
-            PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
-            tmp_expression_name_7 = CALL_METHOD_WITH_ARGS3(
+            PyObject *call_args[] = {tmp_args_element_value_5, tmp_args_element_value_6, tmp_args_element_value_7};
+            tmp_expression_value_7 = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_2,
                 mod_consts[97],
                 call_args
             );
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13440,9 +13425,9 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = ASYNC_AWAIT(tmp_expression_name_7, await_normal);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = ASYNC_AWAIT(tmp_expression_value_7, await_normal);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13452,14 +13437,14 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_6;
+        coroutine->m_yieldfrom = tmp_expression_value_6;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_instance_2, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -13487,10 +13472,10 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
     }
     {
         PyObject *tmp_called_instance_3;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_args_element_name_9;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_args_element_value_9;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -13503,8 +13488,8 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[21]);
+        tmp_expression_value_8 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_instance_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[21]);
         if (tmp_called_instance_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13516,12 +13501,12 @@ static PyObject *socketio$asyncio_server$$$function__18__handle_disconnect$$$cor
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_8 = coroutine_heap->var_sid;
+        tmp_args_element_value_8 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[1]));
-        tmp_args_element_name_9 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_9 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         coroutine->m_frame->m_frame.f_lineno = 487;
         {
-            PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9};
+            PyObject *call_args[] = {tmp_args_element_value_8, tmp_args_element_value_9};
             tmp_call_result_2 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_3,
                 mod_consts[98],
@@ -13717,9 +13702,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__19__handle_event(struc
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -13893,11 +13875,11 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -13910,9 +13892,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13922,9 +13904,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[135]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[135]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13935,7 +13917,7 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -13946,16 +13928,16 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 492;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -13970,16 +13952,16 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
         coroutine_heap->var_sid = tmp_assign_source_2;
     }
     {
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_args_element_name_6;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_args_element_value_6;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -13992,9 +13974,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_expression_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[5]);
-        if (tmp_expression_name_3 == NULL) {
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_expression_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[5]);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14004,9 +13986,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[17]);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[17]);
+        Py_DECREF(tmp_expression_value_3);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14016,9 +13998,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[139];
+        tmp_args_element_value_3 = mod_consts[139];
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14029,31 +14011,31 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_subscript_name_1 = mod_consts[45];
-        tmp_args_element_name_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_5, tmp_subscript_name_1, 0);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_args_element_value_4 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_5, tmp_subscript_value_1, 0);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 493;
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_5 = coroutine_heap->var_sid;
+        tmp_args_element_value_5 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 493;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5, tmp_args_element_name_6};
-            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5, tmp_args_element_value_6};
+            tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_4);
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_4);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14067,12 +14049,12 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
         Py_DECREF(tmp_call_result_1);
     }
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -14085,8 +14067,8 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[21]);
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[21]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14098,13 +14080,13 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_7 = coroutine_heap->var_sid;
+        tmp_args_element_value_7 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_8 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_8 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 495;
         {
-            PyObject *call_args[] = {tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_operand_name_1 = CALL_METHOD_WITH_ARGS2(
+            PyObject *call_args[] = {tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_operand_value_1 = CALL_METHOD_WITH_ARGS2(
                 tmp_called_instance_1,
                 mod_consts[89],
                 call_args
@@ -14112,7 +14094,7 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
         }
 
         Py_DECREF(tmp_called_instance_1);
-        if (tmp_operand_name_1 == NULL) {
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14122,8 +14104,8 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -14134,8 +14116,8 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -14144,11 +14126,11 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
     branch_yes_1:;
     {
         PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_call_result_2;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -14161,8 +14143,8 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[5]);
+        tmp_expression_value_7 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[5]);
         if (tmp_called_instance_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14173,14 +14155,14 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_9 = mod_consts[141];
+        tmp_args_element_value_9 = mod_consts[141];
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_10 = coroutine_heap->var_sid;
+        tmp_args_element_value_10 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_11 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_11 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 496;
         {
-            PyObject *call_args[] = {tmp_args_element_name_9, tmp_args_element_name_10, tmp_args_element_name_11};
+            PyObject *call_args[] = {tmp_args_element_value_9, tmp_args_element_value_10, tmp_args_element_value_11};
             tmp_call_result_2 = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_2,
                 mod_consts[140],
@@ -14207,7 +14189,7 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_expression_name_8;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_attribute_value_1;
         int tmp_truth_name_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
@@ -14222,8 +14204,8 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[7]);
+        tmp_expression_value_8 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_attribute_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[7]);
         if (tmp_attribute_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14255,17 +14237,17 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
     }
     branch_yes_2:;
     {
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_call_result_3;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_args_element_name_18;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_args_element_value_18;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -14278,9 +14260,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_9 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[104]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_9 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[104]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14291,7 +14273,7 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14302,21 +14284,21 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_args_element_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[142]);
-        if (tmp_args_element_name_12 == NULL) {
+        tmp_expression_value_10 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[142]);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             coroutine_heap->exception_lineno = 500;
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_12);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_12);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14327,12 +14309,12 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_13 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_args_element_value_13 = Nuitka_Cell_GET(coroutine->m_closure[4]);
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_14 = coroutine_heap->var_sid;
+        tmp_args_element_value_14 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_12);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_12);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14343,10 +14325,10 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_15 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_15 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_12);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_12);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14357,12 +14339,12 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_16 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_16 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_12);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_12);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14373,15 +14355,15 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_18 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_18 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 500;
         {
-            PyObject *call_args[] = {tmp_args_element_name_12, tmp_args_element_name_13, tmp_args_element_name_14, tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17, tmp_args_element_name_18};
-            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS7(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_12, tmp_args_element_value_13, tmp_args_element_value_14, tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17, tmp_args_element_value_18};
+            tmp_call_result_3 = CALL_FUNCTION_WITH_ARGS7(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_12);
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_12);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14397,16 +14379,16 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
     goto branch_end_2;
     branch_no_2:;
     {
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_13;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_args_element_name_23;
-        PyObject *tmp_args_element_name_24;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_13;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_args_element_value_23;
+        PyObject *tmp_args_element_value_24;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 503;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
@@ -14421,9 +14403,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_13 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[142]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_expression_value_13 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[142]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14434,7 +14416,7 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14445,11 +14427,11 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_19 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_args_element_value_19 = Nuitka_Cell_GET(coroutine->m_closure[4]);
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_20 = coroutine_heap->var_sid;
+        tmp_args_element_value_20 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14460,9 +14442,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_21 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_21 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14473,11 +14455,11 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_22 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_22 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_23 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_23 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14488,15 +14470,15 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_24 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_24 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         coroutine->m_frame->m_frame.f_lineno = 503;
         {
-            PyObject *call_args[] = {tmp_args_element_name_19, tmp_args_element_name_20, tmp_args_element_name_21, tmp_args_element_name_22, tmp_args_element_name_23, tmp_args_element_name_24};
-            tmp_expression_name_12 = CALL_FUNCTION_WITH_ARGS6(tmp_called_name_4, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_19, tmp_args_element_value_20, tmp_args_element_value_21, tmp_args_element_value_22, tmp_args_element_value_23, tmp_args_element_value_24};
+            tmp_expression_value_12 = CALL_FUNCTION_WITH_ARGS6(tmp_called_value_4, call_args);
         }
 
-        Py_DECREF(tmp_called_name_4);
-        if (tmp_expression_name_12 == NULL) {
+        Py_DECREF(tmp_called_value_4);
+        if (tmp_expression_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14506,9 +14488,9 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_11 = ASYNC_AWAIT(tmp_expression_name_12, await_normal);
-        Py_DECREF(tmp_expression_name_12);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_11 = ASYNC_AWAIT(tmp_expression_value_12, await_normal);
+        Py_DECREF(tmp_expression_value_12);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -14518,14 +14500,14 @@ static PyObject *socketio$asyncio_server$$$function__19__handle_event$$$coroutin
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), &tmp_args_element_name_20, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_args_element_name_23, sizeof(PyObject *), &tmp_args_element_name_24, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_12, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), &tmp_args_element_value_20, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_args_element_value_23, sizeof(PyObject *), &tmp_args_element_value_24, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_11;
+        coroutine->m_yieldfrom = tmp_expression_value_11;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_12, sizeof(PyObject *), &tmp_called_name_4, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), &tmp_args_element_name_20, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_args_element_name_23, sizeof(PyObject *), &tmp_args_element_name_24, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_12, sizeof(PyObject *), &tmp_called_value_4, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), &tmp_args_element_value_20, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_args_element_value_23, sizeof(PyObject *), &tmp_args_element_value_24, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -14735,9 +14717,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__20__handle_event_inter
     par_data = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_data);
-    Py_DECREF(par_data);
-    par_data = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -14867,17 +14846,17 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
     // Framed code:
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_dircall_arg1_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_dircall_arg2_1;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_subscript_value_1;
         PyObject *tmp_dircall_arg3_1;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_subscript_name_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_subscript_value_2;
         coroutine->m_frame->m_frame.f_lineno = 508;
         if (Nuitka_Cell_GET(coroutine->m_closure[5]) == NULL) {
 
@@ -14891,8 +14870,8 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[97]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_dircall_arg1_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[97]);
         if (tmp_dircall_arg1_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14915,9 +14894,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_subscript_name_1 = mod_consts[45];
-        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_1, 0);
+        tmp_expression_value_4 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_tuple_element_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_4, tmp_subscript_value_1, 0);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14979,9 +14958,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
-        tmp_subscript_name_2 = mod_consts[145];
-        tmp_dircall_arg3_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_subscript_value_2 = mod_consts[145];
+        tmp_dircall_arg3_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
         if (tmp_dircall_arg3_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -14996,9 +14975,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_1, tmp_dircall_arg2_1, tmp_dircall_arg3_1};
-            tmp_expression_name_2 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_expression_value_2 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
-        if (tmp_expression_name_2 == NULL) {
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15008,9 +14987,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = ASYNC_AWAIT(tmp_expression_name_2, await_normal);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_1 = ASYNC_AWAIT(tmp_expression_value_2, await_normal);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15020,14 +14999,14 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_subscript_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_subscript_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_1;
+        coroutine->m_yieldfrom = tmp_expression_value_1;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_name_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_subscript_name_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_expression_name_5, sizeof(PyObject *), &tmp_subscript_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_2, sizeof(PyObject *), &tmp_dircall_arg1_1, sizeof(PyObject *), &tmp_expression_value_3, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), &tmp_tuple_element_1, sizeof(PyObject *), &tmp_expression_value_4, sizeof(PyObject *), &tmp_subscript_value_1, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_subscript_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -15056,8 +15035,8 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
     }
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
@@ -15070,9 +15049,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_compexpr_right_1 = Py_None;
-        tmp_condition_result_1 = (tmp_compexpr_left_1 != tmp_compexpr_right_1) ? true : false;
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_right_1 = Py_None;
+        tmp_condition_result_1 = (tmp_cmp_expr_left_1 != tmp_cmp_expr_right_1) ? true : false;
         if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
@@ -15082,12 +15061,12 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
     branch_yes_1:;
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
         CHECK_OBJECT(coroutine_heap->var_r);
-        tmp_compexpr_left_2 = coroutine_heap->var_r;
-        tmp_compexpr_right_2 = Py_None;
-        tmp_condition_result_2 = (tmp_compexpr_left_2 == tmp_compexpr_right_2) ? true : false;
+        tmp_cmp_expr_left_2 = coroutine_heap->var_r;
+        tmp_cmp_expr_right_2 = Py_None;
+        tmp_condition_result_2 = (tmp_cmp_expr_left_2 == tmp_cmp_expr_right_2) ? true : false;
         if (tmp_condition_result_2 != false) {
             goto branch_yes_2;
         } else {
@@ -15114,7 +15093,7 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
         CHECK_OBJECT(coroutine_heap->var_r);
         tmp_isinstance_inst_1 = coroutine_heap->var_r;
         tmp_isinstance_cls_1 = (PyObject *)&PyTuple_Type;
-        coroutine_heap->tmp_res = Nuitka_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
+        coroutine_heap->tmp_res = PyObject_IsInstance(tmp_isinstance_inst_1, tmp_isinstance_cls_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -15175,16 +15154,16 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
     branch_end_3:;
     branch_end_2:;
     {
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_9;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_9;
         PyObject *tmp_kw_call_arg_value_0_1;
-        PyObject *tmp_expression_name_10;
+        PyObject *tmp_expression_value_10;
         PyObject *tmp_kw_call_dict_value_0_1;
         PyObject *tmp_kw_call_dict_value_1_1;
         PyObject *tmp_kw_call_dict_value_2_1;
@@ -15202,9 +15181,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_8 = Nuitka_Cell_GET(coroutine->m_closure[5]);
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[93]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_8 = Nuitka_Cell_GET(coroutine->m_closure[5]);
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[93]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15215,7 +15194,7 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15226,9 +15205,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15239,50 +15218,50 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_9 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[94]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_9 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[94]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 518;
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_10 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_10 == NULL)) {
-            tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_10 == NULL)) {
+            tmp_expression_value_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_10 == NULL) {
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 519;
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[146]);
+        tmp_kw_call_arg_value_0_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[146]);
         if (tmp_kw_call_arg_value_0_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 519;
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
@@ -15296,8 +15275,8 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
 
         tmp_kw_call_dict_value_0_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
             coroutine_heap->exception_tb = NULL;
@@ -15311,8 +15290,8 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
 
         tmp_kw_call_dict_value_1_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_1);
+            Py_DECREF(tmp_called_value_2);
             Py_DECREF(tmp_kw_call_arg_value_0_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
@@ -15329,16 +15308,16 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
         {
             PyObject *args[] = {tmp_kw_call_arg_value_0_1};
             PyObject *kw_values[3] = {tmp_kw_call_dict_value_0_1, tmp_kw_call_dict_value_1_1, tmp_kw_call_dict_value_2_1};
-            tmp_args_element_name_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_name_2, args, kw_values, mod_consts[147]);
+            tmp_args_element_value_2 = CALL_FUNCTION_WITH_ARGS1_KWSPLIT(tmp_called_value_2, args, kw_values, mod_consts[147]);
         }
 
-        Py_DECREF(tmp_called_name_2);
+        Py_DECREF(tmp_called_value_2);
         Py_DECREF(tmp_kw_call_arg_value_0_1);
-        if (tmp_args_element_name_2 == NULL) {
+        if (tmp_args_element_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
 
             coroutine_heap->exception_lineno = 518;
             coroutine_heap->type_description_1 = "ccccccco";
@@ -15346,13 +15325,13 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
         }
         coroutine->m_frame->m_frame.f_lineno = 518;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_7 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_element_name_2);
-        if (tmp_expression_name_7 == NULL) {
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_element_value_2);
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15362,9 +15341,9 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = ASYNC_AWAIT(tmp_expression_name_7, await_normal);
-        Py_DECREF(tmp_expression_name_7);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_6 = ASYNC_AWAIT(tmp_expression_value_7, await_normal);
+        Py_DECREF(tmp_expression_value_7);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15374,14 +15353,14 @@ static PyObject *socketio$asyncio_server$$$function__20__handle_event_internal$$
             coroutine_heap->type_description_1 = "ccccccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_9, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_10, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_9, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_10, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_6;
+        coroutine->m_yieldfrom = tmp_expression_value_6;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_7, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_8, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_9, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_name_10, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_7, sizeof(PyObject *), &tmp_called_value_1, sizeof(PyObject *), &tmp_expression_value_8, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_9, sizeof(PyObject *), &tmp_kw_call_arg_value_0_1, sizeof(PyObject *), &tmp_expression_value_10, sizeof(PyObject *), &tmp_kw_call_dict_value_0_1, sizeof(PyObject *), &tmp_kw_call_dict_value_1_1, sizeof(PyObject *), &tmp_kw_call_dict_value_2_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -15576,9 +15555,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__21__handle_ack(struct 
     par_namespace = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_namespace);
-    Py_DECREF(par_namespace);
-    par_namespace = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -15751,11 +15727,11 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
     }
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -15768,9 +15744,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_expression_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
-        if (tmp_expression_name_1 == NULL) {
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_expression_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15780,9 +15756,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[135]);
-        Py_DECREF(tmp_expression_name_1);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[135]);
+        Py_DECREF(tmp_expression_value_1);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15793,7 +15769,7 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15804,16 +15780,16 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 524;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_1, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15829,11 +15805,11 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_args_element_name_5;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_args_element_value_5;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -15846,8 +15822,8 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[5]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[5]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -15858,14 +15834,14 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_3 = mod_consts[150];
+        tmp_args_element_value_3 = mod_consts[150];
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_4 = coroutine_heap->var_sid;
+        tmp_args_element_value_4 = coroutine_heap->var_sid;
         CHECK_OBJECT(Nuitka_Cell_GET(coroutine->m_closure[3]));
-        tmp_args_element_name_5 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_args_element_value_5 = Nuitka_Cell_GET(coroutine->m_closure[3]);
         coroutine->m_frame->m_frame.f_lineno = 525;
         {
-            PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
+            PyObject *call_args[] = {tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS3(
                 tmp_called_instance_1,
                 mod_consts[17],
@@ -15887,14 +15863,14 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
         Py_DECREF(tmp_call_result_1);
     }
     {
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_args_element_name_8;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_args_element_value_8;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 526;
         if (Nuitka_Cell_GET(coroutine->m_closure[4]) == NULL) {
@@ -15909,9 +15885,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(coroutine->m_closure[4]);
-        tmp_expression_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[21]);
-        if (tmp_expression_name_6 == NULL) {
+        tmp_expression_value_7 = Nuitka_Cell_GET(coroutine->m_closure[4]);
+        tmp_expression_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[21]);
+        if (tmp_expression_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15921,9 +15897,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[151]);
-        Py_DECREF(tmp_expression_name_6);
-        if (tmp_called_name_2 == NULL) {
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[151]);
+        Py_DECREF(tmp_expression_value_6);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15934,9 +15910,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_sid);
-        tmp_args_element_name_6 = coroutine_heap->var_sid;
+        tmp_args_element_value_6 = coroutine_heap->var_sid;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[112]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15947,9 +15923,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_7 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_args_element_value_7 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15960,15 +15936,15 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_8 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_8 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 526;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8};
-            tmp_expression_name_5 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8};
+            tmp_expression_value_5 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        if (tmp_expression_name_5 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15978,9 +15954,9 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = ASYNC_AWAIT(tmp_expression_name_5, await_normal);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_expression_value_4 = ASYNC_AWAIT(tmp_expression_value_5, await_normal);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -15990,14 +15966,14 @@ static PyObject *socketio$asyncio_server$$$function__21__handle_ack$$$coroutine_
             coroutine_heap->type_description_1 = "ccccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_5, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_5, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_4;
+        coroutine->m_yieldfrom = tmp_expression_value_4;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_5, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_6, sizeof(PyObject *), &tmp_expression_name_7, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_5, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_6, sizeof(PyObject *), &tmp_expression_value_7, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -16186,9 +16162,6 @@ static PyObject *impl_socketio$asyncio_server$$$function__22__trigger_event(stru
     par_args = NULL;
     goto function_return_exit;
     // End of try:
-    CHECK_OBJECT(par_args);
-    Py_DECREF(par_args);
-    par_args = NULL;
 
     NUITKA_CANNOT_GET_HERE("Return statement must have exited already.");
     return NULL;
@@ -16325,9 +16298,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
@@ -16340,7 +16313,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16353,9 +16326,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[155]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[155]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16365,8 +16338,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16394,11 +16367,11 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     }
     {
         bool tmp_condition_result_2;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[19]);
@@ -16411,7 +16384,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_cmp_expr_left_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16424,9 +16397,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[155]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[155]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16437,7 +16410,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_expression_name_2);
+            Py_DECREF(tmp_expression_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16448,10 +16421,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_compexpr_right_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_subscript_value_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_right_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16461,8 +16434,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_2, tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_2, tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16483,11 +16456,11 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_expression_name_5;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_subscript_name_2;
-        PyObject *tmp_subscript_name_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_subscript_value_2;
+        PyObject *tmp_subscript_value_3;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16500,9 +16473,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[155]);
-        if (tmp_expression_name_5 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[155]);
+        if (tmp_expression_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16513,7 +16486,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_expression_name_5);
+            Py_DECREF(tmp_expression_value_5);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16524,10 +16497,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_5, tmp_subscript_name_2);
-        Py_DECREF(tmp_expression_name_5);
-        if (tmp_expression_name_4 == NULL) {
+        tmp_subscript_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_5, tmp_subscript_value_2);
+        Py_DECREF(tmp_expression_value_5);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16538,7 +16511,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_expression_name_4);
+            Py_DECREF(tmp_expression_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[19]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16549,9 +16522,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_name_4, tmp_subscript_name_3);
-        Py_DECREF(tmp_expression_name_4);
+        tmp_subscript_value_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_assign_source_2 = LOOKUP_SUBSCRIPT(tmp_expression_value_4, tmp_subscript_value_3);
+        Py_DECREF(tmp_expression_value_4);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16577,14 +16550,14 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
         int tmp_and_left_truth_1;
         bool tmp_and_left_value_1;
         bool tmp_and_right_value_1;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_7;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_subscript_name_4;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_subscript_value_4;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[19]);
@@ -16597,7 +16570,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_cmp_expr_left_3 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16610,9 +16583,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_7 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[156]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_expression_value_7 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[156]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16622,8 +16595,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_3, tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_3, tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16642,7 +16615,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto and_left_1;
         }
         and_right_1:;
-        tmp_compexpr_left_4 = mod_consts[157];
+        tmp_cmp_expr_left_4 = mod_consts[157];
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16655,9 +16628,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_9 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[155]);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_9 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[155]);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16668,7 +16641,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_expression_name_8);
+            Py_DECREF(tmp_expression_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16679,10 +16652,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_4 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_compexpr_right_4 = LOOKUP_SUBSCRIPT(tmp_expression_name_8, tmp_subscript_name_4);
-        Py_DECREF(tmp_expression_name_8);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_subscript_value_4 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_right_4 = LOOKUP_SUBSCRIPT(tmp_expression_value_8, tmp_subscript_value_4);
+        Py_DECREF(tmp_expression_value_8);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16692,8 +16665,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_4, tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_4, tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -16719,11 +16692,11 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     branch_yes_3:;
     {
         PyObject *tmp_assign_source_3;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_subscript_name_5;
-        PyObject *tmp_subscript_name_6;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_subscript_value_5;
+        PyObject *tmp_subscript_value_6;
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -16736,9 +16709,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[155]);
-        if (tmp_expression_name_11 == NULL) {
+        tmp_expression_value_12 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[155]);
+        if (tmp_expression_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16749,7 +16722,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_expression_name_11);
+            Py_DECREF(tmp_expression_value_11);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16760,10 +16733,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_10 = LOOKUP_SUBSCRIPT(tmp_expression_name_11, tmp_subscript_name_5);
-        Py_DECREF(tmp_expression_name_11);
-        if (tmp_expression_name_10 == NULL) {
+        tmp_subscript_value_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_10 = LOOKUP_SUBSCRIPT(tmp_expression_value_11, tmp_subscript_value_5);
+        Py_DECREF(tmp_expression_value_11);
+        if (tmp_expression_value_10 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16773,9 +16746,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_subscript_name_6 = mod_consts[157];
-        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_name_10, tmp_subscript_name_6);
-        Py_DECREF(tmp_expression_name_10);
+        tmp_subscript_value_6 = mod_consts[157];
+        tmp_assign_source_3 = LOOKUP_SUBSCRIPT(tmp_expression_value_10, tmp_subscript_value_6);
+        Py_DECREF(tmp_expression_value_10);
         if (tmp_assign_source_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16910,18 +16883,18 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     branch_yes_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         int tmp_truth_name_2;
-        tmp_expression_name_13 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
+        tmp_expression_value_13 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_expression_name_13 == NULL)) {
-            tmp_expression_name_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
+        if (unlikely(tmp_expression_value_13 == NULL)) {
+            tmp_expression_value_13 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_expression_name_13 == NULL) {
+        if (tmp_expression_value_13 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16931,8 +16904,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[159]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[159]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16943,7 +16916,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (coroutine_heap->var_handler == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_LOCAL_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[158]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -16954,10 +16927,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = coroutine_heap->var_handler;
+        tmp_args_element_value_1 = coroutine_heap->var_handler;
         coroutine->m_frame->m_frame.f_lineno = 540;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -16991,8 +16964,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     // Tried code:
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_expression_name_15;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
         PyObject *tmp_dircall_arg1_2;
         PyObject *tmp_dircall_arg2_1;
         coroutine->m_frame->m_frame.f_lineno = 542;
@@ -17027,9 +17000,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_2, tmp_dircall_arg2_1};
-            tmp_expression_name_15 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
+            tmp_expression_value_15 = impl___main__$$$function__5_complex_call_helper_star_list(dir_call_args);
         }
-        if (tmp_expression_name_15 == NULL) {
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17039,9 +17012,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto try_except_handler_2;
         }
-        tmp_expression_name_14 = ASYNC_AWAIT(tmp_expression_name_15, await_normal);
-        Py_DECREF(tmp_expression_name_15);
-        if (tmp_expression_name_14 == NULL) {
+        tmp_expression_value_14 = ASYNC_AWAIT(tmp_expression_value_15, await_normal);
+        Py_DECREF(tmp_expression_value_15);
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17051,14 +17024,14 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_dircall_arg1_2, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_dircall_arg1_2, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_14;
+        coroutine->m_yieldfrom = tmp_expression_value_14;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_dircall_arg1_2, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_dircall_arg1_2, sizeof(PyObject *), &tmp_dircall_arg2_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -17112,17 +17085,17 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     // Tried code:
     {
         bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_16;
-        tmp_compexpr_left_5 = EXC_TYPE(PyThreadState_GET());
-        tmp_expression_name_16 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_16;
+        tmp_cmp_expr_left_5 = EXC_TYPE(PyThreadState_GET());
+        tmp_expression_value_16 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[39]);
 
-        if (unlikely(tmp_expression_name_16 == NULL)) {
-            tmp_expression_name_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
+        if (unlikely(tmp_expression_value_16 == NULL)) {
+            tmp_expression_value_16 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[39]);
         }
 
-        if (tmp_expression_name_16 == NULL) {
+        if (tmp_expression_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17132,8 +17105,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto try_except_handler_3;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[160]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[160]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17143,8 +17116,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto try_except_handler_3;
         }
-        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        coroutine_heap->tmp_res = EXCEPTION_MATCH_BOOL(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17286,9 +17259,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     branch_no_1:;
     {
         bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_17;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_17;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
@@ -17301,7 +17274,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_left_6 = Nuitka_Cell_GET(coroutine->m_closure[2]);
         if (Nuitka_Cell_GET(coroutine->m_closure[3]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -17314,9 +17287,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[162]);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_expression_value_17 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[162]);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17326,8 +17299,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_6, tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_6, tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17347,13 +17320,13 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
     }
     branch_yes_7:;
     {
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_expression_name_19;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_expression_value_19;
         PyObject *tmp_dircall_arg1_4;
-        PyObject *tmp_expression_name_20;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_expression_name_22;
-        PyObject *tmp_subscript_name_7;
+        PyObject *tmp_expression_value_20;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_expression_value_22;
+        PyObject *tmp_subscript_value_7;
         PyObject *tmp_dircall_arg2_3;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_dircall_arg3_1;
@@ -17370,9 +17343,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_22 = Nuitka_Cell_GET(coroutine->m_closure[3]);
-        tmp_expression_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[162]);
-        if (tmp_expression_name_21 == NULL) {
+        tmp_expression_value_22 = Nuitka_Cell_GET(coroutine->m_closure[3]);
+        tmp_expression_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[162]);
+        if (tmp_expression_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17383,7 +17356,7 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
-            Py_DECREF(tmp_expression_name_21);
+            Py_DECREF(tmp_expression_value_21);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[12]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17394,10 +17367,10 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_7 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_20 = LOOKUP_SUBSCRIPT(tmp_expression_name_21, tmp_subscript_name_7);
-        Py_DECREF(tmp_expression_name_21);
-        if (tmp_expression_name_20 == NULL) {
+        tmp_subscript_value_7 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_20 = LOOKUP_SUBSCRIPT(tmp_expression_value_21, tmp_subscript_value_7);
+        Py_DECREF(tmp_expression_value_21);
+        if (tmp_expression_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17407,8 +17380,8 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_dircall_arg1_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[163]);
-        Py_DECREF(tmp_expression_name_20);
+        tmp_dircall_arg1_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[163]);
+        Py_DECREF(tmp_expression_value_20);
         if (tmp_dircall_arg1_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17452,9 +17425,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
 
         {
             PyObject *dir_call_args[] = {tmp_dircall_arg1_4, tmp_dircall_arg2_3, tmp_dircall_arg3_1};
-            tmp_expression_name_19 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
+            tmp_expression_value_19 = impl___main__$$$function__2_complex_call_helper_pos_star_list(dir_call_args);
         }
-        if (tmp_expression_name_19 == NULL) {
+        if (tmp_expression_value_19 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17464,9 +17437,9 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_18 = ASYNC_AWAIT(tmp_expression_name_19, await_normal);
-        Py_DECREF(tmp_expression_name_19);
-        if (tmp_expression_name_18 == NULL) {
+        tmp_expression_value_18 = ASYNC_AWAIT(tmp_expression_value_19, await_normal);
+        Py_DECREF(tmp_expression_value_19);
+        if (tmp_expression_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17476,14 +17449,14 @@ static PyObject *socketio$asyncio_server$$$function__22__trigger_event$$$corouti
             coroutine_heap->type_description_1 = "ccccoo";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_19, sizeof(PyObject *), &tmp_dircall_arg1_4, sizeof(PyObject *), &tmp_expression_name_20, sizeof(PyObject *), &tmp_expression_name_21, sizeof(PyObject *), &tmp_expression_name_22, sizeof(PyObject *), &tmp_subscript_name_7, sizeof(PyObject *), &tmp_dircall_arg2_3, sizeof(PyObject *), &tmp_tuple_element_3, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_19, sizeof(PyObject *), &tmp_dircall_arg1_4, sizeof(PyObject *), &tmp_expression_value_20, sizeof(PyObject *), &tmp_expression_value_21, sizeof(PyObject *), &tmp_expression_value_22, sizeof(PyObject *), &tmp_subscript_value_7, sizeof(PyObject *), &tmp_dircall_arg2_3, sizeof(PyObject *), &tmp_tuple_element_3, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_18;
+        coroutine->m_yieldfrom = tmp_expression_value_18;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_19, sizeof(PyObject *), &tmp_dircall_arg1_4, sizeof(PyObject *), &tmp_expression_name_20, sizeof(PyObject *), &tmp_expression_name_21, sizeof(PyObject *), &tmp_expression_name_22, sizeof(PyObject *), &tmp_subscript_name_7, sizeof(PyObject *), &tmp_dircall_arg2_3, sizeof(PyObject *), &tmp_tuple_element_3, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_19, sizeof(PyObject *), &tmp_dircall_arg1_4, sizeof(PyObject *), &tmp_expression_value_20, sizeof(PyObject *), &tmp_expression_value_21, sizeof(PyObject *), &tmp_expression_value_22, sizeof(PyObject *), &tmp_subscript_value_7, sizeof(PyObject *), &tmp_dircall_arg2_3, sizeof(PyObject *), &tmp_tuple_element_3, sizeof(PyObject *), &tmp_dircall_arg3_1, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -17787,9 +17760,9 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
 
     // Framed code:
     {
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -17802,9 +17775,9 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_operand_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[166]);
-        if (tmp_operand_name_1 == NULL) {
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_operand_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[166]);
+        if (tmp_operand_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -17814,8 +17787,8 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
-        Py_DECREF(tmp_operand_name_1);
+        coroutine_heap->tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
+        Py_DECREF(tmp_operand_value_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -17826,8 +17799,8 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
             coroutine_heap->type_description_1 = "ccc";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (coroutine_heap->tmp_res == 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -17865,7 +17838,7 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
     }
     {
         PyObject *tmp_called_instance_1;
-        PyObject *tmp_expression_name_2;
+        PyObject *tmp_expression_value_2;
         PyObject *tmp_call_result_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
@@ -17879,8 +17852,8 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[21]);
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17910,7 +17883,7 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         PyObject *tmp_ass_subscript_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -17937,8 +17910,8 @@ static PyObject *socketio$asyncio_server$$$function__23__handle_eio_connect$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[127]);
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[127]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18221,9 +18194,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     // Framed code:
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
@@ -18236,7 +18209,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -18249,9 +18222,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[171]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_1 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[171]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18261,8 +18234,8 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -18283,9 +18256,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_yes_1:;
     {
         PyObject *tmp_assign_source_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_subscript_value_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -18298,9 +18271,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_expression_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[171]);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_expression_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[171]);
+        if (tmp_expression_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18311,7 +18284,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_expression_name_2);
+            Py_DECREF(tmp_expression_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18322,9 +18295,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_subscript_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_name_2, tmp_subscript_name_1);
-        Py_DECREF(tmp_expression_name_2);
+        tmp_subscript_value_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_assign_source_1 = LOOKUP_SUBSCRIPT(tmp_expression_value_2, tmp_subscript_value_1);
+        Py_DECREF(tmp_expression_value_2);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18340,15 +18313,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     {
         nuitka_bool tmp_condition_result_2;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_args_element_value_1;
         int tmp_truth_name_1;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_4 = coroutine_heap->var_pkt;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[172]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = coroutine_heap->var_pkt;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[172]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18359,7 +18332,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_1);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18370,10 +18343,10 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         coroutine->m_frame->m_frame.f_lineno = 565;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18406,7 +18379,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_yes_2:;
     {
         PyObject *tmp_delsubscr_target_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_expression_value_5;
         PyObject *tmp_delsubscr_subscript_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
@@ -18420,8 +18393,8 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_delsubscr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[171]);
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_delsubscr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[171]);
         if (tmp_delsubscr_target_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18460,14 +18433,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     {
         nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_compexpr_left_2;
-        PyObject *tmp_compexpr_right_2;
-        PyObject *tmp_expression_name_6;
-        PyObject *tmp_expression_name_7;
+        PyObject *tmp_cmp_expr_left_2;
+        PyObject *tmp_cmp_expr_right_2;
+        PyObject *tmp_expression_value_6;
+        PyObject *tmp_expression_value_7;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_6 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[173]);
-        if (tmp_compexpr_left_2 == NULL) {
+        tmp_expression_value_6 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[173]);
+        if (tmp_cmp_expr_left_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18477,36 +18450,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_7 == NULL)) {
-            tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_7 == NULL) {
+        if (tmp_expression_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
 
             coroutine_heap->exception_lineno = 567;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[174]);
-        if (tmp_compexpr_right_2 == NULL) {
+        tmp_cmp_expr_right_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[174]);
+        if (tmp_cmp_expr_right_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_2);
+            Py_DECREF(tmp_cmp_expr_left_2);
 
             coroutine_heap->exception_lineno = 567;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_2, tmp_compexpr_right_2);
-        Py_DECREF(tmp_compexpr_left_2);
-        Py_DECREF(tmp_compexpr_right_2);
+        tmp_condition_result_3 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_2, tmp_cmp_expr_right_2);
+        Py_DECREF(tmp_cmp_expr_left_2);
+        Py_DECREF(tmp_cmp_expr_right_2);
         if (tmp_condition_result_3 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -18526,17 +18499,17 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     branch_yes_3:;
     {
-        PyObject *tmp_expression_name_8;
-        PyObject *tmp_expression_name_9;
-        PyObject *tmp_called_name_2;
-        PyObject *tmp_expression_name_10;
-        PyObject *tmp_args_element_name_2;
-        PyObject *tmp_args_element_name_3;
-        PyObject *tmp_expression_name_11;
-        PyObject *tmp_args_element_name_4;
-        PyObject *tmp_expression_name_12;
-        PyObject *tmp_args_element_name_5;
-        PyObject *tmp_expression_name_13;
+        PyObject *tmp_expression_value_8;
+        PyObject *tmp_expression_value_9;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_10;
+        PyObject *tmp_args_element_value_2;
+        PyObject *tmp_args_element_value_3;
+        PyObject *tmp_expression_value_11;
+        PyObject *tmp_args_element_value_4;
+        PyObject *tmp_expression_value_12;
+        PyObject *tmp_args_element_value_5;
+        PyObject *tmp_expression_value_13;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 568;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -18551,9 +18524,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_10 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[143]);
-        if (tmp_called_name_2 == NULL) {
+        tmp_expression_value_10 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_10, mod_consts[143]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18564,7 +18537,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18575,44 +18548,44 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_11 = coroutine_heap->var_pkt;
-        tmp_args_element_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[12]);
-        if (tmp_args_element_name_3 == NULL) {
+        tmp_expression_value_11 = coroutine_heap->var_pkt;
+        tmp_args_element_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_11, mod_consts[12]);
+        if (tmp_args_element_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
+            Py_DECREF(tmp_called_value_2);
 
             coroutine_heap->exception_lineno = 568;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_12 = coroutine_heap->var_pkt;
-        tmp_args_element_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[112]);
-        if (tmp_args_element_name_4 == NULL) {
+        tmp_expression_value_12 = coroutine_heap->var_pkt;
+        tmp_args_element_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_12, mod_consts[112]);
+        if (tmp_args_element_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_3);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_3);
 
             coroutine_heap->exception_lineno = 568;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_13 = coroutine_heap->var_pkt;
-        tmp_args_element_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_13, mod_consts[23]);
-        if (tmp_args_element_name_5 == NULL) {
+        tmp_expression_value_13 = coroutine_heap->var_pkt;
+        tmp_args_element_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_13, mod_consts[23]);
+        if (tmp_args_element_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_3);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_3);
+            Py_DECREF(tmp_args_element_value_4);
 
             coroutine_heap->exception_lineno = 569;
             coroutine_heap->type_description_1 = "ccco";
@@ -18620,15 +18593,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 568;
         {
-            PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4, tmp_args_element_name_5};
-            tmp_expression_name_9 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_2, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3, tmp_args_element_value_4, tmp_args_element_value_5};
+            tmp_expression_value_9 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_2);
-        Py_DECREF(tmp_args_element_name_3);
-        Py_DECREF(tmp_args_element_name_4);
-        Py_DECREF(tmp_args_element_name_5);
-        if (tmp_expression_name_9 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        Py_DECREF(tmp_args_element_value_3);
+        Py_DECREF(tmp_args_element_value_4);
+        Py_DECREF(tmp_args_element_value_5);
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18638,9 +18611,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_8 = ASYNC_AWAIT(tmp_expression_name_9, await_normal);
-        Py_DECREF(tmp_expression_name_9);
-        if (tmp_expression_name_8 == NULL) {
+        tmp_expression_value_8 = ASYNC_AWAIT(tmp_expression_value_9, await_normal);
+        Py_DECREF(tmp_expression_value_9);
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18650,14 +18623,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_9, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_10, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_expression_name_11, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_expression_name_12, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_9, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_10, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_expression_value_11, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_expression_value_12, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_8;
+        coroutine->m_yieldfrom = tmp_expression_value_8;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_9, sizeof(PyObject *), &tmp_called_name_2, sizeof(PyObject *), &tmp_expression_name_10, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), &tmp_args_element_name_3, sizeof(PyObject *), &tmp_expression_name_11, sizeof(PyObject *), &tmp_args_element_name_4, sizeof(PyObject *), &tmp_expression_name_12, sizeof(PyObject *), &tmp_args_element_name_5, sizeof(PyObject *), &tmp_expression_name_13, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_9, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_10, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), &tmp_args_element_value_3, sizeof(PyObject *), &tmp_expression_value_11, sizeof(PyObject *), &tmp_args_element_value_4, sizeof(PyObject *), &tmp_expression_value_12, sizeof(PyObject *), &tmp_args_element_value_5, sizeof(PyObject *), &tmp_expression_value_13, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -18686,17 +18659,17 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     goto branch_end_3;
     branch_no_3:;
     {
-        PyObject *tmp_expression_name_14;
-        PyObject *tmp_expression_name_15;
-        PyObject *tmp_called_name_3;
-        PyObject *tmp_expression_name_16;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_args_element_name_7;
-        PyObject *tmp_expression_name_17;
-        PyObject *tmp_args_element_name_8;
-        PyObject *tmp_expression_name_18;
-        PyObject *tmp_args_element_name_9;
-        PyObject *tmp_expression_name_19;
+        PyObject *tmp_expression_value_14;
+        PyObject *tmp_expression_value_15;
+        PyObject *tmp_called_value_3;
+        PyObject *tmp_expression_value_16;
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_args_element_value_7;
+        PyObject *tmp_expression_value_17;
+        PyObject *tmp_args_element_value_8;
+        PyObject *tmp_expression_value_18;
+        PyObject *tmp_args_element_value_9;
+        PyObject *tmp_expression_value_19;
         PyObject *tmp_await_result_2;
         coroutine->m_frame->m_frame.f_lineno = 571;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -18711,9 +18684,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_16 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_16, mod_consts[152]);
-        if (tmp_called_name_3 == NULL) {
+        tmp_expression_value_16 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_16, mod_consts[152]);
+        if (tmp_called_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18724,7 +18697,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18735,44 +18708,44 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_17 = coroutine_heap->var_pkt;
-        tmp_args_element_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[12]);
-        if (tmp_args_element_name_7 == NULL) {
+        tmp_expression_value_17 = coroutine_heap->var_pkt;
+        tmp_args_element_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_17, mod_consts[12]);
+        if (tmp_args_element_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_3);
+            Py_DECREF(tmp_called_value_3);
 
             coroutine_heap->exception_lineno = 571;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_18 = coroutine_heap->var_pkt;
-        tmp_args_element_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_18, mod_consts[112]);
-        if (tmp_args_element_name_8 == NULL) {
+        tmp_expression_value_18 = coroutine_heap->var_pkt;
+        tmp_args_element_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_18, mod_consts[112]);
+        if (tmp_args_element_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_7);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_7);
 
             coroutine_heap->exception_lineno = 571;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_19 = coroutine_heap->var_pkt;
-        tmp_args_element_name_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_19, mod_consts[23]);
-        if (tmp_args_element_name_9 == NULL) {
+        tmp_expression_value_19 = coroutine_heap->var_pkt;
+        tmp_args_element_value_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_19, mod_consts[23]);
+        if (tmp_args_element_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_7);
-            Py_DECREF(tmp_args_element_name_8);
+            Py_DECREF(tmp_called_value_3);
+            Py_DECREF(tmp_args_element_value_7);
+            Py_DECREF(tmp_args_element_value_8);
 
             coroutine_heap->exception_lineno = 572;
             coroutine_heap->type_description_1 = "ccco";
@@ -18780,15 +18753,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 571;
         {
-            PyObject *call_args[] = {tmp_args_element_name_6, tmp_args_element_name_7, tmp_args_element_name_8, tmp_args_element_name_9};
-            tmp_expression_name_15 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_3, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_6, tmp_args_element_value_7, tmp_args_element_value_8, tmp_args_element_value_9};
+            tmp_expression_value_15 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_3, call_args);
         }
 
-        Py_DECREF(tmp_called_name_3);
-        Py_DECREF(tmp_args_element_name_7);
-        Py_DECREF(tmp_args_element_name_8);
-        Py_DECREF(tmp_args_element_name_9);
-        if (tmp_expression_name_15 == NULL) {
+        Py_DECREF(tmp_called_value_3);
+        Py_DECREF(tmp_args_element_value_7);
+        Py_DECREF(tmp_args_element_value_8);
+        Py_DECREF(tmp_args_element_value_9);
+        if (tmp_expression_value_15 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18798,9 +18771,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_14 = ASYNC_AWAIT(tmp_expression_name_15, await_normal);
-        Py_DECREF(tmp_expression_name_15);
-        if (tmp_expression_name_14 == NULL) {
+        tmp_expression_value_14 = ASYNC_AWAIT(tmp_expression_value_15, await_normal);
+        Py_DECREF(tmp_expression_value_15);
+        if (tmp_expression_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18810,14 +18783,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), &tmp_expression_name_19, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), &tmp_expression_value_19, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 2;
-        coroutine->m_yieldfrom = tmp_expression_name_14;
+        coroutine->m_yieldfrom = tmp_expression_value_14;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_2:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_15, sizeof(PyObject *), &tmp_called_name_3, sizeof(PyObject *), &tmp_expression_name_16, sizeof(PyObject *), &tmp_args_element_name_6, sizeof(PyObject *), &tmp_args_element_name_7, sizeof(PyObject *), &tmp_expression_name_17, sizeof(PyObject *), &tmp_args_element_name_8, sizeof(PyObject *), &tmp_expression_name_18, sizeof(PyObject *), &tmp_args_element_name_9, sizeof(PyObject *), &tmp_expression_name_19, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_15, sizeof(PyObject *), &tmp_called_value_3, sizeof(PyObject *), &tmp_expression_value_16, sizeof(PyObject *), &tmp_args_element_value_6, sizeof(PyObject *), &tmp_args_element_value_7, sizeof(PyObject *), &tmp_expression_value_17, sizeof(PyObject *), &tmp_args_element_value_8, sizeof(PyObject *), &tmp_expression_value_18, sizeof(PyObject *), &tmp_args_element_value_9, sizeof(PyObject *), &tmp_expression_value_19, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -18849,8 +18822,8 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_no_1:;
     {
         PyObject *tmp_assign_source_2;
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_20;
+        PyObject *tmp_called_value_4;
+        PyObject *tmp_expression_value_20;
         PyObject *tmp_kw_call_value_0_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
 
@@ -18864,9 +18837,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[94]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_expression_value_20 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_20, mod_consts[94]);
+        if (tmp_called_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18877,7 +18850,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_4);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[23]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18893,10 +18866,10 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         {
             PyObject *kw_values[1] = {tmp_kw_call_value_0_1};
 
-            tmp_assign_source_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_name_4, kw_values, mod_consts[175]);
+            tmp_assign_source_2 = CALL_FUNCTION_WITH_NO_ARGS_KWSPLIT(tmp_called_value_4, kw_values, mod_consts[175]);
         }
 
-        Py_DECREF(tmp_called_name_4);
+        Py_DECREF(tmp_called_value_4);
         if (tmp_assign_source_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18912,14 +18885,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_compexpr_left_3;
-        PyObject *tmp_compexpr_right_3;
-        PyObject *tmp_expression_name_21;
-        PyObject *tmp_expression_name_22;
+        PyObject *tmp_cmp_expr_left_3;
+        PyObject *tmp_cmp_expr_right_3;
+        PyObject *tmp_expression_value_21;
+        PyObject *tmp_expression_value_22;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_21 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_21, mod_consts[173]);
-        if (tmp_compexpr_left_3 == NULL) {
+        tmp_expression_value_21 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_21, mod_consts[173]);
+        if (tmp_cmp_expr_left_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -18929,36 +18902,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_22 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_22 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_22 == NULL)) {
-            tmp_expression_name_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_22 == NULL)) {
+            tmp_expression_value_22 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_22 == NULL) {
+        if (tmp_expression_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             coroutine_heap->exception_lineno = 575;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[124]);
-        if (tmp_compexpr_right_3 == NULL) {
+        tmp_cmp_expr_right_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_22, mod_consts[124]);
+        if (tmp_cmp_expr_right_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_3);
+            Py_DECREF(tmp_cmp_expr_left_3);
 
             coroutine_heap->exception_lineno = 575;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_3, tmp_compexpr_right_3);
-        Py_DECREF(tmp_compexpr_left_3);
-        Py_DECREF(tmp_compexpr_right_3);
+        tmp_condition_result_4 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_3, tmp_cmp_expr_right_3);
+        Py_DECREF(tmp_cmp_expr_left_3);
+        Py_DECREF(tmp_cmp_expr_right_3);
         if (tmp_condition_result_4 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -18978,15 +18951,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     branch_yes_4:;
     {
-        PyObject *tmp_expression_name_23;
-        PyObject *tmp_expression_name_24;
-        PyObject *tmp_called_name_5;
-        PyObject *tmp_expression_name_25;
-        PyObject *tmp_args_element_name_10;
-        PyObject *tmp_args_element_name_11;
-        PyObject *tmp_expression_name_26;
-        PyObject *tmp_args_element_name_12;
-        PyObject *tmp_expression_name_27;
+        PyObject *tmp_expression_value_23;
+        PyObject *tmp_expression_value_24;
+        PyObject *tmp_called_value_5;
+        PyObject *tmp_expression_value_25;
+        PyObject *tmp_args_element_value_10;
+        PyObject *tmp_args_element_value_11;
+        PyObject *tmp_expression_value_26;
+        PyObject *tmp_args_element_value_12;
+        PyObject *tmp_expression_value_27;
         PyObject *tmp_await_result_3;
         coroutine->m_frame->m_frame.f_lineno = 576;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -19001,9 +18974,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_25 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_25, mod_consts[132]);
-        if (tmp_called_name_5 == NULL) {
+        tmp_expression_value_25 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_25, mod_consts[132]);
+        if (tmp_called_value_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19014,7 +18987,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19025,29 +18998,29 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_10 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_10 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_26 = coroutine_heap->var_pkt;
-        tmp_args_element_name_11 = LOOKUP_ATTRIBUTE(tmp_expression_name_26, mod_consts[12]);
-        if (tmp_args_element_name_11 == NULL) {
+        tmp_expression_value_26 = coroutine_heap->var_pkt;
+        tmp_args_element_value_11 = LOOKUP_ATTRIBUTE(tmp_expression_value_26, mod_consts[12]);
+        if (tmp_args_element_value_11 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
+            Py_DECREF(tmp_called_value_5);
 
             coroutine_heap->exception_lineno = 576;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_27 = coroutine_heap->var_pkt;
-        tmp_args_element_name_12 = LOOKUP_ATTRIBUTE(tmp_expression_name_27, mod_consts[23]);
-        if (tmp_args_element_name_12 == NULL) {
+        tmp_expression_value_27 = coroutine_heap->var_pkt;
+        tmp_args_element_value_12 = LOOKUP_ATTRIBUTE(tmp_expression_value_27, mod_consts[23]);
+        if (tmp_args_element_value_12 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_5);
-            Py_DECREF(tmp_args_element_name_11);
+            Py_DECREF(tmp_called_value_5);
+            Py_DECREF(tmp_args_element_value_11);
 
             coroutine_heap->exception_lineno = 576;
             coroutine_heap->type_description_1 = "ccco";
@@ -19055,14 +19028,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 576;
         {
-            PyObject *call_args[] = {tmp_args_element_name_10, tmp_args_element_name_11, tmp_args_element_name_12};
-            tmp_expression_name_24 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_5, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_10, tmp_args_element_value_11, tmp_args_element_value_12};
+            tmp_expression_value_24 = CALL_FUNCTION_WITH_ARGS3(tmp_called_value_5, call_args);
         }
 
-        Py_DECREF(tmp_called_name_5);
-        Py_DECREF(tmp_args_element_name_11);
-        Py_DECREF(tmp_args_element_name_12);
-        if (tmp_expression_name_24 == NULL) {
+        Py_DECREF(tmp_called_value_5);
+        Py_DECREF(tmp_args_element_value_11);
+        Py_DECREF(tmp_args_element_value_12);
+        if (tmp_expression_value_24 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19072,9 +19045,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_23 = ASYNC_AWAIT(tmp_expression_name_24, await_normal);
-        Py_DECREF(tmp_expression_name_24);
-        if (tmp_expression_name_23 == NULL) {
+        tmp_expression_value_23 = ASYNC_AWAIT(tmp_expression_value_24, await_normal);
+        Py_DECREF(tmp_expression_value_24);
+        if (tmp_expression_value_23 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19084,14 +19057,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_24, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_25, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_expression_name_26, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), &tmp_expression_name_27, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_24, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_25, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_expression_value_26, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), &tmp_expression_value_27, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 3;
-        coroutine->m_yieldfrom = tmp_expression_name_23;
+        coroutine->m_yieldfrom = tmp_expression_value_23;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_3:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_24, sizeof(PyObject *), &tmp_called_name_5, sizeof(PyObject *), &tmp_expression_name_25, sizeof(PyObject *), &tmp_args_element_name_10, sizeof(PyObject *), &tmp_args_element_name_11, sizeof(PyObject *), &tmp_expression_name_26, sizeof(PyObject *), &tmp_args_element_name_12, sizeof(PyObject *), &tmp_expression_name_27, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_24, sizeof(PyObject *), &tmp_called_value_5, sizeof(PyObject *), &tmp_expression_value_25, sizeof(PyObject *), &tmp_args_element_value_10, sizeof(PyObject *), &tmp_args_element_value_11, sizeof(PyObject *), &tmp_expression_value_26, sizeof(PyObject *), &tmp_args_element_value_12, sizeof(PyObject *), &tmp_expression_value_27, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -19121,14 +19094,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_no_4:;
     {
         nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_compexpr_left_4;
-        PyObject *tmp_compexpr_right_4;
-        PyObject *tmp_expression_name_28;
-        PyObject *tmp_expression_name_29;
+        PyObject *tmp_cmp_expr_left_4;
+        PyObject *tmp_cmp_expr_right_4;
+        PyObject *tmp_expression_value_28;
+        PyObject *tmp_expression_value_29;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_28 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_28, mod_consts[173]);
-        if (tmp_compexpr_left_4 == NULL) {
+        tmp_expression_value_28 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_28, mod_consts[173]);
+        if (tmp_cmp_expr_left_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19138,36 +19111,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_29 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_29 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_29 == NULL)) {
-            tmp_expression_name_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_29 == NULL)) {
+            tmp_expression_value_29 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_29 == NULL) {
+        if (tmp_expression_value_29 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             coroutine_heap->exception_lineno = 577;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_29, mod_consts[96]);
-        if (tmp_compexpr_right_4 == NULL) {
+        tmp_cmp_expr_right_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_29, mod_consts[96]);
+        if (tmp_cmp_expr_right_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_4);
+            Py_DECREF(tmp_cmp_expr_left_4);
 
             coroutine_heap->exception_lineno = 577;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_4, tmp_compexpr_right_4);
-        Py_DECREF(tmp_compexpr_left_4);
-        Py_DECREF(tmp_compexpr_right_4);
+        tmp_condition_result_5 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_4, tmp_cmp_expr_right_4);
+        Py_DECREF(tmp_cmp_expr_left_4);
+        Py_DECREF(tmp_cmp_expr_right_4);
         if (tmp_condition_result_5 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19187,13 +19160,13 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     branch_yes_5:;
     {
-        PyObject *tmp_expression_name_30;
-        PyObject *tmp_expression_name_31;
-        PyObject *tmp_called_name_6;
-        PyObject *tmp_expression_name_32;
-        PyObject *tmp_args_element_name_13;
-        PyObject *tmp_args_element_name_14;
-        PyObject *tmp_expression_name_33;
+        PyObject *tmp_expression_value_30;
+        PyObject *tmp_expression_value_31;
+        PyObject *tmp_called_value_6;
+        PyObject *tmp_expression_value_32;
+        PyObject *tmp_args_element_value_13;
+        PyObject *tmp_args_element_value_14;
+        PyObject *tmp_expression_value_33;
         PyObject *tmp_await_result_4;
         coroutine->m_frame->m_frame.f_lineno = 578;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -19208,9 +19181,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_32 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_32, mod_consts[136]);
-        if (tmp_called_name_6 == NULL) {
+        tmp_expression_value_32 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_32, mod_consts[136]);
+        if (tmp_called_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19221,7 +19194,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19232,15 +19205,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_13 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_13 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_33 = coroutine_heap->var_pkt;
-        tmp_args_element_name_14 = LOOKUP_ATTRIBUTE(tmp_expression_name_33, mod_consts[12]);
-        if (tmp_args_element_name_14 == NULL) {
+        tmp_expression_value_33 = coroutine_heap->var_pkt;
+        tmp_args_element_value_14 = LOOKUP_ATTRIBUTE(tmp_expression_value_33, mod_consts[12]);
+        if (tmp_args_element_value_14 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_6);
+            Py_DECREF(tmp_called_value_6);
 
             coroutine_heap->exception_lineno = 578;
             coroutine_heap->type_description_1 = "ccco";
@@ -19248,13 +19221,13 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 578;
         {
-            PyObject *call_args[] = {tmp_args_element_name_13, tmp_args_element_name_14};
-            tmp_expression_name_31 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_6, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_13, tmp_args_element_value_14};
+            tmp_expression_value_31 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_6, call_args);
         }
 
-        Py_DECREF(tmp_called_name_6);
-        Py_DECREF(tmp_args_element_name_14);
-        if (tmp_expression_name_31 == NULL) {
+        Py_DECREF(tmp_called_value_6);
+        Py_DECREF(tmp_args_element_value_14);
+        if (tmp_expression_value_31 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19264,9 +19237,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_30 = ASYNC_AWAIT(tmp_expression_name_31, await_normal);
-        Py_DECREF(tmp_expression_name_31);
-        if (tmp_expression_name_30 == NULL) {
+        tmp_expression_value_30 = ASYNC_AWAIT(tmp_expression_value_31, await_normal);
+        Py_DECREF(tmp_expression_value_31);
+        if (tmp_expression_value_30 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19276,14 +19249,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_31, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_32, sizeof(PyObject *), &tmp_args_element_name_13, sizeof(PyObject *), &tmp_args_element_name_14, sizeof(PyObject *), &tmp_expression_name_33, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_31, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_32, sizeof(PyObject *), &tmp_args_element_value_13, sizeof(PyObject *), &tmp_args_element_value_14, sizeof(PyObject *), &tmp_expression_value_33, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 4;
-        coroutine->m_yieldfrom = tmp_expression_name_30;
+        coroutine->m_yieldfrom = tmp_expression_value_30;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_4:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_31, sizeof(PyObject *), &tmp_called_name_6, sizeof(PyObject *), &tmp_expression_name_32, sizeof(PyObject *), &tmp_args_element_name_13, sizeof(PyObject *), &tmp_args_element_name_14, sizeof(PyObject *), &tmp_expression_name_33, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_31, sizeof(PyObject *), &tmp_called_value_6, sizeof(PyObject *), &tmp_expression_value_32, sizeof(PyObject *), &tmp_args_element_value_13, sizeof(PyObject *), &tmp_args_element_value_14, sizeof(PyObject *), &tmp_expression_value_33, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -19313,14 +19286,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_no_5:;
     {
         nuitka_bool tmp_condition_result_6;
-        PyObject *tmp_compexpr_left_5;
-        PyObject *tmp_compexpr_right_5;
-        PyObject *tmp_expression_name_34;
-        PyObject *tmp_expression_name_35;
+        PyObject *tmp_cmp_expr_left_5;
+        PyObject *tmp_cmp_expr_right_5;
+        PyObject *tmp_expression_value_34;
+        PyObject *tmp_expression_value_35;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_34 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_34, mod_consts[173]);
-        if (tmp_compexpr_left_5 == NULL) {
+        tmp_expression_value_34 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_34, mod_consts[173]);
+        if (tmp_cmp_expr_left_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19330,36 +19303,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_35 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_35 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_35 == NULL)) {
-            tmp_expression_name_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_35 == NULL)) {
+            tmp_expression_value_35 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_35 == NULL) {
+        if (tmp_expression_value_35 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_5);
+            Py_DECREF(tmp_cmp_expr_left_5);
 
             coroutine_heap->exception_lineno = 579;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_35, mod_consts[111]);
-        if (tmp_compexpr_right_5 == NULL) {
+        tmp_cmp_expr_right_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_35, mod_consts[111]);
+        if (tmp_cmp_expr_right_5 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_5);
+            Py_DECREF(tmp_cmp_expr_left_5);
 
             coroutine_heap->exception_lineno = 579;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_5, tmp_compexpr_right_5);
-        Py_DECREF(tmp_compexpr_left_5);
-        Py_DECREF(tmp_compexpr_right_5);
+        tmp_condition_result_6 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_5, tmp_cmp_expr_right_5);
+        Py_DECREF(tmp_cmp_expr_left_5);
+        Py_DECREF(tmp_cmp_expr_right_5);
         if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19379,17 +19352,17 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     branch_yes_6:;
     {
-        PyObject *tmp_expression_name_36;
-        PyObject *tmp_expression_name_37;
-        PyObject *tmp_called_name_7;
-        PyObject *tmp_expression_name_38;
-        PyObject *tmp_args_element_name_15;
-        PyObject *tmp_args_element_name_16;
-        PyObject *tmp_expression_name_39;
-        PyObject *tmp_args_element_name_17;
-        PyObject *tmp_expression_name_40;
-        PyObject *tmp_args_element_name_18;
-        PyObject *tmp_expression_name_41;
+        PyObject *tmp_expression_value_36;
+        PyObject *tmp_expression_value_37;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_38;
+        PyObject *tmp_args_element_value_15;
+        PyObject *tmp_args_element_value_16;
+        PyObject *tmp_expression_value_39;
+        PyObject *tmp_args_element_value_17;
+        PyObject *tmp_expression_value_40;
+        PyObject *tmp_args_element_value_18;
+        PyObject *tmp_expression_value_41;
         PyObject *tmp_await_result_5;
         coroutine->m_frame->m_frame.f_lineno = 580;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -19404,9 +19377,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_38 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_38, mod_consts[143]);
-        if (tmp_called_name_7 == NULL) {
+        tmp_expression_value_38 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_38, mod_consts[143]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19417,7 +19390,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_7);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19428,44 +19401,44 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_15 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_15 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_39 = coroutine_heap->var_pkt;
-        tmp_args_element_name_16 = LOOKUP_ATTRIBUTE(tmp_expression_name_39, mod_consts[12]);
-        if (tmp_args_element_name_16 == NULL) {
+        tmp_expression_value_39 = coroutine_heap->var_pkt;
+        tmp_args_element_value_16 = LOOKUP_ATTRIBUTE(tmp_expression_value_39, mod_consts[12]);
+        if (tmp_args_element_value_16 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_7);
+            Py_DECREF(tmp_called_value_7);
 
             coroutine_heap->exception_lineno = 580;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_40 = coroutine_heap->var_pkt;
-        tmp_args_element_name_17 = LOOKUP_ATTRIBUTE(tmp_expression_name_40, mod_consts[112]);
-        if (tmp_args_element_name_17 == NULL) {
+        tmp_expression_value_40 = coroutine_heap->var_pkt;
+        tmp_args_element_value_17 = LOOKUP_ATTRIBUTE(tmp_expression_value_40, mod_consts[112]);
+        if (tmp_args_element_value_17 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_16);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_16);
 
             coroutine_heap->exception_lineno = 580;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_41 = coroutine_heap->var_pkt;
-        tmp_args_element_name_18 = LOOKUP_ATTRIBUTE(tmp_expression_name_41, mod_consts[23]);
-        if (tmp_args_element_name_18 == NULL) {
+        tmp_expression_value_41 = coroutine_heap->var_pkt;
+        tmp_args_element_value_18 = LOOKUP_ATTRIBUTE(tmp_expression_value_41, mod_consts[23]);
+        if (tmp_args_element_value_18 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_7);
-            Py_DECREF(tmp_args_element_name_16);
-            Py_DECREF(tmp_args_element_name_17);
+            Py_DECREF(tmp_called_value_7);
+            Py_DECREF(tmp_args_element_value_16);
+            Py_DECREF(tmp_args_element_value_17);
 
             coroutine_heap->exception_lineno = 581;
             coroutine_heap->type_description_1 = "ccco";
@@ -19473,15 +19446,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 580;
         {
-            PyObject *call_args[] = {tmp_args_element_name_15, tmp_args_element_name_16, tmp_args_element_name_17, tmp_args_element_name_18};
-            tmp_expression_name_37 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_7, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_15, tmp_args_element_value_16, tmp_args_element_value_17, tmp_args_element_value_18};
+            tmp_expression_value_37 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_7, call_args);
         }
 
-        Py_DECREF(tmp_called_name_7);
-        Py_DECREF(tmp_args_element_name_16);
-        Py_DECREF(tmp_args_element_name_17);
-        Py_DECREF(tmp_args_element_name_18);
-        if (tmp_expression_name_37 == NULL) {
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_16);
+        Py_DECREF(tmp_args_element_value_17);
+        Py_DECREF(tmp_args_element_value_18);
+        if (tmp_expression_value_37 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19491,9 +19464,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_36 = ASYNC_AWAIT(tmp_expression_name_37, await_normal);
-        Py_DECREF(tmp_expression_name_37);
-        if (tmp_expression_name_36 == NULL) {
+        tmp_expression_value_36 = ASYNC_AWAIT(tmp_expression_value_37, await_normal);
+        Py_DECREF(tmp_expression_value_37);
+        if (tmp_expression_value_36 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19503,14 +19476,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_37, sizeof(PyObject *), &tmp_called_name_7, sizeof(PyObject *), &tmp_expression_name_38, sizeof(PyObject *), &tmp_args_element_name_15, sizeof(PyObject *), &tmp_args_element_name_16, sizeof(PyObject *), &tmp_expression_name_39, sizeof(PyObject *), &tmp_args_element_name_17, sizeof(PyObject *), &tmp_expression_name_40, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), &tmp_expression_name_41, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_37, sizeof(PyObject *), &tmp_called_value_7, sizeof(PyObject *), &tmp_expression_value_38, sizeof(PyObject *), &tmp_args_element_value_15, sizeof(PyObject *), &tmp_args_element_value_16, sizeof(PyObject *), &tmp_expression_value_39, sizeof(PyObject *), &tmp_args_element_value_17, sizeof(PyObject *), &tmp_expression_value_40, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), &tmp_expression_value_41, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 5;
-        coroutine->m_yieldfrom = tmp_expression_name_36;
+        coroutine->m_yieldfrom = tmp_expression_value_36;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_5:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_37, sizeof(PyObject *), &tmp_called_name_7, sizeof(PyObject *), &tmp_expression_name_38, sizeof(PyObject *), &tmp_args_element_name_15, sizeof(PyObject *), &tmp_args_element_name_16, sizeof(PyObject *), &tmp_expression_name_39, sizeof(PyObject *), &tmp_args_element_name_17, sizeof(PyObject *), &tmp_expression_name_40, sizeof(PyObject *), &tmp_args_element_name_18, sizeof(PyObject *), &tmp_expression_name_41, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_37, sizeof(PyObject *), &tmp_called_value_7, sizeof(PyObject *), &tmp_expression_value_38, sizeof(PyObject *), &tmp_args_element_value_15, sizeof(PyObject *), &tmp_args_element_value_16, sizeof(PyObject *), &tmp_expression_value_39, sizeof(PyObject *), &tmp_args_element_value_17, sizeof(PyObject *), &tmp_expression_value_40, sizeof(PyObject *), &tmp_args_element_value_18, sizeof(PyObject *), &tmp_expression_value_41, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -19540,14 +19513,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_no_6:;
     {
         nuitka_bool tmp_condition_result_7;
-        PyObject *tmp_compexpr_left_6;
-        PyObject *tmp_compexpr_right_6;
-        PyObject *tmp_expression_name_42;
-        PyObject *tmp_expression_name_43;
+        PyObject *tmp_cmp_expr_left_6;
+        PyObject *tmp_cmp_expr_right_6;
+        PyObject *tmp_expression_value_42;
+        PyObject *tmp_expression_value_43;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_42 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_42, mod_consts[173]);
-        if (tmp_compexpr_left_6 == NULL) {
+        tmp_expression_value_42 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_42, mod_consts[173]);
+        if (tmp_cmp_expr_left_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19557,36 +19530,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_43 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_43 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_43 == NULL)) {
-            tmp_expression_name_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_43 == NULL)) {
+            tmp_expression_value_43 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_43 == NULL) {
+        if (tmp_expression_value_43 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_6);
+            Py_DECREF(tmp_cmp_expr_left_6);
 
             coroutine_heap->exception_lineno = 582;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_43, mod_consts[146]);
-        if (tmp_compexpr_right_6 == NULL) {
+        tmp_cmp_expr_right_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_43, mod_consts[146]);
+        if (tmp_cmp_expr_right_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_6);
+            Py_DECREF(tmp_cmp_expr_left_6);
 
             coroutine_heap->exception_lineno = 582;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_6, tmp_compexpr_right_6);
-        Py_DECREF(tmp_compexpr_left_6);
-        Py_DECREF(tmp_compexpr_right_6);
+        tmp_condition_result_7 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_6, tmp_cmp_expr_right_6);
+        Py_DECREF(tmp_cmp_expr_left_6);
+        Py_DECREF(tmp_cmp_expr_right_6);
         if (tmp_condition_result_7 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19606,17 +19579,17 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     }
     branch_yes_7:;
     {
-        PyObject *tmp_expression_name_44;
-        PyObject *tmp_expression_name_45;
-        PyObject *tmp_called_name_8;
-        PyObject *tmp_expression_name_46;
-        PyObject *tmp_args_element_name_19;
-        PyObject *tmp_args_element_name_20;
-        PyObject *tmp_expression_name_47;
-        PyObject *tmp_args_element_name_21;
-        PyObject *tmp_expression_name_48;
-        PyObject *tmp_args_element_name_22;
-        PyObject *tmp_expression_name_49;
+        PyObject *tmp_expression_value_44;
+        PyObject *tmp_expression_value_45;
+        PyObject *tmp_called_value_8;
+        PyObject *tmp_expression_value_46;
+        PyObject *tmp_args_element_value_19;
+        PyObject *tmp_args_element_value_20;
+        PyObject *tmp_expression_value_47;
+        PyObject *tmp_args_element_value_21;
+        PyObject *tmp_expression_value_48;
+        PyObject *tmp_args_element_value_22;
+        PyObject *tmp_expression_value_49;
         PyObject *tmp_await_result_6;
         coroutine->m_frame->m_frame.f_lineno = 583;
         if (Nuitka_Cell_GET(coroutine->m_closure[2]) == NULL) {
@@ -19631,9 +19604,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_46 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_called_name_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_46, mod_consts[152]);
-        if (tmp_called_name_8 == NULL) {
+        tmp_expression_value_46 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_called_value_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_46, mod_consts[152]);
+        if (tmp_called_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19644,7 +19617,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19655,44 +19628,44 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_args_element_name_19 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_args_element_value_19 = Nuitka_Cell_GET(coroutine->m_closure[1]);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_47 = coroutine_heap->var_pkt;
-        tmp_args_element_name_20 = LOOKUP_ATTRIBUTE(tmp_expression_name_47, mod_consts[12]);
-        if (tmp_args_element_name_20 == NULL) {
+        tmp_expression_value_47 = coroutine_heap->var_pkt;
+        tmp_args_element_value_20 = LOOKUP_ATTRIBUTE(tmp_expression_value_47, mod_consts[12]);
+        if (tmp_args_element_value_20 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
+            Py_DECREF(tmp_called_value_8);
 
             coroutine_heap->exception_lineno = 583;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_48 = coroutine_heap->var_pkt;
-        tmp_args_element_name_21 = LOOKUP_ATTRIBUTE(tmp_expression_name_48, mod_consts[112]);
-        if (tmp_args_element_name_21 == NULL) {
+        tmp_expression_value_48 = coroutine_heap->var_pkt;
+        tmp_args_element_value_21 = LOOKUP_ATTRIBUTE(tmp_expression_value_48, mod_consts[112]);
+        if (tmp_args_element_value_21 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_20);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
 
             coroutine_heap->exception_lineno = 583;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_49 = coroutine_heap->var_pkt;
-        tmp_args_element_name_22 = LOOKUP_ATTRIBUTE(tmp_expression_name_49, mod_consts[23]);
-        if (tmp_args_element_name_22 == NULL) {
+        tmp_expression_value_49 = coroutine_heap->var_pkt;
+        tmp_args_element_value_22 = LOOKUP_ATTRIBUTE(tmp_expression_value_49, mod_consts[23]);
+        if (tmp_args_element_value_22 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_called_name_8);
-            Py_DECREF(tmp_args_element_name_20);
-            Py_DECREF(tmp_args_element_name_21);
+            Py_DECREF(tmp_called_value_8);
+            Py_DECREF(tmp_args_element_value_20);
+            Py_DECREF(tmp_args_element_value_21);
 
             coroutine_heap->exception_lineno = 584;
             coroutine_heap->type_description_1 = "ccco";
@@ -19700,15 +19673,15 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         }
         coroutine->m_frame->m_frame.f_lineno = 583;
         {
-            PyObject *call_args[] = {tmp_args_element_name_19, tmp_args_element_name_20, tmp_args_element_name_21, tmp_args_element_name_22};
-            tmp_expression_name_45 = CALL_FUNCTION_WITH_ARGS4(tmp_called_name_8, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_19, tmp_args_element_value_20, tmp_args_element_value_21, tmp_args_element_value_22};
+            tmp_expression_value_45 = CALL_FUNCTION_WITH_ARGS4(tmp_called_value_8, call_args);
         }
 
-        Py_DECREF(tmp_called_name_8);
-        Py_DECREF(tmp_args_element_name_20);
-        Py_DECREF(tmp_args_element_name_21);
-        Py_DECREF(tmp_args_element_name_22);
-        if (tmp_expression_name_45 == NULL) {
+        Py_DECREF(tmp_called_value_8);
+        Py_DECREF(tmp_args_element_value_20);
+        Py_DECREF(tmp_args_element_value_21);
+        Py_DECREF(tmp_args_element_value_22);
+        if (tmp_expression_value_45 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19718,9 +19691,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_44 = ASYNC_AWAIT(tmp_expression_name_45, await_normal);
-        Py_DECREF(tmp_expression_name_45);
-        if (tmp_expression_name_44 == NULL) {
+        tmp_expression_value_44 = ASYNC_AWAIT(tmp_expression_value_45, await_normal);
+        Py_DECREF(tmp_expression_value_45);
+        if (tmp_expression_value_44 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19730,14 +19703,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_45, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_expression_name_46, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), &tmp_args_element_name_20, sizeof(PyObject *), &tmp_expression_name_47, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_expression_name_48, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_expression_name_49, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_45, sizeof(PyObject *), &tmp_called_value_8, sizeof(PyObject *), &tmp_expression_value_46, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), &tmp_args_element_value_20, sizeof(PyObject *), &tmp_expression_value_47, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_expression_value_48, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_expression_value_49, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 6;
-        coroutine->m_yieldfrom = tmp_expression_name_44;
+        coroutine->m_yieldfrom = tmp_expression_value_44;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_6:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_45, sizeof(PyObject *), &tmp_called_name_8, sizeof(PyObject *), &tmp_expression_name_46, sizeof(PyObject *), &tmp_args_element_name_19, sizeof(PyObject *), &tmp_args_element_name_20, sizeof(PyObject *), &tmp_expression_name_47, sizeof(PyObject *), &tmp_args_element_name_21, sizeof(PyObject *), &tmp_expression_name_48, sizeof(PyObject *), &tmp_args_element_name_22, sizeof(PyObject *), &tmp_expression_name_49, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_45, sizeof(PyObject *), &tmp_called_value_8, sizeof(PyObject *), &tmp_expression_value_46, sizeof(PyObject *), &tmp_args_element_value_19, sizeof(PyObject *), &tmp_args_element_value_20, sizeof(PyObject *), &tmp_expression_value_47, sizeof(PyObject *), &tmp_args_element_value_21, sizeof(PyObject *), &tmp_expression_value_48, sizeof(PyObject *), &tmp_args_element_value_22, sizeof(PyObject *), &tmp_expression_value_49, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -19770,18 +19743,18 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         int tmp_or_left_truth_1;
         nuitka_bool tmp_or_left_value_1;
         nuitka_bool tmp_or_right_value_1;
-        PyObject *tmp_compexpr_left_7;
-        PyObject *tmp_compexpr_right_7;
-        PyObject *tmp_expression_name_50;
-        PyObject *tmp_expression_name_51;
-        PyObject *tmp_compexpr_left_8;
-        PyObject *tmp_compexpr_right_8;
-        PyObject *tmp_expression_name_52;
-        PyObject *tmp_expression_name_53;
+        PyObject *tmp_cmp_expr_left_7;
+        PyObject *tmp_cmp_expr_right_7;
+        PyObject *tmp_expression_value_50;
+        PyObject *tmp_expression_value_51;
+        PyObject *tmp_cmp_expr_left_8;
+        PyObject *tmp_cmp_expr_right_8;
+        PyObject *tmp_expression_value_52;
+        PyObject *tmp_expression_value_53;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_50 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_50, mod_consts[173]);
-        if (tmp_compexpr_left_7 == NULL) {
+        tmp_expression_value_50 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_50, mod_consts[173]);
+        if (tmp_cmp_expr_left_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19791,36 +19764,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_51 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_51 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_51 == NULL)) {
-            tmp_expression_name_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_51 == NULL)) {
+            tmp_expression_value_51 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_51 == NULL) {
+        if (tmp_expression_value_51 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_7);
+            Py_DECREF(tmp_cmp_expr_left_7);
 
             coroutine_heap->exception_lineno = 585;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_51, mod_consts[174]);
-        if (tmp_compexpr_right_7 == NULL) {
+        tmp_cmp_expr_right_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_51, mod_consts[174]);
+        if (tmp_cmp_expr_right_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_7);
+            Py_DECREF(tmp_cmp_expr_left_7);
 
             coroutine_heap->exception_lineno = 585;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_or_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_7, tmp_compexpr_right_7);
-        Py_DECREF(tmp_compexpr_left_7);
-        Py_DECREF(tmp_compexpr_right_7);
+        tmp_or_left_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_7, tmp_cmp_expr_right_7);
+        Py_DECREF(tmp_cmp_expr_left_7);
+        Py_DECREF(tmp_cmp_expr_right_7);
         if (tmp_or_left_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19850,9 +19823,9 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
         or_right_1:;
         assert(tmp_or_left_value_1 != NUITKA_BOOL_UNASSIGNED);
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_52 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_52, mod_consts[173]);
-        if (tmp_compexpr_left_8 == NULL) {
+        tmp_expression_value_52 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_52, mod_consts[173]);
+        if (tmp_cmp_expr_left_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19862,36 +19835,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_53 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_53 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_53 == NULL)) {
-            tmp_expression_name_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_53 == NULL)) {
+            tmp_expression_value_53 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_53 == NULL) {
+        if (tmp_expression_value_53 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_8);
+            Py_DECREF(tmp_cmp_expr_left_8);
 
             coroutine_heap->exception_lineno = 586;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_8 = LOOKUP_ATTRIBUTE(tmp_expression_name_53, mod_consts[176]);
-        if (tmp_compexpr_right_8 == NULL) {
+        tmp_cmp_expr_right_8 = LOOKUP_ATTRIBUTE(tmp_expression_value_53, mod_consts[176]);
+        if (tmp_cmp_expr_right_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_8);
+            Py_DECREF(tmp_cmp_expr_left_8);
 
             coroutine_heap->exception_lineno = 586;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_or_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_8, tmp_compexpr_right_8);
-        Py_DECREF(tmp_compexpr_left_8);
-        Py_DECREF(tmp_compexpr_right_8);
+        tmp_or_right_value_1 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_8, tmp_cmp_expr_right_8);
+        Py_DECREF(tmp_cmp_expr_left_8);
+        Py_DECREF(tmp_cmp_expr_right_8);
         if (tmp_or_right_value_1 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -19918,7 +19891,7 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     {
         PyObject *tmp_ass_subvalue_1;
         PyObject *tmp_ass_subscribed_1;
-        PyObject *tmp_expression_name_54;
+        PyObject *tmp_expression_value_54;
         PyObject *tmp_ass_subscript_1;
         CHECK_OBJECT(coroutine_heap->var_pkt);
         tmp_ass_subvalue_1 = coroutine_heap->var_pkt;
@@ -19934,8 +19907,8 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_54 = Nuitka_Cell_GET(coroutine->m_closure[2]);
-        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_54, mod_consts[171]);
+        tmp_expression_value_54 = Nuitka_Cell_GET(coroutine->m_closure[2]);
+        tmp_ass_subscribed_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_54, mod_consts[171]);
         if (tmp_ass_subscribed_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -19976,14 +19949,14 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
     branch_no_8:;
     {
         nuitka_bool tmp_condition_result_9;
-        PyObject *tmp_compexpr_left_9;
-        PyObject *tmp_compexpr_right_9;
-        PyObject *tmp_expression_name_55;
-        PyObject *tmp_expression_name_56;
+        PyObject *tmp_cmp_expr_left_9;
+        PyObject *tmp_cmp_expr_right_9;
+        PyObject *tmp_expression_value_55;
+        PyObject *tmp_expression_value_56;
         CHECK_OBJECT(coroutine_heap->var_pkt);
-        tmp_expression_name_55 = coroutine_heap->var_pkt;
-        tmp_compexpr_left_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_55, mod_consts[173]);
-        if (tmp_compexpr_left_9 == NULL) {
+        tmp_expression_value_55 = coroutine_heap->var_pkt;
+        tmp_cmp_expr_left_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_55, mod_consts[173]);
+        if (tmp_cmp_expr_left_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -19993,36 +19966,36 @@ static PyObject *socketio$asyncio_server$$$function__24__handle_eio_message$$$co
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_56 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
+        tmp_expression_value_56 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[95]);
 
-        if (unlikely(tmp_expression_name_56 == NULL)) {
-            tmp_expression_name_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
+        if (unlikely(tmp_expression_value_56 == NULL)) {
+            tmp_expression_value_56 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[95]);
         }
 
-        if (tmp_expression_name_56 == NULL) {
+        if (tmp_expression_value_56 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_9);
+            Py_DECREF(tmp_cmp_expr_left_9);
 
             coroutine_heap->exception_lineno = 588;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_compexpr_right_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_56, mod_consts[131]);
-        if (tmp_compexpr_right_9 == NULL) {
+        tmp_cmp_expr_right_9 = LOOKUP_ATTRIBUTE(tmp_expression_value_56, mod_consts[131]);
+        if (tmp_cmp_expr_right_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-            Py_DECREF(tmp_compexpr_left_9);
+            Py_DECREF(tmp_cmp_expr_left_9);
 
             coroutine_heap->exception_lineno = 588;
             coroutine_heap->type_description_1 = "ccco";
             goto frame_exception_exit_1;
         }
-        tmp_condition_result_9 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_compexpr_left_9, tmp_compexpr_right_9);
-        Py_DECREF(tmp_compexpr_left_9);
-        Py_DECREF(tmp_compexpr_right_9);
+        tmp_condition_result_9 = RICH_COMPARE_EQ_NBOOL_OBJECT_OBJECT(tmp_cmp_expr_left_9, tmp_cmp_expr_right_9);
+        Py_DECREF(tmp_cmp_expr_left_9);
+        Py_DECREF(tmp_cmp_expr_right_9);
         if (tmp_condition_result_9 == NUITKA_BOOL_EXCEPTION) {
             assert(ERROR_OCCURRED());
 
@@ -20350,10 +20323,11 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
     {
         PyObject *tmp_assign_source_1;
         PyObject *tmp_iter_arg_1;
-        PyObject *tmp_called_instance_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
         PyObject *tmp_list_arg_1;
-        PyObject *tmp_called_instance_2;
-        PyObject *tmp_expression_name_1;
+        PyObject *tmp_called_instance_1;
+        PyObject *tmp_expression_value_2;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -20366,33 +20340,8 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_1 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_called_instance_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[21]);
-        if (tmp_called_instance_2 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-
-
-            coroutine_heap->exception_lineno = 595;
-            coroutine_heap->type_description_1 = "cco";
-            goto frame_exception_exit_1;
-        }
-        coroutine->m_frame->m_frame.f_lineno = 595;
-        tmp_list_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[182]);
-        Py_DECREF(tmp_called_instance_2);
-        if (tmp_list_arg_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
-
-
-            coroutine_heap->exception_lineno = 595;
-            coroutine_heap->type_description_1 = "cco";
-            goto frame_exception_exit_1;
-        }
-        tmp_called_instance_1 = MAKE_LIST(tmp_list_arg_1);
-        Py_DECREF(tmp_list_arg_1);
+        tmp_expression_value_2 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_instance_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[21]);
         if (tmp_called_instance_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20404,8 +20353,36 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto frame_exception_exit_1;
         }
         coroutine->m_frame->m_frame.f_lineno = 595;
-        tmp_iter_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[183]);
+        tmp_list_arg_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[182]);
         Py_DECREF(tmp_called_instance_1);
+        if (tmp_list_arg_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 595;
+            coroutine_heap->type_description_1 = "cco";
+            goto frame_exception_exit_1;
+        }
+        tmp_expression_value_1 = MAKE_LIST(tmp_list_arg_1);
+        Py_DECREF(tmp_list_arg_1);
+        if (tmp_expression_value_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
+
+
+            coroutine_heap->exception_lineno = 595;
+            coroutine_heap->type_description_1 = "cco";
+            goto frame_exception_exit_1;
+        }
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[183]);
+        Py_DECREF(tmp_expression_value_1);
+        assert(!(tmp_called_value_1 == NULL));
+        coroutine->m_frame->m_frame.f_lineno = 595;
+        tmp_iter_arg_1 = CALL_FUNCTION_NO_ARGS(tmp_called_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20472,12 +20449,12 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
 
     }
     {
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_expression_name_3;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_element_name_1;
-        PyObject *tmp_args_element_name_2;
+        PyObject *tmp_expression_value_3;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_called_value_2;
+        PyObject *tmp_expression_value_5;
+        PyObject *tmp_args_element_value_1;
+        PyObject *tmp_args_element_value_2;
         PyObject *tmp_await_result_1;
         coroutine->m_frame->m_frame.f_lineno = 596;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
@@ -20492,9 +20469,9 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto try_except_handler_2;
         }
 
-        tmp_expression_name_4 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[136]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[136]);
+        if (tmp_called_value_2 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -20505,7 +20482,7 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto try_except_handler_2;
         }
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
-            Py_DECREF(tmp_called_name_1);
+            Py_DECREF(tmp_called_value_2);
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
             coroutine_heap->exception_tb = NULL;
             NORMALIZE_EXCEPTION(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -20516,17 +20493,17 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto try_except_handler_2;
         }
 
-        tmp_args_element_name_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_args_element_value_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         CHECK_OBJECT(coroutine_heap->var_n);
-        tmp_args_element_name_2 = coroutine_heap->var_n;
+        tmp_args_element_value_2 = coroutine_heap->var_n;
         coroutine->m_frame->m_frame.f_lineno = 596;
         {
-            PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
-            tmp_expression_name_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
+            PyObject *call_args[] = {tmp_args_element_value_1, tmp_args_element_value_2};
+            tmp_expression_value_4 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
         }
 
-        Py_DECREF(tmp_called_name_1);
-        if (tmp_expression_name_3 == NULL) {
+        Py_DECREF(tmp_called_value_2);
+        if (tmp_expression_value_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -20536,9 +20513,9 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        tmp_expression_name_2 = ASYNC_AWAIT(tmp_expression_name_3, await_normal);
-        Py_DECREF(tmp_expression_name_3);
-        if (tmp_expression_name_2 == NULL) {
+        tmp_expression_value_3 = ASYNC_AWAIT(tmp_expression_value_4, await_normal);
+        Py_DECREF(tmp_expression_value_4);
+        if (tmp_expression_value_3 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -20548,14 +20525,14 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             coroutine_heap->type_description_1 = "cco";
             goto try_except_handler_2;
         }
-        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_PreserveHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_yield_return_index = 1;
-        coroutine->m_yieldfrom = tmp_expression_name_2;
+        coroutine->m_yieldfrom = tmp_expression_value_3;
         coroutine->m_awaiting = true;
         return NULL;
 
         yield_return_1:
-        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_name_3, sizeof(PyObject *), &tmp_called_name_1, sizeof(PyObject *), &tmp_expression_name_4, sizeof(PyObject *), &tmp_args_element_name_1, sizeof(PyObject *), &tmp_args_element_name_2, sizeof(PyObject *), NULL);
+        Nuitka_RestoreHeap(coroutine_heap->yield_tmps, &tmp_expression_value_4, sizeof(PyObject *), &tmp_called_value_2, sizeof(PyObject *), &tmp_expression_value_5, sizeof(PyObject *), &tmp_args_element_value_1, sizeof(PyObject *), &tmp_args_element_value_2, sizeof(PyObject *), NULL);
         coroutine->m_awaiting = false;
 
         if (yield_return_value == NULL) {
@@ -20626,9 +20603,9 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
     coroutine_heap->tmp_for_loop_1__for_iterator = NULL;
     {
         bool tmp_condition_result_1;
-        PyObject *tmp_compexpr_left_1;
-        PyObject *tmp_compexpr_right_1;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_cmp_expr_left_1;
+        PyObject *tmp_cmp_expr_right_1;
+        PyObject *tmp_expression_value_6;
         if (Nuitka_Cell_GET(coroutine->m_closure[0]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[119]);
@@ -20641,7 +20618,7 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto frame_exception_exit_1;
         }
 
-        tmp_compexpr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
+        tmp_cmp_expr_left_1 = Nuitka_Cell_GET(coroutine->m_closure[0]);
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
             FORMAT_UNBOUND_CLOSURE_ERROR(&coroutine_heap->exception_type, &coroutine_heap->exception_value, mod_consts[16]);
@@ -20654,9 +20631,9 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_5 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_compexpr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[127]);
-        if (tmp_compexpr_right_1 == NULL) {
+        tmp_expression_value_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_cmp_expr_right_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[127]);
+        if (tmp_cmp_expr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&coroutine_heap->exception_type, &coroutine_heap->exception_value, &coroutine_heap->exception_tb);
@@ -20666,8 +20643,8 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             coroutine_heap->type_description_1 = "cco";
             goto frame_exception_exit_1;
         }
-        coroutine_heap->tmp_res = PySequence_Contains(tmp_compexpr_right_1, tmp_compexpr_left_1);
-        Py_DECREF(tmp_compexpr_right_1);
+        coroutine_heap->tmp_res = PySequence_Contains(tmp_cmp_expr_right_1, tmp_cmp_expr_left_1);
+        Py_DECREF(tmp_cmp_expr_right_1);
         if (coroutine_heap->tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -20688,7 +20665,7 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
     branch_yes_1:;
     {
         PyObject *tmp_delsubscr_target_1;
-        PyObject *tmp_expression_name_6;
+        PyObject *tmp_expression_value_7;
         PyObject *tmp_delsubscr_subscript_1;
         if (Nuitka_Cell_GET(coroutine->m_closure[1]) == NULL) {
 
@@ -20702,8 +20679,8 @@ static PyObject *socketio$asyncio_server$$$function__25__handle_eio_disconnect$$
             goto frame_exception_exit_1;
         }
 
-        tmp_expression_name_6 = Nuitka_Cell_GET(coroutine->m_closure[1]);
-        tmp_delsubscr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[127]);
+        tmp_expression_value_7 = Nuitka_Cell_GET(coroutine->m_closure[1]);
+        tmp_delsubscr_target_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_7, mod_consts[127]);
         if (tmp_delsubscr_target_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -20906,14 +20883,14 @@ static PyObject *impl_socketio$asyncio_server$$$function__26__engineio_server_cl
 
     // Framed code:
     {
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[186]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[186]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[186]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[186]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -20923,7 +20900,7 @@ static PyObject *impl_socketio$asyncio_server$$$function__26__engineio_server_cl
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[187]);
+        tmp_return_value = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[187]);
         if (tmp_return_value == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -21967,63 +21944,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("socketio.asyncio_server");
+
+    // Store the module for future use.
     module_socketio$asyncio_server = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_server: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("socketio.asyncio_server: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_server: Calling createModuleConstants().\n");
+        PRINT_STRING("socketio.asyncio_server: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("socketio.asyncio_server: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("socketio.asyncio_server: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initsocketio$asyncio_server\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_socketio$asyncio_server = MODULE_DICT(module_socketio$asyncio_server);
 
@@ -22044,7 +22025,7 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         UPDATE_STRING_DICT0(
             moduledict_socketio$asyncio_server,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[194]
         );
 #elif 0
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)const_str_plain___name__);
@@ -22094,7 +22075,7 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -22247,18 +22228,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_4;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[39];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = Py_None;
-        tmp_level_name_1 = mod_consts[45];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[39];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = Py_None;
+        tmp_level_value_1 = mod_consts[45];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 1;
-        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_4 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22273,18 +22254,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[186];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[45];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[186];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_2 = Py_None;
+        tmp_fromlist_value_2 = Py_None;
+        tmp_level_value_2 = mod_consts[45];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 3;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22300,18 +22281,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_6;
         PyObject *tmp_import_name_from_1;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[194];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_3 = Py_None;
-        tmp_fromlist_name_3 = mod_consts[195];
-        tmp_level_name_3 = mod_consts[46];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[194];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_3 = Py_None;
+        tmp_fromlist_value_3 = mod_consts[195];
+        tmp_level_value_3 = mod_consts[46];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 5;
-        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22349,18 +22330,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_7;
         PyObject *tmp_import_name_from_2;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[194];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[196];
-        tmp_level_name_4 = mod_consts[46];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[194];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_4 = Py_None;
+        tmp_fromlist_value_4 = mod_consts[196];
+        tmp_level_value_4 = mod_consts[46];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 6;
-        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22398,18 +22379,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_8;
         PyObject *tmp_import_name_from_3;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[194];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[197];
-        tmp_level_name_5 = mod_consts[46];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[194];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_5 = Py_None;
+        tmp_fromlist_value_5 = mod_consts[197];
+        tmp_level_value_5 = mod_consts[46];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 7;
-        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_import_name_from_3 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_import_name_from_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22447,18 +22428,18 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_9;
         PyObject *tmp_import_name_from_4;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[194];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_socketio$asyncio_server;
-        tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[198];
-        tmp_level_name_6 = mod_consts[46];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[194];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_socketio$asyncio_server;
+        tmp_locals_arg_value_6 = Py_None;
+        tmp_fromlist_value_6 = mod_consts[198];
+        tmp_level_value_6 = mod_consts[46];
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 8;
-        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22497,15 +22478,15 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_assign_source_10;
         PyObject *tmp_tuple_element_1;
-        PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[85]);
+        PyObject *tmp_expression_value_1;
+        tmp_expression_value_1 = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)mod_consts[85]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
+        if (unlikely(tmp_expression_value_1 == NULL)) {
+            tmp_expression_value_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[85]);
         }
 
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[199]);
+        assert(!(tmp_expression_value_1 == NULL));
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[199]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22553,44 +22534,39 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     }
     {
         PyObject *tmp_assign_source_13;
-        PyObject *tmp_metaclass_name_1;
-        nuitka_bool tmp_condition_result_1;
-        PyObject *tmp_key_name_1;
-        PyObject *tmp_dict_arg_name_1;
-        PyObject *tmp_dict_arg_name_2;
-        PyObject *tmp_key_name_2;
+        PyObject *tmp_metaclass_value_1;
+        bool tmp_condition_result_1;
+        PyObject *tmp_key_value_1;
+        PyObject *tmp_dict_arg_value_1;
+        PyObject *tmp_dict_arg_value_2;
+        PyObject *tmp_key_value_2;
         nuitka_bool tmp_condition_result_2;
         int tmp_truth_name_1;
         PyObject *tmp_type_arg_1;
-        PyObject *tmp_expression_name_2;
-        PyObject *tmp_subscript_name_1;
-        PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[67];
+        PyObject *tmp_expression_value_2;
+        PyObject *tmp_subscript_value_1;
+        PyObject *tmp_bases_value_1;
+        tmp_key_value_1 = mod_consts[67];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
+        tmp_dict_arg_value_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_1, tmp_key_value_1);
         assert(!(tmp_res == -1));
-        tmp_condition_result_1 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_1 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_1 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_1 != false) {
             goto condexpr_true_1;
         } else {
             goto condexpr_false_1;
         }
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[67];
-        tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
-        if (tmp_metaclass_name_1 == NULL) {
-            assert(ERROR_OCCURRED());
-
-            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-
-
-            exception_lineno = 11;
-
-            goto try_except_handler_1;
+        tmp_dict_arg_value_2 = tmp_class_creation_1__class_decl_dict;
+        tmp_key_value_2 = mod_consts[67];
+        tmp_metaclass_value_1 = DICT_GET_ITEM0(tmp_dict_arg_value_2, tmp_key_value_2);
+        if (tmp_metaclass_value_1 == NULL) {
+            tmp_metaclass_value_1 = Py_None;
         }
+        assert(!(tmp_metaclass_value_1 == NULL));
+        Py_INCREF(tmp_metaclass_value_1);
         goto condexpr_end_1;
         condexpr_false_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
@@ -22613,9 +22589,9 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         }
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_expression_name_2 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[45];
-        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
+        tmp_expression_value_2 = tmp_class_creation_1__bases;
+        tmp_subscript_value_1 = mod_consts[45];
+        tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_2, tmp_subscript_value_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22626,9 +22602,9 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        tmp_metaclass_name_1 = BUILTIN_TYPE1(tmp_type_arg_1);
+        tmp_metaclass_value_1 = BUILTIN_TYPE1(tmp_type_arg_1);
         Py_DECREF(tmp_type_arg_1);
-        if (tmp_metaclass_name_1 == NULL) {
+        if (tmp_metaclass_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22640,14 +22616,14 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         }
         goto condexpr_end_2;
         condexpr_false_2:;
-        tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
-        Py_INCREF(tmp_metaclass_name_1);
+        tmp_metaclass_value_1 = (PyObject *)&PyType_Type;
+        Py_INCREF(tmp_metaclass_value_1);
         condexpr_end_2:;
         condexpr_end_1:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
-        tmp_bases_name_1 = tmp_class_creation_1__bases;
-        tmp_assign_source_13 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
-        Py_DECREF(tmp_metaclass_name_1);
+        tmp_bases_value_1 = tmp_class_creation_1__bases;
+        tmp_assign_source_13 = SELECT_METACLASS(tmp_metaclass_value_1, tmp_bases_value_1);
+        Py_DECREF(tmp_metaclass_value_1);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22662,16 +22638,16 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         tmp_class_creation_1__metaclass = tmp_assign_source_13;
     }
     {
-        nuitka_bool tmp_condition_result_3;
-        PyObject *tmp_key_name_3;
-        PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[67];
+        bool tmp_condition_result_3;
+        PyObject *tmp_key_value_3;
+        PyObject *tmp_dict_arg_value_3;
+        tmp_key_value_3 = mod_consts[67];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
-        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
+        tmp_dict_arg_value_3 = tmp_class_creation_1__class_decl_dict;
+        tmp_res = DICT_HAS_ITEM(tmp_dict_arg_value_3, tmp_key_value_3);
         assert(!(tmp_res == -1));
-        tmp_condition_result_3 = (tmp_res != 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_3 = (tmp_res != 0) ? true : false;
+        if (tmp_condition_result_3 != false) {
             goto branch_yes_1;
         } else {
             goto branch_no_1;
@@ -22695,10 +22671,10 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     branch_no_1:;
     {
         nuitka_bool tmp_condition_result_4;
-        PyObject *tmp_expression_name_3;
+        PyObject *tmp_expression_value_3;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_3 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[68]);
+        tmp_expression_value_3 = tmp_class_creation_1__metaclass;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_3, mod_consts[68]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -22709,15 +22685,15 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     branch_yes_2:;
     {
         PyObject *tmp_assign_source_14;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_args_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_4;
+        PyObject *tmp_args_value_1;
         PyObject *tmp_tuple_element_2;
-        PyObject *tmp_kwargs_name_1;
+        PyObject *tmp_kwargs_value_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
-        tmp_expression_name_4 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[68]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_expression_value_4 = tmp_class_creation_1__metaclass;
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[68]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -22728,17 +22704,17 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
             goto try_except_handler_1;
         }
         tmp_tuple_element_2 = mod_consts[187];
-        tmp_args_name_1 = PyTuple_New(2);
-        PyTuple_SET_ITEM0(tmp_args_name_1, 0, tmp_tuple_element_2);
+        tmp_args_value_1 = PyTuple_New(2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 0, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_tuple_element_2 = tmp_class_creation_1__bases;
-        PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_args_value_1, 1, tmp_tuple_element_2);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-        tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
+        tmp_kwargs_value_1 = tmp_class_creation_1__class_decl_dict;
         frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 11;
-        tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
-        Py_DECREF(tmp_called_name_1);
-        Py_DECREF(tmp_args_name_1);
+        tmp_assign_source_14 = CALL_FUNCTION(tmp_called_value_1, tmp_args_value_1, tmp_kwargs_value_1);
+        Py_DECREF(tmp_called_value_1);
+        Py_DECREF(tmp_args_value_1);
         if (tmp_assign_source_14 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -22753,14 +22729,14 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         tmp_class_creation_1__prepared = tmp_assign_source_14;
     }
     {
-        nuitka_bool tmp_condition_result_5;
-        PyObject *tmp_operand_name_1;
-        PyObject *tmp_expression_name_5;
+        bool tmp_condition_result_5;
+        PyObject *tmp_operand_value_1;
+        PyObject *tmp_expression_value_5;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
-        tmp_expression_name_5 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[70]);
-        tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
-        tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
+        tmp_expression_value_5 = tmp_class_creation_1__prepared;
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_value_5, mod_consts[70]);
+        tmp_operand_value_1 = (tmp_result) ? Py_True : Py_False;
+        tmp_res = CHECK_IF_TRUE(tmp_operand_value_1);
         if (tmp_res == -1) {
             assert(ERROR_OCCURRED());
 
@@ -22771,8 +22747,8 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        tmp_condition_result_5 = (tmp_res == 0) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
-        if (tmp_condition_result_5 == NUITKA_BOOL_TRUE) {
+        tmp_condition_result_5 = (tmp_res == 0) ? true : false;
+        if (tmp_condition_result_5 != false) {
             goto branch_yes_3;
         } else {
             goto branch_no_3;
@@ -22782,14 +22758,14 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     {
         PyObject *tmp_raise_type_1;
         PyObject *tmp_raise_value_1;
-        PyObject *tmp_left_name_1;
-        PyObject *tmp_right_name_1;
+        PyObject *tmp_left_value_1;
+        PyObject *tmp_right_value_1;
         PyObject *tmp_tuple_element_3;
         PyObject *tmp_getattr_target_1;
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[71];
+        tmp_left_value_1 = mod_consts[71];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
         tmp_getattr_attr_1 = mod_consts[72];
@@ -22805,17 +22781,17 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
 
             goto try_except_handler_1;
         }
-        tmp_right_name_1 = PyTuple_New(2);
+        tmp_right_value_1 = PyTuple_New(2);
         {
-            PyObject *tmp_expression_name_6;
+            PyObject *tmp_expression_value_6;
             PyObject *tmp_type_arg_2;
-            PyTuple_SET_ITEM(tmp_right_name_1, 0, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 0, tmp_tuple_element_3);
             CHECK_OBJECT(tmp_class_creation_1__prepared);
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
-            tmp_expression_name_6 = BUILTIN_TYPE1(tmp_type_arg_2);
-            assert(!(tmp_expression_name_6 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[72]);
-            Py_DECREF(tmp_expression_name_6);
+            tmp_expression_value_6 = BUILTIN_TYPE1(tmp_type_arg_2);
+            assert(!(tmp_expression_value_6 == NULL));
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[72]);
+            Py_DECREF(tmp_expression_value_6);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -22826,17 +22802,17 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
 
                 goto tuple_build_exception_1;
             }
-            PyTuple_SET_ITEM(tmp_right_name_1, 1, tmp_tuple_element_3);
+            PyTuple_SET_ITEM(tmp_right_value_1, 1, tmp_tuple_element_3);
         }
         goto tuple_build_noexception_1;
         // Exception handling pass through code for tuple_build:
         tuple_build_exception_1:;
-        Py_DECREF(tmp_right_name_1);
+        Py_DECREF(tmp_right_value_1);
         goto try_except_handler_1;
         // Finished with no exception for tuple_build:
         tuple_build_noexception_1:;
-        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_name_1, tmp_right_name_1);
-        Py_DECREF(tmp_right_name_1);
+        tmp_raise_value_1 = BINARY_OPERATION_MOD_OBJECT_UNICODE_TUPLE(tmp_left_value_1, tmp_right_value_1);
+        Py_DECREF(tmp_right_value_1);
         if (tmp_raise_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -23475,13 +23451,13 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         skip_nested_handling_1:;
         {
             nuitka_bool tmp_condition_result_6;
-            PyObject *tmp_compexpr_left_1;
-            PyObject *tmp_compexpr_right_1;
+            PyObject *tmp_cmp_expr_left_1;
+            PyObject *tmp_cmp_expr_right_1;
             CHECK_OBJECT(tmp_class_creation_1__bases);
-            tmp_compexpr_left_1 = tmp_class_creation_1__bases;
+            tmp_cmp_expr_left_1 = tmp_class_creation_1__bases;
             CHECK_OBJECT(tmp_class_creation_1__bases_orig);
-            tmp_compexpr_right_1 = tmp_class_creation_1__bases_orig;
-            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_compexpr_left_1, tmp_compexpr_right_1);
+            tmp_cmp_expr_right_1 = tmp_class_creation_1__bases_orig;
+            tmp_condition_result_6 = RICH_COMPARE_NE_NBOOL_OBJECT_TUPLE(tmp_cmp_expr_left_1, tmp_cmp_expr_right_1);
             if (tmp_condition_result_6 == NUITKA_BOOL_EXCEPTION) {
                 assert(ERROR_OCCURRED());
 
@@ -23516,25 +23492,25 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
         branch_no_4:;
         {
             PyObject *tmp_assign_source_17;
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_args_name_2;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_args_value_2;
             PyObject *tmp_tuple_element_4;
-            PyObject *tmp_kwargs_name_2;
+            PyObject *tmp_kwargs_value_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
-            tmp_called_name_2 = tmp_class_creation_1__metaclass;
+            tmp_called_value_2 = tmp_class_creation_1__metaclass;
             tmp_tuple_element_4 = mod_consts[187];
-            tmp_args_name_2 = PyTuple_New(3);
-            PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_4);
+            tmp_args_value_2 = PyTuple_New(3);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 0, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__bases);
             tmp_tuple_element_4 = tmp_class_creation_1__bases;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 1, tmp_tuple_element_4);
             tmp_tuple_element_4 = locals_socketio$asyncio_server$$$class__1_AsyncServer_11;
-            PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_4);
+            PyTuple_SET_ITEM0(tmp_args_value_2, 2, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
-            tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
+            tmp_kwargs_value_2 = tmp_class_creation_1__class_decl_dict;
             frame_5f774bda015d33b4afc21532e417c1c5->m_frame.f_lineno = 11;
-            tmp_assign_source_17 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
-            Py_DECREF(tmp_args_name_2);
+            tmp_assign_source_17 = CALL_FUNCTION(tmp_called_value_2, tmp_args_value_2, tmp_kwargs_value_2);
+            Py_DECREF(tmp_args_value_2);
             if (tmp_assign_source_17 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -23679,18 +23655,36 @@ PyObject *modulecode_socketio$asyncio_server(PyObject *module, struct Nuitka_Met
     CHECK_OBJECT(tmp_class_creation_1__bases_orig);
     Py_DECREF(tmp_class_creation_1__bases_orig);
     tmp_class_creation_1__bases_orig = NULL;
-    Py_XDECREF(tmp_class_creation_1__bases);
+    CHECK_OBJECT(tmp_class_creation_1__bases);
+    Py_DECREF(tmp_class_creation_1__bases);
     tmp_class_creation_1__bases = NULL;
-    Py_XDECREF(tmp_class_creation_1__class_decl_dict);
+    CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
+    Py_DECREF(tmp_class_creation_1__class_decl_dict);
     tmp_class_creation_1__class_decl_dict = NULL;
-    Py_XDECREF(tmp_class_creation_1__metaclass);
+    CHECK_OBJECT(tmp_class_creation_1__metaclass);
+    Py_DECREF(tmp_class_creation_1__metaclass);
     tmp_class_creation_1__metaclass = NULL;
     CHECK_OBJECT(tmp_class_creation_1__prepared);
     Py_DECREF(tmp_class_creation_1__prepared);
     tmp_class_creation_1__prepared = NULL;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("socketio.asyncio_server", false);
+
     return module_socketio$asyncio_server;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_socketio$asyncio_server, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("socketio$asyncio_server", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }

@@ -1,5 +1,5 @@
 /* Generated code for Python module 'zmq.backend.cython'
- * created by Nuitka version 0.6.17.7
+ * created by Nuitka version 0.7.3
  *
  * This code is in part copyright 2021 Kay Hayen.
  *
@@ -57,8 +57,8 @@ static void createModuleConstants(void) {
     }
 }
 
-/* For multiprocessing, we want to be able to initialize the __main__ constants. */
-#if (_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED || _NUITKA_PLUGIN_TRACEBACK_ENCRYPTION_ENABLED) && 0
+// We want to be able to initialize the "__main__" constants in any case.
+#if 0
 void createMainModuleConstants(void) {
     createModuleConstants();
 }
@@ -259,63 +259,67 @@ static PyMethodDef _method_def_create_compiled_function = {
 
 // Internal entry point for module code.
 PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPathBasedLoaderEntry const *loader_entry) {
+    // Report entry to PGO.
+    PGO_onModuleEntered("zmq.backend.cython");
+
+    // Store the module for future use.
     module_zmq$backend$cython = module;
 
-#ifdef _NUITKA_MODULE
-    // In case of a stand alone extension module, need to call initialization
-    // the init here because that's the first and only time we are going to get
-    // called here.
+    // Modules can be loaded again in case of errors, avoid the init being done again.
+    static bool init_done = false;
 
-    // Initialize the constant values used.
-    _initBuiltinModule();
-    createGlobalConstants();
+    if (init_done == false) {
+#if defined(_NUITKA_MODULE) && 0
+        // In case of an extension module loaded into a process, we need to call
+        // initialization here because that's the first and potentially only time
+        // we are going called.
 
-    /* Initialize the compiled types of Nuitka. */
-    _initCompiledCellType();
-    _initCompiledGeneratorType();
-    _initCompiledFunctionType();
-    _initCompiledMethodType();
-    _initCompiledFrameType();
+        // Initialize the constant values used.
+        _initBuiltinModule();
+        createGlobalConstants();
 
-    _initSlotCompare();
+        /* Initialize the compiled types of Nuitka. */
+        _initCompiledCellType();
+        _initCompiledGeneratorType();
+        _initCompiledFunctionType();
+        _initCompiledMethodType();
+        _initCompiledFrameType();
+
+        _initSlotCompare();
 #if PYTHON_VERSION >= 0x270
-    _initSlotIternext();
+        _initSlotIternext();
 #endif
 
-    patchBuiltinModule();
-    patchTypeComparison();
+        patchTypeComparison();
 
-    // Enable meta path based loader if not already done.
+        // Enable meta path based loader if not already done.
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.backend.cython: Calling setupMetaPathBasedLoader().\n");
+        PRINT_STRING("zmq.backend.cython: Calling setupMetaPathBasedLoader().\n");
 #endif
-    setupMetaPathBasedLoader();
+        setupMetaPathBasedLoader();
 
 #if PYTHON_VERSION >= 0x300
-    patchInspectModule();
+        patchInspectModule();
 #endif
 
 #endif
 
-    /* The constants only used by this module are created now. */
+        /* The constants only used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.backend.cython: Calling createModuleConstants().\n");
+        PRINT_STRING("zmq.backend.cython: Calling createModuleConstants().\n");
 #endif
-    createModuleConstants();
+        createModuleConstants();
 
-    /* The code objects used by this module are created now. */
+        /* The code objects used by this module are created now. */
 #ifdef _NUITKA_TRACE
-    PRINT_STRING("zmq.backend.cython: Calling createModuleCodeObjects().\n");
+        PRINT_STRING("zmq.backend.cython: Calling createModuleCodeObjects().\n");
 #endif
-    createModuleCodeObjects();
+        createModuleCodeObjects();
+
+        init_done = true;
+    }
 
     // PRINT_STRING("in initzmq$backend$cython\n");
-
-    // Create the module object first. There are no methods initially, all are
-    // added dynamically in actual code only.  Also no "__doc__" is initially
-    // set at this time, as it could not contain NUL characters this way, they
-    // are instead set in early module code.  No "self" for modules, we have no
-    // use for it.
 
     moduledict_zmq$backend$cython = MODULE_DICT(module_zmq$backend$cython);
 
@@ -336,7 +340,7 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(
             moduledict_zmq$backend$cython,
             (Nuitka_StringObject *)const_str_plain___package__,
-            const_str_empty
+            mod_consts[20]
         );
 #elif 1
         PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)const_str_plain___name__);
@@ -386,7 +390,7 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
         PyObject *value = (PyObject *)builtin_module;
 
         // Check if main module, not a dict then but the module itself.
-#if !defined(_NUITKA_EXE) || !0
+#if defined(_NUITKA_MODULE) || !0
         value = PyModule_GetDict(value);
 #endif
 
@@ -479,16 +483,16 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_3;
         PyObject *tmp_list_element_1;
-        PyObject *tmp_called_name_1;
-        PyObject *tmp_expression_name_1;
-        PyObject *tmp_args_element_name_1;
+        PyObject *tmp_called_value_1;
+        PyObject *tmp_expression_value_1;
+        PyObject *tmp_args_element_value_1;
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
         {
             PyObject *hard_module = IMPORT_HARD_OS();
-            tmp_expression_name_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
+            tmp_expression_value_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
         }
 
-        if (tmp_expression_name_1 == NULL) {
+        if (tmp_expression_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -498,8 +502,8 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
-        if (tmp_called_name_1 == NULL) {
+        tmp_called_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_value_1, mod_consts[4]);
+        if (tmp_called_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -509,10 +513,10 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_args_element_name_1 = module_filename_obj;
+        tmp_args_element_value_1 = module_filename_obj;
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
-        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
-        Py_DECREF(tmp_called_name_1);
+        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_1, tmp_args_element_value_1);
+        Py_DECREF(tmp_called_value_1);
         if (tmp_list_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -525,25 +529,28 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
         }
         tmp_assign_source_3 = PyList_New(4);
         {
-            PyObject *tmp_called_name_2;
-            PyObject *tmp_expression_name_2;
-            PyObject *tmp_args_element_name_2;
-            PyObject *tmp_called_instance_1;
-            PyObject *tmp_args_element_name_3;
-            PyObject *tmp_called_name_3;
-            PyObject *tmp_expression_name_3;
-            PyObject *tmp_args_element_name_4;
-            PyObject *tmp_called_instance_2;
-            PyObject *tmp_args_element_name_5;
-            PyObject *tmp_called_instance_3;
+            PyObject *tmp_called_value_2;
+            PyObject *tmp_expression_value_2;
+            PyObject *tmp_args_element_value_2;
+            PyObject *tmp_called_value_3;
+            PyObject *tmp_expression_value_3;
+            PyObject *tmp_args_element_value_3;
+            PyObject *tmp_called_value_4;
+            PyObject *tmp_expression_value_4;
+            PyObject *tmp_args_element_value_4;
+            PyObject *tmp_called_value_5;
+            PyObject *tmp_expression_value_5;
+            PyObject *tmp_args_element_value_5;
+            PyObject *tmp_called_value_6;
+            PyObject *tmp_expression_value_6;
             PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_expression_name_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
+                tmp_expression_value_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
             }
 
-            if (tmp_expression_name_2 == NULL) {
+            if (tmp_expression_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -553,8 +560,8 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
                 goto list_build_exception_1;
             }
-            tmp_called_name_2 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[5]);
-            if (tmp_called_name_2 == NULL) {
+            tmp_called_value_2 = LOOKUP_ATTRIBUTE(tmp_expression_value_2, mod_consts[5]);
+            if (tmp_called_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -567,45 +574,53 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
+                tmp_expression_value_3 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
             }
 
-            if (tmp_called_instance_1 == NULL) {
+            if (tmp_expression_value_3 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_3 = LOOKUP_ATTRIBUTE(tmp_expression_value_3, mod_consts[7]);
+            if (tmp_called_value_3 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
-            tmp_args_element_name_2 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_1,
-                mod_consts[7],
-                &PyTuple_GET_ITEM(mod_consts[8], 0)
-            );
+            tmp_args_element_value_2 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_3, mod_consts[8]);
 
-            if (tmp_args_element_name_2 == NULL) {
+            Py_DECREF(tmp_called_value_3);
+            if (tmp_args_element_value_2 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_2);
+                Py_DECREF(tmp_called_value_2);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_args_element_name_3 = mod_consts[9];
+            tmp_args_element_value_3 = mod_consts[9];
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
-                PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
-                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_2, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_2, tmp_args_element_value_3};
+                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_2, call_args);
             }
 
-            Py_DECREF(tmp_called_name_2);
-            Py_DECREF(tmp_args_element_name_2);
+            Py_DECREF(tmp_called_value_2);
+            Py_DECREF(tmp_args_element_value_2);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -620,10 +635,10 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_expression_name_3 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
+                tmp_expression_value_4 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
             }
 
-            if (tmp_expression_name_3 == NULL) {
+            if (tmp_expression_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -633,8 +648,8 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
                 goto list_build_exception_1;
             }
-            tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[5]);
-            if (tmp_called_name_3 == NULL) {
+            tmp_called_value_4 = LOOKUP_ATTRIBUTE(tmp_expression_value_4, mod_consts[5]);
+            if (tmp_called_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -647,45 +662,53 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_2 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
+                tmp_expression_value_5 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
             }
 
-            if (tmp_called_instance_2 == NULL) {
+            if (tmp_expression_value_5 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_3);
+                Py_DECREF(tmp_called_value_4);
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_5 = LOOKUP_ATTRIBUTE(tmp_expression_value_5, mod_consts[7]);
+            if (tmp_called_value_5 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+                Py_DECREF(tmp_called_value_4);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
-            tmp_args_element_name_4 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_2,
-                mod_consts[7],
-                &PyTuple_GET_ITEM(mod_consts[10], 0)
-            );
+            tmp_args_element_value_4 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_5, mod_consts[10]);
 
-            if (tmp_args_element_name_4 == NULL) {
+            Py_DECREF(tmp_called_value_5);
+            if (tmp_args_element_value_4 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-                Py_DECREF(tmp_called_name_3);
+                Py_DECREF(tmp_called_value_4);
 
                 exception_lineno = 1;
 
                 goto list_build_exception_1;
             }
-            tmp_args_element_name_5 = mod_consts[11];
+            tmp_args_element_value_5 = mod_consts[11];
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
-                PyObject *call_args[] = {tmp_args_element_name_4, tmp_args_element_name_5};
-                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
+                PyObject *call_args[] = {tmp_args_element_value_4, tmp_args_element_value_5};
+                tmp_list_element_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_value_4, call_args);
             }
 
-            Py_DECREF(tmp_called_name_3);
-            Py_DECREF(tmp_args_element_name_4);
+            Py_DECREF(tmp_called_value_4);
+            Py_DECREF(tmp_args_element_value_4);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -700,10 +723,21 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
             {
                 PyObject *hard_module = IMPORT_HARD_OS();
-                tmp_called_instance_3 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
+                tmp_expression_value_6 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[6]);
             }
 
-            if (tmp_called_instance_3 == NULL) {
+            if (tmp_expression_value_6 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            tmp_called_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_6, mod_consts[7]);
+            if (tmp_called_value_6 == NULL) {
                 assert(ERROR_OCCURRED());
 
                 FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -714,12 +748,9 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
                 goto list_build_exception_1;
             }
             frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 1;
-            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
-                tmp_called_instance_3,
-                mod_consts[7],
-                &PyTuple_GET_ITEM(mod_consts[12], 0)
-            );
+            tmp_list_element_1 = CALL_FUNCTION_WITH_POSARGS2(tmp_called_value_6, mod_consts[12]);
 
+            Py_DECREF(tmp_called_value_6);
             if (tmp_list_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -742,10 +773,10 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT1(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_3);
     }
     {
-        PyObject *tmp_expression_name_4;
-        PyObject *tmp_subscript_name_1;
+        PyObject *tmp_expression_value_7;
+        PyObject *tmp_subscript_value_1;
         tmp_dictset_value = Nuitka_Loader_New(loader_entry);
-        tmp_dictset_dict = PySys_GetObject((char *)"path_importer_cache");
+        tmp_dictset_dict = Nuitka_SysGetObject("path_importer_cache");
         if (tmp_dictset_dict == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -756,15 +787,15 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[13]);
+        tmp_expression_value_7 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[13]);
 
-        if (unlikely(tmp_expression_name_4 == NULL)) {
-            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
+        if (unlikely(tmp_expression_value_7 == NULL)) {
+            tmp_expression_value_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[13]);
         }
 
-        assert(!(tmp_expression_name_4 == NULL));
-        tmp_subscript_name_1 = mod_consts[14];
-        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_4, tmp_subscript_name_1, 0);
+        assert(!(tmp_expression_value_7 == NULL));
+        tmp_subscript_value_1 = mod_consts[14];
+        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_value_7, tmp_subscript_value_1, 0);
         if (tmp_dictset_key == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -775,7 +806,9 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
+        assert(PyDict_CheckExact(tmp_dictset_dict));
         tmp_res = PyDict_SetItem(tmp_dictset_dict, tmp_dictset_key, tmp_dictset_value);
+
         Py_DECREF(tmp_dictset_key);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -879,18 +912,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_5;
-        PyObject *tmp_name_name_1;
-        PyObject *tmp_globals_arg_name_1;
-        PyObject *tmp_locals_arg_name_1;
-        PyObject *tmp_fromlist_name_1;
-        PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[20];
-        tmp_globals_arg_name_1 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[21];
-        tmp_level_name_1 = mod_consts[22];
+        PyObject *tmp_name_value_1;
+        PyObject *tmp_globals_arg_value_1;
+        PyObject *tmp_locals_arg_value_1;
+        PyObject *tmp_fromlist_value_1;
+        PyObject *tmp_level_value_1;
+        tmp_name_value_1 = mod_consts[20];
+        tmp_globals_arg_value_1 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_1 = Py_None;
+        tmp_fromlist_value_1 = mod_consts[21];
+        tmp_level_value_1 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 6;
-        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
+        tmp_assign_source_5 = IMPORT_MODULE5(tmp_name_value_1, tmp_globals_arg_value_1, tmp_locals_arg_value_1, tmp_fromlist_value_1, tmp_level_value_1);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1440,18 +1473,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
         UPDATE_STRING_DICT0(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[34], tmp_assign_source_19);
     }
     {
-        PyObject *tmp_called_name_4;
-        PyObject *tmp_expression_name_5;
+        PyObject *tmp_called_value_7;
+        PyObject *tmp_expression_value_8;
         PyObject *tmp_call_result_1;
-        PyObject *tmp_args_element_name_6;
-        PyObject *tmp_expression_name_6;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[33]);
+        PyObject *tmp_args_element_value_6;
+        PyObject *tmp_expression_value_9;
+        tmp_expression_value_8 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[33]);
 
-        if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
+        if (unlikely(tmp_expression_value_8 == NULL)) {
+            tmp_expression_value_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[33]);
         }
 
-        if (tmp_expression_name_5 == NULL) {
+        if (tmp_expression_value_8 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1461,8 +1494,8 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        tmp_called_name_4 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[35]);
-        if (tmp_called_name_4 == NULL) {
+        tmp_called_value_7 = LOOKUP_ATTRIBUTE(tmp_expression_value_8, mod_consts[35]);
+        if (tmp_called_value_7 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -1472,37 +1505,37 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[34]);
+        tmp_expression_value_9 = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)mod_consts[34]);
 
-        if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
+        if (unlikely(tmp_expression_value_9 == NULL)) {
+            tmp_expression_value_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[34]);
         }
 
-        if (tmp_expression_name_6 == NULL) {
+        if (tmp_expression_value_9 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 32;
 
             goto try_except_handler_2;
         }
-        tmp_args_element_name_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[33]);
-        if (tmp_args_element_name_6 == NULL) {
+        tmp_args_element_value_6 = LOOKUP_ATTRIBUTE(tmp_expression_value_9, mod_consts[33]);
+        if (tmp_args_element_value_6 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
-            Py_DECREF(tmp_called_name_4);
+            Py_DECREF(tmp_called_value_7);
 
             exception_lineno = 32;
 
             goto try_except_handler_2;
         }
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 32;
-        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_6);
-        Py_DECREF(tmp_called_name_4);
-        Py_DECREF(tmp_args_element_name_6);
+        tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_value_7, tmp_args_element_value_6);
+        Py_DECREF(tmp_called_value_7);
+        Py_DECREF(tmp_args_element_value_6);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1560,18 +1593,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     tmp_for_loop_1__for_iterator = NULL;
     {
         PyObject *tmp_star_imported_1;
-        PyObject *tmp_name_name_2;
-        PyObject *tmp_globals_arg_name_2;
-        PyObject *tmp_locals_arg_name_2;
-        PyObject *tmp_fromlist_name_2;
-        PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[23];
-        tmp_globals_arg_name_2 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_2 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_2 = mod_consts[36];
-        tmp_level_name_2 = mod_consts[22];
+        PyObject *tmp_name_value_2;
+        PyObject *tmp_globals_arg_value_2;
+        PyObject *tmp_locals_arg_value_2;
+        PyObject *tmp_fromlist_value_2;
+        PyObject *tmp_level_value_2;
+        tmp_name_value_2 = mod_consts[23];
+        tmp_globals_arg_value_2 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_2 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_2 = mod_consts[36];
+        tmp_level_value_2 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 34;
-        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
+        tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_value_2, tmp_globals_arg_value_2, tmp_locals_arg_value_2, tmp_fromlist_value_2, tmp_level_value_2);
         if (tmp_star_imported_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1597,18 +1630,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_2;
-        PyObject *tmp_name_name_3;
-        PyObject *tmp_globals_arg_name_3;
-        PyObject *tmp_locals_arg_name_3;
-        PyObject *tmp_fromlist_name_3;
-        PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[24];
-        tmp_globals_arg_name_3 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_3 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_3 = mod_consts[36];
-        tmp_level_name_3 = mod_consts[22];
+        PyObject *tmp_name_value_3;
+        PyObject *tmp_globals_arg_value_3;
+        PyObject *tmp_locals_arg_value_3;
+        PyObject *tmp_fromlist_value_3;
+        PyObject *tmp_level_value_3;
+        tmp_name_value_3 = mod_consts[24];
+        tmp_globals_arg_value_3 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_3 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_3 = mod_consts[36];
+        tmp_level_value_3 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 35;
-        tmp_star_imported_2 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
+        tmp_star_imported_2 = IMPORT_MODULE5(tmp_name_value_3, tmp_globals_arg_value_3, tmp_locals_arg_value_3, tmp_fromlist_value_3, tmp_level_value_3);
         if (tmp_star_imported_2 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1634,18 +1667,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_3;
-        PyObject *tmp_name_name_4;
-        PyObject *tmp_globals_arg_name_4;
-        PyObject *tmp_locals_arg_name_4;
-        PyObject *tmp_fromlist_name_4;
-        PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[25];
-        tmp_globals_arg_name_4 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_4 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_4 = mod_consts[36];
-        tmp_level_name_4 = mod_consts[22];
+        PyObject *tmp_name_value_4;
+        PyObject *tmp_globals_arg_value_4;
+        PyObject *tmp_locals_arg_value_4;
+        PyObject *tmp_fromlist_value_4;
+        PyObject *tmp_level_value_4;
+        tmp_name_value_4 = mod_consts[25];
+        tmp_globals_arg_value_4 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_4 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_4 = mod_consts[36];
+        tmp_level_value_4 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 36;
-        tmp_star_imported_3 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
+        tmp_star_imported_3 = IMPORT_MODULE5(tmp_name_value_4, tmp_globals_arg_value_4, tmp_locals_arg_value_4, tmp_fromlist_value_4, tmp_level_value_4);
         if (tmp_star_imported_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1671,18 +1704,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_4;
-        PyObject *tmp_name_name_5;
-        PyObject *tmp_globals_arg_name_5;
-        PyObject *tmp_locals_arg_name_5;
-        PyObject *tmp_fromlist_name_5;
-        PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[26];
-        tmp_globals_arg_name_5 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_5 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_5 = mod_consts[36];
-        tmp_level_name_5 = mod_consts[22];
+        PyObject *tmp_name_value_5;
+        PyObject *tmp_globals_arg_value_5;
+        PyObject *tmp_locals_arg_value_5;
+        PyObject *tmp_fromlist_value_5;
+        PyObject *tmp_level_value_5;
+        tmp_name_value_5 = mod_consts[26];
+        tmp_globals_arg_value_5 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_5 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_5 = mod_consts[36];
+        tmp_level_value_5 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 37;
-        tmp_star_imported_4 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
+        tmp_star_imported_4 = IMPORT_MODULE5(tmp_name_value_5, tmp_globals_arg_value_5, tmp_locals_arg_value_5, tmp_fromlist_value_5, tmp_level_value_5);
         if (tmp_star_imported_4 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1708,18 +1741,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_5;
-        PyObject *tmp_name_name_6;
-        PyObject *tmp_globals_arg_name_6;
-        PyObject *tmp_locals_arg_name_6;
-        PyObject *tmp_fromlist_name_6;
-        PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[27];
-        tmp_globals_arg_name_6 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_6 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_6 = mod_consts[36];
-        tmp_level_name_6 = mod_consts[22];
+        PyObject *tmp_name_value_6;
+        PyObject *tmp_globals_arg_value_6;
+        PyObject *tmp_locals_arg_value_6;
+        PyObject *tmp_fromlist_value_6;
+        PyObject *tmp_level_value_6;
+        tmp_name_value_6 = mod_consts[27];
+        tmp_globals_arg_value_6 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_6 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_6 = mod_consts[36];
+        tmp_level_value_6 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 38;
-        tmp_star_imported_5 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
+        tmp_star_imported_5 = IMPORT_MODULE5(tmp_name_value_6, tmp_globals_arg_value_6, tmp_locals_arg_value_6, tmp_fromlist_value_6, tmp_level_value_6);
         if (tmp_star_imported_5 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1745,18 +1778,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_6;
-        PyObject *tmp_name_name_7;
-        PyObject *tmp_globals_arg_name_7;
-        PyObject *tmp_locals_arg_name_7;
-        PyObject *tmp_fromlist_name_7;
-        PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[29];
-        tmp_globals_arg_name_7 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_7 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_7 = mod_consts[36];
-        tmp_level_name_7 = mod_consts[22];
+        PyObject *tmp_name_value_7;
+        PyObject *tmp_globals_arg_value_7;
+        PyObject *tmp_locals_arg_value_7;
+        PyObject *tmp_fromlist_value_7;
+        PyObject *tmp_level_value_7;
+        tmp_name_value_7 = mod_consts[29];
+        tmp_globals_arg_value_7 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_7 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_7 = mod_consts[36];
+        tmp_level_value_7 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 39;
-        tmp_star_imported_6 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
+        tmp_star_imported_6 = IMPORT_MODULE5(tmp_name_value_7, tmp_globals_arg_value_7, tmp_locals_arg_value_7, tmp_fromlist_value_7, tmp_level_value_7);
         if (tmp_star_imported_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1782,18 +1815,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_7;
-        PyObject *tmp_name_name_8;
-        PyObject *tmp_globals_arg_name_8;
-        PyObject *tmp_locals_arg_name_8;
-        PyObject *tmp_fromlist_name_8;
-        PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[28];
-        tmp_globals_arg_name_8 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_8 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_8 = mod_consts[36];
-        tmp_level_name_8 = mod_consts[22];
+        PyObject *tmp_name_value_8;
+        PyObject *tmp_globals_arg_value_8;
+        PyObject *tmp_locals_arg_value_8;
+        PyObject *tmp_fromlist_value_8;
+        PyObject *tmp_level_value_8;
+        tmp_name_value_8 = mod_consts[28];
+        tmp_globals_arg_value_8 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_8 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_8 = mod_consts[36];
+        tmp_level_value_8 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 40;
-        tmp_star_imported_7 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
+        tmp_star_imported_7 = IMPORT_MODULE5(tmp_name_value_8, tmp_globals_arg_value_8, tmp_locals_arg_value_8, tmp_fromlist_value_8, tmp_level_value_8);
         if (tmp_star_imported_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1819,18 +1852,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_8;
-        PyObject *tmp_name_name_9;
-        PyObject *tmp_globals_arg_name_9;
-        PyObject *tmp_locals_arg_name_9;
-        PyObject *tmp_fromlist_name_9;
-        PyObject *tmp_level_name_9;
-        tmp_name_name_9 = mod_consts[32];
-        tmp_globals_arg_name_9 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_9 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_9 = mod_consts[36];
-        tmp_level_name_9 = mod_consts[22];
+        PyObject *tmp_name_value_9;
+        PyObject *tmp_globals_arg_value_9;
+        PyObject *tmp_locals_arg_value_9;
+        PyObject *tmp_fromlist_value_9;
+        PyObject *tmp_level_value_9;
+        tmp_name_value_9 = mod_consts[32];
+        tmp_globals_arg_value_9 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_9 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_9 = mod_consts[36];
+        tmp_level_value_9 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 41;
-        tmp_star_imported_8 = IMPORT_MODULE5(tmp_name_name_9, tmp_globals_arg_name_9, tmp_locals_arg_name_9, tmp_fromlist_name_9, tmp_level_name_9);
+        tmp_star_imported_8 = IMPORT_MODULE5(tmp_name_value_9, tmp_globals_arg_value_9, tmp_locals_arg_value_9, tmp_fromlist_value_9, tmp_level_value_9);
         if (tmp_star_imported_8 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1856,18 +1889,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_9;
-        PyObject *tmp_name_name_10;
-        PyObject *tmp_globals_arg_name_10;
-        PyObject *tmp_locals_arg_name_10;
-        PyObject *tmp_fromlist_name_10;
-        PyObject *tmp_level_name_10;
-        tmp_name_name_10 = mod_consts[31];
-        tmp_globals_arg_name_10 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_10 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_10 = mod_consts[36];
-        tmp_level_name_10 = mod_consts[22];
+        PyObject *tmp_name_value_10;
+        PyObject *tmp_globals_arg_value_10;
+        PyObject *tmp_locals_arg_value_10;
+        PyObject *tmp_fromlist_value_10;
+        PyObject *tmp_level_value_10;
+        tmp_name_value_10 = mod_consts[31];
+        tmp_globals_arg_value_10 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_10 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_10 = mod_consts[36];
+        tmp_level_value_10 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 42;
-        tmp_star_imported_9 = IMPORT_MODULE5(tmp_name_name_10, tmp_globals_arg_name_10, tmp_locals_arg_name_10, tmp_fromlist_name_10, tmp_level_name_10);
+        tmp_star_imported_9 = IMPORT_MODULE5(tmp_name_value_10, tmp_globals_arg_value_10, tmp_locals_arg_value_10, tmp_fromlist_value_10, tmp_level_value_10);
         if (tmp_star_imported_9 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1893,18 +1926,18 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_star_imported_10;
-        PyObject *tmp_name_name_11;
-        PyObject *tmp_globals_arg_name_11;
-        PyObject *tmp_locals_arg_name_11;
-        PyObject *tmp_fromlist_name_11;
-        PyObject *tmp_level_name_11;
-        tmp_name_name_11 = mod_consts[30];
-        tmp_globals_arg_name_11 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_locals_arg_name_11 = (PyObject *)moduledict_zmq$backend$cython;
-        tmp_fromlist_name_11 = mod_consts[36];
-        tmp_level_name_11 = mod_consts[22];
+        PyObject *tmp_name_value_11;
+        PyObject *tmp_globals_arg_value_11;
+        PyObject *tmp_locals_arg_value_11;
+        PyObject *tmp_fromlist_value_11;
+        PyObject *tmp_level_value_11;
+        tmp_name_value_11 = mod_consts[30];
+        tmp_globals_arg_value_11 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_locals_arg_value_11 = (PyObject *)moduledict_zmq$backend$cython;
+        tmp_fromlist_value_11 = mod_consts[36];
+        tmp_level_value_11 = mod_consts[22];
         frame_15fc48a3ada564f5d7df4f87748c6071->m_frame.f_lineno = 43;
-        tmp_star_imported_10 = IMPORT_MODULE5(tmp_name_name_11, tmp_globals_arg_name_11, tmp_locals_arg_name_11, tmp_fromlist_name_11, tmp_level_name_11);
+        tmp_star_imported_10 = IMPORT_MODULE5(tmp_name_value_11, tmp_globals_arg_value_11, tmp_locals_arg_value_11, tmp_fromlist_value_11, tmp_level_value_11);
         if (tmp_star_imported_10 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -1958,8 +1991,23 @@ PyObject *modulecode_zmq$backend$cython(PyObject *module, struct Nuitka_MetaPath
 
     frame_no_exception_1:;
 
+    // Report to PGO about leaving the module without error.
+    PGO_onModuleExit("zmq.backend.cython", false);
+
     return module_zmq$backend$cython;
     module_exception_exit:
+
+#if defined(_NUITKA_MODULE) && 0
+    {
+        PyObject *module_name = GET_STRING_DICT_VALUE(moduledict_zmq$backend$cython, (Nuitka_StringObject *)const_str_plain___name__);
+
+        if (module_name != NULL) {
+            Nuitka_DelModule(module_name);
+        }
+    }
+#endif
+    PGO_onModuleExit("zmq$backend$cython", false);
+
     RESTORE_ERROR_OCCURRED(exception_type, exception_value, exception_tb);
     return NULL;
 }
