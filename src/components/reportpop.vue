@@ -8,7 +8,7 @@
         <!-- <v-card-media>
 					<div id='chart' class="chart"></div>
 				</v-card-media> -->
-        <div id="reportchart" class="reportchart"></div>
+        <div id="reportchart" class="reportchart pa-5"></div>
         <v-card-text>
           <v-textarea
             name="input-7-1"
@@ -46,7 +46,9 @@ import {
   SingleAxisComponent,
   ToolboxComponent,
   DataZoomComponent,
-  VisualMapComponent
+  VisualMapComponent,
+  MarkPointComponent,
+  MarkLineComponent
 } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
 import darkTheme from "../assets/dark.js";
@@ -60,6 +62,8 @@ echarts.use([
   ToolboxComponent,
   DataZoomComponent,
   VisualMapComponent,
+  MarkPointComponent,
+  MarkLineComponent,
   CanvasRenderer
 ]);
 
@@ -136,11 +140,16 @@ export default {
           markPointData = [];
         for (let i in userTimeArray) {
           x = timeArray.indexOf(userTimeArray[i]);
-          y = RIndexArray[x];
+          // y = RIndexArray[x];
+          // x = userTimeArray[i].toString();
+          y = RIndexArray[i];
           markPointData.push({
             name: "User",
             xAxis: x,
             yAxis: y,
+            // coord: [x, y],
+            symbol: 'triangle',
+            symbolSize: 10,
             emphasis: {
               label: {
                 show: true,
@@ -152,6 +161,7 @@ export default {
           });
         }
         var chart = echarts.init(document.getElementById("reportchart"), "dark");
+        console.log(markPointData);
         chart.setOption({
           title: {
             text: "Average RIndex: " + mean(RIndexArray).toFixed(0).toString(),

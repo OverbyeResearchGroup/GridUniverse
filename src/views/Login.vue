@@ -6,10 +6,10 @@
     <!-- <v-app class="app"></v-app> -->
     <v-app dark v-else id="login" class="primary">
       <v-main>
-        <v-container fluid fill-height>
+        <v-container fluid fill-height class="background">
           <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6 lg6>
-              <v-card class="mx-auto" max-width="600">
+              <v-card class="mx-auto" max-width="600" color="rgba(0,0,0,0.3)">
                 <v-card-text>
                   <div class="layout column align-center">
                     <img
@@ -92,7 +92,7 @@
   </div>
 </template>
 
-<style scoped lang="css">
+<style scoped>
 /* #login {
 	height: 50%;
 	width: 100%;
@@ -102,6 +102,12 @@
 	content: '';
 	z-index: 0;
 } */
+.background {
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
 </style>
 
 <script>

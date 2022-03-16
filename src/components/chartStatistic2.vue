@@ -122,7 +122,7 @@ export default {
 						return (value.max * 1.01).toFixed(self.precision);
 					},
 					axisLine: {
-						lineStyle: { color: 'rgba(255,255,255,1)' }
+						lineStyle: { color: 'rgba(255,255,255,0.8)' }
 					}
 					// boundaryGap: [0, '100%'],
 					// splitLine: {
@@ -203,6 +203,7 @@ export default {
 .chart {
 	height: 100px;
 	width: 100%;
+	opacity: 0.7;
 }
 /* .subheading {
 	color: white;

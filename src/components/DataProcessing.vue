@@ -368,7 +368,7 @@ export default {
             "-" +
             this.$store.state.casedetail.content.Bus[key.split(",")[1]][
               "String.Name"
-            ];
+            ] + " " + key.split(",")[2];
           this.highRiskLines[key]["MVA"] =
             branchData[index * this.branchArrLength + 3];
           this.highRiskLines[key]["Ratio"] = (

@@ -1,7 +1,7 @@
 // Dashboard.vue
 
 <template>
-  <div>
+  <div class="bg">
     <v-app-bar clipped-left app v-if="showToolbar">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="white--text pt-3">
@@ -27,83 +27,91 @@
             </v-badge>
           </v-btn>
         </template>
-        <NotificationList v-if="menu_model" v-on:changeHeight="changeHeight"></NotificationList>
+        <NotificationList
+          v-if="menu_model"
+          v-on:changeHeight="changeHeight"
+        ></NotificationList>
       </v-menu>
     </v-app-bar>
 
-    <v-navigation-drawer fixed app clipped width="160" v-model="drawer">
-      <v-list dense id="step1">
-        <div id="step4">
-          <v-list-item :key="'clock'">
-            <Clock></Clock>
+    <v-navigation-drawer fixed app clipped width="160" v-model="drawer" color="rgba(0,0,0,0.5)">
+      <v-list dense id="step1" color="transparent">
+        <v-list-item-group v-model="group">
+          <div id="step4">
+            <v-list-item :key="'clock'">
+              <Clock></Clock>
+            </v-list-item>
+          </div>
+          <v-divider></v-divider>
+          <v-list-item :key="'home'" @click="$store.commit('setpage', 'Home')">
+            <v-list-item-avatar>
+              <v-icon>home</v-icon>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>Transmission</v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
-        </div>
-        <v-list-item :key="'home'" @click="$store.commit('setpage', 'Home')">
-          <v-list-item-avatar>
-            <v-icon>home</v-icon>
-          </v-list-item-avatar>
+          <v-list-item
+            :key="'generator'"
+            @click="$store.commit('setpage', 'generator')"
+          >
+            <v-list-item-avatar>
+              <v-icon>bolt</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Transmission</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          :key="'generator'"
-          @click="$store.commit('setpage', 'generator')"
-        >
-          <v-list-item-avatar>
-            <v-icon>bolt</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Generator</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item :key="'load'" @click="$store.commit('setpage', 'load')">
+            <v-list-item-avatar>
+              <v-icon>tungsten</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Generator</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item :key="'load'" @click="$store.commit('setpage', 'load')">
-          <v-list-item-avatar>
-            <v-icon>tungsten</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Load</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            :key="'shunt'"
+            @click="$store.commit('setpage', 'shunt')"
+          >
+            <v-list-item-avatar>
+              <v-icon>attach_money </v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Load</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item :key="'shunt'" @click="$store.commit('setpage', 'shunt')">
-          <v-list-item-avatar>
-            <v-icon>attach_money </v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Shunt</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            :key="'branch'"
+            @click="$store.commit('setpage', 'branch')"
+          >
+            <v-list-item-avatar>
+              <v-icon>show_chart</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Shunt</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          :key="'branch'"
-          @click="$store.commit('setpage', 'branch')"
-        >
-          <v-list-item-avatar>
-            <v-icon>show_chart</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Lines</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-          <v-list-item-content>
-            <v-list-item-title>Lines</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+          <v-list-item
+            :key="'areastrip'"
+            @click="$store.commit('setpage', 'areastrip')"
+          >
+            <v-list-item-avatar>
+              <v-icon>area_chart</v-icon>
+            </v-list-item-avatar>
 
-        <v-list-item
-          :key="'areastrip'"
-          @click="$store.commit('setpage', 'areastrip')"
-        >
-          <v-list-item-avatar>
-            <v-icon>area_chart</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Area</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-          <v-list-item-content>
-            <v-list-item-title>Area</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <!-- <v-list-item :key="'gic'" @click="$store.commit('setpage', 'gic')">
+          <!-- <v-list-item :key="'gic'" @click="$store.commit('setpage', 'gic')">
           <v-list-item-avatar>
             <v-icon>linear_scale</v-icon>
           </v-list-item-avatar>
@@ -113,7 +121,7 @@
           </v-list-item-content>
         </v-list-item> -->
 
-        <!-- <v-list-item
+          <!-- <v-list-item
           :key="'sanddance'"
           @click="$store.commit('setpage', 'sanddance')"
         >
@@ -125,7 +133,7 @@
             <v-list-item-title>SandDance</v-list-item-title>
           </v-list-item-content>
         </v-list-item> -->
-        <!-- <v-list-item :key="'hourlystrip'" @click="$store.commit('setpage', 'hourlystrip')">
+          <!-- <v-list-item :key="'hourlystrip'" @click="$store.commit('setpage', 'hourlystrip')">
 						<v-list-item-avatar>
 							<v-icon>linear_scale</v-icon>
 						</v-list-item-avatar>
@@ -143,56 +151,56 @@
 							<v-list-item-title>BusStrip</v-list-item-title>
 						</v-list-item-content>
           </v-list-item>-->
-        <v-list-item
-          :key="'oneline'"
-          @click="$store.commit('setpage', 'oneline')"
-        >
-          <v-list-item-avatar>
-            <v-icon>area_chart</v-icon>
-          </v-list-item-avatar>
+          <v-list-item
+            :key="'oneline'"
+            @click="$store.commit('setpage', 'oneline')"
+          >
+            <v-list-item-avatar>
+              <v-icon>area_chart</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>OneLine</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          :key="'generationVis'"
-          @click="$store.commit('setpage', 'generationVis')"
-        >
-          <v-list-item-avatar>
-            <v-icon>bar_chart</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>OneLine</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            :key="'generationVis'"
+            @click="$store.commit('setpage', 'generationVis')"
+          >
+            <v-list-item-avatar>
+              <v-icon>bar_chart</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Gen. Bar</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          :key="'generationPie'"
-          @click="$store.commit('setpage', 'generationPie')"
-        >
-          <v-list-item-avatar>
-            <v-icon>pie_chart</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Gen. Bar</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            :key="'generationPie'"
+            @click="$store.commit('setpage', 'generationPie')"
+          >
+            <v-list-item-avatar>
+              <v-icon>pie_chart</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Gen. Pie</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          :key="'sysInfo'"
-          @click="$store.commit('setpage', 'sysInfo')"
-        >
-          <v-list-item-avatar>
-            <v-icon>dns</v-icon>
-          </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>Gen. Pie</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            :key="'sysInfo'"
+            @click="$store.commit('setpage', 'sysInfo')"
+          >
+            <v-list-item-avatar>
+              <v-icon>dns</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Sys. Info</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Sys. Info</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-        <!-- <v-list-item
+          <!-- <v-list-item
           :key="'transformer'"
           @click="$store.commit('setpage', 'transformer')"
         >
@@ -205,17 +213,17 @@
           </v-list-item-content>
         </v-list-item> -->
 
-        <v-list-item :key="'chat'" @click="dialog = true">
-          <v-list-item-avatar>
-            <v-icon>chat</v-icon>
-          </v-list-item-avatar>
+          <v-list-item :key="'chat'" @click="dialog = true">
+            <v-list-item-avatar>
+              <v-icon>chat</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Chat</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Chat</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-        <!-- <v-list-item :key="'contact'" @click="$store.commit('setpage', 'contact')">
+          <!-- <v-list-item :key="'contact'" @click="$store.commit('setpage', 'contact')">
           <v-list-item-avatar>
             <v-icon>chat</v-icon>
           </v-list-item-avatar>
@@ -224,17 +232,17 @@
             <v-list-item-title>Contact</v-list-item-title>
           </v-list-item-content>
         </v-list-item> -->
-        <!-- <v-list-item :key="'start'" v-if="ready4start" @click="$store.commit('trigstartsim')"> -->
-        <v-list-item :key="'start'" @click="startDialog = true">
-          <v-list-item-avatar>
-            <v-icon>play_arrow</v-icon>
-          </v-list-item-avatar>
+          <!-- <v-list-item :key="'start'" v-if="ready4start" @click="$store.commit('trigstartsim')"> -->
+          <v-list-item :key="'start'" @click="startDialog = true">
+            <v-list-item-avatar>
+              <v-icon>play_arrow</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Start</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <!-- <v-list-item :key="'pause'" @click="$store.commit('trigpausesim')">
+            <v-list-item-content>
+              <v-list-item-title>Start</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <!-- <v-list-item :key="'pause'" @click="$store.commit('trigpausesim')">
 						<v-list-item-avatar>
 							<v-icon>mdi-pause</v-icon>
 						</v-list-item-avatar>
@@ -242,17 +250,17 @@
 							<v-list-item-title>pause</v-list-item-title>
 						</v-list-item-content>
           </v-list-item>-->
-        <v-list-item :key="'abort'" @click="$store.commit('trigabortsim')">
-          <!-- <v-list-item :key="'start'" @click="startDialog=true"> -->
-          <v-list-item-avatar>
-            <v-icon>close</v-icon>
-          </v-list-item-avatar>
+          <v-list-item :key="'abort'" @click="$store.commit('trigabortsim')">
+            <!-- <v-list-item :key="'start'" @click="startDialog=true"> -->
+            <v-list-item-avatar>
+              <v-icon>close</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Abort</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <!-- <v-list-item
+            <v-list-item-content>
+              <v-list-item-title>Abort</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <!-- <v-list-item
           :key="'admin'"
           v-if="isAdmin"
           @click="$store.commit('setpage', 'admin')"
@@ -265,20 +273,21 @@
             <v-list-item-title>Admin</v-list-item-title>
           </v-list-item-content>
         </v-list-item> -->
-        <v-list-item :key="'report'" @click="reportDialog = true">
-          <v-list-item-avatar>
-            <v-icon>summarize</v-icon>
-          </v-list-item-avatar>
+          <v-list-item :key="'report'" @click="reportDialog = true">
+            <v-list-item-avatar>
+              <v-icon>summarize</v-icon>
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Report</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-spacer></v-spacer>
-        <v-list-item :key="'index'">
-          <div class="pl-3 pt-5">RIndex: {{ rIndex }}</div>
-        </v-list-item>
-        <!-- <v-list-item :key="'IkMap'" @click="$store.commit('setpage', 'IkView')">
+            <v-list-item-content>
+              <v-list-item-title>Report</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-spacer></v-spacer>
+          <v-divider></v-divider>
+          <v-list-item :key="'index'">
+            <div class="pl-3 pt-5">RIndex: {{ rIndex }}</div>
+          </v-list-item>
+          <!-- <v-list-item :key="'IkMap'" @click="$store.commit('setpage', 'IkView')">
 						<v-list-item-avatar>
 							<v-icon>highlight_off</v-icon>
 						</v-list-item-avatar>
@@ -287,6 +296,7 @@
 							<v-list-item-title>DoNotClick</v-list-item-title>
 						</v-list-item-content>
           </v-list-item>-->
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
@@ -353,7 +363,8 @@ export default {
       startDialog: false,
       reportDialog: false,
       showToolbar: true,
-      menu_model: false
+      menu_model: false,
+      group: 'home'
     };
   },
   computed: {
@@ -452,7 +463,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 // .anchorBLff0000
 // display: none;
 .customHighlightClass {
@@ -466,5 +477,11 @@ export default {
 
 .page-wrapper {
   min-height: calc(100vh - 64px - 50px - 81px);
+}
+
+.bg {
+  background: url('../assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  // height: 100vh;
 }
 </style>

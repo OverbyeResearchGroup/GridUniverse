@@ -1,6 +1,6 @@
 <template>
   <div id="v-widget">
-    <v-card>
+    <v-card color="rgba(0,0,0,0.8)">
       <v-app-bar
         color="transparent"
         flat

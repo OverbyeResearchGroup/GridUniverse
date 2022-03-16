@@ -242,5 +242,6 @@ export default {
 .loadChart {
   height: 200px;
   width: 100%;
+  opacity: 0.8;
 }
 </style>

@@ -2,10 +2,10 @@
 <template>
   <div>
     <v-layout row class="align-center layout px-4 pt-4 app--page-header mb-2">
-      <div class="page-header-left">
-        <h3 class="pr-3">Overview</h3>
-      </div>
       <v-icon larg>home</v-icon>
+      <div class="page-header-left">
+        <h3 class="pl-5">Overview</h3>
+      </div>
       <v-spacer></v-spacer>
       <userInfo></userInfo>
     </v-layout>
@@ -19,7 +19,7 @@
             icon="fa fa-facebook"
             title="Total Generation (MW)"
             :sub-title="areaData[0]"
-            color="indigo"
+            color="rgba(63, 81, 181, 0.8)"
             :img="require('../assets/icons8-factory-64.png')"
             id="step5"
           ></mini-statistic>
@@ -30,7 +30,7 @@
             icon="fa fa-google"
             title="Total Load (MW)"
             :sub-title="areaData[2]"
-            color="red"
+            color="rgba(244, 67, 54, 0.8)"
             :img="require('../assets/kitchen-set.png')"
           ></mini-statistic>
         </v-flex>
@@ -40,7 +40,7 @@
             icon="fa fa-twitter"
             title="Average Frequency (Hz)"
             :sub-title="areaData[6]"
-            color="light-blue"
+            color="rgba(3, 169, 244, 0.8)"
             :img="require('../assets/icons8-frequency-64.png')"
           ></mini-statistic>
         </v-flex>
@@ -50,7 +50,7 @@
             icon="fa fa-instagram"
             title="Export Power (MW)"
             :sub-title="areaData[5]"
-            color="purple"
+            color="rgba(156, 39, 176, 0.8)"
             :img="require('../assets/export.png')"
           ></mini-statistic>
         </v-flex>
