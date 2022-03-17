@@ -6,7 +6,7 @@
     <!-- <v-app class="app"></v-app> -->
     <v-app dark v-else id="login" class="primary">
       <v-main>
-        <v-container fluid fill-height class="background">
+        <v-container fluid fill-height :style="{backgroundImage: `url(${bg})`}" class="background">
           <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6 lg6>
               <v-card class="mx-auto" max-width="600" color="rgba(0,0,0,0.3)">
@@ -103,10 +103,11 @@
 	z-index: 0;
 } */
 .background {
-  background: url('../assets/background.jpg') no-repeat center center fixed;
+  background: no-repeat center center fixed;
   background-size: cover;
-  /* height: 100vh; */
+  height: 100vh;
 }
+
 
 </style>
 
@@ -123,6 +124,10 @@ const loadingComponent = {
     return <Spinner name="pacman" color="#2243a5" class="loading" />;
   },
 };
+var images = [];
+for(var i = 0; i <= 4; i++) {
+  images.push(require(`../assets/background${i}.jpg`));
+}
 
 export default {
   data() {
@@ -144,6 +149,8 @@ export default {
       port: "5557",
       server_port: "9990",
       ds_direct: false,
+      bg: null,
+      bgId: 0,
       rules: {
         id: (value) => {
           const pattern = /[0-9]/g;
@@ -186,8 +193,19 @@ export default {
         }, 2000);
       }
     },
+    showImage(x){
+      this.bg = images[x];
+    }
   },
-  mounted() {},
+  mounted() {
+    var x  = 0;
+    this.showImage(x);
+    setInterval(() => {
+      x = (x + 1) % 5;
+      this.showImage(x);
+    }, 10000);
+  },
+
   components: {
     Spinner,
     dashboard: () => ({
