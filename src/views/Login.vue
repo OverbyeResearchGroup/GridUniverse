@@ -6,7 +6,17 @@
     <!-- <v-app class="app"></v-app> -->
     <v-app dark v-else id="login" class="primary">
       <v-main>
-        <v-container fluid fill-height :style="{backgroundImage: `url(${bg})`}" class="background">
+        <vue-displacement-slideshow
+          :images="images"
+          :displacement="require('../assets/displacement.png')"
+          :intensity="0.1"
+          :speedIn="0.4"
+          :speedOut="0.3"
+          ease="expo.inOut"
+          ref="slideshow"
+          class="background"
+        />
+        <v-container fluid fill-height style="position: absolute;">
           <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6 lg6>
               <v-card class="mx-auto" max-width="600" color="rgba(0,0,0,0.3)">
@@ -87,6 +97,7 @@
             </v-flex>
           </v-layout>
         </v-container>
+        <!-- </vue-displacement-slideshow> -->
       </v-main>
     </v-app>
   </div>
@@ -103,12 +114,12 @@
 	z-index: 0;
 } */
 .background {
-  background: no-repeat center center fixed;
+  /* background: no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
+  z-index: 1; */
+  position: absolute;
 }
-
-
 </style>
 
 <script>
@@ -116,6 +127,7 @@
 // import { resourceDir, currentDir } from "@tauri-apps/api/path";
 import Spinner from "vue-spinkit";
 import { encode } from "@msgpack/msgpack";
+import VueDisplacementSlideshow from "vue-displacement-slideshow";
 // import { ipcRenderer } from "electron";
 
 const dashboard = import("../components/Dashboard");
@@ -124,10 +136,6 @@ const loadingComponent = {
     return <Spinner name="pacman" color="#2243a5" class="loading" />;
   },
 };
-var images = [];
-for(var i = 0; i <= 4; i++) {
-  images.push(require(`../assets/background${i}.jpg`));
-}
 
 export default {
   data() {
@@ -151,6 +159,8 @@ export default {
       ds_direct: false,
       bg: null,
       bgId: 0,
+      images: [],
+      interval: null, 
       rules: {
         id: (value) => {
           const pattern = /[0-9]/g;
@@ -173,6 +183,7 @@ export default {
         this.$store.commit("onAdmin");
       }
       if (true) {
+        clearInterval(this.interval);
         const config = {
           direct: this.ds_direct,
           ip: this.ip,
@@ -193,16 +204,15 @@ export default {
         }, 2000);
       }
     },
-    showImage(x){
-      this.bg = images[x];
+  },
+  created() {
+    for (var i = 0; i <= 4; i++) {
+      this.images.push(require(`../assets/background${i}.jpg`));
     }
   },
   mounted() {
-    var x  = 0;
-    this.showImage(x);
-    setInterval(() => {
-      x = (x + 1) % 5;
-      this.showImage(x);
+    this.interval = setInterval(() => {
+      this.$refs.slideshow.next();
     }, 10000);
   },
 
@@ -218,6 +228,7 @@ export default {
       loading: loadingComponent,
       delay: 0,
     }),
+    VueDisplacementSlideshow,
   },
 };
 </script>
