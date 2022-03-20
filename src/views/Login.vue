@@ -4,7 +4,7 @@
       <dashboard v-if="showDash"></dashboard>
     </v-app>
     <!-- <v-app class="app"></v-app> -->
-    <v-app dark v-else id="login" class="primary">
+    <v-app dark v-else id="login" class="dark">
       <v-main>
         <vue-displacement-slideshow
           :images="images"
@@ -13,13 +13,14 @@
           :speedIn="0.4"
           :speedOut="0.3"
           ease="expo.inOut"
+          :startAsTransparent=true
           ref="slideshow"
           class="background"
         />
-        <v-container fluid fill-height style="position: absolute;">
+        <v-container fluid fill-height style="position: absolute">
           <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6 lg6>
-              <v-card class="mx-auto" max-width="600" color="rgba(0,0,0,0.3)">
+              <v-card flat class="mx-auto" max-width="600" :color="color">
                 <v-card-text>
                   <div class="layout column align-center">
                     <img
@@ -28,10 +29,25 @@
                       width="120"
                       height="120"
                     />
-                    <h1 class="flex my-4 primary--text">Gridverse</h1>
+                    <!-- <h1 class="flex my-4 primary--text">Gridverse</h1> -->
+
+                    <div class="logo-letters-group">
+                      <transition-group
+                        @leave="loaded"
+                        v-on:after-appear="loaded"
+                        appear
+                      >
+                        <span
+                          class="logo-letter"
+                          v-for="(item, index) in logoName"
+                          :key="index"
+                          >{{ item }}</span
+                        >
+                      </transition-group>
+                    </div>
                   </div>
 
-                  <v-form id="step1">
+                  <v-form id="step1" v-if="show">
                     <v-text-field
                       append-icon="person"
                       name="login"
@@ -81,7 +97,7 @@
                     ></v-select>
                   </v-form>
                 </v-card-text>
-                <v-card-actions id="step2" class="pa-5">
+                <v-card-actions id="step2" class="pa-5" v-if="show">
                   <!-- <v-checkbox label="Administrator" v-model="checkbox"></v-checkbox> -->
                   <v-checkbox
                     label="Connect to DS"
@@ -103,7 +119,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 /* #login {
 	height: 50%;
 	width: 100%;
@@ -119,6 +135,39 @@
   height: 100vh;
   z-index: 1; */
   position: absolute;
+}
+
+.logo-letters-group {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 3px;
+
+  @for $n from -1 through (9) * -1 {
+    span:nth-child(#{abs($n)}) {
+      animation-delay: abs($n) * 0.2s + 2s;
+    }
+  }
+}
+
+.logo-letter {
+  animation-iteration-count: 1;
+  animation-name: fromBlackToBlue;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fromBlackToBlue {
+  0% {
+    color: #000;
+  }
+  100% {
+    color: #81d4fa;
+  }
 }
 </style>
 
@@ -140,6 +189,9 @@ const loadingComponent = {
 export default {
   data() {
     return {
+      logoName: ["G", "R", "I", "D", "V", "E", "R", "S", "E"],
+      show: false,
+      color: "rgba(0,0,0,0)",
       loading: false,
       model: {
         username: "Admin",
@@ -160,7 +212,8 @@ export default {
       bg: null,
       bgId: 0,
       images: [],
-      interval: null, 
+      interval: null,
+      counter: 0,
       rules: {
         id: (value) => {
           const pattern = /[0-9]/g;
@@ -204,17 +257,25 @@ export default {
         }, 2000);
       }
     },
+    loaded(el) {
+      this.counter++;
+      if (this.counter === 9) {
+        this.$refs.slideshow.next();
+        this.show = true;
+        this.color = "rgba(0,0,0,0.3)";
+        this.$refs.slideshow.removeImage(0);
+        this.interval = setInterval(() => {
+          this.$refs.slideshow.next();
+        }, 8000);
+      }
+    },
   },
   created() {
     for (var i = 0; i <= 4; i++) {
       this.images.push(require(`../assets/background${i}.jpg`));
     }
   },
-  mounted() {
-    this.interval = setInterval(() => {
-      this.$refs.slideshow.next();
-    }, 10000);
-  },
+  mounted() {},
 
   components: {
     Spinner,
