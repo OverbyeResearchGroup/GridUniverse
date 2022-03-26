@@ -1,8 +1,8 @@
 <template>
   <div id="v-widget">
-    <v-card color="rgba(0,0,0,0.8)">
+    <v-card>
       <v-app-bar
-        color="transparent"
+        color="rgba(33, 33, 33, 0.8)"
         flat
         dense
         v-if="enableHeader"
