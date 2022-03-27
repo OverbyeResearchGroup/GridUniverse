@@ -177,13 +177,18 @@
                     disabled
                   ></v-checkbox>
                   <v-spacer></v-spacer>
-                  <v-btn text color="primary" @click="login" :loading="loading"
+                  <v-btn large color="transparent" @click="login" :loading="loading"
                     >Login</v-btn
                   >
                 </v-card-actions>
               </v-card>
             </v-flex>
           </v-layout>
+          <v-footer bottom fixed tile padless color="transparent">
+            <v-col class="text-center" cols="12">
+              Created by Zeyu Mao (zeyumao2@tamu.edu)
+            </v-col></v-footer
+          >
         </v-container>
         <!-- </vue-displacement-slideshow> -->
       </v-main>
@@ -203,12 +208,20 @@
 } */
 
 .overlay {
-background: linear-gradient(-45deg, #274edb, #5327e2, #ad27e9, #f127d4, #f8267b, #ff3126);  // background-size: cover;
+  background: linear-gradient(
+    -45deg,
+    #274edb,
+    #5327e2,
+    #ad27e9,
+    #f127d4,
+    #f8267b,
+    #ff3126
+  ); // background-size: cover;
   // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   width: 100vw;
   height: 100vh;
-  animation: gradient 20s ease;
+  animation: gradient 15s ease;
 }
 
 @keyframes gradient {
@@ -227,7 +240,7 @@ background: linear-gradient(-45deg, #274edb, #5327e2, #ad27e9, #f127d4, #f8267b,
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -30px 0 0 -30px;
+  margin: -60px 0 0 -60px;
 }
 
 .background {
