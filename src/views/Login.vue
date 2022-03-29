@@ -186,7 +186,7 @@
           </v-layout>
           <v-footer bottom fixed tile padless color="transparent">
             <v-col class="text-center" cols="12">
-              Created by Zeyu Mao (zeyumao2@tamu.edu)
+              Developed by Zeyu Mao (zeyumao2@tamu.edu)
             </v-col></v-footer
           >
         </v-container>
