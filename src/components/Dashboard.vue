@@ -34,7 +34,14 @@
       </v-menu>
     </v-app-bar>
 
-    <v-navigation-drawer fixed app clipped width="160" v-model="drawer" color="rgba(0,0,0,0.5)">
+    <v-navigation-drawer
+      fixed
+      app
+      clipped
+      width="160"
+      v-model="drawer"
+      color="rgba(0,0,0,0.5)"
+    >
       <v-list dense id="step1" color="transparent">
         <v-list-item-group v-model="group">
           <div id="step4">
@@ -285,7 +292,10 @@
           <v-spacer></v-spacer>
           <v-divider></v-divider>
           <v-list-item :key="'index'">
-            <div class="pl-3 pt-5">RIndex: {{ rIndex }}</div>
+            <div class="pl-3 pr-2">
+              RIndex:
+            </div>
+            <h2>100</h2>
           </v-list-item>
           <!-- <v-list-item :key="'IkMap'" @click="$store.commit('setpage', 'IkView')">
 						<v-list-item-avatar>
@@ -352,6 +362,7 @@ import marquee from "./marquee";
 import Clock from "./Clock";
 import { mapGetters, mapState } from "vuex";
 import contact from "../views/contact.vue";
+import { animate } from "motion";
 // import NotificationList from './components/NotificationList';
 
 export default {
@@ -364,7 +375,8 @@ export default {
       reportDialog: false,
       showToolbar: true,
       menu_model: false,
-      group: 'home'
+      group: "home",
+      h2: null,
     };
   },
   computed: {
@@ -423,8 +435,18 @@ export default {
     simOverFlag: function () {
       this.reportDialog = true;
     },
+    rIndex: function (newVal, Val) {
+      const diff = newVal - Val;
+      animate(
+        (progress) => {
+          this.h2.innerHTML = Val + Math.round(progress * diff);
+        },
+        { duration: 1, easing: "ease-out" }
+      );
+    },
   },
   mounted() {
+    this.h2 = document.querySelector("h2");
     // var intro = introJs();
     // intro.setOptions({
     // 	showStepNumbers: false,

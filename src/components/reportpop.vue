@@ -20,6 +20,9 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click.native="share"
+            >Share</v-btn
+          >
           <v-btn color="blue darken-1" text @click.native="activate"
             >Download</v-btn
           >
@@ -298,6 +301,20 @@ export default {
       );
       a.dispatchEvent(e);
       this.show = false;
+    },
+    share(){
+      const report = JSON.stringify({
+        Time: new Date(),
+        Content: this.$store.state.report,
+      });
+      const blob = new Blob([report], { type: "text/plain" });
+      const file = new File([blob], 'report.txt', { type: 'text/plain' });
+      navigator.share({
+        text: `I saved the Texas grid?! Checkout my GridVerse report!`,
+        url: 'http://people.tamu.edu/~zeyumao2',
+        title: 'GridVerse Report',
+        files: [file]
+      })
     },
     findName([type, id]) {
       if (["Gen", "Shunt"].includes(type)) {
