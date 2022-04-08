@@ -4,7 +4,7 @@
       <dashboard v-if="showDash"></dashboard>
     </v-app>
     <!-- <v-app class="app"></v-app> -->
-    <v-app dark v-else id="login" class="dark">
+    <v-app v-else id="login">
       <v-main>
         <vue-displacement-slideshow
           :images="images"
@@ -23,7 +23,7 @@
               <v-overlay
                 v-show="overlay"
                 :absolute="true"
-                :opacity="1"
+                :opacity="opacity"
                 :value="true"
               >
                 <div class="overlay">
@@ -79,7 +79,7 @@
               </v-overlay>
             </transition>
             <v-flex xs12 sm8 md6 lg6>
-              <v-card flat class="mx-auto" max-width="600" :color="color">
+              <v-card flat class="mx-auto" max-width="600">
                 <v-card-text>
                   <div class="layout column align-center">
                     <svg
@@ -177,7 +177,11 @@
                     disabled
                   ></v-checkbox>
                   <v-spacer></v-spacer>
-                  <v-btn large color="transparent" @click="login" :loading="loading"
+                  <v-btn
+                    large
+                    color="transparent"
+                    @click="login"
+                    :loading="loading"
                     >Login</v-btn
                   >
                 </v-card-actions>
@@ -291,6 +295,28 @@
     color: #81d4fa;
   }
 }
+
+// .v-card {
+//   backdrop-filter: blur(16px) saturate(180%);
+//   -webkit-backdrop-filter: blur(16px) saturate(180%);
+//   background: linear-gradient(
+//     to right bottom,
+//     rgba(255, 255, 255, 0.6),
+//     rgba(255, 255, 255, 0.1)
+//   );
+
+//   border-radius: 12px;
+//   border: 1px solid rgba(255, 255, 255, 0.125);
+// }
+
+.theme--dark.v-card {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 </style>
 
 <script>
@@ -314,6 +340,7 @@ export default {
       logoName: ["G", "R", "I", "D", "V", "E", "R", "S", "E"],
       show: false,
       overlay: true,
+      opacity: 0,
       color: "rgba(0,0,0,0)",
       loading: false,
       model: {
@@ -385,7 +412,7 @@ export default {
       if (this.counter === 9) {
         // this.$refs.slideshow.next();
         this.show = true;
-        this.color = "rgba(0,0,0,0.3)";
+        // this.color = "rgba(0,0,0,0.3)";
         // this.$refs.slideshow.removeImage(0);
         this.interval = setInterval(() => {
           this.$refs.slideshow.next();
