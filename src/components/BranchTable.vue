@@ -80,7 +80,7 @@ table.v-table thead th:not(:first-child) {
 }
 
 .fixed-header th {
-  background-color: #fff; /* just for LIGHT THEME, change it to #474747 for DARK */
+  background-color: rgba(255, 255, 255, 0); /* just for LIGHT THEME, change it to #474747 for DARK */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -93,6 +93,12 @@ table.v-table thead th:not(:first-child) {
 .fixed-header .table__overflow {
   overflow: auto;
   height: 100%;
+}
+
+.theme--dark.v-card {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.7);
 }
 </style>
 

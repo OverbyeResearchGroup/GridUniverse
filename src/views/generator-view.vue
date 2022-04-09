@@ -20,7 +20,7 @@
                 left="13%"
                 title="Current Cost ($/h)"
                 icon="attach_money"
-                card-color="rgba(63, 81, 181, 0.7)"
+                card-color="rgba(63, 81, 181, 0.55)"
                 :chart-color="[color.indigo.lighten1]"
                 :costData="unitTimeCost"
                 type="line"
@@ -35,7 +35,7 @@
                 :precision="1"
                 title="Average Total Cost ($/MWh)"
                 icon="attach_money"
-                card-color="rgba(233, 30, 99, 0.7)"
+                card-color="rgba(233, 30, 99, 0.55)"
                 :chart-color="[color.pink.darken1, 'rgba(255,255,255,0.3)']"
                 :costData="+($store.state.totalCost/$store.state.totalMWh).toFixed(2)"
                 type="line"
@@ -57,7 +57,7 @@
             <v-flex>
               <v-layout row wrap>
                 <v-flex xs6 white--text>
-                  <div class="text-sm-center primary card opc">
+                  <div class="text-sm-center card-primary">
                     <div class="title pt-4">Total Cost</div>
                     <span class="title" style="color:white">${{ totalCost }}</span>
                   </div>
@@ -65,7 +65,7 @@
                 <v-flex xs6 white--text>
                   <v-tooltip top>
                     <template v-slot:activator="{ on }">
-                      <div class="align-center text-sm-center green card opc" v-on="on">
+                      <div class="align-center text-sm-center card-green" v-on="on">
                         <div class="title pt-4">ACE</div>
                         <span class="title" style="color:white">{{ ACE.toFixed(2) }}MW</span>
                       </div>
@@ -74,13 +74,13 @@
                   </v-tooltip>
                 </v-flex>
                 <v-flex xs6 white--text>
-                  <div class="align-center text-sm-center orange card opc">
+                  <div class="align-center text-sm-center card-orange">
                     <div class="title pt-4">Total Generation</div>
                     <span class="title" style="color:white">{{ areaData[0] }}MW</span>
                   </div>
                 </v-flex>
                 <v-flex xs6 white--text>
-                  <div class="align-center text-sm-center pink card opc">
+                  <div class="align-center text-sm-center card-pink">
                     <div class="title pt-4">Total Load</div>
                     <span class="title" style="color:white">{{ areaData[2] }}MW</span>
                   </div>
@@ -137,12 +137,39 @@
   height: 300px;
   width: 100%;
 }
-.card {
+.card-primary {
   height: 100px;
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: #37469b44;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.opc {
-  opacity: 0.9;
+.card-green {
+  height: 100px;
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: #4caf4f3b;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
+.card-orange {
+  height: 100px;
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: #a5650444;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.card-pink {
+  height: 100px;
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: #92174038;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 </style>
 
 <script>

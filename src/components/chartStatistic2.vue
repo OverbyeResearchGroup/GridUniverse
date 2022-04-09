@@ -205,6 +205,11 @@ export default {
 	width: 100%;
 	opacity: 0.7;
 }
+
+.theme--dark.v-card {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+}
 /* .subheading {
 	color: white;
 } */

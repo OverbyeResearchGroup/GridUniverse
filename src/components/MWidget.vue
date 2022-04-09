@@ -2,7 +2,7 @@
   <div id="v-widget">
     <v-card>
       <v-app-bar
-        color="rgba(33, 33, 33, 0.8)"
+        color="transparent"
         flat
         dense
         v-if="enableHeader"
@@ -24,6 +24,14 @@
     </v-card>
   </div>
 </template>
+
+<style scoped>
+.theme--dark.v-card {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.7);
+}
+</style>
 
 <script>
 export default {

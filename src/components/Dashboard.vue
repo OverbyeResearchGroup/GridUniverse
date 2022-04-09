@@ -40,7 +40,6 @@
       clipped
       width="160"
       v-model="drawer"
-      color="rgba(0,0,0,0.5)"
     >
       <v-list dense id="step1" color="transparent">
         <v-list-item-group v-model="group">
@@ -505,5 +504,11 @@ export default {
   background: url('../assets/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   // height: 100vh;
+}
+
+.theme--dark.v-navigation-drawer {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.45);
 }
 </style>

@@ -3,7 +3,7 @@
   <!-- <v-card v-if="showGraph">
     <graph :id="name" :data="subTitle"></graph>
   </v-card> -->
-  <v-card @mouseover="disable = false" @mouseout="disable = true" color="rgba(0,0,0,0.8)">
+  <v-card @mouseover="disable = false" @mouseout="disable = true">
     <v-card-text class="pa-0 ma-0">
       <v-container class="pa-0 ma-0">
         <v-layout row wrap>
@@ -52,9 +52,15 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .vis-panel {
 	box-sizing: content-box;
+}
+
+.theme--dark.v-card {
+  backdrop-filter: blur(12px) saturate(100%);
+  -webkit-backdrop-filter: blur(12px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.7);
 }
 </style>
 
