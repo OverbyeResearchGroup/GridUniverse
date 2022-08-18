@@ -5,7 +5,7 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 // const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
-  publicPath: '/~zeyumao2/',
+  publicPath: process.env.NODE_ENV === "production" ? "/GridUniverse/" : "/",
   transpileDependencies: [
     'vue-echarts',
     'resize-detector',
