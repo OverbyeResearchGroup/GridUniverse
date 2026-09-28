@@ -1,0 +1,13 @@
+# Python packages used by the code in this repository (names only, no versions).
+# Install with:  pip install -r requirements.txt
+# Built on 2026-09-27 from the imports in every .py and .ipynb file.
+# All Python code is in py/. The front end (src/) is installed with npm install.
+
+# Core
+eventlet  # server loop for py/ds_mp.py and py/powerworldDS_eventlet.py
+msgpack  # encodes the data sent to the front end
+python-socketio  # import name socketio; py/test_client.py needs python-socketio[client]
+
+# Other
+pyzmq  # import name zmq; only py/ds_client.py (older ZeroMQ backend)
+# pyinstaller  # not imported by any script; install only to rebuild the .exe files (py/build.py, *.spec)
